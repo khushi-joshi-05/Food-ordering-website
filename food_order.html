@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    .navbar ul {
+        overflow: auto;
+        /* background-color: black; */
+    }
+
+    .navbar li {
+        float: left;
+        list-style: none;
+        margin: 13px 20px;
+
+    }
+
+    .navbar li a {
+        padding: 3px 3px;
+        text-decoration: none;
+        color: white;
+        font-size: 1.3rem;
+    }
+
+    .navbar li:hover {
+        opacity: 0.7;
+    }
+
+    .intro_container {
+        display: flex;
+        flex-direction: column;
+        padding: 3px 150px;
+        height: 630px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+    }
+
+    .intro_container:before {
+        background: url(https://cookgem.com/wp-content/uploads/2022/02/indian-food--1024x683.jpg) no-repeat center center/cover;
+        content: "";
+        position: absolute;
+        height: 800px;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        opacity: 0.5;
+
+    }
+
+    .intro_container h1 {
+        font-size: 4.5em;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .intro_container p {
+        font-size: 1.15rem;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .intro_container button {
+        margin-top: 20px;
+        background-color: brown;
+        color: white;
+        border: 2px solid rgb(139, 36, 36);
+        width: 170px;
+        height: 35px;
+        border-radius: 4px;
+        font-size: 1.3rem;
+        font-family: 'Bree Serif', serif;
+        padding-bottom: 4px;
+    }
+
+    .intro_container button:hover {
+
+        background-color: white;
+        color: brown;
+    }
+
+    .about_us {
+        background-color: rgb(224, 224, 252);
+        padding: 100px 0px 100px 0px;
+    }
+
+    #about {
+        /* margin: 34px; */
+        display: flex;
+
+    }
+
+
+    #about .box {
+        border: 2px solid brown;
+        padding: 34px;
+        margin: 2px 55px;
+        border-radius: 28px;
+        background: #f2f2f2;
+        margin-bottom: 20px;
+        /* float: left; */
+
+    }
+
+    #about .box img {
+        height: 160px;
+        width: 270px;
+        margin: auto;
+        display: flex;
+    }
+
+    #about .box p {
+        font-family: 'Bree Serif', serif;
+        text-align: center;
+    }
+
+    .h-primary {
+        font-family: 'Bree Serif', serif;
+        font-size: 2.5rem;
+        padding: 40px 80px 80px 80px;
+        text-align: center;
+        color: brown;
+    }
+
+    .h-secondary {
+        font-family: 'Bree Serif', serif;
+        font-size: 1.5rem;
+        padding: 12px;
+        text-align: center;
+    }
+
+
+    .service_container {
+        display: flex;
+        flex-direction: column;
+        /* padding: 3px 200px; */
+        height: 550px;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    .service_container:before {
+        background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
+        content: "";
+        position: absolute;
+        height: 560px;
+        width: 100%;
+        /* justify-items: center; */
+        opacity: 0.4;
+        z-index: -1;
+        /* background-repeat: no-repeat; */
+    }
+
+
+    .service {
+        display: flex;
+        padding: 20px;
+        box-sizing: fixed;
+
+
+    }
+
+    .service .box_main {
+        padding-left: 20px;
+        padding-right: 40px;
+    }
+
+    .service .box_main h1 {
+        font-size: 4.5rem;
+        font-family: 'Oswald', sans-serif;
+
+    }
+
+    .service .box_main p {
+        font-family: 'Oswald', sans-serif;
+
+    }
+
+    .service .box {
+        padding: 140px 20px;
+        /* border:2px solid rgb(224, 224, 252); */
+        text-align: center;
+        font-size: 1.3rem;
+
+    }
+
+    .service .box a {
+        text-decoration: none;
+        color: rgb(224, 224, 252);
+        border: 2px solid rgb(224, 224, 252);
+        padding: 5px;
+    }
+
+    .service .box a:hover {
+        background-color: brown;
+    }
+
+    .menu_container {
+        background-color: rgb(224, 224, 252);
+        padding: 100px 0px 100px 0px;
+    }
+
+    .menu_container .mainhead {
+        text-align: center;
+    }
+
+    .mainhead h1 {
+        font-family: 'Bree Serif', serif;
+        font-size: 2.8rem;
+    }
+
+    .mainhead p {
+        font-size: 1.2rem;
+        color: brown;
+        font-family: 'Bree Serif', serif;
+        margin: 15px 10px;
+    }
+
+    .mainhead button {
+        border: 2px solid brown;
+        font-size: 1.4rem;
+        padding: 7px;
+        border-radius: 10px;
+        font-family: 'Bree Serif', serif;
+        margin-bottom: 50px;
+        background-color: brown;
+        color: white;
+    }
+
+    .mainhead button:hover {
+        border: 2px solid brown;
+        color: brown;
+        background-color: #f2f2f2;
+    }
+
+    .menu_items {
+        display: flex;
+
+    }
+
+    .menu_items .items {
+        border: 3px solid brown;
+        padding: 25px;
+        margin: 15px;
+        height: 450px;
+        width: 400px;
+        border-radius: 10px;
+        text-align: center;
+        font-family: 'Bree Serif', serif;
+    }
+
+    .menu_items .items img {
+        justify-content: center;
+        height: 300px;
+        width: 250px;
+    }
+
+    .menu_items .items h3 {
+        font-size: 1.4rem;
+        margin-top: 10px;
+    }
+
+    .app_download {
+        background-color: brown;
+        height: 400px;
+        color: white;
+        padding-left: 50px;
+        padding-top: 100px;
+    }
+
+    .app_download h4 {
+        font-size: 2.5rem;
+
+    }
+
+    .app_download h2 {
+        font-size: 4.5rem;
+    }
+
+    .app_download p {
+        font-size: 1.5rem;
+    }
+
+    .app_download button {
+        border: 2px solid white;
+        padding: 10px;
+        font-size: 1.5rem;
+        margin: 40px 30px;
+        border-radius: 10px;
+        color: rgb(143, 36, 36);
+        font-family: 'Bree Serif', serif;
+    }
+
+    .app_download button:hover {
+        background-color: rgb(196, 89, 89);
+        color: white;
+        border: 2px solid white;
+    }
+
+    .move {
+        background-color: rgb(224, 224, 252);;
+        height: 80px;
+    }
+
+    .move .text {
+        color: brown;
+        font-size: 1.6rem;
+        padding-top: 20px;
+
+    }
+
+    .footer {
+        background-color:  rgb(224, 224, 252);;
+        height: 700px;
+    }
+
+    /* .footer .container {
+        border: 2px solid rgb(22, 6, 6);
+        color: white;
+        padding: 50px;
+        margin-left: 50px;
+        margin-right: 700px;
+        font-size: 1.6rem;
+        padding-right: 50px;
+    }
+
+    .footer input {
+        font-size: 1.3rem;
+    }
+
+    .footer h1 {
+        color: white;
+        font-family: 'Bree Serif', serif;
+        margin-left: 20px;
+        padding: 50px;
+        font-size: 2.5rem;
+    }
+
+    .footer button {
+        font-size: 1.4rem;
+        padding: 10px;
+        margin-top: 30px;
+        width: 180px;
+        font-family: 'Bree Serif', serif;
+        color: rgb(22, 6, 6);
+        border-radius: 10px;
+    } */
+
+    .footer p {
+        text-align: center;
+        font-family: 'Bree Serif', serif;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color:brown;
+        /* margin-top: 30px; */
+
+    }
+    /* .footer h1{
+        font-size: 1.2em;
+    } */
+
+    #contact-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+    }
+
+    #contact-box input,
+    #contact-box textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+    }
+
+    #contact-box form {
+        width: 35%;
+    }
+
+    #contact-box label {
+        font-size: 1.2rem;
+        font-family: 'Bree Serif', serif;
+
+    }
+</style>
+
+<body>
+
+    <header>
+        <form>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </nav>
+        </form>
+    </header>
+
+
+    <section class="intro_container">
+        <h1>Welcome to foodie!</h1>
+        <p>A place with plethora of flavours from different regions be it our country or abroad can be enjoyed, where we
+            try to make your dining experience memorable with tech facilities and customisation and leave an expression
+            which will bring you back to us.</p>
+        <button class="btn">Order Now</button>
+
+    </section>
+
+    <section class="about_us">
+        <h1 class="h-primary center">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
+        <div id="about">
+            <div class="box">
+                <img src="https://shahidining.com.au/wp-content/uploads/2020/05/secret-to-indian-flavour-1536x864.jpg"
+                    alt="">
+                <h2 class="h-secondary center">Authentic Indian Flavors</h2>
+                <p class="center">From aromatic curries to flavorful biryanis, our menu showcases the diversity and
+                    deliciousness of Indian cuisine.
+                </p>
+            </div>
+            <div class="box">
+                <img src="https://saavi.com.au/wp-content/uploads/2016/02/image0023-1.jpg" alt="">
+                <h2 class="h-secondary center">Tech-Infused Dining Experience</h2>
+                <p class="center">
+                    Customers can use apps to place orders, customize their dishes, and even provide feedback, making
+                    their visit more convenient and interactive.
+                </p>
+            </div>
+            <div class="box">
+                <img src="https://i.ndtvimg.com/i/2015-06/fusion-food_625x350_81434107799.jpg" alt="">
+                <h2 class="h-secondary center">Innovative Fusion Dishes</h2>
+                <p class="center">The combinations of Indian and international cuisines not only tantalize taste buds
+                    but also provide unique experience.
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="service_container">
+        <div class="service">
+            <div class="box_main">
+                <h1>Bringing <br>happiness<br> to you</h1>
+                <p>Food is more than sustenance; it's a source of pure<br> happiness. From the first bite of a favorite
+                    childhood dish<br> to the thrill of discovering new flavors, food has a unique<br> way of filling
+                    our hearts with joy.</p>
+            </div>
+            <div class="box">
+                <h1>Online Delivery</h1><br>
+                <a href="#">Order Online</a>
+
+            </div>
+            <div class="box">
+                <h1>Click & Collect</h1><br>
+                <a href="#">Take out Order</a>
+
+            </div>
+            <div class="box">
+                <h1>Restuarant Dining</h1><br>
+                <a href="#">Book Table</a>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="menu_container">
+        <div class="mainhead">
+            <h1>"Get ready to explore our delicious range of dishes!"</h1>
+            <p>"Welcome to a world of culinary delights where every bite tells a flavorful story. Explore our diverse
+                menu and savor the essence of exquisite dining." </p>
+            <button class="butt">View all Menu</button>
+        </div>
+
+        <div class="menu_items">
+            <div class="items">
+                <img
+                    src="https://www.mumbailive.com/images/media/images/thali_1635502261446jpeg?bg=08394e&crop=5328%2C2991.157894736842%2C0%2C504.42105263157896&fit=crop&fm=webp&h=432.2807017543859&height=4000&w=770&width=5328">
+                <h3>Indian Thali</h3>
+                <p>Enjoy a thali full of traditional flavours and memotries</p>
+            </div>
+            <div class="items">
+                <img
+                    src="https://imgmediagumlet.lbb.in/media/2018/04/5acf822418a23c0efc21496b_1523548708582.jpg?fm=webp&w=750&h=500&dpr=1">
+                <h3>Dessert</h3>
+                <p>Complete your meal with mouth watering delicacies</p>
+            </div>
+            <div class="items">
+                <img
+                    src="https://imgmediagumlet.lbb.in/media/2019/07/5d27585dc18a2b0ed5739eb5_1562859613517.jpg?fm=webp&w=750&h=500&dpr=1">
+                <h3>Snacks</h3>
+                <p>Have a lighter version with deliciouis flavours</p>
+            </div>
+            <div class="items">
+                <img src="https://static.india.com/wp-content/uploads/2017/04/Juices-Delhi.jpg">
+                <h3>Juices</h3>
+                <p>Boost yourself up with fruit extracts</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- <div class="deals_container">
+
+    </div> -->
+
+    <!-- <div class="location_container">
+
+    </div> -->
+
+    <!-- <div class="franchise_container">
+
+    </div> -->
+
+    <!-- <div class="rating_container">
+
+    </div> -->
+
+    <div class="app_download">
+        <h4>Free Delivery!</h4>
+        <h2>Download the App now!</h2>
+        <p>For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
+        <button class="btn" href="#">Google Play Store</button>
+        <button class="btn" href="#">App Store</button>
+
+    </div>
+
+    <div class="move">
+        <marquee class="text">Get 30% OFF on your first order!</marquee>
+    </div>
+
+    <div class="footer">
+        <!-- <h1>Sign-in</h1>
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+            <label for="uname"><b>Contact</b></label>
+            <input type="number" placeholder="Enter Contact no." name="uname" required><br>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+
+            <button type="submit">Login</button><br>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+        <br><br><br><br>
+         <hr> -->
+
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="name" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <p>|| All rights are reserved. ||</p>
+
+    </div>
+
+</body>
+
+</html>
