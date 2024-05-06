@@ -46,7 +46,7 @@ body {
 }
 
 .intro_container:before {
-    background: url(https://cookgem.com/wp-content/uploads/2022/02/indian-food--1024x683.jpg) no-repeat center center/cover;
+    background: url(home.jpg) no-repeat center center/cover;
     content: "";
     position: absolute;
     height: 800px;
