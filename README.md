@@ -40,7 +40,16 @@ git clone https://github.com/yourusername/FoodOrderingWebsite.git
 cd FoodOrderingWebsite
 ```
 
+
 3.Open the index.html file in your preferred web browser to view the website locally.
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
 
 
 
