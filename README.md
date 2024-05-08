@@ -1,4 +1,7 @@
+![gssoc](gssoc.png)
 # Food Ordering Website
+![home](foodie.png)
+
 
 Foodie is a food ordering website that aims to provide users with a seamless experience for ordering food online, taking orders for pickup, and booking tables for dining in. The website showcases the quality and specialties of the food offered, along with a variety of services to cater to different user preferences.
 
