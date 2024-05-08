@@ -13,13 +13,10 @@ Foodie is a food ordering website that aims to provide users with a seamless exp
 
 ## Screenshots
 
-![Landing Page](landing_page_screenshot.png)
+![Landing Page](homepg.png)
 
-![Menu](menu_screenshot.png)
+![Service](service.png)
 
-![Order Online](order_online_screenshot.png)
-
-![Contact Page](contact_page_screenshot.png)
 
 ## Tech Stack
 
