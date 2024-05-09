@@ -1,6 +1,22 @@
 ![gssoc](gssoc.png)
+<div align="center">
 # Food Ordering Website
+<br>
+ 
+![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103) &nbsp; ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg) &nbsp;
+<a href="https://github.com/hereisSwapnil/ExamTime"><img src="https://sloc.xyz/github/hereisSwapnil/ExamTime" alt="Lines of Code"/></a> &nbsp;
+<a href="https://github.com/hereisSwapnil/ExamTime/stargazers"><img src="https://img.shields.io/github/stars/hereisSwapnil/ExamTime" alt="Stars Badge"/></a> &nbsp;<a href="https://github.com/hereisSwapnil/ExamTime.git/network/members"><img src="https://img.shields.io/github/forks/hereisSwapnil/ExamTime" alt="Forks Badge"/></a> &nbsp;
+![GitHub contributors](https://img.shields.io/github/contributors/hereisSwapnil/ExamTime?color=blue) &nbsp;
+![GitHub last commit](https://img.shields.io/github/last-commit/hereisSwapnil/ExamTime?color=red&style=plastic) &nbsp;
+![Repo. Size](https://img.shields.io/github/repo-size/hereisSwapnil/ExamTime?color=white) &nbsp;  
+<a href="https://github.com/hereisSwapnil/ExamTime/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?v=103"></a>&nbsp;
+<a href="https://github.com/hereisSwapnil/ExamTime/issues"><img src="https://img.shields.io/github/issues/hereisSwapnil/ExamTime?color=0059b3"></a>&nbsp;
+<a href="https://github.com/hereisSwapnil/ExamTime/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed-raw/hereisSwapnil/ExamTime?color=yellow"></a>&nbsp;
+<a href="https://github.com/hereisSwapnil/ExamTime/pulls"><img src="https://img.shields.io/github/issues-pr/hereisSwapnil/ExamTime?color=brightgreen"></a>&nbsp;
+<a href="https://github.com/hereisSwapnil/ExamTime/pulls?q=is%3Apr+is%3Aclosed"><img src="https://img.shields.io/github/issues-pr-closed-raw/hereisSwapnil/ExamTime?color=0059b3"></a> &nbsp;
 
+</br>
+</div>
 
 Foodie is a food ordering website that aims to provide users with a seamless experience for ordering food online, taking orders for pickup, and booking tables for dining in. The website showcases the quality and specialties of the food offered, along with a variety of services to cater to different user preferences.
 
