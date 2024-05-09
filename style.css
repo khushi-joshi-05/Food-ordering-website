@@ -1,323 +1,325 @@
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-    background-color: black;
+  background-color: black;
 }
 .navbar {
-    padding: 8px 0px;
-  }
+  padding: 8px 0px;
+}
 
 .navbar ul {
-    overflow: auto;
-    /* background-color: black; */
+  overflow: auto;
+  /* background-color: black; */
 }
 
 .navbar li {
-    float: left;
-    list-style: none;
-    margin: 2px 20px;
-
+  float: left;
+  list-style: none;
+  margin: 2px 20px;
 }
 
 .navbar li a {
-    padding: 1px 3px;
-    text-decoration: none;
-    color: white;
-    font-size: 1.3rem;
+  padding: 1px 3px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
 }
 
 .navbar li:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
+.btn {
+  cursor: pointer;
+}
 
 .intro_container {
-    display: flex;
-    flex-direction: column;
-    padding: 3px 150px;
-    height: 630px;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 3px 150px;
+  height: 630px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
 }
 
 .intro_container:before {
-    background: url(home.jpg) no-repeat center center/cover;
-    content: "";
-    position: absolute;
-    height: 800px;
-    width: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: -1;
-    opacity: 0.5;
-
+  background: url(home.jpg) no-repeat center center/cover;
+  content: "";
+  position: absolute;
+  height: 800px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  opacity: 0.5;
 }
 
 .intro_container h1 {
-    font-size: 4.5em;
-    font-family: 'Oswald', sans-serif;
+  font-size: 4.5em;
+  font-family: "Oswald", sans-serif;
 }
 
 .intro_container p {
-    font-size: 1.15rem;
-    font-family: 'Oswald', sans-serif;
+  font-size: 1.15rem;
+  font-family: "Oswald", sans-serif;
 }
 
 .intro_container button {
-    margin-top: 20px;
-    background-color: brown;
-    color: white;
-    border: 2px solid rgb(139, 36, 36);
-    width: 170px;
-    height: 35px;
-    border-radius: 4px;
-    font-size: 1.3rem;
-    font-family: 'Bree Serif', serif;
-    padding-bottom: 4px;
+  margin-top: 20px;
+  background-color: brown;
+  color: white;
+  border: 2px solid rgb(139, 36, 36);
+  width: 170px;
+  height: 35px;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  font-family: "Bree Serif", serif;
+  padding-bottom: 4px;
 }
 
 .intro_container button:hover {
-
-    background-color: white;
-    color: brown;
+  background-color: white;
+  color: brown;
 }
 
 .about_us {
-    background-color: rgb(224, 224, 252);
-    padding: 100px 0px 100px 0px;
+  background-color: rgb(224, 224, 252);
+  padding: 100px 0px 100px 0px;
 }
 
 #about {
-    /* margin: 34px; */
-    display: flex;
-
+  /* margin: 34px; */
+  display: flex;
 }
 
-
 #about .box {
-    border: 2px solid brown;
-    padding: 34px;
-    margin: 2px 55px;
-    border-radius: 28px;
-    background: #f2f2f2;
-    margin-bottom: 20px;
-    /* float: left; */
-
+  border: 2px solid brown;
+  padding: 34px;
+  margin: 2px 55px;
+  border-radius: 28px;
+  background: #f2f2f2;
+  margin-bottom: 20px;
+  /* float: left; */
 }
 
 #about .box img {
-    height: 160px;
-    width: 270px;
-    margin: auto;
-    display: flex;
+  height: 160px;
+  width: 270px;
+  margin: auto;
+  display: flex;
 }
 
 #about .box p {
-    font-family: 'Bree Serif', serif;
-    text-align: center;
+  font-family: "Bree Serif", serif;
+  text-align: center;
 }
 
 .h-primary {
-    font-family: 'Bree Serif', serif;
-    font-size: 2.5rem;
-    padding: 40px 80px 80px 80px;
-    text-align: center;
-    color: brown;
+  font-family: "Bree Serif", serif;
+  font-size: 2.5rem;
+  padding: 40px 80px 80px 80px;
+  text-align: center;
+  color: brown;
 }
 
 .h-secondary {
-    font-family: 'Bree Serif', serif;
-    font-size: 1.5rem;
-    padding: 12px;
-    text-align: center;
+  font-family: "Bree Serif", serif;
+  font-size: 1.5rem;
+  padding: 12px;
+  text-align: center;
 }
 
-
 .service_container {
-    display: flex;
-    flex-direction: column;
-    /* padding: 3px 200px; */
-    height: 550px;
-    width: auto;
-    justify-content: center;
-    align-items: center;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  /* padding: 3px 200px; */
+  height: 550px;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 .service_container:before {
-    background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
-    content: "";
-    position: absolute;
-    height: 560px;
-    width: 100%;
-    /* justify-items: center; */
-    opacity: 0.4;
-    z-index: -1;
-    /* background-repeat: no-repeat; */
+  background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
+  content: "";
+  position: absolute;
+  height: 560px;
+  width: 100%;
+  /* justify-items: center; */
+  opacity: 0.4;
+  z-index: -1;
+  /* background-repeat: no-repeat; */
 }
 
+.footer-links:hover {
+  text-decoration: underline;
+  color: #fff;
+  cursor: pointer;
+}
 
 .service {
-    display: flex;
-    padding: 20px;
-    box-sizing: fixed;
-
-
+  display: flex;
+  padding: 20px;
+  box-sizing: fixed;
 }
 
 .service .box_main {
-    padding-left: 20px;
-    padding-right: 40px;
+  padding-left: 20px;
+  padding-right: 40px;
 }
 
 .service .box_main h1 {
-    font-size: 4.5rem;
-    font-family: 'Oswald', sans-serif;
-
+  font-size: 4.5rem;
+  font-family: "Oswald", sans-serif;
 }
 
 .service .box_main p {
-    font-family: 'Oswald', sans-serif;
-
+  font-family: "Oswald", sans-serif;
 }
 
 .service .box {
-    padding: 140px 20px;
-    /* border:2px solid rgb(224, 224, 252); */
-    text-align: center;
-    font-size: 1.3rem;
-
+  padding: 140px 20px;
+  /* border:2px solid rgb(224, 224, 252); */
+  text-align: center;
+  font-size: 1.3rem;
 }
 
 .service .box a {
-    text-decoration: none;
-    color: rgb(224, 224, 252);
-    border: 2px solid rgb(224, 224, 252);
-    padding: 5px;
+  text-decoration: none;
+  color: rgb(224, 224, 252);
+  border: 2px solid rgb(224, 224, 252);
+  padding: 5px;
 }
 
 .service .box a:hover {
-    background-color: brown;
+  background-color: brown;
 }
 
 .menu_container {
-    background-color: rgb(224, 224, 252);
-    padding: 100px 0px 100px 0px;
+  background-color: rgb(224, 224, 252);
+  padding: 100px 0px 100px 0px;
 }
 
 .menu_container .mainhead {
-    text-align: center;
+  text-align: center;
+}
+
+.social-links {
+  color: #dddddd;
+  cursor: pointer;
+}
+
+.social-links:hover {
+  color: #fff;
 }
 
 .mainhead h1 {
-    font-family: 'Bree Serif', serif;
-    font-size: 2.8rem;
+  font-family: "Bree Serif", serif;
+  font-size: 2.8rem;
 }
 
 .mainhead p {
-    font-size: 1.2rem;
-    color: brown;
-    font-family: 'Bree Serif', serif;
-    margin: 15px 10px;
+  font-size: 1.2rem;
+  color: brown;
+  font-family: "Bree Serif", serif;
+  margin: 15px 10px;
 }
 
 .mainhead button {
-    border: 2px solid brown;
-    font-size: 1.4rem;
-    padding: 7px;
-    border-radius: 10px;
-    font-family: 'Bree Serif', serif;
-    margin-bottom: 50px;
-    background-color: brown;
-    color: white;
+  border: 2px solid brown;
+  font-size: 1.4rem;
+  padding: 7px;
+  border-radius: 10px;
+  font-family: "Bree Serif", serif;
+  margin-bottom: 50px;
+  background-color: brown;
+  color: white;
 }
 
 .mainhead button:hover {
-    border: 2px solid brown;
-    color: brown;
-    background-color: #f2f2f2;
+  border: 2px solid brown;
+  color: brown;
+  background-color: #f2f2f2;
 }
 
 .menu_items {
-    display: flex;
-
+  display: flex;
 }
 
 .menu_items .items {
-    background-color:#f2f2f2;
-    border: 3px solid brown;
-    padding: 25px;
-    margin: 15px;
-    height: 400px;
-    width: 400px;
-    border-radius: 10px;
-    text-align: center;
-    font-family: 'Bree Serif', serif;
+  background-color: #f2f2f2;
+  border: 3px solid brown;
+  padding: 25px;
+  margin: 15px;
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Bree Serif", serif;
 }
 
 .menu_items .items img {
-    justify-content: center;
-    height: 270px;
-    width: 250px;
+  justify-content: center;
+  height: 270px;
+  width: 250px;
 }
 
 .menu_items .items h3 {
-    font-size: 1.4rem;
-    margin-top: 10px;
+  font-size: 1.4rem;
+  margin-top: 10px;
 }
 
 .app_download {
-    background-color: brown;
-    height: 320px;
-    color: white;
-    padding-left: 50px;
-    padding-top: 80px;
+  background-color: brown;
+  height: 320px;
+  color: white;
+  padding-left: 50px;
+  padding-top: 80px;
 }
 
 .app_download h4 {
-    font-size: 2rem;
-
+  font-size: 2rem;
 }
 
 .app_download h2 {
-    font-size: 3.5rem;
+  font-size: 3.5rem;
 }
 
 .app_download p {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 .app_download button {
-    border: 2px solid white;
-    padding: 10px;
-    font-size: 1.5rem;
-    margin: 40px 30px;
-    border-radius: 10px;
-    color: rgb(143, 36, 36);
-    font-family: 'Bree Serif', serif;
+  border: 2px solid white;
+  padding: 10px;
+  font-size: 1.5rem;
+  margin: 40px 30px;
+  border-radius: 10px;
+  color: rgb(143, 36, 36);
+  font-family: "Bree Serif", serif;
 }
 
 .app_download button:hover {
-    background-color: rgb(196, 89, 89);
-    color: white;
-    border: 2px solid white;
+  background-color: rgb(196, 89, 89);
+  color: white;
+  border: 2px solid white;
 }
 
 .move {
-    background-color: rgb(224, 224, 252);;
-    height: 60px;
+  background-color: rgb(224, 224, 252);
+  height: 60px;
 }
 
 .move .text {
-    color: brown;
-    font-size: 1.6rem;
-    padding-top: 10px;
-
+  color: brown;
+  font-size: 1.6rem;
+  padding-top: 10px;
 }
 
 /* .footer {
@@ -365,7 +367,6 @@ body {
     color:brown;
     /* margin-top: 30px; */
 
-
 /* .footer h1{
     font-size: 1.2em;
 } */
@@ -384,27 +385,27 @@ body {
     font-size: 0.85rem;
 } */
 
-.foot-panel2{
-    background-color: rgb(138, 37, 37);
-    color:white;
-    height: 300px;
-    display: flex;
-    justify-content: space-evenly;
+.foot-panel2 {
+  background-color: rgb(138, 37, 37);
+  color: white;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.foot-panel2 ul{
-    margin-top: 20px;
+.foot-panel2 ul {
+  margin-top: 20px;
 }
 
-ul p{
-    font-weight: 700;
+ul p {
+  font-weight: 700;
 }
 
-ul a{
-    display: block;
-    font-size: 0.85rem;
-    margin-top: 10px;
-    color: #dddddd;
+ul a {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: #dddddd;
 }
 
 /* .foot-pannel3{
@@ -416,62 +417,55 @@ ul a{
     justify-content: center;
 } */
 
-
-
-.foot_panel4{
-    background-color: rgb(66, 16, 16);
-    color: white;
-    height: 160px;
-    font-size: 0.9rem;
-    text-align: center;
-
+.foot_panel4 {
+  background-color: rgb(66, 16, 16);
+  color: white;
+  height: 160px;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
-
-
-.pages{
-    padding-top: 25px;
-
+.pages {
+  padding-top: 25px;
 }
 
-.copyright{
-   padding-top: 10px;
+.copyright {
+  padding-top: 10px;
 }
 
 form {
-    padding-top: 20px;
-    display: grid;
-    /* gap: 10px; */
-    padding-bottom: 100px;
+  padding-top: 20px;
+  display: grid;
+  /* gap: 10px; */
+  padding-bottom: 100px;
 }
 
 label {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 input,
 textarea {
-    height:30px;
-    width: 120%;
-    padding: 2.5px;
-    box-sizing: border-box;
-    border-radius: 2px;
+  height: 30px;
+  width: 120%;
+  padding: 2.5px;
+  box-sizing: border-box;
+  border-radius: 2px;
 }
 
-#butt{
-    background-color:rgb(66, 16, 16);
-    color: white;
-    padding: 2px;
-    border: 1px solid white ;
-    border-radius: 2px;
-    cursor: pointer;
+#butt {
+  background-color: rgb(66, 16, 16);
+  color: white;
+  padding: 2px;
+  border: 1px solid white;
+  border-radius: 2px;
 }
 
 #butt :hover {
-    background-color:rgb(196, 89, 89);
+  background-color: rgb(196, 89, 89);
 }
 
-.social-icons i{
-    font-size: 1.2rem;
-    padding: 15px;
+.social-icons i {
+  font-size: 1.2rem;
+  padding: 15px;
 }
