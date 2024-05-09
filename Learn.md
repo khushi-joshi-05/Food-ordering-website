@@ -58,7 +58,7 @@ Welcome to Foodie's open-source project! We're thrilled that you're interested i
 
 ## Contact
 
-If you have any questions or need assistance, feel free to reach out to us via [email](mailto:foodie@example.com) or [GitHub Issues](https://github.com/yourusername/FoodOrderingWebsite/issues).
+If you have any questions or need assistance, feel free to reach out to us via  [GitHub Issues](https://github.com/yourusername/FoodOrderingWebsite/issues).
 
 We appreciate your contributions!
 ```
