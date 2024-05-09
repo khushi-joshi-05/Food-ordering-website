@@ -1,6 +1,7 @@
 ![gssoc](gssoc.png)
 <div align="center">
-<a> Food Ordering Website</a>
+<h1 >Food Ordering Website</h1>
+
 <br>
  
 ![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103) &nbsp; 
