@@ -1,6 +1,6 @@
-Sure, here's the content in Markdown format:
 
-```markdown
+
+
 # Contributing to Foodie - A Food Ordering Website
 
 Welcome to Foodie's open-source project! We're thrilled that you're interested in contributing. This guide will help you get started with making your first contribution to the project.
