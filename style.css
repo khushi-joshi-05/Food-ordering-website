@@ -475,3 +475,6 @@ textarea {
     font-size: 1.2rem;
     padding: 15px;
 }
+.btn{
+    cursor: pointer;
+}
