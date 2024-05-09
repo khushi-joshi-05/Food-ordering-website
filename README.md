@@ -35,20 +35,12 @@ This repository is aimed to help people to contribute in open source and learn G
 
 4. **JavaScript Interactivity**:
    - Enhanced user interaction with dynamic features like menu filtering and form validation.
-  
-
-
-## Screenshots
-
-![Landing Page](homepg.png)
-
-![Service](service.png)
 
 
 ## Tech Stack
 
 - **Frontend**: HTML, CSS, JavaScript (for user interface and interactivity)
-- **Database**: MongoDB (for storing user data, orders, etc.)
+- **Database**: MongoDB (for storing user data, orders, etc.)~~~~ need to be implemented
 - **Responsive Design**: Ensuring compatibility across various devices and screen sizes.
 
 
@@ -68,6 +60,17 @@ cd FoodOrderingWebsite
 
 
 3.Open the index.html file in your preferred web browser to view the website locally.
+  
+
+
+## Screenshots
+These are some snapshots of the project.
+
+![Landing Page](homepg.png)
+
+![Service](service.png)
+
+
 
 
 ## License
