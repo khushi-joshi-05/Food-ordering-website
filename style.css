@@ -308,6 +308,12 @@ body {
     border: 2px solid white;
 }
 
+.app-download-img {
+    max-height: 70px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
 .move {
     background-color: rgb(224, 224, 252);;
     height: 60px;
