@@ -24,7 +24,7 @@
 
 Foodie is a food ordering website that aims to provide users with a seamless experience for ordering food online, taking orders for pickup, and booking tables for dining in. The website showcases the quality and specialties of the food offered, along with a variety of services to cater to different user preferences.
 
-This repository is aimed to help people to contribute in open source and learn Git and Github.
+This repository is aimed to help people to contribute open source and learn Git and Github.
 
 ## Key Features
 
@@ -50,7 +50,7 @@ This repository is aimed to help people to contribute in open source and learn G
    - Organized content into logical sections like header, navigation, main content, and footer.
 
 3. **CSS Styling**:
-   - Styled HTML elements to create visually appealing design.
+   - Styled HTML elements to create visually appealing designs.
    - Implemented responsive design for compatibility across various devices.
 
 4. **JavaScript Interactivity**:
@@ -60,7 +60,7 @@ This repository is aimed to help people to contribute in open source and learn G
 ## Tech Stack
 
 - **Frontend**: HTML, CSS, JavaScript (for user interface and interactivity)
-- **Database**: MongoDB (for storing user data, orders, etc.)~~~~ need to be implemented
+- **Database**: MongoDB (for storing user data, orders, etc.)~~~~ needs to be implemented
 - **Responsive Design**: Ensuring compatibility across various devices and screen sizes.
 
 
@@ -72,14 +72,14 @@ This repository is aimed to help people to contribute in open source and learn G
 git clone https://github.com/yourusername/FoodOrderingWebsite.git
 ```
 
-2.Navigate to the project directory:
+2. Navigate to the project directory:
 
 ```
 cd FoodOrderingWebsite
 ```
 
 
-3.Open the index.html file in your preferred web browser to view the website locally.
+3. Open the index.html file in your preferred web browser to view the website locally.
   
 
 
