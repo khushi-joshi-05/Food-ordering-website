@@ -14,15 +14,35 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .navbar {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(165, 42, 42, 0.8); /* Initially transparent */
+            padding: 10px 0;
+            transition: background-color 0.3s; /* Smooth transition for background-color */
+            z-index: 1000; /* Ensure navbar is above other content */
+        }
 
+        /* Adjust the text color when navbar is transparent */
+        .navbar.transparent a {
+            color: white;
+        }
+
+        /* Adjust the text color when navbar is not transparent */
+        .navbar:not(.transparent) a {
+            color: black;
+        }
+    </style>
 </head>
 
 
 
 <body>
 
+
     <header>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <ul id="header-items">
                 <li><a href="content/home.html" target="_blank">Home</a></li>
                 <li><a href="content/menu.html" target="_blank">Menu</a></li>
@@ -31,7 +51,6 @@
                 <li><a href="content/cart.html" target="_blank">Cart</a></li>
             </ul>
         </nav>
-        
     </header>
 
 
@@ -258,7 +277,22 @@
         </footer>
 
     </div>
+    <script>
+        window.onscroll = function () {
+            // Calculate the opacity based on scroll position
+            let opacity = 1 - window.scrollY / 200; // Adjust 200 to control when to start fading
 
+            // Set the background-color and opacity of the navbar
+            document.getElementById("navbar").style.backgroundColor = `rgba(165, 42, 42, ${opacity})`;
+
+            // Add or remove the transparent class based on opacity
+            if (opacity < 0.1) {
+                document.getElementById("navbar").classList.remove("transparent");
+            } else {
+                document.getElementById("navbar").classList.add("transparent");
+            }
+        }
+    </script>
 </body>
 
 </html>
