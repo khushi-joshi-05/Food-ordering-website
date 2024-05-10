@@ -383,6 +383,9 @@ body {
     align-items: center;
     font-size: 0.85rem;
 } */
+img:hover{
+  border:7px solid wheat;
+}
 
 .foot-panel2{
     background-color: rgb(138, 37, 37);
@@ -465,6 +468,7 @@ textarea {
     border: 1px solid white ;
     border-radius: 2px;
     cursor: pointer;
+    
 }
 
 #butt :hover {
