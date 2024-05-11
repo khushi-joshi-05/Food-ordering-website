@@ -1,4 +1,4 @@
-![gssoc](images/gssoc.png)
+![gssoc](Images/gssoc.png)
 <div align="center">
 <h1 >Food Ordering Website</h1>
 
@@ -86,9 +86,9 @@ cd FoodOrderingWebsite
 ## Screenshots
 These are some snapshots of the project.
 
-![Landing Page](images/homepg.png)
+![Landing Page](Images/homepg.png)
 
-![Service](images/service.png)
+![Service](Images/service.png)
 
 
 
