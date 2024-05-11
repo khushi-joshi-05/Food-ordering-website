@@ -6,33 +6,57 @@
 body {
     background-color: black;
 }
-.navbar {
-    padding: 8px 0px;
-  }
-
-.navbar ul {
-    overflow: auto;
-    /* background-color: black; */
+#navlist {
+   
+    position: absolute;
+    width: 100%;
 }
 
-.navbar li {
+/* styling navlist anchor element */
+#navlist a {
     float: left;
-    list-style: none;
-    margin: 2px 20px;
-
-}
-
-.navbar li a {
-    padding: 1px 3px;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px;
     text-decoration: none;
-    color: white;
-    font-size: 1.3rem;
+    font-size: 15px;
 }
 
-.navbar li:hover {
-    opacity: 0.7;
+.navlist-right {
+    float: right;
 }
 
+/* hover effect of navlist anchor element */
+#navlist a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* styling search bar */
+.search input[type=text] {
+    width: 150px;
+    height: 20px;
+    border-radius: 25px;
+    border: none;
+    margin-top: -17px;
+}
+
+.search {
+    float: right;
+    margin: 7px;
+}
+
+.search button {
+   
+
+    float: right;
+    padding: 5px 10px;
+    margin-left: 260px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
 
 .intro_container {
     display: flex;

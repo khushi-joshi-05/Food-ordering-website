@@ -40,13 +40,22 @@ body {
 }
 .navbar ul {
   overflow: hidden;
+
+  
 }
+
+
 
 .navbar li {
   float: left;
   list-style: none;
   padding: 8px 20px;
+ border-radius: 21px;
+ margin-top: -11px;
+   
+  
 }
+
 .navbar li:hover {
   opacity: 0.7;
 }
