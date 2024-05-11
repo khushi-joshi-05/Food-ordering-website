@@ -1,4 +1,4 @@
-![gssoc](gssoc.png)
+![gssoc](images/gssoc.png)
 <div align="center">
 <h1 >Food Ordering Website</h1>
 
@@ -69,7 +69,7 @@ This repository is aimed to help people to contribute in open source and learn G
 1. Clone the project repository:
 
 ```bash
-git clone https://github.com/yourusername/FoodOrderingWebsite.git
+git clone https://github.com/khushi-joshi-05/FoodOrderingWebsite.git
 ```
 
 2.Navigate to the project directory:
@@ -86,9 +86,9 @@ cd FoodOrderingWebsite
 ## Screenshots
 These are some snapshots of the project.
 
-![Landing Page](homepg.png)
+![Landing Page](images/homepg.png)
 
-![Service](service.png)
+![Service](images/service.png)
 
 
 
