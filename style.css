@@ -384,7 +384,7 @@ body {
     font-size: 0.85rem;
 } */
 
-.foot-panel2{
+/* .foot-panel2{
     background-color: rgb(138, 37, 37);
     color:white;
     height: 300px;
@@ -418,7 +418,7 @@ ul a{
 
 
 
-.foot_panel4{
+/*.foot_panel4{
     background-color: rgb(66, 16, 16);
     color: white;
     height: 160px;
@@ -441,7 +441,7 @@ ul a{
 form {
     padding-top: 20px;
     display: grid;
-    /* gap: 10px; */
+    /* gap: 10px; 
     padding-bottom: 100px;
 }
 
@@ -474,4 +474,148 @@ textarea {
 .social-icons i{
     font-size: 1.2rem;
     padding: 15px;
+} */
+.events {
+    background-image:url(https://t4.ftcdn.net/jpg/02/92/20/37/360_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1.jpg );
+    background-color: #f2f2f2;
+    background-size: 1700px 500px;
+    padding: 100px 120px;
+
+}
+
+.event {
+    text-align: center;
+}
+
+.event h2 {
+    color: white;
+    font-size: 3em;
+    font-family: 'Oswald', sans-serif;
+}
+
+.event-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.event-info {
+    background-color: white;
+    border: 2px solid brown;
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+.event-info h3 {
+    color: brown;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.event-info p {
+    margin-bottom: 8px;
+}
+
+/* Update existing CSS for continuity */
+.footer {
+    background-color: #421010;
+    color: white;
+    padding-top: 50px;
+}
+
+.footer h1 {
+    font-size: 2.5rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.foot-panel2 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.foot-panel2 ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+ul p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+ul a {
+    display: block;
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #dddddd;
+    text-align: center;
+    text-decoration: none;
+}
+
+ul a:hover {
+    color: #ffffff;
+}
+
+.foot_panel4 {
+    background-color: #421010;
+    color: white;
+    height: 160px;
+    font-size: 0.9rem;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.pages {
+    padding-top: 25px;
+}
+
+.social-icons i {
+    font-size: 1.2rem;
+    padding: 15px;
+}
+
+.copywright {
+    padding-top: 10px;
+    text-align: center;
+}
+
+form {
+    padding-top: 20px;
+    display: grid;
+    gap: 10px;
+    padding-bottom: 100px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    height: 30px;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+#butt {
+    background-color: #421010;
+    color: white;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#butt:hover {
+    background-color: #6c2626;
 }
