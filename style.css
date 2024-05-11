@@ -61,6 +61,19 @@ body {
     opacity: 0.5;
 
 }
+#intro_container .typing-effect {
+    
+    overflow: hidden;
+    border-right: .15em solid orange; /* Cursor effect */
+    white-space: nowrap; /* Prevent wrapping */
+    animation: typing 3s steps(40, end);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
 
 .intro_container h1 {
     font-size: 4.5em;
@@ -94,6 +107,17 @@ body {
 .about_us {
     background-color: rgb(224, 224, 252);
     padding: 100px 0px 100px 0px;
+    
+}
+.about_us #about .box .aboutBtn {
+    padding: 10px 10px;
+    color: burlywood;
+    background-color: brown;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #about {
@@ -111,6 +135,10 @@ body {
     background: #f2f2f2;
     margin-bottom: 20px;
     /* float: left; */
+    width: 325px;
+    height: 400px;
+    
+
 
 }
 
