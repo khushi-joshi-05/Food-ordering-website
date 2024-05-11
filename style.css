@@ -19,6 +19,7 @@ body {
     float: left;
     list-style: none;
     margin: 2px 20px;
+    text-align: center;
 
 }
 
@@ -30,7 +31,10 @@ body {
 }
 
 .navbar li:hover {
-    opacity: 0.7;
+    opacity: 0.9;
+    border-bottom: 2px solid yellow;
+    border-radius: 3px;
+    
 }
 
 
@@ -46,7 +50,7 @@ body {
 }
 
 .intro_container:before {
-    background: url(home.jpg) no-repeat center center/cover;
+    background: url(newhome.jpeg) no-repeat center center/cover;
     content: "";
     position: absolute;
     height: 800px;
@@ -113,8 +117,14 @@ body {
 #about .box img {
     height: 160px;
     width: 270px;
+    background-size: contain;
     margin: auto;
     display: flex;
+    transition: transform 0.3s ease-in;
+    border-radius: 10px;
+}
+#about .box img:hover{
+    transform: scale(1.1);
 }
 
 #about .box p {
@@ -135,6 +145,10 @@ body {
     font-size: 1.5rem;
     padding: 12px;
     text-align: center;
+}
+.h-secondary:hover{
+    text-decoration-line: underline;
+    color: brown;
 }
 
 
@@ -243,12 +257,12 @@ body {
     background-color: #f2f2f2;
 }
 
-.menu_items {
+#menu_items {
     display: flex;
 
 }
 
-.menu_items .items {
+#menu_items .items {
     background-color:#f2f2f2;
     border: 3px solid brown;
     padding: 25px;
@@ -258,18 +272,57 @@ body {
     border-radius: 10px;
     text-align: center;
     font-family: 'Bree Serif', serif;
+    overflow: hidden;
 }
-
-.menu_items .items img {
+.items img{
+    background-size:contain;
+    border-radius: 0.5rem;
+}
+#menu_items .items img {
     justify-content: center;
     height: 270px;
     width: 250px;
+    background-size: contain;
+    transition: filter 0.3s ease;
 }
 
-.menu_items .items h3 {
+#menu_items .items img:hover {
+    filter: blur(2px); /* Add blur effect on hover */
+}
+
+#menu_items .items::after {
+    content: "Click to order"; /* Text to display on hover */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black; /* Text color */
+    font-size: 24px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    z-index: 1;
+}
+
+#menu_items .items:hover::after {
+    opacity: 1;
+}
+
+#menu_items .items h3 {
     font-size: 1.4rem;
     margin-top: 10px;
 }
+
+#menu_items .items h3:hover {
+    color: brown;
+    text-decoration-line: underline;
+}
+
+#menu_items .items .menuBtn {
+   padding: 10px 10px;
+   background-color: burlywood;
+   border-radius: 4px;
+}
+
 
 .app_download {
     background-color: brown;
