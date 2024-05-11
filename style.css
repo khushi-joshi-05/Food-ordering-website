@@ -48,15 +48,18 @@ body {
 }
 
 .intro_container:before {
-  background: url(home.jpg) no-repeat center center/cover;
-  content: "";
-  position: absolute;
-  height: 800px;
-  width: 100%;
-  top: 0px;
-  left: 0px;
-  z-index: -1;
-  opacity: 0.5;
+
+    background: url(Images/home.jpg) no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    height: 800px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.5;
+
+
 }
 
 .intro_container h1 {
@@ -469,3 +472,5 @@ textarea {
   font-size: 1.2rem;
   padding: 15px;
 }
+.btn{
+    cursor: pointer;
