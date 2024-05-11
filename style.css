@@ -8,6 +8,7 @@ body {
 }
 .navbar {
     padding: 8px 0px;
+    backdrop-filter: blur(15px);
   }
 
 .navbar ul {
@@ -32,7 +33,11 @@ body {
 .navbar li:hover {
     opacity: 0.7;
 }
-
+.navbar li a:hover{
+    border-bottom: 3px solid orangered;
+    border-top: 3px solid orangered;
+    font-size: x-large;
+}
 
 .intro_container {
     display: flex;
