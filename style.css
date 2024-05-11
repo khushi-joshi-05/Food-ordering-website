@@ -46,7 +46,7 @@ body {
 }
 
 .intro_container:before {
-    background: url(home.jpg) no-repeat center center/cover;
+    background: url(Images/home.jpg) no-repeat center center/cover;
     content: "";
     position: absolute;
     height: 800px;
@@ -476,3 +476,5 @@ textarea {
     font-size: 1.2rem;
     padding: 15px;
 }
+.btn{
+    cursor: pointer;
