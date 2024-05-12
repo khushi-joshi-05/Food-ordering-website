@@ -95,7 +95,8 @@ body {
 #about {
     /* margin: 34px; */
     display: flex;
-
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -307,6 +308,13 @@ body {
     color: white;
     border: 2px solid white;
 }
+.btn a{
+    text-decoration: none;
+    color: brown;
+}
+.btn a:hover{
+    color: white;
+}
 
 .move {
     background-color: rgb(224, 224, 252);;
@@ -471,9 +479,12 @@ textarea {
     background-color:rgb(196, 89, 89);
 }
 
-.social-icons i{
+.social-icons a{
     font-size: 1.2rem;
     padding: 15px;
+    text-decoration: none;
+    color: white;
 }
 .btn{
     cursor: pointer;
+}
