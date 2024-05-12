@@ -46,7 +46,7 @@ body {
 }
 
 .intro_container:before {
-    background: url(home.jpg) no-repeat center center/cover;
+    background: url(Images/home.jpg) no-repeat center center/cover;
     content: "";
     position: absolute;
     height: 800px;
@@ -96,7 +96,8 @@ body {
 #about {
     /* margin: 34px; */
     display: flex;
-
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -328,6 +329,13 @@ body {
     border: 2px solid white;
     cursor: pointer;
 }
+.btn a{
+    text-decoration: none;
+    color: brown;
+}
+.btn a:hover{
+    color: white;
+}
 
 .move {
     background-color: rgb(224, 224, 252);;
@@ -497,10 +505,13 @@ textarea {
     background-color:rgb(196, 89, 89);
 }
 
-.social-icons i{
+.social-icons a{
     font-size: 1.2rem;
     padding: 15px;
+    text-decoration: none;
+    color: white;
 }
+
 .fb{
     color: #1877F2;
     cursor: pointer;
@@ -658,4 +669,8 @@ input, textarea {
 
     
     
+
+.btn{
+    cursor: pointer;
+
 }

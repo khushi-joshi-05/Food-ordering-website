@@ -358,3 +358,34 @@ textarea {
     font-size: 1.2rem;
     padding: 15px;
 }
+
+
+/* Cart page styling */
+.cart-section{
+  padding: 55px 70px 30px 70px;
+  background-color:  rgb(224, 224, 252);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cart{
+  width: 80%;
+  background-color: #f2f2f2;
+  text-align: center;
+  font-family: "Bree Serif", serif;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+
+.cart table,th,td{
+  text-align: center;
+  border: 2px solid black;
+  width: 75%;
+}
+
+#bill{
+  color: rgb(196, 74, 74);
+}
