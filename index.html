@@ -107,7 +107,10 @@
             <p>"Welcome to a world of culinary delights where every bite tells a flavorful story. Explore our diverse
                 menu and savor the essence of exquisite dining." </p>
 
+                
+
                 <button class="butt" onclick="window.open('Html-files/menu.html',target='_blank')">View Menu</button>
+
 
 
         </div>
@@ -260,6 +263,12 @@
         </footer>
 
     </div>
+
+    <script>
+        window.addEventListener('beforeunload', function(event) {
+            localStorage.clear();
+        });
+    </script>
 
 </body>
 
