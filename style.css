@@ -292,6 +292,47 @@ body {
     margin-top: 10px;
 }
 
+.meals-showcase{
+    list-style: none;
+    width: 100% ;
+}
+.meals-showcase li{
+    display: block ;
+    float: left ;
+    width: 25% ;
+}
+.meal-photo{
+    width: 100% ;
+    margin: 0 ;
+    overflow: hidden ;
+    background-color: #000;
+    transition: transform 0.5s, opacity 0.5s;
+}
+.meal-photo img{
+    width: 100% ;
+    height: auto ;
+    transform: scale(1.15);
+    opacity: 0.7;
+}
+.meal-photo img:hover{
+    transform: scale(1.03);
+    opacity: 1;
+
+}
+.clearfix{zoom:1}
+.clearfix::after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+
+}
+.section-meals{
+    padding: 0;
+    
+}
+
 .app_download {
     background-color: brown;
     height: 320px;
