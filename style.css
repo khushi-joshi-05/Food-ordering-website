@@ -319,6 +319,10 @@ body {
     padding-top: 10px;
 
 }
+a{
+    text-decoration: none;
+    color:brown
+}
 
 
 /* .footer {
@@ -384,9 +388,7 @@ body {
     align-items: center;
     font-size: 0.85rem;
 } */
-img:hover{
-  border:7px solid wheat;
-}
+
 
 .foot-panel2{
     background-color: rgb(138, 37, 37);
