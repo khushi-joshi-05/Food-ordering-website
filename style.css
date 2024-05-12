@@ -105,8 +105,10 @@ border-bottom: 1px solid grey ;
 .intro_container {
     display: flex;
     flex-direction: column;
+
     padding: 10px;
     height: 100dvh;
+
     justify-content: center;
     align-items: center;
     color: white;
@@ -118,7 +120,7 @@ border-bottom: 1px solid grey ;
     background: url(Images/home.jpg) no-repeat center center/cover;
     content: "";
     position: absolute;
-    height: 800px;
+    height: 900px;
     width: 100%;
     top: 0px;
     left: 0px;
@@ -126,6 +128,7 @@ border-bottom: 1px solid grey ;
     opacity: 0.5;
 
 }
+
 
 .intro_container h1 {
     font-size: 4.5em;
