@@ -672,5 +672,112 @@ input, textarea {
 
 .btn{
     cursor: pointer;
+.contact_page{
+  background-color:rgb(213, 213, 238);
+  /*background:linear-gradient(135deg,rgba(155, 155, 241,0.3),rgba(155, 155, 241,0.4),rgba(0,0,255,0.4),rgba(0,0,255,0.4));
+*/}
+.main_content{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+}
+.contact_info{
+  align-items:start;
+  gap:20px;
+  flex-direction:columns;
+  margin:auto;
+  /*padding-left:2px;*/
+  max-width:40%;
+}
+.contact_form > *{
+  width:80%;
+  height:50px;
+  margin-top:20px ;
+  border:none;
+  border-radius:30px;
+  padding:20px;
+  background-color:rgb(224, 224, 239);
+  color:blueviolet;
+  transition:transform 250ms ease;
+}
+.contact_form>*:hover{
+  border: blueviolet solid 2px;
+  transform:scale(1.08);
+}
+.contact_form>*::placeholder{
+  color:blueviolet;
+  font-size:1vw;
+}
+
+.get_in_touch{
+  font-family:"Mooli",serif;
+  font-weight:bold;
+  font-size:2em;
+  color:blueviolet;
+  display:inline-block;
+  position:relative;
+}
+.contact_message{
+  font-family:"Mooli",serif;
+  font-size:1em;
+  color:blueviolet;
+  margin-top:15px;
+}
+.contact_header{
+  background:linear-gradient(90deg,rgb(128,0,0),rgb(64,0,0),rgb(32,0,0));
+}
+.get_in_touch::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:0;
+  height:2.5px;
+  background-color:blueviolet;
+  width:calc(100% + 1em);
+  transform:scaleX(0.1);
+  transform-origin:left;
+  border-radius:90px;
+  transition:transform 250ms ease;
+}
+.get_in_touch:hover::after{
+  transform:scaleX(1);
+}
+.contact_submit{
+  width:30%;
+  color:white;
+  background:linear-gradient(135deg,blue,rgb(155, 155, 241),rgb(155, 155, 241));
+}
+.contact_submit:hover{
+  background:linear-gradient(135deg,rgb(155, 155, 241),blue);
+}
+.contact_us{
+  width:50%;
+  height:100vh;
+  background-image:url("contact_page_background_image.png");
+  background-color:rgba(0,0,0,0.65);
+  background-blend-mode: multiply;
+  display:flex;
+  align-items:center;
+  justify-content:space-evenly;
+  flex-wrap:wrap;
+  color:rgb(242, 225, 225);
+  font-family:"Dancing Script", cursive;
+  font-weight:bolder;
+  font-size:5vw;
+}
+.contact_us > h1{
+  max-width:60%;
+  text-align:center;
+}
+@media(max-width:800px)
+{
+  .contact_info{
+    width:80vw;
+  }
+  .contact_us{
+    display:none;
+  }
+}
+=======
 
 }
