@@ -90,18 +90,27 @@ body {
 .about_us {
     background-color: rgb(224, 224, 252);
     padding: 100px 0px 100px 0px;
+    /* min-height: 800px;    */
 }
 
 #about {
-    /* margin: 34px; */
+    
     display: flex;
+    flex-wrap: wrap;
+    overflow-wrap: normal;
+    
+    justify-content: center;
+
 
 }
 
 
 #about .box {
     border: 2px solid brown;
-    padding: 34px;
+    height: 300px;
+    width: 300px;
+    
+    padding: 20px 20px 40px 20px;
     margin: 2px 55px;
     border-radius: 28px;
     background: #f2f2f2;
@@ -115,6 +124,7 @@ body {
     width: 270px;
     margin: auto;
     display: flex;
+    border-radius: inherit ;
 }
 
 #about .box p {
@@ -142,55 +152,76 @@ body {
     display: flex;
     flex-direction: column;
     /* padding: 3px 200px; */
-    height: 550px;
-    width: auto;
-    justify-content: center;
+    min-height: 550px;
+    width: 100vw;
+    
     align-items: center;
     color: white;
+    position: relative;
 }
 
 .service_container:before {
     background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
     content: "";
     position: absolute;
-    height: 560px;
-    width: 100%;
+    min-height: 560px;
+    width: 100vw;
     /* justify-items: center; */
     opacity: 0.4;
     z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    background-size: cover;
     /* background-repeat: no-repeat; */
 }
 
 
 .service {
+    display: flex; 
+    width: inherit;
+    justify-content: center;
+    
+}
+.box_main{
+    width: 300px;
     display: flex;
-    padding: 20px;
-    box-sizing: fixed;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    
 
-
+    
+    
 }
-
-.service .box_main {
-    padding-left: 20px;
-    padding-right: 40px;
-}
-
 .service .box_main h1 {
     font-size: 4.5rem;
     font-family: 'Oswald', sans-serif;
+    text-align: center;
 
 }
 
 .service .box_main p {
     font-family: 'Oswald', sans-serif;
+   text-align: center;
 
 }
 
 .service .box {
-    padding: 140px 20px;
+    padding: 140px 10px;
     /* border:2px solid rgb(224, 224, 252); */
     text-align: center;
     font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin: 40px; */
+
+}
+.service .box h1{
+    font-size: 1.25rem;
 
 }
 
@@ -199,6 +230,38 @@ body {
     color: rgb(224, 224, 252);
     border: 2px solid rgb(224, 224, 252);
     padding: 5px;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    font-weight: 500;
+    min-width: inherit;
+}
+.service_supp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    
+}
+@media screen  and (max-width:800px){
+    .service .box a{
+        font-size: .85rem;
+    }
+    .service{
+        flex-direction: column;
+    }
+    .service .box{
+        height: 100px;
+        margin: 20px;
+        padding: 0px;
+
+    }
+    .box_main{
+        width: 100vw;
+        
+    }
+    .service .box_main p{
+        text-align: center;
+    }
 }
 
 .service .box a:hover {
@@ -245,6 +308,10 @@ body {
 
 .menu_items {
     display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -253,17 +320,19 @@ body {
     border: 3px solid brown;
     padding: 25px;
     margin: 15px;
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 300px;
     border-radius: 10px;
     text-align: center;
     font-family: 'Bree Serif', serif;
+
 }
 
 .menu_items .items img {
     justify-content: center;
     height: 270px;
     width: 250px;
+    border-radius: inherit;
 }
 
 .menu_items .items h3 {
