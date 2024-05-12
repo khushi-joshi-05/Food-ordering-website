@@ -95,7 +95,8 @@ body {
 #about {
     /* margin: 34px; */
     display: flex;
-
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -486,3 +487,4 @@ textarea {
 }
 .btn{
     cursor: pointer;
+}
