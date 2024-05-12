@@ -64,6 +64,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let orderBtn = document.querySelector(".butt");
 orderBtn.addEventListener("click", ()=>{
-    alert("Order placed!");
+    let cartItems = localStorage.getItem('cartItems');
+    cartItems = cartItems ? JSON.parse(cartItems) : [];
+    if(cartItems.length==0){
+        alert("Cart is empty")
+    }
+    else{
+        alert("Order placed!");
+    }
 })
 

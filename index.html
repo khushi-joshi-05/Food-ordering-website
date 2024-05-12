@@ -15,8 +15,10 @@
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
 
+    <script src="https://kit.fontawesome.com/c732ec9339.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
@@ -25,6 +27,7 @@
 
     <header>
         <nav class="navbar">
+            <div class="logo">Foodie.</div>
             <ul id="header-items">
                 <li><a href="index.html" target="_blank">Home</a></li>
                 <li><a href="Html-files/menu.html" target="_blank">Menu</a></li>
@@ -32,6 +35,7 @@
                 <li><a href="Html-files/contact.html" target="_blank">Contact us</a></li>
                 <li><a href="Html-files/cart.html" target="_blank">Cart</a></li>
             </ul>
+            <span class="bar"><i class="fa fa-bars menu" aria-hidden="true"></i></span>
         </nav>
         
     </header>
@@ -112,11 +116,7 @@
             <p>"Welcome to a world of culinary delights where every bite tells a flavorful story. Explore our diverse
                 menu and savor the essence of exquisite dining." </p>
 
-                
-
-                <button class="butt" onclick="window.open('Html-files/menu.html',target='_blank')">View Menu</button>
-
-
+                <button class="butt" onclick="window.open('Html-files/menu.html/')" target="_blank">View Menu</button>
 
         </div>
 
@@ -163,6 +163,56 @@
     <!-- <div class="rating_container">
 
     </div> -->
+
+    <section class="section-meals" data-aos="fade-in" data-aos-duration="2000">
+        <ul class="meals-showcase clearfix">
+            <li>
+                <figure class="meal-photo">
+                    <img src="Images/1.jpg" alt="food-image">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="Images/2.jpg" alt="food-image">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="Images/3.jpg" alt="food-image">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="Images/4.jpg" alt="food-image">
+                </figure>
+            </li>
+
+        </ul>
+        <ul class="meals-showcase clearfix">
+            <li>
+                <figure class="meal-photo">
+                    <img src="Images/5.jpg" alt="food-image">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="Images/6.jpg" alt="food-image">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="Images/7.jpg" alt="food-image">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="Images/8.jpg" alt="food-image">
+                </figure>
+            </li>
+
+        </ul>
+
+    </section>
 
     <div class="app_download">
         <h4>Free Delivery!</h4>
@@ -267,15 +317,39 @@
                         &copy; 2023 Foodies . All Rights Reserved. | Developed by <span id="author"> Khushi Joshi </span></p>
 
                     </div>
-                </div>
+            </div>
         </footer>
 
     </div>
 
+
     <script>
+        const bar = document.querySelector(".bar")
+        console.log(bar)
+
+        const nav = document.querySelector("#header-items")
+        console.log(nav)
+
+        bar.addEventListener("click", () => {
+            if (nav.classList.contains("active")){
+                nav.classList.remove("active")
+                bar.innerHTML = `<i class="fa fa-bars" aria-hidden="true"></i>`;
+            }
+            else {
+                nav.classList.add("active")
+                bar.innerHTML = `<i class="fa fa-times" aria-hidden="true" onclick="handleNav()"></i`
+            }
+        })
+
         window.addEventListener('beforeunload', function(event) {
             localStorage.clear();
         });
+
+        const btn=document.querySelector('.btn')
+        btn.onclick=()=>{
+            location.href="./Html-files/menu.html"
+        }
+
     </script>
 
 </body>
