@@ -1,48 +1,117 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     background-color: black;
 }
+
+/* navbar */
 .navbar {
-    padding: 8px 0px;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    padding: 0 5%;
+background-color: black;
+position: fixed;
+top: 0;right: 0;
+border-bottom: 1px solid grey ;
+}
+
+.logo {
+    display: flex;
+    font-size: 1.7rem;
+    color: white;
+    gap: 10px;
+}
 
 .navbar ul {
-    overflow: auto;
-    /* background-color: black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .navbar li {
-    float: left;
     list-style: none;
-    margin: 2px 20px;
-
+    padding: 0 15px;
 }
 
 .navbar li a {
-    padding: 1px 3px;
+    display: inline-block;
     text-decoration: none;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    line-height: 100%;
 }
 
 .navbar li:hover {
     opacity: 0.7;
 }
 
+.bar {
+    display: none;
+    color: white;
+    font-size: 25px;
+}
+
+@media all and (max-width: 768px) {
+    .bar {
+        display: inline-block;
+    }
+    .navbar ul {
+        position: fixed;
+        flex-direction: column;
+        justify-content: flex-start;
+        left: 0;
+        top: 10vh;
+        background-color: white;
+        gap: 0;
+        width: 100%;
+        height: 90vh;
+        background-color: black;
+        height: 0;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .navbar ul.active {
+        height: 90vh;
+    }
+    .navbar li {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .navbar li a {
+        color: white;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 10px 15px;
+        border-bottom: 1px solid grey;
+        text-align: center;
+    }
+    .navbar li a:hover {
+        color: yellow;
+    }
+}
+
 
 .intro_container {
     display: flex;
     flex-direction: column;
-    padding: 3px 150px;
-    height: 630px;
+    padding: 10px;
+    height: 100dvh;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
+    gap: 10px;
 }
 
 .intro_container:before {
@@ -66,6 +135,8 @@ body {
 .intro_container p {
     font-size: 1.15rem;
     font-family: 'Oswald', sans-serif;
+    width: 100%;
+max-width: 800px;
 }
 
 .intro_container button {
@@ -88,28 +159,30 @@ body {
     cursor: pointer;
 }
 
+
+
 .about_us {
     background-color: rgb(224, 224, 252);
-    padding: 100px 0px 100px 0px;
+    padding: 20px 10px;
 }
 
 #about {
-    /* margin: 34px; */
     display: flex;
-    justify-content: center;
-    align-items: center;
+
+    flex-wrap: wrap;
+
+
 }
 
 
 #about .box {
     border: 2px solid brown;
     padding: 34px;
-    margin: 2px 55px;
     border-radius: 28px;
     background: #f2f2f2;
-    margin-bottom: 20px;
-    /* float: left; */
-    transition: .3s all ease-in-out ;
+
+    flex: 1 1 400px;
+    margin: 10px;
 }
 
 #about .box:hover{
@@ -120,7 +193,7 @@ body {
 
 #about .box img {
     height: 160px;
-    width: 270px;
+    width: 100%;
     margin: auto;
     display: flex;
 }
@@ -133,7 +206,6 @@ body {
 .h-primary {
     font-family: 'Bree Serif', serif;
     font-size: 2.5rem;
-    padding: 40px 80px 80px 80px;
     text-align: center;
     color: brown;
 }
@@ -150,11 +222,11 @@ body {
     display: flex;
     flex-direction: column;
     /* padding: 3px 200px; */
-    height: 550px;
     width: auto;
     justify-content: center;
     align-items: center;
     color: white;
+    padding: 10px;
 }
 
 .service_container:before {
@@ -167,42 +239,38 @@ body {
     */
     height: 800px;
     width: 100%;
-    /* justify-items: center; */
     opacity: 0.4;
     z-index: -1;
-    /* background-repeat: no-repeat; */
 }
 
 
 .service {
     display: flex;
-    padding: 20px;
     box-sizing: fixed;
-
+    flex-wrap: wrap;
 
 }
 
 .service .box_main {
-    padding-left: 20px;
-    padding-right: 40px;
+    flex: 1 1 300px;
 }
 
 .service .box_main h1 {
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-family: 'Oswald', sans-serif;
-
+text-align: center;
 }
 
 .service .box_main p {
     font-family: 'Oswald', sans-serif;
-
+text-align: center;
 }
 
 .service .box {
-    padding: 140px 20px;
-    /* border:2px solid rgb(224, 224, 252); */
+    padding: 20px;
     text-align: center;
     font-size: 1.3rem;
+    flex: 1 1 300px;
 
 }
 
@@ -258,7 +326,7 @@ body {
 
 .menu_items {
     display: flex;
-
+    flex-wrap: wrap;
 }
 
 .menu_items .items {
@@ -271,6 +339,7 @@ body {
     border-radius: 10px;
     text-align: center;
     font-family: 'Bree Serif', serif;
+    flex: 1 1 400px;
     transition: 0.3s all ease-in;
 }
 
@@ -335,7 +404,6 @@ body {
 
 .app_download {
     background-color: brown;
-    height: 320px;
     color: white;
     padding-left: 50px;
     padding-top: 80px;
@@ -457,15 +525,17 @@ body {
 .foot-panel2{
     background-color: rgb(138, 37, 37);
     color:white;
-    height: 300px;
-    /* height: fit-content; */
     display: flex;
-    /* padding: 10px; */
+    padding: 15px;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .foot-panel2 ul{
     margin-top: 20px;
+
+    flex: 1 1 300px;
 }
 
 ul p{
@@ -513,8 +583,10 @@ ul a{
 
 form {
     padding-top: 20px;
-    display: grid;
-    /* gap: 10px; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1 1 300px;
     padding-bottom: 100px;
 }
 
@@ -524,19 +596,21 @@ label {
 
 input,
 textarea {
-    height:30px;
-    width:max-content;
-    padding: 3px;
+
+    width: 100%;
+    padding: 10px;
     box-sizing: border-box;
-    border-radius: 4px;
-    outline: none;
-    border: #212123 1px;
+    border-radius: 2px;
+    background-color: rgb(1, 1, 1);
+    border: none;
+
+
 }
 
 #butt{
     background-color:rgb(66, 16, 16);
     color: white;
-    padding: 3px;
+    padding: 10px;
     border: 1px solid white ;
     border-radius: 4px;
     cursor: pointer;
@@ -697,7 +771,22 @@ input, textarea {
 }
 .btn{
     cursor: pointer;
+
 }
+
+@media all and (max-width: 768px) {
+    .intro_container h1 {
+        font-size: 3em;
+    }
+    .intro_container p {
+        font-size: 1rem;
+    }
+    .h-primary {
+        font-size: 30px;
+    }
+}
+
+
 .contact_page{
   background-color:rgb(213, 213, 238);
   /*background:linear-gradient(135deg,rgba(155, 155, 241,0.3),rgba(155, 155, 241,0.4),rgba(0,0,255,0.4),rgba(0,0,255,0.4));
@@ -806,10 +895,12 @@ input, textarea {
     display:none;
   }
 }
+
 @media screen and (max-width:440px) {
     .intro_container{
         height: fit-content;
         padding: 100px;
     }
+
 }
 
