@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My cart</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../Css-files/content.css">
+</head>
+<body>
+    <div class="head_container">
+        <header>
+            <nav class="navbar">
+                <ul id="header-items">
+                    <li><a href="../index.html" target="_blank">Home</a></li>
+                    <li><a href="menu.html" target="_blank">Menu</a></li>
+                    <li><a href="services.html" target="_blank">Services</a></li>
+                    <li><a href="contact.html" target="_blank">Contact us</a></li>
+                    <li><a href="cart.html" target="_blank">Cart</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="mainhead">
+            <h1>C A R T</h1>
+        </div>
+    </div>
+
+    <section class="cart-section">
+        <div class="cart">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody class="items">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Bill amount</td>
+                        <td id="bill">Cart Empty</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <button type="submit" class="butt">Order Now</button>
+    </section>
+    <footer>
+
+
+        <div class="foot-panel2">
+            <ul class="footer-colums">
+                <p>Our Pages</p>
+                <a>Home</a>
+                <a>Menu</a>
+                <a>Services</a>
+                <a>Contact</a>
+                <a>Cart</a>
+            </ul>
+
+            <ul class="footer-colums">
+                <p> Exclusive Offers</p>
+                <a>Foodie Discounts</a>
+                <a>Limited-Time Promotions</a>
+                <a>Special Event Packages</a>
+                <a>Membership Benefits</a>
+                <a>Early Access to New Recipes</a>
+                <a>VIP Foodie Events</a>
+                <a>Personalized Culinary Experiences</a>
+
+            </ul>
+
+            <ul class="footer-colums">
+                <p>Payment Products</p>
+                <a>Secure Checkout</a>
+                <a>Credit/Debit Cards</a>
+                <a>Online Payment</a>
+                <a>Mobile Wallets</a>
+                <a>Contactless Payments</a>
+            </ul>
+
+
+            <form id="contactForm">
+                <h3>Contact Us!</h3>
+                <!-- <label for="name">Name:</label> -->
+                <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>
+                 -->
+                <!-- <label for="email">Email:</label> -->
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <!-- <label for="message">Message:</label> -->
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+                <button id="butt" type="submit">Send Message</button>
+            </form>
+
+        </div>
+
+
+        <div class="foot_panel4">
+            <div class="pages">
+                <h4>Follow Us</h4>
+
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
+                </p>
+                <div class="copyright">
+                    &copy; 2023 Foodies . All Rights Reserved. | Developed by Khushi Joshi</p>
+
+                </div>
+            </div>
+    </footer>
+
+    <script src="../cart.js"></script>
+</body>
+</html>
