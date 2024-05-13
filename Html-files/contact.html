@@ -17,6 +17,12 @@
 
 </head>
 <body>
+    <div class="response">
+        <span id="formSub"><i class="fa-solid fa-check" style="font-size: 18px;padding: 10px;"></i>Message sent
+            sucessfully</span>
+        <span id="error"><i class="fa-regular fa-circle-xmark" style="font-size: 18px;padding: 10px;"></i>An error
+            occured</span>
+    </div>
     <header>
         <nav class="navbar bg-dark">
             <ul id="header-items">
@@ -42,7 +48,7 @@
                 <div class="card mt-2 mx-auto mb-5 p-4 bg-light">
                     <div class="card-body bg-light">
                         <div class = "container">
-                            <form action="/submit" method="POST" id="contact-form" role="form">
+                            <form id="contact-form" role="form">
                                 <div class="controls">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -74,7 +80,7 @@
                                                 <textarea id="form_message" name="message" class="form-control" placeholder="Write your message here." rows="4" required="required" data-error="Please, leave us a message."></textarea>
                                             </div>
                                         </div>
-                                        <div class="col-md-10 mt-3">                 
+                                        <div class="col-md-10 mt-3" id="submit">                 
                                             <input type="submit" class="btn btn-outline-dark btn-send  pt-2 btn-block" value="Send Message">
                                         </div>
                                     </div>
@@ -146,5 +152,39 @@
                     </div>
                 </div>
         </footer>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            const submit = document.getElementById('submit')
+            submit.addEventListener('click', () => {
+                event.preventDefault();
+                const form_name = document.querySelector('#form_name').value
+                const form_lastname = document.querySelector('#form_lastname').value
+                const form_email = document.querySelector('#form_email').value
+                const form_message = document.querySelector('#form_message').value
+                Email.send({
+                    Host: "smtp.elasticemail.com",
+                    Username: "festivesolomon@heywhatsoup.com",
+                    Password: "A0510339835126B92F05DF7C2EB7E28279F8",
+                    To: 'joshikhushi0005@gmail.com',
+                    From: `${form_email}`,
+                    Subject: "Contact form submission",
+                    Body: `Name:${form_name} ${form_lastname}\nEmail:${form_email}\nMessage: ${form_message}`
+                }).then(
+                    message => {
+                        const formSub = document.getElementById('formSub')
+                        formSub.style.display = "block"
+                        setTimeout(() => {
+                            formSub.style.display = "none"
+                        }, 2000)
+                    }
+                ), (err) => {
+                    const error = document.getElementById('error')
+                    error.style.display = "block"
+                    setTimeout(() => {
+                        error.style.display = "none"
+                    })
+                }
+            })
+        </script>
 </body>
 </html>
