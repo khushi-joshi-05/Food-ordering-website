@@ -678,7 +678,7 @@ textarea {
   gap: 20px;
   flex-direction: columns;
   margin: auto;
-  /padding-left:2px;/
+padding-left:2px;
   max-width: 40%;
 }
 .contact_form > * {
