@@ -34,59 +34,7 @@ body {
 }
 
 
-.intro_container {
-    display: flex;
-    flex-direction: column;
-    padding: 3px 150px;
-    height: 630px;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
 
-.intro_container:before {
-    background: url(../Images/home.jpg) no-repeat center center/cover;
-    content: "";
-    position: absolute;
-    height: 800px;
-    width: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: -1;
-    opacity: 0.5;
-
-}
-
-.intro_container h1 {
-    font-size: 4.5em;
-    font-family: 'Oswald', sans-serif;
-}
-
-.intro_container p {
-    font-size: 1.15rem;
-    font-family: 'Oswald', sans-serif;
-}
-
-.intro_container button {
-    margin-top: 20px;
-    background-color: brown;
-    color: white;
-    border: 2px solid rgb(139, 36, 36);
-    width: 170px;
-    height: 35px;
-    border-radius: 4px;
-    font-size: 1.3rem;
-    font-family: 'Bree Serif', serif;
-    padding-bottom: 4px;
-}
-
-.intro_container button:hover {
-
-    background-color: white;
-    color: brown;
-    cursor: pointer;
-}
 
 .about_us {
     background-color: rgb(224, 224, 252);
