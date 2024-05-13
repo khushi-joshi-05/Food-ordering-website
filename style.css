@@ -1,10 +1,45 @@
 * {
     margin: 0px;
+    font-family:sans-serif;
     padding: 0px;
 }
 
 body {
     background-color: black;
+}
+.ticon{
+    font-size:40px;
+    margin:10px;
+    cursor:pointer;
+}
+.content{
+    width:25%;
+    height:100vh;
+    background:black;
+    position: fixed;
+    top: 0px;
+    left:-25%;
+    transition:1s;
+}
+.content ul li a{
+    display:block;
+    padding:10px 15px;
+    color:white;
+    text-decoration: none;
+}
+.content h2{
+    color: white;
+    padding: 25px;
+}
+.close{
+    font-size: 40px;
+    color: white;
+    cursor : pointer;
+    right: 10px;
+    position:absolute;
+}
+.scontent{
+    left:0%;
 }
 .navbar {
     padding: 8px 0px;
