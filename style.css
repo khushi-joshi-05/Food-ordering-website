@@ -3,6 +3,13 @@
   padding: 0px;
 }
 
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
 body {
   background-color: black;
 }
@@ -671,7 +678,7 @@ textarea {
   gap: 20px;
   flex-direction: columns;
   margin: auto;
-  /*padding-left:2px;*/
+  /padding-left:2px;/
   max-width: 40%;
 }
 .contact_form > * {
@@ -801,3 +808,64 @@ textarea {
 }
 
 
+#marque {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  background-color: rgb(255, 255, 255);
+}
+
+#marque h1 {
+  display: inline-block;
+  font-size: 3vw;
+  text-transform: uppercase;
+  padding-right: 100px;
+  animation: marquee 10s linear infinite;
+  background: #de6262;
+  background: -webkit-linear-gradient(to right, #de6262, #ffb88c);
+  background: linear-gradient(to right, #de6262, #ffb88c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes marquee {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+#marque-container {
+  display: inline-block;
+  padding-left: 100%;
+}
+
+#marque-container:after {
+  content: "Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order!";
+  padding-left: 100px;
+}
+
+@media (max-width: 768px) {
+  #marque {
+      padding: 1vw;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+  }
+
+  #marque h1 {
+      letter-spacing: 2px;
+      font-size: 3vw;
+      -webkit-text-stroke: 0.3px black;
+      padding-right: 2px;
+  }
+
+  #marque-container:after {
+      content: "Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order!";
+      padding-left:2px;
+
+    }
+}
