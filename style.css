@@ -354,28 +354,18 @@ body {
     font-size: 1.3rem;
 }
 
-.app_download button {
-    border: 2px solid white;
-    padding: 10px;
-    font-size: 1.5rem;
-    margin: 40px 30px;
-    border-radius: 10px;
-    color: rgb(143, 36, 36);
-    font-family: 'Bree Serif', serif;
-}
-
-.app_download button:hover {
-    background-color: rgb(196, 89, 89);
-    color: white;
-    border: 2px solid white;
-    cursor: pointer;
-}
 .btn a{
     text-decoration: none;
     color: brown;
 }
 .btn a:hover{
     color: white;
+}
+
+.app-download-img {
+    max-height: 70px;
+    margin-top: 2rem;
+    margin-left: 2rem;
 }
 
 .move {
