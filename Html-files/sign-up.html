@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering Website</title>
+    <link rel="stylesheet" href="/Css-files/sign-up.css">
+</head>
+<body>
+    <div class="container">
+        <form id="signup-form" action="#" method="POST" class="signup-form">
+            <h2>Sign Up</h2>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+            <div id="password-error" class="error-message"></div> <!-- Error message container -->
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </form>
+    </div>
+    <script>
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirm_password');
+        const errorMessage = document.getElementById('password-error');
+    
+        confirmPasswordInput.addEventListener('keyup', function() {
+          if (confirmPasswordInput.value !== passwordInput.value) {
+            errorMessage.textContent = 'Passwords do not match.';
+            errorMessage.classList.add('visible'); // Add a visible class for styling
+          } else {
+            errorMessage.textContent = '';
+            errorMessage.classList.remove('visible'); // Remove visible class
+          }
+        });
+    
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+          if (confirmPasswordInput.value !== passwordInput.value) {
+            event.preventDefault(); // Prevent form submission if passwords don't match
+          } else {
+            // Redirect to login page
+            window.location.href = "login.html";
+          }
+        });
+    </script>
+</body>
+</html>
