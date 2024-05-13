@@ -801,3 +801,105 @@ textarea {
 }
 
 
+@media only screen and (max-width: 768px) {
+  .navbar li {
+    margin: 2px 5px;
+  }
+  
+  .intro_container {
+    padding: 10px;
+  }
+  
+  .intro_container h1 {
+    font-size: 2.5em;
+  }
+  
+  .intro_container p {
+    font-size: 0.9rem;
+  }
+  
+  .intro_container button {
+    margin-top: 15px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .about_us {
+    padding: 40px 10px;
+  }
+  
+  .h-primary {
+    font-size: 1.8rem;
+    padding: 15px;
+  }
+  
+  .h-secondary {
+    font-size: 1rem;
+    padding: 5px;
+  }
+  
+  .service_container {
+    padding: 15px;
+  }
+  
+  .service .box_main h1 {
+    font-size: 2.2rem;
+  }
+  
+  .service .box_main p {
+    font-size: 0.9rem;
+  }
+  
+  .service .box {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .service .box a {
+    padding: 3px 8px;
+  }
+  
+  .menu_container {
+    padding: 40px 10px;
+  }
+  
+  .mainhead h1 {
+    font-size: 1.8rem;
+  }
+  
+  .mainhead p {
+    font-size: 0.9rem;
+    margin: 5px 0px;
+  }
+  
+  .mainhead button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  
+  .menu_items .items {
+    margin: 5px;
+    width: 90%;
+  }
+  
+  .menu_items .items h3 {
+    font-size: 1rem;
+  }
+  
+  .section3 {
+    padding: 40px 10px;
+  }
+  
+  .section3 h1 {
+    font-size: 1.8rem;
+  }
+  
+  .footer {
+    margin-top: 40px;
+  }
+  
+  .footer p {
+    font-size: 0.9rem;
+  }
+}
