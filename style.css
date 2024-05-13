@@ -483,4 +483,9 @@ textarea {
     padding: 15px;
     text-decoration: none;
     color: white;
+    transition: font-size,0.3s,ease;
+}
+
+.social-icons a:hover{
+    font-size: 1.5rem;
 }
