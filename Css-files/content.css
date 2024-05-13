@@ -389,3 +389,31 @@ textarea {
 #bill{
   color: rgb(196, 74, 74);
 }
+.response{
+  display: flex;
+  justify-content: center;
+}
+#formSub{
+  position: fixed;
+  padding: 10px;
+  background-color: rgb(110 221 110);
+  text-align: center;
+  width: 18vw;
+  font-size: 18px;
+  display: none;
+  z-index: 10;
+  border-radius: 20px;
+  margin: 8px auto;
+}
+#error{
+  position: fixed;
+  padding: 10px;
+  background-color: rgb(231, 69, 69);
+  text-align: center;
+  z-index: 10;
+  width: 18vw;
+  display: none;
+  font-size: 18px;
+  border-radius: 20px;
+  margin: 8px auto;
+}

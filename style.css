@@ -708,11 +708,11 @@ input, textarea {
         padding: 100px;
     }
 
-    
-    
+}
 
 .btn{
     cursor: pointer;
+}
 .contact_page{
   background-color:rgb(213, 213, 238);
   /*background:linear-gradient(135deg,rgba(155, 155, 241,0.3),rgba(155, 155, 241,0.4),rgba(0,0,255,0.4),rgba(0,0,255,0.4));
@@ -818,7 +818,4 @@ input, textarea {
   .contact_us{
     display:none;
   }
-}
-=======
-
 }
