@@ -803,3 +803,20 @@ input, textarea {
     }
 }
 
+.navbar li:hover a {
+    color: brown; 
+}
+
+.btn:hover {
+    background-color: white;
+    color: brown;
+}
+
+.menu_items .items:hover {
+    box-shadow: 0 0 20px rgba(138, 37, 37, 0.5); 
+}
+
+.social-icons i:hover {
+    color: brown; 
+}
+
