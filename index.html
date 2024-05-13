@@ -38,14 +38,26 @@
 
 
     <section class="intro_container">
-        <h1>Welcome to foodie!</h1>
-        <p>A place with plethora of flavours from different regions be it our country or abroad can be enjoyed, where we
-            try to make your dining experience memorable with tech facilities and customisation and leave an expression
-            which will bring you back to us.</p>
-        <button class="btn">Order Now</button>
-
+        <div class="welcome">
+            <h1>Welcome to foodie!</h1>
+            <p>A place with a plethora of flavors from different regions, where we strive to make your dining experience memorable with tech facilities and customization, leaving an impression that will bring you back to us.</p>
+            
+        </div>
+        <div class="login-container">
+            <h2>Order Now!</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+            <p>Forgot your password? <a href="recover.html">Recover it here</a></p>
+        </div>
     </section>
-
+     
+    
     <section class="about_us">
         <div class="move">
         <marquee class="text">Get 30% OFF on your first order!</marquee>

@@ -32,60 +32,105 @@ body {
 .navbar li:hover {
     opacity: 0.7;
 }
-
-
 .intro_container {
-    display: flex;
-    flex-direction: column;
-    padding: 3px 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns, equal width */
+    gap: 50px;
+    padding: 60px 50px; /* Adjusted padding */
     height: 630px;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
+    position: relative;
 }
 
 .intro_container:before {
-    background: url(Images/home.jpg) no-repeat center center/cover;
+    background: url(../Images/home.jpg) no-repeat center center/cover;
     content: "";
     position: absolute;
-    height: 800px;
+    height: 100%;
     width: 100%;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: -1;
     opacity: 0.5;
-
 }
 
-.intro_container h1 {
-    font-size: 4.5em;
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content horizontally */
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcome h1 {
+    font-size: 2.5rem;
     font-family: 'Oswald', sans-serif;
+    margin-bottom: 5px;
+    color: white;
 }
 
-.intro_container p {
-    font-size: 1.15rem;
+.welcome p {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content horizontally */
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.login-container h2 {
+    font-size: 2.5rem;
     font-family: 'Oswald', sans-serif;
+    margin-bottom: 20px;
+    color: white;
 }
 
-.intro_container button {
-    margin-top: 20px;
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.login-container input {
+    width: 100%; /* Reduced width */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center; /* Align input fields left */
+}
+
+.login-container button{
+
+    width: 100%; /* Set button width to 100% */
+    padding: 5px;
     background-color: brown;
     color: white;
-    border: 2px solid rgb(139, 36, 36);
-    width: 170px;
-    height: 35px;
-    border-radius: 4px;
-    font-size: 1.3rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     font-family: 'Bree Serif', serif;
-    padding-bottom: 4px;
+    font-size: 1.3rem;
+    margin-top: 20px;
 }
 
-.intro_container button:hover {
-
-    background-color: white;
-    color: brown;
-    cursor: pointer;
+.login-container button:hover{
+    background-color: #853E00;
 }
 
 .about_us {
