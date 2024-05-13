@@ -69,7 +69,7 @@ This repository is aimed to help people to contribute in open source and learn G
 1. Clone the project repository:
 
 ```bash
-git clone https://github.com/khushi-joshi-05/Food-ordering-website.git
+git clone https://github.com/khushi-joshi-05/FoodOrderingWebsite.git
 ```
 
 2.Navigate to the project directory:
