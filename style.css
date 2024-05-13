@@ -556,6 +556,30 @@ textarea {
     cursor: pointer;
 }
 
+#facebook:hover{
+    transition-property: transform;
+    transition-delay: 0.2s;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    transform: scale(1.45);
+}
+
+#instagram:hover{
+    transition-property: transform;
+    transition-delay: 0.2s;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    transform: scale(1.45);
+}
+
+#twitter:hover{
+    transition-property: transform;
+    transition-delay: 0.2s;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    transform: scale(1.45);
+}
+
 #author{
     background-color:#871a7e ;
     padding: 3px;
