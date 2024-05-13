@@ -32,6 +32,7 @@ body {
 .navbar li:hover {
     opacity: 0.7;
 }
+
 .intro_container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two columns, equal width */
@@ -80,7 +81,7 @@ body {
     color: white;
 }
 
-.login-container{
+.login-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -114,8 +115,7 @@ body {
     text-align: center; /* Align input fields left */
 }
 
-.login-container button{
-
+.login-container button {
     width: 100%; /* Set button width to 100% */
     padding: 5px;
     background-color: brown;
@@ -129,8 +129,37 @@ body {
     margin-top: 20px;
 }
 
-.login-container button:hover{
+.login-container button:hover {
     background-color: #853E00;
+}
+
+.intro_container h1 {
+    font-size: 4.5em;
+    font-family: 'Oswald', sans-serif;
+}
+
+.intro_container p {
+    font-size: 1.15rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.intro_container button {
+    margin-top: 20px;
+    background-color: brown;
+    color: white;
+    border: 2px solid rgb(139, 36, 36);
+    width: 170px;
+    height: 35px;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+    padding-bottom: 4px;
+}
+
+.intro_container button:hover {
+    background-color: white;
+    color: brown;
+    cursor: pointer;
 }
 
 .about_us {
