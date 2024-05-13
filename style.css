@@ -666,6 +666,7 @@ input, textarea {
     
 }
 
+
 @media screen and (max-width:500px) {
     .menu_items .items {
         max-width: fit-content;
