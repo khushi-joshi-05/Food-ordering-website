@@ -12,36 +12,77 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
 
 </head>
 
-
-
 <body>
-
     <header>
-        <nav class="navbar">
-            <ul id="header-items">
-                <li><a href="index.html" target="_blank">Home</a></li>
+        <!-- <nav class="navbar background nav-h">
+            <a href="#" class="heading">Foodie</a>
+            <ul type="none" class="nav vis-h">
+                <li><a href="#">Home</a></li>
                 <li><a href="Html-files/menu.html" target="_blank">Menu</a></li>
                 <li><a href="Html-files/services.html" target="_blank">Services</a></li>
-                <li><a href="Html-files/contact.html" target="_blank">Contact us</a></li>
+                <li><a href="Html-files/contact.html" target="_blank">Contact Us</a></li>
                 <li><a href="Html-files/cart.html" target="_blank">Cart</a></li>
             </ul>
-        </nav>
-        
+        </nav> -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: grey;position:static;">
+            <div class="container-fluid" style="font-family:Oswald, sans-serif;">
+              <a class="navbar-brand" href="#" style="color: #0a58ca;font-size: 2rem;font-style: italic;">Foodie</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                    <li><a href="#" style="color: black;">Home</a></li>
+                    <li><a href="Html-files/menu.html" target="_blank" style="color: black;">Menu</a></li>
+                    <li><a href="Html-files/services.html" target="_blank" style="color: black;">Services</a></li>
+                    <li><a href="Html-files/contact.html" target="_blank" style="color: black;">Contact Us</a></li>
+                    <li><a href="Html-files/cart.html" target="_blank" style="color: black;">Cart</a></li>
+                </ul>  
+            </div>
+        </nav>        
     </header>
 
 
-    <section class="intro_container">
-        <h1>Welcome to foodie!</h1>
-        <p>A place with plethora of flavours from different regions be it our country or abroad can be enjoyed, where we
-            try to make your dining experience memorable with tech facilities and customisation and leave an expression
-            which will bring you back to us.</p>
-        <button class="btn">Order Now</button>
-
+    <section>   
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-caption adjust content" style= "z-index: 1; margin-bottom: 15.0rem; font-family: Dela Gothic One;color: black;letter-spacing: 1.8px;">
+                    <h2 >Welcome to <span style="color: #0a58ca;">Foodie</span></h2>
+                    <p style="margin-top:6px;font-size: 1.16rem;">Your delicious meal awaits you!</p>
+                    <!-- <p style="margin-top:6px;font-size: 1.16rem;">A place with plethora of flavours from different regions be it our country or abroad can be enjoyed, where we
+                        try to make your dining experience memorable with tech facilities and customisation and leave an expression
+                        which will bring you back to us.</p> -->
+                </div>
+                <div class="carousel-caption content2" style="z-index: 1;margin-bottom: 8rem;">
+                    <button class="btn btn-outline-success my-2 my-sm-0 text-light bg-success" type="submit">Order Now</button>
+                </div>
+              <div class="carousel-item active">
+                <img src="https://source.unsplash.com/random/600x270/?pasta" class="d-block w-100" alt="..." style="opacity: 0.7;background: center center/cover;">
+              </div>
+              <div class="carousel-item">
+                <img src="https://source.unsplash.com/random/600x270/?pizza" class="d-block w-100" alt="..." style="opacity: 0.7;">
+              </div>
+              <div class="carousel-item">
+                <img src="https://source.unsplash.com/random/600x270/?juice" class="d-block w-100" alt="..." style="opacity: 0.7;">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
     </section>
 
     <section class="about_us">
@@ -68,7 +109,6 @@
                 <h2 class="h-secondary center">Innovative Fusion Dishes</h2>
                 <p class="center">The combinations of Indian and international cuisines not only tantalize taste buds
                     but also provide unique experience.
-
                 </p>
             </div>
         </div>
@@ -82,20 +122,19 @@
                     childhood dish<br> to the thrill of discovering new flavors, food has a unique<br> way of filling
                     our hearts with joy.</p>
             </div>
-            <div class="box">
-                <h1>Online Delivery</h1><br>
-                <a href="#">Order Online</a>
-
-            </div>
-            <div class="box">
-                <h1>Click & Collect</h1><br>
-                <a href="#">Take out Order</a>
-
-            </div>
-            <div class="box">
-                <h1>Restuarant Dining</h1><br>
-                <a href="#">Book Table</a>
-
+            <div class="boxes">
+                <div class="box">
+                    <h1>Online Delivery</h1><br>
+                    <a href="#">Order Online</a>
+                </div>
+                <div class="box">
+                    <h1>Click & Collect</h1><br>
+                    <a href="#">Take out Order</a>
+                </div>
+                <div class="box">
+                    <h1>Restuarant Dining</h1><br>
+                    <a href="#">Book Table</a>
+                </div>
             </div>
         </div>
 
@@ -106,7 +145,7 @@
             <h1>"Get ready to explore our delicious range of dishes!"</h1>
             <p>"Welcome to a world of culinary delights where every bite tells a flavorful story. Explore our diverse
                 menu and savor the essence of exquisite dining." </p>
-                <button class="butt" onclick="window.open('Html-files/menu.html" target="_blank')">View Menu</button>
+            <button class="butt" onclick="window.open('Html-files/menu.html" target="_blank')">View Menu</button>
 
         </div>
 
@@ -199,7 +238,7 @@
                     <a>Contact</a>
                     <a>Cart</a>
                 </ul>
-                
+
                 <ul>
                     <p> Exclusive Offers</p>
                     <a>Foodie Discounts</a>
@@ -220,7 +259,7 @@
                     <a>Mobile Wallets</a>
                     <a>Contactless Payments</a>
                 </ul>
-                    
+
 
                 <form id="contactForm">
                     <h3>Contact Us!</h3>
@@ -235,21 +274,21 @@
 
                     <button id="butt" type="submit">Send Message</button>
                 </form>
-            
+
             </div>
 
 
             <div class="foot_panel4">
                 <div class="pages">
                     <h4>Follow Us</h4>
-                    
+
                     <div class="social-icons">
                         <i class="fa-brands fa-facebook"></i>
                         <i class="fa-brands fa-instagram"></i>
                         <i class="fa-brands fa-twitter"></i>
-                   </div>
-                   <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
-                </p>
+                    </div>
+                    <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
+                    </p>
                     <div class="copyright">
                         &copy; 2023 Foodies . All Rights Reserved. | Developed by Khushi Joshi</p>
 
@@ -258,7 +297,7 @@
         </footer>
 
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>

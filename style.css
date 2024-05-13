@@ -32,9 +32,7 @@ body {
 .navbar li:hover {
     opacity: 0.7;
 }
-
-
-.intro_container {
+/* .intro_container {
     display: flex;
     flex-direction: column;
     padding: 3px 150px;
@@ -43,9 +41,9 @@ body {
     align-items: center;
     color: white;
     text-align: center;
-}
+} */
 
-.intro_container:before {
+/* .intro_container:before {
     background: url(Images/home.jpg) no-repeat center center/cover;
     content: "";
     position: absolute;
@@ -55,8 +53,7 @@ body {
     left: 0px;
     z-index: -1;
     opacity: 0.5;
-
-}
+} */
 
 .intro_container h1 {
     font-size: 4.5em;
@@ -89,27 +86,29 @@ body {
 
 .about_us {
     background-color: rgb(224, 224, 252);
-    padding: 100px 0px 100px 0px;
+    /* padding: 100px 0px 100px 0px; */
+    /* width: 100vh; */
 }
-
 #about {
     /* margin: 34px; */
     display: flex;
-
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-
-
+#about .box:hover{
+    transform: scale(1.06);
+}
 #about .box {
     border: 2px solid brown;
     padding: 34px;
-    margin: 2px 55px;
+    width: 330px;
+    /* margin: 2px 55px; */
     border-radius: 28px;
     background: #f2f2f2;
     margin-bottom: 20px;
+    transition: transform 0.5s;
     /* float: left; */
-
 }
-
 #about .box img {
     height: 160px;
     width: 270px;
@@ -123,6 +122,7 @@ body {
 }
 
 .h-primary {
+    width: 100%;
     font-family: 'Bree Serif', serif;
     font-size: 2.5rem;
     padding: 40px 80px 80px 80px;
@@ -156,7 +156,7 @@ body {
     height: 560px;
     width: 100%;
     /* justify-items: center; */
-    opacity: 0.4;
+    opacity: 0.8;
     z-index: -1;
     /* background-repeat: no-repeat; */
 }
@@ -166,24 +166,24 @@ body {
     display: flex;
     padding: 20px;
     box-sizing: fixed;
-
-
 }
 
-.service .box_main {
+/* .service .box_main {
     padding-left: 20px;
     padding-right: 40px;
-}
+} */
 
 .service .box_main h1 {
-    font-size: 4.5rem;
+    font-size: 4.3rem;
     font-family: 'Oswald', sans-serif;
 
 }
-
 .service .box_main p {
     font-family: 'Oswald', sans-serif;
 
+}
+.boxes{
+    display: flex;
 }
 
 .service .box {
@@ -245,7 +245,7 @@ body {
 
 .menu_items {
     display: flex;
-
+    flex-wrap: wrap;
 }
 
 .menu_items .items {
@@ -254,7 +254,7 @@ body {
     padding: 25px;
     margin: 15px;
     height: 400px;
-    width: 400px;
+    width: 350px;
     border-radius: 10px;
     text-align: center;
     font-family: 'Bree Serif', serif;
@@ -452,7 +452,7 @@ label {
 input,
 textarea {
     height:30px;
-    width: 120%;
+    width: 110%;
     padding: 2.5px;
     box-sizing: border-box;
     border-radius: 2px;
@@ -477,3 +477,31 @@ textarea {
 }
 .btn{
     cursor: pointer;
+}
+@media only screen and (max-width:827px){
+    .service{
+        flex-direction: column;
+    }
+    .box_main{
+        width: 100%;
+        position: relative;
+        top: 9rem;
+        text-align: center;
+    }
+    .boxes{
+        width: 100%;
+        height: 50%;
+    }
+}
+@media only screen and (max-width:855px) {
+    .content{
+        position: relative;
+        top: 4rem;
+    }
+    .content2{
+        top: 13rem;
+    }
+    .carousel-item img{
+        height: 450px;
+    }
+}
