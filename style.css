@@ -379,13 +379,13 @@ body {
 }
 
 .move {
-    background-color: rgb(224, 224, 252);;
+    background-color: rgb(147, 22, 33);;
     height: 60px;
 }
 
 .move .text {
-    color: brown;
-    font-size: 1.6rem;
+    color: rgb(244, 240, 240);
+    font-size: 2.5rem;
     padding-top: 10px;
 
 }
