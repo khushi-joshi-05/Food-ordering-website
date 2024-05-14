@@ -33,6 +33,30 @@ body {
     opacity: 0.7;
 }
 
+.rightalign{
+    float: right;
+}
+
+.rightalign button{
+    border: none;
+  color: rgb(255, 255, 255);
+  padding: 12px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: rgb(255, 0, 0);
+  border-radius: 6px;
+  border: 2px solid rgb(209, 14, 14);
+}
+
+.rightalign button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(215, 6, 6);
+}
 
 .intro_container {
     display: flex;
