@@ -31,10 +31,14 @@ body {
 .navbar li:hover {
   opacity: 0.7;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 601d45a0edfc216022fe0cace24b47647f882c64
   transform: translateY(-2px); /* Move the text up by 2 pixels */
   transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for both transform and color */
 }
 
+<<<<<<< HEAD
 =======
 }
 
@@ -64,6 +68,8 @@ body {
 }
 
 >>>>>>> 3893a47677b547364cd86694e753a37a94e180be
+=======
+>>>>>>> 601d45a0edfc216022fe0cace24b47647f882c64
 .intro_container {
   display: flex;
   flex-direction: column;
@@ -109,9 +115,13 @@ body {
   font-family: "Bree Serif", serif;
   padding-bottom: 4px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   transition: background-color 0.4s ease, color 0.4s ease; /*added a smooth transition */
 =======
 >>>>>>> 3893a47677b547364cd86694e753a37a94e180be
+=======
+  transition: background-color 0.4s ease, color 0.4s ease; /*added a smooth transition */
+>>>>>>> 601d45a0edfc216022fe0cace24b47647f882c64
 }
 
 .intro_container button:hover {
@@ -119,9 +129,13 @@ body {
   color: brown;
   cursor: pointer;
 <<<<<<< HEAD
+<<<<<<< HEAD
   transform: scale(1.05);
 =======
 >>>>>>> 3893a47677b547364cd86694e753a37a94e180be
+=======
+  transform: scale(1.05);
+>>>>>>> 601d45a0edfc216022fe0cace24b47647f882c64
 }
 
 .about_us {
@@ -276,9 +290,13 @@ body {
   background-color: brown;
   color: white;
 <<<<<<< HEAD
+<<<<<<< HEAD
   transition: background-color 0.4s ease, color 0.4s ease; /*added a smooth transition */
 =======
 >>>>>>> 3893a47677b547364cd86694e753a37a94e180be
+=======
+  transition: background-color 0.4s ease, color 0.4s ease; /*added a smooth transition */
+>>>>>>> 601d45a0edfc216022fe0cace24b47647f882c64
 }
 
 .mainhead button:hover {
@@ -287,9 +305,13 @@ body {
   background-color: #f2f2f2;
   cursor: pointer;
 <<<<<<< HEAD
+<<<<<<< HEAD
   transform: scale(1.05);
 =======
 >>>>>>> 3893a47677b547364cd86694e753a37a94e180be
+=======
+  transform: scale(1.05);
+>>>>>>> 601d45a0edfc216022fe0cace24b47647f882c64
 }
 
 .menu_items {
@@ -567,6 +589,9 @@ textarea {
   color: white;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 601d45a0edfc216022fe0cace24b47647f882c64
 
 .social-icons .fa-facebook:hover {
   color: rgba(24, 119, 242, 0.8);
@@ -599,6 +624,7 @@ textarea {
     color:  #1DA1F2;
     cursor: pointer;
 } */
+<<<<<<< HEAD
 
 #author {
   background-color: #871a7e;
@@ -615,6 +641,13 @@ textarea {
   border-radius: 3px;
   color: #dddddd;
 >>>>>>> 3893a47677b547364cd86694e753a37a94e180be
+=======
+
+#author {
+  background-color: #871a7e;
+  padding: 3px;
+  border-radius: 3px;
+>>>>>>> 601d45a0edfc216022fe0cace24b47647f882c64
 }
 @media screen and (max-width: 500px) {
   .menu_items .items {
@@ -858,6 +891,7 @@ textarea {
     height: fit-content;
     padding: 100px;
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -883,3 +917,6 @@ textarea {
 
 
 >>>>>>> 3893a47677b547364cd86694e753a37a94e180be
+=======
+}
+>>>>>>> 601d45a0edfc216022fe0cace24b47647f882c64
