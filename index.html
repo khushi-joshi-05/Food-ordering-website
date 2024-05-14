@@ -29,6 +29,10 @@
                 <li><a href="Html-files/services.html" target="_blank">Services</a></li>
                 <li><a href="Html-files/contact.html" target="_blank">Contact us</a></li>
                 <li><a href="Html-files/cart.html" target="_blank">Cart</a></li>
+                <div class="rightalign">
+                    <li><button onclick="redirectLogin()" target="_blank">Login</button></li>
+                    <li><button onclick="redirectSignup()" target="_blank">Sign Up</a></li>
+                </div>
             </ul>
         </nav>
         
@@ -260,5 +264,12 @@
     </div>
 
 </body>
-
+<script>
+    function redirectLogin(){
+        window.location.href = "Html-files/login.html";
+    }
+    function redirectSignup(){
+        window.location.href = "Html-files/signup.html";
+    }
+</script>
 </html>
