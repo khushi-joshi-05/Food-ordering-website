@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodOrderingWebsite</title>
+
+    <title>Food Ordering Website</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,7 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 
 </head>
 
@@ -49,7 +51,13 @@
     </section>
 
     <section class="about_us">
+        <div class="move">
+        <marquee class="text">Get 30% OFF on your first order!</marquee>
+    </div>
         <h1 class="h-primary center">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
+
+
+        <!-- changes -->
         <div id="about">
             <div class="box">
                 <img src="https://shahidining.com.au/wp-content/uploads/2020/05/secret-to-indian-flavour-1536x864.jpg"
@@ -110,7 +118,12 @@
             <h1>"Get ready to explore our delicious range of dishes!"</h1>
             <p>"Welcome to a world of culinary delights where every bite tells a flavorful story. Explore our diverse
                 menu and savor the essence of exquisite dining." </p>
-                <button class="butt" onclick="window.open('Html-files/menu.html" target="_blank')">View Menu</button>
+
+                
+
+                <button class="butt" onclick="window.open('Html-files/menu.html',target='_blank')">View Menu</button>
+
+
 
         </div>
 
@@ -158,17 +171,64 @@
 
     </div> -->
 
+    <section class="section-meals" data-aos="fade-in" data-aos-duration="2000">
+        <ul class="meals-showcase clearfix">
+            <li>
+                <figure class="meal-photo">
+                    <img src="Images/1.jpg" alt="food-image">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="Images/2.jpg" alt="food-image">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="Images/3.jpg" alt="food-image">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="Images/4.jpg" alt="food-image">
+                </figure>
+            </li>
+
+        </ul>
+        <ul class="meals-showcase clearfix">
+            <li>
+                <figure class="meal-photo">
+                    <img src="Images/5.jpg" alt="food-image">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="Images/6.jpg" alt="food-image">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="Images/7.jpg" alt="food-image">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="Images/8.jpg" alt="food-image">
+                </figure>
+            </li>
+
+        </ul>
+
+    </section>
+
     <div class="app_download">
         <h4>Free Delivery!</h4>
         <h2>Download the App now!</h2>
+        <br>
         <p>For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
-        <button class="btn" href="#">Google Play Store</button>
-        <button class="btn" href="#">App Store</button>
+        <a href="#"><img src="./Images/get_it_on_google_play_store.png" class="app-download-img" alt="Get it on Google Play Store"></a>
+        <a href="#"><img src="./Images/download-on-the-app-store.png" class="app-download-img" alt="Download on the Apple App Store"></a>
 
-    </div>
-
-    <div class="move">
-        <marquee class="text">Get 30% OFF on your first order!</marquee>
     </div>
 
     <div class="footer">
@@ -197,32 +257,32 @@
             <div class="foot-panel2">
                 <ul>
                     <p>Our Pages</p>
-                    <a>Home</a>
-                    <a>Menu</a>
-                    <a>Services</a>
-                    <a>Contact</a>
-                    <a>Cart</a>
+                    <a href="#">Home</a>
+                    <a href="#">Menu</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Cart</a>
                 </ul>
                 
                 <ul>
                     <p> Exclusive Offers</p>
-                    <a>Foodie Discounts</a>
-                    <a>Limited-Time Promotions</a>
-                    <a>Special Event Packages</a>
-                    <a>Membership Benefits</a>
-                    <a>Early Access to New Recipes</a>
-                    <a>VIP Foodie Events</a>
-                    <a>Personalized Culinary Experiences</a>
+                    <a href="#">Foodie Discounts</a>
+                    <a href="#">Limited-Time Promotions</a>
+                    <a href="#">Special Event Packages</a>
+                    <a href="#">Membership Benefits</a>
+                    <a href="#">Early Access to New Recipes</a>
+                    <a href="#">VIP Foodie Events</a>
+                    <a href="#">Personalized Culinary Experiences</a>
 
                 </ul>
 
                 <ul>
                     <p>Payment Products</p>
-                    <a>Secure Checkout</a>
-                    <a>Credit/Debit Cards</a>
-                    <a>Online Payment</a>
-                    <a>Mobile Wallets</a>
-                    <a>Contactless Payments</a>
+                    <a href="#" >Secure Checkout</a>
+                    <a href="#" >Credit/Debit Cards</a>
+                    <a href="#" >Online Payment</a>
+                    <a href="#" >Mobile Wallets</a>
+                    <a href="#" >Contactless Payments</a>
                 </ul>
                     
 
@@ -248,20 +308,39 @@
                     <h4>Follow Us</h4>
                     
                     <div class="social-icons">
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-twitter"></i>
+
+
+                        <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                        <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                        <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
+
                    </div>
                    <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                 </p>
                     <div class="copyright">
-                        &copy; 2023 Foodies . All Rights Reserved. | Developed by Khushi Joshi</p>
+
+                        &copy; 2023 Foodies . All Rights Reserved. | Developed by <span id="author">
+                            <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
+                        </span></p>
+
+                        &copy; 2024 Foodies . All Rights Reserved. | Developed by <span id="author"> Khushi Joshi </span></p>
+
 
                     </div>
                 </div>
         </footer>
 
     </div>
+
+    <script>
+        window.addEventListener('beforeunload', function(event) {
+            localStorage.clear();
+        });
+        const btn=document.querySelector('.btn')
+        btn.onclick=()=>{
+            location.href="./Html-files/menu.html"
+        }
+    </script>
 
 </body>
 <script>
