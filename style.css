@@ -30,10 +30,40 @@ body {
 
 .navbar li:hover {
   opacity: 0.7;
+<<<<<<< HEAD
   transform: translateY(-2px); /* Move the text up by 2 pixels */
   transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for both transform and color */
 }
 
+=======
+}
+
+.rightalign{
+    float: right;
+}
+
+.rightalign button{
+    border: none;
+  color: rgb(255, 255, 255);
+  padding: 12px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: rgb(255, 0, 0);
+  border-radius: 6px;
+  border: 2px solid rgb(209, 14, 14);
+}
+
+.rightalign button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(215, 6, 6);
+}
+
+>>>>>>> 3893a47677b547364cd86694e753a37a94e180be
 .intro_container {
   display: flex;
   flex-direction: column;
@@ -78,14 +108,20 @@ body {
   font-size: 1.3rem;
   font-family: "Bree Serif", serif;
   padding-bottom: 4px;
+<<<<<<< HEAD
   transition: background-color 0.4s ease, color 0.4s ease; /*added a smooth transition */
+=======
+>>>>>>> 3893a47677b547364cd86694e753a37a94e180be
 }
 
 .intro_container button:hover {
   background-color: white;
   color: brown;
   cursor: pointer;
+<<<<<<< HEAD
   transform: scale(1.05);
+=======
+>>>>>>> 3893a47677b547364cd86694e753a37a94e180be
 }
 
 .about_us {
@@ -239,7 +275,10 @@ body {
   margin-bottom: 50px;
   background-color: brown;
   color: white;
+<<<<<<< HEAD
   transition: background-color 0.4s ease, color 0.4s ease; /*added a smooth transition */
+=======
+>>>>>>> 3893a47677b547364cd86694e753a37a94e180be
 }
 
 .mainhead button:hover {
@@ -247,7 +286,10 @@ body {
   color: brown;
   background-color: #f2f2f2;
   cursor: pointer;
+<<<<<<< HEAD
   transform: scale(1.05);
+=======
+>>>>>>> 3893a47677b547364cd86694e753a37a94e180be
 }
 
 .menu_items {
@@ -524,6 +566,7 @@ textarea {
   text-decoration: none;
   color: white;
 }
+<<<<<<< HEAD
 
 .social-icons .fa-facebook:hover {
   color: rgba(24, 119, 242, 0.8);
@@ -540,12 +583,18 @@ textarea {
 /* .fb{
     color: #1877F2;
     cursor: pointer;
+=======
+.fb {
+  color: #1877f2;
+  cursor: pointer;
+>>>>>>> 3893a47677b547364cd86694e753a37a94e180be
 }
 
-.instagram{
-    color: #dd4c8d;
-    cursor: pointer;
+.instagram {
+  color: #dd4c8d;
+  cursor: pointer;
 }
+<<<<<<< HEAD
 .twitter{
     color:  #1DA1F2;
     cursor: pointer;
@@ -555,6 +604,17 @@ textarea {
   background-color: #871a7e;
   padding: 3px;
   border-radius: 3px;
+=======
+.twitter {
+  color: #1da1f2;
+  cursor: pointer;
+}
+
+#author {
+  padding: 3px;
+  border-radius: 3px;
+  color: #dddddd;
+>>>>>>> 3893a47677b547364cd86694e753a37a94e180be
 }
 @media screen and (max-width: 500px) {
   .menu_items .items {
@@ -799,3 +859,27 @@ textarea {
     padding: 100px;
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+.navbar li:hover a {
+    color: brown; 
+}
+
+.btn:hover {
+    background-color: white;
+    color: brown;
+}
+
+.menu_items .items:hover {
+    box-shadow: 0 0 20px rgba(138, 37, 37, 0.5); 
+}
+
+.social-icons i:hover {
+    color: brown; 
+}
+
+
+>>>>>>> 3893a47677b547364cd86694e753a37a94e180be
