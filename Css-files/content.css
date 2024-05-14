@@ -313,7 +313,7 @@ form {
     padding-top: 20px;
     display: grid;
     /* gap: 10px; */
-    padding-bottom: 100px;
+    padding-bottom: 60px;
 }
 
 label {
@@ -322,11 +322,12 @@ label {
 
 input,
 textarea {
-    height:30px;
+    height:45px;
     width: 120%;
     padding: 2.5px;
     box-sizing: border-box;
     border-radius: 2px;
+
 }
 
 #butt{
