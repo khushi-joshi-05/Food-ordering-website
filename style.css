@@ -1,24 +1,26 @@
 * {
   margin: 0px;
   padding: 0px;
-}
+  font-family: "Oswald", sans-serif;}
 
 body {
   background-color: black;
 }
 .navbar {
   padding: 8px 0px;
+  background-color: rgb(0, 0, 0);
 }
 
 .navbar ul {
   overflow: auto;
-  /* background-color: black; */
+  padding-left: 27rem;
 }
 
 .navbar li {
   float: left;
   list-style: none;
   margin: 2px 20px;
+  letter-spacing: 1px;
 }
 
 .navbar li a {
@@ -36,8 +38,12 @@ body {
     float: right;
 }
 
-.rightalign button{
-    border: none;
+.leftalign{
+  float: left;
+  margin-left: -27rem;
+}
+.rightalign button, .leftalign button{
+  border: none;
   color: rgb(255, 255, 255);
   padding: 12px 15px;
   text-align: center;
@@ -47,12 +53,12 @@ body {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(58, 57, 57);
   border-radius: 6px;
-  border: 2px solid rgb(209, 14, 14);
+  border: 1px solid rgb(130, 119, 119);
 }
 
-.rightalign button:hover {
+.rightalign button:hover , .leftalign button:hover{
     background-color: rgb(255, 255, 255);
     color: rgb(215, 6, 6);
 }
@@ -81,22 +87,25 @@ body {
 }
 
 .intro_container h1 {
-  font-size: 4.5em;
+  font-size: 5rem;
   font-family: "Oswald", sans-serif;
+  text-shadow: 3px 3px 3px black;
 }
 
 .intro_container p {
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   font-family: "Oswald", sans-serif;
+  letter-spacing: 1.5px;
+  text-shadow: 3px 3px 3px black;
 }
 
 .intro_container button {
   margin-top: 20px;
   background-color: brown;
-  color: white;
+  color: rgb(255, 255, 255);
   border: 2px solid rgb(139, 36, 36);
   width: 170px;
-  height: 35px;
+  height: 55px;
   border-radius: 4px;
   font-size: 1.3rem;
   font-family: "Bree Serif", serif;
@@ -110,8 +119,9 @@ body {
 }
 
 .about_us {
-  background-color: rgb(224, 224, 252);
-  padding: 100px 0px 100px 0px;
+  /* changed background colour */
+  background-color: #000;
+  padding: 0 0 100px 0px;
 }
 
 #about {
@@ -122,20 +132,23 @@ body {
 }
 
 #about .box {
-  border: 2px solid brown;
+  border: 3px solid rgb(148, 0, 0);
   padding: 34px;
   margin: 2px 55px;
   border-radius: 28px;
   background: #f2f2f2;
   margin-bottom: 20px;
-  /* float: left; */
   transition: 0.3s all ease-in-out;
+  height: 350px;
+  width: 300px;
 }
 
 #about .box:hover {
-  box-shadow: #212123 1px 1px 8px;
+  /* box-shadow: #828283 1px 1px 10px 1px; */
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.5); 
   scale: 1.015;
   cursor: pointer;
+  border: 3px solid rgb(255, 254, 254)
 }
 
 #about .box img {
@@ -231,8 +244,9 @@ body {
 }
 
 .menu_container {
-  background-color: rgb(224, 224, 252);
-  padding: 100px 0px 100px 0px;
+  background-color: rgb(0, 0, 0);
+  padding: 50px 0px 100px 0px;
+  color: wheat;
 }
 
 .menu_container .mainhead {
@@ -287,7 +301,8 @@ body {
 }
 
 .menu_items .items:hover {
-  box-shadow: #212123 1px 1px 8px;
+  /* box-shadow: #212123 1px 1px 8px; */
+    box-shadow: #828283 1px 1px 10px 1px;
   cursor: pointer;
   scale: 1.02;
 }
@@ -379,12 +394,12 @@ body {
 
 .move {
   background-color: rgb(147, 22, 33);
-  height: 60px;
+  height: 70px;
 }
 
 .move .text {
   color: rgb(244, 240, 240);
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding-top: 10px;
 }
 
@@ -522,6 +537,10 @@ textarea {
   border-radius: 4px;
   outline: none;
   border: #212123 1px;
+}
+
+.butt {
+  margin-top: 20px;
 }
 
 #butt {
@@ -806,8 +825,6 @@ textarea {
   }
 }
 
-
-
 .navbar li:hover a {
     color: brown; 
 }
@@ -818,7 +835,8 @@ textarea {
 }
 
 .menu_items .items:hover {
-    box-shadow: 0 0 20px rgba(138, 37, 37, 0.5); 
+    /* box-shadow: 0 0 20px rgba(138, 37, 37, 0.5);  */
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.5); 
 }
 
 .social-icons i:hover {
