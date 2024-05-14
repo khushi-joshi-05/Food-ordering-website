@@ -31,6 +31,10 @@
                 <li><a href="Html-files/services.html" target="_blank">Services</a></li>
                 <li><a href="Html-files/contact.html" target="_blank">Contact us</a></li>
                 <li><a href="Html-files/cart.html" target="_blank">Cart</a></li>
+                <div class="rightalign">
+                    <li><button onclick="redirectLogin()" target="_blank">Login</button></li>
+                    <li><button onclick="redirectSignup()" target="_blank">Sign Up</a></li>
+                </div>
             </ul>
         </nav>
         
@@ -101,7 +105,7 @@
 
             </div>
             <div class="box">
-                <h1>Restuarant Dining</h1><br>
+                <h1>Restaurant Dining</h1><br>
                 <a href="#">Book Table</a>
 
             </div>
@@ -314,7 +318,13 @@
                    <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                 </p>
                     <div class="copyright">
-                        &copy; 2023 Foodies . All Rights Reserved. | Developed by <span id="author"> Khushi Joshi </span></p>
+
+                        &copy; 2023 Foodies . All Rights Reserved. | Developed by <span id="author">
+                            <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
+                        </span></p>
+
+                        &copy; 2024 Foodies . All Rights Reserved. | Developed by <span id="author"> Khushi Joshi </span></p>
+
 
                     </div>
                 </div>
@@ -333,5 +343,12 @@
     </script>
 
 </body>
-
+<script>
+    function redirectLogin(){
+        window.location.href = "Html-files/login.html";
+    }
+    function redirectSignup(){
+        window.location.href = "Html-files/signup.html";
+    }
+</script>
 </html>
