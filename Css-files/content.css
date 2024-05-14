@@ -155,10 +155,24 @@ body {
 }
 
 .menu_items {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(4,1fr);
+}
+@media(width<=1024px)
+{
+  .menu_items{
+    grid-template-columns: repeat(2,2fr);
+  }
 }
 
+@media(width<=768px)
+{
+  .menu_items{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
 .menu_items .items {
   background-color: #f2f2f2;
   /* border: 2px solid brown;
@@ -320,9 +334,12 @@ body {
 .foot-panel2{
     background-color: rgb(138, 37, 37);
     color:white;
-    height: 300px;
+    /* height: 300px; */
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    justify-content: center;
     /* margin-top: 50px; */
 }
 
@@ -353,7 +370,7 @@ body {
 .foot_panel4{
     background-color: rgb(66, 16, 16);
     color: white;
-    height: 160px;
+    height: 180px;
     font-size: 0.9rem;
     text-align: center;
 }
@@ -369,7 +386,7 @@ body {
 form {
     padding-top: 20px;
     display: grid;
-    /* gap: 10px; */
+    gap: 10px;
     padding-bottom: 100px;
 }
 
@@ -430,7 +447,14 @@ textarea {
   border: 2px solid black;
   width: 75%;
 }
-
+ @media (width<=1024px) {
+   footer{
+     flex-direction: column;
+    }
+    .foot-panel2{
+      flex-direction: column;
+    }
+  }
 #bill{
   color: rgb(196, 74, 74);
 }
