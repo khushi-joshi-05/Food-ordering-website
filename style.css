@@ -5,15 +5,18 @@
 }
 
 .dimension {
-  position: absolute;
+  position: fixed;
   background-color: yellow;
-  bottom: 0;
+  bottom: 15px;
+  left: 0;
   padding: 10px;
 }
 
 body {
   background-color: black;
 }
+
+/* Landing page starts*/
 .navbar {
   padding: 8px 0px;
   background-color: rgb(0, 0, 0);
@@ -41,25 +44,6 @@ body {
   justify-content: end;
 }
 
-@media (min-width: 820px) {
-  #header-items {
-    justify-content: space-between;
-  }
-  #header-items .bar1 {
-    display: flex;
-  }
-  .bar2 {
-    display: none;
-    cursor: pointer;
-  }
-}
-
-/* .sidebar {
-  display: none;
-} */
-
-/*  */
-
 .sidebar {
   display: none;
   flex-direction: column;
@@ -67,8 +51,6 @@ body {
   position: fixed;
   top: 60px;
   left: 0;
-  /* width: 250px; */
-  /* height: 100%; */
   padding: 10px 0 10px 10px;
   color: white;
 }
@@ -84,8 +66,6 @@ body {
   color: white;
   display: block;
 }
-
-/*  */
 
 .bar2 {
   cursor: pointer;
@@ -122,6 +102,7 @@ body {
 .leftalign{
   float: left;
 }
+
 .rightalign button, .leftalign button{
   border: none;
   color: rgb(255, 255, 255);
@@ -138,15 +119,17 @@ body {
   border: 1px solid rgb(130, 119, 119);
 }
 
-.rightalign button:hover , .leftalign button:hover{
+.rightalign button:hover, .leftalign button:hover{
     background-color: rgb(255, 255, 255);
     color: rgb(215, 6, 6);
 }
+/* Landing page ends*/
 
+/* intro-container starts */
 .intro_container {
   display: flex;
   flex-direction: column;
-  padding: 3px 150px;
+  padding: 3vmin 15vmin;
   height: 630px;
   justify-content: center;
   align-items: center;
@@ -167,13 +150,14 @@ body {
 }
 
 .intro_container h1 {
-  font-size: 5rem;
+  font-size: 4.5em;
   font-family: "Oswald", sans-serif;
   text-shadow: 3px 3px 3px black;
+  padding-bottom: 30px;
 }
 
 .intro_container p {
-  font-size: 1.5rem;
+  font-size: 1.3em;
   font-family: "Oswald", sans-serif;
   letter-spacing: 1.5px;
   text-shadow: 3px 3px 3px black;
@@ -918,4 +902,26 @@ textarea {
 
 .social-icons i:hover {
     color: brown; 
+}
+
+
+
+
+@media (min-width: 820px) {
+  #header-items {
+    justify-content: space-between;
+  }
+  #header-items .bar1 {
+    display: flex;
+  }
+  .bar2 {
+    display: none;
+    cursor: pointer;
+  }
+  .intro_container h1 {
+    font-size: 100px;
+  }
+  .intro_container p {
+    font-size: 1.5rem;
+  }
 }
