@@ -342,9 +342,12 @@ textarea {
     background-color:rgb(196, 89, 89);
 }
 
-.social-icons i{
+.social-icons i,
+.social-icons a{
     font-size: 1.2rem;
     padding: 15px;
+    color: white;
+    text-decoration: none;
 }
 
 
