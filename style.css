@@ -1,7 +1,15 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: "Oswald", sans-serif;}
+  font-family: "Oswald", sans-serif;
+}
+
+.dimension {
+  position: absolute;
+  background-color: yellow;
+  bottom: 0;
+  padding: 10px;
+}
 
 body {
   background-color: black;
@@ -11,9 +19,82 @@ body {
   background-color: rgb(0, 0, 0);
 }
 
+.navbar li:hover a {
+  color: rgb(255, 0, 0); 
+}
+
+#header-items .bar1 {
+  display: none;
+}
+
+.bar2 {
+  display: block;
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+#header-items {
+  display: flex;
+  justify-content: end;
+}
+
+@media (min-width: 820px) {
+  #header-items {
+    justify-content: space-between;
+  }
+  #header-items .bar1 {
+    display: flex;
+  }
+  .bar2 {
+    display: none;
+    cursor: pointer;
+  }
+}
+
+/* .sidebar {
+  display: none;
+} */
+
+/*  */
+
+.sidebar {
+  display: none;
+  flex-direction: column;
+  background-color: #000;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  /* width: 250px; */
+  /* height: 100%; */
+  padding: 10px 0 10px 10px;
+  color: white;
+}
+
+.sidebar.visible {
+  display: flex;
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+
+/*  */
+
+.bar2 {
+  cursor: pointer;
+}
+
 .navbar ul {
   overflow: auto;
-  padding-left: 27rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navbar li {
@@ -40,7 +121,6 @@ body {
 
 .leftalign{
   float: left;
-  margin-left: -27rem;
 }
 .rightalign button, .leftalign button{
   border: none;
@@ -818,15 +898,12 @@ textarea {
     display: none;
   }
 }
+
 @media screen and (max-width: 440px) {
   .intro_container {
     height: fit-content;
     padding: 100px;
   }
-}
-
-.navbar li:hover a {
-    color: brown; 
 }
 
 .btn:hover {
@@ -842,5 +919,3 @@ textarea {
 .social-icons i:hover {
     color: brown; 
 }
-
-
