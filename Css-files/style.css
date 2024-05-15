@@ -772,3 +772,49 @@ input, textarea {
     }
 }
 
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .search-bar button[type="button"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .search-bar button[type="button"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  #search-results {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #search-results li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #search-results li:hover {
+    background-color: #f0f0f0;
+  }

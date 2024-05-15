@@ -825,4 +825,74 @@ textarea {
     color: brown; 
 }
 
+body {
+  background-color: #1c1c1c;
+  font-family: sans-serif;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+.search-btn, .close-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  background-color: #1c1c1c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  transition: all 0.25s ease;
+}
+
+.close-btn {
+  color: rgb(255, 83, 26);
+  z-index: -1;
+}
+
+.search-box {
+  width: 40px;
+  height: 40px;
+  padding: 15px;
+  border-radius: 25px;
+  background-color: black;
+  color: white;
+  outline: none;
+  border: none;
+  transition: width 0.25s ease;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.active .search-box {
+  width: 250px;
+}
+
+.active .search-btn {
+  transform: translate(210px, 2px) scale(0.8);
+  background-color: transparent;
+}
+
+.active .close-btn {
+  z-index: 0;
+  transform: translate(250px, 2px);
+}
+
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
