@@ -7,18 +7,21 @@ body {
   background-color: black;
 }
 .navbar {
-  padding: 8px 0px;
+  padding: 4px 0px;
+  backdrop-filter: blur(10px);/* Glass effect */
+  
 }
 
 .navbar ul {
   overflow: auto;
+  
   /* background-color: black; */
 }
 
 .navbar li {
   float: left;
   list-style: none;
-  margin: 2px 20px;
+  margin: 5px 20px;
 }
 
 .navbar li a {
@@ -26,10 +29,12 @@ body {
   text-decoration: none;
   color: white;
   font-size: 1.3rem;
+  
 }
 
 .navbar li:hover {
   opacity: 0.7;
+  
 }
 
 .rightalign{
@@ -47,14 +52,18 @@ body {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(255, 0, 0);   
   border-radius: 6px;
   border: 2px solid rgb(209, 14, 14);
 }
 
 .rightalign button:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(215, 6, 6);
+    background-color: rgba(210, 201, 201, 0.084);    /* makes the button login & signup buttons trnaslucent */
+    backdrop-filter: blur(20px);/* Glass effect */
+    color: rgb(215, 6, 6); 
+    font-size: 1.2rem;
+    border: 2.5px solid rgb(255, 0, 0);
+    
 }
 
 .intro_container {
@@ -96,7 +105,9 @@ body {
   color: white;
   border: 2px solid rgb(139, 36, 36);
   width: 170px;
-  height: 35px;
+  /* height: 35px; */
+  height: 50px; 
+  /* increase in height */
   border-radius: 4px;
   font-size: 1.3rem;
   font-family: "Bree Serif", serif;
@@ -104,8 +115,10 @@ body {
 }
 
 .intro_container button:hover {
-  background-color: white;
-  color: brown;
+  background-color: rgba(255, 255, 255, 0.081); 
+  backdrop-filter: blur(20px); 
+  /* makes the button transluscent gives glassmorphic effect*/
+  color: rgba(249, 249, 249, 0.822);
   cursor: pointer;
 }
 
@@ -189,7 +202,9 @@ body {
   /* justify-items: center; */
   opacity: 0.4;
   z-index: -1;
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .service {
@@ -223,11 +238,14 @@ body {
   text-decoration: none;
   color: rgb(224, 224, 252);
   border: 2px solid rgb(224, 224, 252);
-  padding: 5px;
+  /* padding: 5px; */
+  padding: 10px;
+ /* increase in padding */
 }
 
 .service .box a:hover {
   background-color: brown;
+  border: 2px solid rgb(56, 55, 55);
 }
 
 .menu_container {
