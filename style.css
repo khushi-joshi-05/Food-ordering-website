@@ -639,6 +639,7 @@ textarea {
 }
 .btn {
   cursor: pointer;
+  padding-top: 0%;
 }
 .contact_page {
   background-color: rgb(213, 213, 238);
