@@ -349,6 +349,121 @@ body {
 
 }
 
+
+
+
+
+.items {
+    background-color: #f2f2f2;
+    border: 3px solid brown;
+    padding: 25px;
+    margin: 15px;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .items:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  
+  .items img {
+    justify-content: center;
+    height: 270px;
+    width: 250px;
+  }
+  
+  .items h3 {
+    font-size: 1.4rem;
+    margin-top: 10px;
+  }
+  
+  .items p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+/*   
+  .items {
+    background-color: #f2f2f2;
+    border: 3px solid brown;
+    padding: 25px;
+    margin: 15px;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; Added transition for smooth scaling and shadow */
+    /* position: relative;
+  } */
+  
+  /* .items:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); Add a shadow on hover */
+    /* cursor: pointer; */
+  /* }
+  .items img {
+    justify-content: center;
+    height: 270px;
+    width: 250px;
+  }
+  
+  .items h3 {
+    font-size: 1.4rem;
+    margin-top: 10px;
+  }
+  
+  .items p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  } */
+  
+  .counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .counter button {
+    background-color: #f2f2f2;
+    border: none;
+    color: #333;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .counter span {
+    font-size: 16px;
+    margin: 0 px;
+  }
+  
+  .order-now {
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
 /* .footer {
     background-color:  rgb(224, 224, 252);;
     height: 700px;

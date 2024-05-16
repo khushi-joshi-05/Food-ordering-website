@@ -113,6 +113,112 @@ body {
   background-color: rgb(196, 74, 74);
 }
 
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.items img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.items h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.items p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.counter button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2em;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.counter .count {
+  font-size: 1.2em;
+  margin: 0 10px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.order-now {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.order-now:hover {
+  background-color: #c82333;
+}
+
+
+/* .items {
+  background-color: #f2f2f2;
+  border: 3px solid brown;
+  padding: 25px;
+  margin: 15px;
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Bree Serif', serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.items:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.items img {
+  justify-content: center;
+  height: 270px;
+  width: 250px;
+}
+
+.items h3 {
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+.items p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+} */
+
+/* ... (rest of the CSS code remains the same) ... */
 .menu_items {
   display: flex;
   justify-content: center;
@@ -120,23 +226,30 @@ body {
 
 .menu_items .items {
   background-color: #f2f2f2;
-  /* border: 2px solid brown;
-  box-shadow: 0 0 10px rgba(138, 37, 37, 0.5); */
-  box-shadow: 0 0 10px rgba(224, 224, 252, 0.678);
+  box-shadow: -20px 20px 9px 6px rgb(202 202 202);
   border: 1px solid rgb(186, 186, 201);
   padding: 20px;
   margin: 5px;
   height: 310px;
-  width: 230px;
-  /* border-radius: 10px; */
+  width: 250px;
+  border-radius: 20px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   font-family: "Bree Serif", serif;
 }
 
+
 .menu_items .items img {
   justify-content: center;
-  height: 190px;
-  width: 230px;
+  /* height: 190px; */
+  width: 100%;
+  height: 150px; /* Set a fixed height */
+    object-fit: cover;
+}
+.items:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .menu_items .items h3 {
@@ -145,7 +258,7 @@ body {
 }
 
 .menu_items .items p {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .first_cont {
@@ -369,7 +482,7 @@ textarea {
 }
 
 .cart table,th,td{
-  text-align: center;
+  text-align:justify;
   border: 2px solid black;
   width: 75%;
 }
@@ -377,3 +490,79 @@ textarea {
 #bill{
   color: rgb(196, 74, 74);
 }
+
+/* For the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+/* For the table header */
+th {
+  background-color: #f2f2f2;
+  width:fit-content;
+}
+
+
+/* For the table rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* For the "Order Now" button */
+.order-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.order-button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* .cart-table {
+  display: table;
+  width: 100%;
+  background-color: #ccc;
+  border-collapse: collapse;
+}
+
+.cart-row {
+  display: table-row;
+}
+
+.cart-header,
+.cart-cell {
+  display: table-cell;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.cart-header {
+  font-weight: bold;
+  background-color:brown;
+}
+
+.order-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.order-button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} */
