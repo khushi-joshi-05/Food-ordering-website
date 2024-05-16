@@ -15,6 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -23,23 +25,43 @@
 
 <body>
 
-    <header>
-        <nav class="navbar">
-            <ul id="header-items">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Html-files/menu.html">Menu</a></li>
-                <li><a href="Html-files/services.html">Services</a></li>
-                <li><a href="Html-files/contact.html">Contact us</a></li>
-                <li><a href="Html-files/cart.html">Cart</a></li>
-                <div class="rightalign">
-                    <li><button onclick="redirectLogin()">Login</button></li>
-                    <li><button onclick="redirectSignup()">Sign Up</a></li>
-                </div>
+    <!--Navbar Start-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><b>Foodie</b></a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Html-files/menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Html-files/services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Html-files/services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="Html-files/contact.html">Contact Us</a>
+              </li>
+              
             </ul>
-        </nav>
-        
-    </header>
+                       
+          </div>
+          <div class="d-flex p-2">
+            <li class="nav-item"><a class="nav-btn" onclick="redirectLogin()">Login</a></li>
+          <li class="nav-item"><a class="nav-btn" onclick="redirectSignup()">Sign Up</a></li>
+          <li class="nav-item">
+              <a class="nav-btn " href="Html-files/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+          </div>
+          
+        </div>
+      </nav>
 
+<!--Navbar End-->
 
     <section class="intro_container">
         <h1>Welcome to foodie!</h1>
