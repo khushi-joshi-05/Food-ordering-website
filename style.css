@@ -485,11 +485,6 @@ textarea {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.btn:hover {
-    background-color: #555;
-    color: white;
-}
-
 .box:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -497,8 +492,4 @@ textarea {
 
 .items:hover {
     transform: translateY(-5px) scale(1.05);
-}
-
-a:hover {
-    color: #555;
 }
