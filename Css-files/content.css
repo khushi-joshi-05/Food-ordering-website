@@ -7,9 +7,6 @@ body {
   background-color:black;
 }
 
-
-
-
 .head_container:before {
   background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
   content: "";
@@ -91,6 +88,7 @@ body {
   font-family: "Bree Serif", serif;
   margin: 15px 10px;
 } */
+
 .but {
   border: 1.3px solid brown;
   font-size: 1.1rem;
@@ -184,14 +182,10 @@ body {
   margin-bottom: 20px;
 }
 
-
-
 /* service */
-
 .service_container {
   /* padding: 55px 70px 30px 70px; */
   background-color:  rgb(224, 224, 252);
-  
 }
 
 .second_cont{
@@ -299,22 +293,16 @@ body {
     justify-content: center;
 } */
 
-
-
 .foot_panel4{
     background-color: rgb(66, 16, 16);
     color: white;
     height: 160px;
     font-size: 0.9rem;
     text-align: center;
-
 }
-
-
 
 .pages{
     padding-top: 25px;
-
 }
 
 .copyright{
@@ -354,7 +342,41 @@ textarea {
     background-color:rgb(196, 89, 89);
 }
 
-.social-icons i{
+.social-icons i,
+.social-icons a{
     font-size: 1.2rem;
     padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Cart page styling */
+.cart-section{
+  padding: 55px 70px 30px 70px;
+  background-color:  rgb(224, 224, 252);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cart{
+  width: 80%;
+  background-color: #f2f2f2;
+  text-align: center;
+  font-family: "Bree Serif", serif;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+
+.cart table,th,td{
+  text-align: center;
+  border: 2px solid black;
+  width: 75%;
+}
+
+#bill{
+  color: rgb(196, 74, 74);
 }
