@@ -7,9 +7,6 @@ body {
   background-color:black;
 }
 
-
-
-
 .head_container:before {
   background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
   content: "";
@@ -57,6 +54,39 @@ body {
   color: white;
   font-size: 1.3rem;
 }
+/* Styling for the contact navbar */
+.navbarbg {
+  padding: 8px 0;
+  background-color: rgb(169, 33, 33); /* Maroon background color */
+  text-align: center; /* Align contents to center */
+}
+
+/* Styling for the list items */
+.navbarbg ul {
+  display: inline-block; /* Ensure the list is displayed horizontally */
+  padding-left: 0; /* Remove default padding */
+}
+
+/* Styling for the list items */
+.navbarbg li {
+  display: inline-block; /* Display list items horizontally */
+  list-style: none;
+  margin: 0 10px; /* Add some space between items */
+}
+
+/* Styling for the links */
+.navbarbg li a {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+}
+
+/* Hover effect for list items */
+.navbarbg li:hover {
+  opacity: 0.7;
+}
+
 
 .menu_container {
   padding: 55px 70px 30px 70px;
@@ -91,6 +121,7 @@ body {
   font-family: "Bree Serif", serif;
   margin: 15px 10px;
 } */
+
 .but {
   border: 1.3px solid brown;
   font-size: 1.1rem;
@@ -184,14 +215,10 @@ body {
   margin-bottom: 20px;
 }
 
-
-
 /* service */
-
 .service_container {
   /* padding: 55px 70px 30px 70px; */
   background-color:  rgb(224, 224, 252);
-  
 }
 
 .second_cont{
@@ -299,22 +326,16 @@ body {
     justify-content: center;
 } */
 
-
-
 .foot_panel4{
     background-color: rgb(66, 16, 16);
     color: white;
     height: 160px;
     font-size: 0.9rem;
     text-align: center;
-
 }
-
-
 
 .pages{
     padding-top: 25px;
-
 }
 
 .copyright{
