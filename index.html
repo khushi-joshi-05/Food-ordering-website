@@ -10,11 +10,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/x-icon" href="./Favicon image/favicon.ico">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
@@ -26,19 +32,43 @@
 
 <body>
 
-    <header>
-        <nav class="navbar">
-            <ul id="header-items">
-                <li><a href="index.html" target="_blank">Home</a></li>
-                <li><a href="Html-files/menu.html" target="_blank">Menu</a></li>
-                <li><a href="Html-files/services.html" target="_blank">Services</a></li>
-                <li><a href="Html-files/contact.html" target="_blank">Contact us</a></li>
-                <li><a href="Html-files/cart.html" target="_blank">Cart</a></li>
-            </ul>
-        </nav>
-        
-    </header>
+    <!--Navbar Start-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><b>Foodie</b></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="Html-files/contact.html">Contact Us</a>
+                    </li>
 
+                </ul>
+
+            </div>
+            <div class="d-flex p-2">
+                <li class="nav-item"><a class="nav-btn" onclick="redirectLogin()">Login</a></li>
+                <li class="nav-item"><a class="nav-btn" onclick="redirectSignup()">Sign Up</a></li>
+                <li class="nav-item">
+                    <a class="nav-btn " href="Html-files/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+            </div>
+
+        </div>
+    </nav>
+
+    <!--Navbar End-->
 
     <section class="intro_container">
         <h1>Welcome to foodie!</h1>
@@ -57,6 +87,7 @@
                 <h1 class="poppins-light">Get <span> 30% OFF </span> on your first order!</h1>
             </div>
     </div>
+
         <h1 class="h-primary center">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
 
 
@@ -108,7 +139,7 @@
 
             </div>
             <div class="box">
-                <h1>Restuarant Dining</h1><br>
+                <h1>Restaurant Dining</h1><br>
                 <a href="#">Book Table</a>
 
             </div>
@@ -122,9 +153,11 @@
             <p>"Welcome to a world of culinary delights where every bite tells a flavorful story. Explore our diverse
                 menu and savor the essence of exquisite dining." </p>
 
-                
 
-                <button class="butt" onclick="window.open('Html-files/menu.html',target='_blank')">View Menu</button>
+            <button class="butt" onclick="window.location.href='Html-files/menu.html'">View Menu</button>
+
+
+            <!-- <button class="butt" onclick="window.open('Html-files/menu.html')">View Menu</button> -->
 
 
 
@@ -229,8 +262,10 @@
         <h2>Download the App now!</h2>
         <br>
         <p>For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
-        <a href="#"><img src="./Images/get_it_on_google_play_store.png" class="app-download-img" alt="Get it on Google Play Store"></a>
-        <a href="#"><img src="./Images/download-on-the-app-store.png" class="app-download-img" alt="Download on the Apple App Store"></a>
+        <a href="#"><img src="./Images/get_it_on_google_play_store.png" class="app-download-img"
+                alt="Get it on Google Play Store"></a>
+        <a href="#"><img src="./Images/download-on-the-app-store.png" class="app-download-img"
+                alt="Download on the Apple App Store"></a>
 
     </div>
 
@@ -261,12 +296,12 @@
                 <ul>
                     <p>Our Pages</p>
                     <a href="#">Home</a>
-                    <a href="#">Menu</a>
-                    <a href="#">Services</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Cart</a>
+                    <a href="/Html-files/menu.html">Menu</a>
+                    <a href="/Html-files/services.html">Services</a>
+                    <a href="/Html-files/contact.html">Contact us</a>
+                    <a href="/Html-files/cart.html">Cart</a>
                 </ul>
-                
+
                 <ul>
                     <p> Exclusive Offers</p>
                     <a href="#">Foodie Discounts</a>
@@ -281,19 +316,18 @@
 
                 <ul>
                     <p>Payment Products</p>
-                    <a href="#" >Secure Checkout</a>
-                    <a href="#" >Credit/Debit Cards</a>
-                    <a href="#" >Online Payment</a>
-                    <a href="#" >Mobile Wallets</a>
-                    <a href="#" >Contactless Payments</a>
+                    <a href="#">Secure Checkout</a>
+                    <a href="#">Credit/Debit Cards</a>
+                    <a href="#">Online Payment</a>
+                    <a href="#">Mobile Wallets</a>
+                    <a href="#">Contactless Payments</a>
                 </ul>
-                    
+
 
                 <form id="contactForm">
                     <h3>Contact Us!</h3>
                     <!-- <label for="name">Name:</label> -->
-                    <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>
-             -->
+                    <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>-->
                     <!-- <label for="email">Email:</label> -->
                     <input type="email" id="email" name="email" placeholder="Your Email" required>
 
@@ -302,33 +336,29 @@
 
                     <button id="butt" type="submit">Send Message</button>
                 </form>
-            
+
             </div>
 
 
             <div class="foot_panel4">
                 <div class="pages">
                     <h4>Follow Us</h4>
-                    
+
                     <div class="social-icons">
 
 
-                        <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
-                        <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                        <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
+                        <a class="fa-brands fa-facebook" href="https://facebook.com"></a>
+                        <a class="fa-brands fa-instagram" href="https://instagram.com"></a>
+                        <a class="fa-brands fa-twitter" href="https://twitter.com"></a>
 
-                   </div>
-                   <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
-                </p>
+                    </div>
+                    <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
+                    </p>
                     <div class="copyright">
 
                         &copy; 2023 Foodies . All Rights Reserved. | Developed by <span id="author">
-                            <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
-                        </span></p>
-
-                        &copy; 2024 Foodies . All Rights Reserved. | Developed by <span id="author"> Khushi Joshi </span></p>
-
-
+                            <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi
+                                Joshi</a>
                     </div>
                 </div>
         </footer>
@@ -336,15 +366,23 @@
     </div>
 
     <script>
-        window.addEventListener('beforeunload', function(event) {
+        window.addEventListener('beforeunload', function (event) {
             localStorage.clear();
         });
-        const btn=document.querySelector('.btn')
-        btn.onclick=()=>{
-            location.href="./Html-files/menu.html"
+        const btn = document.querySelector('.btn')
+        btn.onclick = () => {
+            location.href = "./Html-files/menu.html"
         }
     </script>
 
 </body>
+<script>
+    function redirectLogin() {
+        window.location.href = "Html-files/login.html";
+    }
+    function redirectSignup() {
+        window.location.href = "Html-files/signup.html";
+    }
+</script>
 
 </html>
