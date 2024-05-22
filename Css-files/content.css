@@ -339,6 +339,7 @@ body {
 }
 
 .copyright{
+  background-color: rgb(66, 16, 16);
    padding-top: 10px;
 }
 
@@ -374,23 +375,35 @@ textarea {
     background-color:rgb(196, 89, 89);
 }
 
-.social-icons a{
-    font-size: 1.2rem;
-    padding: 15px;
-    text-decoration: none;
-    color: white;
+.social-icons a {
+  font-size: 1.2rem;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  transition: .2s;
 }
 
 .fa-facebook:hover {
-  color:#3B5998;
+  background-color: #3B5998;
+  color: white;
 }
 
 .fa-instagram:hover {
-  color:#D62976;
+  background-color: #D62976;
+  color: white;
 }
 
 .fa-twitter:hover {
-  color:#00B6F1;
+  background-color: #00B6F1;
+  color: white;
+}
+
+.fa-github:hover {
+  background-color: #040204;
+  color: white;
 }
 
 /* Cart page styling */
