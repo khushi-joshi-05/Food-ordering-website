@@ -16,3 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+function rateItem(button, rating) {
+    const starButtons = button.parentElement.querySelectorAll('.star-button');
+
+    starButtons.forEach((starButton, index) => {
+        if (index < rating) {
+            starButton.classList.add('rated');
+        } else {
+            starButton.classList.remove('rated');
+        }
+    });
+}

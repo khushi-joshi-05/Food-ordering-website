@@ -365,7 +365,6 @@ textarea {
 #butt{
     background-color:rgb(66, 16, 16);
     color: white;
-    padding: 2px;
     border: 1px solid white ;
     border-radius: 2px;
     cursor: pointer;
@@ -410,3 +409,28 @@ textarea {
 #bill{
   color: rgb(196, 74, 74);
 }
+.star-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ccc; /* Default color for empty star */
+  font-size: 15px;
+  padding: 0;
+}
+
+.star-button:hover,
+.star-button:focus {
+  color: #f1c40f; /* Yellow color for filled star */
+  outline: none;
+}
+
+.star-button.rated {
+  color: #f1c40f; /* Yellow color for filled star */
+}
+.menu_items .items {
+  position: relative;
+  /* Ensure relative positioning for the parent container */
+}
+
+
+
