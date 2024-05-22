@@ -54,6 +54,39 @@ body {
   color: white;
   font-size: 1.3rem;
 }
+/* Styling for the contact navbar */
+.navbarbg {
+  padding: 8px 0;
+  background-color: rgb(169, 33, 33); /* Maroon background color */
+  text-align: center; /* Align contents to center */
+}
+
+/* Styling for the list items */
+.navbarbg ul {
+  display: inline-block; /* Ensure the list is displayed horizontally */
+  padding-left: 0; /* Remove default padding */
+}
+
+/* Styling for the list items */
+.navbarbg li {
+  display: inline-block; /* Display list items horizontally */
+  list-style: none;
+  margin: 0 10px; /* Add some space between items */
+}
+
+/* Styling for the links */
+.navbarbg li a {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+}
+
+/* Hover effect for list items */
+.navbarbg li:hover {
+  opacity: 0.7;
+}
+
 
 .menu_container {
   padding: 55px 70px 30px 70px;
@@ -445,7 +478,6 @@ textarea {
 #butt{
     background-color:rgb(66, 16, 16);
     color: white;
-    padding: 2px;
     border: 1px solid white ;
     border-radius: 2px;
     cursor: pointer;
@@ -455,12 +487,9 @@ textarea {
     background-color:rgb(196, 89, 89);
 }
 
-.social-icons i,
-.social-icons a{
+.social-icons i{
     font-size: 1.2rem;
     padding: 15px;
-    color: white;
-    text-decoration: none;
 }
 
 
@@ -569,3 +598,4 @@ tr:nth-child(even) {
   border-radius: 4px;
   cursor: pointer;
 } */
+
