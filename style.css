@@ -116,13 +116,6 @@ body {
   cursor: pointer;
 }
 
-  /* #about .box img {
-  height: 160px;
-  width: 270px;
-  margin: auto;
-  display: flex;
-  } */
-
 #about .box p {
   font-family: "Bree Serif", serif;
   text-align: center;
