@@ -323,7 +323,7 @@ body {
 
 .app_download {
   background-color: brown;
-  height: 320px;
+  height: 350px;
   color: white;
   padding-left: 50px;
   padding-top: 80px;
@@ -352,8 +352,8 @@ body {
 
 .app-download-img {
   max-height: 70px;
-  margin-top: 2rem;
-  margin-left: 2rem;
+
+  padding: 10px;
 }
 
 .move {
@@ -816,8 +816,6 @@ padding-left:2px;
   }
 }
 
-
-
 .navbar li:hover a {
   color: brown;
 }
@@ -828,11 +826,11 @@ padding-left:2px;
 }
 
 .menu_items .items:hover {
-    box-shadow: 0 0 20px rgba(138, 37, 37, 0.5); 
+  box-shadow: 0 0 20px rgba(138, 37, 37, 0.5);
 }
 
 .social-icons i:hover {
-    color: brown; 
+  color: brown;
 }
 
 
@@ -897,4 +895,5 @@ padding-left:2px;
 
     }
 }
+
 
