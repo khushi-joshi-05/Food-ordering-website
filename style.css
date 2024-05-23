@@ -81,6 +81,10 @@ body {
   background-color: rgb(224, 224, 252);
   padding: 100px 0px 100px 0px;
 }
+  
+  #heading{
+    margin-top: 5%;
+  }
 
 #about {
   /* margin: 34px; */
@@ -99,6 +103,12 @@ body {
   /* float: left; */
   transition: 0.3s all ease-in-out;
 }
+  
+  .little-container:hover{
+    box-shadow: #212123 1px 1px 8px;
+    scale: 1.015;
+    cursor: pointer;
+  }
 
 #about .box:hover {
   box-shadow: #212123 1px 1px 8px;
@@ -106,30 +116,64 @@ body {
   cursor: pointer;
 }
 
-#about .box img {
+  /* #about .box img {
   height: 160px;
   width: 270px;
   margin: auto;
   display: flex;
-}
+  } */
 
 #about .box p {
   font-family: "Bree Serif", serif;
   text-align: center;
 }
+  
+  #container{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .little-container img{
+    width : 100%;
+    height: auto;
+    border-radius: 5%;
+  }
+  
+  .little-container{
+    width: 27%;
+    border: 2px solid brown;
+    padding: 2%;
+    margin: 5% 2%;
+    background: #f2f2f2;
+    border-radius: 5%;
+    margin-bottom: 4%;
+    transition: 0.3s all ease-in-out;
+    box-sizing: border-box;
+  }
 
 .h-primary {
   font-family: "Bree Serif", serif;
   font-size: 2.5rem;
-  padding: 40px 80px 80px 80px;
+    padding: 0.5% 1% 1% 1%;
   text-align: center;
   color: brown;
 }
+  
+  .little-container p{
+    font-size: 150%;
+    text-align: center;
+    padding: 1%;
+  }
+  
+  .little-container h2{
+    font-size: 150%;
+    padding: 3% 1%;
+  }
 
 .h-secondary {
   font-family: "Bree Serif", serif;
   font-size: 1.5rem;
-  padding: 12px;
+    padding: 0.5%;
   text-align: center;
 }
 
@@ -587,12 +631,24 @@ textarea {
 }
 
 /* responsiveness  */
+  
+  @media (max-width : 767px){
+    #container{
+      flex-direction: column;
+    }
+    .little-container{
+      width: 80%;
+      box-sizing: border-box;
+      align-self: center;
+      margin: 1% 0%;
+    }
+  }
 
 @media screen and (max-width: 1120px) {
-  #about {
-    /* margin: 34px; */
+    /* #about {
+      margin: 34px; 
     flex-direction: column-reverse;
-  }
+    } */
 
   .service {
     flex-direction: column;
