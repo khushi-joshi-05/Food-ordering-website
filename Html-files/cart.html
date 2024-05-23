@@ -36,6 +36,9 @@
     </div>
 
     <section class="cart-section">
+
+        <div id="couponCode"></div>
+
         <div class="cart">
             <table>
                 <thead>
@@ -55,7 +58,7 @@
             </table>
         </div>
 
-        <button type="submit" class="butt">Order Now</button>
+        <button type="submit" onclick="applyFirstTimeDiscount()" class="butt">Order Now</button>
     </section>
     <footer>
 
@@ -63,11 +66,11 @@
         <div class="foot-panel2">
             <ul class="footer-colums">
                 <p>Our Pages</p>
-                <a>Home</a>
-                <a>Menu</a>
-                <a>Services</a>
-                <a>Contact</a>
-                <a>Cart</a>
+                <a href="../index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact us</a>
+                <a href="cart.html">Cart</a>
             </ul>
 
             <ul class="footer-colums">
@@ -122,17 +125,40 @@
                 </p>
                 <div class="copyright">
 
-                    &copy; 2023 Foodies . All Rights Reserved. |  <span id="author">
+                    &copy; 2024 Foodies . All Rights Reserved. |  <span id="author">
                         <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/"  target="_blank">Khushi Joshi</a>
                     </span></p>
 
-                    &copy; 2024 Foodies . All Rights Reserved. | Developed by Khushi Joshi</p>
+                   
 
 
                 </div>
             </div>
     </footer>
 
-    <script src="../cart.js"></script>
+    <!-- <script src="../cart.js"></script> -->
+    <script>
+        // Function to generate a random coupon code
+        const generateCouponCode = () => {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let couponCode = '';
+            for (let i = 0; i < 8; i++) {
+                couponCode += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return couponCode;
+        }
+
+        // Check if it's the user's first order and apply discount
+        const applyFirstTimeDiscount = () => {
+            let couponCode = localStorage.getItem('couponCode');
+            if (!couponCode) {
+                couponCode = generateCouponCode();
+                localStorage.setItem('couponCode', couponCode);
+            }
+            document.getElementById('couponCode').innerHTML = `Use coupon code <span style="font-weight: bold;"> ${couponCode} </span> for 30% off!`;
+            alert(`Congratulations! Your coupon code is ${couponCode}. You've received a 30% discount on your first order.`);
+        }
+        window.onload = applyFirstTimeDiscount;
+    </script>
 </body>
 </html>

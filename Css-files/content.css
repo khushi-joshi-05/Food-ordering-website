@@ -54,6 +54,39 @@ body {
   color: white;
   font-size: 1.3rem;
 }
+/* Styling for the contact navbar */
+.navbarbg {
+  padding: 8px 0;
+  background-color: rgb(169, 33, 33); /* Maroon background color */
+  text-align: center; /* Align contents to center */
+}
+
+/* Styling for the list items */
+.navbarbg ul {
+  display: inline-block; /* Ensure the list is displayed horizontally */
+  padding-left: 0; /* Remove default padding */
+}
+
+/* Styling for the list items */
+.navbarbg li {
+  display: inline-block; /* Display list items horizontally */
+  list-style: none;
+  margin: 0 10px; /* Add some space between items */
+}
+
+/* Styling for the links */
+.navbarbg li a {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+}
+
+/* Hover effect for list items */
+.navbarbg li:hover {
+  opacity: 0.7;
+}
+
 
 .menu_container {
   padding: 55px 70px 30px 70px;
@@ -332,7 +365,6 @@ textarea {
 #butt{
     background-color:rgb(66, 16, 16);
     color: white;
-    padding: 2px;
     border: 1px solid white ;
     border-radius: 2px;
     cursor: pointer;
@@ -342,14 +374,24 @@ textarea {
     background-color:rgb(196, 89, 89);
 }
 
-.social-icons i,
 .social-icons a{
     font-size: 1.2rem;
     padding: 15px;
-    color: white;
     text-decoration: none;
+    color: white;
 }
 
+.fa-facebook:hover {
+  color:#3B5998;
+}
+
+.fa-instagram:hover {
+  color:#D62976;
+}
+
+.fa-twitter:hover {
+  color:#00B6F1;
+}
 
 /* Cart page styling */
 .cart-section{
@@ -380,3 +422,28 @@ textarea {
 #bill{
   color: rgb(196, 74, 74);
 }
+.star-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ccc; /* Default color for empty star */
+  font-size: 15px;
+  padding: 0;
+}
+
+.star-button:hover,
+.star-button:focus {
+  color: #f1c40f; /* Yellow color for filled star */
+  outline: none;
+}
+
+.star-button.rated {
+  color: #f1c40f; /* Yellow color for filled star */
+}
+.menu_items .items {
+  position: relative;
+  /* Ensure relative positioning for the parent container */
+}
+
+
+
