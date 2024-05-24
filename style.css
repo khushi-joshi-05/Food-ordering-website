@@ -17,6 +17,8 @@ body {
 .navbar {
   padding: 8px 0px;
   height: 60px;
+  transition: background-color 0.3s, backdrop-filter 0.3s, color 0.3s; /* Added transitions for smooth color change */
+  backdrop-filter: blur(0); /* Initially no blur */
 }
 
 .navbar a {
@@ -24,7 +26,17 @@ body {
   color: white;
   font-size: 1.3rem;
 }
-
+.navbar.fixed-top {
+  position: fixed; /* Highlighted Addition */
+  top: 0; /* Highlighted Addition */
+  width: 100%; /* Highlighted Addition */
+  z-index: 1030; /* Highlighted Addition */
+}
+.navbar.scrolled {
+  background-color: rgb(176, 63, 63); /* Fully opaque background color on scrolling */
+  backdrop-filter: blur(10px); /* Added blur effect on scrolling */
+  color: #fff; /* Changed text color to white */
+}
 .intro_container {
   display: flex;
   flex-direction: column;

@@ -34,7 +34,7 @@
 
 
     <!--Navbar Start-->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><b>Foodie</b></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -375,6 +375,15 @@
         btn.onclick = () => {
             location.href = "./Html-files/menu.html"
         }
+        window.addEventListener('scroll', function() {
+  var navbar = document.querySelector('.navbar');
+  if (window.scrollY > 60) { // Adjust as needed based on when you want the effect to start
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
     </script>
 
 </body>
