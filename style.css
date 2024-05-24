@@ -25,6 +25,16 @@ body {
   font-size: 1.3rem;
 }
 
+.nav-btn-styles{
+  height: 40px; 
+  width: 120px; 
+  background-color: #0d6efd;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding-left: 12px; 
+  padding-right:12px;
+}
 .intro_container {
   display: flex;
   flex-direction: column;
