@@ -530,6 +530,7 @@ ul a {
 }
 
 .copyright {
+  background-color: rgb(66, 16, 16);
   padding-top: 10px;
 }
 
@@ -570,31 +571,33 @@ textarea {
 
 .social-icons a {
   font-size: 1.2rem;
-  padding: 8px;
-  margin: 15px;
+  padding: 10px;
+  margin: 10px;
   text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  transition: .2s;
+}
+
+.fa-facebook:hover {
+  background-color: #3B5998;
   color: white;
 }
 
-.social-icons a:hover {
-  color: brown;
-  background-color: wheat;
-  border-radius: 50px;
+.fa-instagram:hover {
+  background-color: #D62976;
+  color: white;
 }
 
-.fb {
-  color: #1877f2;
-  cursor: pointer;
+.fa-twitter:hover {
+  background-color: #00B6F1;
+  color: white;
 }
 
-.instagram {
-  color: #dd4c8d;
-  cursor: pointer;
-}
-
-.twitter {
-  color: #1da1f2;
-  cursor: pointer;
+.fa-github:hover {
+  background-color: #040204;
+  color: white;
 }
 
 #author {
