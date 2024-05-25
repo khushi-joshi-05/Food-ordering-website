@@ -603,6 +603,29 @@ textarea {
   color: #dddddd;
 }
 
+ul{
+  padding-left: 0px;
+}
+
+#email,#message{
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(210, 167, 167, 0.5);
+  color:white;
+}
+
+#email::placeholder{
+  color: white;
+}
+
+#message::placeholder{
+  color: white;
+}
+
+#butt{
+  border: none;
+}
+
 @media screen and (max-width: 500px) {
   .menu_items .items {
     max-width: fit-content;
