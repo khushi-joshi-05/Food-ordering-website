@@ -992,6 +992,7 @@ padding-left:2px;
   padding: 7px;
   font-size: 10px !important;
 
+
 }
 .nav-btn:hover{
   border: 2px solid maroon !important;
@@ -1000,4 +1001,23 @@ padding-left:2px;
 .navbar .container-fluid{
   display: flex;
   justify-content: flex-end;
+
+
+.about_us .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about_us .box {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.items:hover {
+    transform: translateY(-5px) scale(1.05);
+
 }
