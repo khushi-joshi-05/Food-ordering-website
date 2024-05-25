@@ -92,3 +92,14 @@ const applyFirstTimeDiscount = () => {
     alert(`Congratulations! Your coupon code is ${couponCode}. You've received a 30% discount on your first order.`);
 }
 window.onload = applyFirstTimeDiscount;
+
+
+// Input for apply coupon code
+
+document.getElementById('applyCouponButton').addEventListener('click', function() {
+    const couponCode = document.getElementById('inputCode').value;
+    if (!couponCode) {
+        alert('Please enter a Coupon Code.');
+        return;
+    }
+});
