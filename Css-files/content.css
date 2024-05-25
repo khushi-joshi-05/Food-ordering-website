@@ -157,11 +157,11 @@ body {
   box-shadow: 0 0 10px rgba(138, 37, 37, 0.5); */
   box-shadow: 0 0 10px rgba(224, 224, 252, 0.678);
   border: 1px solid rgb(186, 186, 201);
-  padding: 20px;
+  padding: 40px;
   margin: 5px;
   height: 310px;
   width: 230px;
-  /* border-radius: 10px; */
+  border-radius: 10px;
   text-align: center;
   font-family: "Bree Serif", serif;
 }
