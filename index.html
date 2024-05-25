@@ -23,7 +23,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
 
 </head>
@@ -36,11 +36,16 @@
     <!--Navbar Start-->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><b>Foodie</b></a>
+            <a class="navbar-brand fw-bold" href="index.html"><b>Foodie</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/menu.html">Menu</a>
@@ -49,26 +54,22 @@
                         <a class="nav-link" href="Html-files/services.html">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/services.html">Services</a>
+                        <a class="nav-link" href="Html-files/contact.html">Contact Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="Html-files/contact.html">Contact Us</a>
-                    </li>
-
-
                 </ul>
-
+                <div class="d-flex p-2 navbar-nav">
+                    <ul class="navbar-nav d-flex flex-wrap me-auto mb-2 mb-lg-0 gap-3" style="width: 100%;">
+                        <li class="nav-item px-3"><a class="nav-btn" onclick="redirectLogin()">Login</a></li>
+                        <li class="nav-item px-3"><a class="nav-btn" onclick="redirectSignup()">Sign Up</a></li>
+                        <li class="nav-item px-3">
+                            <a class="nav-btn" href="Html-files/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="d-flex p-2">
-                <li class="nav-item"><a class="nav-btn" onclick="redirectLogin()">Login</a></li>
-                <li class="nav-item"><a class="nav-btn" onclick="redirectSignup()">Sign Up</a></li>
-                <li class="nav-item">
-                    <a class="nav-btn " href="Html-files/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                </li>
-            </div>
-
         </div>
     </nav>
+
 
     <!--Navbar End-->
 
@@ -88,7 +89,7 @@
                 <h1 class="poppins-light">Get <span> 30% OFF </span> on your first order!</h1>
                 <h1 class="poppins-light">Get <span> 30% OFF </span> on your first order!</h1>
             </div>
-    </div>
+        </div>
 
         <h1 class="h-primary center">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
 
@@ -132,17 +133,17 @@
             </div>
             <div class="box">
                 <h1>Online Delivery</h1><br>
-                <a href="#">Order Online</a>
+                <a href="#" class="btn">Order Online</a>
 
             </div>
             <div class="box">
                 <h1>Click & Collect</h1><br>
-                <a href="#">Take out Order</a>
+                <a href="#" class="btn">Take out Order</a>
 
             </div>
             <div class="box">
                 <h1>Restaurant Dining</h1><br>
-                <a href="#">Book Table</a>
+                <a href="#" class="btn">Book Table</a>
 
             </div>
         </div>
@@ -210,7 +211,7 @@
     </div> -->
 
     <section class="section-meals" data-aos="fade-in" data-aos-duration="2000">
-        <ul class="meals-showcase clearfix">
+        <ul class="meals-showcase clearfixX">
             <li>
                 <figure class="meal-photo">
                     <img src="Images/1.jpg" alt="food-image">
@@ -375,14 +376,14 @@
         btn.onclick = () => {
             location.href = "./Html-files/menu.html"
         }
-        window.addEventListener('scroll', function() {
-  var navbar = document.querySelector('.navbar');
-  if (window.scrollY > 60) { // Adjust as needed based on when you want the effect to start
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
+        window.addEventListener('scroll', function () {
+            var navbar = document.querySelector('.navbar');
+            if (window.scrollY > 60) { // Adjust as needed based on when you want the effect to start
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
     </script>
 

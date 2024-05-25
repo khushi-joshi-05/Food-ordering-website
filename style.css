@@ -13,7 +13,6 @@
 body {
   background-color: black;
 }
-
 .navbar {
   padding: 8px 0px;
   height: 60px;
@@ -26,25 +25,56 @@ body {
   color: white;
   font-size: 1.3rem;
 }
+
 /* Navbar link hover effect */
 .navbar a:hover,
 .navbar.scrolled a:hover {
- color :#fff;
+  color: #fff;
   border-bottom: 1px solid #fff; /* Add bottom border on hover */
   border-top: 1px solid #fff; /* Add top border on hover */
 }
-s
+
 .navbar.fixed-top {
   position: fixed; 
   top: 0;
   width: 100%; 
   z-index: 1030; 
 }
+
 .navbar.scrolled {
-  background-color: rgb(176, 63, 63); 
+  background-color: rgba(176, 63, 63, 0.6); 
   backdrop-filter: blur(10px);
   color: #fff;
 }
+
+/* Additional CSS to adjust the navbar on smaller screens */
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(175, 63, 62, 1);
+  }
+}
+
+
 .intro_container {
   display: flex;
   flex-direction: column;
@@ -79,21 +109,22 @@ s
 }
 
 .intro_container button {
+
   margin-top: 20px;
-  background-color: brown;
-  color: white;
+  background-color: white;
+  color: brown;
   border: 2px solid rgb(139, 36, 36);
   width: 170px;
   height: 35px;
-  border-radius: 4px;
+  border-radius: 10px;
   font-size: 1.3rem;
-  font-family: "Bree Serif", serif;
+  font-family:Arial, Helvetica, sans-serif;
   padding-bottom: 4px;
 }
 
 .intro_container button:hover {
-  background-color: white;
-  color: brown;
+  background-color: brown;
+  color: white;
   cursor: pointer;
 }
 
@@ -105,14 +136,14 @@ s
 #about {
   /* margin: 34px; */
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
 }
 
 #about .box {
   border: 2px solid brown;
   padding: 34px;
-  margin: 2px 55px;
+  margin: 2px 40px;
   border-radius: 28px;
   background: #f2f2f2;
   margin-bottom: 20px;
@@ -377,8 +408,9 @@ s
 }
 
 .move {
-  background-color: rgb(147, 22, 33);
-  height: 60px;
+  /* background-color: rgb(147, 22, 33); */
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.145);
+  height: 50px;
 }
 
 .move .text {
@@ -856,6 +888,7 @@ padding-left:2px;
 
 #marque {
   width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative;
   white-space: nowrap;
