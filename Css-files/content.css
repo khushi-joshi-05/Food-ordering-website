@@ -343,11 +343,34 @@ body {
    padding-top: 10px;
 }
 
+/* contact */
+#btn-custom {
+background-color: rgb(169, 33, 33);
+margin-left: 5rem;
+margin-right: 5rem;
+padding: 2rem;
+font-size: large;
+font-weight: bold;
+color: #f2f2f2;
+}
+
+.form-group > label{
+  color: rgba(66, 66, 66, 0.77)
+}
+
+.form-group > input{
+  background-color: rgba(169, 33, 33, 0.11)
+}
+
+.form-group > textarea{
+  background-color: rgba(169, 33, 33, 0.11)
+}
+
 form {
     padding-top: 20px;
     display: grid;
     /* gap: 10px; */
-    padding-bottom: 100px;
+    padding-bottom: 40px;
 }
 
 label {

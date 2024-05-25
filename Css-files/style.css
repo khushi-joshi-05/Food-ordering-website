@@ -661,6 +661,7 @@ input, textarea {
 .btn{
     cursor: pointer;
 }
+
 .contact_page{
   background-color:rgb(213, 213, 238);
   /*background:linear-gradient(135deg,rgba(155, 155, 241,0.3),rgba(155, 155, 241,0.4),rgba(0,0,255,0.4),rgba(0,0,255,0.4));
@@ -760,6 +761,7 @@ input, textarea {
   max-width:60%;
   text-align:center;
 }
+
 @media(max-width:800px)
 {
   .contact_info{

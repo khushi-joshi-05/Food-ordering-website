@@ -38,67 +38,63 @@
     <section>
         <div class="position-relative overflow-hidden p-0 m-0">
             <div class="container">
-                <div class=" text-center mt-5 ">
+                <div class=" text-center mt-5 mb-3 ">
                     <h1>Feel Free to Contact Us!</h1>
                 </div>
 
-                <div class="row ">
-                    <div class="col-lg-7 mx-auto">
-                        <div class="card mt-2 mx-auto mb-5 p-4 bg-light">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 mx-auto ">
+                        <div class="card mt-2 mx-auto mb-5 px-4 bg-light">
                             <div class="card-body bg-light">
-                                <div class="container">
-                                    <form action="/submit" method="POST" id="contact-form" role="form">
-                                        <div class="controls">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="form_name">Firstname *</label>
-                                                        <input id="form_name" type="text" name="name"
-                                                            class="form-control"
-                                                            placeholder="Please enter your firstname *"
-                                                            required="required" data-error="Firstname is required.">
+                                <form action="/submit" method="POST" id="contact-form" role="form" class="w-100">
+                                    <div class="controls">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_name" class="mb-2">Firstname *</label>
+                                                    <input id="form_name" type="text" name="name" class="form-control mb-3"
+                                                        placeholder="Please enter your firstname *" required="required"
+                                                        data-error="Firstname is required.">
 
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="form_lastname">Lastname *</label>
-                                                        <input id="form_lastname" type="text" name="surname"
-                                                            class="form-control"
-                                                            placeholder="Please enter your lastname *"
-                                                            required="required" data-error="Lastname is required.">
-                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="form_email">Email *</label>
-                                                        <input id="form_email" type="email" name="email"
-                                                            class="form-control" placeholder="Please enter your email *"
-                                                            required="required" data-error="Valid email is required.">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label for="form_message">Message *</label>
-                                                        <textarea id="form_message" name="message" class="form-control"
-                                                            placeholder="Write your message here." rows="4"
-                                                            required="required"
-                                                            data-error="Please, leave us a message."></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-10 mt-3">
-                                                    <input type="submit"
-                                                        class="btn btn-outline-dark btn-send  pt-2 btn-block"
-                                                        value="Send Message">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_lastname" class="mb-2">Lastname *</label>
+                                                    <input id="form_lastname" type="text" name="surname"
+                                                        class="form-control mb-3" placeholder="Please enter your lastname *"
+                                                        required="required" data-error="Lastname is required.">
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_email" class="mb-2">Email *</label>
+                                                    <input id="form_email" type="email" name="email"
+                                                        class="form-control mb-3" placeholder="Please enter your email *"
+                                                        required="required" data-error="Valid email is required.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="form_message" class="mb-2">Message *</label>
+                                                    <textarea id="form_message" name="message" class="form-control h-100"
+                                                        placeholder="Write your message here." rows="4"
+                                                        required="required"
+                                                        data-error="Please, leave us a message."></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mt-5 d-flex justify-content-center">
+                                                <input type="submit" id="btn-custom"
+                                                    class="btn btn-outline-dark btn-send pt-2 btn-block w-100"
+                                                    value="Send Message">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -167,10 +163,10 @@
                 <h4>Follow Us</h4>
 
                 <div class="social-icons">
-                        <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
-                        <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                        <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
-                        <a class="fa-brands fa-github" href="https://github.com" target="_blank"></a>
+                    <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                    <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                    <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-github" href="https://github.com" target="_blank"></a>
                 </div>
                 <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                 </p>
