@@ -96,6 +96,38 @@ body {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+/* Styling for the contact navbar */
+.navbarbg {
+  padding: 8px 0;
+  background-color: rgb(169, 33, 33); /* Maroon background color */
+  text-align: center; /* Align contents to center */
+}
+
+/* Styling for the list items */
+.navbarbg ul {
+  display: inline-block; /* Ensure the list is displayed horizontally */
+  padding-left: 0; /* Remove default padding */
+}
+
+/* Styling for the list items */
+.navbarbg li {
+  display: inline-block; /* Display list items horizontally */
+  list-style: none;
+  margin: 0 10px; /* Add some space between items */
+}
+
+/* Styling for the links */
+.navbarbg li a {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+}
+
+/* Hover effect for list items */
+.navbarbg li:hover {
+  opacity: 0.7;
+}
 .menu_container {
   padding: 55px 70px 30px 70px;
   background-color:  rgb(224, 224, 252);
@@ -179,13 +211,15 @@ body {
   box-shadow: 0 0 10px rgba(138, 37, 37, 0.5); */
   box-shadow: 0 0 10px rgba(224, 224, 252, 0.678);
   border: 1px solid rgb(186, 186, 201);
-  padding: 20px;
+/*   padding: 40px; */
   margin: 5px;
   height: 310px;
   width: 230px;
   padding: 16px;
   /* border-radius: 10px; */
   /* text-align: center; */
+  border-radius: 10px;
+  text-align: center;
   font-family: "Bree Serif", serif;
   & h3{
     display: flex;
@@ -380,6 +414,7 @@ body {
 }
 
 .copyright{
+  background-color: rgb(66, 16, 16);
    padding-top: 10px;
 }
 
@@ -406,7 +441,6 @@ textarea {
 #butt{
     background-color:rgb(66, 16, 16);
     color: white;
-    padding: 2px;
     border: 1px solid white ;
     border-radius: 2px;
     cursor: pointer;
@@ -416,11 +450,36 @@ textarea {
     background-color:rgb(196, 89, 89);
 }
 
-.social-icons i{
-    font-size: 1.2rem;
-    padding: 15px;
+.social-icons a {
+  font-size: 1.2rem;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  transition: .2s;
 }
 
+.fa-facebook:hover {
+  background-color: #3B5998;
+  color: white;
+}
+
+.fa-instagram:hover {
+  background-color: #D62976;
+  color: white;
+}
+
+.fa-twitter:hover {
+  background-color: #00B6F1;
+  color: white;
+}
+
+.fa-github:hover {
+  background-color: #040204;
+  color: white;
+}
 
 /* Cart page styling */
 .cart-section{
@@ -458,3 +517,28 @@ textarea {
 #bill{
   color: rgb(196, 74, 74);
 }
+.star-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ccc; /* Default color for empty star */
+  font-size: 15px;
+  padding: 0;
+}
+
+.star-button:hover,
+.star-button:focus {
+  color: #f1c40f; /* Yellow color for filled star */
+  outline: none;
+}
+
+.star-button.rated {
+  color: #f1c40f; /* Yellow color for filled star */
+}
+.menu_items .items {
+  position: relative;
+  /* Ensure relative positioning for the parent container */
+}
+
+
+
