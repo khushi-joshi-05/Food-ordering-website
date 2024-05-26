@@ -1,3 +1,4 @@
+
 function addItemToCart() {
     var itemName = localStorage.getItem('itemName');
     var itemPrice = localStorage.getItem('itemPrice');
@@ -41,8 +42,8 @@ const updateCartDisplay = function() {
 
 
 // calculate total bill amount
+let total = 0;
 const calculateBill = ()=>{
-    let total = 0;
     itemPrices = document.querySelectorAll(".price");
     for (p of itemPrices){
         if (p!=null){
@@ -64,13 +65,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let orderBtn = document.querySelector(".butt");
 orderBtn.addEventListener("click", ()=>{
-    let cartItems = localStorage.getItem('cartItems');
-    cartItems = cartItems ? JSON.parse(cartItems) : [];
-    if(cartItems.length==0){
-        alert("Cart is empty")
-    }
-    else{
-        alert("Order placed!");
-    }
+    if(total==0){
+       alert("Please add something in the cart to place the order");
+   }
+   else{
+        
+       alert("Order placed!");
+   }
 })
+
+
+// const applyFirstTimeDiscount = () => {
+//     let isFirstTimeUser = localStorage.getItem('isFirstTimeUser');
+//     if (!isFirstTimeUser) {
+//         const couponCode = generateCouponCode();
+//         localStorage.setItem('couponCode', couponCode);
+//         localStorage.setItem('isFirstTimeUser', true);
+//         document.getElementById('couponCode').innerText = `Use coupon code ${couponCode} for 30% off!`;
+//         alert(`Congratulations! Your coupon code is ${couponCode}. You've received a 30% discount on your first order.`);
+//     }
+// }
 
