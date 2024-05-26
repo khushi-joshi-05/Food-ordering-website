@@ -89,15 +89,23 @@ body {
 
 
 .menu_container {
-  padding: 55px 70px 30px 70px;
+  padding: 55px 50px 30px 50px;
   background-color:  rgb(224, 224, 252);
 }
 .menu_container h2 {
   font-family: 'Oswald', sans-serif;
   font-size: 2rem;
-  color:rgb(138, 37, 37);
-  padding-left: 50px;
+  color: rgb(138, 37, 37);
+  /* padding-left: 50px; */
+  text-align: center;
+  transition: color 0.3s, text-decoration 0.3s;
 }
+
+.menu_container h2:hover {
+  color: rgb(102, 25, 25);
+  text-decoration: underline;
+}
+
 .mainhead {
   text-align: center;
   padding-top: 30px;
@@ -147,9 +155,28 @@ body {
 }
 
 .menu_items {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  gap: 20px; 
+  grid-template-columns: repeat(3, 0fr); 
+  
 }
+
+
+@media (max-width: 768px) {
+  .menu_items {
+      grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  }
+}
+
+/* Responsive adjustment for very small screens */
+@media (max-width: 480px) {
+  .menu_items {
+      grid-template-columns: 1fr; /* 1 item per row */
+  }
+}
+
+
+
 
 .menu_items .items {
   background-color: #f2f2f2;
@@ -362,7 +389,7 @@ label {
 input,
 textarea {
     height:30px;
-    width: 120%;
+    width: 100%;
     padding: 2.5px;
     box-sizing: border-box;
     border-radius: 2px;
