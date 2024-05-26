@@ -368,6 +368,7 @@ body {
 	.service .box_main p{
 		/* border: 1px solid white; */
 		font-size: 20px;
+    text-align: center;
 	}
 	.service_container:before {
 		width: 100%;
@@ -396,6 +397,8 @@ body {
 .mainhead h1 {
   font-family: "Bree Serif", serif;
   font-size: 2.8rem;
+  /* font-size: 100px; */
+  color: white;
 }
 
 .mainhead p {
