@@ -181,6 +181,11 @@ body {
   margin-bottom: 20px;
 }
 
+.menu_items .items:hover {
+  cursor: pointer;
+  scale: 1.02;
+}
+
 .first_cont {
   display: flex;
   justify-content: center;
