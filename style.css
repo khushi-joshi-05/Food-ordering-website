@@ -1,4 +1,4 @@
-* {
+r a* {
   margin: 0px;
   padding: 0px;
 }
@@ -15,11 +15,20 @@ body {
 }
 .navbar {
   padding: 8px 0px;
-  height: 60px;
+  height: 100px;
   transition: background-color 0.3s, backdrop-filter 0.3s, color 0.3s; /* Added transitions for smooth color change */
   backdrop-filter: blur(0); /* Initially no blur */
+  position: sticky;
+  background-color:rgba(0, 0, 0, 0.482);
+  display: flex;
+  z-index: 5;
+  align-items: center;
+  width: 100vw;
 }
-
+.navbar .container-fluid{
+  display: flex;
+  justify-content: flex-end;
+}
 .navbar a {
   text-decoration: none;
   color: white;
@@ -41,7 +50,7 @@ body {
   z-index: 1030; 
 }
 
-.navbar.scrolled {
+.navbar .scrolled {
   background-color: rgba(176, 63, 63, 0.6); 
   backdrop-filter: blur(10px);
   color: #fff;
@@ -65,6 +74,7 @@ body {
   .navbar-nav .nav-item {
     margin-bottom: 10px;
   }
+  
   .navbar-nav .nav-link {
     font-size: 1.2rem;
   }
@@ -816,7 +826,7 @@ padding-left:2px;
   position: relative;
 }
 
-.contact_message {
+.uct_message {
   font-family: "Mooli", serif;
   font-size: 1em;
   color: blueviolet;
@@ -981,6 +991,21 @@ padding-left:2px;
 
     }
 }
+.nav-btn{
+  border: 2px solid #ffffff;
+  border-radius: 25%;
+  padding: 7px;
+  font-size: 10px !important;
+
+
+}
+.nav-btn:hover{
+  border: 2px solid maroon !important;
+  background-color: rgb(195, 189, 189);
+}
+.navbar .container-fluid{
+  display: flex;
+  justify-content: flex-end;
 
 
 .about_us .box:hover {
@@ -999,4 +1024,5 @@ padding-left:2px;
 
 .items:hover {
     transform: translateY(-5px) scale(1.05);
+
 }
