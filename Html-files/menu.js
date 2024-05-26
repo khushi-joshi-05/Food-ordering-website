@@ -1,3 +1,15 @@
+function rateItem(button, rating) {
+  const starButtons = button.parentElement.querySelectorAll(".star-button");
+
+  starButtons.forEach((starButton, index) => {
+    if (index < rating) {
+      starButton.classList.add("rated");
+    } else {
+      starButton.classList.remove("rated");
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     var menuContainers = document.querySelectorAll('.menu_container');
     menuContainers.forEach(function (container) {
