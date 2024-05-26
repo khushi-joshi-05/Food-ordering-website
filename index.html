@@ -17,15 +17,12 @@
 
 </head>
 
-
-
 <body>
-
-
     <header>
         <nav class="navbar">
             <div class="bar2" onclick="toggleSideBar()">
-                <i class="fa fa-bars" aria-hidden="true"></i>            </div>
+                <i class="fa fa-bars" aria-hidden="true"></i>            
+            </div>
             <div class="sidebar">
                 <li><a href="index.html" target="_blank">Home</a></li>
                 <li><a href="Html-files/menu.html" target="_blank">Menu</a></li>
@@ -57,7 +54,6 @@
             try to make your dining experience memorable with tech facilities and customisation and leave an expression
             which will bring you back to us.</p>
         <button class="btn">Order Now</button>
-
     </section>
 
     <section class="about_us">
@@ -65,9 +61,6 @@
             <marquee class="text">Get 30% OFF on your first order!</marquee>
         </div>
         <h1 class="h-primary center">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
-
-
-        <!-- changes -->
         <div id="about">
             <div class="box">
                 <img src="https://shahidining.com.au/wp-content/uploads/2020/05/secret-to-indian-flavour-1536x864.jpg"
@@ -126,7 +119,6 @@
                 menu and savor the essence of exquisite dining." </p>           
                 <button class="butt" onclick="window.open('Html-files/menu.html',target='_blank')">View Menu</button>
         </div>
-
         <div class="menu_items">
             <div class="items">
                 <img
@@ -151,7 +143,6 @@
                 <h3>Juices</h3>
                 <p>Boost yourself up with fruit extracts</p>
             </div>
-
         </div>
     </section>
 
@@ -216,9 +207,7 @@
                     <img src="Images/8.jpg" alt="food-image">
                 </figure>
             </li>
-
         </ul>
-
     </section>
 
     <div class="app_download">
@@ -228,7 +217,6 @@
         <p>For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
         <a href="#"><img src="./Images/get_it_on_google_play_store.png" class="app-download-img" alt="Get it on Google Play Store"></a>
         <a href="#"><img src="./Images/download-on-the-app-store.png" class="app-download-img" alt="Download on the Apple App Store"></a>
-
     </div>
 
     <div class="footer">
@@ -250,10 +238,7 @@
         </div>
         <br><br><br><br>
          <hr> -->
-
         <footer>
-
-
             <div class="foot-panel2">
                 <ul>
                     <p>Our Pages</p>
@@ -327,24 +312,6 @@
 
     </div>
 
-    <script>
-        window.addEventListener('beforeunload', function(event) {
-            localStorage.clear();
-        });
-        const btn=document.querySelector('.btn')
-        btn.onclick=()=>{
-            location.href="./Html-files/menu.html"
-        }
-    </script>
-
+    <script src="./script.js"></script>
 </body>
-<script>
-    function redirectLogin(){
-        window.location.href = "Html-files/login.html";
-    }
-    function redirectSignup(){
-        window.location.href = "Html-files/signup.html";
-    }
-</script>
-
 </html>

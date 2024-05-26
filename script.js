@@ -24,3 +24,18 @@ window.addEventListener("resize", () => {
         sidebar.classList.remove("visible");
     }
 });
+
+window.addEventListener('beforeunload', function(event) {
+    localStorage.clear();
+});
+const btn=document.querySelector('.btn')
+btn.onclick=()=>{
+    location.href="./Html-files/menu.html"
+}
+
+function redirectLogin(){
+    window.location.href = "Html-files/login.html";
+}
+function redirectSignup(){
+    window.location.href = "Html-files/signup.html";
+}

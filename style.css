@@ -183,13 +183,11 @@ body {
 }
 
 .about_us {
-  /* changed background colour */
   background-color: #000;
   padding: 0 0 100px 0px;
 }
 
 #about {
-  /* margin: 34px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,7 +206,6 @@ body {
 }
 
 #about .box:hover {
-  /* box-shadow: #828283 1px 1px 10px 1px; */
   box-shadow: 0 0 25px rgba(255, 0, 0, 0.5); 
   scale: 1.015;
   cursor: pointer;
@@ -242,49 +239,30 @@ body {
   text-align: center;
 }
 
-
-/* service container starts */
-/* .service_container {
-	background-color: rgba(0, 0, 0, .5);
-  background: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300)  no-repeat center center/cover;  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-
-}
-
-.service_container::before {
-	background: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300)  no-repeat center center/cover;  
-	opacity: .2;
-} */
-
 .service_container {
 	display: flex;
 	flex-direction: column;
-	/* padding: 3px 200px; */
 	height: 550px;
 	width: auto;
 	justify-content: center;
 	align-items: center;
 	color: white;
-	position: relative; /* Added to position the pseudo-element correctly */
+	position: relative; 
 	background-color: rgba(0, 0, 0, 0.5); 
   }
   
   .service_container:before {
 	background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
-	background-size: cover; /* Ensures the image covers the entire container */
-	background-position: center; /* Centers the image within the container */
+	background-size: cover; 
+	background-position: center; 
 	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+	background-color: rgba(0, 0, 0, 0.5); 
 	z-index: -1;
-	/* z-index: -1; Ensure the background image is behind the content  */
   }
 
 .service {
@@ -292,7 +270,6 @@ body {
   text-shadow: 3px 3px 3px black;
   letter-spacing: 1px;
   opacity: 2;
-  /* border: 2px solid rgb(224, 224, 252); */
 }
 
 .service .box {
@@ -342,7 +319,6 @@ body {
 	}
 	.service {
 		flex-direction: column;
-		/* border: 1px solid white;   */
 		align-items: center;
 		padding-bottom: 50px;
 	}
@@ -351,7 +327,6 @@ body {
 		text-align: center;
 		font-size: 1em;
 		letter-spacing: 2px;
-		/* border: 1px solid white; */
 	}
 	.service_container {
 		height: fit-content;
@@ -366,9 +341,8 @@ body {
 		line-height: 70px;
 	}
 	.service .box_main p{
-		/* border: 1px solid white; */
 		font-size: 20px;
-    text-align: center;
+    	text-align: center;
 	}
 	.service_container:before {
 		width: 100%;
@@ -384,21 +358,20 @@ body {
 	}
 }
 
+/* menu container starts here*/
 .menu_container {
-  background-color: rgb(0, 0, 0);
-  padding: 50px 20px 100px 30px;
-  /* color: wheat; */
+	background-color: rgb(0, 0, 0);
+	padding: 50px 20px 100px 30px;
 }
 
 .menu_container .mainhead {
-  text-align: center;
+	text-align: center;
 }
 
 .mainhead h1 {
-  font-family: "Bree Serif", serif;
-  font-size: 2.8rem;
-  /* font-size: 100px; */
-  color: white;
+	font-family: "Bree Serif", serif;
+	font-size: 2.8rem;
+	color: white;
 }
 
 .mainhead p {
@@ -409,67 +382,70 @@ body {
 }
 
 .mainhead button {
-  border: 2px solid brown;
-  font-size: 1.4rem;
-  padding: 7px;
-  border-radius: 10px;
-  font-family: "Bree Serif", serif;
-  margin-bottom: 50px;
-  background-color: brown;
-  color: white;
+	border: 2px solid brown;
+	font-size: 1.4rem;
+	padding: 7px;
+	border-radius: 10px;
+	font-family: "Bree Serif", serif;
+	margin-bottom: 50px;
+	background-color: brown;
+	color: white;
 }
 
 .mainhead button:hover {
-  border: 2px solid brown;
-  color: brown;
-  background-color: #f2f2f2;
-  cursor: pointer;
+	border: 2px solid brown;
+	color: brown;
+	background-color: #f2f2f2;
+	cursor: pointer;
 }
 
 .menu_items {
-  display: flex;
+  	display: flex;
 }
 
 .menu_items .items {
-  background-color: #f2f2f2;
-  border: 3px solid brown;
-  padding: 25px;
-  margin: 15px;
-  height: 400px;
-  width: 400px;
-  border-radius: 10px;
-  text-align: center;
-  font-family: "Bree Serif", serif;
-  transition: 0.3s all ease-in;
+	background-color: #f2f2f2;
+	border: 3px solid brown;
+	padding: 25px;
+	margin: 15px;
+	height: 400px;
+	width: 400px;
+	border-radius: 10px;
+	text-align: center;
+	font-family: "Bree Serif", serif;
+	transition: 0.3s all ease-in;
 }
 
 .menu_items .items:hover {
-  /* box-shadow: #212123 1px 1px 8px; */
     box-shadow: #828283 1px 1px 10px 1px;
-  cursor: pointer;
-  scale: 1.02;
+  	cursor: pointer;
+  	scale: 1.02;
 }
 
 .menu_items .items img {
-  justify-content: center;
-  height: 270px;
-  width: 250px;
+	justify-content: center;
+	height: 270px;
+	width: 250px;
 }
 
 .menu_items .items h3 {
-  font-size: 1.4rem;
-  margin-top: 10px;
+	font-size: 1.4rem;
+	margin-top: 10px;
 }
+/* menu container ends here */
+
 
 .meals-showcase {
   list-style: none;
   width: 100%;
 }
+
 .meals-showcase li {
   display: block;
   float: left;
   width: 25%;
 }
+
 .meal-photo {
   width: 100%;
   margin: 0;
@@ -477,6 +453,7 @@ body {
   background-color: #000;
   transition: transform 0.5s, opacity 0.5s;
 }
+
 .meal-photo img {
   width: 100%;
   height: auto;
@@ -484,13 +461,16 @@ body {
   transition: ease-in-out .3s;
   opacity: 0.7;
 }
+
 .meal-photo img:hover {
   transform: scale(1.03);
   opacity: 1;
 }
+
 .clearfix {
   zoom: 1;
 }
+
 .clearfix::after {
   content: ".";
   clear: both;
@@ -498,6 +478,7 @@ body {
   height: 0;
   visibility: hidden;
 }
+
 .section-meals {
   padding: 0;
 }
