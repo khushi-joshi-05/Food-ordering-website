@@ -293,6 +293,7 @@ body {
 .menu_items {
   display: flex;
   overflow-x: auto;
+  padding-top: 10px;
 }
 
 .menu_items::-webkit-scrollbar {
