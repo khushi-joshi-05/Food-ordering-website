@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
@@ -17,18 +17,41 @@
 
 </head>
 <body>
-    <header>
-        <nav class="navbar bg-dark">
-            <ul id="header-items">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-                <li><a href="cart.html">Cart</a></li>
+    <!--Navbar Start-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><b class="text-light">Foodie</b></a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Html-files/menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Html-files/services.html">Services</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link " href="Html-files/contact.html">Contact Us</a>
+              </li>
+              
             </ul>
-        </nav>
-        
-    </header>
+                       
+          </div>
+          <div class="d-flex p-2">
+            
+          <li class="nav-item">
+              <a class="nav-btn " href="Html-files/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+          </div>
+          
+        </div>
+      </nav>
+
+<!--Navbar End-->
+
 
     <section>
         <div class="position-relative overflow-hidden p-0 m-0">
@@ -74,8 +97,8 @@
                                                 <textarea id="form_message" name="message" class="form-control" placeholder="Write your message here." rows="4" required="required" data-error="Please, leave us a message."></textarea>
                                             </div>
                                         </div>
-                                        <div class="col-md-10 mt-3">                 
-                                            <input type="submit" class="btn btn-outline-dark btn-send  pt-2 btn-block" value="Send Message">
+                                        <div class="col-md-12 mt-3">                 
+                                            <button type="submit" class="btn btn-dark w-100 btn-send">Send message</button>
                                         </div>
                                     </div>
                                 </div>
