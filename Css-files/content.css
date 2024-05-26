@@ -34,6 +34,7 @@ body {
 
 .navbar {
   padding: 8px 10px;
+  background-color: rgb(138, 37, 37);
 }
 .navbar ul {
   overflow: hidden;
@@ -42,7 +43,7 @@ body {
 .navbar li {
   float: left;
   list-style: none;
-  padding: 8px 20px;
+  padding: 8px ;
 }
 .navbar li:hover {
   opacity: 0.7;
