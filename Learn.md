@@ -63,4 +63,3 @@ If you have any questions or need assistance, feel free to reach out to us via  
 We appreciate your contributions!
 ```
 
-You can copy and paste this content into a `learn.md` file in your repository. Let me know if you need further assistance!

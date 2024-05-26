@@ -10,12 +10,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/x-icon" href="./Favicon image/favicon.ico">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
 
 </head>
 
@@ -23,23 +32,46 @@
 
 <body>
 
-    <header>
-        <nav class="navbar">
-            <ul id="header-items">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Html-files/menu.html">Menu</a></li>
-                <li><a href="Html-files/services.html">Services</a></li>
-                <li><a href="Html-files/contact.html">Contact us</a></li>
-                <li><a href="Html-files/cart.html">Cart</a></li>
-                <div class="rightalign">
-                    <li><button onclick="redirectLogin()">Login</button></li>
-                    <li><button onclick="redirectSignup()">Sign Up</a></li>
-                </div>
-            </ul>
-        </nav>
-        
-    </header>
 
+    <!--Navbar Start-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html"><b>Foodie</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="d-flex p-2 navbar-nav">
+                    <ul class="navbar-nav d-flex flex-wrap me-auto mb-2 mb-lg-0 gap-3" style="width: 100%;">
+                        <li class="nav-item px-3"><a class="nav-btn" onclick="redirectLogin()">Login</a></li>
+                        <li class="nav-item px-3"><a class="nav-btn" onclick="redirectSignup()">Sign Up</a></li>
+                        <li class="nav-item px-3">
+                            <a class="nav-btn" href="Html-files/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Navbar End-->
 
     <section class="intro_container">
         <h1>Welcome to foodie!</h1>
@@ -52,8 +84,13 @@
 
     <section class="about_us">
         <div class="move">
-        <marquee class="text">Get 30% OFF on your first order!</marquee>
-    </div>
+            <div id="marque">
+                <h1 class="poppins-light">Get <span> 30% OFF </span> on your first order!</h1>
+                <h1 class="poppins-light">Get <span> 30% OFF </span> on your first order!</h1>
+                <h1 class="poppins-light">Get <span> 30% OFF </span> on your first order!</h1>
+            </div>
+        </div>
+
         <h1 class="h-primary center">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
 
 
@@ -96,17 +133,20 @@
             </div>
             <div class="box">
                 <h1>Online Delivery</h1><br>
-                <a href="#">Order Online</a>
+                <a href="#" class="btn">Order Online</a>
 
             </div>
             <div class="box">
                 <h1>Click & Collect</h1><br>
-                <a href="#">Take out Order</a>
+                <a href="#" class="btn">Take out Order</a>
 
             </div>
             <div class="box">
                 <h1>Restaurant Dining</h1><br>
-                <a href="#">Book Table</a>
+
+                <a href="#" class="btn" onclick="openBookingModal()">Book Table</a>
+<!--                 <a href="#" class="btn">Book Table</a> -->
+ 
 
             </div>
         </div>
@@ -119,11 +159,11 @@
             <p>"Welcome to a world of culinary delights where every bite tells a flavorful story. Explore our diverse
                 menu and savor the essence of exquisite dining." </p>
 
-                
-                <button class="butt" onclick="window.location.href='Html-files/menu.html'">View Menu</button>
+
+            <button class="butt" onclick="window.location.href='Html-files/menu.html'">View Menu</button>
 
 
-                <!-- <button class="butt" onclick="window.open('Html-files/menu.html')">View Menu</button> -->
+            <!-- <button class="butt" onclick="window.open('Html-files/menu.html')">View Menu</button> -->
 
 
 
@@ -174,7 +214,7 @@
     </div> -->
 
     <section class="section-meals" data-aos="fade-in" data-aos-duration="2000">
-        <ul class="meals-showcase clearfix">
+        <ul class="meals-showcase clearfixX">
             <li>
                 <figure class="meal-photo">
                     <img src="Images/1.jpg" alt="food-image">
@@ -223,13 +263,56 @@
 
     </section>
 
+    <!-- Booking Modal  -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookingModalLabel">Book a Table</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bookingForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="date" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="time" class="form-label">Time</label>
+                            <input type="time" class="form-control" id="time" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="guests" class="form-label">Number of Guests</label>
+                            <input type="number" class="form-control" id="guests" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="app_download">
         <h4>Free Delivery!</h4>
         <h2>Download the App now!</h2>
         <br>
         <p>For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
-        <a href="#"><img src="./Images/get_it_on_google_play_store.png" class="app-download-img" alt="Get it on Google Play Store"></a>
-        <a href="#"><img src="./Images/download-on-the-app-store.png" class="app-download-img" alt="Download on the Apple App Store"></a>
+        <a href="#"><img src="./Images/get_it_on_google_play_store.png" class="app-download-img"
+                alt="Get it on Google Play Store"></a>
+        <a href="#"><img src="./Images/download-on-the-app-store.png" class="app-download-img"
+                alt="Download on the Apple App Store"></a>
 
     </div>
 
@@ -260,12 +343,12 @@
                 <ul>
                     <p>Our Pages</p>
                     <a href="#">Home</a>
-                    <a href="#">Menu</a>
-                    <a href="#">Services</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Cart</a>
+                    <a href="/Html-files/menu.html">Menu</a>
+                    <a href="/Html-files/services.html">Services</a>
+                    <a href="/Html-files/contact.html">Contact us</a>
+                    <a href="/Html-files/cart.html">Cart</a>
                 </ul>
-                
+
                 <ul>
                     <p> Exclusive Offers</p>
                     <a href="#">Foodie Discounts</a>
@@ -280,19 +363,18 @@
 
                 <ul>
                     <p>Payment Products</p>
-                    <a href="#" >Secure Checkout</a>
-                    <a href="#" >Credit/Debit Cards</a>
-                    <a href="#" >Online Payment</a>
-                    <a href="#" >Mobile Wallets</a>
-                    <a href="#" >Contactless Payments</a>
+                    <a href="#">Secure Checkout</a>
+                    <a href="#">Credit/Debit Cards</a>
+                    <a href="#">Online Payment</a>
+                    <a href="#">Mobile Wallets</a>
+                    <a href="#">Contactless Payments</a>
                 </ul>
-                    
+
 
                 <form id="contactForm">
                     <h3>Contact Us!</h3>
                     <!-- <label for="name">Name:</label> -->
-                    <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>
-             -->
+                    <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>-->
                     <!-- <label for="email">Email:</label> -->
                     <input type="email" id="email" name="email" placeholder="Your Email" required>
 
@@ -301,51 +383,102 @@
 
                     <button id="butt" type="submit">Send Message</button>
                 </form>
-            
+
             </div>
 
 
             <div class="foot_panel4">
                 <div class="pages">
                     <h4>Follow Us</h4>
-                    
                     <div class="social-icons">
-
-
-                        <a class="fa-brands fa-facebook" href="https://facebook.com"></a>
-                        <a class="fa-brands fa-instagram" href="https://instagram.com"></a>
-                        <a class="fa-brands fa-twitter" href="https://twitter.com"></a>
-
-                   </div>
-                   <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
-                </p>
+                            <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                            <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                            <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
+                            <a class="fa-brands fa-github" href="https://github.com" target="_blank"></a>
+                    </div>
+                    <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
+                    </p>
                     <div class="copyright">
-
-                        &copy; 2023 Foodies . All Rights Reserved. | Developed by <span id="author">
-                            <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/"  target="_blank">Khushi Joshi</a>
+                        &copy; 2024 Foodies - All Rights Reserved | <span id="author">
+                            <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
+                        </span></p>
                     </div>
                 </div>
+            </div>
         </footer>
+
+        <!-- go to top button -->
+        <a href="#" id="gotop-btn" style="position: fixed; bottom: 50px; right: 50px; padding: 10px; background-color: brown;"><i class="fa-solid fa-angle-up"></i></a>
 
     </div>
 
     <script>
-        window.addEventListener('beforeunload', function(event) {
+        window.addEventListener('beforeunload', function (event) {
             localStorage.clear();
         });
-        const btn=document.querySelector('.btn')
-        btn.onclick=()=>{
-            location.href="./Html-files/menu.html"
+
+        const btn = document.querySelector('.btn');
+        btn.onclick = () => {
+            location.href = "./Html-files/menu.html";
+        }
+ main
+
+        function redirectLogin() {
+            window.location.href = "Html-files/login.html";
+        }
+
+        function redirectSignup() {
+            window.location.href = "Html-files/signup.html";
+        }
+
+        window.addEventListener('scroll', function() {
+  var navbar = document.querySelector('.navbar');
+  if (window.scrollY > 60) { // Adjust as needed based on when you want the effect to start
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+        window.addEventListener('scroll', function () {
+            var navbar = document.querySelector('.navbar');
+            if (window.scrollY > 60) { // Adjust as needed based on when you want the effect to start
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+ main
+
+        function openBookingModal() {
+            var bookingModal = new bootstrap.Modal(document.getElementById('bookingModal'));
+            bookingModal.show();
         }
     </script>
+ main
 
+<script type="text/javascript">
+    (function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+          window.voiceflow.chat.load({
+            verify: { projectID: '6651593185e25f1a181125a3' },
+            url: 'https://general-runtime.voiceflow.com',
+            versionID: 'production'
+          });
+        }
+        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
 </body>
 <script>
-    function redirectLogin(){
+    function redirectLogin() {
         window.location.href = "Html-files/login.html";
     }
-    function redirectSignup(){
+    function redirectSignup() {
         window.location.href = "Html-files/signup.html";
     }
 </script>
+ main
+
 </html>
