@@ -131,7 +131,6 @@ body {
 .about_us {
   background-color: rgb(224, 224, 252);
   padding: 100px 0px 100px 0px;
- z-index: -2;
 }
 
 #about {
@@ -139,7 +138,6 @@ body {
   display: flex;
   justify-content:center;
   align-items: center;
-  z-index: -2;
 }
 
 #about .box {
@@ -201,22 +199,18 @@ body {
   background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
   content: "";
   position: absolute;
+
+  /*  
+    height: 560px;
+    */
   height: 800px;
   width: 100%;
+  /* justify-items: center; */
   opacity: 0.4;
   z-index: -1;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-.overlay {
-  position: absolute;
-  top: 1520px;
-  left: 0;
-  width: 100%;
-  height: 79%;
-  background: rgba(0, 0, 0, 0.336);
-  z-index: 1;
 }
 
 .service {
@@ -228,19 +222,15 @@ body {
 .service .box_main {
   padding-left: 20px;
   padding-right: 40px;
-  z-index: 2;
-
 }
 
 .service .box_main h1 {
   font-size: 4.5rem;
   font-family: "Oswald", sans-serif;
-  z-index: 2;
 }
 
 .service .box_main p {
   font-family: "Oswald", sans-serif;
-  z-index: 2;
 }
 
 .service .box {
@@ -248,49 +238,18 @@ body {
   /* border:2px solid rgb(224, 224, 252); */
   text-align: center;
   font-size: 1.3rem;
-  z-index: 2;
-
 }
 
 .service .box a {
   text-decoration: none;
-  color: white;
-  background: linear-gradient(45deg, #ff6f00, #ff8f00, #ffa726);
-  border: none;
-  padding: 15px 30px;
-  border-radius: 50px;
-  font-weight: bold;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-}
-
-.service .box a:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: rgba(255, 255, 255, 0.3);
-  transition: all 0.4s ease;
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0.1);
-}
-
-.service .box a:hover:before {
-  transform: translate(-50%, -50%) scale(1);
+  color: rgb(224, 224, 252);
+  border: 2px solid rgb(224, 224, 252);
+  padding: 5px;
 }
 
 .service .box a:hover {
-  background: linear-gradient(45deg, #ff8f00, #ffa726, #ff6f00);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: brown;
 }
-
-
 
 .menu_container {
   background-color: rgb(224, 224, 252);
