@@ -209,7 +209,7 @@ body {
   background-position: center;
   background-size: cover;
 }
-/* .overlay {
+.overlay {
   position: absolute;
   top: 1520px;
   left: 0;
@@ -218,7 +218,7 @@ body {
   background: rgba(0, 0, 0, 0.336);
   z-index: 1;
 }
- */
+
 .service {
   display: flex;
   padding: 20px;
