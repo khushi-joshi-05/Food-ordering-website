@@ -271,6 +271,10 @@ body {
 
 .menu_items {
   display: flex;
+  overflow-x: auto;
+}
+.menu_items::-webkit-scrollbar {
+  display: none;
 }
 
 .menu_items .items {
