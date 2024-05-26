@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodOrderingWebsite</title>
+    <title>Menu - Food Ordering Website</title>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
@@ -40,16 +40,28 @@
             <!-- <button class="butt">View all Menu</button> -->
         </div>
     </div>
+   
     <section class="menu_container">
+        
         <h2>Snacks</h2>
         <div class="menu_items">
             <div class="items">
                 <img
                     src="https://www.mumbailive.com/images/media/images/thali_1635502261446jpeg?bg=08394e&crop=5328%2C2991.157894736842%2C0%2C504.42105263157896&fit=crop&fm=webp&h=432.2807017543859&height=4000&w=770&width=5328">
-                <h3>Indian Thali</h3>
-                <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
+                
+                    <h3>Indian Thali</h3>
+                    <p>$10.20</p>
+                    <!-- <button class="but">Add to Cart</button> -->
+                    <button class="butt add-to-cart-button" data-product-id="1.01" data-product-name="Indian Thali"
+                        data-product-price="10.20">Order Now</button>
+
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
             </div>
             <div class="items">
                 <img
@@ -57,7 +69,16 @@
                 <h3>Dessert</h3>
                 <p>$10.20</p>
                 <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
+                <button class="butt add-to-cart-button" data-product-id="1.02" data-product-name="Dessert"
+                    data-product-price="10.20">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+
             </div>
             <div class="items">
                 <img
@@ -65,14 +86,30 @@
                 <h3>Snacks</h3>
                 <p>$10.20</p>
                 <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
+                <button class="butt add-to-cart-button" data-product-id="1.03" data-product-name="Snacks"
+                    data-product-price="10.20">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
             </div>
             <div class="items">
                 <img src="https://static.india.com/wp-content/uploads/2017/04/Juices-Delhi.jpg">
                 <h3>Juices</h3>
                 <p>$10.20</p>
                 <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
+                <button class="butt add-to-cart-button" data-product-id="1.04" data-product-name="Juices"
+                    data-product-price="10.20">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
             </div>
 
         </div>
@@ -83,7 +120,15 @@
                 <h3>Indian Thali</h3>
                 <p>$10.20</p>
                 <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
+                <button class="butt add-to-cart-button" data-product-id="1.05" data-product-name="Indian Thali"
+                    data-product-price="10.20">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
             </div>
             <div class="items">
                 <img
@@ -91,7 +136,15 @@
                 <h3>Dessert</h3>
                 <p>$10.20</p>
                 <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
+                <button class="butt add-to-cart-button" data-product-id="1.06" data-product-name="Dessert"
+                    data-product-price="10.20">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
             </div>
             <div class="items">
                 <img
@@ -99,92 +152,35 @@
                 <h3>Snacks</h3>
                 <p>$10.20</p>
                 <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
+                <button class="butt add-to-cart-button" data-product-id="1.07" data-product-name="Snacks"
+                    data-product-price="10.20">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
             </div>
             <div class="items">
                 <img src="https://static.india.com/wp-content/uploads/2017/04/Juices-Delhi.jpg">
                 <h3>Juices</h3>
                 <p>$10.20</p>
                 <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
+                <button class="butt add-to-cart-button" data-product-id="1.08" data-product-name="Juices"
+                    data-product-price="10.20">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
             </div>
 
         </div>
 
     </section>
-
-
-    <section class="menu_container">
-        <h2>Dishes</h2>
-        <div class="menu_items">
-            <div class="items">
-                <img
-                    src="https://ready2bite.com/cdn/shop/files/pavbhaji.png?v=1696941905">
-                <h3>Pav Bhaji</h3>
-                <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
-            </div>
-            <div class="items">
-                <img
-                    src="https://media.vogue.in/wp-content/uploads/2020/08/chole-bhature-recipe.jpg">
-                <h3>Chole Bhature</h3>
-                <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
-            </div>
-            <div class="items">
-                <img
-                    src="https://myfoodstory.com/wp-content/uploads/2021/08/Punjabi-Samosa-4.jpg">
-                <h3>Samosa</h3>
-                <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
-            </div>
-            <div class="items">
-                <img src="https://www.awesomecuisine.com/wp-content/uploads/2007/11/Idli-with-sambar-and-chutney.jpg">
-                <h3>Idli</h3>
-                <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
-            </div>
-
-        </div>
-        <div class="menu_items">
-            <div class="items">
-                <img
-                    src="https://c.ndtvimg.com/2023-04/ghgdqak8_poha_625x300_03_April_23.jpg">
-                <h3>Poha</h3>
-                <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
-            </div>
-            <div class="items">
-                <img
-                    src="https://i.ytimg.com/vi/ieDsTOOKj5Q/sddefault.jpg">
-                <h3>Aalo Bonda</h3>
-                <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
-            </div>
-            <div class="items">
-                <img
-                    src="https://www.awesomecuisine.com/wp-content/uploads/2009/06/Plain-Dosa.jpg">
-                <h3>Dosa</h3>
-                <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
-            </div>
-            <div class="items">
-                <img src="https://www.chefkunalkapur.com/wp-content/uploads/2021/03/veg-chowmein-min-1300x867.jpg?v=1620296035">
-                <h3>Noodles</h3>
-                <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
-            </div>
-        </div>
-    </section>
-
     <section class="menu_container">
         <h2>Juices</h2>
         <div class="menu_items">
@@ -194,7 +190,15 @@
                 <h3>Indian Thali</h3>
                 <p>$5.10</p>
                 <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
+                <button class="butt add-to-cart-button" data-product-id="2.01" data-product-name="Indian Thali"
+                    data-product-price="5.10">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
             </div>
             <div class="items">
                 <img
@@ -202,7 +206,15 @@
                 <h3>Dessert</h3>
                 <p>$5.10</p>
                 <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
+                <button class="butt add-to-cart-button" data-product-id="2.02" data-product-name="Dessert"
+                    data-product-price="5.10">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
             </div>
             <div class="items">
                 <img
@@ -210,14 +222,30 @@
                 <h3>Snacks</h3>
                 <p>$5.10</p>
                 <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
+                <button class="butt add-to-cart-button" data-product-id="Snacks" data-product-name="Snacks"
+                    data-product-price="5.10">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
             </div>
             <div class="items">
                 <img src="https://static.india.com/wp-content/uploads/2017/04/Juices-Delhi.jpg">
                 <h3>Juices</h3>
                 <p>$5.10</p>
                 <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
+                <button class="butt add-to-cart-button" data-product-id="2.04" data-product-name="Juices"
+                    data-product-price="5.10">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
             </div>
     </section>
 
@@ -230,7 +258,15 @@
                 <h3>Indian Thali</h3>
                 <p>$15.80</p>
                 <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
+                <button class="butt add-to-cart-button" data-product-id="3.01" data-product-name="Indian Thali"
+                    data-product-price="15.80">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
             </div>
             <div class="items">
                 <img
@@ -238,7 +274,15 @@
                 <h3>Dessert</h3>
                 <p>$15.80</p>
                 <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
+                <button class="butt add-to-cart-button" data-product-id="3.02" data-product-name="Dessert"
+                    data-product-price="15.80">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
             </div>
             <div class="items">
                 <img
@@ -246,14 +290,30 @@
                 <h3>Snacks</h3>
                 <p>$15.80</p>
                 <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
+                <button class="butt add-to-cart-button" data-product-id="3.03" data-product-name="Snacks"
+                    data-product-price="15.80">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
             </div>
             <div class="items">
                 <img src="https://static.india.com/wp-content/uploads/2017/04/Juices-Delhi.jpg">
                 <h3>Juices</h3>
                 <p>$15.80</p>
                 <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt">Order Now</button>
+                <button class="butt add-to-cart-button" data-product-id="3.04" data-product-name="Juices"
+                    data-product-price="15.80">Order Now</button>
+                <div class="star-rating">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
             </div>
     </section>
 
@@ -315,26 +375,27 @@
                 <h4>Follow Us</h4>
 
                 <div class="social-icons">
-                    <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
-                    <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                    <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
+                        <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                        <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                        <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
+                        <a class="fa-brands fa-github" href="https://github.com" target="_blank"></a>
                 </div>
                 <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                 </p>
                 <div class="copyright">
-
-                    &copy; 2023 Foodies . All Rights Reserved. | Developed by  <span id="author">
+                    &copy; 2024 Foodies - All Rights Reserved | <span id="author">
                         <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
                     </span></p>
 
-                    &copy; 2024 Foodies . All Rights Reserved. | Developed by <span id="author"> Khushi Joshi </span></p>
+
 
 
                 </div>
             </div>
+        </div>
     </footer>
 
-
+    <script src="menu.js"></script>
 </body>
 
 </html>
