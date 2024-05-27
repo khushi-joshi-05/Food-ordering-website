@@ -1,6 +1,10 @@
 *{
     font-family: "Bree Serif", serif;
 }
+.mainhead:hover h1{
+      color: rgb(138, 37, 37);
+    
+}
 .head_container_service{
     height: fit-content;
 }
@@ -26,6 +30,7 @@
 .but:hover {
     background-color: rgb(138, 37, 37);
     color: white;
+    transform: translateX(10px);
 }
 .testimonalsection{
     padding-top: 20px;
@@ -78,6 +83,13 @@
 }
 .deals:hover {
     transform: translateY(-10px);
+    background-color: rgb(138, 37, 37);
+    color: white;
+    border-color: white;
 }
 input,
 textarea {width: 100%;}
+
+#butt:hover {
+    background-color: rgb(196, 89, 89);
+}
