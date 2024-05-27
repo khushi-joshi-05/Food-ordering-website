@@ -1,21 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var menuContainers = document.querySelectorAll('.menu_container');
-    menuContainers.forEach(function (container) {
-        container.addEventListener('click', function (event) {
-            if (event.target.classList.contains('butt')) {
-                var item = event.target.closest('.items');
-                var itemName = item.querySelector('h3').textContent;
-                var itemPrice = item.querySelector('p').textContent;
-                alert("Item added to cart successfully");
 
-                localStorage.setItem('itemName', itemName);
-                localStorage.setItem('itemPrice', itemPrice);
-
-                window.location.href = "cart.html";
-            }
-        });
-    });
-});
 function rateItem(button, rating) {
     const starButtons = button.parentElement.querySelectorAll('.star-button');
 
@@ -27,3 +10,34 @@ function rateItem(button, rating) {
         }
     });
 }
+
+document.querySelectorAll('.add-to-cart-button').forEach(button => {
+    button.addEventListener('click', function() {
+        const productId = this.getAttribute('data-product-id');
+        const productName = this.getAttribute('data-product-name');
+        const productPrice = parseFloat(this.getAttribute('data-product-price'));
+
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        
+        // Check if the item already exists in the cart
+        const existingItemIndex = cartItems.findIndex(item => item.id === productId);
+        if (existingItemIndex !== -1) {
+            // If it exists, increment the quantity
+            cartItems[existingItemIndex].quantity += 1;
+        } else {
+            // If it does not exist, add new item
+            cartItems.push({
+                id: productId,
+                name: productName,
+                price: productPrice,
+                quantity: 1
+            });
+        }
+
+        // Save updated cart to localStorage
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        
+        // Optionally, you can show a message or confirmation
+        alert(`Item has been added to the cart successfully.`);
+    });
+});

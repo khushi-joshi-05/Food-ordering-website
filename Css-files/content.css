@@ -157,11 +157,11 @@ body {
   box-shadow: 0 0 10px rgba(138, 37, 37, 0.5); */
   box-shadow: 0 0 10px rgba(224, 224, 252, 0.678);
   border: 1px solid rgb(186, 186, 201);
-  padding: 20px;
+  padding: 40px;
   margin: 5px;
   height: 310px;
   width: 230px;
-  /* border-radius: 10px; */
+  border-radius: 10px;
   text-align: center;
   font-family: "Bree Serif", serif;
 }
@@ -179,6 +179,11 @@ body {
 
 .menu_items .items p {
   margin-bottom: 20px;
+}
+
+.menu_items .items:hover {
+  cursor: pointer;
+  scale: 1.02;
 }
 
 .first_cont {
@@ -339,6 +344,7 @@ body {
 }
 
 .copyright{
+  background-color: rgb(66, 16, 16);
    padding-top: 10px;
 }
 
@@ -374,23 +380,35 @@ textarea {
     background-color:rgb(196, 89, 89);
 }
 
-.social-icons a{
-    font-size: 1.2rem;
-    padding: 15px;
-    text-decoration: none;
-    color: white;
+.social-icons a {
+  font-size: 1.2rem;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  transition: .2s;
 }
 
 .fa-facebook:hover {
-  color:#3B5998;
+  background-color: #3B5998;
+  color: white;
 }
 
 .fa-instagram:hover {
-  color:#D62976;
+  background-color: #D62976;
+  color: white;
 }
 
 .fa-twitter:hover {
-  color:#00B6F1;
+  background-color: #00B6F1;
+  color: white;
+}
+
+.fa-github:hover {
+  background-color: #040204;
+  color: white;
 }
 
 /* Cart page styling */
@@ -446,4 +464,51 @@ textarea {
 }
 
 
+/* Cart -> Input Section for Coupon Code  */
 
+#haveCoupon {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+
+.inputForCoupon {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.enterCouponCode {
+  display: flex;
+  gap: 1rem;
+}
+
+#inputCode {
+  padding: 18px;
+  margin-right: 10px;
+  width: 250px;
+  border-radius: 0.3rem;
+  background-color: white;
+  font-size: medium;
+  border: 2px solid black;
+}
+
+#inputCode:hover {
+  border: 2px solid #A52A2A;
+}
+
+#applyCouponButton {
+  width: 5rem;
+  border-radius: 0.3rem;
+  padding: 10px 20px;
+  background-color: #A52A2A;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+#applyCouponButton:hover {
+  background-color: #a52a2ad7;
+}

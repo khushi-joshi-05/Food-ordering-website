@@ -13,10 +13,11 @@
 body {
   background-color: black;
 }
-
 .navbar {
   padding: 8px 0px;
   height: 60px;
+  transition: background-color 0.3s, backdrop-filter 0.3s, color 0.3s; /* Added transitions for smooth color change */
+  backdrop-filter: blur(0); /* Initially no blur */
 }
 
 .navbar a {
@@ -24,6 +25,55 @@ body {
   color: white;
   font-size: 1.3rem;
 }
+
+/* Navbar link hover effect */
+.navbar a:hover,
+.navbar.scrolled a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff; /* Add bottom border on hover */
+  border-top: 1px solid #fff; /* Add top border on hover */
+}
+
+.navbar.fixed-top {
+  position: fixed; 
+  top: 0;
+  width: 100%; 
+  z-index: 1030; 
+}
+
+.navbar.scrolled {
+  background-color: rgba(176, 63, 63, 0.6); 
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+/* Additional CSS to adjust the navbar on smaller screens */
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(175, 63, 62, 1);
+  }
+}
+
 
 .intro_container {
   display: flex;
@@ -59,21 +109,22 @@ body {
 }
 
 .intro_container button {
+
   margin-top: 20px;
-  background-color: brown;
-  color: white;
+  background-color: white;
+  color: brown;
   border: 2px solid rgb(139, 36, 36);
   width: 170px;
   height: 35px;
-  border-radius: 4px;
+  border-radius: 10px;
   font-size: 1.3rem;
-  font-family: "Bree Serif", serif;
+  font-family:Arial, Helvetica, sans-serif;
   padding-bottom: 4px;
 }
 
 .intro_container button:hover {
-  background-color: white;
-  color: brown;
+  background-color: brown;
+  color: white;
   cursor: pointer;
 }
 
@@ -89,14 +140,14 @@ body {
 #about {
   /* margin: 34px; */
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
 }
 
 #about .box {
   border: 2px solid brown;
   padding: 34px;
-  margin: 2px 55px;
+  margin: 2px 40px;
   border-radius: 28px;
   background: #f2f2f2;
   margin-bottom: 20px;
@@ -194,7 +245,9 @@ body {
   /* justify-items: center; */
   opacity: 0.4;
   z-index: -1;
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .service {
@@ -276,7 +329,13 @@ body {
 
 .menu_items {
   display: flex;
-  overflow: overlay;
+  overflow-x: auto;
+  padding-top: 10px;
+}
+
+.menu_items::-webkit-scrollbar {
+  display: none;
+
 }
 
 .menu_items .items {
@@ -360,7 +419,7 @@ body {
 
 .app_download {
   background-color: brown;
-  height: 320px;
+  height: 350px;
   color: white;
   padding-left: 50px;
   padding-top: 80px;
@@ -389,13 +448,14 @@ body {
 
 .app-download-img {
   max-height: 70px;
-  margin-top: 2rem;
-  margin-left: 2rem;
+
+  padding: 10px;
 }
 
 .move {
-  background-color: rgb(147, 22, 33);
-  height: 60px;
+  /* background-color: rgb(147, 22, 33); */
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.145);
+  height: 50px;
 }
 
 .move .text {
@@ -515,6 +575,7 @@ ul a {
 }
 
 .copyright {
+  background-color: rgb(66, 16, 16);
   padding-top: 10px;
 }
 
@@ -555,37 +616,62 @@ textarea {
 
 .social-icons a {
   font-size: 1.2rem;
-  padding: 8px;
-  margin: 15px;
+  padding: 10px;
+  margin: 10px;
   text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  transition: .2s;
+}
+
+.fa-facebook:hover {
+  background-color: #3B5998;
   color: white;
 }
 
-.social-icons a:hover {
-  color: brown;
-  background-color: wheat;
-  border-radius: 50px;
+.fa-instagram:hover {
+  background-color: #D62976;
+  color: white;
 }
 
-.fb {
-  color: #1877f2;
-  cursor: pointer;
+.fa-twitter:hover {
+  background-color: #00B6F1;
+  color: white;
 }
 
-.instagram {
-  color: #dd4c8d;
-  cursor: pointer;
-}
-
-.twitter {
-  color: #1da1f2;
-  cursor: pointer;
+.fa-github:hover {
+  background-color: #040204;
+  color: white;
 }
 
 #author {
   padding: 3px;
   border-radius: 3px;
   color: #dddddd;
+}
+
+ul{
+  padding-left: 0px;
+}
+
+#email,#message{
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(210, 167, 167, 0.5);
+  color:white;
+}
+
+#email::placeholder{
+  color: white;
+}
+
+#message::placeholder{
+  color: white;
+}
+
+#butt{
+  border: none;
 }
 
 @media screen and (max-width: 500px) {
@@ -865,8 +951,6 @@ padding-left:2px;
   }
 }
 
-
-
 .navbar li:hover a {
   color: brown;
 }
@@ -877,16 +961,17 @@ padding-left:2px;
 }
 
 .menu_items .items:hover {
-    box-shadow: 0 0 20px rgba(138, 37, 37, 0.5); 
+  box-shadow: 0 0 20px rgba(138, 37, 37, 0.5);
 }
 
 .social-icons i:hover {
-    color: brown; 
+  color: brown;
 }
 
 
 #marque {
   width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative;
   white-space: nowrap;
@@ -947,3 +1032,21 @@ padding-left:2px;
     }
 }
 
+
+.about_us .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about_us .box {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.items:hover {
+    transform: translateY(-5px) scale(1.05);
+}
