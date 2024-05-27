@@ -16,21 +16,40 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../Css-files/content.css">
+    <script src="../hamburger.js"></script>
+   
+
 </head>
 
 <body>
+    
+
+
     <div class="head_container">
-        <header>
-            <nav class="navbar">
-                <ul id="header-items">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                    <li><a href="cart.html">Cart</a></li>
+        <!-- <header> -->
+            <!-- updated nav bar -->
+    <nav>
+        <div class="navigbar">
+            <div class="logo">Foodie</div>
+
+            <ul class="ul1">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div>
+                <ul class="ul2">
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li>
+                        <a class="" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
                 </ul>
-            </nav>
-        </header>
+            </div>
+        </div>
+    </nav>
+        <!-- </header> -->
 
         <div class="mainhead">
             <h1>M E N U</h1>
@@ -396,7 +415,14 @@
         </div>
     </footer>
 
-    <script src="menu.js"></script>
+    <script src="menu.js">
+         function redirectLogin() {
+            window.location.href = "login.html";
+        }
+        function redirectSignup() {
+            window.location.href = "signup.html";
+        }
+    </script>
 </body>
 
 </html>
