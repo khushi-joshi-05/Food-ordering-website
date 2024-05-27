@@ -610,6 +610,11 @@ ul a {
   text-decoration: none;
 }
 
+.foot-panel2 ul a:hover{
+  text-decoration: underline;
+  color: #dddddd;
+}
+
 /* .foot-pannel3{
     background-color:rgb(66, 16, 16);
     color: white;
