@@ -617,6 +617,11 @@ textarea {
   color: white;
 }
 
+.fa-discord:hover {
+  background-color: #505050;
+  color: white;
+}
+
 #author {
   padding: 3px;
   border-radius: 3px;
