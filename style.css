@@ -400,10 +400,6 @@ body {
   font-size: 1.3rem;
 }
 
-.app_download img:hover{
-  transform: scale(1.1);
-}
-
 .btn a {
   text-decoration: none;
   color: brown;
