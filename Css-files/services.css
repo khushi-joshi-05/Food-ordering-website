@@ -1,0 +1,95 @@
+*{
+    font-family: "Bree Serif", serif;
+}
+.mainhead:hover h1{
+      color: rgb(138, 37, 37);
+    
+}
+.head_container_service{
+    height: fit-content;
+}
+.first_cont {
+    flex-wrap: wrap;
+}
+.items {
+    overflow: hidden;
+    max-width: 230px;
+}
+
+.items img{
+    transition: 0.3s;
+    z-index: 12;
+}
+.items:hover img{
+    transform: scale(1.1);
+}
+.but {
+    transition: 0.5s;
+    cursor: pointer;
+}
+.but:hover {
+    background-color: rgb(138, 37, 37);
+    color: white;
+    transform: translateX(10px);
+}
+.testimonalsection{
+    padding-top: 20px;
+}
+.testimonal__container{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.testimonal__card {
+    position: relative;
+    background-color: transparent;
+    border-radius: 5px;
+    margin: 0;
+}
+.testimonal__swiper {
+    background-color: white;
+    margin: 5px;
+    overflow: hidden;
+    border: 2px solid rgb(138, 37, 37);
+    border-radius: 5px;
+    cursor: pointer;
+    width: 330px;
+
+}
+.testimonal__swiper > div {
+    background-color: rgb(138, 37, 37);
+    height: 33%;
+    border-radius: 5px 5px 70% 70%;
+    transition: 0.5s ease-in-out;
+}
+.testimonal__swiper:hover > div {
+    height: 200%;
+    border-radius: 0;
+}
+.testimonal__swiper * {
+    transition: 0.3s ease-in-out;
+}
+.testimonal__swiper:hover * {
+    color: white;
+}
+.second_cont{
+    flex-wrap: wrap;
+}
+.deals {
+    flex: 1 1 300px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.deals:hover {
+    transform: translateY(-10px);
+    background-color: rgb(138, 37, 37);
+    color: white;
+    border-color: white;
+}
+input,
+textarea {width: 100%;}
+
+#butt:hover {
+    background-color: rgb(196, 89, 89);
+}

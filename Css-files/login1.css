@@ -12,7 +12,8 @@ body * {
 .main-login {
   width: 100vw;
   height: 100vh;
-  background: hsl(240, 61%, 82%);
+  /* background: #8A2525; */
+  background: brown;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +29,7 @@ body * {
 }
 
 .left-login > h1 {
-  color: #e13838;
+  color: white;
   font-size: 2.5vw;
 }
 
@@ -52,11 +53,13 @@ body * {
   flex-direction: column;
   padding: 30px 35px;
   border-radius: 20px;
-  box-shadow: 0px 10px 40px #00000056;
+  box-shadow: 0px 10px 50px #000000a4;
+  background-color: white;
 }
 
 .card-login > h1 {
-  color: #e13838;
+  /* color: #8A2525; */
+  color: rgb(208, 50, 50);
   font-weight: 800;
   margin: 0;
 }
@@ -68,8 +71,13 @@ body * {
   align-items: flex-start;
   justify-content: center;
   margin: 10px 0px;
+  position:relative;
 }
-
+.icon{
+  position:absolute;
+  top:calc(55%);
+  left:84.9%;
+}
 .textfield > input {
   width: 100%;
   border: none;
@@ -78,14 +86,15 @@ body * {
   background: #E6E6FA;
   color: #030707de;
   font-size: 12pt;
-  box-shadow: 0px 10px 40px #00000056;
+  box-shadow: 0px 3px 10px #00000056;
   outline: none;
   box-sizing: border-box;
 }
 
 .textfield > label {
-  color: #f0ffffde;
+  color: black;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .textfield > input::placeholder {
@@ -102,10 +111,14 @@ body * {
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 3px;
-  color: #bec44b;
-  background: #5f50d4;
+  color: white;
+  background: rgb(208, 50, 50);
   cursor: pointer;
   box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+.btn-login:hover{
+  background: rgba(208, 50, 50, 0.9);
 }
 
 #google-login {
@@ -118,10 +131,14 @@ body * {
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 3px;
-  color: #bec44b;
-  background: #5f50d4;
+  color: white;
+  background: rgb(208, 50, 50);
   cursor: pointer;
   box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+#google-login:hover{
+  background: rgba(208, 50, 50, 0.9);
 }
 
 @media only screen and (max-width: 950px){
