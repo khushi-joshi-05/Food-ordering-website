@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Gateway</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./Favicon image/favicon.ico">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: rgb(196, 74, 74);
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      background-color: rgb(196, 74, 74);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .form-group button:hover {
+      background-color: #0056b3;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Payment Gateway</h2>
+    <form id="payment-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Delivery Address</label>
+        <input type="text" id="address" required>
+      </div>
+      <div class="form-group">
+        <label for="payment-method">Method of Payment</label>
+        <select id="payment-method" required>
+          <option value="">Select a method</option>
+          <option value="credit-card">Credit/Debit Card</option>
+          <option value="UPI">UPI</option>
+          <option value="paypal">COD</option>
+        </select>
+      </div>
+      <div id="card-details" class="hidden">
+        <div class="form-group">
+          <label for="card-number">Card Number</label>
+          <input type="text" id="card-number" required>
+        </div>
+        <div class="form-group">
+          <label for="expiry-date">Expiry Date (MM/YY)</label>
+          <input type="text" id="expiry-date" required>
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" required>
+        </div>
+        <div class="form-group">
+          <label for="card-holder">Card Holder's Name</label>
+          <input type="text" id="card-holder" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="submit" >Pay Now</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('payment-method').addEventListener('change', function() {
+      const cardDetails = document.getElementById('card-details');
+      const dynamicContent = document.getElementById('dynamic-content')
+      if (this.value === 'credit-card' ) {
+        cardDetails.classList.remove('hidden');
+      } 
+      else if (this.value === 'UPI') {
+    cardDetails.classList.add('hidden');
+      alert('Payment processed successfully!');
+      window.location.href = 'Thanku.html';
+    
+  }  else {
+        cardDetails.classList.add('hidden');
+        alert('Payment processed successfully!');
+      window.location.href = 'Thanku.html';
+      }
+    });
+
+    document.getElementById('payment-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const address = document.getElementById('address').value;
+      const paymentMethod = document.getElementById('payment-method').value;
+      const cardNumber = document.getElementById('card-number').value;
+      const expiryDate = document.getElementById('expiry-date').value;
+      const cvv = document.getElementById('cvv').value;
+      const cardHolder = document.getElementById('card-holder').value;
+
+      const formData = {
+        name,
+        email,
+        phone,
+        address,
+        paymentMethod,
+        
+      };
+
+      // For demonstration, log the form data to the console
+      console.log(formData);
+
+      // Here you would normally handle the payment processing using a payment gateway API.
+      // For example, using Stripe or PayPal's API.
+
+      alert('Payment processed successfully!');
+      window.location.href = 'Thanku.html';
+    });
+  </script>
+</body>
+</html>
+
+<!--DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Ordering Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        color: rgb(196, 74, 74);
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .form-group button {
+        width: 100%;
+        padding: 10px;
+        background-color: rgb(196, 74, 74);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .form-group button:hover {
+        background-color: #0056b3;
+      }
+      option {
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container col-md-6">
+      <h2>Delivery Details</h2>
+      <form id="payment-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" required />
+        </div>
+        <div class="form-group">
+          <label for="address">Delivery Address</label>
+          <input type="text" id="address" required />
+        </div>
+        <div class="form-group">
+          <label for="payment-method">Method of Payment</label>
+          <select id="payment-method" required>
+            <option value="credit-card">Credit/Debit Card</option>
+            <option value="debit-card">UPI</option>
+            <option value="paypal">COD</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <button type="submit">Proceed to Payment</button>
+        </div>
+      </form>
+    </div>
+
+
+    
+    
+    <!-script>
+      document
+        .getElementById("payment-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const phone = document.getElementById("phone").value;
+          const address = document.getElementById("address").value;
+          const paymentMethod = document.getElementById("payment-method").value;
+          const cardNumber = document.getElementById("card-number").value;
+          const expiryDate = document.getElementById("expiry-date").value;
+          const cvv = document.getElementById("cvv").value;
+          const cardHolder = document.getElementById("card-holder").value;
+
+          // Here you would normally handle the payment processing using a payment gateway API.
+          // For example, using Stripe or PayPal's API.
+
+          console.log({
+            name,
+            email,
+            phone,
+            address,
+            paymentMethod,
+            cardNumber,
+            expiryDate,
+            cvv,
+            cardHolder,
+          });
+
+          alert("Payment processed successfully!");
+        });
+    </script-->
+  </body>
+</html-->
+
+<!--DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Gateway</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        color: rgb(196, 74, 74);
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        justify-content: center;
+        color: #333;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .form-group button {
+        width: 100%;
+        padding: 10px;
+        background-color: rgb(196, 74, 74);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .form-group button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="col-md-6"></div>
+    <div class="container col-md-6">
+      <h2>Payment Gateway</h2>
+      <form id="payment-form">
+        <div class="form-group">
+          <label for="card-number">Card Number</label>
+          <input type="text" id="card-number" required />
+        </div>
+        <div class="form-group">
+          <label for="expiry-date">Expiry Date (MM/YY)</label>
+          <input type="text" id="expiry-date" required />
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" required />
+        </div>
+        <div class="form-group">
+          <label for="card-holder">Card Holder's Name</label>
+          <input type="text" id="card-holder" required />
+        </div>
+        <div class="form-group">
+          <button type="submit">Pay Now</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("payment-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Payment processed successfully!");
+          // Here you would normally handle the payment processing using a payment gateway API.
+          // For example, using Stripe or PayPal's API.
+        });
+    </script>
+  </body>
+</html-->
