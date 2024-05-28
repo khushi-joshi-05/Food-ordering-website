@@ -18,6 +18,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="Css-files/scroll-top-button.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -148,8 +151,8 @@
                 <h1>Restaurant Dining</h1><br>
 
                 <a href="#" class="btn" onclick="openBookingModal()">Book Table</a>
-<!--                 <a href="#" class="btn">Book Table</a> -->
- 
+                <!--                 <a href="#" class="btn">Book Table</a> -->
+
 
             </div>
         </div>
@@ -394,28 +397,37 @@
                 <div class="pages">
                     <h4>Follow Us</h4>
                     <div class="social-icons">
-                            <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
-                            <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                            <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
-                            <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
-                            <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
+                        <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                        <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                        <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
+                        <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
+                            target="_blank"></a>
+                        <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
                     </div>
                     <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                     </p>
                     <div class="copyright">
                         &copy; 2024 Foodies - All Rights Reserved | <span id="author">
-                            <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
+                            <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi
+                                Joshi</a>
                         </span></p>
                     </div>
                 </div>
             </div>
         </footer>
 
-        <!-- go to top button -->
-        <a href="#" id="gotop-btn" style="position: fixed; bottom: 100px; right: 40px; padding: 10px; background-color: brown; border-radius: 0.5rem;"><i class="fa-solid fa-angle-up"></i></a>
+        <!--Scroll top button-->
 
+        <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
+                class="arrow">
+                <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+            </svg>
+        </button>
+        <!--Scroll top button finish-->
     </div>
 
+    <script src="Html-files/top.js"></script>
     <script>
         window.addEventListener('beforeunload', function (event) {
             localStorage.clear();
@@ -425,7 +437,7 @@
         btn.onclick = () => {
             location.href = "./Html-files/menu.html";
         }
- main
+        main
 
         function redirectLogin() {
             window.location.href = "Html-files/login.html";
@@ -435,14 +447,14 @@
             window.location.href = "Html-files/signup.html";
         }
 
-        window.addEventListener('scroll', function() {
-  var navbar = document.querySelector('.navbar');
-  if (window.scrollY > 60) { // Adjust as needed based on when you want the effect to start
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
+        window.addEventListener('scroll', function () {
+            var navbar = document.querySelector('.navbar');
+            if (window.scrollY > 60) { // Adjust as needed based on when you want the effect to start
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
         window.addEventListener('scroll', function () {
             var navbar = document.querySelector('.navbar');
@@ -452,28 +464,28 @@
                 navbar.classList.remove('scrolled');
             }
         });
- main
+        main
 
         function openBookingModal() {
             var bookingModal = new bootstrap.Modal(document.getElementById('bookingModal'));
             bookingModal.show();
         }
     </script>
- main
+    main
 
-<script type="text/javascript">
-    (function(d, t) {
-        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-        v.onload = function() {
-          window.voiceflow.chat.load({
-            verify: { projectID: '6651593185e25f1a181125a3' },
-            url: 'https://general-runtime.voiceflow.com',
-            versionID: 'production'
-          });
-        }
-        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-    })(document, 'script');
-  </script>
+    <script type="text/javascript">
+        (function (d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function () {
+                window.voiceflow.chat.load({
+                    verify: { projectID: '6651593185e25f1a181125a3' },
+                    url: 'https://general-runtime.voiceflow.com',
+                    versionID: 'production'
+                });
+            }
+            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+    </script>
 </body>
 <script>
     function redirectLogin() {
@@ -483,6 +495,6 @@
         window.location.href = "Html-files/signup.html";
     }
 </script>
- main
+main
 
 </html>
