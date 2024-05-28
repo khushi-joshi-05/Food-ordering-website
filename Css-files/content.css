@@ -220,6 +220,16 @@ body {
   margin-bottom: 20px;
 }
 
+.first_cont .items button:hover {
+  color: #f2f2f2;
+  background-color: rgba(138, 37, 37);
+}
+
+.first_cont .items:hover {
+  cursor: pointer;
+  scale: 1.02;
+}
+
 /* service */
 .service_container {
   /* padding: 55px 70px 30px 70px; */
@@ -259,6 +269,11 @@ body {
   font-size: 2rem;
 }
 
+.second_cont .deals:hover {
+  cursor: pointer;
+  scale: 1.02;
+}
+
 /* testimonal */
 .testimonalsection{
   padding-top: 400px;
@@ -295,6 +310,11 @@ body {
   text-align: center;
   font-size: 2rem;
   color:rgb(58, 58, 66);
+}
+
+.testimonal__card:hover{
+  cursor: pointer;
+  scale: 1.02;
 }
 
 /* footer */
