@@ -13,6 +13,7 @@ function rateItem(button, rating) {
 
 document.querySelectorAll('.add-to-cart-button').forEach(button => {
     button.addEventListener('click', function() {
+        const image = this.parentElement.querySelector("img").getAttribute("src");
         const productId = this.getAttribute('data-product-id');
         const productName = this.getAttribute('data-product-name');
         const productPrice = parseFloat(this.getAttribute('data-product-price'));
@@ -24,13 +25,16 @@ document.querySelectorAll('.add-to-cart-button').forEach(button => {
         if (existingItemIndex !== -1) {
             // If it exists, increment the quantity
             cartItems[existingItemIndex].quantity += 1;
+            cartItems[existingItemIndex].price = parseFloat(cartItems[existingItemIndex].price) + parseFloat(cartItems[existingItemIndex].unitPrice);
         } else {
             // If it does not exist, add new item
             cartItems.push({
                 id: productId,
                 name: productName,
+                unitPrice: productPrice,
                 price: productPrice,
-                quantity: 1
+                quantity: 1,
+                image: image
             });
         }
 
