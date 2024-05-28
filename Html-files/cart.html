@@ -10,22 +10,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        <link rel="shortcut icon" type="image/x-icon" href="./Favicon image/favicon.ico">
     <link rel="stylesheet" href="../Css-files/content.css">
+
+
 
 </head>
 
 <body>
     <div class="head_container">
         <header>
-            <nav class="navbar">
-                <ul id="header-items">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                </ul>
+            
+            <nav>
+                <div class="navigbar">
+                    <div class="logo">Foodie</div>
+                    <ul class="ul1">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <div>
+                        <ul class="ul2">
+                            <li><a href="login.html">Log In</a></li>
+                            <li><a href="signup.html">Sign Up</a></li>
+                            <li>
+                                <a class="" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </header>
 
@@ -33,18 +47,16 @@
             <h1>C A R T</h1>
         </div>
     </div>
-
-    <section class="cart-section">
-        <div id="couponCode"><p>Use coupon code <b>qN6FVAn4</b> for 30% off!</p></div>
-
-            <div class="cart">
-             <table id="cart-table">
+    <div id="couponCode"><p class="text-light bg-secondary p-5">Use coupon code <b>qN6FVAn4</b> for 30% off!</p></div>
+    <section class="cart-section ">
+            <div class="cart col-md-8">
+                <table id="cart-table">
                 <thead>
                     <tr>
                         <th>Item Name</th>
                         <th>Price</th>
                         <th>Quantity</th>
-                        <th>Actions</th>
+                        <th >Actions</th>
                     </tr>
                 </thead>
                 <tbody id="cart-items">
@@ -59,13 +71,13 @@
                     </tr>
                 </tfoot>
 
-            </table>
+               </table>
 
-        </div>
+            </div>
 
         <!-- Input Section For Coupon Code -->
         
-        <div class="inputForCoupon">
+        <div class="inputForCoupon col-md-4">
         
             <label for="couponCodes" id="haveCoupon">Have a Coupon?</label>
             <div class="enterCouponCode">
@@ -73,7 +85,7 @@
                 <button id="applyCouponButton">Apply</button>
             </div>
         
-            <button type="submit" onclick="applyFirstTimeDiscount()" class="butt">Order Now</button>
+            <button id="proceed-to-payment" href="Html-files\Payment.html" class="butt">Order Now</button>
         
         </div>
 
@@ -142,7 +154,8 @@
                         <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
                         <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
                         <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
-                        <a class="fa-brands fa-github" href="https://github.com" target="_blank"></a>
+                        <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
+                        <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
                 </div>
                 <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                 </p>
@@ -160,7 +173,7 @@
     </footer>
 
 
-    <!-- <script src="../cart.js"></script> -->
+    <!-- <script src="../cart.js"></script--> 
     <script src="cart.js">
       
     </script>
