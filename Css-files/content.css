@@ -181,6 +181,11 @@ body {
   margin-bottom: 20px;
 }
 
+.menu_items .items:hover {
+  cursor: pointer;
+  scale: 1.02;
+}
+
 .first_cont {
   display: flex;
   justify-content: center;
@@ -315,8 +320,21 @@ body {
     font-size: 0.85rem;
     margin-top: 10px;
     color: #dddddd;
+    text-decoration: none ;
 }
 
+.footer-colums a{
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: #dddddd;
+  text-decoration: none;
+}
+
+.foot-panel2 ul a:hover{
+  text-decoration: underline;
+  color: #dddddd;
+}
 /* .foot-pannel3{
     background-color:rgb(66, 16, 16);
     color: white;
@@ -507,3 +525,56 @@ textarea {
 #applyCouponButton:hover {
   background-color: #a52a2ad7;
 }
+
+
+/* updated nav bar */
+nav{
+  height: 3rem;
+  background: #0000007c;
+
+}
+.navigbar{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  width: 95%;
+  margin: 0 auto;
+  
+}
+.logo{
+  color: rgba(255, 183, 0, 0.705);
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+.ul1,.ul2{
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  align-items: center;
+  flex: 1; /* Distribute remaining space equally */
+  justify-content: center; /* Center items horizontally */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+.ul1 li a, .ul2 li a{
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+}
+.ul1 li a:hover{
+  color:#f13800e4;
+}
+.ul2 li a:hover{
+  color: rgba(255, 183, 0, 0.705) ;
+}
+.cart{
+  color: white;
+}
+
+
+
+ 
