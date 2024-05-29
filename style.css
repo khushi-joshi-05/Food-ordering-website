@@ -25,6 +25,9 @@ body {
   color: white;
   font-size: 1.3rem;
 }
+.transparent-image{
+ opacity: 0.8;
+}
 
 /* Navbar link hover effect */
 .navbar a:hover,
