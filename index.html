@@ -147,8 +147,7 @@
             <div class="box">
                 <h1>Restaurant Dining</h1><br>
 
-                <a href="#" class="btn" onclick="openBookingModal()">Book Table</a>
-                <!--                 <a href="#" class="btn">Book Table</a> -->
+                <a href="./Html-files/book-table.html" class="btn" >Book Table</a>
 
 
             </div>
@@ -265,47 +264,6 @@
         </ul>
 
     </section>
-
-    <!-- Booking Modal  -->
-    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="bookingModalLabel">Book a Table</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="bookingForm">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone</label>
-                            <input type="tel" class="form-control" id="phone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="date" class="form-label">Date</label>
-                            <input type="date" class="form-control" id="date" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="time" class="form-label">Time</label>
-                            <input type="time" class="form-control" id="time" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="guests" class="form-label">Number of Guests</label>
-                            <input type="number" class="form-control" id="guests" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="app_download">
         <h4>Free Delivery!</h4>
@@ -462,11 +420,6 @@
             }
         });
         main
-
-        function openBookingModal() {
-            var bookingModal = new bootstrap.Modal(document.getElementById('bookingModal'));
-            bookingModal.show();
-        }
     </script>
     main
 
