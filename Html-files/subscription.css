@@ -4,18 +4,22 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url(https://hips.hearstapps.com/hmg-prod/images/best-meal-delivery-services-territory-foods-1630350085.jpg?crop=0.999866844207723xw:1xh;center,top&resize=980:*);
+    background-image: url(https://bsmedia.business-standard.com/_media/bs/img/article/2023-09/14/full/1694673859-4182.jpeg?im=FeatureCrop);
     background-size: cover;
+
  }
  .services_page{
     color:crimson;
     position: relative;
-    left:10px;
-    font-size: 18px;
+    left:20px;
+    top:2px;
+    font-size: 40px;
     font-weight: bold;
-    background-color: rgb(247, 218, 181);
-    width:230px;
-    padding:4px;
+    background-color: rgb(244, 242, 240);
+    width:20px;
+    border-radius:40%;
+    display: inline-block;
+    padding: 8px 25px;
  }
 .services_page:hover{
     color:#fff;
