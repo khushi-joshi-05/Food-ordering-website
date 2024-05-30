@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 var itemName = item.querySelector('h3').textContent;
                 var itemPrice = item.querySelector('p').textContent;
                 alert("Item added to cart successfully");
-                
+
                 localStorage.setItem('itemName', itemName);
                 localStorage.setItem('itemPrice', itemPrice);
 

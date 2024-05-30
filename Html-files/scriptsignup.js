@@ -47,7 +47,7 @@ auth.languageCode = 'en';
 
 const provider = new GoogleAuthProvider();
 
-document.getElementById("google-login").addEventListener("click", function() {
+document.getElementById("google-login").addEventListener("click", function () {
   signInWithPopup(auth, provider)
     .then((result) => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
@@ -59,7 +59,7 @@ document.getElementById("google-login").addEventListener("click", function() {
     });
 });
 
-document.getElementById("signup-form").addEventListener("submit", function(event) {
+document.getElementById("signup-form").addEventListener("submit", function (event) {
   event.preventDefault();  // Prevent form from submitting the default way
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
