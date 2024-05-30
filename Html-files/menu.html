@@ -16,21 +16,40 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../Css-files/content.css">
+    <script src="../hamburger.js"></script>
+   
+
 </head>
 
 <body>
+    
+
+
     <div class="head_container">
-        <header>
-            <nav class="navbar">
-                <ul id="header-items">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                    <li><a href="cart.html">Cart</a></li>
+        <!-- <header> -->
+            <!-- updated nav bar -->
+    <nav>
+        <div class="navigbar">
+            <div class="logo">Foodie</div>
+
+            <ul class="ul1">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="menu.html" id="active-page">Menu</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="ContactUpdate.html">Contact Us</a></li>
+            </ul>
+            <div>
+                <ul class="ul2">
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li>
+                        <a class="" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
                 </ul>
-            </nav>
-        </header>
+            </div>
+        </div>
+    </nav>
+        <!-- </header> -->
 
         <div class="mainhead">
             <h1>M E N U</h1>
@@ -53,7 +72,7 @@
                     <p>$10.20</p>
                     <!-- <button class="but">Add to Cart</button> -->
                     <button class="butt add-to-cart-button" data-product-id="1.01" data-product-name="Indian Thali"
-                        data-product-price="10.20">Order Now</button>
+                        data-product-price="10.20">Add to Cart</button>
 
                 <div class="star-rating">
                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
@@ -70,7 +89,7 @@
                 <p>$10.20</p>
                 <!-- <button class="but">Add to Cart</button> -->
                 <button class="butt add-to-cart-button" data-product-id="1.02" data-product-name="Dessert"
-                    data-product-price="10.20">Order Now</button>
+                    data-product-price="10.20">Add to Cart</button>
                 <div class="star-rating">
                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -87,7 +106,7 @@
                 <p>$10.20</p>
                 <!-- <button class="but">Add to Cart</button> -->
                 <button class="butt add-to-cart-button" data-product-id="1.03" data-product-name="Snacks"
-                    data-product-price="10.20">Order Now</button>
+                    data-product-price="10.20">Add to Cart</button>
                 <div class="star-rating">
                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -102,7 +121,7 @@
                 <p>$10.20</p>
                 <!-- <button class="but">Add to Cart</button> -->
                 <button class="butt add-to-cart-button" data-product-id="1.04" data-product-name="Juices"
-                    data-product-price="10.20">Order Now</button>
+                    data-product-price="10.20">Add to Cart</button>
                 <div class="star-rating">
                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -121,7 +140,7 @@
                 <p>$10.20</p>
                 <!-- <button class="but">Add to Cart</button> -->
                 <button class="butt add-to-cart-button" data-product-id="1.05" data-product-name="Indian Thali"
-                    data-product-price="10.20">Order Now</button>
+                    data-product-price="10.20">Add to Cart</button>
                 <div class="star-rating">
                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -137,7 +156,7 @@
                 <p>$10.20</p>
                 <!-- <button class="but">Add to Cart</button> -->
                 <button class="butt add-to-cart-button" data-product-id="1.06" data-product-name="Dessert"
-                    data-product-price="10.20">Order Now</button>
+                    data-product-price="10.20">Add to Cart</button>
                 <div class="star-rating">
                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -153,7 +172,7 @@
                 <p>$10.20</p>
                 <!-- <button class="but">Add to Cart</button> -->
                 <button class="butt add-to-cart-button" data-product-id="1.07" data-product-name="Snacks"
-                    data-product-price="10.20">Order Now</button>
+                    data-product-price="10.20">Add to Cart</button>
                 <div class="star-rating">
                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -168,7 +187,7 @@
                 <p>$10.20</p>
                 <!-- <button class="but">Add to Cart</button> -->
                 <button class="butt add-to-cart-button" data-product-id="1.08" data-product-name="Juices"
-                    data-product-price="10.20">Order Now</button>
+                    data-product-price="10.20">Add to Cart</button>
                 <div class="star-rating">
                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -191,7 +210,7 @@
                 <p>$5.10</p>
                 <!-- <button class="but">Add to Cart</button> -->
                 <button class="butt add-to-cart-button" data-product-id="2.01" data-product-name="Indian Thali"
-                    data-product-price="5.10">Order Now</button>
+                    data-product-price="5.10">Add to Cart</button>
                 <div class="star-rating">
                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -207,7 +226,7 @@
                 <p>$5.10</p>
                 <!-- <button class="but">Add to Cart</button> -->
                 <button class="butt add-to-cart-button" data-product-id="2.02" data-product-name="Dessert"
-                    data-product-price="5.10">Order Now</button>
+                    data-product-price="5.10">Add to Cart</button>
                 <div class="star-rating">
                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -223,7 +242,7 @@
                 <p>$5.10</p>
                 <!-- <button class="but">Add to Cart</button> -->
                 <button class="butt add-to-cart-button" data-product-id="Snacks" data-product-name="Snacks"
-                    data-product-price="5.10">Order Now</button>
+                    data-product-price="5.10">Add to Cart</button>
                 <div class="star-rating">
                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -238,7 +257,7 @@
                 <p>$5.10</p>
                 <!-- <button class="but">Add to Cart</button> -->
                 <button class="butt add-to-cart-button" data-product-id="2.04" data-product-name="Juices"
-                    data-product-price="5.10">Order Now</button>
+                    data-product-price="5.10">Add to Cart</button>
                 <div class="star-rating">
                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -259,7 +278,7 @@
                 <p>$15.80</p>
                 <!-- <button class="but">Add to Cart</button> -->
                 <button class="butt add-to-cart-button" data-product-id="3.01" data-product-name="Indian Thali"
-                    data-product-price="15.80">Order Now</button>
+                    data-product-price="15.80">Add to Cart</button>
                 <div class="star-rating">
                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -275,7 +294,7 @@
                 <p>$15.80</p>
                 <!-- <button class="but">Add to Cart</button> -->
                 <button class="butt add-to-cart-button" data-product-id="3.02" data-product-name="Dessert"
-                    data-product-price="15.80">Order Now</button>
+                    data-product-price="15.80">Add to Cart</button>
                 <div class="star-rating">
                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -291,7 +310,7 @@
                 <p>$15.80</p>
                 <!-- <button class="but">Add to Cart</button> -->
                 <button class="butt add-to-cart-button" data-product-id="3.03" data-product-name="Snacks"
-                    data-product-price="15.80">Order Now</button>
+                    data-product-price="15.80">Add to Cart</button>
                 <div class="star-rating">
                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -306,7 +325,7 @@
                 <p>$15.80</p>
                 <!-- <button class="but">Add to Cart</button> -->
                 <button class="butt add-to-cart-button" data-product-id="3.04" data-product-name="Juices"
-                    data-product-price="15.80">Order Now</button>
+                    data-product-price="15.80">Add to Cart</button>
                 <div class="star-rating">
                     <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                     <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -319,16 +338,14 @@
 
     <!-- footer -->
     <footer>
-
-
         <div class="foot-panel2">
             <ul class="footer-colums">
                 <p>Our Pages</p>
-                <a href="../index.html" style="text-decoration: none;">Home</a>
-                <a href="#" style="text-decoration: none;">Menu</a>
-                <a href="services.html" style="text-decoration: none;">Services</a>
-                <a href="contact.html" style="text-decoration: none;">Contact</a>
-                <a href="cart.html" style="text-decoration: none;">Cart</a>
+                <a href="../index.html">Home</a>
+                <a href="#">Menu</a>
+                <a href="services.html">Services</a>
+                <a href="ContactUpdate.html">Contact</a>
+                <a href="cart.html">Cart</a>
             </ul>
 
             <ul class="footer-colums">
@@ -378,7 +395,8 @@
                         <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
                         <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
                         <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
-                        <a class="fa-brands fa-github" href="https://github.com" target="_blank"></a>
+                        <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
+                        <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
                 </div>
                 <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                 </p>
@@ -395,7 +413,14 @@
         </div>
     </footer>
 
-    <script src="menu.js"></script>
+    <script src="menu.js">
+         function redirectLogin() {
+            window.location.href = "login.html";
+        }
+        function redirectSignup() {
+            window.location.href = "signup.html";
+        }
+    </script>
 </body>
 
 </html>

@@ -18,6 +18,11 @@ body {
   
 }
 
+#active-page{
+  color: #dc3545;
+  border-bottom: 2px solid #dc3545;
+}
+
 .head_container_service{
   height:500px;
 }
@@ -181,6 +186,11 @@ body {
   margin-bottom: 20px;
 }
 
+.menu_items .items:hover {
+  cursor: pointer;
+  scale: 1.02;
+}
+
 .first_cont {
   display: flex;
   justify-content: center;
@@ -254,6 +264,55 @@ body {
   font-size: 2rem;
 }
 
+
+/* Book Table */
+.book-table-container {
+  padding: 50px;
+  background-color: rgb(224, 224, 252);
+}
+
+.book-table-container .image-holder {
+  display: table-cell;
+  width: auto;
+  background: url(https://cdn12.picryl.com/photo/2016/12/31/dining-table-table-cutlery-tableware-7ce371-1024.jpg);
+  background-size: cover;
+}
+
+.book-table-container .form-container {
+  display: table;
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+.book-table-container form {
+  display: table-cell;
+  width: 400px;
+  background-color: #ffffff;
+  padding: 40px 60px;
+  color: #505e6c;
+}
+
+.book-table-container form h2 {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.book-table-container form .form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #dfe7f1;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  color: inherit;
+  text-indent: 0px;
+  height: 40px;
+  max-width: max-content;
+}
+
 /* testimonal */
 .testimonalsection{
   padding-top: 400px;
@@ -315,8 +374,21 @@ body {
     font-size: 0.85rem;
     margin-top: 10px;
     color: #dddddd;
+    text-decoration: none ;
 }
 
+.footer-colums a{
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: #dddddd;
+  text-decoration: none;
+}
+
+.foot-panel2 ul a:hover{
+  text-decoration: underline;
+  color: #dddddd;
+}
 /* .foot-pannel3{
     background-color:rgb(66, 16, 16);
     color: white;
@@ -430,6 +502,7 @@ textarea {
   text-align: center;
   border: 2px solid black;
   width: 75%;
+    color: black;
 }
 
 #bill{
@@ -459,4 +532,104 @@ textarea {
 }
 
 
+/* Cart -> Input Section for Coupon Code  */
 
+#haveCoupon {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+
+.inputForCoupon {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.enterCouponCode {
+  display: flex;
+  gap: 1rem;
+}
+
+#inputCode {
+  padding: 18px;
+  margin-right: 10px;
+  width: 250px;
+  border-radius: 0.3rem;
+  background-color: white;
+  font-size: medium;
+  border: 2px solid black;
+}
+
+#inputCode:hover {
+  border: 2px solid #A52A2A;
+}
+
+#applyCouponButton {
+  width: 5rem;
+  border-radius: 0.3rem;
+  padding: 10px 20px;
+  background-color: #A52A2A;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+#applyCouponButton:hover {
+  background-color: #a52a2ad7;
+}
+
+
+/* updated nav bar */
+nav{
+  height: 3rem;
+  background: #0000007c;
+
+}
+.navigbar{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  width: 95%;
+  margin: 0 auto;
+  
+}
+.logo{
+  color: rgba(255, 183, 0, 0.705);
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+.ul1,.ul2{
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+  align-items: center;
+  flex: 1; /* Distribute remaining space equally */
+  justify-content: center; /* Center items horizontally */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+.ul1 li a, .ul2 li a{
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+}
+.ul1 li a:hover{
+  color:#f13800e4;
+}
+.ul2 li a:hover{
+  color: rgba(255, 183, 0, 0.705) ;
+}
+.cart{
+  color: white;
+}
+
+
+
+ 

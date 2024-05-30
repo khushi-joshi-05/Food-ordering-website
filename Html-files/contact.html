@@ -24,15 +24,26 @@
     style="background-image: url('contact_page_background_image.png'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
 
     <header>
-        <nav class="navbarbg">
-            <ul id="header-items">
+    <nav>
+        <div class="navigbar">
+            <div class="logo">Foodie</div>
+            <ul class="ul1">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
-        </nav>
+            <div>
+                <ul class="ul2">
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li>
+                        <a class="" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     </header>
 
@@ -70,21 +81,66 @@
                                 </div>
                             </div>
 
-                            <div class="social-media">
-                                <p>Connect with us :</p>
-                                <div class="social-icons">
-                                    <a href="#">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
+                <div class="row ">
+                    <div class="col-lg-7 mx-auto">
+                        <div class="card mt-2 mx-auto mb-5 p-4 bg-light">
+                            <div class="card-body bg-light">
+                                <div class="container">
+                                    <form action="/submit" method="POST" id="contact-form" role="form">
+                                        <div class="controls">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="form_name">Firstname *</label>
+                                                        <input id="form_name" type="text" name="name"
+                                                            class="form-control"
+                                                            placeholder="Please enter your firstname *"
+                                                            required="required" data-error="Firstname is required.">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="form_lastname">Lastname *</label>
+                                                        <input id="form_lastname" type="text" name="surname"
+                                                            class="form-control"
+                                                            placeholder="Please enter your lastname *"
+                                                            required="required" data-error="Lastname is required.">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="form_email">Email *</label>
+                                                        <input id="form_email" type="email" name="email"
+                                                            class="form-control" placeholder="Please enter your email *"
+                                                            required="required" data-error="Valid email is required.">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="form_message">Message *</label>
+                                                        <textarea id="form_message" name="message" class="form-control"
+                                                            placeholder="Write your message here." rows="4"
+                                                            required="required"
+                                                            data-error="Please, leave us a message."></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10 mt-3">
+                                                            <input type="submit"
+                                                            class="btn btn-outline-dark btn-send pt-1 btn-block"
+                                                            value="Send Message">
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -184,10 +240,12 @@
                 <h4>Follow Us</h4>
 
                 <div class="social-icons">
-                    <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
-                    <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                    <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
-                    <a class="fa-brands fa-github" href="https://github.com" target="_blank"></a>
+
+                        <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                        <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                        <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
+                        <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
+                        <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
                 </div>
                 <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                 </p>

@@ -57,6 +57,11 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+#active-page{
+  color: #dc3545;
+  border-bottom: 2px solid #dc3545;
+}
+
 @media (max-width: 992px) {
   .navbar-nav {
     text-align: center;
@@ -208,7 +213,9 @@ body {
   /* justify-items: center; */
   opacity: 0.4;
   z-index: -1;
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .service {
@@ -290,7 +297,13 @@ body {
 
 .menu_items {
   display: flex;
-  overflow: overlay;
+  overflow-x: auto;
+  padding-top: 10px;
+}
+
+.menu_items::-webkit-scrollbar {
+  display: none;
+
 }
 
 .menu_items .items {
@@ -303,19 +316,21 @@ body {
   border-radius: 10px;
   text-align: center;
   font-family: "Bree Serif", serif;
-  transition: 0.3s all ease-in;
+  transition: 0.2s all ease-in;
 }
 
 .menu_items .items:hover {
   box-shadow: #212123 1px 1px 8px;
   cursor: pointer;
   scale: 1.02;
+  background-color: #ca8787;
 }
 
 .menu_items .items img {
   justify-content: center;
-  height: 270px;
+  height: 250px;
   width: 250px;
+  border-radius: 15px; 
 }
 
 .menu_items .items h3 {
@@ -390,6 +405,10 @@ body {
 
 .app_download p {
   font-size: 1.3rem;
+}
+
+.app_download img:hover{
+  transform: scale(1.1);
 }
 
 .btn a {
@@ -508,6 +527,11 @@ ul a {
   text-decoration: none;
 }
 
+.foot-panel2 ul a:hover{
+  text-decoration: underline;
+  color: #dddddd;
+}
+
 /* .foot-pannel3{
     background-color:rgb(66, 16, 16);
     color: white;
@@ -600,10 +624,38 @@ textarea {
   color: white;
 }
 
+.fa-discord:hover {
+  background-color: #353535;
+  color: white;
+}
+
 #author {
   padding: 3px;
   border-radius: 3px;
   color: #dddddd;
+}
+
+ul{
+  padding-left: 0px;
+}
+
+#email,#message{
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(210, 167, 167, 0.5);
+  color:white;
+}
+
+#email::placeholder{
+  color: white;
+}
+
+#message::placeholder{
+  color: white;
+}
+
+#butt{
+  border: none;
 }
 
 @media screen and (max-width: 500px) {
@@ -953,3 +1005,144 @@ padding-left:2px;
 }
 
 
+.about_us .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about_us .box {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.items:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+ nav{
+  height: 3rem;
+}
+.navigbar{
+  display: flex;
+  justify-content: space-between;
+  background: #0000007c;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  align-items: center;
+}
+.logo{
+  color: rgba(255, 183, 0, 0.705);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.ul1,.ul2{
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+.ul1 li a, .ul2 li a{
+  font-size: 1rem;
+}
+.ul1 li a:hover{
+  color:#f13800e4;
+}
+.ul2 li a:hover{
+  color: rgba(255, 183, 0, 0.705) ;
+}
+.cart{
+  color: white;
+} 
+
+
+/* Hamburger menu styles */
+.navbar-toggler {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Transition for menu icon animation */
+.navbar-toggler.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggler.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Hide hamburger menu by default */
+.hamburger-menu {
+  display: none;
+}
+
+/* Show hamburger menu when toggled */
+/* .navbar-toggler.active + .hamburger-menu {
+  display: block;
+} */
+.navbar-toggler.active + .hamburger-menu {
+  display: block;
+  position: absolute;
+  top: 3rem; /* Adjust based on your navbar height */
+  right: 0;
+  background-color: #000; /* Adjust background color */
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Style hamburger menu items */
+.hamburger-menu li {
+  /* margin-bottom: 5px; */
+  list-style-type: none;
+}
+
+.hamburger-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Additional styling for active state of hamburger menu */
+.navbar-toggler.active {
+  background-color: #ccc; /* Change background color when active */
+}
+/* Media query for smaller screens */
+@media screen and (min-width: 768px) {
+  .hamburger-menu {
+      display: none; /* Hide hamburger menu on larger screens */
+  }
+  #menu-toggle{
+    display: none;
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  .ul1,.ul2{
+    display: none;
+  }
+  #menu-toggle{
+    position: absolute;
+    right: 0;
+  }
+  .navigbar{
+    height: 3rem;
+  }
+  
+}
