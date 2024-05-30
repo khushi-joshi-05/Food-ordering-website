@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Cart</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -12,6 +14,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../Css-files/content.css">
+    <link rel="stylesheet" href="../Css-files/cart.css">
 
 </head>
 
@@ -55,52 +58,39 @@
     </div>
 
     <section class="cart-section">
-        <div id="couponCode"><p>Use coupon code <b>qN6FVAn4</b> for 30% off!</p></div>
-
-            <div class="cart">
-             <table id="cart-table">
-                <thead>
-                    <tr>
-                        <th>Item Name</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="cart-items">
-                    <!-- Cart items will be inserted here -->
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td>Bill amount</td>
-                        <td>
-                            <div id="cart-total">$0.00</div>
-                        </td>
-                    </tr>
-                </tfoot>
-
-            </table>
-
+        <div id="couponCode">
+            <p>Use coupon code <b>qN6FVAn4</b> for 30% off!</p>
         </div>
 
+        <div class="cart">
+            <div class="empty-cart">
+            </div>
+            <div class="cart-details">
+                <div id="cart-items">
+                </div>
+                <div id="cart-total"></div>
+            </div>
+        </div>
+
+
         <!-- Input Section For Coupon Code -->
-        
+
         <div class="inputForCoupon">
-        
+
             <label for="couponCodes" id="haveCoupon">Have a Coupon?</label>
             <div class="enterCouponCode">
                 <input type="text" name="inputCode" id="inputCode" placeholder="Enter Coupon Code">
                 <button id="applyCouponButton">Apply</button>
             </div>
-        
+
             <button type="submit" onclick="applyFirstTimeDiscount()" class="butt">Order Now</button>
-        
+
         </div>
 
     </section>
 
     <footer>
-    <div class="foot-panel2">
+        <div class="foot-panel2">
             <ul class="footer-colums">
                 <p>Our Pages</p>
                 <a href="../index.html">Home</a>
@@ -159,11 +149,12 @@
                 <h4>Follow Us</h4>
 
                 <div class="social-icons">
-                        <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
-                        <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                        <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
-                        <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
-                        <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
+                    <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                    <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                    <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
+                        target="_blank"></a>
+                    <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
                 </div>
                 <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                 </p>
@@ -171,10 +162,6 @@
                     &copy; 2024 Foodies - All Rights Reserved | <span id="author">
                         <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
                     </span></p>
-
-
-
-
                 </div>
             </div>
         </div>
@@ -183,7 +170,7 @@
 
     <!-- <script src="../cart.js"></script> -->
     <script src="cart.js">
-      
+
     </script>
 </body>
 
