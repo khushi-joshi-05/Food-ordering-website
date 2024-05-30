@@ -15,7 +15,9 @@
 #cart-items {
     width: 100%;
 }
+
 .cart-item {
+    color: black;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -87,10 +89,14 @@
 }
 .empty-cart * {
     text-align: center;
+    color: black;
 }
 .empty-cart p {
     max-width: 500px;
     width: 100%;
+}
+.butt{
+    color: white;
 }
 .empty-cart h4, .empty-cart button {
     margin: 20px;
