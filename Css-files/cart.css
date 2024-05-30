@@ -20,6 +20,7 @@
 }
 
 .cart-item {
+    color: black;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -104,6 +105,7 @@
 
 .empty-cart * {
     text-align: center;
+    color: black;
 }
 
 .empty-cart p {
@@ -111,25 +113,31 @@
     width: 100%;
 }
 
-.empty-cart h4,
+<<<<<<< HEAD .empty-cart h4,
 .empty-cart button {
-    margin: 20px;
-}
+    =======.butt {
+        color: white;
+    }
 
-input,
-textarea {
-    width: 100%;
-}
+    .empty-cart h4,
+    .empty-cart button {
+        >>>>>>>59a67a53a38fb9bc9e0501c4444bec55e9a10769 margin: 20px;
+    }
 
-@media all and (max-width: 768px) {
-    .cart {
+    input,
+    textarea {
         width: 100%;
     }
 
-    .detail {
-        flex-direction: column;
-        justify-content: left;
-        align-items: flex-start;
-        gap: 5px;
+    @media all and (max-width: 768px) {
+        .cart {
+            width: 100%;
+        }
+
+        .detail {
+            flex-direction: column;
+            justify-content: left;
+            align-items: flex-start;
+            gap: 5px;
+        }
     }
-}
