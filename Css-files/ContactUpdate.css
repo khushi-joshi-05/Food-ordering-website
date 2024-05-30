@@ -51,6 +51,7 @@ body {
   font-family: var(--primary-font);
   font-size: 100%;
   font-weight: 400;
+  background-color: brown;
 }
 
 #active-page{
@@ -101,6 +102,8 @@ h2 {
   font-family: var(--secondry-font);
   color: var(--secondry-color);
   line-height: 3rem;
+  color: whitesmoke;
+  padding-bottom: 2rem;
 }
 
 h4 {
@@ -236,7 +239,7 @@ nav{
 .navigbar{
   display: flex;
   justify-content: space-between;
-  background: #0000007c;
+  background: black;
   padding-left: 2rem;
   padding-right: 2rem;
   align-items: center;
@@ -361,13 +364,12 @@ nav{
 ==========================================
 */
 .explore-food .card{
-  border:none;
   background-color:transparent;
   border-radius: 0.9375rem;
 }
 
 .explore-food .card :hover {
-  transform: scale(0.9);
+  transform: scale(0.99);
 }
 
 .explore-food .card img{
@@ -380,12 +382,14 @@ nav{
   display:block;
   font-size: 1.5rem;
   font-weight: 700;
-  color:var(--primary-color);
+  /* color:var(--primary-color); */
+  color: white;
   padding-bottom: 1rem;
   border-bottom:0.0625rem solid #eee;
 }
 .explore-food p{
-  color:var(--text-color);
+  /* color:var(--text-color); */
+  color: white;
   font-size: 14px;
   line-height: 22px;
 }
@@ -428,7 +432,7 @@ nav{
 .testimonial-section .carousel-indicators button{
   width:15px;
   height:15px;
-  outline:none;
+  outline:auto;
   border-radius: 50%;
   border: none;
   margin-right:1rem;
@@ -491,6 +495,7 @@ ul a{
 
 .copyright{
  padding-top: 10px;
+ padding-bottom: 10px;
 }
 
 form {
@@ -576,7 +581,7 @@ textarea {
   background:transparent;
   border:0.1875rem solid var(--white-color);
   color:var(--black-color);
-  font-weight: 700;
+  font-weight: 500;
 }
 .newsletter .main-btn{
   height:2.25rem;
@@ -586,7 +591,7 @@ textarea {
   background-color: var(--white-color);
   border:0.1875rem solid var(--white-color);
   color:var(--black-color);
-  font-weight: 700;
+  font-weight: 500;
 }
 .newsletter:hover .form-control{
   border:0.1875rem solid var(--primary-color);
@@ -600,7 +605,7 @@ textarea {
 .newsletter .form-control:focus{
   outline:none;
   box-shadow: none;
-  border-color:var(--primary-color);
+  /* border-color:var(--primary-color);  */
 }
 
 /* <!--Responsive Design--> */
