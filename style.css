@@ -311,19 +311,21 @@ body {
   border-radius: 10px;
   text-align: center;
   font-family: "Bree Serif", serif;
-  transition: 0.3s all ease-in;
+  transition: 0.2s all ease-in;
 }
 
 .menu_items .items:hover {
   box-shadow: #212123 1px 1px 8px;
   cursor: pointer;
   scale: 1.02;
+  background-color: #ca8787;
 }
 
 .menu_items .items img {
   justify-content: center;
-  height: 270px;
+  height: 250px;
   width: 250px;
+  border-radius: 15px; 
 }
 
 .menu_items .items h3 {
