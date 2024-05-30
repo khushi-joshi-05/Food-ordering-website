@@ -516,20 +516,21 @@ body {
 }
 
 ul p {
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 500;
 }
 
 ul a {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   margin-top: 10px;
   color: #dddddd;
   text-decoration: none;
 }
 
-.foot-panel2 ul a:hover{
-  text-decoration: underline;
-  color: #dddddd;
+.foot-panel2 ul a:hover {
+  color: #ffffff; /* Change to a more visible color */
+  text-decoration: none; /* Add underline for clear hover effect */
 }
 
 /* .foot-pannel3{
