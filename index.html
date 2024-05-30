@@ -78,13 +78,78 @@
     </nav>
     
 
-    <section class="intro_container">
-        <h1>Welcome to foodie!</h1>
-        <p>A place with plethora of flavours from different regions be it our country or abroad can be enjoyed, where we
-            try to make your dining experience memorable with tech facilities and customisation and leave an expression
-            which will bring you back to us.</p>
-        <button class="btn">Order Now</button>
+    <section class="hero text-center" aria-label="home" id="home">
+        <ul class="hero-slider" data-hero-slider>
+            <li class="slider-item active" data-hero-slider-item>
+                <div class="slider-bg">
+                    <img src="hero-slider-1.jpg" width="1880" height="950" class="img-cover">
+                </div>
+                <p class="label-2 section-subtitle slider-reveal">Tradational & Hygine</p>
+                <h1 class="display-1 hero-title slider-reveal">
+                    For the love of <br>
+                    delicious food
+                </h1>
+                <p class="body-2 hero-text slider-reveal">
+                    come with family & feel the joy of mouthwatering food
+                </p>
 
+                <a href="#" class="btn btn-primary slider-reveal">
+                    <span class="text text-1">View Our Menu</span>
+                    <span class="text text-2" aria-hidden="true">View Our Menu</span>
+                </a>
+            </li>
+
+            <li class="slider-item active" data-hero-slider-item>
+                <div class="slider-bg">
+                    <img src="hero-slider-2.jpg" width="1880" height="950" class="img-cover">
+                </div>
+                <p class="label-2 section-subtitle slider-reveal">delightful experience</p>
+                <h1 class="display-1 hero-title slider-reveal">
+                    Flavors Inspired by <br>
+                    the Seasons
+                </h1>
+
+                <p class="body-2 hero-text slider-reveal">
+                    come with family & feel the joy of mouthwatering food
+                </p>
+
+                <a href="#" class="btn btn-primary slider-reveal">
+                    <span class="text text-1">View Our Menu</span>
+                    <span class="text text-2" aria-hidden="true">View Our Menu</span>
+                </a>
+            </li>
+
+            <li class="slider-item active" data-hero-slider-item>
+                <div class="slider-bg">
+                    <img src="hero-slider-3.jpg" width="1880" height="950" class="img-cover">
+                </div>
+                <p class="label-2 section-subtitle slider-reveal">amazing & delicious</p>
+                <h1 class="display-1 hero-title slider-reveal">
+                    Where every flavour <br>
+                    tells a story
+                </h1>
+ 
+                <p class="body-2 hero-text slider-reveal">
+                    come with family & feel the joy of mouthwatering food
+                </p>
+
+                <a href="#" class="btn btn-primary slider-reveal">
+                    <span class="text text-1">View Our Menu</span>
+                    <span class="text text-2" aria-hidden="true">View Our Menu</span>
+                </a>
+            </li>
+        </ul>
+
+        <button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>
+            <ion-icon name="chevron-back"></ion-icon>
+        </button>
+
+
+        <button class="slider-btn next" aria-label="slide to next" data-next-btn>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </button>
+
+        
     </section>
 
     <section class="about_us">
@@ -383,6 +448,62 @@
         </button>
         <!--Scroll top button finish-->
     </div>
+    <script>
+        const heroSlider = document.querySelector("[data-hero-slider]"); 
+const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
+const heroSliderPrevBtn = document.querySelector("[data-prev-btn]");
+const heroSliderNextBtn = document.querySelector("[data-next-btn]");
+
+let currentSlidePos = 0;
+let lastActiveSliderItem = heroSliderItems[0];
+
+const updateSliderPos = function () {
+    lastActiveSliderItem.classList.remove("active");
+    heroSliderItems[currentSlidePos].classList.add("active");
+    lastActiveSliderItem = heroSliderItems[currentSlidePos];
+}
+
+const slideNext = function () {
+    if (currentSlidePos >= heroSliderItems.length - 1) {
+      currentSlidePos = 0;  
+    }   else { 
+        currentSlidePos++;
+    }
+
+    updateSliderPos();
+    }
+heroSliderNextBtn.addEventListener("click", slideNext);
+
+const slidePrev = function () {
+    if (currentSlidePos <= 0) {
+        currentSlidePos = heroSliderItems.length - 1;
+    } else {
+        currentSlidePos--;
+    }
+
+    updateSliderPos();
+}
+
+heroSliderPrevBtn.addEventListener("click", slidePrev);
+
+// auto slide 
+
+let autoSlideInterval;
+
+const autoSlide = function () {
+    autoSlideInterval = setInterval(function (){
+        slideNext();
+    }, 7000);
+};
+
+addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", function (){
+    clearInterval(autoSlideInterval);
+});
+
+addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", autoSlide);
+
+window.addEventListener("load", autoSlide);
+    </script>
 
     <script src="Html-files/top.js"></script>
     <script>
