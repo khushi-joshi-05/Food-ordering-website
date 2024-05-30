@@ -89,6 +89,7 @@
 }
 .empty-cart * {
     text-align: center;
+    color: black;
 }
 .empty-cart p {
     max-width: 500px;
