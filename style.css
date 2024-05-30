@@ -311,19 +311,21 @@ body {
   border-radius: 10px;
   text-align: center;
   font-family: "Bree Serif", serif;
-  transition: 0.3s all ease-in;
+  transition: 0.2s all ease-in;
 }
 
 .menu_items .items:hover {
   box-shadow: #212123 1px 1px 8px;
   cursor: pointer;
   scale: 1.02;
+  background-color: #ca8787;
 }
 
 .menu_items .items img {
   justify-content: center;
-  height: 270px;
+  height: 250px;
   width: 250px;
+  border-radius: 15px; 
 }
 
 .menu_items .items h3 {
@@ -398,6 +400,10 @@ body {
 
 .app_download p {
   font-size: 1.3rem;
+}
+
+.app_download img:hover{
+  transform: scale(1.1);
 }
 
 .btn a {
@@ -610,6 +616,11 @@ textarea {
 
 .fa-github:hover {
   background-color: #040204;
+  color: white;
+}
+
+.fa-discord:hover {
+  background-color: #353535;
   color: white;
 }
 

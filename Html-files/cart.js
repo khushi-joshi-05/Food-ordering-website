@@ -19,6 +19,7 @@ function loadCartFromLocalStorage() {
   const cartItemsContainer = document.getElementById("cart-items");
   cartItemsContainer.innerHTML = ""; // Clear existing items
 
+
   cartItems.forEach((item) => {
     const cartItemRow = document.createElement("tr");
     cartItemRow.className = "cart-item";
@@ -75,6 +76,71 @@ function saveCartToLocalStorage() {
     });
   });
   localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+    cartItems.forEach(item => {
+        cartItemsContainer.appendChild(createCartItemElement(item));
+    });
+
+    console.log(cartItems);
+    updateTotal();
+}
+
+function updateQuantity(button, change) {
+    const cartItemRow = button.parentElement.parentElement.parentElement;
+    const quantityElement = cartItemRow.querySelector('.quantity');
+    const priceElement = cartItemRow.querySelector(".price");
+    const newQuantity = parseInt(quantityElement.textContent) + change;
+    quantityElement.textContent = newQuantity;
+    priceElement.textContent = (cartItemRow.getAttribute('data-product-price') * newQuantity).toFixed(2);
+    const decreaseBtn = cartItemRow.querySelector(".decrease-quantity");
+    if (newQuantity == 1) {
+        decreaseBtn.classList.add("disable")
+    } else {
+        decreaseBtn.classList.remove("disable")
+    }
+    updateTotal();
+    saveCartToLocalStorage();
+}
+
+function updateTotal() {
+    const cartItems = document.querySelectorAll('.cart-item');
+    let total = 0.0;
+
+    cartItems.forEach(item => {
+        const price = parseFloat(item.getAttribute('data-product-price'));
+        const quantity = parseInt(item.querySelector('.quantity').textContent);
+        total += price * quantity;
+    });
+
+    document.getElementById('cart-total').innerHTML = (total!=0) ? `<span>Subtotal:</span> $${total.toFixed(2)}` : ``;
+    handleEmptyCart(total)
+}
+
+function saveCartToLocalStorage() {
+    const cartItems = [];
+
+    document.querySelectorAll('.cart-item').forEach(item => {
+        cartItems.push({
+            id: item.getAttribute('data-product-id'),
+            name: item.getAttribute('data-product-name'),
+            unitPrice: item.getAttribute('data-product-price'),
+            price: (parseFloat(item.getAttribute('data-product-price') * parseInt(item.querySelector('.quantity').textContent))).toFixed(2),
+            quantity: parseInt(item.querySelector('.quantity').textContent),
+            image: item.getAttribute('data-product-image')
+        });
+    });
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+}
+//CODE FOR COUPON RECEIVED ON CLICKING ORDER NOW
+// Function to generate a random coupon code
+const generateCouponCode = () => {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let couponCode = '';
+    for (let i = 0; i < 8; i++) {
+        couponCode += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return couponCode;
+
 }
 
 // Function to generate a random coupon code
@@ -116,6 +182,7 @@ function applyCoupon() {
     return;
   }
 
+
   if (couponCode === storedCouponCode) {
     let total = parseFloat(
       document.getElementById("cart-total").textContent.replace("Total: $", "")
@@ -136,3 +203,55 @@ document
   .addEventListener("click", function () {
     window.location.href = "Payment.html"; // Ensure this path is correct
   });
+
+document.getElementById('applyCouponButton').addEventListener('click', function () {
+    const couponCode = document.getElementById('inputCode').value;
+    if (!couponCode) {
+        alert('Please enter a Coupon Code.');
+        return;
+    }
+});
+
+function createCartItemElement(item) {
+    const cartItemRow = document.createElement('div');
+    cartItemRow.className = 'cart-item';
+    cartItemRow.setAttribute('data-product-id', item.id);
+    cartItemRow.setAttribute('data-product-price', item.unitPrice);
+    cartItemRow.setAttribute('data-product-name', item.name);
+    cartItemRow.setAttribute('data-product-image', item.image);
+    cartItemRow.innerHTML = `
+                    <img src='${item.image}'
+                        alt='${item.name}-image' height='100px' width='100px'>
+                    <div class='detail'>
+                        <div>${item.name}</div>
+                        <div class="quantity-wrapper">
+                            <span class="btn decrease-quantity `+ (item.quantity == 1 ? `disable` : ``) + `">-</span>
+                            <span class="quantity">${item.quantity}</span>
+                            <span class="btn increase-quantity">+</span>
+                        </div>
+                        <div class='price'>${parseFloat(item.price).toFixed(2)}</div>
+                    </div>`;
+    const removeBtn = document.createElement("div")
+    removeBtn.setAttribute("class", 'btn remove');
+    removeBtn.innerHTML = "x";
+    removeBtn.addEventListener('click', (e) => {
+        console.log(e.target.parentElement);
+        e.target.parentElement.remove();
+        updateTotal();
+        saveCartToLocalStorage();
+    })
+    cartItemRow.appendChild(removeBtn);
+    return cartItemRow;
+}
+
+function handleEmptyCart(total) {
+    const emptyCartContainer = document.querySelector('.empty-cart');
+    if (total != 0.0) {
+        emptyCartContainer.innerHTML = ``;
+    } else {
+        emptyCartContainer.innerHTML = `<h4>Empty Menu!</h4>
+        <p>Looks like you haven't made your choice yet... Check what we have got for you and get it swished.</p>
+        <a href="./menu.html"><button class="butt">Explore Menu</button></a>`;
+    }
+}
+
