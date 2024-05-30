@@ -15,7 +15,9 @@
 #cart-items {
     width: 100%;
 }
+
 .cart-item {
+    color: black;
     width: 100%;
     display: flex;
     justify-content: space-between;
