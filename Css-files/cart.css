@@ -95,6 +95,9 @@
     max-width: 500px;
     width: 100%;
 }
+.butt{
+    color: white;
+}
 .empty-cart h4, .empty-cart button {
     margin: 20px;
 }
