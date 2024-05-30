@@ -624,8 +624,8 @@ textarea {
   color: white;
 }
 
-.fa-twitter:hover {
-  background-color: #00B6F1;
+.fa-x-twitter:hover {
+  background-color: black;
   color: white;
 }
 
@@ -635,7 +635,7 @@ textarea {
 }
 
 .fa-discord:hover {
-  background-color: #353535;
+  background-color: #5865F2;
   color: white;
 }
 
