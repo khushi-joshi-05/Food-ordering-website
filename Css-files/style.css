@@ -264,7 +264,7 @@ body {
 .menu_items .items {
     background-color:#f2f2f2;
     border: 3px solid brown;
-    padding: 25px;
+    padding: 0;
     margin: 15px;
     height: 400px;
     width: 400px;
@@ -291,6 +291,8 @@ body {
     font-size: 1.4rem;
     margin-top: 10px;
 }
+
+
 
 .app_download {
     background-color: brown;
@@ -439,6 +441,10 @@ ul a{
     text-decoration: none;
 }
 
+.foot-panel2 ul a:hover{
+    text-decoration: underline;
+    color: #dddddd;
+}
 /* .foot-pannel3{
     background-color:rgb(66, 16, 16);
     color: white;
@@ -459,7 +465,9 @@ ul a{
 
 }
 
-
+.item{
+    padding-bottom: 0px;
+}
 
 .pages{
     padding-top: 25px;
@@ -554,7 +562,7 @@ textarea {
     /* margin-bottom: 20px; */
     /* float: left; */
     
-    
+
     .pages {
         height: fit-content;
         padding: 8px;

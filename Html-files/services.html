@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodOrderingWebsite</title>
+    <title>Services - Food Ordering Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,19 +14,41 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Css-files/content.css">
+    <link rel="stylesheet" href="../Css-files/services.css">
 </head>
+
 <body>
 
     <div class="head_container_service">
         <header>
-            <nav class="navbar">
+            <!-- <nav class="navbar">
                 <ul id="header-items">
-                    <li><a href="../index.html" target="_blank">Home</a></li>
-                    <li><a href="menu.html" target="_blank">Menu</a></li>
-                    <li><a href="services.html" target="_blank">Services</a></li>
-                    <li><a href="contact.html" target="_blank">Contact us</a></li>
-                    <li><a href="cart.html" target="_blank">Cart</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="cart.html">Cart</a></li>
                 </ul>
+            </nav> -->
+            <nav>
+                <div class="navigbar">
+                    <div class="logo">Foodie</div>
+                    <ul class="ul1">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="services.html" id="active-page">Services</a></li>
+                        <li><a href="ContactUpdate.html">Contact Us</a></li>
+                    </ul>
+                    <div>
+                        <ul class="ul2">
+                            <li><a href="login.html">Log In</a></li>
+                            <li><a href="signup.html">Sign Up</a></li>
+                            <li>
+                                <a class="" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </header>
 
@@ -55,7 +78,7 @@
                     src="https://hips.hearstapps.com/hmg-prod/images/best-meal-delivery-services-territory-foods-1630350085.jpg?crop=0.999866844207723xw:1xh;center,top&resize=980:*">
                 <h3>Meal Delivery Subscription</h3>
                 <!-- <p>$10.20</p> -->
-                <button class="but">Take Subscription</button>
+                <a href="subscription.html"><button class="but">Take Subscription</button></a>
                 <!-- <button class="butt">Order Now</button> -->
             </div>
 
@@ -63,24 +86,28 @@
     </div>
 
 
-    
+
     <section class="service_container">
 
         <section class="testimonalsection" id="testimonal">
+            
             <h2 class=section__title>
-                Customer Opinion
+                CUSTOMER  OPINION
             </h2>
-    
+            
             <div class="testimonal__container">
                 <div class="testimonal__swiper">
                     <div>
                         <article class="testimonal__card">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww" alt="" class="testimonal__image">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+                                alt="" class="testimonal__image" style=" border-radius: 50%; object-fit: cover;">
                             <h2 class="testimonal__title">Riya Jain</h2>
                             <p class="testimonal__description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus quidem nostrum neque molestiae fugiat id ex consequatur atque quia quisquam hic accusamus dolores sapiente, ipsum maxime, quo odit ut.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus quidem
+                                nostrum neque molestiae fugiat id ex consequatur atque quia quisquam hic accusamus
+                                dolores sapiente, ipsum maxime, quo odit ut.
                             </p>
-    
+
                             <div class="testimonal__stars">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -94,12 +121,15 @@
                 <div class="testimonal__swiper">
                     <div>
                         <article class="testimonal__card">
-                            <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="" class="testimonal__image">
+                            <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
+                                alt="" class="testimonal__image" style=" border-radius: 50%; object-fit: cover;">
                             <h2 class="testimonal__title">Sudhanshu Sharma</h2>
                             <p class="testimonal__description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus quidem nostrum neque molestiae fugiat id ex consequatur atque quia quisquam hic accusamus dolores sapiente, ipsum maxime, quo odit ut.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus quidem
+                                nostrum neque molestiae fugiat id ex consequatur atque quia quisquam hic accusamus
+                                dolores sapiente, ipsum maxime, quo odit ut.
                             </p>
-    
+
                             <div class="testimonal__stars">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -113,12 +143,15 @@
                 <div class="testimonal__swiper">
                     <div>
                         <article class="testimonal__card">
-                            <img src="https://blogs.kcl.ac.uk/editlab/files/2017/04/Elena-2-Cropped-200x2801.jpg" alt="" class="testimonal__image">
+                            <img src="https://blogs.kcl.ac.uk/editlab/files/2017/04/Elena-2-Cropped-200x2801.jpg" alt=""
+                                class="testimonal__image" style=" border-radius: 50%; object-fit: cover;">
                             <h2 class="testimonal__title">Angel Dravid</h2>
                             <p class="testimonal__description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus quidem nostrum neque molestiae fugiat id ex consequatur atque quia quisquam hic accusamus dolores sapiente, ipsum maxime, quo odit ut.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus quidem
+                                nostrum neque molestiae fugiat id ex consequatur atque quia quisquam hic accusamus
+                                dolores sapiente, ipsum maxime, quo odit ut.
                             </p>
-    
+
                             <div class="testimonal__stars">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -132,12 +165,15 @@
                 <div class="testimonal__swiper">
                     <div>
                         <article class="testimonal__card">
-                            <img src="https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_images/2018-09/shutterstock_648907024.jpg?itok=7lrLYx-B" alt="" class="testimonal__image">
+                            <img src="https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_images/2018-09/shutterstock_648907024.jpg?itok=7lrLYx-B"
+                                alt="" class="testimonal__image" style=" border-radius: 50%; object-fit: cover;">
                             <h2 class="testimonal__title">Priya Sharma</h2>
                             <p class="testimonal__description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus quidem nostrum neque molestiae fugiat id ex consequatur atque quia quisquam hic accusamus dolores sapiente, ipsum maxime, quo odit ut.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus quidem
+                                nostrum neque molestiae fugiat id ex consequatur atque quia quisquam hic accusamus
+                                dolores sapiente, ipsum maxime, quo odit ut.
                             </p>
-    
+
                             <div class="testimonal__stars">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -149,12 +185,12 @@
                     </div>
                 </div>
             </div>
-    
-    
-        </section>
-    
 
-        
+
+        </section>
+
+
+
         <div class="second_cont">
             <div class="deals">
                 <i class="fa-solid fa-gift"></i>
@@ -166,7 +202,7 @@
             </div>
 
         </div>
-        
+
     </section>
 
 
@@ -178,11 +214,11 @@
         <div class="foot-panel2">
             <ul class="footer-colums">
                 <p>Our Pages</p>
-                <a>Home</a>
-                <a>Menu</a>
-                <a>Services</a>
-                <a>Contact</a>
-                <a>Cart</a>
+                <a href="../index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="#">Services</a>
+                <a href="ContactUpdate.html">Contact</a>
+                <a href="cart.html">Cart</a>
             </ul>
 
             <ul class="footer-colums">
@@ -229,25 +265,24 @@
                 <h4>Follow Us</h4>
 
                 <div class="social-icons">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-twitter"></i>
+                        <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                        <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                        <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
+                        <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
+                        <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
                 </div>
                 <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                 </p>
                 <div class="copyright">
-
-                    &copy; 2023 Foodies . All Rights Reserved. |  <span id="author">
+                    &copy; 2024 Foodies - All Rights Reserved | <span id="author">
                         <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
                     </span></p>
-
-                    &copy; 2024 Foodies . All Rights Reserved. | Developed by Khushi Joshi</p>
-
-
                 </div>
             </div>
+        </div>
     </footer>
 
 
 </body>
+
 </html>
