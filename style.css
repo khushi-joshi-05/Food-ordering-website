@@ -3,13 +3,21 @@
   padding: 0px;
 }
 
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
 body {
   background-color: black;
 }
-
 .navbar {
   padding: 8px 0px;
   height: 60px;
+  transition: background-color 0.3s, backdrop-filter 0.3s, color 0.3s; /* Added transitions for smooth color change */
+  backdrop-filter: blur(0); /* Initially no blur */
 }
 
 .navbar a {
@@ -17,6 +25,60 @@ body {
   color: white;
   font-size: 1.3rem;
 }
+
+/* Navbar link hover effect */
+.navbar a:hover,
+.navbar.scrolled a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff; /* Add bottom border on hover */
+  border-top: 1px solid #fff; /* Add top border on hover */
+}
+
+.navbar.fixed-top {
+  position: fixed; 
+  top: 0;
+  width: 100%; 
+  z-index: 1030; 
+}
+
+.navbar.scrolled {
+  background-color: rgba(176, 63, 63, 0.6); 
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+/* Additional CSS to adjust the navbar on smaller screens */
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#active-page{
+  color: #dc3545;
+  border-bottom: 2px solid #dc3545;
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(175, 63, 62, 1);
+  }
+}
+
 
 .intro_container {
   display: flex;
@@ -52,21 +114,22 @@ body {
 }
 
 .intro_container button {
+
   margin-top: 20px;
-  background-color: brown;
-  color: white;
+  background-color: white;
+  color: brown;
   border: 2px solid rgb(139, 36, 36);
   width: 170px;
   height: 35px;
-  border-radius: 4px;
+  border-radius: 10px;
   font-size: 1.3rem;
-  font-family: "Bree Serif", serif;
+  font-family:Arial, Helvetica, sans-serif;
   padding-bottom: 4px;
 }
 
 .intro_container button:hover {
-  background-color: white;
-  color: brown;
+  background-color: brown;
+  color: white;
   cursor: pointer;
 }
 
@@ -78,14 +141,14 @@ body {
 #about {
   /* margin: 34px; */
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
 }
 
 #about .box {
   border: 2px solid brown;
   padding: 34px;
-  margin: 2px 55px;
+  margin: 2px 40px;
   border-radius: 28px;
   background: #f2f2f2;
   margin-bottom: 20px;
@@ -152,7 +215,9 @@ body {
   /* justify-items: center; */
   opacity: 0.4;
   z-index: -1;
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .service {
@@ -234,7 +299,13 @@ body {
 
 .menu_items {
   display: flex;
-  overflow: overlay;
+  overflow-x: auto;
+  padding-top: 10px;
+}
+
+.menu_items::-webkit-scrollbar {
+  display: none;
+
 }
 
 .menu_items .items {
@@ -247,19 +318,21 @@ body {
   border-radius: 10px;
   text-align: center;
   font-family: "Bree Serif", serif;
-  transition: 0.3s all ease-in;
+  transition: 0.2s all ease-in;
 }
 
 .menu_items .items:hover {
   box-shadow: #212123 1px 1px 8px;
   cursor: pointer;
   scale: 1.02;
+  background-color: #ca8787;
 }
 
 .menu_items .items img {
   justify-content: center;
-  height: 270px;
+  height: 250px;
   width: 250px;
+  border-radius: 15px; 
 }
 
 .menu_items .items h3 {
@@ -270,6 +343,8 @@ body {
 .meals-showcase {
   list-style: none;
   width: 100%;
+  padding:0%;
+  margin: 0%;
 }
 
 .meals-showcase li {
@@ -316,7 +391,7 @@ body {
 
 .app_download {
   background-color: brown;
-  height: 320px;
+  height: 350px;
   color: white;
   padding-left: 50px;
   padding-top: 80px;
@@ -334,6 +409,10 @@ body {
   font-size: 1.3rem;
 }
 
+.app_download img:hover{
+  transform: scale(1.1);
+}
+
 .btn a {
   text-decoration: none;
   color: brown;
@@ -345,13 +424,14 @@ body {
 
 .app-download-img {
   max-height: 70px;
-  margin-top: 2rem;
-  margin-left: 2rem;
+
+  padding: 10px;
 }
 
 .move {
-  background-color: rgb(147, 22, 33);
-  height: 60px;
+  /* background-color: rgb(147, 22, 33); */
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.145);
+  height: 50px;
 }
 
 .move .text {
@@ -449,6 +529,11 @@ ul a {
   text-decoration: none;
 }
 
+.foot-panel2 ul a:hover{
+  text-decoration: underline;
+  color: #dddddd;
+}
+
 /* .foot-pannel3{
     background-color:rgb(66, 16, 16);
     color: white;
@@ -471,6 +556,7 @@ ul a {
 }
 
 .copyright {
+  background-color: rgb(66, 16, 16);
   padding-top: 10px;
 }
 
@@ -511,37 +597,67 @@ textarea {
 
 .social-icons a {
   font-size: 1.2rem;
-  padding: 8px;
-  margin: 15px;
+  padding: 10px;
+  margin: 10px;
   text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  transition: .2s;
+}
+
+.fa-facebook:hover {
+  background-color: #3B5998;
   color: white;
 }
 
-.social-icons a:hover {
-  color: brown;
-  background-color: wheat;
-  border-radius: 50px;
+.fa-instagram:hover {
+  background-color: #D62976;
+  color: white;
 }
 
-.fb {
-  color: #1877f2;
-  cursor: pointer;
+.fa-twitter:hover {
+  background-color: #00B6F1;
+  color: white;
 }
 
-.instagram {
-  color: #dd4c8d;
-  cursor: pointer;
+.fa-github:hover {
+  background-color: #040204;
+  color: white;
 }
 
-.twitter {
-  color: #1da1f2;
-  cursor: pointer;
+.fa-discord:hover {
+  background-color: #353535;
+  color: white;
 }
 
 #author {
   padding: 3px;
   border-radius: 3px;
   color: #dddddd;
+}
+
+ul{
+  padding-left: 0px;
+}
+
+#email,#message{
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(210, 167, 167, 0.5);
+  color:white;
+}
+
+#email::placeholder{
+  color: white;
+}
+
+#message::placeholder{
+  color: white;
+}
+
+#butt{
+  border: none;
 }
 
 @media screen and (max-width: 500px) {
@@ -689,7 +805,7 @@ textarea {
   gap: 20px;
   flex-direction: columns;
   margin: auto;
-  /*padding-left:2px;*/
+padding-left:2px;
   max-width: 40%;
 }
 
@@ -809,8 +925,6 @@ textarea {
   }
 }
 
-
-
 .navbar li:hover a {
   color: brown;
 }
@@ -822,4 +936,216 @@ textarea {
 
 .menu_items .items:hover {
   box-shadow: 0 0 20px rgba(138, 37, 37, 0.5);
+}
+
+
+.social-icons i:hover {
+  color: brown;
+}
+
+
+#marque {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  background-color: rgb(255, 255, 255);
+}
+
+#marque h1 {
+  display: inline-block;
+  font-size: 3vw;
+  text-transform: uppercase;
+  padding-right: 100px;
+  animation: marquee 10s linear infinite;
+  background: #de6262;
+  background: -webkit-linear-gradient(to right, #de6262, #ffb88c);
+  background: linear-gradient(to right, #de6262, #ffb88c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes marquee {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+#marque-container {
+  display: inline-block;
+  padding-left: 100%;
+}
+
+#marque-container:after {
+  content: "Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order!";
+  padding-left: 100px;
+}
+
+@media (max-width: 768px) {
+  #marque {
+      padding: 1vw;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+  }
+
+  #marque h1 {
+      letter-spacing: 2px;
+      font-size: 3vw;
+      -webkit-text-stroke: 0.3px black;
+      padding-right: 2px;
+  }
+
+  #marque-container:after {
+      content: "Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order!";
+      padding-left:2px;
+
+    }
+}
+
+
+.about_us .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about_us .box {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.items:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+ nav{
+  height: 3rem;
+}
+.navigbar{
+  display: flex;
+  justify-content: space-between;
+  background: #0000007c;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  align-items: center;
+}
+.logo{
+  color: rgba(255, 183, 0, 0.705);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.ul1,.ul2{
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+.ul1 li a, .ul2 li a{
+  font-size: 1rem;
+}
+.ul1 li a:hover{
+  color:#f13800e4;
+}
+.ul2 li a:hover{
+  color: rgba(255, 183, 0, 0.705) ;
+}
+.cart{
+  color: white;
+} 
+
+
+/* Hamburger menu styles */
+.navbar-toggler {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Transition for menu icon animation */
+.navbar-toggler.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggler.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Hide hamburger menu by default */
+.hamburger-menu {
+  display: none;
+}
+
+/* Show hamburger menu when toggled */
+/* .navbar-toggler.active + .hamburger-menu {
+  display: block;
+} */
+.navbar-toggler.active + .hamburger-menu {
+  display: block;
+  position: absolute;
+  top: 3rem; /* Adjust based on your navbar height */
+  right: 0;
+  background-color: #000; /* Adjust background color */
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Style hamburger menu items */
+.hamburger-menu li {
+  /* margin-bottom: 5px; */
+  list-style-type: none;
+}
+
+.hamburger-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Additional styling for active state of hamburger menu */
+.navbar-toggler.active {
+  background-color: #ccc; /* Change background color when active */
+}
+/* Media query for smaller screens */
+@media screen and (min-width: 768px) {
+  .hamburger-menu {
+      display: none; /* Hide hamburger menu on larger screens */
+  }
+  #menu-toggle{
+    display: none;
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  .ul1,.ul2{
+    display: none;
+  }
+  #menu-toggle{
+    position: absolute;
+    right: 0;
+  }
+  .navigbar{
+    height: 3rem;
+  }
+  
 }
