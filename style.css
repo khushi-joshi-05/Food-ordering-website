@@ -402,6 +402,10 @@ body {
   font-size: 1.3rem;
 }
 
+.app_download img:hover{
+  transform: scale(1.1);
+}
+
 .btn a {
   text-decoration: none;
   color: brown;
@@ -612,6 +616,11 @@ textarea {
 
 .fa-github:hover {
   background-color: #040204;
+  color: white;
+}
+
+.fa-discord:hover {
+  background-color: #353535;
   color: white;
 }
 
