@@ -21,6 +21,11 @@
         margin-left: 370px;
 }
 
+#active-page{
+    color: #dc3545;
+    border-bottom: 2px solid #dc3545;
+  }
+
  @keyframes gradient-animation {
      0% {
          background-position: 0% 50%;

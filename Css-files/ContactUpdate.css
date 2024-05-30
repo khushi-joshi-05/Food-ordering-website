@@ -53,6 +53,11 @@ body {
   font-weight: 400;
 }
 
+#active-page{
+  color: #dc3545;
+  border-bottom: 2px solid #dc3545;
+}
+
 /*
 =========================================
     Custom Scrollbar
