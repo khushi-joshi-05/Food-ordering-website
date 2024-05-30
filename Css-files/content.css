@@ -259,6 +259,55 @@ body {
   font-size: 2rem;
 }
 
+
+/* Book Table */
+.book-table-container {
+  padding: 50px;
+  background-color: rgb(224, 224, 252);
+}
+
+.book-table-container .image-holder {
+  display: table-cell;
+  width: auto;
+  background: url(https://cdn12.picryl.com/photo/2016/12/31/dining-table-table-cutlery-tableware-7ce371-1024.jpg);
+  background-size: cover;
+}
+
+.book-table-container .form-container {
+  display: table;
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+.book-table-container form {
+  display: table-cell;
+  width: 400px;
+  background-color: #ffffff;
+  padding: 40px 60px;
+  color: #505e6c;
+}
+
+.book-table-container form h2 {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.book-table-container form .form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #dfe7f1;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  color: inherit;
+  text-indent: 0px;
+  height: 40px;
+  max-width: max-content;
+}
+
 /* testimonal */
 .testimonalsection{
   padding-top: 400px;
