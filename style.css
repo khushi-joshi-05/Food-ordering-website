@@ -13,6 +13,25 @@
 body {
   background-color: black;
 }
+
+/* Dark mode */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Dark mode for specific elements */
+.dark-mode .navbar {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .navbar a {
+  color: #ffffff;
+}
+
+/* Add more dark mode styles for other elements as needed */
+
+
 .navbar {
   padding: 8px 0px;
   height: 60px;
