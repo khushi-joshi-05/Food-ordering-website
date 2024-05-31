@@ -249,6 +249,12 @@ nav {
   align-items: center;
   padding-bottom: 1rem;
   padding-top: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  background-color: black; /* Ensure the navbar has a background color */
 }
 
 .logo {
