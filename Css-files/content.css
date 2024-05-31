@@ -492,8 +492,8 @@ textarea {
   color: white;
 }
 
-.fa-twitter:hover {
-  background-color: #00B6F1;
+.fa-x-twitter:hover {
+  background-color: black;
   color: white;
 }
 
@@ -501,7 +501,10 @@ textarea {
   background-color: #040204;
   color: white;
 }
-
+.fa-discord:hover{
+  background-color: #5865F2;
+  color: white;
+}
 /* Cart page styling */
 .cart-section {
   padding: 55px 70px 30px 70px;
