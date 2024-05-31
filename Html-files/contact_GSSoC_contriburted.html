@@ -118,11 +118,12 @@
                 <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                 </p>
                 <div class="copyright">
-                    &copy; 2024 Foodies . All Rights Reserved. | Developed by Khushi Joshi</p>
+                    &copy; <span id="copyright-year"></span> Foodies . All Rights Reserved. | Developed by Khushi Joshi</p>
 
                 </div>
             </div>
     </footer>
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
 </body>
 
 </html>
