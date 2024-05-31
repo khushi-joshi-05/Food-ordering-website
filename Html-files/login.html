@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,12 @@
   <script src="scriptlogin.js" defer type="module"></script>
   <link rel="stylesheet" href="../Css-files/login1.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Login</title>
 </head>
+
 <body>
   <div class="main-login">
     <div class="left-login">
@@ -38,19 +42,20 @@
   </div>
 </body>
 <script>
-  const passwordinput=document.getElementById("password");
-  const hidelogo=document.getElementById("login-hide");
-  hidelogo.addEventListener("click",function(){
-    const passwordfield=this.querySelector("i");
-    if(passwordinput.getAttribute("type")=="text"){
-      passwordinput.setAttribute("type","password");
-      passwordfield.classList.replace("bxs-show","bxs-hide");
+  const passwordinput = document.getElementById("password");
+  const hidelogo = document.getElementById("login-hide");
+  hidelogo.addEventListener("click", function () {
+    const passwordfield = this.querySelector("i");
+    if (passwordinput.getAttribute("type") == "text") {
+      passwordinput.setAttribute("type", "password");
+      passwordfield.classList.replace("bxs-show", "bxs-hide");
     }
-    else{
-      passwordinput.setAttribute("type","text");
-      passwordfield.classList.replace("bxs-hide","bxs-show");
+    else {
+      passwordinput.setAttribute("type", "text");
+      passwordfield.classList.replace("bxs-hide", "bxs-show");
 
     }
   })
 </script>
+
 </html>

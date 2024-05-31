@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color:black;
+  background-color: black;
 }
 
 .head_container:before {
@@ -15,17 +15,18 @@ body {
   width: 100%;
   opacity: 0.4;
   z-index: -1;
-  
+
 }
 
-#active-page{
+#active-page {
   color: #dc3545;
   border-bottom: 2px solid #dc3545;
 }
 
-.head_container_service{
-  height:500px;
+.head_container_service {
+  height: 500px;
 }
+
 .head_container_service:before {
   background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
   content: "";
@@ -34,12 +35,13 @@ body {
   width: 100%;
   opacity: 0.4;
   z-index: -1;
-  
+
 }
 
 .navbar {
   padding: 8px 10px;
 }
+
 .navbar ul {
   overflow: hidden;
 }
@@ -49,6 +51,7 @@ body {
   list-style: none;
   padding: 8px 20px;
 }
+
 .navbar li:hover {
   opacity: 0.7;
 }
@@ -59,24 +62,31 @@ body {
   color: white;
   font-size: 1.3rem;
 }
+
 /* Styling for the contact navbar */
 .navbarbg {
   padding: 8px 0;
-  background-color: rgb(169, 33, 33); /* Maroon background color */
-  text-align: center; /* Align contents to center */
+  background-color: rgb(169, 33, 33);
+  /* Maroon background color */
+  text-align: center;
+  /* Align contents to center */
 }
 
 /* Styling for the list items */
 .navbarbg ul {
-  display: inline-block; /* Ensure the list is displayed horizontally */
-  padding-left: 0; /* Remove default padding */
+  display: inline-block;
+  /* Ensure the list is displayed horizontally */
+  padding-left: 0;
+  /* Remove default padding */
 }
 
 /* Styling for the list items */
 .navbarbg li {
-  display: inline-block; /* Display list items horizontally */
+  display: inline-block;
+  /* Display list items horizontally */
   list-style: none;
-  margin: 0 10px; /* Add some space between items */
+  margin: 0 10px;
+  /* Add some space between items */
 }
 
 /* Styling for the links */
@@ -95,25 +105,29 @@ body {
 
 .menu_container {
   padding: 55px 70px 30px 70px;
-  background-color:  rgb(224, 224, 252);
+  background-color: rgb(224, 224, 252);
 }
+
 .menu_container h2 {
   font-family: 'Oswald', sans-serif;
   font-size: 2rem;
-  color:rgb(138, 37, 37);
+  color: rgb(138, 37, 37);
   padding-left: 50px;
 }
+
 .mainhead {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 50px;
 }
+
 .mainhead h1 {
   font-family: "Bree Serif", serif;
   font-size: 3.8rem;
   color: white;
   padding-bottom: 20px;
 }
+
 .head_container_service .mainhead {
   text-align: center;
   padding-top: 30px;
@@ -136,6 +150,7 @@ body {
   color: brown;
   background-color: #f2f2f2;
 }
+
 .butt {
   border: 1.3px solid brown;
   font-size: 1.1rem;
@@ -218,7 +233,7 @@ body {
 
 .first_cont .items h3 {
   font-size: 1.2rem;
-  margin: 10px ;
+  margin: 10px;
 }
 
 .first_cont .items p {
@@ -228,37 +243,39 @@ body {
 /* service */
 .service_container {
   /* padding: 55px 70px 30px 70px; */
-  background-color:  rgb(224, 224, 252);
+  background-color: rgb(224, 224, 252);
 }
 
-.second_cont{
+.second_cont {
   display: flex;
   padding: 40px;
   justify-content: center;
 }
-.second_cont1{
+
+.second_cont1 {
   display: flex;
   padding: 0px 20px 100px 20px;
   justify-content: center;
 }
 
-.deals{
+.deals {
   display: flex;
   background-color: white;
   border: 2px solid rgb(138, 37, 37);
   /* box-shadow: 0 0 10px rgba(138, 37, 37, 0.5); */
   border-radius: 10px;
-  padding:15px 30px;
-  margin:20px 50px;
+  padding: 15px 30px;
+  margin: 20px 50px;
 }
 
-.deals p{
+.deals p {
   font-size: 1.1rem;
   /* font-weight: bold; */
   padding-top: 2px;
   font-family: "Bree Serif", serif;
 }
-.deals i{
+
+.deals i {
   margin: 0px 10px;
   padding: 0px 10px;
   font-size: 2rem;
@@ -283,7 +300,7 @@ body {
   max-width: 1000px;
   width: 90%;
   margin: 0 auto;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .book-table-container form {
@@ -314,70 +331,68 @@ body {
 }
 
 /* testimonal */
-.testimonalsection{
+.testimonalsection {
   padding-top: 400px;
 }
-.testimonal__container{
+
+.testimonal__container {
   display: flex;
   padding: 3rem;
 }
-.testimonal__card{
+
+.testimonal__card {
   text-align: center;
-  padding:2rem 3rem 2.5rem;
-  border:2px solid rgba(224, 224, 252, 0.678);
-  transition:border .4s,background-color .4s;
+  padding: 2rem 3rem 2.5rem;
+  border: 2px solid rgba(224, 224, 252, 0.678);
+  transition: border .4s, background-color .4s;
   background-color: white;
   box-shadow: 0 0 10px rgba(224, 224, 252, 0.678);
   border: 1px solid rgb(186, 186, 201);
-  padding:40px 30px ;
+  padding: 40px 30px;
   margin: 5px;
-  color:rgb(107, 107, 122);
+  color: rgb(107, 107, 122);
 }
-.testimonal__image{
-  width:100px;
-  height:100px;
-  border-radius:50%;
-  margin:0 auto 1.5rem;
+
+.testimonal__image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
 }
-.testimonal__title{
+
+.testimonal__title {
   margin-bottom: .75rem;
 }
-.testimonal__description{
+
+.testimonal__description {
   margin-bottom: 1.25rem;
 }
-.section__title{
+
+.section__title {
   text-align: center;
   font-size: 2rem;
-  color:rgb(58, 58, 66);
+  color: rgb(58, 58, 66);
 }
 
 /* footer */
-.foot-panel2{
-    background-color: rgb(138, 37, 37);
-    color:white;
-    height: 300px;
-    display: flex;
-    justify-content: space-evenly;
-    /* margin-top: 50px; */
+.foot-panel2 {
+  background-color: rgb(138, 37, 37);
+  color: white;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  /* margin-top: 50px; */
 }
 
-.footer-colums{
-    margin-top: 20px;
+.footer-colums {
+  margin-top: 20px;
 }
 
-.footer-colums p{
-    font-weight: 700;
+.footer-colums p {
+  font-weight: 700;
 }
 
-.footer-colums a{
-    display: block;
-    font-size: 0.85rem;
-    margin-top: 10px;
-    color: #dddddd;
-    text-decoration: none ;
-}
-
-.footer-colums a{
+.footer-colums a {
   display: block;
   font-size: 0.85rem;
   margin-top: 10px;
@@ -385,10 +400,19 @@ body {
   text-decoration: none;
 }
 
-.foot-panel2 ul a:hover{
+.footer-colums a {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: #dddddd;
+  text-decoration: none;
+}
+
+.foot-panel2 ul a:hover {
   text-decoration: underline;
   color: #dddddd;
 }
+
 /* .foot-pannel3{
     background-color:rgb(66, 16, 16);
     color: white;
@@ -398,53 +422,53 @@ body {
     justify-content: center;
 } */
 
-.foot_panel4{
-    background-color: rgb(66, 16, 16);
-    color: white;
-    height: 160px;
-    font-size: 0.9rem;
-    text-align: center;
-}
-
-.pages{
-    padding-top: 25px;
-}
-
-.copyright{
+.foot_panel4 {
   background-color: rgb(66, 16, 16);
-   padding-top: 10px;
+  color: white;
+  height: 160px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.pages {
+  padding-top: 25px;
+}
+
+.copyright {
+  background-color: rgb(66, 16, 16);
+  padding-top: 10px;
 }
 
 form {
-    padding-top: 20px;
-    display: grid;
-    /* gap: 10px; */
-    padding-bottom: 100px;
+  padding-top: 20px;
+  display: grid;
+  /* gap: 10px; */
+  padding-bottom: 100px;
 }
 
 label {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 input,
 textarea {
-    height:30px;
-    width: 120%;
-    padding: 2.5px;
-    box-sizing: border-box;
-    border-radius: 2px;
+  height: 30px;
+  width: 120%;
+  padding: 2.5px;
+  box-sizing: border-box;
+  border-radius: 2px;
 }
 
-#butt{
-    background-color:rgb(66, 16, 16);
-    color: white;
-    border: 1px solid white ;
-    border-radius: 2px;
-    cursor: pointer;
+#butt {
+  background-color: rgb(66, 16, 16);
+  color: white;
+  border: 1px solid white;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
 #butt :hover {
-    background-color:rgb(196, 89, 89);
+  background-color: rgb(196, 89, 89);
 }
 
 .social-icons a {
@@ -468,8 +492,8 @@ textarea {
   color: white;
 }
 
-.fa-twitter:hover {
-  background-color: #00B6F1;
+.fa-x-twitter:hover {
+  background-color: black;
   color: white;
 }
 
@@ -477,17 +501,20 @@ textarea {
   background-color: #040204;
   color: white;
 }
-
+.fa-discord:hover{
+  background-color: #5865F2;
+  color: white;
+}
 /* Cart page styling */
-.cart-section{
+.cart-section {
   padding: 55px 70px 30px 70px;
-  background-color:  rgb(224, 224, 252);
+  background-color: rgb(224, 224, 252);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.cart{
+.cart {
   width: 80%;
   background-color: #f2f2f2;
   text-align: center;
@@ -498,34 +525,41 @@ textarea {
   padding: 5%;
 }
 
-.cart table,th,td{
+.cart table,
+th,
+td {
   text-align: center;
   border: 2px solid black;
   width: 75%;
-    color: black;
+  color: black;
 }
 
-#bill{
+#bill {
   color: rgb(196, 74, 74);
 }
+
 .star-button {
   background: none;
   border: none;
   cursor: pointer;
-  color: #ccc; /* Default color for empty star */
+  color: #ccc;
+  /* Default color for empty star */
   font-size: 15px;
   padding: 0;
 }
 
 .star-button:hover,
 .star-button:focus {
-  color: #f1c40f; /* Yellow color for filled star */
+  color: #f1c40f;
+  /* Yellow color for filled star */
   outline: none;
 }
 
 .star-button.rated {
-  color: #f1c40f; /* Yellow color for filled star */
+  color: #f1c40f;
+  /* Yellow color for filled star */
 }
+
 .menu_items .items {
   position: relative;
   /* Ensure relative positioning for the parent container */
@@ -583,12 +617,13 @@ textarea {
 
 
 /* updated nav bar */
-nav{
+nav {
   height: 3rem;
   background: #0000007c;
 
 }
-.navigbar{
+
+.navigbar {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -596,40 +631,48 @@ nav{
   height: 3rem;
   width: 95%;
   margin: 0 auto;
-  
+
 }
-.logo{
+
+.logo {
   color: rgba(255, 183, 0, 0.705);
   font-size: 1.2rem;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
 }
-.ul1,.ul2{
+
+.ul1,
+.ul2 {
   display: flex;
   gap: 20px;
   list-style-type: none;
   align-items: center;
-  flex: 1; /* Distribute remaining space equally */
-  justify-content: center; /* Center items horizontally */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  flex: 1;
+  /* Distribute remaining space equally */
+  justify-content: center;
+  /* Center items horizontally */
+  margin: 0;
+  /* Remove default margin */
+  padding: 0;
+  /* Remove default padding */
 }
-.ul1 li a, .ul2 li a{
+
+.ul1 li a,
+.ul2 li a {
   color: white;
   font-size: 1rem;
   text-decoration: none;
   text-align: center;
 }
-.ul1 li a:hover{
-  color:#f13800e4;
+
+.ul1 li a:hover {
+  color: #f13800e4;
 }
-.ul2 li a:hover{
-  color: rgba(255, 183, 0, 0.705) ;
+
+.ul2 li a:hover {
+  color: rgba(255, 183, 0, 0.705);
 }
-.cart{
+
+.cart {
   color: white;
 }
-
-
-
- 

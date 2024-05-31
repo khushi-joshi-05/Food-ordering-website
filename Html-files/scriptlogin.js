@@ -17,15 +17,15 @@ auth.languageCode = 'en';
 const provider = new GoogleAuthProvider();
 
 const googleLogin = document.getElementById("google-login");
-googleLogin.addEventListener("click", function(){
+googleLogin.addEventListener("click", function () {
   signInWithPopup(auth, provider)
-  .then((result) => {
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const user = result.user;
-    console.log(user);
-    window.location.href = "../logged.html";
-  }).catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-  });
+    .then((result) => {
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const user = result.user;
+      console.log(user);
+      window.location.href = "../logged.html";
+    }).catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
 });

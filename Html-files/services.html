@@ -32,7 +32,9 @@
             </nav> -->
             <nav>
                 <div class="navigbar">
-                    <div class="logo">Foodie</div>
+                    <div class="logo">
+                        <a href="../index.html"><img src="../Images/sitelogo.png" height="40" class="transparent-image"></a>
+                    </div>
                     <ul class="ul1">
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="menu.html">Menu</a></li>
@@ -43,9 +45,7 @@
                         <ul class="ul2">
                             <li><a href="login.html">Log In</a></li>
                             <li><a href="signup.html">Sign Up</a></li>
-                            <li>
-                                <a class="" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                            </li>
+                            <li><a class="" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -85,16 +85,12 @@
         </div>
     </div>
 
-
-
     <section class="service_container">
 
         <section class="testimonalsection" id="testimonal">
-            
-            <h2 class=section__title>
-                CUSTOMER  OPINION
-            </h2>
-            
+
+            <h2 class=section__title>CUSTOMER OPINION</h2>
+
             <div class="testimonal__container">
                 <div class="testimonal__swiper">
                     <div>
@@ -185,11 +181,7 @@
                     </div>
                 </div>
             </div>
-
-
         </section>
-
-
 
         <div class="second_cont">
             <div class="deals">
@@ -200,17 +192,10 @@
                 <i class="fa-solid fa-ticket"></i>
                 <p>Exclusive Offers and Promotions </p>
             </div>
-
         </div>
-
     </section>
 
-
-
-    <!-- footer -->
     <footer>
-
-
         <div class="foot-panel2">
             <ul class="footer-colums">
                 <p>Our Pages</p>
@@ -223,31 +208,28 @@
 
             <ul class="footer-colums">
                 <p> Exclusive Offers</p>
-                <a>Foodie Discounts</a>
-                <a>Limited-Time Promotions</a>
-                <a>Special Event Packages</a>
-                <a>Membership Benefits</a>
-                <a>Early Access to New Recipes</a>
-                <a>VIP Foodie Events</a>
-                <a>Personalized Culinary Experiences</a>
-
+                <a href="#">Foodie Discounts</a>
+                <a href="#">Limited-Time Promotions</a>
+                <a href="#">Special Event Packages</a>
+                <a href="#">Membership Benefits</a>
+                <a href="#">Early Access to New Recipes</a>
+                <a href="#">VIP Foodie Events</a>
+                <a href="#">Personalized Culinary Experiences</a>
             </ul>
 
             <ul class="footer-colums">
                 <p>Payment Products</p>
-                <a>Secure Checkout</a>
-                <a>Credit/Debit Cards</a>
-                <a>Online Payment</a>
-                <a>Mobile Wallets</a>
-                <a>Contactless Payments</a>
+                    <a href="#">Secure Checkout</a>
+                    <a href="#">Credit/Debit Cards</a>
+                    <a href="#">Online Payment</a>
+                    <a href="#">Mobile Wallets</a>
+                    <a href="#">Contactless Payments</a>
             </ul>
-
 
             <form id="contactForm">
                 <h3>Contact Us!</h3>
                 <!-- <label for="name">Name:</label> -->
-                <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>
-                 -->
+                <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>-->
                 <!-- <label for="email">Email:</label> -->
                 <input type="email" id="email" name="email" placeholder="Your Email" required>
 
@@ -256,25 +238,24 @@
 
                 <button id="butt" type="submit">Send Message</button>
             </form>
-
         </div>
-
 
         <div class="foot_panel4">
             <div class="pages">
                 <h4>Follow Us</h4>
 
                 <div class="social-icons">
-                        <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
-                        <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                        <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
-                        <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
-                        <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
+                    <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                    <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
+                        target="_blank"></a>
+                    <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
                 </div>
                 <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                 </p>
                 <div class="copyright">
-                    &copy; 2024 Foodies - All Rights Reserved | <span id="author">
+                    &copy; <span id="copyright-year"></span> Foodies - All Rights Reserved | <span id="author">
                         <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
                     </span></p>
                 </div>
@@ -282,7 +263,7 @@
         </div>
     </footer>
 
-
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
 </body>
 
 </html>
