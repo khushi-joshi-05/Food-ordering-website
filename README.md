@@ -1,6 +1,9 @@
-
-![gssoc](Images/gssoc.png)
 <div align="center">
+   
+   ![image](https://github.com/khushi-joshi-05/Food-ordering-website/assets/76521579/57ac35c6-c9d9-458d-a0bd-0f600fbded89)
+   
+   ![image](https://github.com/khushi-joshi-05/Food-ordering-website/assets/76521579/94548b28-f4e8-48aa-8a59-8c523cd7c206)
+   
 <h1 >Food Ordering Website</h1>
 
 <br>
