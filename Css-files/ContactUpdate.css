@@ -745,3 +745,34 @@ textarea {
     margin-top: 20px;
   }
 }
+
+.head_contact:before {
+  background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
+  content: "";
+  position: absolute;
+  height: 570px;
+  width: 100%;
+  opacity: 0.4;
+  z-index: -1;
+  
+}
+
+.section {
+  color: white;
+}
+
+.btn {
+  text-decoration: none;
+  color: brown;
+  background-color: white;
+  border: brown;
+}
+
+.btn:hover {
+  color: white;
+  background-color: brown;
+}
+
+.para {
+  color: white;
+}
