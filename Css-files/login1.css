@@ -143,6 +143,19 @@ body * {
   background: rgba(208, 50, 50, 0.9);
 }
 
+.home-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.home-button:hover {
+  color: lightgray;
+}
+
 @media only screen and (max-width: 950px) {
   .card-login {
     width: 85%;
