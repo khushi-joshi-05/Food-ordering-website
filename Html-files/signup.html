@@ -1,76 +1,65 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
-    <script src="scriptsignup.js" defer type="module"></script>
-    <link rel="stylesheet" href="../Css-files/signup1.css">
-</head>
-<body>
-    <div class="main-login">
-        <div class="left-login">
-          <h1>Sign Up Here<br>Goof Food is Good Mood</h1>
-          <img src="../Images/desserts.avif" class="left-login-image" alt="food">
-        </div>
-        <div class="right-login">
-          <div class="card-login">
-            <h1>SIGN UP</h1>
-            <div class="textfield">
-                <label for="usuario">Name</label>
-                <input type="text" name="email" placeholder="Enter your name">
-              </div>
-            <div class="textfield">
-              <label for="usuario">Email / User Name</label>
-              <input type="text" name="email" placeholder="Enter Email / UserName">
-            </div>
-            <div class="textfield">
-              <label for="password">Password</label>
-              <input type="password" name="password" placeholder="Enter Password">
-            </div>
-            <button class="btn-login">Register</button>
-            <button id="google-login">Login with Google</button>
-          </div>
-        </div>
-      </div>
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
-    <script src="scriptsignup.js" defer type="module"></script>
-    <link rel="stylesheet" href="../Css-files/signup1.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up</title>
+  <script src="scriptsignup.js" defer type="module"></script>
+  <link rel="stylesheet" href="../Css-files/signup1.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <div class="main-login">
-        <div class="left-login">
-          <h1>Sign Up Here<br>Good Food is Good Mood</h1>
-          <img src="../Images/desserts.avif" class="left-login-image" alt="food">
-        </div>
-        <div class="right-login">
-          <div class="card-login">
-            <h1>SIGN UP</h1>
-            <form id="signup-form">
-              <div class="textfield">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-              </div>
-              <div class="textfield">
-                <label for="email">Email / User Name</label>
-                <input type="email" id="email" name="email" placeholder="Enter Email / UserName" required>
-              </div>
-              <div class="textfield">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter Password" required>
-              </div>
-              <button type="submit" class="btn-login">Register</button>
-            </form>
-            <button id="google-login">Login with Google</button>
+  <div class="main-login">
+    <div class="left-login">
+      <h1>Sign Up Here<br>Good Food is Good Mood</h1>
+      <img src="../Images/desserts.avif" class="left-login-image" alt="food">
+    </div>
+    <div class="right-login">
+      <div class="card-login">
+        <h1>SIGN UP</h1>
+        <br>
+        <form id="signup-form">
+          <div class="textfield">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
           </div>
-        </div>
+          <div class="textfield">
+            <label for="email">Email / User Name</label>
+            <input type="email" id="email" name="email" placeholder="Enter Email / UserName" required>
+          </div>
+          <div class="textfield">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            <span id="signup-hide">
+              <i class='icon1 bx bxs-hide'></i>
+            </span>
+          </div>
+          <button type="submit" class="btn-login">Register</button>
+        </form>
+        <button id="google-login">Login with Google</button>
       </div>
+    </div>
+  </div>
 </body>
+<script>
+  const pswinput = document.getElementById('password');
+  const toggle = document.getElementById('signup-hide');
+  toggle.addEventListener("click", function () {
+    const pswfield = this.querySelector('i');
+    if (pswinput.getAttribute("type") == "password") {
+      pswinput.setAttribute('type', 'text');
+      pswfield.classList.replace("bxs-hide", "bxs-show");
+    }
+    else {
+      pswinput.setAttribute('type', 'password');
+      pswfield.classList.replace("bxs-show", "bxs-hide");
+    }
+  });
+</script>
+
 </html>
