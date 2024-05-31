@@ -403,7 +403,7 @@
                     <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                     </p>
                     <div class="copyright">
-                        &copy; 2024 Foodies - All Rights Reserved | <span id="author">
+                        &copy; <span id="copyright-year"></span> Foodies - All Rights Reserved | <span id="author">
                             <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi
                                 Joshi</a>
                         </span></p>
@@ -422,7 +422,7 @@
         </button>
         <!--Scroll top button finish-->
     </div>
-
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
     <script>
         const heroSlider = document.querySelector("[data-hero-slider]");
         const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
@@ -461,7 +461,7 @@
 
         heroSliderPrevBtn.addEventListener("click", slidePrev);
 
-        // auto slide 
+        // auto slide
 
         let autoSlideInterval;
 
