@@ -5,6 +5,8 @@
 
 body {
   background-color: black;
+  margin: 0;
+  padding-top: 0;
 }
 
 .head_container:before {
@@ -619,19 +621,23 @@ td {
 /* updated nav bar */
 nav {
   height: 3rem;
-  background: #0000007c;
-
+  width: 100%;
+  background-color: black;
 }
 
 .navigbar {
-  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  padding: 0 2rem;
+  background-color: black;
   height: 3rem;
-  width: 95%;
   margin: 0 auto;
-
+  box-sizing: border-box;
 }
 
 .logo {
@@ -652,11 +658,16 @@ nav {
   justify-content: center;
   /* Center items horizontally */
   margin: 0;
-  /* Remove default margin */
   padding: 0;
   /* Remove default padding */
 }
-
+.ul2{
+  justify-content: flex-end;
+}
+.ul1 {
+  flex-grow: 1;
+  justify-content: center;
+}
 .ul1 li a,
 .ul2 li a {
   color: white;
