@@ -28,7 +28,7 @@ body {
 .navbar a {
   text-decoration: none;
   color: white;
-  font-size: 1.3rem;z
+  font-size: 1.3rem;
 }
 
 .transparent-image {
@@ -266,6 +266,7 @@ body {
 
 .service .box a:hover {
   background-color: brown;
+  color: hsla(40, 12%, 5%, 1);
 }
 
 .menu_container {
