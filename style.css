@@ -14,10 +14,11 @@ body {
   background-color: black;
 }
 
-/* Landing page starts*/
 .navbar {
-  padding: 8px 10px 0px 2px;
-  background-color: rgb(0, 0, 0);
+  padding: 8px 0px;
+  height: 60px;
+  transition: background-color 0.3s, backdrop-filter 0.3s, color 0.3s;
+  backdrop-filter: blur(0);
 }
 
 .navbar li:hover a {
@@ -56,7 +57,7 @@ body {
 
 .sidebar.visible {
   display: flex;
-}
+
 
 .sidebar a {
   padding: 10px 15px;
@@ -77,8 +78,6 @@ body {
   list-style: none;
   margin: 2px 20px;
   letter-spacing: 1px;
-}
-
 .navbar li a {
   padding: 1px 3px;
   text-decoration: none;
@@ -250,7 +249,7 @@ body {
 #about {
   /* margin: 34px; */
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
 }
 
@@ -448,7 +447,7 @@ body {
 .meals-showcase {
   list-style: none;
   width: 100%;
-  padding:0%;
+  padding: 0%;
   margin: 0%;
 }
 
@@ -512,6 +511,10 @@ body {
 
 .app_download p {
   font-size: 1.3rem;
+}
+
+.app_download img:hover {
+  transform: scale(1.1);
 }
 
 .btn a {
@@ -630,6 +633,11 @@ ul a {
   text-decoration: none;
 }
 
+.foot-panel2 ul a:hover {
+  text-decoration: underline;
+  color: #dddddd;
+}
+
 /* .foot-pannel3{
 	background-color:rgb(66, 16, 16);
 	color: white;
@@ -640,7 +648,7 @@ ul a {
 } */
 
 .foot_panel4 {
-  background-color: rgb(66, 16, 16);
+  background-color: rgb(110, 28, 28);
   color: white;
   height: 160px;
   font-size: 0.9rem;
@@ -652,7 +660,7 @@ ul a {
 }
 
 .copyright {
-  background-color: rgb(66, 16, 16);
+  background-color: rgb(98, 25, 25);
   padding-top: 10px;
 }
 
@@ -679,7 +687,7 @@ textarea {
 }
 
 #butt {
-  background-color: rgb(66, 16, 16);
+  background-color: rgb(117, 21, 21);
   color: white;
   padding: 3px;
   border: 1px solid white;
@@ -712,13 +720,18 @@ textarea {
   color: white;
 }
 
-.fa-twitter:hover {
-  background-color: #00B6F1;
+.fa-x-twitter:hover {
+  background-color: black;
   color: white;
 }
 
 .fa-github:hover {
   background-color: #040204;
+  color: white;
+}
+
+.fa-discord:hover {
+  background-color: #5865F2;
   color: white;
 }
 
@@ -728,26 +741,27 @@ textarea {
   color: #dddddd;
 }
 
-ul{
+ul {
   padding-left: 0px;
 }
 
-#email,#message{
+#email,
+#message {
   padding-left: 10px;
   padding-right: 10px;
   background-color: rgba(210, 167, 167, 0.5);
-  color:white;
-}
-
-#email::placeholder{
   color: white;
 }
 
-#message::placeholder{
+#email::placeholder {
   color: white;
 }
 
-#butt{
+#message::placeholder {
+  color: white;
+}
+
+#butt {
   border: none;
 }
 
@@ -896,7 +910,7 @@ ul{
   gap: 20px;
   flex-direction: columns;
   margin: auto;
-padding-left:2px;
+  padding-left: 2px;
   max-width: 40%;
 }
 
@@ -1063,6 +1077,7 @@ padding-left:2px;
 
   100% {
 	  transform: translateX(-100%);
+
   }
 }
 

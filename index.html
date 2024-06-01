@@ -28,8 +28,6 @@
 
 </head>
 
-
-
 <body>
 
 
@@ -84,7 +82,6 @@
 
         <h1 class="h-primary center">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
 
-
         <!-- changes -->
         <div id="about">
             <div class="box">
@@ -108,7 +105,6 @@
                 <h2 class="h-secondary center">Innovative Fusion Dishes</h2>
                 <p class="center">The combinations of Indian and international cuisines not only tantalize taste buds
                     but also provide unique experience.
-
                 </p>
             </div>
         </div>
@@ -134,14 +130,9 @@
             </div>
             <div class="box">
                 <h1>Restaurant Dining</h1><br>
-
-                <a href="#" class="btn" onclick="openBookingModal()">Book Table</a>
-<!--                 <a href="#" class="btn">Book Table</a> -->
- 
-
+                <a href="./Html-files/book-table.html" class="btn">Book Table</a>
             </div>
         </div>
-
     </section>
 
     <section class="menu_container">
@@ -150,20 +141,13 @@
             <p>"Welcome to a world of culinary delights where every bite tells a flavorful story. Explore our diverse
                 menu and savor the essence of exquisite dining." </p>
 
-
             <button class="butt" onclick="window.location.href='Html-files/menu.html'">View Menu</button>
-
-
             <!-- <button class="butt" onclick="window.open('Html-files/menu.html')">View Menu</button> -->
-
-
-
         </div>
 
         <div class="menu_items">
-            <div class="items">
-                <img
-                    src="https://www.mumbailive.com/images/media/images/thali_1635502261446jpeg?bg=08394e&crop=5328%2C2991.157894736842%2C0%2C504.42105263157896&fit=crop&fm=webp&h=432.2807017543859&height=4000&w=770&width=5328">
+            <div class="items">         
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjSkmP0glNOmYbWZWwz_BRxgwrA5HdZadphw&s"
                 <h3>Indian Thali</h3>
                 <p>Enjoy a thali full of traditional flavours and memotries</p>
             </div>
@@ -184,7 +168,6 @@
                 <h3>Juices</h3>
                 <p>Boost yourself up with fruit extracts</p>
             </div>
-
         </div>
     </section>
 
@@ -249,9 +232,7 @@
                     <img src="Images/8.jpg" alt="food-image">
                 </figure>
             </li>
-
         </ul>
-
     </section>
 
     <!-- Booking Modal  -->
@@ -304,7 +285,6 @@
                 alt="Get it on Google Play Store"></a>
         <a href="#"><img src="./Images/download-on-the-app-store.png" class="app-download-img"
                 alt="Download on the Apple App Store"></a>
-
     </div>
 
     <div class="footer">
@@ -325,11 +305,9 @@
             </label>
         </div>
         <br><br><br><br>
-         <hr> -->
+        <hr> -->
 
         <footer>
-
-
             <div class="foot-panel2">
                 <ul>
                     <p>Our Pages</p>
@@ -349,7 +327,6 @@
                     <a href="#">Early Access to New Recipes</a>
                     <a href="#">VIP Foodie Events</a>
                     <a href="#">Personalized Culinary Experiences</a>
-
                 </ul>
 
                 <ul>
@@ -360,7 +337,6 @@
                     <a href="#">Mobile Wallets</a>
                     <a href="#">Contactless Payments</a>
                 </ul>
-
 
                 <form id="contactForm">
                     <h3>Contact Us!</h3>
@@ -374,24 +350,25 @@
 
                     <button id="butt" type="submit">Send Message</button>
                 </form>
-
             </div>
-
 
             <div class="foot_panel4">
                 <div class="pages">
                     <h4>Follow Us</h4>
                     <div class="social-icons">
-                            <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
-                            <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                            <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
-                            <a class="fa-brands fa-github" href="https://github.com" target="_blank"></a>
+                        <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                        <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                        <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                        <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
+                            target="_blank"></a>
+                        <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
                     </div>
                     <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                     </p>
                     <div class="copyright">
-                        &copy; 2024 Foodies - All Rights Reserved | <span id="author">
-                            <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
+                        &copy; <span id="copyright-year"></span> Foodies - All Rights Reserved | <span id="author">
+                            <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi
+                                Joshi</a>
                         </span></p>
                     </div>
                 </div>
@@ -402,6 +379,63 @@
         <a href="#" id="gotop-btn" style="position: fixed; bottom: 50px; right: 50px; padding: 10px; background-color: brown;"><i class="fa-solid fa-angle-up"></i></a>
 
     </div>
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+    <script>
+        const heroSlider = document.querySelector("[data-hero-slider]");
+        const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
+        const heroSliderPrevBtn = document.querySelector("[data-prev-btn]");
+        const heroSliderNextBtn = document.querySelector("[data-next-btn]");
+
+        let currentSlidePos = 0;
+        let lastActiveSliderItem = heroSliderItems[0];
+
+        const updateSliderPos = function () {
+            lastActiveSliderItem.classList.remove("active");
+            heroSliderItems[currentSlidePos].classList.add("active");
+            lastActiveSliderItem = heroSliderItems[currentSlidePos];
+        }
+
+        const slideNext = function () {
+            if (currentSlidePos >= heroSliderItems.length - 1) {
+                currentSlidePos = 0;
+            } else {
+                currentSlidePos++;
+            }
+
+            updateSliderPos();
+        }
+        heroSliderNextBtn.addEventListener("click", slideNext);
+
+        const slidePrev = function () {
+            if (currentSlidePos <= 0) {
+                currentSlidePos = heroSliderItems.length - 1;
+            } else {
+                currentSlidePos--;
+            }
+
+            updateSliderPos();
+        }
+
+        heroSliderPrevBtn.addEventListener("click", slidePrev);
+
+        // auto slide
+
+        let autoSlideInterval;
+
+        const autoSlide = function () {
+            autoSlideInterval = setInterval(function () {
+                slideNext();
+            }, 7000);
+        };
+
+        addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", function () {
+            clearInterval(autoSlideInterval);
+        });
+
+        addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", autoSlide);
+
+        window.addEventListener("load", autoSlide);
+    </script>
 
     <script>
         window.addEventListener('beforeunload', function (event) {
@@ -439,12 +473,27 @@
                 navbar.classList.remove('scrolled');
             }
         });
- main
 
         function openBookingModal() {
             var bookingModal = new bootstrap.Modal(document.getElementById('bookingModal'));
             bookingModal.show();
         }
+    </script>
+    main
+
+    <script type="text/javascript">
+            (function (d, t) {
+                var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+                v.onload = function () {
+                    window.voiceflow.chat.load({
+                        verify: { projectID: '6651593185e25f1a181125a3' },
+                        url: 'https://general-runtime.voiceflow.com',
+                        versionID: 'production'
+                    });
+                }
+                v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+            })(document, 'script');
+
     </script>
  main
 
