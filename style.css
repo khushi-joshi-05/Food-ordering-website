@@ -89,8 +89,18 @@ body {
   .navbar-collapse {
     background-color: rgba(175, 63, 62, 1);
   }
+  .transparent-image{
+    max-width: 60%;
+    max-height: 50%;
+  }
 }
 
+@media (max-width:768px){
+  .transparent-image{
+    max-width: 45%;
+    max-height: 0.1%;
+  }
+}
 
 .intro_container {
   display: flex;
@@ -1313,6 +1323,7 @@ nav {
 
   .navigbar {
     height: 3rem;
+    padding-left: 0.5rem;
   }
 
 }
