@@ -5,6 +5,8 @@
 
 body {
   background-color: black;
+  margin: 0;
+  padding-top: 0;
 }
 
 .head_container:before {
@@ -152,18 +154,22 @@ body {
 }
 
 .butt {
-  border: 1.3px solid brown;
+  width: 80%;
+  border: 1.3px solid red;
   font-size: 1.1rem;
-  padding: 3px 63px 5px 63px;
-  border-radius: 4px;
+  padding: 3px 0;
+  border-radius: 20px;
   font-family: "Bree Serif", serif;
-  margin-top: 8px;
-  background-color: brown;
+  background-color: orangered;
   color: white;
+  margin-bottom: 9px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .butt:hover {
-  background-color: rgb(196, 74, 74);
+  background-color: white;
+  color: orangered;
 }
 
 .menu_items {
@@ -173,23 +179,25 @@ body {
 
 .menu_items .items {
   background-color: #f2f2f2;
+  background: white;
   /* border: 2px solid brown;
   box-shadow: 0 0 10px rgba(138, 37, 37, 0.5); */
   box-shadow: 0 0 10px rgba(224, 224, 252, 0.678);
   border: 1px solid rgb(186, 186, 201);
-  padding: 40px;
+  padding: 0 0  40px 0;
   margin: 5px;
   height: 310px;
   width: 230px;
   border-radius: 10px;
+  /* overflow: hidden; */
   text-align: center;
   font-family: "Bree Serif", serif;
 }
 
 .menu_items .items img {
-  justify-content: center;
   height: 190px;
   width: 230px;
+  border-radius: 10px 10px 0 0;
 }
 
 .menu_items .items h3 {
@@ -198,7 +206,7 @@ body {
 }
 
 .menu_items .items p {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .menu_items .items:hover {
@@ -560,10 +568,7 @@ td {
   /* Yellow color for filled star */
 }
 
-.menu_items .items {
-  position: relative;
-  /* Ensure relative positioning for the parent container */
-}
+
 
 
 /* Cart -> Input Section for Coupon Code  */
@@ -619,19 +624,23 @@ td {
 /* updated nav bar */
 nav {
   height: 3rem;
-  background: #0000007c;
-
+  width: 100%;
+  background-color: black;
 }
 
 .navigbar {
-  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  padding: 0 2rem;
+  background-color: black;
   height: 3rem;
-  width: 95%;
   margin: 0 auto;
-
+  box-sizing: border-box;
 }
 
 .logo {
@@ -652,11 +661,16 @@ nav {
   justify-content: center;
   /* Center items horizontally */
   margin: 0;
-  /* Remove default margin */
   padding: 0;
   /* Remove default padding */
 }
-
+.ul2{
+  justify-content: flex-end;
+}
+.ul1 {
+  flex-grow: 1;
+  justify-content: center;
+}
 .ul1 li a,
 .ul2 li a {
   color: white;

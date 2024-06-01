@@ -289,6 +289,20 @@ body * {
   background: rgba(208, 50, 50, 0.9);
 }
 
+.close-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 36px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+
+
+
 @media only screen and (max-width: 950px) {
   .card-login {
     width: 85%;

@@ -12,6 +12,8 @@
 
 body {
   background-color: black;
+  padding-top: 10px;
+  margin: 0;
 }
 
 .navbar {
@@ -26,7 +28,7 @@ body {
 .navbar a {
   text-decoration: none;
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.3rem;z
 }
 
 .transparent-image {
@@ -1172,7 +1174,12 @@ nav {
 .navigbar {
   display: flex;
   justify-content: space-between;
-  background: #0000007c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  background-color: black; /* Ensure the navbar has a background color */
   padding-left: 2rem;
   padding-right: 2rem;
   align-items: center;
