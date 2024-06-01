@@ -21,6 +21,7 @@
     </div>
     <div class="right-login">
       <div class="card-login">
+        <button class="close-btn">&times;</button>
         <h1>SIGN UP</h1>
         <br>
         <form id="signup-form">
@@ -60,6 +61,12 @@
       pswfield.classList.replace("bxs-show", "bxs-hide");
     }
   });
+
+  const closeBtn = document.querySelector('.close-btn');
+    closeBtn.addEventListener('click', function () {
+      // document.querySelector('.card-login').style.display = 'none';
+      window.location.href='../index.html';
+    });
 </script>
 
 </html>

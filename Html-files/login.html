@@ -22,6 +22,7 @@
     </div>
     <div class="right-login">
       <div class="card-login">
+        <button class="close-btn">&times;</button>
         <h1>LOGIN</h1>
         <br>
         <div class="textfield">
@@ -56,6 +57,12 @@
 
     }
   })
+
+  const closeBtn = document.querySelector('.close-btn');
+    closeBtn.addEventListener('click', function () {
+      // document.querySelector('.card-login').style.display = 'none';
+      window.location.href='../index.html';
+    });
 </script>
 
 </html>
