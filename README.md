@@ -1,9 +1,13 @@
-![gssoc](gssoc.png)
 <div align="center">
+   
+   ![image](https://github.com/khushi-joshi-05/Food-ordering-website/assets/76521579/57ac35c6-c9d9-458d-a0bd-0f600fbded89)
+   
+   ![image](https://github.com/khushi-joshi-05/Food-ordering-website/assets/76521579/94548b28-f4e8-48aa-8a59-8c523cd7c206)
+   
 <h1 >Food Ordering Website</h1>
 
 <br>
- 
+
 ![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103) &nbsp; 
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg) &nbsp;
 <a href="https://github.com/khushi-joshi-05/Food-ordering-website"><img src="https://sloc.xyz/github/khushi-joshi-05/Food-ordering-website" alt="Lines of Code"/></a> &nbsp;
@@ -22,9 +26,9 @@
 </br>
 </div>
 
-Foodie is a food ordering website that aims to provide users with a seamless experience for ordering food online, taking orders for pickup, and booking tables for dining in. The website showcases the quality and specialties of the food offered, along with a variety of services to cater to different user preferences.
+Foodie is a food ordering website that aims to provide users with a seamless experience for ordering food online, taking orders for pickup, and booking tables for dining in. The website showcases the quality and specialities of the food offered, along with a variety of services to cater to different user preferences.
 
-This repository is aimed to help people to contribute in open source and learn Git and Github.
+This repository is aimed to help people to contribute in open source and learn Git and GitHub.
 
 ## Key Features
 
@@ -69,7 +73,7 @@ This repository is aimed to help people to contribute in open source and learn G
 1. Clone the project repository:
 
 ```bash
-git clone https://github.com/yourusername/FoodOrderingWebsite.git
+git clone https://github.com/khushi-joshi-05/FoodOrderingWebsite.git
 ```
 
 2.Navigate to the project directory:
@@ -80,15 +84,15 @@ cd FoodOrderingWebsite
 
 
 3.Open the index.html file in your preferred web browser to view the website locally.
-  
+
 
 
 ## Screenshots
 These are some snapshots of the project.
 
-![Landing Page](homepg.png)
+![Landing Page](Images/homepg.png)
 
-![Service](service.png)
+![Service](Images/service.png)
 
 
 
