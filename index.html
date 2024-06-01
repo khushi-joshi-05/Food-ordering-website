@@ -32,10 +32,21 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
     <script src="hamburger.js" defer></script>
+    <style>
+        .sticky-nav {
+            position: -webkit-sticky; 
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
+    <nav class="sticky-nav">
         <div class="navigbar">
             <div class="logo">
                 <a href="index.html"><img src="Images/sitelogo.png" height="40" class="transparent-image"></a>
@@ -63,16 +74,14 @@
             </ul>
             <div>
                 <ul class="ul2">
-                    <li> <a class="" onclick="redirectLogin()">Login</a></li>
-                    <li> <a class="" onclick="redirectSignup()">Sign Up</a></li>
-                    <li>
-                        <a class="" href="Html-files/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                    </li>
+                    <li><a class="" onclick="redirectLogin()">Login</a></li>
+                    <li><a class="" onclick="redirectSignup()">Sign Up</a></li>
+                    <li><a class="" href="Html-files/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
+    
 
     <section class="hero text-center" aria-label="home" id="home">
         <ul class="hero-slider" data-hero-slider>
@@ -544,5 +553,15 @@
     }
 </script>
 main
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+    var menu = document.getElementById('hamburger-menu');
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'block';
+    }
+});
 
+</script>
 </html>

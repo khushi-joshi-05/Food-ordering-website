@@ -7,33 +7,63 @@ body {
     background-color: black;
 }
 
-.navbar {
-    padding: 8px 0px;
+/* Ensure the body has some margin at the top to prevent content overlap */
+body {
+    margin-top: 60px; /* Adjust according to the height of your navbar */
 }
 
-.navbar ul {
-    overflow: auto;
-    /* background-color: black; */
+/* Basic styles for the navigation bar */
+.navigbar {
+    background-color: #333; /* Change as needed */
+    overflow: hidden;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays on top of other content */
 }
 
-.navbar li {
+/* Style the logo */
+.navigbar .logo {
     float: left;
-    list-style: none;
-    margin: 2px 20px;
-
 }
 
-.navbar li a {
-    padding: 1px 3px;
+/* Style for navigation links */
+.navigbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navigbar ul li {
+    display: inline;
+    padding: 14px 16px;
+}
+
+.navigbar ul li a {
+    color: white; /* Change as needed */
+    text-align: center;
     text-decoration: none;
-    color: white;
-    font-size: 1.3rem;
+    display: block;
 }
 
-.navbar li:hover {
-    opacity: 0.7;
+/* Style for the hamburger menu button */
+.navbar-toggler {
+    display: none; /* Hidden by default */
 }
 
+/* Additional styles for responsiveness */
+@media screen and (max-width: 600px) {
+    .navigbar ul {
+        flex-direction: column;
+    }
+    .navbar-toggler {
+        display: block;
+    }
+}
 
 .intro_container {
     display: flex;
