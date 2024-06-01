@@ -568,8 +568,13 @@ td {
   /* Yellow color for filled star */
 }
 
+.star-button.hover {
+  color: #f1c40f; /* Yellow color for hovered star */
+}
 
-
+.star-button.greyed {
+  color: #ccc; /* Grey color for greyed out star */
+}
 
 /* Cart -> Input Section for Coupon Code  */
 
