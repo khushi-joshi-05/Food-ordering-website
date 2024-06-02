@@ -29,7 +29,7 @@ body {
   height: 500px;
 }
 
-.head_container_service:before {
+/*.head_container_service:before {
   background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
   content: "";
   position: absolute;
@@ -38,8 +38,19 @@ body {
   opacity: 0.4;
   z-index: -1;
 
+}*/
+.service-img{
+  background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
+  /*content: "";
+  position: absolute;
+  height: 800px;
+  width: 100%;
+  opacity: 0.4;*/
+  height:550px;
+  width:100%;
+  padding-top:15px;
+  background-size: cover;
 }
-
 .navbar {
   padding: 8px 10px;
 }
@@ -120,20 +131,20 @@ body {
 .mainhead {
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 50px;
+  /*padding-bottom: 50px;*/
 }
 
 .mainhead h1 {
   font-family: "Bree Serif", serif;
   font-size: 3.8rem;
   color: white;
-  padding-bottom: 20px;
+  /*padding-bottom: 20px;*/
 }
 
 .head_container_service .mainhead {
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 210px;
+  padding-bottom: 10px;
 }
 
 /* .mainhead p {
