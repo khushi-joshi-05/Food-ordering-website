@@ -92,7 +92,7 @@ These are some snapshots of the project.
 
 ![Landing Page](Images/mainPage.png)
 
-![Menu Page](Images/menuPage.png)
+![Menu Page](Images/menupage.png)
 
 ![Services Page](Images/servicesPage.png)
 
