@@ -5,8 +5,8 @@
 
 .poppins-light {
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+  font-weight: 600;
+  font-style:normal;
 }
 
 
@@ -158,6 +158,7 @@ body {
 .about_us {
   background-color: rgb(224, 224, 252);
   padding: 100px 0px 100px 0px;
+  
 }
 
 #about {
@@ -198,7 +199,7 @@ body {
 
 .h-primary {
   font-family: "Bree Serif", serif;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   padding: 40px 80px 80px 80px;
   text-align: center;
   color: brown;
@@ -209,6 +210,7 @@ body {
   font-size: 1.5rem;
   padding: 12px;
   text-align: center;
+  color: brown;
 }
 
 .service_container {
@@ -582,12 +584,13 @@ article p {
 
 .move {
   /* background-color: rgb(147, 22, 33); */
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.145);
-  height: 50px;
+  box-shadow: 0 0 5px 5px rgba(214, 22, 22, 0.145);
+  background-color: black;
+  height: 30px;
 }
 
 .move .text {
-  color: rgb(244, 240, 240);
+  color: rgb(213, 193, 193);
   font-size: 2.5rem;
   padding-top: 10px;
 }
@@ -1098,12 +1101,14 @@ ul {
 
 #marque {
   width: 100%;
-  height: 100%;
+  height: 200%;
   overflow: hidden;
   position: relative;
   white-space: nowrap;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(30, 31, 33);
+  
 }
+
 
 #marque h1 {
   display: inline-block;
@@ -1155,7 +1160,6 @@ ul {
   #marque-container:after {
     content: "Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order! Get 30% OFF on your first order!";
     padding-left: 2px;
-
   }
 }
 
@@ -1187,10 +1191,10 @@ nav {
   justify-content: space-between;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Ensure it stays on top of other content */
-  background-color: black; /* Ensure the navbar has a background color */
+  /* left: 0; */
+  width: -webkit-fill-available;
+  z-index: 1000;
+  background-color: black;
   padding-left: 2rem;
   padding-right: 2rem;
   align-items: center;
