@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Css-files/content.css">
     <link rel="stylesheet" href="../Css-files/services.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -56,7 +57,7 @@
             <h1>S E R V I C E S</h1>
         </div>
 
-        <div class="first_cont">
+        <div class="first_cont" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
             <div class="items">
                 <img
                     src="https://destinationlesstravel.com/wp-content/uploads/2023/09/A-selection-of-local-cuisine-as-seen-on-a-food-tour-in-Lima-Peru-that-we-got-to-try.jpg.webp">
@@ -89,9 +90,9 @@
 
         <section class="testimonalsection" id="testimonal">
 
-            <h2 class=section__title>CUSTOMER OPINION</h2>
+            <h2 class=section__title data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">CUSTOMER OPINION</h2>
 
-            <div class="testimonal__container">
+            <div class="testimonal__container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
                 <div class="testimonal__swiper">
                     <div>
                         <article class="testimonal__card">
@@ -184,11 +185,11 @@
         </section>
 
         <div class="second_cont">
-            <div class="deals">
+            <div class="deals" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
                 <i class="fa-solid fa-gift"></i>
                 <p>Gift Card and Voucher Redemption</p>
             </div>
-            <div class="deals">
+            <div class="deals" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
                 <i class="fa-solid fa-ticket"></i>
                 <p>Exclusive Offers and Promotions </p>
             </div>
@@ -264,6 +265,16 @@
     </footer>
 
     <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init(
+        {
+          duration: 1000, 
+          easing: 'ease', 
+          once: false, 
+        }
+      );
+    </script>
 </body>
 
 </html>
