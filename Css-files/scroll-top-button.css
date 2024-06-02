@@ -8,8 +8,9 @@
 
 .scroll-top-button {
   position: fixed;
-  top: 82%;
-  right: 2.4%;
+  /* top: auto; */
+  bottom: 3.2%;
+  left: 1.4%;
   width: 40px;
   height: 40px;
   display: flex;
@@ -26,15 +27,15 @@
 
 @keyframes bouncing {
   0% {
-    top: 82%;
+    transform: translateY(0);
   }
 
   50% {
-    top: 81%;
+    transform: translateY(-5px);
   }
 
   100% {
-    top: 82%;
+    transform: translateY(0);
   }
 }
 
