@@ -51,6 +51,7 @@ body {
   font-family: var(--primary-font);
   font-size: 100%;
   font-weight: 400;
+  background-color: brown;
 }
 
 #active-page {
@@ -101,6 +102,8 @@ h2 {
   font-family: var(--secondry-font);
   color: var(--secondry-color);
   line-height: 3rem;
+  color: whitesmoke;
+  padding-bottom: 2rem;
 }
 
 h4 {
@@ -243,12 +246,18 @@ nav {
 .navigbar {
   display: flex;
   justify-content: space-between;
-  background: #0000007c;
+  background: black;
   padding-left: 2rem;
   padding-right: 2rem;
   align-items: center;
   padding-bottom: 1rem;
   padding-top: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  background-color: black; /* Ensure the navbar has a background color */
 }
 
 .logo {
@@ -387,14 +396,14 @@ nav {
  explore food section Design
 ==========================================
 */
-.explore-food .card {
-  border: none;
-  background-color: transparent;
+
+.explore-food .card{
+  background-color:transparent;
   border-radius: 0.9375rem;
 }
 
 .explore-food .card :hover {
-  transform: scale(0.9);
+  transform: scale(0.99);
 }
 
 .explore-food .card img {
@@ -408,13 +417,15 @@ nav {
   display: block;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  /* color:var(--primary-color); */
+  color: white;
   padding-bottom: 1rem;
   border-bottom: 0.0625rem solid #eee;
 }
 
-.explore-food p {
-  color: var(--text-color);
+.explore-food p{
+  /* color:var(--text-color); */
+  color: white;
   font-size: 14px;
   line-height: 22px;
 }
@@ -459,10 +470,10 @@ nav {
   bottom: -2.8125rem;
 }
 
-.testimonial-section .carousel-indicators button {
-  width: 15px;
-  height: 15px;
-  outline: none;
+.testimonial-section .carousel-indicators button{
+  width:15px;
+  height:15px;
+  outline:auto;
   border-radius: 50%;
   border: none;
   margin-right: 1rem;
@@ -527,8 +538,9 @@ ul a {
 
 }
 
-.copyright {
-  padding-top: 10px;
+.copyright{
+ padding-top: 10px;
+ padding-bottom: 10px;
 }
 
 form {
@@ -615,10 +627,11 @@ textarea {
   font-size: 0.875rem;
   width: 100%;
   border-radius: 0;
-  background: transparent;
-  border: 0.1875rem solid var(--white-color);
-  color: var(--black-color);
-  font-weight: 700;
+  background:transparent;
+  border:0.1875rem solid var(--white-color);
+  color:var(--black-color);
+  font-weight: 500;
+
 }
 
 .newsletter .main-btn {
@@ -627,9 +640,10 @@ textarea {
   font-size: 0.875rem;
   border-radius: 0;
   background-color: var(--white-color);
-  border: 0.1875rem solid var(--white-color);
-  color: var(--black-color);
-  font-weight: 700;
+  border:0.1875rem solid var(--white-color);
+  color:var(--black-color);
+  font-weight: 500;
+
 }
 
 .newsletter:hover .form-control {
@@ -646,8 +660,8 @@ textarea {
 .newsletter .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: var(--primary-color);
-}
+  /* border-color:var(--primary-color);  */
+
 
 /* <!--Responsive Design--> */
 @media only screen and (max-width: 800px) {

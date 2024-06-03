@@ -113,15 +113,15 @@
     width: 100%;
 }
 
-<<<<<<< HEAD .empty-cart h4,
+ HEAD .empty-cart h4,
 .empty-cart button {
-    =======.butt {
+    .butt {
         color: white;
     }
 
     .empty-cart h4,
     .empty-cart button {
-        >>>>>>>59a67a53a38fb9bc9e0501c4444bec55e9a10769 margin: 20px;
+         margin: 20px;
     }
 
     input,
@@ -141,3 +141,4 @@
             gap: 5px;
         }
     }
+}

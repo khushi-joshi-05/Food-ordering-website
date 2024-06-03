@@ -155,7 +155,7 @@
                 <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.</p>
 
                 <div class="copyright">
-                    &copy; 2024 Foodies - All Rights Reserved | <span id="author">
+                    &copy; <span id="copyright-year"></span> Foodies - All Rights Reserved | <span id="author">
                         <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
                     </span></p>
                 </div>
@@ -163,6 +163,7 @@
         </div>
     </footer>
 
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
 
     <!-- <script src="../cart.js"></script> -->
     <script src="cart.js">
