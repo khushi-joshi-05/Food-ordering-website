@@ -51,7 +51,7 @@ function updateTotal() {
         total += price * quantity;
     });
 
-    document.getElementById('cart-total').innerHTML = (total!=0) ? `<span>Subtotal:</span> $${total.toFixed(2)}` : ``;
+    document.getElementById('cart-total').innerHTML = (total != 0) ? `<span>Subtotal:</span> $${total.toFixed(2)}` : ``;
     handleEmptyCart(total)
 }
 

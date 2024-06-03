@@ -1,0 +1,44 @@
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+.scroll-top-button {
+  position: fixed;
+  /* top: auto; */
+  bottom: 3.2%;
+  left: 1.4%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, rgb(234, 16, 16), #f2a736);
+  color: #f3f7f8;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  display: none;
+}
+
+@keyframes bouncing {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.scroll-top-button {
+  animation: bouncing 1s infinite ease-in-out;
+}
