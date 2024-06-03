@@ -2,7 +2,15 @@
     box-sizing: border-box;
     font-family: "Bree Serif", serif;
 }
-
+.navigbar {
+    top: 40px;
+  }
+  .mainhead {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    /*padding-bottom: 50px;*/
+  }
 .cart-section {
     align-items: center;
     padding: 25px 15px;
@@ -119,6 +127,18 @@
 input,
 textarea {
     width: 100%;
+}
+.coupen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* padding: 10px; */
+    padding: 10px;
+    height: 40px;
+    background-color: brown;
+    color: aliceblue;
+    z-index: 2000;
 }
 @media all and (max-width: 768px) {
     .cart {
