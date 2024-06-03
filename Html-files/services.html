@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../Css-files/content.css">
     <link rel="stylesheet" href="../Css-files/services.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../Css-files/scroll-top-button.css">
 </head>
 
 <body>
@@ -287,7 +288,15 @@
             </div>
         </div>
     </footer>
+     <!--Scroll top button-->
 
+     <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
+            class="arrow">
+            <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+        </svg>
+    </button>
+    <!--Scroll top button finish-->
     <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -299,6 +308,7 @@
         }
       );
     </script>
+    <script src="top.js"></script>
 </body>
 
 </html>
