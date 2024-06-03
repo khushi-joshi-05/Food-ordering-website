@@ -42,7 +42,7 @@
     <nav>
         <div class="navigbar">
             <div class="logo">
-                <a href="index.html"><img src="Images/sitelogo.png" height="40" class="transparent-image"></a>
+                <a href="index.html"><img src="Images/Foodielogo.png" height="40" class="transparent-image"></a>
             </div>
             <button class="navbar-toggler" id="menu-toggle" aria-label="Toggle navigation">
                 <span class="bar"></span>
@@ -455,7 +455,7 @@
                     <a href="#">Contactless Payments</a>
                 </ul>
 
-                <form id="contactForm">
+                <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
                     <h3>Contact Us!</h3>
                     <!-- <label for="name">Name:</label> -->
                     <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>-->
@@ -528,8 +528,8 @@
 
             updateSliderPos();
         }
-        heroSliderNextBtn.addEventListener("click", slideNext);
-
+        heroSliderNextBtn.addEventListener("click", slideNext)
+  
         const slidePrev = function () {
             if (currentSlidePos <= 0) {
                 currentSlidePos = heroSliderItems.length - 1;
@@ -562,6 +562,7 @@
     </script>
 
     <script src="Html-files/top.js"></script>
+  
     <script>
         window.addEventListener('beforeunload', function (event) {
             localStorage.clear();
@@ -602,7 +603,7 @@
     </script>
     main
 
-    <script type="text/javascript">
+<!--     <script type="text/javascript">
             (function (d, t) {
                 var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
                 v.onload = function () {
@@ -614,7 +615,7 @@
                 }
                 v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
             })(document, 'script');
-    </script>
+    </script> -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init(
@@ -625,6 +626,31 @@
         }
       );
     </script>
+  
+<!--  Chatbot  -->
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Message...",
+      "botConversationDescription": "Welcome to Foodie!",
+      "botId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+      "webhookId": "7bd6ccb8-58f4-4ee3-9bca-f33ea4b7c37c",
+      "lazySocket": true,
+      "themeName": "prism",
+      "botName": "Foodie",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/da4ab5f7-146c-4585-961b-2d9def26af50/v96339/style.css",
+      "frontendVersion": "v1",
+      "useSessionStorage": true,
+      "enableConversationDeletion": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": []
+  });
+</script>
+  
 </body>
 <script>
     function redirectLogin() {
