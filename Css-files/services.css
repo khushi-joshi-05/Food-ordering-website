@@ -1,5 +1,6 @@
 * {
     font-family: "Bree Serif", serif;
+    box-sizing: border-box;
 }
 
 .mainhead:hover h1 {
@@ -167,4 +168,8 @@ textarea {
 
 #butt:hover {
     background-color: rgb(196, 89, 89);
+}
+
+footer{
+    width: 100%;
 }
