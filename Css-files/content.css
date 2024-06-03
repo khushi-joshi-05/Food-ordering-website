@@ -764,7 +764,11 @@ main {
 
 .contact-form-section .form-background {
   /* background-image: url("form_background.jpg"); */
-  background-color: rgb(243, 218, 252);
+  background: linear-gradient(
+    to top left,
+    rgb(247, 218, 244),
+    rgb(255, 230, 251)
+  );
   background-size: cover;
   background-position: center;
   padding: 10px;
@@ -827,7 +831,7 @@ main {
 .get-in-touch h1 {
   font-size: 2.8rem;
   color: #333;
-  margin-top: 169px;
+  margin-top: 210px;
   font-weight: bold; /* Bold text */
 }
 
