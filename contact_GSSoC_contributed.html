@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="contact_page">
+    <header class="contact_header">
+        <nav class="navbar">
+            <ul id="header-items">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact_Samarup.html">Contact us</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main_content">
+        <div class="contact_info">
+            <h2 class="get_in_touch">Get in Touch</h2>
+            <p class="contact_message">Hi, thank you so much for choosing Foodies today. Please fill out this form and
+                we will get back to you ASAP.</p>
+            <form action="/submit" method="POST" class="contact_form">
+                <input required class="contact_name" type="text" placeholder="Your Name" />
+                <input required class="contact_email" type="email" placeholder="You Email" />
+                <input required class="contact_number" type="number" min="0" max="9999999999" pattern="[0-9]{10,}"
+                    placeholder="Your Mobile No." />
+                <input required class="contact_textarea" type="textarea" placeholder="Your Query" />
+                <button class="contact_submit" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="contact_us">
+            <h1>Contact Us</h1>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot-panel2">
+            <ul class="footer-colums">
+                <p>Our Pages</p>
+                <a>Home</a>
+                <a>Menu</a>
+                <a>Services</a>
+                <a>Contact</a>
+                <a>Cart</a>
+            </ul>
+
+            <ul class="footer-colums">
+                <p> Exclusive Offers</p>
+                <a>Foodie Discounts</a>
+                <a>Limited-Time Promotions</a>
+                <a>Special Event Packages</a>
+                <a>Membership Benefits</a>
+                <a>Early Access to New Recipes</a>
+                <a>VIP Foodie Events</a>
+                <a>Personalized Culinary Experiences</a>
+            </ul>
+
+            <ul class="footer-colums">
+                <p>Payment Products</p>
+                <a>Secure Checkout</a>
+                <a>Credit/Debit Cards</a>
+                <a>Online Payment</a>
+                <a>Mobile Wallets</a>
+                <a>Contactless Payments</a>
+            </ul>
+
+            <form id="contactForm">
+                <h3>Contact Us!</h3>
+                <!-- <label for="name">Name:</label> -->
+                <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>-->
+                <!-- <label for="email">Email:</label> -->
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <!-- <label for="message">Message:</label> -->
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+                <button id="butt" type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="foot_panel4">
+            <div class="pages">
+                <h4>Follow Us</h4>
+
+                <div class="social-icons">
+                    <a class="fa-brands fa-facebook"></a>
+                    <a class="fa-brands fa-instagram"></a>
+                    <a class="fa-brands fa-twitter"></a>
+                    <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
+                        target="_blank"></a>
+                    <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
+                </div>
+                <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
+                </p>
+                <div class="copyright">
+                    &copy; 2024 Foodies . All Rights Reserved. | Developed by Khushi Joshi</p>
+                </div>
+            </div>
+    </footer>
+</body>
+
+</html>
