@@ -101,6 +101,32 @@ body {
     max-height: 0.1%;
   }
 }
+.search-bar {
+  position: relative;
+  display: flex; 
+}
+.search-bar input[type="text"] {
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  margin-top: 10px; 
+}
+
+.search-bar button {
+  padding: 1px; 
+  background-color: #ddd; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.search-bar button:hover {
+  background-color: #ccc; /* Changes button color on hover */
+}
+
 
 .intro_container {
   display: flex;
@@ -1119,8 +1145,7 @@ ul {
   background: #de6262;
   background: -webkit-linear-gradient(to right, #de6262, #ffb88c);
   background: linear-gradient(to right, #de6262, #ffb88c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  
 }
 
 @keyframes marquee {
