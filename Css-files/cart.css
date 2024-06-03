@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: "Bree Serif", serif;
 }
 .cart-section {
     align-items: center;
@@ -98,6 +99,13 @@
 input,
 textarea {
     width: 100%;
+}
+.coupen {
+    width: 100%;
+    background-color: rgb(196, 74, 74);
+    padding: 5px;
+    color: white;
+    letter-spacing: 2px;
 }
 @media all and (max-width: 768px) {
     .cart {
