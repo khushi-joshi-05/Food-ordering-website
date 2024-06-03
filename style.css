@@ -209,7 +209,7 @@ body {
   font-size: 1.5rem;
   padding: 12px;
   text-align: center;
-  color: black;
+  color: brown;
 }
 
 .service_container {
@@ -1651,3 +1651,7 @@ nav {
 .btn-primary {
   --bs-btn-bg: #c63232;
 }
+
+
+
+
