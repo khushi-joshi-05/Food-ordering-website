@@ -47,6 +47,14 @@ To get started with Food ordering website, follow these simple steps:
       cd client
       npm install
    ```
+   After installing required Packages
+   ```bash
+   npm run dev
+   ```
+   To know our build is working properly or not 
+   ```bash 
+   npm run build
+   ```
 3. Make Your Changes: Make the necessary modifications or additions to the project files.
 
 4. Commit and Push Once you've made your changes, commit them and push to your fork:
