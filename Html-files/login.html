@@ -11,17 +11,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <title>Login</title>
 </head>
 
 <body>
   <div class="main-login">
-    <div class="left-login">
+    <div class="left-login" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
       <h1>Login Here<br>Delicious food is waiting for You</h1>
       <img src="../Images/food.jpg" class="left-login-image" alt="food">
     </div>
     <div class="right-login">
-      <div class="card-login">
+      <div class="card-login" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
+        <button class="close-btn">&times;</button>
         <h1>LOGIN</h1>
         <br>
         <div class="textfield">
@@ -40,6 +42,16 @@
       </div>
     </div>
   </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init(
+      {
+        duration: 1000, 
+        easing: 'ease', 
+        once: false, 
+      }
+    );
+  </script>
 </body>
 <script>
   const passwordinput = document.getElementById("password");
@@ -56,6 +68,12 @@
 
     }
   })
+
+  const closeBtn = document.querySelector('.close-btn');
+    closeBtn.addEventListener('click', function () {
+      // document.querySelector('.card-login').style.display = 'none';
+      window.location.href='../index.html';
+    });
 </script>
 
 </html>
