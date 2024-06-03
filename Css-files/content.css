@@ -758,13 +758,13 @@ main::before {
 
 main {
   position: relative;
-  background-color: #fdf4fd;
+  background-color: #fdf6fc;
   z-index: 0;
 }
 
 .contact-form-section .form-background {
   /* background-image: url("form_background.jpg"); */
-  background-color: rgb(241, 225, 247);
+  background-color: rgb(243, 218, 252);
   background-size: cover;
   background-position: center;
   padding: 10px;
@@ -802,7 +802,7 @@ main {
 }
 
 .contact-form .btn {
-  background-color: #fcbdc2;
+  background-color: #fda8af;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -813,7 +813,7 @@ main {
 }
 
 .contact-form .btn:hover {
-  background-color: #f88484;
+  background-color: #fc7676;
 }
 
 .contact-form-section {
@@ -827,7 +827,7 @@ main {
 .get-in-touch h1 {
   font-size: 2.8rem;
   color: #333;
-  margin-top: 150px;
+  margin-top: 169px;
   font-weight: bold; /* Bold text */
 }
 
