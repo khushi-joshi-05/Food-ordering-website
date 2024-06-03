@@ -33,45 +33,31 @@
   <!-- header design section -->
   <nav>
     <div class="navigbar">
-      <div class="logo">
-        <a href="../index.html"><img src="../Images/sitelogo.png" height="40" class="transparent-image"></a>
-      </div>
-      <button class="navbar-toggler" id="menu-toggle" aria-label="Toggle navigation">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-      <!-- Hamburger menu list -->
-      <ul class="hamburger-menu" id="hamburger-menu">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="ContactUpdate.html">Offers</a></li>
-        <li><a class="" href="/Html-files/login.html">Login</a></li>
-        <li><a class="" href="signup.html">Sign Up</a></li>
-        <li><a class="" href="cart.html">Cart</a></li>
-      </ul>
+        <div class="logo">
+            <a href="../index.html"><img src="../Images/sitelogo.png" height="40" class="transparent-image"></a>
+        </div>
 
-      <ul class="ul1" id="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="ContactUpdate.html">Offers</a></li>
-      </ul>
-
-      <div>
-        <ul class="ul2">
-          <li> <a class="" href="/Html-files/login.html">Login</a></li>
-          <li> <a class="" href="signup.html">Sign Up</a></li>
-          <li>
-            <a class="" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-          </li>
+        <ul class="ul1">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="menu.html" id="active-page">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="ContactUpdate.html">Offers</a></li>
         </ul>
-      </div>
+        <div>
+            <ul class="ul2">
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li>
+                    <a href="cart.html">
+                        <i class="fa-solid fa-cart-shopping"> <span id="cart-count" class="cart-count">0</span></i>
+                       
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
 
   <!--explore food section-->
   <section id="explore-food">
@@ -264,6 +250,35 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
   <!-- own js -->
   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        updateCartCount();
+
+        function updateCartCount() {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            let itemCount = cartItems.length;
+            document.getElementById('cart-count').textContent = itemCount;
+        }
+
+        // Add an event listener for adding items to the cart (assuming you have an 'Add to cart' button)
+        document.querySelectorAll('.add-to-cart-button').forEach(button => {
+            button.addEventListener('click', function() {
+                let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                let newItem = {
+                    id: this.dataset.id,
+                    name: this.dataset.name,
+                    unitPrice: parseFloat(this.dataset.price),
+                    price: parseFloat(this.dataset.price),
+                    quantity: 1,
+                    image: this.dataset.image
+                };
+                cartItems.push(newItem);
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                updateCartCount();
+            });
+        });
+    });
+</script>
+  <script>
     function redirectLogin() {
       window.location.href = "/login.html";
     }
@@ -272,6 +287,35 @@
       window.location.href = "Html-files/signup.html";
     }
   </script>
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        updateCartCount();
+
+        function updateCartCount() {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            let itemCount = cartItems.length;
+            document.getElementById('cart-count').textContent = itemCount;
+        }
+
+        // Add an event listener for adding items to the cart (assuming you have an 'Add to cart' button)
+        document.querySelectorAll('.add-to-cart-button').forEach(button => {
+            button.addEventListener('click', function() {
+                let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                let newItem = {
+                    id: this.dataset.id,
+                    name: this.dataset.name,
+                    unitPrice: parseFloat(this.dataset.price),
+                    price: parseFloat(this.dataset.price),
+                    quantity: 1,
+                    image: this.dataset.image
+                };
+                cartItems.push(newItem);
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                updateCartCount();
+            });
+        });
+    });
+</script>
 </body>
 
 </html>
