@@ -716,22 +716,32 @@ ul a {
 }
 
 form {
-  padding-top: 20px;
+  padding: 20px;
   display: grid;
   /* gap: 10px; */
   padding-bottom: 100px;
+  text-align: center;
 }
 
 label {
   font-weight: bold;
 }
 
-input,
-textarea {
+input{
   height: 30px;
-  width: max-content;
+  /* width: max-content; */
   padding: 3px;
+  margin:10px 0; 
   box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  border: #212123 1px;
+}
+
+textarea{
+  height: 100px;
+  resize: none;
+  margin-bottom: 10px;
   border-radius: 4px;
   outline: none;
   border: #212123 1px;

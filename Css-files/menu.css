@@ -150,3 +150,37 @@ section:nth-child(even) {
   margin-left: 1rem;
   font-size: 2.5rem;
 }
+
+input{
+  height: 30px;
+  /* width: max-content; */
+  padding: 3px;
+  margin:10px 0; 
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  border: #212123 1px;
+}
+
+textarea{
+  height: 100px;
+  resize: none;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  outline: none;
+  border: #212123 1px;
+}
+
+#butt {
+  background-color: rgb(117, 21, 21);
+  color: white;
+  padding: 3px;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#butt:hover {
+  background-color: rgb(196, 89, 89);
+}
+

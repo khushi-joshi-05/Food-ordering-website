@@ -430,7 +430,7 @@ body {
 }
 
 .foot-panel2 ul {
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 ul p {
@@ -448,6 +448,12 @@ ul a {
 .foot-panel2 ul a:hover {
     text-decoration: underline;
     color: #dddddd;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    height: auto !important;
 }
 
 /* .foot-pannel3{
@@ -494,8 +500,7 @@ label {
     font-weight: bold;
 }
 
-input,
-textarea {
+input{
     height: 30px;
     width: max-content;
     padding: 3px;
@@ -660,8 +665,7 @@ textarea {
         margin-top: 20px;
     }
 
-    input,
-    textarea {
+    input{
         height: 30px;
         width: 90%;
         padding: 3px;
