@@ -171,11 +171,12 @@ body * {
 
 .main-login {
   width: 100vw;
-  height: 100vh;
+  height: 90%;
   background: brown;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
 }
 
 .left-login {
@@ -206,6 +207,8 @@ body * {
 
 .card-login {
   width: 60%;
+  height: 95vh;
+  /* overflow-y: auto; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -266,9 +269,16 @@ body * {
 
 .btn-login,
 #google-login {
-  width: 100%;
-  padding: 16px 0;
-  margin: 10px 0;
+  width: 90%;
+  /* display: flex; */
+  /* align-items: center; */
+  padding: 8px 0;
+  height: auto;
+margin-left: 10px;  
+  margin-bottom: auto;
+  /* overflow-y: auto; */
+  /* margin-left: auto; */
+  /* align-items: center; */
   border: none;
   border-radius: 8px;
   outline: none;
