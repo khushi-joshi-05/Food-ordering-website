@@ -1,98 +1,3 @@
-// const menuContainer= document.querySelector('.menu_container')
-// menuContainer.innerHTML=``
-
-// const categories = [
-//     "Beef", "Breakfast", "Chicken", "Dessert", "Goat",
-//     "Lamb", "Miscellaneous", "Pasta", "Pork", "Seafood",
-//     "Side", "Starter", "Vegan", "Vegetarian"
-// ]
-
-// async function getMealsByCategory(category) {
-//     const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`;
-//     const response = await fetch(url);
-//     const data = await response.json();
-//     return data.meals || [];
-// }
-
-// // Function to log image source and name of the dish for a given category
-// async function getMealDataByCategory(category) {
-//     try {
-//         const meals = await getMealsByCategory(category);
-//         return meals.map(meal => ({
-//             name: meal.strMeal,
-//             imgSrc: meal.strMealThumb
-//         }));
-//     } catch (error) {
-//         console.error('Error fetching meals:', error);
-//         return [];
-//     }
-// }
-
-// // Example usage for the category "Seafood"
-// // (async () => {
-// //     const mealData = await getMealDataByCategory('Seafood');
-// //     console.log(mealData);
-// // })();
-// let mealData
-// categories.forEach(async(category)=>{
-//     (async () => {
-//         mealData = await getMealDataByCategory(category);
-//         console.log(mealData);
-//     })();
-//     function renderMeals(){
-//         mealData.forEach(mealDetails=>{
-//             return `
-//             <div class="items">
-//       <img
-//         src="${mealDetails.imgScr}"
-//       />
-
-//       <h3>${mealDetails.name}</h3>
-//       <p>$10.20</p>
-//       <!-- <button class="but">Add to Cart</button> -->
-//       <button
-//         class="butt add-to-cart-button"
-//         data-product-id="1.01"
-//         data-product-name="Indian Thali"
-//         data-product-price="10.20"
-//       >
-//         Add to Cart
-//       </button>
-
-//       <div class="star-rating">
-//         <button class="star-button" onclick="rateItem(this, 1)">
-//           <i class="fas fa-star"></i>
-//         </button>
-//         <button class="star-button" onclick="rateItem(this, 2)">
-//           <i class="fas fa-star"></i>
-//         </button>
-//         <button class="star-button" onclick="rateItem(this, 3)">
-//           <i class="fas fa-star"></i>
-//         </button>
-//         <button class="star-button" onclick="rateItem(this, 4)">
-//           <i class="fas fa-star"></i>
-//         </button>
-//         <button class="star-button" onclick="rateItem(this, 5)">
-//           <i class="fas fa-star"></i>
-//         </button>
-//       </div>
-//     </div>
-//   </a>
-//             `
-//         })
-//     }
-//     menuContainer.innerHTML+=`<h2
-//     data-aos="zoom-out-left"
-//     data-aos-duration="1000"
-//     data-aos-offset="170"
-//     data-aos-easing="ease-in-out"
-//   >
-//     ${category}
-//   </h2>
-//   ${renderMeals()}
-//     `
-// })
-
 const menuContainer = document.querySelector(".menu_container");
 menuContainer.innerHTML = ``;
 
@@ -145,8 +50,8 @@ function renderMeals(mealData) {
             <h3>${mealDetails.name}</h3>
             <p>$10.20</p>
             <button class="butt add-to-cart-button"
-                    data-product-id="1.01"
                     data-product-name="${mealDetails.name}"
+                    data-product-imgsource="${mealDetails.imgSrc}"
                     data-product-price="10.20">
                 Add to Cart
             </button>
@@ -173,6 +78,7 @@ function renderMeals(mealData) {
     .join(""); // Join the array into a single string
 }
 
+async function RenderPage() {
 categories.forEach(async (category) => {
   const mealData = await getMealDataByCategory(category);
   const renderedMeals = renderMeals(mealData);
@@ -194,6 +100,57 @@ categories.forEach(async (category) => {
 >
   ${renderedMeals}
 </div>
-
     `;
-});
+  });
+}
+
+// Function to get cart items from local storage
+function getCartItems() {
+  const cartItems = localStorage.getItem('cartItems');
+  return cartItems ? JSON.parse(cartItems) : [];
+}
+
+// Function to set cart items to local storage
+function setCartItems(cartItems) {
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+}
+
+// Function to handle add to cart button click
+function cartBtn() {
+  menuContainer.addEventListener('click', (event) => {
+    const clickedElement = event.target;
+    if (clickedElement.classList.contains('add-to-cart-button')) {
+      const productName = clickedElement.dataset.productName;
+      const productImgSource = clickedElement.dataset.productImgsource;
+      const productPrice = clickedElement.dataset.productPrice;
+
+      // Get the current cart items
+      const cartItems = getCartItems();
+
+      // Check if the item is already in the cart
+      const existingCartItem = cartItems.find(item => item.name === productName);
+
+      if (existingCartItem) {
+        // If the item is already in the cart, increase the quantity
+        existingCartItem.quantity += 1;
+      } else {
+        // If the item is not in the cart, add it with quantity 1
+        cartItems.push({
+          name: productName,
+          imgSrc: productImgSource,
+          quantity: 1,
+          price: productPrice,
+        });
+      }
+      // console.log(cartItems);
+
+      // Save the updated cart items to local storage
+      setCartItems(cartItems);
+      
+    }
+  });
+}
+
+// Call the functions in the desired order
+RenderPage();
+cartBtn();
