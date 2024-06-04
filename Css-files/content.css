@@ -50,7 +50,7 @@ body {
   padding-top: 15px;
   background-size: cover;
 }
-.navbar {
+/* .navbar {
   padding: 8px 10px;
 }
 
@@ -73,7 +73,7 @@ body {
   text-decoration: none;
   color: white;
   font-size: 1.3rem;
-}
+} */
 
 /* Styling for the contact navbar */
 .navbarbg {
@@ -635,7 +635,7 @@ td {
 }
 
 /* updated nav bar */
-nav {
+/* nav {
   height: 3rem;
   width: 100%;
   background-color: black;
@@ -648,7 +648,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* Ensure it stays on top of other content */
+  z-index: 1000; 
   padding: 0 2rem;
   background-color: black;
   height: 3rem;
@@ -670,12 +670,9 @@ nav {
   list-style-type: none;
   align-items: center;
   flex: 1;
-  /* Distribute remaining space equally */
   justify-content: center;
-  /* Center items horizontally */
   margin: 0;
   padding: 0;
-  /* Remove default padding */
 }
 .ul2 {
   justify-content: flex-end;
@@ -702,7 +699,7 @@ nav {
 
 .cart {
   color: white;
-}
+} */
 
 .contact-form-section {
   display: flex;
