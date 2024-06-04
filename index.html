@@ -57,15 +57,15 @@
                         <a class="nav-link" href="Html-files/contact.html">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/ContactUpdate.html">Offers</a>
+                        <a class="nav-link" href="Html-files/offers.html">Offers</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav end-links">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="redirectLogin()">Login</a>
+                        <a class="nav-link" href="Html-files/login.html">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="redirectSignup()">Sign-Up</a>
+                        <a class="nav-link" href="Html-files/signup.html">Sign-Up</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/cart.html">
@@ -155,30 +155,6 @@
         window.addEventListener("beforeunload", function (event) {
             localStorage.clear();
         });
-
-        const btn = document.querySelector(".btn");
-        btn.onclick = () => {
-            location.href = "./Html-files/menu.html";
-        };
-        main;
-
-        function redirectLogin() {
-            window.location.href = "Html-files/login.html";
-        }
-
-        function redirectSignup() {
-            window.location.href = "Html-files/signup.html";
-        }
-
-        window.addEventListener("scroll", function () {
-            var navbar = document.querySelector(".navbar");
-            if (window.scrollY > 60) {
-                // Adjust as needed based on when you want the effect to start
-                navbar.classList.add("scrolled");
-            } else {
-                navbar.classList.remove("scrolled");
-            }
-        });
     </script>
     <!-- <script type="text/javascript">
         (function (d, t) {
@@ -233,12 +209,6 @@
 
 </body>
 <script>
-    function redirectLogin() {
-        window.location.href = "Html-files/login.html";
-    }
-    function redirectSignup() {
-        window.location.href = "Html-files/signup.html";
-    }
     document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function () {
             document.querySelector("body").classList.add("loaded");
