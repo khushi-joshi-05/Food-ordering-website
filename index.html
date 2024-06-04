@@ -26,10 +26,10 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./login1.css">
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -151,7 +151,6 @@
             new Date().getFullYear();
     </script>
     <script src="Html-files/top.js"></script>
-  
     <script>
         window.addEventListener("beforeunload", function (event) {
             localStorage.clear();
@@ -180,32 +179,22 @@
                 navbar.classList.remove("scrolled");
             }
         });
-
-        window.addEventListener("scroll", function () {
-            var navbar = document.querySelector(".navbar");
-            if (window.scrollY > 60) {
-                // Adjust as needed based on when you want the effect to start
-                navbar.classList.add("scrolled");
-            } else {
-                navbar.classList.remove("scrolled");
-            }
-        });
-        main;
     </script>
-    main
-
-<!--     <script type="text/javascript">
-            (function (d, t) {
-                var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-                v.onload = function () {
-                    window.voiceflow.chat.load({
-                        verify: { projectID: '6651593185e25f1a181125a3' },
-                        url: 'https://general-runtime.voiceflow.com',
-                        versionID: 'production'
-                    });
-                }
-                v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-            })(document, 'script');
+    <!-- <script type="text/javascript">
+        (function (d, t) {
+            var v = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            v.onload = function () {
+                window.voiceflow.chat.load({
+                    verify: { projectID: "6651593185e25f1a181125a3" },
+                    url: "https://general-runtime.voiceflow.com",
+                    versionID: "production",
+                });
+            };
+            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+            v.type = "text/javascript";
+            s.parentNode.insertBefore(v, s);
+        })(document, "script");
     </script> -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -257,5 +246,4 @@
 });
 
 </script>
-main
 </html>
