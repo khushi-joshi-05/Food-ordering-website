@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
       incrementCounter(item);
     });
 
-
     item.querySelector('.decrease').addEventListener('click', function () {
       decrementCounter(item);
     });
@@ -72,16 +71,3 @@ document.addEventListener('DOMContentLoaded', function () {
     button.addEventListener('click', redirectToCart);
   });
 });
-
-});
-function rateItem(button, rating) {
-    const starButtons = button.parentElement.querySelectorAll('.star-button');
-
-    starButtons.forEach((starButton, index) => {
-        if (index < rating) {
-            starButton.classList.add('rated');
-        } else {
-            starButton.classList.remove('rated');
-        }
-    });
-}
