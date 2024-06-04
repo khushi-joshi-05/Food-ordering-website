@@ -85,10 +85,10 @@ body {
 
 h1 {
   font-size: 58px;
-  font-weight: 900;
+  font-weight: bolder;
   margin-bottom: 1rem;
-  color: var(--white-color);
-  text-shadow: 1px 0 6px #000;
+  color:white;
+  text-shadow: 3px 0 6px #000;
 }
 
 h1 span {
@@ -97,7 +97,7 @@ h1 span {
 
 h2 {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 3rem;
   text-transform: capitalize;
   font-family: var(--secondry-font);
   color: var(--secondry-color);
@@ -119,9 +119,10 @@ h5 {
   color: var(--black-color);
   text-transform: capitalize;
   font-family: var(--secondry-font);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: bolder;
   margin-bottom: 0.5rem;
+  text-shadow: 0 0 12px white;
 }
 
 p {
@@ -138,7 +139,7 @@ p {
   line-height: 1.5625rem;
   background-color: rgb(138, 37, 37);
   ;
-  border: 0.1875rem solid yellow;
+  border: 0.1875rem solid rgb(10, 10, 9);
   color: var(--white-color);
   font-size: 0.9375rem;
   font-weight: 600;
@@ -152,8 +153,8 @@ p {
 }
 
 .main-btn:hover {
-  background-color: transparent;
-  color: var(--primary-color);
+  background-color: white;
+  color: black;
 }
 
 .wrapper {
@@ -398,12 +399,14 @@ nav {
 */
 
 .explore-food .card{
+
   background-color:transparent;
   border-radius: 0.9375rem;
 }
 
 .explore-food .card :hover {
-  transform: scale(0.99);
+  transform: scale(1.01);
+  transition:all .4s ease-in;
 }
 
 .explore-food .card img {
@@ -440,16 +443,17 @@ nav {
 }
 
 .testimonial-section h2 {
-  color: var(--black-color);
+  color: red;
 }
 
 .testimonial-section .carousel-item {
   margin-top: 3rem;
   padding: 10rem 3.125rem;
-  background-color: white;
+  color: white;
+  background-color: rgb(251, 251, 251);
   border-radius: 0.9375rem;
   text-align: center;
-  border: 4px solid brown;
+border: 4px solid brown;
 }
 
 .testimonial-section .carousel-caption img {
@@ -459,9 +463,9 @@ nav {
 }
 
 .testimonial-section .carousel-caption p {
-  font-size: 1.125rem;
+  font-size:1.67rem;
+  font-weight : bold;
   line-height: 1.5625rem;
-  font-weight: 300;
   color: var(--black-color);
   padding: 0 11% 0.625rem;
 }
