@@ -145,3 +145,26 @@ function handleEmptyCart(total) {
         <a href="./menu.html"><button class="butt">Explore Menu</button></a>`;
     }
 }
+
+function couponApplied(){
+    const couponCode = document.getElementById('inputCode').value;
+    if (couponCode){
+        alert('Coupon Applied Successfully and you are eligible for 30% discount');
+
+        const cartItems = document.querySelectorAll('.cart-item');
+        let total = 0.0;
+
+        cartItems.forEach(item => {
+            const price = parseFloat(item.getAttribute('data-product-price'));
+            const quantity = parseInt(item.querySelector('.quantity').textContent);
+            total += price * quantity;
+            total *= 100; // To avoid conflicts with floating values
+            const discount = (30/100) * total;
+            total -= discount;
+            total /= 100;
+        });
+        document.getElementById('cart-total').innerHTML = (total != 0) ? `<span>Subtotal:</span> $${total.toFixed(2)}` : ``;
+        handleEmptyCart(total)
+    }
+
+}
