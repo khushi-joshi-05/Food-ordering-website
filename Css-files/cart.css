@@ -1,21 +1,35 @@
 * {
     box-sizing: border-box;
+    font-family: "Bree Serif", serif;
 }
+.navigbar {
+    top: 40px;
+  }
+  .mainhead {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    /*padding-bottom: 50px;*/
+  }
 .cart-section {
     align-items: center;
     padding: 25px 15px;
     flex-direction: column;
 }
+
 .cart {
     padding: 1% 2%;
     width: 80%;
     margin-top: 20px;
     flex-direction: column;
 }
+
 #cart-items {
     width: 100%;
 }
+
 .cart-item {
+    color: black;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -23,13 +37,16 @@
     padding: 20px 10px;
     border-bottom: 1px solid gray;
 }
+
 .cart-item:hover {
     background-color: rgb(229, 229, 229);
 }
+
 .cart-item img {
     border-radius: 50%;
     box-shadow: 0 0 5px rgb(196, 74, 74);
 }
+
 .detail {
     display: flex;
     flex-wrap: wrap;
@@ -37,12 +54,15 @@
     align-items: center;
     width: 60%;
 }
+
 .quantity-wrapper {
     padding: 5px;
     border-radius: 25px;
     border: 1px solid gray;
 }
-.quantity-wrapper *, .btn {
+
+.quantity-wrapper *,
+.btn {
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -52,17 +72,21 @@
     transition: 0.3s;
     cursor: pointer;
 }
+
 .btn {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
+
 .remove {
     line-height: 25px;
 }
+
 .btn:hover {
     background-color: rgb(196, 74, 74);
     color: white;
 }
+
 .decrease-quantity.disable {
     opacity: 0.3;
     pointer-events: none;
@@ -74,10 +98,12 @@
     text-align: right;
     color: rgb(196, 74, 74);
 }
+
 #cart-total span {
     font-size: 13px;
     color: gray;
 }
+
 .empty-cart {
     display: flex;
     flex-direction: column;
@@ -85,9 +111,12 @@
     align-items: center;
     justify-content: center;
 }
+
 .empty-cart * {
     text-align: center;
+    color: black;
 }
+
 .empty-cart p {
     max-width: 500px;
     width: 100%;
@@ -98,6 +127,18 @@
 input,
 textarea {
     width: 100%;
+}
+.coupen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* padding: 10px; */
+    padding: 10px;
+    height: 40px;
+    background-color: brown;
+    color: aliceblue;
+    z-index: 2000;
 }
 @media all and (max-width: 768px) {
     .cart {

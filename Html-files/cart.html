@@ -12,18 +12,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="shortcut icon" type="image/x-icon" href="./Favicon image/favicon.ico">
+
     <link rel="stylesheet" href="../Css-files/content.css">
     <link rel="stylesheet" href="../Css-files/cart.css">
-
-
 
 </head>
 
 <body>
+    <div class="coupen"><marquee behavior="" direction="left" class="coupen-inner"></marquee></div>
     <div class="head_container">
         <header>
-
+            <!-- <nav class="navbar">
+                <ul id="header-items">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav> -->
             <nav>
                 <div class="navigbar">
                     <div class="logo">Foodie</div>
@@ -50,33 +57,7 @@
             <h1>C A R T</h1>
         </div>
     </div>
-    <div id="couponCode"><p class="text-light bg-secondary p-5">Use coupon code <b>qN6FVAn4</b> for 30% off!</p></div>
-    <section class="cart-section ">
-            <div class="cart col-md-8">
-                <table id="cart-table">
-                <thead>
-                    <tr>
-                        <th>Item Name</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th >Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="cart-items">
-                    <!-- Cart items will be inserted here -->
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td>Bill amount</td>
-                        <td>
-                            <div id="cart-total">$0.00</div>
-                        </td>
-                    </tr>
-                </tfoot>
 
-               </table>
-
-            </div>
     <section class="cart-section">
         <div id="couponCode">
             <p>Use coupon code <b>qN6FVAn4</b> for 30% off!</p>
@@ -93,16 +74,9 @@
         </div>
 
 
-
         <!-- Input Section For Coupon Code -->
 
-        
-        <div class="inputForCoupon col-md-4">
-        
-
-
         <div class="inputForCoupon">
-
 
             <label for="couponCodes" id="haveCoupon">Have a Coupon?</label>
             <div class="enterCouponCode">
@@ -110,16 +84,11 @@
                 <button id="applyCouponButton">Apply</button>
             </div>
 
-        
-            <button id="proceed-to-payment" href="Html-files\Payment.html" class="butt">Order Now</button>
-        
-
-
             <button type="submit" onclick="applyFirstTimeDiscount()" class="butt">Order Now</button>
-
 
         </div>
 
+    </section>
     </section>
 
     <footer>
@@ -143,8 +112,6 @@
                 <a>Early Access to New Recipes</a>
                 <a>VIP Foodie Events</a>
                 <a>Personalized Culinary Experiences</a>
-
-
             </ul>
 
 
@@ -163,16 +130,12 @@
             <form id="contactForm">
                 <h3>Contact Us!</h3>
                 <!-- <label for="name">Name:</label> -->
-                <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>
-                -->
+                <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>-->
                 <!-- <label for="email">Email:</label> -->
                 <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-
                 <!-- <label for="message">Message:</label> -->
                 <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-
-
                 <button id="butt" type="submit">Send Message</button>
             </form>
         </div>
@@ -189,10 +152,11 @@
                         target="_blank"></a>
                     <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
                 </div>
-                <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
-                </p>
+
+                <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.</p>
+
                 <div class="copyright">
-                    &copy; 2024 Foodies - All Rights Reserved | <span id="author">
+                    &copy; <span id="copyright-year"></span> Foodies - All Rights Reserved | <span id="author">
                         <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
                     </span></p>
                 </div>
@@ -200,8 +164,9 @@
         </div>
     </footer>
 
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
 
-    <!-- <script src="../cart.js"></script--> 
+    <!-- <script src="../cart.js"></script> -->
     <script src="cart.js">
 
     </script>
