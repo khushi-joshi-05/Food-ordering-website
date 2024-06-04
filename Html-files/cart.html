@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    <div class="coupen"><marquee behavior="" direction="left" class="coupen-inner"></marquee></div>
     <div class="head_container">
         <header>
             <!-- <nav class="navbar">
@@ -146,7 +147,8 @@
                 <div class="social-icons">
                     <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
                     <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                    <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
                     <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
                         target="_blank"></a>
                     <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
@@ -155,7 +157,7 @@
                 <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.</p>
 
                 <div class="copyright">
-                    &copy; 2024 Foodies - All Rights Reserved | <span id="author">
+                    &copy; <span id="copyright-year"></span> Foodies - All Rights Reserved | <span id="author">
                         <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
                     </span></p>
                 </div>
@@ -163,6 +165,7 @@
         </div>
     </footer>
 
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
 
     <!-- <script src="../cart.js"></script> -->
     <script src="cart.js">

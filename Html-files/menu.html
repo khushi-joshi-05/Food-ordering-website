@@ -17,26 +17,26 @@
 
     <link rel="stylesheet" href="../Css-files/content.css">
     <script src="../hamburger.js"></script>
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 
 <body>
-
-
-
     <div class="head_container">
         <!-- <header> -->
         <!-- updated nav bar -->
         <nav>
             <div class="navigbar">
-                <div class="logo">Foodie</div>
+                <div class="logo">
+                    <a href="../index.html"><img src="../Images/sitelogo.png" height="40" class="transparent-image"></a>
+                </div>
 
                 <ul class="ul1">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="menu.html" id="active-page">Menu</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="ContactUpdate.html">Contact Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="ContactUpdate.html">Offers</a></li>
                 </ul>
                 <div>
                     <ul class="ul2">
@@ -60,34 +60,38 @@
         </div>
     </div>
 
-    <section class="menu_container">
+    <section class="menu_container" >
 
-        <h2>Snacks</h2>
-        <div class="menu_items">
-            <div class="items">
-                <img
-                    src="https://www.mumbailive.com/images/media/images/thali_1635502261446jpeg?bg=08394e&crop=5328%2C2991.157894736842%2C0%2C504.42105263157896&fit=crop&fm=webp&h=432.2807017543859&height=4000&w=770&width=5328">
-
-                <h3>Indian Thali</h3>
-                <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
-                <button class="butt add-to-cart-button" data-product-id="1.01" data-product-name="Indian Thali"
-                    data-product-price="10.20">Add to Cart</button>
-
-                <div class="star-rating">
-                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
-                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+        <h2 data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">Snacks</h2>
+        <div class="menu_items" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
+            <a href="./dish-detailes.html" style="text-decoration: none; color: inherit;">
+                <div class="items">
+                    <img
+                        src="https://www.mumbailive.com/images/media/images/thali_1635502261446jpeg?bg=08394e&crop=5328%2C2991.157894736842%2C0%2C504.42105263157896&fit=crop&fm=webp&h=432.2807017543859&height=4000&w=770&width=5328">
+    
+                    <h3>Indian Thali</h3>
+                    <p>$10.20</p>
+                    
+                    <button class="butt add-to-cart-button" data-product-id="1.01" data-product-name="Indian Thali"
+                        data-product-price="10.20">Add to Cart</button>
+    
+                    <div class="star-rating">
+                        <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                        <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                    </div>
                 </div>
-            </div>
+            </a>
+            <a href="./dish-detailes.html" style="text-decoration: none; color: inherit;">
+
             <div class="items">
                 <img
                     src="https://imgmediagumlet.lbb.in/media/2018/04/5acf822418a23c0efc21496b_1523548708582.jpg?fm=webp&w=750&h=500&dpr=1">
                 <h3>Dessert</h3>
                 <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
+                
                 <button class="butt add-to-cart-button" data-product-id="1.02" data-product-name="Dessert"
                     data-product-price="10.20">Add to Cart</button>
                 <div class="star-rating">
@@ -99,12 +103,15 @@
                 </div>
 
             </div>
+            </a>
+            <a href="./dish-detailes.html" style="text-decoration: none; color: inherit;">
+
             <div class="items">
                 <img
                     src="https://imgmediagumlet.lbb.in/media/2019/07/5d27585dc18a2b0ed5739eb5_1562859613517.jpg?fm=webp&w=750&h=500&dpr=1">
                 <h3>Snacks</h3>
                 <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
+                
                 <button class="butt add-to-cart-button" data-product-id="1.03" data-product-name="Snacks"
                     data-product-price="10.20">Add to Cart</button>
                 <div class="star-rating">
@@ -115,11 +122,14 @@
                     <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                 </div>
             </div>
+            </a>
+            <a href="./dish-detailes.html" style="text-decoration: none; color: inherit;">
+
             <div class="items">
                 <img src="https://static.india.com/wp-content/uploads/2017/04/Juices-Delhi.jpg">
                 <h3>Juices</h3>
                 <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
+                
                 <button class="butt add-to-cart-button" data-product-id="1.04" data-product-name="Juices"
                     data-product-price="10.20">Add to Cart</button>
                 <div class="star-rating">
@@ -130,15 +140,17 @@
                     <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                 </div>
             </div>
-
+</a>
         </div>
-        <div class="menu_items">
+        <div class="menu_items" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
+            <a href="./dish-detailes.html" style="text-decoration: none; color: inherit;">
+
             <div class="items">
                 <img
                     src="https://www.mumbailive.com/images/media/images/thali_1635502261446jpeg?bg=08394e&crop=5328%2C2991.157894736842%2C0%2C504.42105263157896&fit=crop&fm=webp&h=432.2807017543859&height=4000&w=770&width=5328">
                 <h3>Indian Thali</h3>
                 <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
+                
                 <button class="butt add-to-cart-button" data-product-id="1.05" data-product-name="Indian Thali"
                     data-product-price="10.20">Add to Cart</button>
                 <div class="star-rating">
@@ -149,12 +161,15 @@
                     <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                 </div>
             </div>
+            </a>
+            <a href="./dish-detailes.html" style="text-decoration: none; color: inherit;">
+
             <div class="items">
                 <img
                     src="https://imgmediagumlet.lbb.in/media/2018/04/5acf822418a23c0efc21496b_1523548708582.jpg?fm=webp&w=750&h=500&dpr=1">
                 <h3>Dessert</h3>
                 <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
+                
                 <button class="butt add-to-cart-button" data-product-id="1.06" data-product-name="Dessert"
                     data-product-price="10.20">Add to Cart</button>
                 <div class="star-rating">
@@ -165,12 +180,15 @@
                     <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                 </div>
             </div>
+            </a>
+            <a href="./dish-detailes.html" style="text-decoration: none; color: inherit;">
+
             <div class="items">
                 <img
                     src="https://imgmediagumlet.lbb.in/media/2019/07/5d27585dc18a2b0ed5739eb5_1562859613517.jpg?fm=webp&w=750&h=500&dpr=1">
                 <h3>Snacks</h3>
                 <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
+                
                 <button class="butt add-to-cart-button" data-product-id="1.07" data-product-name="Snacks"
                     data-product-price="10.20">Add to Cart</button>
                 <div class="star-rating">
@@ -181,11 +199,14 @@
                     <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                 </div>
             </div>
+            </a>
+            <a href="./dish-detailes.html" style="text-decoration: none; color: inherit;">
+
             <div class="items">
                 <img src="https://static.india.com/wp-content/uploads/2017/04/Juices-Delhi.jpg">
                 <h3>Juices</h3>
                 <p>$10.20</p>
-                <!-- <button class="but">Add to Cart</button> -->
+                
                 <button class="butt add-to-cart-button" data-product-id="1.08" data-product-name="Juices"
                     data-product-price="10.20">Add to Cart</button>
                 <div class="star-rating">
@@ -196,19 +217,22 @@
                     <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                 </div>
             </div>
-
+</a>
         </div>
 
     </section>
-    <section class="menu_container">
-        <h2>Juices</h2>
-        <div class="menu_items">
-            <div class="items">
+    
+    <!-- <section class="menu_container">
+        <h2 data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">Juices</h2>
+        <div class="menu_items" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
+            <a href="./dish-detailes.html" style="text-decoration: none; color: inherit;">
+
+            <div class="items" >
                 <img
                     src="https://www.mumbailive.com/images/media/images/thali_1635502261446jpeg?bg=08394e&crop=5328%2C2991.157894736842%2C0%2C504.42105263157896&fit=crop&fm=webp&h=432.2807017543859&height=4000&w=770&width=5328">
                 <h3>Indian Thali</h3>
                 <p>$5.10</p>
-                <!-- <button class="but">Add to Cart</button> -->
+                
                 <button class="butt add-to-cart-button" data-product-id="2.01" data-product-name="Indian Thali"
                     data-product-price="5.10">Add to Cart</button>
                 <div class="star-rating">
@@ -219,12 +243,15 @@
                     <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                 </div>
             </div>
+            </a>
+            <a href="./dish-detailes.html" style="text-decoration: none; color: inherit;">
+
             <div class="items">
                 <img
                     src="https://imgmediagumlet.lbb.in/media/2018/04/5acf822418a23c0efc21496b_1523548708582.jpg?fm=webp&w=750&h=500&dpr=1">
                 <h3>Dessert</h3>
                 <p>$5.10</p>
-                <!-- <button class="but">Add to Cart</button> -->
+                
                 <button class="butt add-to-cart-button" data-product-id="2.02" data-product-name="Dessert"
                     data-product-price="5.10">Add to Cart</button>
                 <div class="star-rating">
@@ -235,12 +262,15 @@
                     <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                 </div>
             </div>
+            </a>
+            <a href="./dish-detailes.html" style="text-decoration: none; color: inherit;">
+
             <div class="items">
                 <img
                     src="https://imgmediagumlet.lbb.in/media/2019/07/5d27585dc18a2b0ed5739eb5_1562859613517.jpg?fm=webp&w=750&h=500&dpr=1">
                 <h3>Snacks</h3>
                 <p>$5.10</p>
-                <!-- <button class="but">Add to Cart</button> -->
+                
                 <button class="butt add-to-cart-button" data-product-id="Snacks" data-product-name="Snacks"
                     data-product-price="5.10">Add to Cart</button>
                 <div class="star-rating">
@@ -251,11 +281,14 @@
                     <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                 </div>
             </div>
+            </a>
+            <a href="./dish-detailes.html" style="text-decoration: none; color: inherit;">
+
             <div class="items">
                 <img src="https://static.india.com/wp-content/uploads/2017/04/Juices-Delhi.jpg">
                 <h3>Juices</h3>
                 <p>$5.10</p>
-                <!-- <button class="but">Add to Cart</button> -->
+                
                 <button class="butt add-to-cart-button" data-product-id="2.04" data-product-name="Juices"
                     data-product-price="5.10">Add to Cart</button>
                 <div class="star-rating">
@@ -266,17 +299,20 @@
                     <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                 </div>
             </div>
+            </a>
     </section>
 
     <section class="menu_container">
-        <h2>Indian Thali</h2>
-        <div class="menu_items">
+        <h2 data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">Indian Thali</h2>
+        <div class="menu_items" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
+            <a href="./dish-detailes.html" style="text-decoration: none; color: inherit;">
+
             <div class="items">
                 <img
                     src="https://www.mumbailive.com/images/media/images/thali_1635502261446jpeg?bg=08394e&crop=5328%2C2991.157894736842%2C0%2C504.42105263157896&fit=crop&fm=webp&h=432.2807017543859&height=4000&w=770&width=5328">
                 <h3>Indian Thali</h3>
                 <p>$15.80</p>
-                <!-- <button class="but">Add to Cart</button> -->
+                
                 <button class="butt add-to-cart-button" data-product-id="3.01" data-product-name="Indian Thali"
                     data-product-price="15.80">Add to Cart</button>
                 <div class="star-rating">
@@ -287,12 +323,15 @@
                     <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                 </div>
             </div>
+            </a>
+            <a href="./dish-detailes.html" style="text-decoration: none; color: inherit;">
+
             <div class="items">
                 <img
                     src="https://imgmediagumlet.lbb.in/media/2018/04/5acf822418a23c0efc21496b_1523548708582.jpg?fm=webp&w=750&h=500&dpr=1">
                 <h3>Dessert</h3>
                 <p>$15.80</p>
-                <!-- <button class="but">Add to Cart</button> -->
+                
                 <button class="butt add-to-cart-button" data-product-id="3.02" data-product-name="Dessert"
                     data-product-price="15.80">Add to Cart</button>
                 <div class="star-rating">
@@ -303,12 +342,15 @@
                     <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                 </div>
             </div>
+            </a>
+            <a href="./dish-detailes.html" style="text-decoration: none; color: inherit;">
+
             <div class="items">
                 <img
                     src="https://imgmediagumlet.lbb.in/media/2019/07/5d27585dc18a2b0ed5739eb5_1562859613517.jpg?fm=webp&w=750&h=500&dpr=1">
                 <h3>Snacks</h3>
                 <p>$15.80</p>
-                <!-- <button class="but">Add to Cart</button> -->
+                
                 <button class="butt add-to-cart-button" data-product-id="3.03" data-product-name="Snacks"
                     data-product-price="15.80">Add to Cart</button>
                 <div class="star-rating">
@@ -319,11 +361,14 @@
                     <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                 </div>
             </div>
+            </a>
+            <a href="./dish-detailes.html" style="text-decoration: none; color: inherit;">
+
             <div class="items">
                 <img src="https://static.india.com/wp-content/uploads/2017/04/Juices-Delhi.jpg">
                 <h3>Juices</h3>
                 <p>$15.80</p>
-                <!-- <button class="but">Add to Cart</button> -->
+                
                 <button class="butt add-to-cart-button" data-product-id="3.04" data-product-name="Juices"
                     data-product-price="15.80">Add to Cart</button>
                 <div class="star-rating">
@@ -334,7 +379,8 @@
                     <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
                 </div>
             </div>
-    </section>
+            </a>
+    </section> -->
 
     <!-- footer -->
     <footer>
@@ -350,23 +396,23 @@
 
             <ul class="footer-colums">
                 <p> Exclusive Offers</p>
-                <a>Foodie Discounts</a>
-                <a>Limited-Time Promotions</a>
-                <a>Special Event Packages</a>
-                <a>Membership Benefits</a>
-                <a>Early Access to New Recipes</a>
-                <a>VIP Foodie Events</a>
-                <a>Personalized Culinary Experiences</a>
+                <a href="#">Foodie Discounts</a>
+                <a href="#">Limited-Time Promotions</a>
+                <a href="#">Special Event Packages</a>
+                <a href="#">Membership Benefits</a>
+                <a href="#">Early Access to New Recipes</a>
+                <a href="#">VIP Foodie Events</a>
+                <a href="#">Personalized Culinary Experiences</a>
 
             </ul>
 
             <ul class="footer-colums">
                 <p>Payment Products</p>
-                <a>Secure Checkout</a>
-                <a>Credit/Debit Cards</a>
-                <a>Online Payment</a>
-                <a>Mobile Wallets</a>
-                <a>Contactless Payments</a>
+                <a href="#">Secure Checkout</a>
+                <a href="#">Credit/Debit Cards</a>
+                <a href="#">Online Payment</a>
+                <a href="#">Mobile Wallets</a>
+                <a href="#">Contactless Payments</a>
             </ul>
 
 
@@ -374,7 +420,7 @@
                 <h3>Contact Us!</h3>
                 <!-- <label for="name">Name:</label> -->
                 <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>
-                 -->
+                -->
                 <!-- <label for="email">Email:</label> -->
                 <input type="email" id="email" name="email" placeholder="Your Email" required>
 
@@ -394,15 +440,16 @@
                 <div class="social-icons">
                     <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
                     <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                    <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
                     <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
-                        target="_blank"></a>
+                        target="_blank" ></a>
                     <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
                 </div>
                 <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                 </p>
                 <div class="copyright">
-                    &copy; 2024 Foodies - All Rights Reserved | <span id="author">
+                    &copy; <span id="copyright-year"></span> Foodies - All Rights Reserved | <span id="author">
                         <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
                     </span></p>
 
@@ -414,6 +461,8 @@
         </div>
     </footer>
 
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+    <script src="./MenuAPI.js"></script>
     <script src="menu.js">
         function redirectLogin() {
             window.location.href = "login.html";
@@ -421,6 +470,16 @@
         function redirectSignup() {
             window.location.href = "signup.html";
         }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init(
+        {
+          duration: 1000, 
+          easing: 'ease', 
+          once: false, 
+        }
+      );
     </script>
 </body>
 

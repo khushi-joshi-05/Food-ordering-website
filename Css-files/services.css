@@ -7,6 +7,13 @@
 
 }
 
+.section1 {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .section__title {
     font-size: 4em;
     font-weight: bold;
@@ -16,12 +23,17 @@
     animation: gradient-animation 3s infinite;
 }
 
-.section__title:hover {
-    border-bottom: 3px solid rgb(138, 37, 37);
+.section1>hr {
+    opacity: 0;
+    border-width: 2px;
+}
+
+.section1:hover>hr {
+    border-bottom: 2px solid rgb(138, 37, 37);
     /* Add bottom border on hover */
-    border-top: 3px solid rgb(138, 37, 37);
+    border-top: 2px solid rgb(138, 37, 37);
     width: 50%;
-    margin-left: 370px;
+    opacity: 1;
 }
 
 #active-page {

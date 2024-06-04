@@ -51,6 +51,7 @@ body {
   font-family: var(--primary-font);
   font-size: 100%;
   font-weight: 400;
+  background-color: brown;
 }
 
 #active-page {
@@ -84,10 +85,10 @@ body {
 
 h1 {
   font-size: 58px;
-  font-weight: 900;
+  font-weight: bolder;
   margin-bottom: 1rem;
-  color: var(--white-color);
-  text-shadow: 1px 0 6px #000;
+  color:white;
+  text-shadow: 3px 0 6px #000;
 }
 
 h1 span {
@@ -96,11 +97,13 @@ h1 span {
 
 h2 {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 3rem;
   text-transform: capitalize;
   font-family: var(--secondry-font);
   color: var(--secondry-color);
   line-height: 3rem;
+  color: whitesmoke;
+  padding-bottom: 2rem;
 }
 
 h4 {
@@ -116,9 +119,10 @@ h5 {
   color: var(--black-color);
   text-transform: capitalize;
   font-family: var(--secondry-font);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: bolder;
   margin-bottom: 0.5rem;
+  text-shadow: 0 0 12px white;
 }
 
 p {
@@ -135,7 +139,7 @@ p {
   line-height: 1.5625rem;
   background-color: rgb(138, 37, 37);
   ;
-  border: 0.1875rem solid yellow;
+  border: 0.1875rem solid rgb(10, 10, 9);
   color: var(--white-color);
   font-size: 0.9375rem;
   font-weight: 600;
@@ -149,8 +153,8 @@ p {
 }
 
 .main-btn:hover {
-  background-color: transparent;
-  color: var(--primary-color);
+  background-color: white;
+  color: black;
 }
 
 .wrapper {
@@ -243,12 +247,18 @@ nav {
 .navigbar {
   display: flex;
   justify-content: space-between;
-  background: #0000007c;
+  background: black;
   padding-left: 2rem;
   padding-right: 2rem;
   align-items: center;
   padding-bottom: 1rem;
   padding-top: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  background-color: black; /* Ensure the navbar has a background color */
 }
 
 .logo {
@@ -387,14 +397,16 @@ nav {
  explore food section Design
 ==========================================
 */
-.explore-food .card {
-  border: none;
-  background-color: transparent;
+
+.explore-food .card{
+
+  background-color:transparent;
   border-radius: 0.9375rem;
 }
 
 .explore-food .card :hover {
-  transform: scale(0.9);
+  transform: scale(1.01);
+  transition:all .4s ease-in;
 }
 
 .explore-food .card img {
@@ -408,13 +420,15 @@ nav {
   display: block;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-color);
+  /* color:var(--primary-color); */
+  color: white;
   padding-bottom: 1rem;
   border-bottom: 0.0625rem solid #eee;
 }
 
-.explore-food p {
-  color: var(--text-color);
+.explore-food p{
+  /* color:var(--text-color); */
+  color: white;
   font-size: 14px;
   line-height: 22px;
 }
@@ -429,16 +443,17 @@ nav {
 }
 
 .testimonial-section h2 {
-  color: var(--black-color);
+  color: red;
 }
 
 .testimonial-section .carousel-item {
   margin-top: 3rem;
   padding: 10rem 3.125rem;
-  background-color: white;
+  color: white;
+  background-color: rgb(251, 251, 251);
   border-radius: 0.9375rem;
   text-align: center;
-  border: 4px solid brown;
+border: 4px solid brown;
 }
 
 .testimonial-section .carousel-caption img {
@@ -448,9 +463,9 @@ nav {
 }
 
 .testimonial-section .carousel-caption p {
-  font-size: 1.125rem;
+  font-size:1.67rem;
+  font-weight : bold;
   line-height: 1.5625rem;
-  font-weight: 300;
   color: var(--black-color);
   padding: 0 11% 0.625rem;
 }
@@ -459,10 +474,10 @@ nav {
   bottom: -2.8125rem;
 }
 
-.testimonial-section .carousel-indicators button {
-  width: 15px;
-  height: 15px;
-  outline: none;
+.testimonial-section .carousel-indicators button{
+  width:15px;
+  height:15px;
+  outline:auto;
   border-radius: 50%;
   border: none;
   margin-right: 1rem;
@@ -527,8 +542,9 @@ ul a {
 
 }
 
-.copyright {
-  padding-top: 10px;
+.copyright{
+ padding-top: 10px;
+ padding-bottom: 10px;
 }
 
 form {
@@ -615,10 +631,11 @@ textarea {
   font-size: 0.875rem;
   width: 100%;
   border-radius: 0;
-  background: transparent;
-  border: 0.1875rem solid var(--white-color);
-  color: var(--black-color);
-  font-weight: 700;
+  background:transparent;
+  border:0.1875rem solid var(--white-color);
+  color:var(--black-color);
+  font-weight: 500;
+
 }
 
 .newsletter .main-btn {
@@ -627,9 +644,10 @@ textarea {
   font-size: 0.875rem;
   border-radius: 0;
   background-color: var(--white-color);
-  border: 0.1875rem solid var(--white-color);
-  color: var(--black-color);
-  font-weight: 700;
+  border:0.1875rem solid var(--white-color);
+  color:var(--black-color);
+  font-weight: 500;
+
 }
 
 .newsletter:hover .form-control {
@@ -646,8 +664,8 @@ textarea {
 .newsletter .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: var(--primary-color);
-}
+  /* border-color:var(--primary-color);  */
+
 
 /* <!--Responsive Design--> */
 @media only screen and (max-width: 800px) {
