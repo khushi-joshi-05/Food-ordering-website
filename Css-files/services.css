@@ -168,3 +168,8 @@ textarea {
 #butt:hover {
     background-color: rgb(196, 89, 89);
 }
+
+footer
+{
+    width:100%;
+}
