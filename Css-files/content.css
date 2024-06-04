@@ -183,6 +183,8 @@ body {
 
 .menu_items {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 90vw;
   justify-content: center;
 }
 
