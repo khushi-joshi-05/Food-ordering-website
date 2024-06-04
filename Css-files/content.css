@@ -193,6 +193,8 @@ body {
 
 .menu_items {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 90vw;
   justify-content: center;
 }
 
@@ -211,12 +213,20 @@ body {
   /* overflow: hidden; */
   text-align: center;
   font-family: "Bree Serif", serif;
+  overflow: hidden;
+  position: relative;
 }
 
 .menu_items .items img {
   height: 190px;
   width: 230px;
   border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
 }
 
 .menu_items .items h3 {
@@ -711,7 +721,20 @@ nav {
 .cart {
   color: white;
 }
+.menu_items .items img:hover
+{
+    transform: scale(1.1);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
 
+.menu_items .items img{
+    transition: 3s, 1s ease-in-out;
+}
+=======
 .contact-form-section {
   display: flex;
   align-items: center;
@@ -872,3 +895,4 @@ main {
 .contact-info p a:hover {
   color: #333; /* Darken color on hover */
 }
+
