@@ -24,8 +24,20 @@ body {
   text-decoration: none;
   color: white;
   font-size: 1.3rem;
+  margin-left: 10px; 
+}
+.logo-navbar {
+  height: 40px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
+.logo {
+  color: white;
+  font-size: 1.3rem;
+  margin-right: auto;
+  cursor: pointer;
+}
 /* Navbar link hover effect */
 .navbar a:hover,
 .navbar.scrolled a:hover {
