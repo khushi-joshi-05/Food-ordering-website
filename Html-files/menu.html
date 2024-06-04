@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="../Css-files/scroll-top-button.css">
     <link rel="stylesheet" href="../Css-files/content.css">
     <script src="../hamburger.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -300,6 +300,12 @@
             </div>
         </div>
     </footer>
+    <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
+            class="arrow">
+            <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+        </svg>
+    </button>
 
     <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
     <script src="./MenuAPI.js"></script>
@@ -321,6 +327,7 @@
         }
       );
     </script>
+    <script src="top.js"></script>
 </body>
 
 </html>
