@@ -656,7 +656,7 @@ textarea {
   border: 0.1875rem solid var(--primary-color);
 }
 
-.newsletter .form-control:hover,
+/* .newsletter .form-control:hover, */
 .newsletter .form-control:focus {
   outline: none;
   box-shadow: none;
@@ -664,6 +664,7 @@ textarea {
 
 
 /* <!--Responsive Design--> */
+}
 @media only screen and (max-width: 800px) {
   .testimonial-section .carousel-caption img {
     width: 50%;
