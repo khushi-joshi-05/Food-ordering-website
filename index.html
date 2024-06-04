@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Adding favicon image -->
 
@@ -28,40 +31,42 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./login1.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
     <script src="hamburger.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
-
-
 <body>
-
-
     <nav>
         <div class="navigbar">
-            <div class="logo">Foodie</div>
+            <div class="logo">
+                <a href="index.html"><img src="Images/Foodielogo.png" height="40" class="transparent-image"></a>
+            </div>
             <button class="navbar-toggler" id="menu-toggle" aria-label="Toggle navigation">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
             <!-- Hamburger menu list -->
-        <ul class="hamburger-menu" id="hamburger-menu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="Html-files/menu.html">Menu</a></li>
-            <li><a href="Html-files/services.html">Services</a></li>
-            <li><a href="Html-files/contact.html">Contact Us</a></li>
-            <li><a class="" onclick="redirectLogin()">Login</a></li>
-            <li><a class="" onclick="redirectSignup()">Sign Up</a></li>
-            <li><a class="" href="Html-files/cart.html">Cart</a></li>
-        </ul>
-            <ul class="ul1" id="nav-links">
+            <ul class="hamburger-menu" id="hamburger-menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="Html-files/menu.html">Menu</a></li>
                 <li><a href="Html-files/services.html">Services</a></li>
                 <li><a href="Html-files/contact.html">Contact Us</a></li>
+                <li><a href="Html-files/ContactUpdate.html">Offers</a></li>
+                <li><a class="" onclick="redirectLogin()">Login</a></li>
+                <li><a class="" onclick="redirectSignup()">Sign Up</a></li>
+                <li><a class="" href="Html-files/cart.html">Cart</a></li>
+            </ul>
+            <ul class="ul1" id="nav-links">
+                <li><a href="../index.html" id="active-page">Home</a></li>
+                <li><a href="Html-files/menu.html">Menu</a></li>
+                <li><a href="Html-files/services.html">Services</a></li>
+                <li><a href="Html-files/contact.html">Contact Us</a></li>
+                <li><a href="Html-files/ContactUpdate.html">Offers</a></li>
             </ul>
             <div>
                 <ul class="ul2">
@@ -74,12 +79,8 @@
             </div>
         </div>
     </nav>
-    
 
-    <section class="intro_container">
-        <h1>Welcome to foodie!</h1>
-        <p>A place offering a multitude of flavors from various regions, both domestic and international, where we strive to make your dining experience unforgettable through advanced technology and personalized options. Our goal is to create an impression that will make you want to return to us time and again.</p>
-        <button class="btn">Order Now</button>
+
 
     </section>
 
@@ -92,22 +93,21 @@
             </div>
         </div>
 
-        <h1 class="h-primary center">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
-
+        <h1 class="h-primary center" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
 
         <!-- changes -->
-        <div id="about">
+        <div id="about" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
             <div class="box">
                 <img src="https://shahidining.com.au/wp-content/uploads/2020/05/secret-to-indian-flavour-1536x864.jpg"
                     alt="">
-                <h2 class="h-secondary center">Authentic Indian Flavors</h2>
+                <h2 class="h-secondary center text-black">Authentic Indian Flavors</h2>
                 <p class="center">From aromatic curries to flavorful biryanis, our menu showcases the diversity and
                     deliciousness of Indian cuisine.
                 </p>
             </div>
             <div class="box">
                 <img src="https://saavi.com.au/wp-content/uploads/2016/02/image0023-1.jpg" alt="">
-                <h2 class="h-secondary center">Tech-Infused Dining Experience</h2>
+                <h2 class="h-secondary center text-black">Tech-Infused Dining Experience</h2>
                 <p class="center">
                     Customers can use apps to place orders, customize their dishes, and even provide feedback, making
                     their visit more convenient and interactive.
@@ -115,10 +115,9 @@
             </div>
             <div class="box">
                 <img src="https://i.ndtvimg.com/i/2015-06/fusion-food_625x350_81434107799.jpg" alt="">
-                <h2 class="h-secondary center">Innovative Fusion Dishes</h2>
+                <h2 class="h-secondary center text-black">Innovative Fusion Dishes</h2>
                 <p class="center">The combinations of Indian and international cuisines not only tantalize taste buds
                     but also provide unique experience.
-
                 </p>
             </div>
         </div>
@@ -126,52 +125,40 @@
 
     <section class="service_container">
         <div class="service">
-            <div class="box_main">
-                <h1>Bringing <br>joy<br> to you</h1>
-                <p>Food goes beyond mere nourishment; it’s a wellspring of true.<br> happiness. Whether it’s the nostalgic taste of a beloved childhood meal or the excitement of trying novel flavors,<br> food has an exceptional ability to<br> warm our hearts and bring us delight.</p>
+
             </div>
-            <div class="box">
+            <div class="box" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
                 <h1>Online Delivery</h1><br>
                 <a href="#" class="btn">Order Online</a>
 
             </div>
-            <div class="box">
+            <div class="box" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
                 <h1>Click & Collect</h1><br>
                 <a href="#" class="btn">Take out Order</a>
 
             </div>
-            <div class="box">
+            <div class="box" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
                 <h1>Restaurant Dining</h1><br>
 
-                <a href="#" class="btn" onclick="openBookingModal()">Book Table</a>
-                <!--                 <a href="#" class="btn">Book Table</a> -->
-
+                <a href="./Html-files/book-table.html" class="btn">Book Table</a>
 
             </div>
         </div>
-
     </section>
 
     <section class="menu_container">
-        <div class="mainhead">
+        <div class="mainhead" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
             <h1>"Get ready to explore our delicious range of dishes!"</h1>
             <p>"Welcome to a world of culinary delights where every bite tells a flavorful story. Explore our diverse
                 menu and savor the essence of exquisite dining." </p>
 
-
             <button class="butt" onclick="window.location.href='Html-files/menu.html'">View Menu</button>
-
-
             <!-- <button class="butt" onclick="window.open('Html-files/menu.html')">View Menu</button> -->
-
-
-
         </div>
 
-        <div class="menu_items">
+        <div class="menu_items" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
             <div class="items">
-                <img
-                    src="https://www.mumbailive.com/images/media/images/thali_1635502261446jpeg?bg=08394e&crop=5328%2C2991.157894736842%2C0%2C504.42105263157896&fit=crop&fm=webp&h=432.2807017543859&height=4000&w=770&width=5328">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjSkmP0glNOmYbWZWwz_BRxgwrA5HdZadphw&s">
                 <h3>Indian Thali</h3>
                 <p>Enjoy a thali full of traditional flavours and memotries</p>
             </div>
@@ -188,11 +175,10 @@
                 <p>Have a lighter version with deliciouis flavours</p>
             </div>
             <div class="items">
-                <img src="https://static.india.com/wp-content/uploads/2017/04/Juices-Delhi.jpg">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaqAsoDyO5HBOSLupaimFGCkiE_zPbLYyYog&s">
                 <h3>Juices</h3>
                 <p>Boost yourself up with fruit extracts</p>
             </div>
-
         </div>
     </section>
 
@@ -207,10 +193,84 @@
     <!-- <div class="franchise_container">
 
     </div> -->
+    <div class="fix"></div>
+    <div class="container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
+        <h2> Our Happy Clients </h2>
+        <p class="description">
+            At Foodie, we pride ourselves on delivering delicious meals & exceptional service. Don’t just take our word
+            for it—hear what our satisfied customers have to say!</p>
 
-    <!-- <div class="rating_container">
+        <!-- Clients Review Section -->
+        <div class="reviewSection">
 
-    </div> -->
+            <!-- Clients Review-1 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="./Images/client1.jpg" alt="">
+                        <span>Matt Gilbert</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                    </ul>
+                </div>
+                <article>
+                    <p class="review">Foodie never disappoints! The food is always fresh, delicious, and delivered right
+                        on time. My go-to for all my meals!</p>
+                    <p>Jan 01, 2024</p>
+                </article>
+            </div>
+
+            <!-- Clients Review-2 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="./Images/client2.jpg" alt="">
+                        <span>John Doe</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                    </ul>
+                </div>
+                <article>
+                    <p class="review">I love the variety on Foodie! There's something for everyone, and the delivery
+                        service is incredibly reliable</p>
+                    <p>April 16, 2024</p>
+                </article>
+            </div>
+
+            <!-- Clients Review-3 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="./Images/client3.jpg" alt="">
+                        <span>Laren Green</span>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                    </ul>
+                </div>
+                <article>
+                    <p class="review">Fantastic service and mouth-watering dishes! Foodie has made my dining experience
+                        so much more convenient.</p>
+                    <p>May 15, 2024</p>
+                </article>
+            </div>
+        </div>
+
+    </div>
 
     <section class="section-meals" data-aos="fade-in" data-aos-duration="2000">
         <ul class="meals-showcase clearfixX">
@@ -257,51 +317,8 @@
                     <img src="Images/8.jpg" alt="food-image">
                 </figure>
             </li>
-
         </ul>
-
     </section>
-
-    <!-- Booking Modal  -->
-    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="bookingModalLabel">Book a Table</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="bookingForm">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone</label>
-                            <input type="tel" class="form-control" id="phone" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="date" class="form-label">Date</label>
-                            <input type="date" class="form-control" id="date" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="time" class="form-label">Time</label>
-                            <input type="time" class="form-control" id="time" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="guests" class="form-label">Number of Guests</label>
-                            <input type="number" class="form-control" id="guests" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="app_download">
         <h4>Free Delivery!</h4>
@@ -312,7 +329,6 @@
                 alt="Get it on Google Play Store"></a>
         <a href="#"><img src="./Images/download-on-the-app-store.png" class="app-download-img"
                 alt="Download on the Apple App Store"></a>
-
     </div>
 
     <div class="footer">
@@ -333,18 +349,16 @@
             </label>
         </div>
         <br><br><br><br>
-         <hr> -->
+        <hr> -->
 
         <footer>
-
-
             <div class="foot-panel2">
                 <ul>
                     <p>Our Pages</p>
                     <a href="#">Home</a>
                     <a href="/Html-files/menu.html">Menu</a>
                     <a href="/Html-files/services.html">Services</a>
-                    <a href="/Html-files/contact.html">Contact us</a>
+                    <a href="/Html-files/ContactUpdate.html">Contact us</a>
                     <a href="/Html-files/cart.html">Cart</a>
                 </ul>
 
@@ -357,7 +371,6 @@
                     <a href="#">Early Access to New Recipes</a>
                     <a href="#">VIP Foodie Events</a>
                     <a href="#">Personalized Culinary Experiences</a>
-
                 </ul>
 
                 <ul>
@@ -369,8 +382,7 @@
                     <a href="#">Contactless Payments</a>
                 </ul>
 
-
-                <form id="contactForm">
+                <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
                     <h3>Contact Us!</h3>
                     <!-- <label for="name">Name:</label> -->
                     <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>-->
@@ -382,9 +394,7 @@
 
                     <button id="butt" type="submit">Send Message</button>
                 </form>
-
             </div>
-
 
             <div class="foot_panel4">
                 <div class="pages">
@@ -392,7 +402,8 @@
                     <div class="social-icons">
                         <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
                         <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                        <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
+                        <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                        <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
                         <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
                             target="_blank"></a>
                         <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
@@ -400,7 +411,7 @@
                     <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                     </p>
                     <div class="copyright">
-                        &copy; 2024 Foodies - All Rights Reserved | <span id="author">
+                        &copy; <span id="copyright-year"></span> Foodies - All Rights Reserved | <span id="author">
                             <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi
                                 Joshi</a>
                         </span></p>
@@ -419,8 +430,66 @@
         </button>
         <!--Scroll top button finish-->
     </div>
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+    <script>
+        const heroSlider = document.querySelector("[data-hero-slider]");
+        const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
+        const heroSliderPrevBtn = document.querySelector("[data-prev-btn]");
+        const heroSliderNextBtn = document.querySelector("[data-next-btn]");
+
+        let currentSlidePos = 0;
+        let lastActiveSliderItem = heroSliderItems[0];
+
+        const updateSliderPos = function () {
+            lastActiveSliderItem.classList.remove("active");
+            heroSliderItems[currentSlidePos].classList.add("active");
+            lastActiveSliderItem = heroSliderItems[currentSlidePos];
+        }
+
+        const slideNext = function () {
+            if (currentSlidePos >= heroSliderItems.length - 1) {
+                currentSlidePos = 0;
+            } else {
+                currentSlidePos++;
+            }
+
+            updateSliderPos();
+        }
+        heroSliderNextBtn.addEventListener("click", slideNext)
+  
+        const slidePrev = function () {
+            if (currentSlidePos <= 0) {
+                currentSlidePos = heroSliderItems.length - 1;
+            } else {
+                currentSlidePos--;
+            }
+
+            updateSliderPos();
+        }
+
+        heroSliderPrevBtn.addEventListener("click", slidePrev);
+
+        // auto slide
+
+        let autoSlideInterval;
+
+        const autoSlide = function () {
+            autoSlideInterval = setInterval(function () {
+                slideNext();
+            }, 7000);
+        };
+
+        addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", function () {
+            clearInterval(autoSlideInterval);
+        });
+
+        addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", autoSlide);
+
+        window.addEventListener("load", autoSlide);
+    </script>
 
     <script src="Html-files/top.js"></script>
+  
     <script>
         window.addEventListener('beforeunload', function (event) {
             localStorage.clear();
@@ -458,27 +527,57 @@
             }
         });
         main
-
-        function openBookingModal() {
-            var bookingModal = new bootstrap.Modal(document.getElementById('bookingModal'));
-            bookingModal.show();
-        }
     </script>
     main
 
-    <script type="text/javascript">
-        (function (d, t) {
-            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-            v.onload = function () {
-                window.voiceflow.chat.load({
-                    verify: { projectID: '6651593185e25f1a181125a3' },
-                    url: 'https://general-runtime.voiceflow.com',
-                    versionID: 'production'
-                });
-            }
-            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-        })(document, 'script');
+<!--     <script type="text/javascript">
+            (function (d, t) {
+                var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+                v.onload = function () {
+                    window.voiceflow.chat.load({
+                        verify: { projectID: '6651593185e25f1a181125a3' },
+                        url: 'https://general-runtime.voiceflow.com',
+                        versionID: 'production'
+                    });
+                }
+                v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+            })(document, 'script');
+    </script> -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init(
+        {
+          duration: 1000, 
+          easing: 'ease', 
+          once: false, 
+        }
+      );
     </script>
+  
+<!--  Chatbot  -->
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Message...",
+      "botConversationDescription": "Welcome to Foodie!",
+      "botId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+      "webhookId": "7bd6ccb8-58f4-4ee3-9bca-f33ea4b7c37c",
+      "lazySocket": true,
+      "themeName": "prism",
+      "botName": "Foodie",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/da4ab5f7-146c-4585-961b-2d9def26af50/v96339/style.css",
+      "frontendVersion": "v1",
+      "useSessionStorage": true,
+      "enableConversationDeletion": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": []
+  });
+</script>
+  
 </body>
 <script>
     function redirectLogin() {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Food Ordering Website</title>
@@ -23,117 +23,77 @@
     style="background-image: url('contact_page_background_image.png'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
 
     <header>
-        <!-- <nav class="navbarbg">
-            <ul id="header-items">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav> -->
-        <!-- updated nav bar -->
-    <nav>
-        <div class="navigbar">
-            <div class="logo">Foodie</div>
-            <ul class="ul1">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div>
-                <ul class="ul2">
-                    <li><a href="login.html">Log In</a></li>
-                    <li><a href="signup.html">Sign Up</a></li>
-                    <li>
-                        <a class="" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                    </li>
+        <nav>
+            <div class="navigbar">
+                <div class="logo">
+                    <a href="../index.html"><img src="../Images/sitelogo.png" height="40" class="transparent-image"></a>
+                </div>
+                <ul class="ul1">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="ContactUpdate.html">Offers</a></li>
                 </ul>
+                <div>
+                    <ul class="ul2">
+                        <li><a href="login.html">Log In</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                        <li>
+                            <a class="" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
     </header>
 
-    <section>
-        <div class="position-relative overflow-hidden p-0 m-0">
-            <div class="container">
-                <div class=" text-center mt-5 ">
-                    <h1>Feel Free to Contact Us!</h1>
+    <main>
+      <section class="contact-form-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 get-in-touch">
+                    <h1>GET IN TOUCH</h1>
+                    <p>If you have any questions, feel free to reach out to us through the following channels:</p>
+                    <div class="contact-info">
+                        <p><i class="fa-solid fa-phone"></i> XXXXXXXXXX</p>
+                        <p><i class="fa-solid fa-envelope"></i> info@foodorderingwebsite.com</p>
+                        <p><i class="fa-solid fa-globe"></i> www.foodorderingwebsite.com</p>
+                        <p><i class="fa-solid fa-map-marker-alt"></i> 123 Food Street, Culinary City, 56789</p>
+                    </div>
                 </div>
-
-                <div class="row ">
-                    <div class="col-lg-7 mx-auto">
-                        <div class="card mt-2 mx-auto mb-5 p-4 bg-light">
-                            <div class="card-body bg-light">
-                                <div class="container">
-                                    <form action="/submit" method="POST" id="contact-form" role="form">
-                                        <div class="controls">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="form_name">Firstname *</label>
-                                                        <input id="form_name" type="text" name="name"
-                                                            class="form-control"
-                                                            placeholder="Please enter your firstname *"
-                                                            required="required" data-error="Firstname is required.">
-
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="form_lastname">Lastname *</label>
-                                                        <input id="form_lastname" type="text" name="surname"
-                                                            class="form-control"
-                                                            placeholder="Please enter your lastname *"
-                                                            required="required" data-error="Lastname is required.">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="form_email">Email *</label>
-                                                        <input id="form_email" type="email" name="email"
-                                                            class="form-control" placeholder="Please enter your email *"
-                                                            required="required" data-error="Valid email is required.">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label for="form_message">Message *</label>
-                                                        <textarea id="form_message" name="message" class="form-control"
-                                                            placeholder="Write your message here." rows="4"
-                                                            required="required"
-                                                            data-error="Please, leave us a message."></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-10 mt-3">
-                                                            <input type="submit"
-                                                            class="btn btn-outline-dark btn-send pt-1 btn-block"
-                                                            value="Send Message">
-
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+                <div class="col-md-6 form-background">
+                    <h2 class="contact">Contact Us</h2>
+                    <form class="contact-form">
+                        <div class="form-group row">
+                            <div class="col-md-6 mb-3">
+                                <label for="first-name" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="first-name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="last-name" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="last-name" required>
                             </div>
                         </div>
-                    </div>
+                        <div class="form-group full-width">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="3" required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
-
-
-
+    </main>
+      
     <!-- footer -->
     <footer>
 
@@ -192,22 +152,31 @@
                 <h4>Follow Us</h4>
 
                 <div class="social-icons">
-                        <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
-                        <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                        <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
-                        <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
-                        <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
+                    <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                    <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                    <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
+                        target="_blank"></a>
+                    <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
                 </div>
                 <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                 </p>
                 <div class="copyright">
-                    &copy; 2024 Foodies - All Rights Reserved | <span id="author">
+                    &copy; <span id="copyright-year"></span> Foodies - All Rights Reserved | <span id="author">
                         <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
                     </span></p>
                 </div>
             </div>
         </div>
     </footer>
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
 </body>
 
 </html>
+
+<script>
+  document.querySelector('.contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      alert('Form submitted!');
+  });
+  </script>
