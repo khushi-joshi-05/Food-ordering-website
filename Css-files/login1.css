@@ -7,11 +7,12 @@ body {
 
 body * {
   box-sizing: border-box;
+  overflow-y: auto;
 }
 
 .main-login {
   width: 100vw;
-  height: 100vh;
+  height: 90%;
   /* background: #8A2525; */
   background: brown;
   display: flex;
@@ -38,8 +39,8 @@ body * {
 }
 
 .right-login {
-  width: 50vw;
-  height: 100vh;
+  width: 60vw;
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,9 +105,11 @@ body * {
 }
 
 .btn-login {
-  width: 100%;
+  width: 90%;
+  height: auto;
   padding: 16px 0;
-  margin: 25px;
+  margin-top: 10px;
+ margin-bottom: 5%;
   border: none;
   border-radius: 8px;
   outline: none;
@@ -124,9 +127,14 @@ body * {
 }
 
 #google-login {
-  width: 100%;
+  width: 90%;
   padding: 16px 0;
-  margin: 25px;
+  /* height: auto;
+  margin-left: 10px;  
+
+  /* margin:px; */
+  height: auto;
+  margin-bottom: 5%;
   border: none;
   border-radius: 8px;
   outline: none;
@@ -152,6 +160,7 @@ body * {
   right: 10px;
   cursor: pointer;
   color: white;
+  /* margin-top: 15px; */
 }
 
 
