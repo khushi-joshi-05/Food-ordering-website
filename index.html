@@ -441,10 +441,12 @@
                 <ul>
                     <p>Our Pages</p>
                     <a href="#">Home</a>
-                    <a href="/Html-files/menu.html">Menu</a>
-                    <a href="/Html-files/services.html">Services</a>
-                    <a href="/Html-files/ContactUpdate.html">Contact us</a>
-                    <a href="/Html-files/cart.html">Cart</a>
+                    <!--Added a period in front of the /Html-files so the footer links will go to the menu, 
+                        services, contact us, and the cart when the user clicks on the footer link. Phillip Andrews-->
+                    <a href="./Html-files/menu.html">Menu</a>
+                    <a href="./Html-files/services.html">Services</a>
+                    <a href="./Html-files/ContactUpdate.html">Contact us</a>
+                    <a href="./Html-files/cart.html">Cart</a>
                 </ul>
 
                 <ul>
@@ -495,15 +497,11 @@
                     </div>
                     <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                     </p>
-                    <div>
-                        <p class="copyright"> ©
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script> Foodies - All Rights Reserved | 
-                            <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">
-                                Khushi Joshi 
-                            </a>
-                        </p>
+                    <div class="copyright">
+                        &copy; <span id="copyright-year"></span> Foodies - All Rights Reserved | <span id="author">
+                            <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi
+                                Joshi</a>
+                        </span></p>
                     </div>
                 </div>
             </div>
@@ -616,7 +614,9 @@
                 navbar.classList.remove('scrolled');
             }
         });
+        main
     </script>
+    main
 
 <!--     <script type="text/javascript">
             (function (d, t) {
@@ -680,7 +680,6 @@
   }, 500)
 });
 
-</script
-
-
+</script>
+main
 </html>
