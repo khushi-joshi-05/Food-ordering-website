@@ -811,6 +811,10 @@ textarea {
   background-color: #5865F2;
   color: white;
 }
+.fa-linkedin:hover{
+  background-color:  #0000FF;
+  color: white;
+}
 
 #author {
   padding: 3px;
