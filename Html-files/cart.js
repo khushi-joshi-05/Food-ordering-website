@@ -88,7 +88,7 @@ const applyFirstTimeDiscount = () => {
         localStorage.setItem('couponCode', couponCode);
     }
     document.getElementById('couponCode').innerHTML = `Use coupon code <span style="font-weight: bold;"> ${couponCode} </span> for 30% off!`;
-    alert(`Congratulations! Your coupon code is ${couponCode}. You've received a 30% discount on your first order.`);
+    document.querySelector(".coupen-inner").innerHTML = `Congratulations! Your coupon code is ${couponCode}. You've received a 30% discount on your first order.`;
 }
 window.onload = applyFirstTimeDiscount;
 
