@@ -23,19 +23,19 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="../Css-files/scroll-top-button.css">
   <!-- OWN CSS -->
   <link id="theme-link" rel="stylesheet" href="/Css-files/ContactUpdate.css">
 
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100" onload="blinker();">
   <!-- header design section -->
   <nav>
     <div class="navigbar">
       <div class="logo">
         <a href="../index.html"><img src="../Images/sitelogo.png" height="40" class="transparent-image"></a>
-    </div>
+      </div>
       <button class="navbar-toggler" id="menu-toggle" aria-label="Toggle navigation">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -46,7 +46,8 @@
         <li><a href="../index.html">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="ContactUpdate.html">Contact Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="ContactUpdate.html">Offers</a></li>
         <li><a class="" href="/Html-files/login.html">Login</a></li>
         <li><a class="" href="signup.html">Sign Up</a></li>
         <li><a class="" href="cart.html">Cart</a></li>
@@ -56,7 +57,8 @@
         <li><a href="../index.html">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="ContactUpdate.html">Contact Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="ContactUpdate.html">Offers</a></li>
       </ul>
 
       <div>
@@ -78,7 +80,7 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="text-content text-center">
-              <h2>Exclusive Offers</h2>
+              <h2 id="blink">Exclusive Offers</h2>
               <p>Discover a world of flavors with our diverse culinary offerings. From savory dishes crafted with fresh,
                 local ingredients to indulgent desserts that delight the senses, each bite tells a story. Savor the
                 fusion of traditional recipes and innovative twists, bringing global tastes to your table. Taste the
@@ -88,12 +90,12 @@
         </div>
 
         <div class="row pt-5">
-          
+
           <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
             <div class="card border">
-              <img decoding="async" src="/Html-files/assets/discount.jpg" class="img-fluid">
+              <img decoding="async" src="https://img.freepik.com/premium-vector/special-offer-delicious-food-menu-sale-discount-with-landscape-social-media-post-tempate-banner-with-copy-space-3d-podium-food-sale-with-abstract-gradient-orange-white-background-design_727967-1725.jpg" class="img-fluid">
               <div class="p-3">
-                <h5>🎉 Grab your savings now with our unbeatable new discounts! 💸</h5>
+                <h5>🎉 Grab your savings now with our unbeatable new discounts every week! 💸</h5>
                 <p>Don't miss out on our exclusive offers! 🎉 Enjoy massive discounts 💸 on your favorite items and save
                   big on every purchase! 🛍️</p>
                 <button class="mt-2 main-btn">Read More</button>
@@ -103,7 +105,7 @@
 
           <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
             <div class="card border">
-              <img decoding="async" src="/Html-files/assets/collaboration.jpg" class="img-fluid">
+              <img decoding="async" src="https://img.freepik.com/premium-photo/young-people-social-media-like-concept-flat-vector-illustration-daily-activities-working-ai-generated_705708-26385.jpg" class="img-fluid">
               <div class="p-3">
                 <h5>🤝 Exciting new collaborations just launched! Discover the latest partnerships today! 🌟 </h5>
                 <p>Experience the thrill of our new collaborations! 🤩 Discover innovative partnerships and enjoy
@@ -236,9 +238,12 @@
         <div class="social-icons">
           <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
           <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-          <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
-          <a class="fa-brands fa-github" href="https://github.com" target="_blank"></a>
-        </div>
+          <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+          <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
+          <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
+              target="_blank"></a>
+          <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
+      </div>
         <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
         </p>
         <div class="copyright">
@@ -251,9 +256,15 @@
   </footer>
 
   <!-- go to top button -->
-  <a href="#" id="gotop-btn"
-    style="position: fixed; bottom: 50px; right: 50px; padding: 10px; background-color: brown;"><i
-      class="fa-solid fa-angle-up"></i></a>
+   <!--Scroll top button-->
+
+   <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
+        class="arrow">
+        <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+    </svg>
+</button>
+<!--Scroll top button finish-->
 
   <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
 
@@ -261,6 +272,15 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
   <!-- own js -->
+  <script>  function blinker()
+    {
+      if(document.getElementById("blink"))
+      {
+          var d = document.getElementById("blink") ;
+          d.style.color= (d.style.color=='yellow'?'white':'yellow');
+          setTimeout('blinker()', 900);
+      }
+  }</script>
   <script>
     function redirectLogin() {
       window.location.href = "/login.html";
@@ -270,6 +290,7 @@
       window.location.href = "Html-files/signup.html";
     }
   </script>
+  <script src="top.js"></script>
 </body>
 
 </html>

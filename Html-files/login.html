@@ -11,23 +11,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <title>Login</title>
 </head>
 
 <body>
   <div class="main-login">
-    <div class="left-login">
+    <div class="left-login" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
       <h1>Login Here<br>Delicious food is waiting for You</h1>
       <img src="../Images/food.jpg" class="left-login-image" alt="food">
     </div>
     <div class="right-login">
-      <div class="card-login">
+      <div class="card-login" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
         <button class="close-btn">&times;</button>
         <h1>LOGIN</h1>
         <br>
         <div class="textfield">
-          <label for="usuario">Email / User Name</label>
-          <input type="text" name="email" placeholder="Enter Email / UserName">
+          <label for="usuario">Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter Email">
+        </div>
+        <div class="textfield">
+          <label for="usuario">Username</label>
+          <input type="text" name="Username" id="username" placeholder="Username">
         </div>
         <div class="textfield">
           <label for="password">Password</label>
@@ -36,12 +41,25 @@
             <i class='icon bx bxs-hide' style="font-size: 27px;"></i>
           </span>
         </div>
-        <button class="btn-login">Login</button>
+        <button class="btn-login" onclick="validateLogin()">Login</button>
+        <h3>
+          <center>OR</center>
+        </h3>
         <button id="google-login">Login with google</button>
       </div>
     </div>
   </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease',
+      once: false,
+    });
+  </script>
 </body>
+
 <script>
   const passwordinput = document.getElementById("password");
   const hidelogo = document.getElementById("login-hide");
@@ -50,19 +68,33 @@
     if (passwordinput.getAttribute("type") == "text") {
       passwordinput.setAttribute("type", "password");
       passwordfield.classList.replace("bxs-show", "bxs-hide");
-    }
-    else {
+    } else {
       passwordinput.setAttribute("type", "text");
       passwordfield.classList.replace("bxs-hide", "bxs-show");
-
     }
-  })
+  });
 
   const closeBtn = document.querySelector('.close-btn');
-    closeBtn.addEventListener('click', function () {
-      // document.querySelector('.card-login').style.display = 'none';
-      window.location.href='../index.html';
-    });
+  closeBtn.addEventListener('click', function () {
+    window.location.href = '../index.html';
+  });
+
+  function validateLogin() {
+    const email = document.getElementById("email").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if (email === "") {
+      alert("Please Enter Email");
+    } else if (username === "") {
+      alert("Please Enter Username");
+    } else if (password === "") {
+      alert("Please Enter Password");
+    } else {
+      // add login logic
+      alert("Form submitted successfully!");
+    }
+  }
 </script>
 
 </html>

@@ -17,7 +17,6 @@ body {
   width: 100%;
   opacity: 0.4;
   z-index: -1;
-
 }
 
 #active-page {
@@ -29,7 +28,7 @@ body {
   height: 500px;
 }
 
-.head_container_service:before {
+/*.head_container_service:before {
   background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
   content: "";
   position: absolute;
@@ -38,8 +37,19 @@ body {
   opacity: 0.4;
   z-index: -1;
 
+}*/
+.service-img {
+  background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
+  /*content: "";
+  position: absolute;
+  height: 800px;
+  width: 100%;
+  opacity: 0.4;*/
+  height: 550px;
+  width: 100%;
+  padding-top: 15px;
+  background-size: cover;
 }
-
 .navbar {
   padding: 8px 10px;
 }
@@ -104,14 +114,13 @@ body {
   opacity: 0.7;
 }
 
-
 .menu_container {
   padding: 55px 70px 30px 70px;
   background-color: rgb(224, 224, 252);
 }
 
 .menu_container h2 {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 2rem;
   color: rgb(138, 37, 37);
   padding-left: 50px;
@@ -120,20 +129,20 @@ body {
 .mainhead {
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 50px;
+  /*padding-bottom: 50px;*/
 }
 
 .mainhead h1 {
   font-family: "Bree Serif", serif;
   font-size: 3.8rem;
   color: white;
-  padding-bottom: 20px;
+  /*padding-bottom: 20px;*/
 }
 
 .head_container_service .mainhead {
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 210px;
+  padding-bottom: 10px;
 }
 
 /* .mainhead p {
@@ -174,6 +183,8 @@ body {
 
 .menu_items {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 90vw;
   justify-content: center;
 }
 
@@ -184,7 +195,7 @@ body {
   box-shadow: 0 0 10px rgba(138, 37, 37, 0.5); */
   box-shadow: 0 0 10px rgba(224, 224, 252, 0.678);
   border: 1px solid rgb(186, 186, 201);
-  padding: 0 0  40px 0;
+  padding: 0 0 40px 0;
   margin: 5px;
   height: 310px;
   width: 230px;
@@ -192,12 +203,20 @@ body {
   /* overflow: hidden; */
   text-align: center;
   font-family: "Bree Serif", serif;
+  overflow: hidden;
+  position: relative;
 }
 
 .menu_items .items img {
   height: 190px;
   width: 230px;
   border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
 }
 
 .menu_items .items h3 {
@@ -236,7 +255,6 @@ body {
   justify-content: center;
   height: 160px;
   width: 200px;
-
 }
 
 .first_cont .items h3 {
@@ -288,7 +306,6 @@ body {
   padding: 0px 10px;
   font-size: 2rem;
 }
-
 
 /* Book Table */
 .book-table-container {
@@ -352,7 +369,7 @@ body {
   text-align: center;
   padding: 2rem 3rem 2.5rem;
   border: 2px solid rgba(224, 224, 252, 0.678);
-  transition: border .4s, background-color .4s;
+  transition: border 0.4s, background-color 0.4s;
   background-color: white;
   box-shadow: 0 0 10px rgba(224, 224, 252, 0.678);
   border: 1px solid rgb(186, 186, 201);
@@ -369,7 +386,7 @@ body {
 }
 
 .testimonal__title {
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
 }
 
 .testimonal__description {
@@ -487,16 +504,16 @@ textarea {
   color: black;
   background-color: white;
   border-radius: 50%;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .fa-facebook:hover {
-  background-color: #3B5998;
+  background-color: #3b5998;
   color: white;
 }
 
 .fa-instagram:hover {
-  background-color: #D62976;
+  background-color: #d62976;
   color: white;
 }
 
@@ -509,8 +526,8 @@ textarea {
   background-color: #040204;
   color: white;
 }
-.fa-discord:hover{
-  background-color: #5865F2;
+.fa-discord:hover {
+  background-color: #5865f2;
   color: white;
 }
 /* Cart page styling */
@@ -568,8 +585,13 @@ td {
   /* Yellow color for filled star */
 }
 
+.star-button.hover {
+  color: #f1c40f; /* Yellow color for hovered star */
+}
 
-
+.star-button.greyed {
+  color: #ccc; /* Grey color for greyed out star */
+}
 
 /* Cart -> Input Section for Coupon Code  */
 
@@ -602,14 +624,14 @@ td {
 }
 
 #inputCode:hover {
-  border: 2px solid #A52A2A;
+  border: 2px solid #a52a2a;
 }
 
 #applyCouponButton {
   width: 5rem;
   border-radius: 0.3rem;
   padding: 10px 20px;
-  background-color: #A52A2A;
+  background-color: #a52a2a;
   color: white;
   font-weight: bold;
   border: none;
@@ -619,7 +641,6 @@ td {
 #applyCouponButton:hover {
   background-color: #a52a2ad7;
 }
-
 
 /* updated nav bar */
 nav {
@@ -664,7 +685,7 @@ nav {
   padding: 0;
   /* Remove default padding */
 }
-.ul2{
+.ul2 {
   justify-content: flex-end;
 }
 .ul1 {
@@ -690,3 +711,178 @@ nav {
 .cart {
   color: white;
 }
+.menu_items .items img:hover
+{
+    transform: scale(1.1);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.menu_items .items img{
+    transition: 3s, 1s ease-in-out;
+}
+=======
+.contact-form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  padding-left: 250px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.img-fluid {
+  height: 300px;
+  width: 300px;
+  margin-top: 250px;
+  margin-left: 100px;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group .col-md-6 {
+  flex: 0 0 48%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.contact {
+  margin-left: 30%;
+  font-size: 35px;
+}
+
+main::before {
+  background-image: url("contact_page_background_image.png");
+  content: "";
+  position: absolute;
+  height: 238px;
+  width: 100%;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+main {
+  position: relative;
+  background-color: #fdf6fc;
+  z-index: 0;
+}
+
+.contact-form-section .form-background {
+  /* background-image: url("form_background.jpg"); */
+  background: linear-gradient(
+    to top left,
+    rgb(247, 218, 244),
+    rgb(255, 230, 251)
+  );
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 70px;
+  border: #040204;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.contact-form .form-label {
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.contact-form .form-control {
+  width: 85%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-left: 20px;
+}
+
+.contact-form-section textarea {
+  width: 85%; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.contact-form .btn {
+  background-color: #fda8af;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  width: 40%;
+  margin-left: 150px;
+}
+
+.contact-form .btn:hover {
+  background-color: #fc7676;
+}
+
+.contact-form-section {
+  padding: 40px 0;
+}
+
+.get-in-touch {
+  padding: 20px;
+}
+
+.get-in-touch h1 {
+  font-size: 2.8rem;
+  color: #333;
+  margin-top: 210px;
+  font-weight: bold; /* Bold text */
+}
+
+.get-in-touch p {
+  color: #080808; /* Medium-dark text color for readability */
+  font-size: 1rem; /* Standard text size */
+  line-height: 1.5; /* Better line spacing */
+}
+
+.contact-info p {
+  display: flex; /* Use flexbox to align icons and text */
+  align-items: center; /* Vertically center align items */
+  margin: 10px 0; /* Space between each contact info item */
+}
+
+.contact-info p i {
+  color: #e91e63; /* Icon color to match theme or branding */
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 1.2rem; /* Slightly larger icons */
+}
+
+.contact-info p a {
+  color: #e91e63; /* Link color matching the icon color */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.contact-info p a:hover {
+  color: #333; /* Darken color on hover */
+}
+
