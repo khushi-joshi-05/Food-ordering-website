@@ -41,6 +41,9 @@
             <i class='icon bx bxs-hide' style="font-size: 27px;"></i>
           </span>
         </div>
+        <div class="forgot-password">
+          <a href="#">Forgot Password?</a>
+        </div>
         <button class="btn-login" onclick="validateLogin()">Login</button>
         <h3>
           <center>OR</center>
@@ -95,6 +98,13 @@
       alert("Form submitted successfully!");
     }
   }
+  document.querySelector('.forgot-password a').addEventListener('click', function(event) {
+  event.preventDefault();
+  // Implement the functionality here, e.g., open a modal or redirect to a password recovery page
+  alert("Redirecting to password recovery page...");
+  window.location.href = 'forget_pass.html'; // Change this to the actual URL
+});
+
 </script>
 
 </html>
