@@ -14,6 +14,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Css-files/content.css">
+    <link rel="stylesheet" href="../Css-files/scroll-top-button.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <style>
@@ -211,139 +212,155 @@
             </div>
         </div>
     </footer>
-    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
-    <script>
+     <!--Scroll top button-->
 
-        //Custom Cursor
-    
-        const coords = { x: 0, y: 0 };
-        const circles = document.querySelectorAll(".circle");
-    
-        const colors = [
-          "#ffb56b",
-          "#fdaf69",
-          "#f89d63",
-          "#f59761",
-          "#ef865e",
-          "#ec805d",
-          "#e36e5c",
-          "#df685c",
-          "#d5585c",
-          "#d1525c",
-          "#c5415d",
-          "#c03b5d",
-          "#b22c5e",
-          "#ac265e",
-          "#9c155f",
-          "#950f5f",
-          "#830060",
-          "#7c0060",
-          "#680060",
-          "#60005f",
-          "#48005f",
-          "#3d005e"
-        ];
-    
-        circles.forEach(function (circle, index) {
-          circle.x = 0;
-          circle.y = 0;
-          circle.style.backgroundColor = colors[index % colors.length];
-        });
-    
-        window.addEventListener("mousemove", function (e) {
-          coords.x = e.clientX;
-          coords.y = e.clientY;
-    
-        });
-    
-        function animateCircles() {
-    
-          let x = coords.x;
-          let y = coords.y;
-    
-          circles.forEach(function (circle, index) {
-            circle.style.left = x - 12 + "px";
-            circle.style.top = y - 12 + "px";
-    
-            circle.style.scale = (circles.length - index) / circles.length;
-    
-            circle.x = x;
-            circle.y = y;
-    
-            const nextCircle = circles[index + 1] || circles[0];
-            x += (nextCircle.x - x) * 0.3;
-            y += (nextCircle.y - y) * 0.3;
-          });
-    
-          requestAnimationFrame(animateCircles);
+     <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
+            class="arrow">
+            <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+        </svg>
+    </button>
+    <!--Scroll top button finish-->
+    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+
+
+    <script src="../contact-form.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="top.js"></script>
+
+
+<script>
+
+    //Custom Cursor
+
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+
+    const colors = [
+      "#ffb56b",
+      "#fdaf69",
+      "#f89d63",
+      "#f59761",
+      "#ef865e",
+      "#ec805d",
+      "#e36e5c",
+      "#df685c",
+      "#d5585c",
+      "#d1525c",
+      "#c5415d",
+      "#c03b5d",
+      "#b22c5e",
+      "#ac265e",
+      "#9c155f",
+      "#950f5f",
+      "#830060",
+      "#7c0060",
+      "#680060",
+      "#60005f",
+      "#48005f",
+      "#3d005e"
+    ];
+
+    circles.forEach(function (circle, index) {
+      circle.x = 0;
+      circle.y = 0;
+      circle.style.backgroundColor = colors[index % colors.length];
+    });
+
+    window.addEventListener("mousemove", function (e) {
+      coords.x = e.clientX;
+      coords.y = e.clientY;
+
+    });
+
+    function animateCircles() {
+
+      let x = coords.x;
+      let y = coords.y;
+
+      circles.forEach(function (circle, index) {
+        circle.style.left = x - 12 + "px";
+        circle.style.top = y - 12 + "px";
+
+        circle.style.scale = (circles.length - index) / circles.length;
+
+        circle.x = x;
+        circle.y = y;
+
+        const nextCircle = circles[index + 1] || circles[0];
+        x += (nextCircle.x - x) * 0.3;
+        y += (nextCircle.y - y) * 0.3;
+      });
+
+      requestAnimationFrame(animateCircles);
+    }
+
+    animateCircles();
+
+
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+      const isDarkMode = isDarkModePreferred();
+      setDarkModePreference(!isDarkMode);
+      applyDarkModePreference();
+    }
+
+    // Function to apply dark mode preference
+    function applyDarkModePreference() {
+      const isDarkMode = isDarkModePreferred();
+      if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        document.getElementById('theme-icon').src = 'assets/images/icons8-sun.svg';
+      } else {
+        document.body.classList.remove('dark-mode');
+        document.getElementById('theme-icon').src = 'assets/images/moon_solid.svg';
+      }
+    }
+
+    // Function to set dark mode preference
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentTheme = localStorage.getItem('theme');
+      const switchCheckbox = document.getElementById('switch'); // Define switchCheckbox here
+      const starRating = document.querySelector('.star_rating');
+      const thankYouMessage = document.querySelector(".thank_you_message");
+      if (switchCheckbox) { // Check if switchCheckbox is not null
+        function applyDarkModeStyles() {
+          document.body.classList.remove('light-mode');
+          document.body.classList.add('dark-mode');
+          starRating.style.backgroundColor = '#2d2828';
+          thankYouMessage.style.backgroundColor = '#2d2828';
         }
-    
-        animateCircles();
-    
-    
-        // Function to toggle dark mode
-        function toggleDarkMode() {
-          const isDarkMode = isDarkModePreferred();
-          setDarkModePreference(!isDarkMode);
-          applyDarkModePreference();
+
+        function applyLightModeStyles() {
+          document.body.classList.remove('dark-mode');
+          document.body.classList.add('light-mode');
+          starRating.style.backgroundColor = 'white';
+          thankYouMessage.style.backgroundColor = 'white';
         }
-    
-        // Function to apply dark mode preference
-        function applyDarkModePreference() {
-          const isDarkMode = isDarkModePreferred();
-          if (isDarkMode) {
-            document.body.classList.add('dark-mode');
-            document.getElementById('theme-icon').src = 'assets/images/icons8-sun.svg';
+
+        if (currentTheme) {
+          if (currentTheme === 'dark-mode') {
+            applyDarkModeStyles();
+            switchCheckbox.checked = true;
           } else {
-            document.body.classList.remove('dark-mode');
-            document.getElementById('theme-icon').src = 'assets/images/moon_solid.svg';
+            applyLightModeStyles();
           }
         }
-    
-        // Function to set dark mode preference
-        document.addEventListener('DOMContentLoaded', () => {
-          const currentTheme = localStorage.getItem('theme');
-          const switchCheckbox = document.getElementById('switch'); // Define switchCheckbox here
-          const starRating = document.querySelector('.star_rating');
-          const thankYouMessage = document.querySelector(".thank_you_message");
-          if (switchCheckbox) { // Check if switchCheckbox is not null
-            function applyDarkModeStyles() {
-              document.body.classList.remove('light-mode');
-              document.body.classList.add('dark-mode');
-              starRating.style.backgroundColor = '#2d2828';
-              thankYouMessage.style.backgroundColor = '#2d2828';
-            }
-    
-            function applyLightModeStyles() {
-              document.body.classList.remove('dark-mode');
-              document.body.classList.add('light-mode');
-              starRating.style.backgroundColor = 'white';
-              thankYouMessage.style.backgroundColor = 'white';
-            }
-    
-            if (currentTheme) {
-              if (currentTheme === 'dark-mode') {
-                applyDarkModeStyles();
-                switchCheckbox.checked = true;
-              } else {
-                applyLightModeStyles();
-              }
-            }
-    
-            switchCheckbox.addEventListener('change', () => {
-              if (switchCheckbox.checked) {
-                applyDarkModeStyles();
-                localStorage.setItem('theme', 'dark-mode');
-              } else {
-                applyLightModeStyles();
-                localStorage.setItem('theme', 'light-mode');
-              }
-            });
+
+        switchCheckbox.addEventListener('change', () => {
+          if (switchCheckbox.checked) {
+            applyDarkModeStyles();
+            localStorage.setItem('theme', 'dark-mode');
           } else {
-            console.error("Switch checkbox not found!"); // Log an error if switchCheckbox is null
+            applyLightModeStyles();
+            localStorage.setItem('theme', 'light-mode');
           }
         });
-      </script>
+      } else {
+        console.error("Switch checkbox not found!"); // Log an error if switchCheckbox is null
+      }
+    });
+  </script>
 </body>
 
 </html>

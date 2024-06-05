@@ -23,7 +23,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="../Css-files/scroll-top-button.css">
   <!-- OWN CSS -->
   <link id="theme-link" rel="stylesheet" href="/Css-files/ContactUpdate.css">
   <style>
@@ -298,9 +298,15 @@ border-radius: 50%;
   </footer>
 
   <!-- go to top button -->
-  <a href="#" id="gotop-btn"
-    style="position: fixed; bottom: 50px; right: 50px; padding: 10px; background-color: brown;"><i
-      class="fa-solid fa-angle-up"></i></a>
+   <!--Scroll top button-->
+
+   <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
+        class="arrow">
+        <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+    </svg>
+</button>
+<!--Scroll top button finish-->
 
   <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
 
@@ -326,7 +332,8 @@ border-radius: 50%;
       window.location.href = "Html-files/signup.html";
     }
   </script>
-  <script>
+  <script src="top.js"></script>
+<script>
 
     //Custom Cursor
 
