@@ -556,7 +556,7 @@ label {
 input,
 textarea {
   height: 30px;
-  width: max-content;
+  width: auto;
   padding: 3px;
   box-sizing: border-box;
   border-radius: 4px;
