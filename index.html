@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Foodie</title>
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,27 +23,44 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="Css-files/scroll-top-button.css">
+
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="./style.css">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        #icon{
+            width: 30px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
     </style>
+
     <script src="hamburger.js" defer></script>
+
 </head>
 
 <body>
+    
     <nav>
         <div class="navigbar">
             <div class="logo">
-                <a href="index.html"><img src="Images/sitelogo.png" height="40" class="transparent-image"></a>
+                <a href="index.html"><img src="Images/sitelogo.png" height="48" class="transparent-image"></a>
             </div>
             <button class="navbar-toggler" id="menu-toggle" aria-label="Toggle navigation">
                 <span class="bar"></span>
@@ -49,15 +68,16 @@
                 <span class="bar"></span>
             </button>
             <!-- Hamburger menu list -->
-        <ul class="hamburger-menu" id="hamburger-menu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="Html-files/menu.html">Menu</a></li>
-            <li><a href="Html-files/services.html">Services</a></li>
-            <li><a href="Html-files/contact.html">Contact Us</a></li>
-            <li><a class="" onclick="redirectLogin()">Login</a></li>
-            <li><a class="" onclick="redirectSignup()">Sign Up</a></li>
-            <li><a class="" href="Html-files/cart.html">Cart</a></li>
-        </ul>
+            <ul class="hamburger-menu" id="hamburger-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="Html-files/menu.html">Menu</a></li>
+                <li><a href="Html-files/services.html">Services</a></li>
+                <li><a href="Html-files/contact.html">Contact Us</a></li>
+                <li><a class="" onclick="redirectLogin()">Login</a></li>
+                <li><a class="" onclick="redirectSignup()">Sign Up</a></li>
+                <li><a class="" href="Html-files/cart.html">Cart</a></li>
+            </ul>
+
             <ul class="ul1" id="nav-links">
                 <li><a href="../index.html" id="active-page">Home</a></li>
                 <li><a href="Html-files/menu.html">Menu</a></li>
@@ -66,6 +86,7 @@
             </ul>
             <div>
                 <ul class="ul2">
+                    <img style="margin-top: 10px;" src="Images/sun.png" id="icon" alt="">
                     <li> <a class="" onclick="redirectLogin()">Login</a></li>
                     <li> <a class="" onclick="redirectSignup()">Sign Up</a></li>
                     <li>
@@ -80,14 +101,18 @@
     <section class="hero text-center" aria-label="home" id="home">
         <ul class="hero-slider" data-hero-slider>
             <li class="slider-item active" data-hero-slider-item>
+
                 <div class="slider-bg">
                     <img src="hero-slider-1.jpg" width="1880" height="950" class="img-cover">
                 </div>
+
                 <p class="label-2 section-subtitle slider-reveal">Tradational & Hygine</p>
+
                 <h1 class="display-1 hero-title slider-reveal">
                     For the love of <br>
                     delicious food
                 </h1>
+
                 <p class="body-2 hero-text slider-reveal">
                     come with family & feel the joy of mouthwatering food
                 </p>
@@ -96,13 +121,17 @@
                     <span class="text text-1">View Our Menu</span>
                     <span class="text text-2" aria-hidden="true">View Our Menu</span>
                 </a>
+
             </li>
 
             <li class="slider-item active" data-hero-slider-item>
+
                 <div class="slider-bg">
                     <img src="hero-slider-2.jpg" width="1880" height="950" class="img-cover">
                 </div>
+
                 <p class="label-2 section-subtitle slider-reveal">delightful experience</p>
+
                 <h1 class="display-1 hero-title slider-reveal">
                     Flavors Inspired by <br>
                     the Seasons
@@ -116,13 +145,17 @@
                     <span class="text text-1">View Our Menu</span>
                     <span class="text text-2" aria-hidden="true">View Our Menu</span>
                 </a>
+
             </li>
 
             <li class="slider-item active" data-hero-slider-item>
+
                 <div class="slider-bg">
                     <img src="hero-slider-3.jpg" width="1880" height="950" class="img-cover">
                 </div>
+
                 <p class="label-2 section-subtitle slider-reveal">amazing & delicious</p>
+
                 <h1 class="display-1 hero-title slider-reveal">
                     Where every flavour <br>
                     tells a story
@@ -263,11 +296,14 @@
     <!-- <div class="franchise_container">
 
     </div> -->
+    
     <div class="fix"></div>
+
     <div class="container">
         <h2> Our Happy Clients </h2>
         <p class="description">
-            At Foodie, we pride ourselves on delivering delicious meals & exceptional service. Don’t just take our word for it—hear what our satisfied customers have to say!</p>
+            At Foodie, we pride ourselves on delivering delicious meals & exceptional service. Don’t just take our word
+            for it—hear what our satisfied customers have to say!</p>
 
         <!-- Clients Review Section -->
         <div class="reviewSection">
@@ -288,7 +324,8 @@
                     </ul>
                 </div>
                 <article>
-                    <p class="review">Foodie never disappoints! The food is always fresh, delicious, and delivered right on time. My go-to for all my meals!</p>
+                    <p class="review">Foodie never disappoints! The food is always fresh, delicious, and delivered right
+                        on time. My go-to for all my meals!</p>
                     <p>Jan 01, 2024</p>
                 </article>
             </div>
@@ -309,7 +346,8 @@
                     </ul>
                 </div>
                 <article>
-                    <p class="review">I love the variety on Foodie! There's something for everyone, and the delivery service is incredibly reliable</p>
+                    <p class="review">I love the variety on Foodie! There's something for everyone, and the delivery
+                        service is incredibly reliable</p>
                     <p>April 16, 2024</p>
                 </article>
             </div>
@@ -330,12 +368,13 @@
                     </ul>
                 </div>
                 <article>
-                    <p class="review">Fantastic service and mouth-watering dishes! Foodie has made my dining experience so much more convenient.</p>
+                    <p class="review">Fantastic service and mouth-watering dishes! Foodie has made my dining experience
+                        so much more convenient.</p>
                     <p>May 15, 2024</p>
                 </article>
             </div>
         </div>
-        
+
     </div>
 
     <section class="section-meals" data-aos="fade-in" data-aos-duration="2000">
@@ -483,6 +522,7 @@
                     </div>
                 </div>
             </div>
+
         </footer>
 
         <!--Scroll top button-->
@@ -494,8 +534,11 @@
             </svg>
         </button>
         <!--Scroll top button finish-->
+
     </div>
+
     <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+    
     <script>
         const heroSlider = document.querySelector("[data-hero-slider]");
         const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
@@ -551,9 +594,11 @@
         addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", autoSlide);
 
         window.addEventListener("load", autoSlide);
+
     </script>
 
     <script src="Html-files/top.js"></script>
+
     <script>
         window.addEventListener('beforeunload', function (event) {
             localStorage.clear();
@@ -592,6 +637,7 @@
         });
         main
     </script>
+
     main
 
     <script type="text/javascript">
@@ -608,14 +654,29 @@
             })(document, 'script');
     </script>
 </body>
+
 <script>
+
     function redirectLogin() {
         window.location.href = "Html-files/login.html";
     }
     function redirectSignup() {
         window.location.href = "Html-files/signup.html";
     }
+
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+            icon.src = "images/sun.png";
+        }else{
+            icon.src = "images/moon.png";
+        }
+    }
+
 </script>
+
 main
 
 </html>
