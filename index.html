@@ -40,6 +40,13 @@
 </head>
 
 <body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+
     <nav>
         <div class="navigbar">
             <div class="logo">
@@ -75,9 +82,14 @@
                     <li>
                         <a class="" href="Html-files/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                     </li>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search your food item.." name="search">
+                        <button type="submit">Search</button>
+                    </div>
                 </ul>
             </div>
         </div>
+        
     </nav>
 
 
@@ -410,11 +422,15 @@
                     </div>
                     <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                     </p>
-                    <div class="copyright">
-                        &copy; <span id="copyright-year"></span> Foodies - All Rights Reserved | <span id="author">
-                            <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi
-                                Joshi</a>
-                        </span></p>
+                    <div>
+                        <p class="copyright"> ©
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> Foodies - All Rights Reserved | 
+                            <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">
+                                Khushi Joshi 
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -432,6 +448,7 @@
     </div>
     <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
     <script>
+      
         const heroSlider = document.querySelector("[data-hero-slider]");
         const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
         const heroSliderPrevBtn = document.querySelector("[data-prev-btn]");
@@ -526,9 +543,7 @@
                 navbar.classList.remove('scrolled');
             }
         });
-        main
     </script>
-    main
 
 <!--     <script type="text/javascript">
             (function (d, t) {
@@ -586,7 +601,13 @@
     function redirectSignup() {
         window.location.href = "Html-files/signup.html";
     }
-</script>
-main
+    document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+      document.querySelector("body").classList.add("loaded");
+  }, 500)
+});
+
+</script
+
 
 </html>

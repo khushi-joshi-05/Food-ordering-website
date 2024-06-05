@@ -49,10 +49,12 @@
 
 .detail {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 60%;
+    gap: 10px;
 }
 
 .quantity-wrapper {
