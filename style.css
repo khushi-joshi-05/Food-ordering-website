@@ -1,6 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0px;
   padding: 0px;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style:normal;
 }
 
 /* Home carousel/slider  */
@@ -107,3 +115,71 @@
   }
 }
 
+/* ABOUT US SECTION */
+.about_us{
+  background-color: rgb(224, 224, 252);
+  overflow: hidden;
+}
+
+.discount-rolling h1{
+  text-transform: uppercase;
+  background: linear-gradient(to right, #de6262, #ffb88c);
+  border-bottom: 5px solid var(--bs-body-color);
+  border-right: 4px solid var(--bs-body-color);
+  animation: marquee 10s linear infinite;
+  margin-bottom: 0px;
+}
+
+.discount-rolling{
+  white-space: nowrap;
+  overflow: hidden;
+  box-shadow: 0 0 5px 5px rgba(214, 22, 22, 0.145);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.about_us .tagline{
+  color: brown;
+  font-family: "Bree Serif", serif;
+  font-size: 2.3rem;
+  width: 80%;
+  margin-bottom: 60px;
+  text-wrap: wrap;
+}
+
+.about_us .qualities{
+  font-family: "Bree Serif", serif;
+  text-align: center;
+  margin: auto 0; 
+}
+
+.about_us .qualities img{
+  max-width: 80%;
+  min-width: 60%;
+  border-radius: 20px;
+  aspect-ratio: 1.6875;
+}
+
+.about_us .qualities .card{
+  border: 2px solid brown;
+  margin: 0 1vw;
+  height: 100%;
+}
+
+.about_us .card-title{
+  font-size: 1.5rem;
+}
+
+.about_us .card:hover{
+  box-shadow: #212123 1px 1px 8px;
+  scale: 1.015;
+  cursor: pointer;
+}
