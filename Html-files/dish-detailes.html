@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../Css-files/content.css" />
+    <link rel="stylesheet" href="../Css-files/detailed-dish.css" />
+    <script src="../hamburger.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <div class="head_container">
+        <!-- <header> -->
+        <!-- updated nav bar -->
+        <nav>
+            <div class="navigbar">
+                <div class="logo">
+                    <a href="../index.html"><img src="../Images/sitelogo.png" height="40" class="transparent-image"></a>
+                </div>
+
+                <ul class="ul1">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="menu.html" id="active-page">Menu</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="ContactUpdate.html">Offers</a></li>
+                </ul>
+                <div>
+                    <ul class="ul2">
+                        <li><a href="login.html">Log In</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                        <li>
+                            <a class="" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- </header> -->
+
+        <div class="mainhead">
+            <h1>D I S H </h1>
+            <!-- <h2>"Get ready to explore our delicious range of dishes!"</h2> -->
+            <!-- <p>"Welcome to a world of culinary delights where every bite tells a flavorful story. Explore our diverse
+                menu and savor the essence of exquisite dining." </p> -->
+            <!-- <button class="butt">View all Menu</button> -->
+        </div>
+    </div>
+
+
+    <div class="container">
+        <header class="header">
+            <div class="logo">Subscribe</div>
+            <div class="search">🔍</div>
+        </header>
+        <main class="content">
+            <div class="image-gallery">
+                <img src="../Images/3.jpg" alt="Vegan Ramen" class="main-image">
+                <div class="thumbnail-images">
+                    <img src="../Images/3.jpg" alt="Thumb 1" style="color: white;">
+                    <img src="../Images/3.jpg" alt="Thumb 2" style="color: white;">
+                    <img src="../Images/3.jpg" alt="Thumb 3" style="color: white;">
+                </div>
+            </div>
+            <div class="recipe-info">
+                <h1 style="color: white; margin-bottom: 20px;">Vegan Ramen</h1>
+                <div class="star-rating" style="margin-bottom: 20px;">
+                    <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></button>
+                    <button class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></button>
+                </div>
+                <p style="color: white; font-size: 22px;">Easiest way to make healthy happy breakfast for you and while your family and eat it the whole day even on holidays. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam omnis commodi provident quo accusamus sit, iusto dicta rerum? Harum, ab. </p>
+                <div class="details">
+                    <span>40 mins</span>
+                    <span>225 nutrition</span>
+                    <span>6 ingredients</span>
+                </div>
+
+                <h1 class="price">$20</h1>
+                <button class="butt add-to-cart-button" data-product-id="1.02" data-product-name="Dessert"
+                data-product-price="10.20" style="width: 100%;">Add to Cart</button>
+           
+            </div>
+        </main>
+    </div>
+  </body>
+</html>

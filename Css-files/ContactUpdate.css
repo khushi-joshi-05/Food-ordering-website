@@ -1,0 +1,765 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color) !important;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/*===== Variable Define =====*/
+:root {
+  --primary-color: #FFC222;
+  --secondry-color: #00a149;
+  --white-color: #fff;
+  --text-color: #b0b0b0;
+  --black-color: #1E1D23;
+  --primary-font: 'Roboto', sans-serif;
+  --secondry-font: 'Quicksand', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 100%;
+  font-weight: 400;
+  background-color: brown;
+}
+
+#active-page {
+  color: #dc3545;
+  border-bottom: 2px solid #dc3545;
+}
+
+/*
+=========================================
+    Custom Scrollbar
+=========================================
+*/
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondry-color);
+}
+
+/*
+==========================================
+   Custom CSS Design
+==========================================
+*/
+
+h1 {
+  font-size: 58px;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  color:white;
+  text-shadow: 3px 0 6px #000;
+}
+
+h1 span {
+  color: var(--primary-color);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-family: var(--secondry-font);
+  color: var(--secondry-color);
+  line-height: 3rem;
+  color: whitesmoke;
+  padding-bottom: 2rem;
+}
+
+h4 {
+  color: var(--secondry-color);
+  font-family: var(--secondry-font);
+  text-transform: capitalize;
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+h5 {
+  color: var(--black-color);
+  text-transform: capitalize;
+  font-family: var(--secondry-font);
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 12px white;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: 1px;
+}
+
+.main-btn {
+  display: inline-block;
+  padding: 0.625rem 1.875rem;
+  line-height: 1.5625rem;
+  background-color: rgb(138, 37, 37);
+  ;
+  border: 0.1875rem solid rgb(10, 10, 9);
+  color: var(--white-color);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+  -webkit-transition: all .4s ease-out 0s;
+  -o-transition: all .4s ease-out 0s;
+  -moz-transition: all .4s ease-out 0s;
+  transition: all .4s ease-out 0s;
+}
+
+.main-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.wrapper {
+  padding-top: 4.25rem;
+  padding-bottom: 4.25rem;
+}
+
+.text-content {
+  width: 70%;
+  margin: auto;
+}
+
+/*
+==========================================
+   Header Design
+==========================================
+*/
+
+.navbar {
+  padding: 8px 0px;
+  height: 60px;
+
+  transition: background-color 0.3s, backdrop-filter 0.3s, color 0.3s;
+  /* Added transitions for smooth color change */
+  backdrop-filter: blur(0);
+  /* Initially no blur */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+}
+
+/* Navbar link hover effect */
+.navbar a:hover,
+.navbar.scrolled a:hover {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  /* Add bottom border on hover */
+  border-top: 1px solid #fff;
+  /* Add top border on hover */
+}
+
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+.navbar.scrolled {
+  background-color: rgba(176, 63, 63, 0.6);
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+/* Additional CSS to adjust the navbar on smaller screens */
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(175, 63, 62, 1);
+  }
+}
+
+nav {
+  height: 3rem;
+}
+
+.navigbar {
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  align-items: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  background-color: black; /* Ensure the navbar has a background color */
+}
+
+.logo {
+  color: rgba(255, 183, 0, 0.705);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.ul1,
+.ul2 {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.ul1 li a,
+.ul2 li a {
+  font-size: 1rem;
+}
+
+.ul1 li a:hover {
+  color: #f13800e4;
+}
+
+.ul2 li a:hover {
+  color: rgba(255, 183, 0, 0.705);
+}
+
+.cart {
+  color: white;
+}
+
+
+/* Hamburger menu styles */
+.navbar-toggler {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Transition for menu icon animation */
+.navbar-toggler.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggler.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Hide hamburger menu by default */
+.hamburger-menu {
+  display: none;
+}
+
+/* Show hamburger menu when toggled */
+/* .navbar-toggler.active + .hamburger-menu {
+  display: block;
+} */
+.navbar-toggler.active+.hamburger-menu {
+  display: block;
+  position: absolute;
+  top: 3rem;
+  /* Adjust based on your navbar height */
+  right: 0;
+  background-color: #000;
+  /* Adjust background color */
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Style hamburger menu items */
+.hamburger-menu li {
+  /* margin-bottom: 5px; */
+  list-style-type: none;
+}
+
+.hamburger-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Additional styling for active state of hamburger menu */
+.navbar-toggler.active {
+  background-color: #ccc;
+  /* Change background color when active */
+}
+
+/* Media query for smaller screens */
+@media screen and (min-width: 768px) {
+  .hamburger-menu {
+    display: none;
+    /* Hide hamburger menu on larger screens */
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .ul1,
+  .ul2 {
+    display: none;
+  }
+
+  #menu-toggle {
+    position: absolute;
+    right: 0;
+  }
+
+  .navigbar {
+    height: 3rem;
+  }
+
+}
+
+/*
+==========================================
+ explore food section Design
+==========================================
+*/
+
+.explore-food .card{
+
+  background-color:transparent;
+  border-radius: 0.9375rem;
+}
+
+.explore-food .card :hover {
+  transform: scale(1.01);
+  transition:all .4s ease-in;
+}
+
+.explore-food .card img {
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  width: 500px;
+  height: 300px;
+}
+
+.explore-food .card span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* color:var(--primary-color); */
+  color: white;
+  padding-bottom: 1rem;
+  border-bottom: 0.0625rem solid #eee;
+}
+
+.explore-food p{
+  /* color:var(--text-color); */
+  color: white;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/*
+==========================================
+ testimonial section Design
+==========================================
+*/
+.testimonial-section {
+  background: lavender;
+}
+
+.testimonial-section h2 {
+  color: red;
+}
+
+.testimonial-section .carousel-item {
+  margin-top: 3rem;
+  padding: 10rem 3.125rem;
+  color: white;
+  background-color: rgb(251, 251, 251);
+  border-radius: 0.9375rem;
+  text-align: center;
+border: 4px solid brown;
+}
+
+.testimonial-section .carousel-caption img {
+  width: 20rem;
+  height: 160px;
+  padding: 0.3125rem;
+}
+
+.testimonial-section .carousel-caption p {
+  font-size:1.67rem;
+  font-weight : bold;
+  line-height: 1.5625rem;
+  color: var(--black-color);
+  padding: 0 11% 0.625rem;
+}
+
+.testimonial-section .carousel-indicators {
+  bottom: -2.8125rem;
+}
+
+.testimonial-section .carousel-indicators button{
+  width:15px;
+  height:15px;
+  outline:auto;
+  border-radius: 50%;
+  border: none;
+  margin-right: 1rem;
+  opacity: 0.2;
+}
+
+.testimonial-section .carousel-indicators button.active {
+  opacity: 1;
+}
+
+
+/*
+==========================================
+footer section Design
+==========================================
+*/
+
+.foot-panel2 {
+  background-color: rgb(138, 37, 37);
+  color: white;
+  height: 300px;
+  /* height: fit-content; */
+  display: flex;
+  /* padding: 10px; */
+  justify-content: space-evenly;
+}
+
+.foot-panel2 ul {
+  margin-top: 20px;
+}
+
+ul p {
+  font-weight: 700;
+}
+
+ul a {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: #dddddd;
+  text-decoration: none;
+}
+
+.foot_panel4 {
+  background-color: rgb(66, 16, 16);
+  color: white;
+  font-size: 0.9rem;
+  text-align: center;
+
+}
+
+.foot_panel4 h4 {
+  color: white;
+}
+
+.item {
+  padding-bottom: 0px;
+}
+
+.pages {
+  padding-top: 25px;
+
+}
+
+.copyright{
+ padding-top: 10px;
+ padding-bottom: 10px;
+}
+
+form {
+  padding-top: 20px;
+  display: grid;
+  /* gap: 10px; */
+  padding-bottom: 100px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  height: 30px;
+  width: max-content;
+  padding: 3px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  border: #212123 1px;
+}
+
+#butt {
+  background-color: rgb(66, 16, 16);
+  color: white;
+  padding: 3px;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#butt:hover {
+  background-color: rgb(196, 89, 89);
+}
+
+.social-icons a {
+  font-size: 1.2rem;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  transition: .2s;
+}
+
+.fa-facebook:hover {
+  background-color: #3B5998;
+  color: white;
+}
+
+.fa-instagram:hover {
+  background-color: #D62976;
+  color: white;
+}
+
+.fa-twitter:hover {
+  background-color: #00B6F1;
+  color: white;
+}
+
+.fa-github:hover {
+  background-color: #040204;
+  color: white;
+}
+
+.copyright {
+  background-color: rgb(66, 16, 16);
+  padding-top: 10px;
+}
+
+#author {
+  padding: 3px;
+  border-radius: 3px;
+  color: #dddddd;
+}
+
+/* Form Control */
+.newsletter .form-control {
+  height: 3.225rem;
+  padding: 0 1.25rem;
+  font-size: 0.875rem;
+  width: 100%;
+  border-radius: 0;
+  background:transparent;
+  border:0.1875rem solid var(--white-color);
+  color:var(--black-color);
+  font-weight: 500;
+
+}
+
+.newsletter .main-btn {
+  height: 2.25rem;
+  padding: 0 1.25rem;
+  font-size: 0.875rem;
+  border-radius: 0;
+  background-color: var(--white-color);
+  border:0.1875rem solid var(--white-color);
+  color:var(--black-color);
+  font-weight: 500;
+
+}
+
+.newsletter:hover .form-control {
+  border: 0.1875rem solid var(--primary-color);
+  color: var(--black-color);
+}
+
+.newsletter:hover .main-btn {
+  background: var(--primary-color);
+  border: 0.1875rem solid var(--primary-color);
+}
+
+.newsletter .form-control:hover,
+.newsletter .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  /* border-color:var(--primary-color);  */
+
+
+/* <!--Responsive Design--> */
+@media only screen and (max-width: 800px) {
+  .testimonial-section .carousel-caption img {
+    width: 50%;
+    height: 100px;
+  }
+
+  .testimonial-section .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1390px) {
+  .testimonial-section .carousel-caption img {
+    width: 40%;
+    height: 100px;
+  }
+}
+
+@media (max-width: 991px) {
+
+  /*custom classes  */
+  .text-content {
+    width: 100%;
+  }
+
+  /* carousel design */
+  .testimonial-section .carousel-caption p {
+    padding: 0;
+  }
+
+  /* footer link */
+  .footer .footer-social a i {
+    padding: 0 0.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+
+  /* custom css */
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    line-height: 28px;
+  }
+
+  .foot-panel2 {
+
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(20px, 1fr));
+
+    /* flex-direction: column; */
+    grid-template-columns: 2;
+    padding: 30px;
+
+  }
+
+  .foot-panel2 ul {
+    margin-top: 20px;
+  }
+
+
+  /* carousel design */
+  .testimonial-section .carousel-item {
+    padding: 11rem 3.125rem;
+  }
+}
+
+@media (max-width:330px) {
+
+  /* carousel design */
+  .testimonial-section .carousel-item {
+    padding: 13rem 3.125rem;
+  }
+}
+
+@media (max-width:400px) {
+  .foot-panel2 {
+
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20px, 1fr));
+    /* flex-direction: column; */
+    grid-template-columns: 2;
+    padding: 30px;
+
+  }
+
+  .foot-panel2 ul {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,120 @@
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    padding: 20px 0;
+    margin-top: 100px;
+    justify-content: flex-end;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    padding-right:20px ;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.search {
+    font-size: 20px;
+}
+
+.search:hover {
+    cursor: pointer;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.thumbnail-images {
+    display: flex;
+    margin-top: 10px;
+}
+
+.thumbnail-images img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.thumbnail-images img:hover {
+    border: 2px solid #333;
+}
+
+.recipe-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.recipe-info h1 {
+    font-size: 42px;
+    margin: 0;
+}
+
+.rating {
+    font-size: 18px;
+    color: gold;
+}
+
+.price{
+    font-size: 40px;
+    color: white;
+    padding-top: 50px;
+}
+
+.recipe-info p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 20px;
+}
+
+.details span {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .details {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
