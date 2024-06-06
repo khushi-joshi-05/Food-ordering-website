@@ -72,19 +72,165 @@ This repository is aimed to help people to contribute in open source and learn G
 
 ## How to Run Locally
 
-1. Clone the project repository:
+To run the Eduford University project locally, follow these steps for your operating system:
 
-```bash
-git clone https://github.com/khushi-joshi-05/FoodOrderingWebsite.git
-```
+### Prerequisites
 
-2.Navigate to the project directory:
+Ensure you have the following installed:
+- **Node.js** (including npm) - Download and install from [Node.js official website](https://nodejs.org/).
+- **Git** - Download and install from [Git official website](https://git-scm.com/).
 
-```
-cd FoodOrderingWebsite
-```
+### Steps for All Operating Systems
 
-3.Open the index.html file in your preferred web browser to view the website locally.
+1. **Clone the Project Repository:**
+
+   Open your terminal or command prompt and run:
+   ```bash
+   git clone https://github.com/juhinagpure/Eduford-university.git
+   ```
+
+2. **Navigate to the Project Directory:**
+
+   ```sh
+   cd Eduford-university
+   ```
+
+3. **Install Dependencies:**
+
+   ```sh
+   npm install
+   ```
+
+4. **Start the Server:**
+
+   ```sh
+   npm start
+   ```
+
+5. **Open the Application in Your Browser:**
+
+   Open your browser and navigate to:
+   ```sh
+   http://localhost:3000
+   ```
+
+### Detailed Steps for Each Operating System
+
+#### Windows
+
+1. **Clone the Repository:**
+   - Open Command Prompt or PowerShell and run:
+     ```sh
+     git clone https://github.com/juhinagpure/Eduford-university.git
+     ```
+
+2. **Navigate to the Project Directory:**
+   ```sh
+   cd Eduford-university
+   ```
+
+3. **Install Dependencies:**
+   ```sh
+   npm install
+   ```
+
+4. **Start the Server:**
+   ```sh
+   npm start
+   ```
+
+5. **Open the Application in Your Browser:**
+   Open your browser and navigate to:
+   ```sh
+   http://localhost:3000
+   ```
+
+#### macOS
+
+1. **Clone the Repository:**
+   - Open Terminal and run:
+     ```sh
+     git clone https://github.com/juhinagpure/Eduford-university.git
+     ```
+
+2. **Navigate to the Project Directory:**
+   ```sh
+   cd Eduford-university
+   ```
+
+3. **Install Dependencies:**
+   ```sh
+   npm install
+   ```
+
+4. **Start the Server:**
+   ```sh
+   npm start
+   ```
+
+5. **Open the Application in Your Browser:**
+   Open your browser and navigate to:
+   ```sh
+   http://localhost:3000
+   ```
+
+#### Linux
+
+1. **Clone the Repository:**
+   - Open Terminal and run:
+     ```sh
+     git clone https://github.com/juhinagpure/Eduford-university.git
+     ```
+
+2. **Navigate to the Project Directory:**
+   ```sh
+   cd Eduford-university
+   ```
+
+3. **Install Dependencies:**
+   ```sh
+   npm install
+   ```
+
+4. **Start the Server:**
+   ```sh
+   npm start
+   ```
+
+5. **Open the Application in Your Browser:**
+   Open your browser and navigate to:
+   ```sh
+   http://localhost:3000
+   ```
+
+## Common Issues and Troubleshooting
+
+1. **Node.js and npm are not recognized:**
+   - Ensure Node.js and npm are properly installed and added to your system's PATH. Verify their installation by running:
+     ```sh
+     node -v
+     npm -v
+     ```
+
+2. **Port 3000 is already in use:**
+   - Stop the process using that port or change the port in the `start` script in `package.json`:
+     ```json
+     "scripts": {
+       "start": "PORT=3001 node app.js"
+     }
+     ```
+
+3. **Permission errors while installing dependencies:**
+   - On macOS and Linux, you might need to use `sudo`:
+     ```sh
+     sudo npm install
+     ```
+
+## Conclusion
+
+You have successfully installed and set up Eduford University locally on your machine. If you encounter any issues or have questions, feel free to open an issue on the [GitHub repository](https://github.com/juhinagpure/Eduford-university/issues).
+
+Enjoy exploring and contributing to Eduford University!
 
 ## Screenshots
 
