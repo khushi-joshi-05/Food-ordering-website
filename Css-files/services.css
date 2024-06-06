@@ -1,0 +1,185 @@
+* {
+    font-family: "Bree Serif", serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+.mainhead:hover h1 {
+    color: rgb(138, 37, 37);
+
+}
+
+.section1 {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__title {
+    font-size: 4em;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgb(138, 37, 37), rgb(237, 116, 116), rgb(138, 37, 37));
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient-animation 3s infinite;
+}
+
+.section1>hr {
+    opacity: 0;
+    border-width: 2px;
+}
+
+.section1:hover>hr {
+    border-bottom: 2px solid rgb(138, 37, 37);
+    /* Add bottom border on hover */
+    border-top: 2px solid rgb(138, 37, 37);
+    width: 50%;
+    opacity: 1;
+}
+
+#active-page {
+    color: #dc3545;
+    border-bottom: 2px solid #dc3545;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.head_container_service {
+    height: fit-content;
+}
+
+.first_cont {
+    flex-wrap: wrap;
+}
+
+.items {
+    overflow: hidden;
+    max-width: 230px;
+}
+
+.items img {
+    transition: 0.3s;
+    z-index: 12;
+}
+
+.items:hover img {
+    transform: scale(1.1);
+}
+
+.but {
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.but:hover {
+    background-color: rgb(138, 37, 37);
+    color: white;
+    transform: translateX(10px);
+}
+
+.testimonalsection {
+    padding-top: 20px;
+}
+
+.fa-star,
+.fa-star-half-stroke {
+    color: goldenrod;
+}
+
+.testimonal__container {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonal__title {
+    color: rgb(138, 37, 37);
+}
+
+.testimonal__card {
+    position: relative;
+    background-color: transparent;
+    border-radius: 5px;
+    margin: 0;
+
+}
+
+.testimonal__image:hover {
+    transform: translateY(10px);
+}
+
+.testimonal__swiper {
+    background-color: white;
+    margin: 5px;
+    overflow: hidden;
+    border: 2px solid rgb(138, 37, 37);
+    border-radius: 5px;
+    cursor: pointer;
+    width: 330px;
+
+}
+
+.testimonal__swiper:hover {
+    border-radius: 50%;
+}
+
+.testimonal__swiper>div {
+    background-color: rgb(138, 37, 37);
+    height: 33%;
+    border-radius: 5px 5px 70% 70%;
+    transition: 0.5s ease-in-out;
+}
+
+.testimonal__swiper:hover>div {
+    height: 200%;
+    border-radius: 20%;
+}
+
+.testimonal__swiper * {
+    transition: 0.3s ease-in-out;
+}
+
+.testimonal__swiper:hover * {
+    color: white;
+}
+
+.second_cont {
+    flex-wrap: wrap;
+}
+
+.deals {
+    flex: 1 1 300px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.deals:hover {
+    transform: translateY(-10px);
+    background-color: rgb(138, 37, 37);
+    color: white;
+    border-color: white;
+}
+
+input,
+textarea {
+    width: 100%;
+}
+
+#butt:hover {
+    background-color: rgb(196, 89, 89);
+}
