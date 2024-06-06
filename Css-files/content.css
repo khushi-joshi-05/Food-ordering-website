@@ -104,19 +104,6 @@ body {
   opacity: 0.7;
 }
 
-
-.menu_container {
-  padding: 55px 70px 30px 70px;
-  background-color: rgb(224, 224, 252);
-}
-
-.menu_container h2 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 2rem;
-  color: rgb(138, 37, 37);
-  padding-left: 50px;
-}
-
 .mainhead {
   text-align: center;
   padding-top: 30px;
@@ -170,6 +157,18 @@ body {
 .butt:hover {
   background-color: white;
   color: orangered;
+}
+
+.menu_container {
+  padding: 55px 70px 30px 70px;
+  background-color: rgb(224, 224, 252);
+}
+
+.menu_container h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  color: rgb(138, 37, 37);
+  padding: 0 0 1rem 13.5rem;
 }
 
 .menu_items {
