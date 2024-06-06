@@ -1679,7 +1679,7 @@ nav {
 .btn-primary {
   --bs-btn-bg: #c63232;
 }
-#loader-wrapper {
+.loader-wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -1688,7 +1688,7 @@ nav {
   z-index: 1001;
 }
 
-#loader-wrapper .loader-section {
+.loader-wrapper .loader-section {
   position: fixed;
   top: 0;
   width: 51%;
@@ -1699,15 +1699,15 @@ nav {
   transform: translateX(0);
 }
 
-#loader-wrapper .loader-section.section-left {
+.loader-wrapper .loader-section.section-left {
   left: 0;
 }
 
-#loader-wrapper .loader-section.section-right {
+.loader-wrapper .loader-section.section-right {
   right: 0;
 }
 
-#loader {
+.loader {
   display: block;
   position: relative;
   left: 50%;
@@ -1723,7 +1723,7 @@ nav {
   z-index: 99999;
 }
 
-#loader:before {
+.loader:before {
   content: "";
   position: absolute;
   top: 5px;
@@ -1737,7 +1737,7 @@ nav {
   animation: spin 3s linear infinite;
 }
 
-#loader:after {
+.loader:after {
   content: "";
   position: absolute;
   top: 15px;
@@ -1751,7 +1751,7 @@ nav {
   animation: spin 1.5s linear infinite;
 }
 
-.loaded #loader-wrapper {
+.loaded .loader-wrapper {
   visibility: hidden;
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
@@ -1759,21 +1759,21 @@ nav {
   transition: all 0.3s 1s ease-out;
 }
 
-.loaded #loader-wrapper .loader-section.section-left {
+.loaded .loader-wrapper .loader-section.section-left {
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
   -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.loaded #loader-wrapper .loader-section.section-right {
+.loaded .loader-wrapper .loader-section.section-right {
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
   -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.loaded #loader {
+.loaded .loader {
   opacity: 0;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;

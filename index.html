@@ -60,6 +60,26 @@
   transform: translate(-30%,-30%);
   border-radius: 50%;
 }
+.loader-wrapper--hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader--hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.section-left--hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.section-right--hidden{
+   opacity: 0;
+   visibility: hidden;
+}
+.loader-section--hidden{
+    opacity: 0;
+    visibility: hidden;
+}
     </style>
 </head>
 
@@ -87,12 +107,62 @@
         <div class="circle" style="background-color: rgb(96, 0, 95); left: 504px; top: 59px; scale: 0.05;"></div>
     </div>
 
-    <div id="loader-wrapper">
-        <div id="loader"></div>
+    <div class="loader-wrapper">
+        <div class="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
     </div>
+    <script>
+        window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader-wrapper");
 
+  loader.classList.add("loader-wrapper--hidden");
+
+  loader.addEventListener("transitionend", () => {
+  document.body.removeChild(loader);
+  });
+  });
+
+  window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader-section");
+
+  loader.classList.add(".loader-section.section-left--hidden");
+
+  loader.addEventListener("transitionend", () => {
+  document.body.removeChild(loader);
+  });
+  });
+
+  window.addEventListener("load", () => {
+  const loader = document.querySelector(".section-right");
+
+  loader.classList.add(".section-right--hidden");
+
+  loader.addEventListener("transitionend", () => {
+  document.body.removeChild(loader);
+  });
+  });
+
+  window.addEventListener("load", () => {
+  const loader = document.querySelector(".section-left");
+
+  loader.classList.add(".section-left--hidden");
+
+  loader.addEventListener("transitionend", () => {
+  document.body.removeChild(loader);
+  });
+  });
+
+  window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader--hidden");
+
+  loader.addEventListener("transitionend", () => {
+  document.body.removeChild(loader);
+  });
+  });
+    </script>
 
     <nav>
         <div class="navigbar">
