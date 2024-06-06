@@ -8,7 +8,7 @@
 .poppins-light {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-style:normal;
+  font-style: normal;
 }
 
 /* Home carousel/slider  */
@@ -57,7 +57,7 @@
   transition: 500ms ease;
 }
 
-#homeSlider .slider-button:is(:hover, :focus-visible, :active){
+#homeSlider .slider-button:is(:hover, :focus-visible, :active) {
   background-color: hsl(38, 61%, 73%);
   color: hsla(40, 12%, 5%, 1);
   border-color: hsla(40, 12%, 5%, 1);
@@ -116,12 +116,13 @@
 }
 
 /* ABOUT US SECTION */
-.about_us{
+.about_us {
   background-color: rgb(224, 224, 252);
   overflow: hidden;
+  padding-bottom: 120px;
 }
 
-.discount-rolling h1{
+.about_us .discount-rolling h1 {
   text-transform: uppercase;
   background: linear-gradient(to right, #de6262, #ffb88c);
   border-bottom: 5px solid var(--bs-body-color);
@@ -130,7 +131,7 @@
   margin-bottom: 0px;
 }
 
-.discount-rolling{
+.about_us .discount-rolling {
   white-space: nowrap;
   overflow: hidden;
   box-shadow: 0 0 5px 5px rgba(214, 22, 22, 0.145);
@@ -146,7 +147,7 @@
   }
 }
 
-.about_us .tagline{
+.about_us .tagline {
   color: brown;
   font-family: "Bree Serif", serif;
   font-size: 2.3rem;
@@ -155,31 +156,175 @@
   text-wrap: wrap;
 }
 
-.about_us .qualities{
+.about_us .qualities {
   font-family: "Bree Serif", serif;
   text-align: center;
-  margin: auto 0; 
+  margin: auto 0;
 }
 
-.about_us .qualities img{
+.about_us .qualities img {
   max-width: 80%;
   min-width: 60%;
   border-radius: 20px;
   aspect-ratio: 1.6875;
 }
 
-.about_us .qualities .card{
+.about_us .qualities .card {
   border: 2px solid brown;
   margin: 0 1vw;
   height: 100%;
 }
 
-.about_us .card-title{
+.about_us .card-title {
   font-size: 1.5rem;
 }
 
-.about_us .card:hover{
+.about_us .card:hover {
   box-shadow: #212123 1px 1px 8px;
   scale: 1.015;
   cursor: pointer;
+}
+
+/* SERVICES SECTION */
+.services_container .card {
+  border: none;
+  border-radius: 0px;
+}
+
+.services_container .img-container {
+  height: 550px;
+  width: 100%;
+  background-color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .services_container .img-container {
+    height: 900px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .services_container .box_main {
+    text-align: center;
+  }
+}
+
+.services_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.services_container .card-img-overlay {
+  overflow: hidden;
+  color: white;
+}
+
+.services_container .box_main {
+  font-family: "Oswald", sans-serif;
+  padding: 0;
+}
+
+.services_container .box_main h1 {
+  font-size: 4.5rem;
+  padding: 0;
+  margin-bottom: 6px;
+}
+
+.services_container .box {
+  font-size: 1.3rem;
+  padding: 0;
+  text-align: center;
+}
+
+.services_container .box h1 {
+  margin-bottom: 0.5em;
+}
+
+.services_container .btn {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  max-width: max-content;
+  border-width: 2px;
+}
+
+/* MENU CONTAINER */
+.menu_container {
+  background-color: rgb(224, 224, 252);
+  padding: 100px 0px 100px 0px;
+  overflow: hidden;
+}
+
+.mainhead h1 {
+  font-family: "Bree Serif", serif;
+  font-size: 2.8rem;
+}
+
+.mainhead p {
+  font-size: 1.2rem;
+  color: brown;
+  font-family: "Bree Serif", serif;
+}
+
+.mainhead .btn {
+  border: 2px solid brown;
+  font-size: 1.4rem;
+  padding: 7px;
+  border-radius: 10px;
+  font-family: "Bree Serif", serif;
+  margin-bottom: 50px;
+  background-color: brown;
+  color: white;
+}
+
+.mainhead .btn:hover {
+  border: 2px solid brown;
+  color: brown;
+  background-color: #f2f2f2;
+}
+ 
+.menu_items .items{
+  text-align: center; 
+  max-height: 370px;
+  background-color: #f2f2f2;
+  border: 3px solid brown;
+  font-family: "Bree Serif", serif;
+  transition: 0.2s all ease-in;
+  border-radius: 10px;
+}
+
+.menu_items .items:hover {
+  box-shadow: #212123 1px 1px 8px;
+  cursor: pointer;
+  scale: 1.02;
+  background-color: #ca8787;
+}
+
+.menu_items .card-body{
+  min-height: 130px;
+  padding: 5px 5px 5px 5px;
+}
+
+.menu_items .img-container{
+  width: 90%;
+  margin-top: 1em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.menu_items img{
+  object-fit: cover;
+  object-position: center;
+  height: 220px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.menu_items .items h3 {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  color: brown;
 }
