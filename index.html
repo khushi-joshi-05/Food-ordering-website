@@ -31,17 +31,29 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./login1.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body{
+            overflow-x: hidden;
+        }
     </style>
     <script src="hamburger.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+
     <nav>
         <div class="navigbar">
             <div class="logo">
-                <a href="index.html"><img src="Images/sitelogo.png" height="40" class="transparent-image"></a>
+                <a href="index.html"><img src="Images/Foodielogo.png" height="40" class="transparent-image"></a>
             </div>
             <button class="navbar-toggler" id="menu-toggle" aria-label="Toggle navigation">
                 <span class="bar"></span>
@@ -49,20 +61,22 @@
                 <span class="bar"></span>
             </button>
             <!-- Hamburger menu list -->
-        <ul class="hamburger-menu" id="hamburger-menu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="Html-files/menu.html">Menu</a></li>
-            <li><a href="Html-files/services.html">Services</a></li>
-            <li><a href="Html-files/contact.html">Contact Us</a></li>
-            <li><a class="" onclick="redirectLogin()">Login</a></li>
-            <li><a class="" onclick="redirectSignup()">Sign Up</a></li>
-            <li><a class="" href="Html-files/cart.html">Cart</a></li>
-        </ul>
+            <ul class="hamburger-menu" id="hamburger-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="Html-files/menu.html">Menu</a></li>
+                <li><a href="Html-files/services.html">Services</a></li>
+                <li><a href="Html-files/contact.html">Contact Us</a></li>
+                <li><a href="Html-files/ContactUpdate.html">Offers</a></li>
+                <li><a class="" onclick="redirectLogin()">Login</a></li>
+                <li><a class="" onclick="redirectSignup()">Sign Up</a></li>
+                <li><a class="" href="Html-files/cart.html">Cart</a></li>
+            </ul>
             <ul class="ul1" id="nav-links">
                 <li><a href="../index.html" id="active-page">Home</a></li>
                 <li><a href="Html-files/menu.html">Menu</a></li>
                 <li><a href="Html-files/services.html">Services</a></li>
-                <li><a href="Html-files/ContactUpdate.html">Contact Us</a></li>
+                <li><a href="Html-files/contact.html">Contact Us</a></li>
+                <li><a href="Html-files/ContactUpdate.html">Offers</a></li>
             </ul>
             <div>
                 <ul class="ul2">
@@ -71,11 +85,15 @@
                     <li>
                         <a class="" href="Html-files/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                     </li>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search your food item.." name="search">
+                        <button type="submit">Search</button>
+                    </div>
                 </ul>
             </div>
         </div>
+        
     </nav>
-
 
     <section class="hero text-center" aria-label="home" id="home">
         <ul class="hero-slider" data-hero-slider>
@@ -92,7 +110,7 @@
                     come with family & feel the joy of mouthwatering food
                 </p>
 
-                <a href="#" class="btn btn-primary slider-reveal">
+                <a href="Html-files/menu.html" class="btn btn-primary slider-reveal">
                     <span class="text text-1">View Our Menu</span>
                     <span class="text text-2" aria-hidden="true">View Our Menu</span>
                 </a>
@@ -112,7 +130,7 @@
                     come with family & feel the joy of mouthwatering food
                 </p>
 
-                <a href="#" class="btn btn-primary slider-reveal">
+                <a href="Html-files/menu.html" class="btn btn-primary slider-reveal">
                     <span class="text text-1">View Our Menu</span>
                     <span class="text text-2" aria-hidden="true">View Our Menu</span>
                 </a>
@@ -132,7 +150,7 @@
                     come with family & feel the joy of mouthwatering food
                 </p>
 
-                <a href="#" class="btn btn-primary slider-reveal">
+                <a href="Html-files/menu.html" class="btn btn-primary slider-reveal">
                     <span class="text text-1">View Our Menu</span>
                     <span class="text text-2" aria-hidden="true">View Our Menu</span>
                 </a>
@@ -159,21 +177,21 @@
             </div>
         </div>
 
-        <h1 class="h-primary center">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
+        <h1 class="h-primary center" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
 
         <!-- changes -->
-        <div id="about">
+        <div id="about" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
             <div class="box">
                 <img src="https://shahidining.com.au/wp-content/uploads/2020/05/secret-to-indian-flavour-1536x864.jpg"
                     alt="">
-                <h2 class="h-secondary center">Authentic Indian Flavors</h2>
+                <h2 class="h-secondary center text-black">Authentic Indian Flavors</h2>
                 <p class="center">From aromatic curries to flavorful biryanis, our menu showcases the diversity and
                     deliciousness of Indian cuisine.
                 </p>
             </div>
             <div class="box">
                 <img src="https://saavi.com.au/wp-content/uploads/2016/02/image0023-1.jpg" alt="">
-                <h2 class="h-secondary center">Tech-Infused Dining Experience</h2>
+                <h2 class="h-secondary center text-black">Tech-Infused Dining Experience</h2>
                 <p class="center">
                     Customers can use apps to place orders, customize their dishes, and even provide feedback, making
                     their visit more convenient and interactive.
@@ -181,7 +199,7 @@
             </div>
             <div class="box">
                 <img src="https://i.ndtvimg.com/i/2015-06/fusion-food_625x350_81434107799.jpg" alt="">
-                <h2 class="h-secondary center">Innovative Fusion Dishes</h2>
+                <h2 class="h-secondary center text-black">Innovative Fusion Dishes</h2>
                 <p class="center">The combinations of Indian and international cuisines not only tantalize taste buds
                     but also provide unique experience.
                 </p>
@@ -191,23 +209,23 @@
 
     <section class="service_container">
         <div class="service">
-            <div class="box_main">
+            <div class="box_main" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
                 <h1>Bringing <br>happiness<br> to you</h1>
                 <p>Food is more than sustenance; it's a source of pure<br> happiness. From the first bite of a favorite
                     childhood dish<br> to the thrill of discovering new flavors, food has a unique<br> way of filling
                     our hearts with joy.</p>
             </div>
-            <div class="box">
+            <div class="box" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
                 <h1>Online Delivery</h1><br>
                 <a href="#" class="btn">Order Online</a>
 
             </div>
-            <div class="box">
+            <div class="box" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
                 <h1>Click & Collect</h1><br>
                 <a href="#" class="btn">Take out Order</a>
 
             </div>
-            <div class="box">
+            <div class="box" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
                 <h1>Restaurant Dining</h1><br>
 
                 <a href="./Html-files/book-table.html" class="btn">Book Table</a>
@@ -217,7 +235,7 @@
     </section>
 
     <section class="menu_container">
-        <div class="mainhead">
+        <div class="mainhead" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
             <h1>"Get ready to explore our delicious range of dishes!"</h1>
             <p>"Welcome to a world of culinary delights where every bite tells a flavorful story. Explore our diverse
                 menu and savor the essence of exquisite dining." </p>
@@ -226,7 +244,7 @@
             <!-- <button class="butt" onclick="window.open('Html-files/menu.html')">View Menu</button> -->
         </div>
 
-        <div class="menu_items">
+        <div class="menu_items" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
             <div class="items">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjSkmP0glNOmYbWZWwz_BRxgwrA5HdZadphw&s">
                 <h3>Indian Thali</h3>
@@ -264,10 +282,11 @@
 
     </div> -->
     <div class="fix"></div>
-    <div class="container">
+    <div class="container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
         <h2> Our Happy Clients </h2>
         <p class="description">
-            At Foodie, we pride ourselves on delivering delicious meals & exceptional service. Don’t just take our word for it—hear what our satisfied customers have to say!</p>
+            At Foodie, we pride ourselves on delivering delicious meals & exceptional service. Don’t just take our word
+            for it—hear what our satisfied customers have to say!</p>
 
         <!-- Clients Review Section -->
         <div class="reviewSection">
@@ -288,7 +307,8 @@
                     </ul>
                 </div>
                 <article>
-                    <p class="review">Foodie never disappoints! The food is always fresh, delicious, and delivered right on time. My go-to for all my meals!</p>
+                    <p class="review">Foodie never disappoints! The food is always fresh, delicious, and delivered right
+                        on time. My go-to for all my meals!</p>
                     <p>Jan 01, 2024</p>
                 </article>
             </div>
@@ -309,7 +329,8 @@
                     </ul>
                 </div>
                 <article>
-                    <p class="review">I love the variety on Foodie! There's something for everyone, and the delivery service is incredibly reliable</p>
+                    <p class="review">I love the variety on Foodie! There's something for everyone, and the delivery
+                        service is incredibly reliable</p>
                     <p>April 16, 2024</p>
                 </article>
             </div>
@@ -330,12 +351,13 @@
                     </ul>
                 </div>
                 <article>
-                    <p class="review">Fantastic service and mouth-watering dishes! Foodie has made my dining experience so much more convenient.</p>
+                    <p class="review">Fantastic service and mouth-watering dishes! Foodie has made my dining experience
+                        so much more convenient.</p>
                     <p>May 15, 2024</p>
                 </article>
             </div>
         </div>
-        
+
     </div>
 
     <section class="section-meals" data-aos="fade-in" data-aos-duration="2000">
@@ -450,7 +472,7 @@
                     <a href="#">Contactless Payments</a>
                 </ul>
 
-                <form id="contactForm">
+                <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
                     <h3>Contact Us!</h3>
                     <!-- <label for="name">Name:</label> -->
                     <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>-->
@@ -471,17 +493,22 @@
                         <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
                         <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
                         <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                        <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
                         <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
                             target="_blank"></a>
                         <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
                     </div>
                     <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
                     </p>
-                    <div class="copyright">
-                        &copy; <span id="copyright-year"></span> Foodies - All Rights Reserved | <span id="author">
-                            <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi
-                                Joshi</a>
-                        </span></p>
+                    <div>
+                        <p class="copyright"> ©
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> Foodies - All Rights Reserved | 
+                            <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">
+                                Khushi Joshi 
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -499,6 +526,7 @@
     </div>
     <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
     <script>
+      
         const heroSlider = document.querySelector("[data-hero-slider]");
         const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
         const heroSliderPrevBtn = document.querySelector("[data-prev-btn]");
@@ -522,8 +550,8 @@
 
             updateSliderPos();
         }
-        heroSliderNextBtn.addEventListener("click", slideNext);
-
+        heroSliderNextBtn.addEventListener("click", slideNext)
+  
         const slidePrev = function () {
             if (currentSlidePos <= 0) {
                 currentSlidePos = heroSliderItems.length - 1;
@@ -556,6 +584,7 @@
     </script>
 
     <script src="Html-files/top.js"></script>
+  
     <script>
         window.addEventListener('beforeunload', function (event) {
             localStorage.clear();
@@ -592,11 +621,9 @@
                 navbar.classList.remove('scrolled');
             }
         });
-        main
     </script>
-    main
 
-    <script type="text/javascript">
+<!--     <script type="text/javascript">
             (function (d, t) {
                 var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
                 v.onload = function () {
@@ -608,7 +635,42 @@
                 }
                 v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
             })(document, 'script');
+    </script> -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init(
+        {
+          duration: 1000, 
+          easing: 'ease', 
+          once: false, 
+        }
+      );
     </script>
+  
+<!--  Chatbot  -->
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Message...",
+      "botConversationDescription": "Welcome to Foodie!",
+      "botId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+      "webhookId": "7bd6ccb8-58f4-4ee3-9bca-f33ea4b7c37c",
+      "lazySocket": true,
+      "themeName": "prism",
+      "botName": "Foodie",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/da4ab5f7-146c-4585-961b-2d9def26af50/v96339/style.css",
+      "frontendVersion": "v1",
+      "useSessionStorage": true,
+      "enableConversationDeletion": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": []
+  });
+</script>
+  
 </body>
 <script>
     function redirectLogin() {
@@ -617,7 +679,13 @@
     function redirectSignup() {
         window.location.href = "Html-files/signup.html";
     }
-</script>
-main
+    document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+      document.querySelector("body").classList.add("loaded");
+  }, 500)
+});
+
+</script
+
 
 </html>

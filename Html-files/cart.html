@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="../Css-files/scroll-top-button.css">
     <link rel="stylesheet" href="../Css-files/content.css">
     <link rel="stylesheet" href="../Css-files/cart.css">
 
 </head>
 
 <body>
+    <div class="coupen"><marquee behavior="" direction="left" class="coupen-inner"></marquee></div>
     <div class="head_container">
         <header>
             <!-- <nav class="navbar">
@@ -146,7 +147,8 @@
                 <div class="social-icons">
                     <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
                     <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                    <a class="fa-brands fa-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
                     <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
                         target="_blank"></a>
                     <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
@@ -162,6 +164,15 @@
             </div>
         </div>
     </footer>
+     <!--Scroll top button-->
+
+     <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
+            class="arrow">
+            <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+        </svg>
+    </button>
+    <!--Scroll top button finish-->
 
     <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
 
@@ -169,6 +180,7 @@
     <script src="cart.js">
 
     </script>
+    <script src="top.js"></script>
 </body>
 
 </html>
