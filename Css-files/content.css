@@ -49,11 +49,15 @@ body {
 }
 
 .navbar li a {
+  display: flex;
+flex-direction: column;
   padding: 3px 3px;
   text-decoration: none;
   color: white;
   font-size: 1.3rem;
 }
+
+
 /* Styling for the contact navbar */
 .navbarbg {
   padding: 8px 0;
@@ -167,6 +171,7 @@ body {
 }
 
 .menu_items .items img {
+  display: flex;
   justify-content: center;
   height: 190px;
   width: 230px;

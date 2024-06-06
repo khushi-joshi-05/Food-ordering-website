@@ -27,12 +27,12 @@ body {
 }
 
 /* Navbar link hover effect */
-.navbar a:hover,
+/* .navbar a:hover,
 .navbar.scrolled a:hover {
   color: #fff;
-  border-bottom: 1px solid #fff; /* Add bottom border on hover */
-  border-top: 1px solid #fff; /* Add top border on hover */
-}
+  border-bottom: 1px solid #ff0000;  Add bottom border on hover 
+  border-top: 1px solid #ff0000;  Add top border on hover 
+}*/
 
 .navbar.fixed-top {
   position: fixed; 
@@ -79,7 +79,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 3px 150px;
-  height: 630px;
+  height: 94vh;
   justify-content: center;
   align-items: center;
   color: white;
@@ -123,8 +123,8 @@ body {
 }
 
 .intro_container button:hover {
-  background-color: brown;
-  color: white;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
   cursor: pointer;
 }
 
@@ -649,6 +649,11 @@ textarea {
   color: white;
 }
 
+.fa-discord:hover{
+  background-color: rgb(45, 18, 183);
+  color: white;
+}
+
 #author {
   padding: 3px;
   border-radius: 3px;
@@ -741,6 +746,7 @@ ul{
 
   .service .box_main h1 {
     font-size: 3.5rem;
+    text-align: center;
   }
 
   .service_container:before {
@@ -944,9 +950,13 @@ padding-left:2px;
 }
 
 .navbar li:hover a {
-  color: brown;
+  color: rgb(239, 7, 7);
+  font-size: 20px;
+  font-weight: bold;
 }
-
+.navbar-brand:hover{
+  color: white;
+}
 .btn:hover {
   background-color: white;
   color: brown;

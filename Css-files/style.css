@@ -38,7 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 3px 150px;
-    height: 630px;
+    height: 98vh;
     justify-content: center;
     align-items: center;
     color: white;
@@ -84,7 +84,7 @@ body {
 .intro_container button:hover {
 
     background-color: white;
-    color: brown;
+    color: rgb(255, 0, 0);
     cursor: pointer;
 }
 
