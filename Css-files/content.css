@@ -406,6 +406,7 @@ body {
   height: 300px;
   display: flex;
   justify-content: space-evenly;
+  width: 100vw;
   /* margin-top: 50px; */
 }
 
