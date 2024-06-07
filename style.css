@@ -1802,5 +1802,7 @@ nav {
       transform: rotate(360deg);
   }
 }
-
+.ul2 a{
+  cursor: pointer;
+}
 /* Preloader Css Ends */
