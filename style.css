@@ -737,7 +737,7 @@ textarea {
   border: #212123 1px;
 }
 
-#butt {
+/*#butt {
   background-color: rgb(117, 21, 21);
   color: white;
   padding: 3px;
@@ -748,6 +748,26 @@ textarea {
 
 #butt:hover {
   background-color: rgb(196, 89, 89);
+}*/
+#butt {
+padding: 10px 20px;
+font-size: 24px;
+text-align: center;
+cursor: pointer;
+outline: none;
+color: #fff;
+background-color: rgb(117, 21, 21);
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #999;
+}
+
+#butt:hover {background-color:  rgb(196, 89, 89);}
+
+#butt:active {
+background-color: rgb(196, 89, 89);;
+box-shadow: 0 1px #be4b4b;
+transform: translateY(4px);
 }
 
 .social-icons a {
