@@ -11,16 +11,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
   <div class="main-login">
-    <div class="left-login">
+    <div class="left-login" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
       <h1>Sign Up Here<br>Good Food is Good Mood</h1>
       <img src="../Images/desserts.avif" class="left-login-image" alt="food">
     </div>
     <div class="right-login">
-      <div class="card-login">
+      <div class="card-login" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
         <button class="close-btn">&times;</button>
         <h1>SIGN UP</h1>
         <br>
@@ -30,8 +31,12 @@
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
           </div>
           <div class="textfield">
-            <label for="email">Email / User Name</label>
-            <input type="email" id="email" name="email" placeholder="Enter Email / UserName" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter Email" required>
+          </div>
+          <div class="textfield">
+            <label for="Username">Username</label>
+            <input type="Username" id="Username" name="Username" placeholder="Enter Username" required>
           </div>
           <div class="textfield">
             <label for="password">Password</label>
@@ -42,10 +47,21 @@
           </div>
           <button type="submit" class="btn-login">Register</button>
         </form>
+        <h3><center>OR</center></h3>
         <button id="google-login">Login with Google</button>
       </div>
     </div>
   </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init(
+        {
+          duration: 1000, 
+          easing: 'ease', 
+          once: false, 
+        }
+      );
+    </script>
 </body>
 <script>
   const pswinput = document.getElementById('password');

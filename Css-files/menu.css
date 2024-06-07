@@ -1,155 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
 
 :root {
-    --green: rgb(139, 36, 36);
-    ;
-    --black: rgb(139, 36, 36);
-    ;
-    --light-color: #666;
-    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+  --green: rgb(139, 36, 36);
+  --black: rgb(139, 36, 36);
+  --light-color: #666;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
 * {
-    font-family: 'Nunito', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    border: none;
-    text-transform: capitalize;
-    transition: all .2s linear;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
 }
 
 html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-padding-top: 5.5rem;
-    scroll-behavior: smooth;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
 }
 
 section {
-    padding: 2rem 9%;
+  padding: 2rem 9%;
 }
 
 section:nth-child(even) {
-    background: #eee;
+  background: #eee;
 }
 
 .sub-heading {
-    text-align: center;
-    color: var(--green);
-    font-size: 2.5rem;
-    padding-top: 1rem;
-    margin-bottom: 10px;
+  text-align: center;
+  color: var(--green);
+  font-size: 2.5rem;
+  padding-top: 1rem;
+  margin-bottom: 10px;
 }
 
 .heading {
-    text-align: center;
-    color: var(--black);
-    font-size: 3rem;
-    padding-bottom: 2rem;
-    text-transform: uppercase;
+  text-align: center;
+  color: var(--black);
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
 }
 
 .btn {
-    margin-top: 1rem;
-    display: inline-block;
-    font-size: 1.7rem;
-    color: #fff;
-    background: var(--black);
-    border-radius: .5rem;
-    cursor: pointer;
-    padding: .8rem 3rem;
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: #fff;
+  background: var(--black);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.8rem 3rem;
 }
 
 .btn:hover {
-    background: var(--green);
-    letter-spacing: .1rem;
+  background: var(--green);
+  letter-spacing: 0.1rem;
 }
 
-
 .menu .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
 }
 
 .menu .box-container .box {
-    background: #fff;
-    border: .1rem solid rgba(0, 0, 0, .2);
-    border-radius: .5rem;
-    box-shadow: var(--box-shadow);
+  background: #fff;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
 }
 
 .menu .box-container .box .image {
-    height: 25rem;
-    width: 100%;
-    padding: 1.5rem;
-    overflow: hidden;
-    position: relative;
+  height: 25rem;
+  width: 100%;
+  padding: 1.5rem;
+  overflow: hidden;
+  position: relative;
 }
 
 .menu .box-container .box .image img {
-    height: 100%;
-    width: 100%;
-    border-radius: .5rem;
-    object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
 }
 
 .menu .box-container .box .image .fa-heart {
-    position: absolute;
-    top: 2.5rem;
-    right: 2.5rem;
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    text-align: center;
-    font-size: 2rem;
-    background: #fff;
-    border-radius: 50%;
-    color: var(--black);
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 2rem;
+  background: #fff;
+  border-radius: 50%;
+  color: var(--black);
 }
 
 .menu .box-container .box .image .fa-heart:hover {
-    background-color: var(--green);
-    color: #fff;
+  background-color: var(--green);
+  color: #fff;
 }
 
 .menu .box-container .box .content {
-    padding: 2rem;
-    padding-top: 0;
+  padding: 2rem;
+  padding-top: 0;
 }
 
 .menu .box-container .box:hover {
-    scale: 1.04;
-    box-shadow: solid 1px rgb(139, 36, 36);
-    border-color: rgb(139, 36, 36);
+  scale: 1.04;
+  box-shadow: solid 1px rgb(139, 36, 36);
+  border-color: rgb(139, 36, 36);
 }
 
 .menu .box-container .box .content .stars {
-    padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .menu .box-container .box .content .stars i {
-    font-size: 1.7rem;
-    color: var(--green);
+  font-size: 1.7rem;
+  color: var(--green);
 }
 
 .menu .box-container .box .content h3 {
-    color: var(--black);
-    font-size: 2.5rem;
+  color: var(--black);
+  font-size: 2.5rem;
 }
 
 .menu .box-container .box .content p {
-    color: var(--light-color);
-    font-size: 1.6rem;
-    padding: .5rem 0;
-    line-height: 1.5;
+  color: var(--light-color);
+  font-size: 1.6rem;
+  padding: 0.5rem 0;
+  line-height: 1.5;
 }
 
 .menu .box-container .box .content .price {
-    color: var(--green);
-    margin-left: 1rem;
-    font-size: 2.5rem;
+  color: var(--green);
+  margin-left: 1rem;
+  font-size: 2.5rem;
 }

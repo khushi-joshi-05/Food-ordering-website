@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Css-files/content.css">
     <link rel="stylesheet" href="../Css-files/services.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../Css-files/scroll-top-button.css">
 </head>
 
 <body>
@@ -33,13 +35,15 @@
             <nav>
                 <div class="navigbar">
                     <div class="logo">
-                        <a href="../index.html"><img src="../Images/sitelogo.png" height="40" class="transparent-image"></a>
+                        <a href="../index.html"><img src="../Images/sitelogo.png" height="40"
+                                class="transparent-image"></a>
                     </div>
                     <ul class="ul1">
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="menu.html">Menu</a></li>
                         <li><a href="services.html" id="active-page">Services</a></li>
-                        <li><a href="ContactUpdate.html">Contact Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="ContactUpdate.html">Offers</a></li>
                     </ul>
                     <div>
                         <ul class="ul2">
@@ -52,11 +56,13 @@
             </nav>
         </header>
 
+
         <div class="mainhead">
             <h1>S E R V I C E S</h1>
         </div>
 
-        <div class="first_cont">
+        <div class="first_cont" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170"
+            data-aos-easing="ease-in-out">
             <div class="items">
                 <img
                     src="https://destinationlesstravel.com/wp-content/uploads/2023/09/A-selection-of-local-cuisine-as-seen-on-a-food-tour-in-Lima-Peru-that-we-got-to-try.jpg.webp">
@@ -72,198 +78,278 @@
                 <!-- <p>$10.20</p> -->
                 <button class="but">Book Catering</button>
                 <!-- <button class="butt">Order Now</button> -->
-            </div>
-            <div class="items">
-                <img
-                    src="https://hips.hearstapps.com/hmg-prod/images/best-meal-delivery-services-territory-foods-1630350085.jpg?crop=0.999866844207723xw:1xh;center,top&resize=980:*">
-                <h3>Meal Delivery Subscription</h3>
-                <!-- <p>$10.20</p> -->
-                <a href="subscription.html"><button class="but">Take Subscription</button></a>
-                <!-- <button class="butt">Order Now</button> -->
-            </div>
 
-        </div>
-    </div>
-
-    <section class="service_container">
-
-        <section class="testimonalsection" id="testimonal">
-
-            <h2 class=section__title>CUSTOMER OPINION</h2>
-
-            <div class="testimonal__container">
-                <div class="testimonal__swiper">
-                    <div>
-                        <article class="testimonal__card">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
-                                alt="" class="testimonal__image" style=" border-radius: 50%; object-fit: cover;">
-                            <h2 class="testimonal__title">Riya Jain</h2>
-                            <p class="testimonal__description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus quidem
-                                nostrum neque molestiae fugiat id ex consequatur atque quia quisquam hic accusamus
-                                dolores sapiente, ipsum maxime, quo odit ut.
-                            </p>
-
-                            <div class="testimonal__stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                        </article>
+                <div class="service-img">
+                    <div class="mainhead">
+                        <h1>S E R V I C E S</h1>
                     </div>
-                </div>
-                <div class="testimonal__swiper">
-                    <div>
-                        <article class="testimonal__card">
-                            <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
-                                alt="" class="testimonal__image" style=" border-radius: 50%; object-fit: cover;">
-                            <h2 class="testimonal__title">Sudhanshu Sharma</h2>
-                            <p class="testimonal__description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus quidem
-                                nostrum neque molestiae fugiat id ex consequatur atque quia quisquam hic accusamus
-                                dolores sapiente, ipsum maxime, quo odit ut.
-                            </p>
-
-                            <div class="testimonal__stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="testimonal__swiper">
-                    <div>
-                        <article class="testimonal__card">
-                            <img src="https://blogs.kcl.ac.uk/editlab/files/2017/04/Elena-2-Cropped-200x2801.jpg" alt=""
-                                class="testimonal__image" style=" border-radius: 50%; object-fit: cover;">
-                            <h2 class="testimonal__title">Angel Dravid</h2>
-                            <p class="testimonal__description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus quidem
-                                nostrum neque molestiae fugiat id ex consequatur atque quia quisquam hic accusamus
-                                dolores sapiente, ipsum maxime, quo odit ut.
-                            </p>
-
-                            <div class="testimonal__stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="testimonal__swiper">
-                    <div>
-                        <article class="testimonal__card">
-                            <img src="https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_images/2018-09/shutterstock_648907024.jpg?itok=7lrLYx-B"
-                                alt="" class="testimonal__image" style=" border-radius: 50%; object-fit: cover;">
-                            <h2 class="testimonal__title">Priya Sharma</h2>
-                            <p class="testimonal__description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus quidem
-                                nostrum neque molestiae fugiat id ex consequatur atque quia quisquam hic accusamus
-                                dolores sapiente, ipsum maxime, quo odit ut.
-                            </p>
-
-                            <div class="testimonal__stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                        </article>
+                    <div class="first_cont">
+                        <div class="items">
+                            <img
+                                src="https://destinationlesstravel.com/wp-content/uploads/2023/09/A-selection-of-local-cuisine-as-seen-on-a-food-tour-in-Lima-Peru-that-we-got-to-try.jpg.webp">
+                            <h3>Food Tour and Experiences</h3>
+                            <!-- <p>$10.20</p> -->
+                            <button class="but">Take Experience</button>
+                            <!-- <button class="butt">Order Now</button> -->
+                        </div>
+                        <div class="items">
+                            <img
+                                src="https://www.kitchenmantra.com/blog/wp-content/uploads/2020/11/Best-corporate-caterers-in-Noida.jpg">
+                            <h3>Catering Services for Events</h3>
+                            <!-- <p>$10.20</p> -->
+                            <button class="but">Book Catering</button>
+                            <!-- <button class="butt">Order Now</button> -->
+                        </div>
+                        <div class="items">
+                            <img
+                                src="https://hips.hearstapps.com/hmg-prod/images/best-meal-delivery-services-territory-foods-1630350085.jpg?crop=0.999866844207723xw:1xh;center,top&resize=980:*">
+                            <h3>Meal Delivery Subscription</h3>
+                            <!-- <p>$10.20</p> -->
+                            <a href="subscription.html"><button class="but">Take Subscription</button></a>
+                            <!-- <button class="butt">Order Now</button> -->
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <div class="second_cont">
-            <div class="deals">
-                <i class="fa-solid fa-gift"></i>
-                <p>Gift Card and Voucher Redemption</p>
-            </div>
-            <div class="deals">
-                <i class="fa-solid fa-ticket"></i>
-                <p>Exclusive Offers and Promotions </p>
-            </div>
-        </div>
-    </section>
+            <section class="service_container">
 
-    <footer>
-        <div class="foot-panel2">
-            <ul class="footer-colums">
-                <p>Our Pages</p>
-                <a href="../index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="#">Services</a>
-                <a href="ContactUpdate.html">Contact</a>
-                <a href="cart.html">Cart</a>
-            </ul>
+                <section class="testimonalsection" id="testimonal">
+                    <div class="section1">
+                        <hr />
+                        <h2 class=section__title data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170"
+                            data-aos-easing="ease-in-out">CUSTOMER OPINION</h2>
+                        <hr />
+                    </div>
+                    <div class="testimonal__container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170"
+                        data-aos-easing="ease-in-out">
+                        <div class="testimonal__swiper">
+                            <div>
+                                <article class="testimonal__card">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+                                        alt="" class="testimonal__image"
+                                        style=" border-radius: 50%; object-fit: cover;">
+                                    <h2 class="testimonal__title">Riya Jain</h2>
+                                    <p class="testimonal__description">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus
+                                        quidem
+                                        nostrum neque molestiae fugiat id ex consequatur atque quia quisquam hic
+                                        accusamus
+                                        dolores sapiente, ipsum maxime, quo odit ut.
+                                    </p>
 
-            <ul class="footer-colums">
-                <p> Exclusive Offers</p>
-                <a href="#">Foodie Discounts</a>
-                <a href="#">Limited-Time Promotions</a>
-                <a href="#">Special Event Packages</a>
-                <a href="#">Membership Benefits</a>
-                <a href="#">Early Access to New Recipes</a>
-                <a href="#">VIP Foodie Events</a>
-                <a href="#">Personalized Culinary Experiences</a>
-            </ul>
+                                    <div class="testimonal__stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="testimonal__swiper">
+                            <div>
+                                <article class="testimonal__card">
+                                    <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
+                                        alt="" class="testimonal__image"
+                                        style=" border-radius: 50%; object-fit: cover;">
+                                    <h2 class="testimonal__title">Sudhanshu Sharma</h2>
+                                    <p class="testimonal__description">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus
+                                        quidem
+                                        nostrum neque molestiae fugiat id ex consequatur atque quia quisquam hic
+                                        accusamus
+                                        dolores sapiente, ipsum maxime, quo odit ut.
+                                    </p>
 
-            <ul class="footer-colums">
-                <p>Payment Products</p>
-                    <a href="#">Secure Checkout</a>
-                    <a href="#">Credit/Debit Cards</a>
-                    <a href="#">Online Payment</a>
-                    <a href="#">Mobile Wallets</a>
-                    <a href="#">Contactless Payments</a>
-            </ul>
+                                    <div class="testimonal__stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="testimonal__swiper">
+                            <div>
+                                <article class="testimonal__card">
+                                    <img src="https://blogs.kcl.ac.uk/editlab/files/2017/04/Elena-2-Cropped-200x2801.jpg"
+                                        alt="" class="testimonal__image"
+                                        style=" border-radius: 50%; object-fit: cover;">
+                                    <h2 class="testimonal__title">Angel Dravid</h2>
+                                    <p class="testimonal__description">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus
+                                        quidem
+                                        nostrum neque molestiae fugiat id ex consequatur atque quia quisquam hic
+                                        accusamus
+                                        dolores sapiente, ipsum maxime, quo odit ut.
+                                    </p>
 
-            <form id="contactForm">
-                <h3>Contact Us!</h3>
-                <!-- <label for="name">Name:</label> -->
-                <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>-->
-                <!-- <label for="email">Email:</label> -->
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                    <div class="testimonal__stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="testimonal__swiper">
+                            <div>
+                                <article class="testimonal__card">
+                                    <img src="https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_images/2018-09/shutterstock_648907024.jpg?itok=7lrLYx-B"
+                                        alt="" class="testimonal__image"
+                                        style=" border-radius: 50%; object-fit: cover;">
+                                    <h2 class="testimonal__title">Priya Sharma</h2>
+                                    <p class="testimonal__description">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus
+                                        quidem
+                                        nostrum neque molestiae fugiat id ex consequatur atque quia quisquam hic
+                                        accusamus
+                                        dolores sapiente, ipsum maxime, quo odit ut.
+                                    </p>
 
-                <!-- <label for="message">Message:</label> -->
-                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                                    <div class="testimonal__stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                <button id="butt" type="submit">Send Message</button>
-            </form>
-        </div>
-
-        <div class="foot_panel4">
-            <div class="pages">
-                <h4>Follow Us</h4>
-
-                <div class="social-icons">
-                    <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
-                    <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
-                    <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
-                        target="_blank"></a>
-                    <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
+                <div class="second_cont">
+                    <div class="deals" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-offset="170"
+                        data-aos-easing="ease-in-out">
+                        <i class="fa-solid fa-gift"></i>
+                        <p>Gift Card and Voucher Redemption</p>
+                    </div>
+                    <div class="deals" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170"
+                        data-aos-easing="ease-in-out">
+                        <i class="fa-solid fa-ticket"></i>
+                        <p>Exclusive Offers and Promotions </p>
+                    </div>
                 </div>
-                <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
-                </p>
-                <div class="copyright">
-                    &copy; <span id="copyright-year"></span> Foodies - All Rights Reserved | <span id="author">
-                        <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
-                    </span></p>
+            </section>
+
+            <footer>
+                <div class="foot-panel2">
+                    <ul class="footer-colums">
+                        <p>Our Pages</p>
+                        <a href="../index.html">Home</a>
+                        <a href="menu.html">Menu</a>
+                        <a href="#">Services</a>
+                        <a href="ContactUpdate.html">Contact</a>
+                        <a href="cart.html">Cart</a>
+                    </ul>
+
+                    <ul class="footer-colums">
+                        <p> Exclusive Offers</p>
+                        <a href="#">Foodie Discounts</a>
+                        <a href="#">Limited-Time Promotions</a>
+                        <a href="#">Special Event Packages</a>
+                        <a href="#">Membership Benefits</a>
+                        <a href="#">Early Access to New Recipes</a>
+                        <a href="#">VIP Foodie Events</a>
+                        <a href="#">Personalized Culinary Experiences</a>
+                    </ul>
+
+                    <ul class="footer-colums">
+                        <p>Payment Products</p>
+                        <a href="#">Secure Checkout</a>
+                        <a href="#">Credit/Debit Cards</a>
+                        <a href="#">Online Payment</a>
+                        <a href="#">Mobile Wallets</a>
+                        <a href="#">Contactless Payments</a>
+                    </ul>
+
+                    <form id="contactForm">
+                        <h3>Contact Us!</h3>
+                        <!-- <label for="name">Name:</label> -->
+                        <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>-->
+                        <!-- <label for="email">Email:</label> -->
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                        <!-- <label for="message">Message:</label> -->
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+                        <button id="butt" type="submit">Send Message</button>
+                    </form>
                 </div>
+
+                <div class="foot_panel4">
+                    <div class="pages">
+                        <h4>Follow Us</h4>
+
+                        <div class="social-icons">
+                            <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                            <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                            <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                            <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
+                            <a class="fa-brands fa-github"
+                                href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
+                            <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA"
+                                target="_blank"></a>
+                        </div>
+                        <p>Stay connected with us on social media for the latest updates, recipes, and foodie
+                            adventures.
+                        </p>
+                        <div class="copyright">
+                            &copy; <span id="copyright-year"></span> Foodies - All Rights Reserved | <span id="author">
+                                <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi
+                                    Joshi</a>
+                            </span></p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </footer>
+     <!--Scroll top button-->
 
+     <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
+            class="arrow">
+            <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+        </svg>
+    </button>
+    <!--Scroll top button finish-->
     <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init(
+        {
+          duration: 1000, 
+          easing: 'ease', 
+          once: false, 
+        }
+      );
+    </script>
+    <script src="top.js"></script>
+
+            </footer>
+
+            <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+                AOS.init(
+                    {
+                        duration: 1000,
+                        easing: 'ease',
+                        once: false,
+                    }
+                );
+            </script>
+
 </body>
 
 </html>
