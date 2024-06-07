@@ -749,8 +749,9 @@ textarea {
 #butt:hover {
   background-color: rgb(196, 89, 89);
 }*/
+/*--------------------------------hover effect on send message buttn---------------*/
 #butt {
-padding: 10px 20px;
+padding: 10px 18px;
 font-size: 24px;
 text-align: center;
 cursor: pointer;
@@ -759,7 +760,7 @@ color: #fff;
 background-color: rgb(117, 21, 21);
 border: none;
 border-radius: 15px;
-box-shadow: 0 9px #999;
+
 }
 
 #butt:hover {background-color:  rgb(196, 89, 89);}
@@ -767,7 +768,7 @@ box-shadow: 0 9px #999;
 #butt:active {
 background-color: rgb(196, 89, 89);;
 box-shadow: 0 1px #be4b4b;
-transform: translateY(4px);
+transform: translateY(2px);
 }
 
 .social-icons a {
