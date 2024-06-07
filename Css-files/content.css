@@ -124,6 +124,8 @@ body {
   font-size: 2rem;
   color: rgb(138, 37, 37);
   padding-left: 50px;
+  text-align: center;
+  padding: 2rem 0;
 }
 
 .mainhead {
