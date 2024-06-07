@@ -1,0 +1,197 @@
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   background-image: url(https://bsmedia.business-standard.com/_media/bs/img/article/2023-09/14/full/1694673859-4182.jpeg?im=FeatureCrop);
+   background-size: cover;
+
+}
+
+.services_page {
+   color: crimson;
+   position: relative;
+   left: 20px;
+   top: 2px;
+   font-size: 40px;
+   font-weight: bold;
+   background-color: rgb(244, 242, 240);
+   width: 20px;
+   border-radius: 40%;
+   display: inline-block;
+   padding: 8px 25px;
+}
+
+.services_page:hover {
+   color: #fff;
+   background-color: crimson;
+}
+
+a {
+   text-decoration: none;
+}
+
+.container {
+   display: flex;
+   height: 90%;
+   background-color: whitesmoke;
+   position: absolute;
+   top: 60px;
+   left: 150px;
+   width: 85%;
+}
+
+
+.product {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: #fff;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   margin: 10px;
+   padding: 20px;
+   text-align: center;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   height: 87%;
+   transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.product {
+   color: black;
+   margin-bottom: 10px;
+}
+
+.product:hover {
+   transform: translateY(-8px);
+   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.price {
+   font-size: 18px;
+   margin: 10px 0;
+}
+
+
+.old-price {
+   text-decoration: line-through;
+   color: #888;
+   margin-right: 10px;
+}
+
+
+.new-price {
+   color: rgb(211, 52, 52);
+   font-size: 40px;
+   font-weight: bold;
+}
+
+
+.savings {
+   color: black;
+   font-size: 16px;
+   margin-bottom: 20px;
+   background-color: rgb(239, 207, 164);
+   padding: 4px;
+}
+
+
+.buy-now {
+   background-color: rgb(3, 137, 3);
+   color: white;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 15px;
+   cursor: pointer;
+   font-size: 16px;
+   margin-bottom: 20px;
+   width: 130px;
+}
+
+.buy-now:hover {
+   background-color: rgb(6, 112, 22);
+}
+
+
+.features {
+   text-align: left;
+}
+
+
+.features h3 {
+   color: black;
+   margin-bottom: 10px;
+}
+
+
+.features ul {
+   list-style-type: none;
+   padding: 0;
+}
+
+
+.features li {
+   background-color: #f9f9f9;
+   margin: 5px 0;
+   padding: 10px;
+   border-radius: 5px;
+   border: 1px solid #ddd;
+}
+
+.types_membership {
+   font-size: 35px;
+   font-weight: bold;
+}
+
+hr {
+   width: 200px;
+
+}
+
+.green-check {
+   color: green;
+}
+
+.gold {
+   color: goldenrod;
+}
+
+.silver {
+   color: #545454;
+}
+
+.regular {
+   color: rgb(41, 139, 237);
+}
+
+.gold_mem {
+   border-color: goldenrod;
+   border-width: 4px;
+}
+
+.silver_mem {
+   border-color: #888;
+   border-width: 4px;
+}
+
+.regular_mem {
+   border-color: rgb(125, 165, 239);
+   border-width: 4px;
+}
+
+.gold_mem:hover {
+   border-color: rgb(183, 133, 6);
+}
+
+.silver_mem:hover {
+   border-color: #545454;
+}
+
+.regular_mem:hover {
+   border-color: rgb(66, 124, 232);
+}
