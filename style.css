@@ -101,7 +101,7 @@ body {
     max-height: 0.1%;
   }
 }
-.search-bar {
+/**.search-bar {
   position: relative;
   display: flex; 
 }
@@ -124,9 +124,8 @@ body {
 }
 
 .search-bar button:hover {
-  background-color: #ccc; /* Changes button color on hover */
-}
-
+  background-color: #ccc; 
+}**/
 
 .intro_container {
   display: flex;
