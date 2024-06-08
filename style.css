@@ -699,20 +699,21 @@ article p {
 }
 
 ul p {
-  font-weight: 700;
+  font-size: 19px;
+  font-weight: 600;
 }
 
 ul a {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   margin-top: 10px;
   color: #dddddd;
   text-decoration: none;
 }
 
 .foot-panel2 ul a:hover {
-  text-decoration: underline;
-  color: #dddddd;
+  text-decoration: none;
+  color: #7a7b7d;
 }
 
 /* .foot-pannel3{
@@ -736,9 +737,20 @@ ul a {
   padding-top: 25px;
 }
 
-.copyright {
+.copyright{
   background-color: rgb(98, 25, 25);
   padding-top: 10px;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.copyright a:hover {
+  text-decoration: none;
+  color: #7a7b7d;
+  font-size: 0.90rem;
 }
 
 form {
