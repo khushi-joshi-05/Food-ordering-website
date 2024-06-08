@@ -172,10 +172,31 @@ body * {
 .main-login {
   width: 100vw;
   height: 100vh;
-  background: brown;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.main-login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../Images/signbg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  filter: brightness(50%);
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
 .left-login {
@@ -195,7 +216,10 @@ body * {
 .left-login-image {
   width: 35vw;
 }
-
+.order-now {
+  color: red;
+  font-size: 1.5em; /* Adjust the size as needed */
+}
 .right-login {
   width: 50vw;
   height: 100vh;
@@ -249,7 +273,7 @@ body * {
   background: #E6E6FA;
   color: #030707de;
   font-size: 12pt;
-  box-shadow: 0px 3px 10px #00000056;
+  /* box-shadow: 0px 3px 10px #00000056; */
   outline: none;
   box-sizing: border-box;
 }
@@ -282,11 +306,11 @@ body * {
 }
 
 .btn-login:hover {
-  background: rgba(208, 50, 50, 0.9);
+  background: rgba(232, 228, 0, 0.9);
 }
 
 #google-login:hover {
-  background: rgba(208, 50, 50, 0.9);
+  background: rgba(24, 80, 192, 0.9);
 }
 
 .close-btn {
