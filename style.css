@@ -190,17 +190,22 @@ body {
 #about {
   /* margin: 34px; */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* align-items: center; */
 }
 
 #about .box {
   border: 2px solid brown;
-  padding: 34px;
-  margin: 2px 40px;
+  width: 450px;
+  height: 500px;
+  /* padding: 34px; */
+  /* margin: 2px 40px; */
   border-radius: 28px;
   background: #f2f2f2;
-  margin-bottom: 20px;
+  /* background-color: red; */
+  /* margin-bottom: 20px; */
   /* float: left; */
   transition: 0.3s all ease-in-out;
 }
@@ -212,13 +217,17 @@ body {
 }
 
 #about .box img {
-  height: 160px;
-  width: 270px;
-  margin: auto;
-  display: flex;
+  width: 450px;
+  /* height: auto; */
+  height: 300px;
+  border-radius: 28px 28px  0 0;
+  /* margin: auto; */
+  /* display: flex; */
+  /* object-fit: fill; */
 }
 
 #about .box p {
+  padding: 0 30px;
   font-family: "Bree Serif", serif;
   text-align: center;
 }
@@ -233,7 +242,7 @@ body {
 
 .h-secondary {
   font-family: "Bree Serif", serif;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   padding: 12px;
   text-align: center;
   color: brown;
