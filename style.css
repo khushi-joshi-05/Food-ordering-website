@@ -18,7 +18,7 @@ body {
 
 .navbar {
   padding: 8px 0px;
-  height: 60px;
+  height: 59px;
   transition: background-color 0.3s, backdrop-filter 0.3s, color 0.3s;
   /* Added transitions for smooth color change */
   backdrop-filter: blur(0);
@@ -53,7 +53,7 @@ body {
 }
 
 .navbar.scrolled {
-  background-color: rgba(176, 63, 63, 0.6);
+  background-color: rgba(183, 58, 58, 0.6);
   backdrop-filter: blur(10px);
   color: #fff;
 }
