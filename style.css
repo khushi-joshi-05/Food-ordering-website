@@ -372,13 +372,13 @@ body {
 
 }
 .items:hover{
-    transform: scale(1.1);
+    transform: scale(1);
 
  
 }
 
 
-}
+
 
 .menu_items .items img {
   justify-content: center;
