@@ -237,27 +237,26 @@
         }
       });
     </script>
+    <script>
+      const pswinput = document.getElementById('password');
+      const toggle = document.getElementById('signup-hide');
+      toggle.addEventListener("click", function () {
+        const pswfield = this.querySelector('i');
+        if (pswinput.getAttribute("type") == "password") {
+          pswinput.setAttribute('type', 'text');
+          pswfield.classList.replace("bxs-hide", "bxs-show");
+        }
+        else {
+          pswinput.setAttribute('type', 'password');
+          pswfield.classList.replace("bxs-show", "bxs-hide");
+        }
+      });
+    
+      const closeBtn = document.querySelector('.close-btn');
+        closeBtn.addEventListener('click', function () {
+          // document.querySelector('.card-login').style.display = 'none';
+          window.location.href='../index.html';
+        });
+    </script>
 </body>
-<script>
-  const pswinput = document.getElementById('password');
-  const toggle = document.getElementById('signup-hide');
-  toggle.addEventListener("click", function () {
-    const pswfield = this.querySelector('i');
-    if (pswinput.getAttribute("type") == "password") {
-      pswinput.setAttribute('type', 'text');
-      pswfield.classList.replace("bxs-hide", "bxs-show");
-    }
-    else {
-      pswinput.setAttribute('type', 'password');
-      pswfield.classList.replace("bxs-show", "bxs-hide");
-    }
-  });
-
-  const closeBtn = document.querySelector('.close-btn');
-    closeBtn.addEventListener('click', function () {
-      // document.querySelector('.card-login').style.display = 'none';
-      window.location.href='../index.html';
-    });
-</script>
-
 </html>
