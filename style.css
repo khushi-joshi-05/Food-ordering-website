@@ -5,6 +5,10 @@
   padding: 0px;
 }
 
+body{
+  background-color: black;
+}
+
 .poppins-light {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -349,18 +353,18 @@
 }
 
 #testimonials .carousel-inner{
-  min-height: 400px;
+  min-height: 350px;
 }
 
 #testimonials .carousel-caption{
-  top: 200px;
+  top: 165px;
   left: 30%;
   right: 30%;
 }
 
 #testimonials .img-box {
-	width: 150px;
-	height: 150px;
+	width: 120px;
+	height: 120px;
 	margin: 0 auto;
 	border-radius: 50%;
 }
@@ -391,3 +395,20 @@
   }
 
 }
+
+/* IMAGE GALLERY */
+.picture-gallery .col-3{
+  overflow: hidden;
+}
+
+.picture-gallery img {
+  width: 100%;
+  transform: scale(1.15);
+  opacity: 0.7;
+}
+
+.picture-gallery img:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
