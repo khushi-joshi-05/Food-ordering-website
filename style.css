@@ -560,6 +560,7 @@ footer{
   margin: 0;
 }
 
+/* FOR CONTENT LOADER AT THE BEGINNING  */
 #loader-wrapper {
   position: fixed;
   top: 0;
