@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="scriptlogin.js" defer type="module"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
   <link rel="stylesheet" href="../Css-files/login1.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -70,11 +72,11 @@ border-radius: 50%;
         <h1>LOGIN</h1>
         <br>
         <div class="textfield">
-          <label for="usuario">Email</label>
+          <label for="email">Email</label>
           <input type="email" name="email" id="email" placeholder="Enter Email">
         </div>
         <div class="textfield">
-          <label for="usuario">Username</label>
+          <label for="username">Username</label>
           <input type="text" name="Username" id="username" placeholder="Username">
         </div>
         <div class="textfield">
@@ -88,7 +90,7 @@ border-radius: 50%;
         <h3>
           <center>OR</center>
         </h3>
-        <button id="google-login">Login with google</button>
+        <button id="google-login">Login with Google</button>
       </div>
     </div>
   </div>
@@ -99,6 +101,93 @@ border-radius: 50%;
       duration: 1000,
       easing: 'ease',
       once: false,
+    });
+
+    // Firebase configuration
+    const firebaseConfig = {
+        //Add your Config File
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+    const auth = firebase.auth();
+
+    // Password visibility toggle
+    const passwordInput = document.getElementById("password");
+    const hideLogo = document.getElementById("login-hide");
+    hideLogo.addEventListener("click", function () {
+      const passwordField = this.querySelector("i");
+      if (passwordInput.getAttribute("type") == "text") {
+        passwordInput.setAttribute("type", "password");
+        passwordField.classList.replace("bxs-show", "bxs-hide");
+      } else {
+        passwordInput.setAttribute("type", "text");
+        passwordField.classList.replace("bxs-hide", "bxs-show");
+      }
+    });
+
+    // Close button redirect
+    const closeBtn = document.querySelector('.close-btn');
+    closeBtn.addEventListener('click', function () {
+      window.location.href = '../index.html';
+    });
+
+    // Login validation
+    function validateLogin() {
+      const email = document.getElementById("email").value;
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      if (email === "") {
+        alert("Please Enter Email");
+      } else if (username === "") {
+        alert("Please Enter Username");
+      } else if (password === "") {
+        alert("Please Enter Password");
+      } else {
+        auth.signInWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            const user = userCredential.user;
+            database.ref('users/' + user.uid).set({
+              username: username,
+              email: email
+            }).then(() => {
+              alert("Login successful");
+              window.location.href = '../index.html';
+            }).catch((error) => {
+              alert("Data could not be saved: " + error.message);
+            });
+          })
+          .catch((error) => {
+            alert("Login failed: " + error.message);
+          });
+      }
+    }
+     // Google Sign-In
+     document.getElementById('google-login').addEventListener('click', () => {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      auth.signInWithPopup(provider)
+        .then((result) => {
+          const user = result.user;
+
+          // Save user info to Realtime Database if new user
+          if (result.additionalUserInfo.isNewUser) {
+            return database.ref('users/' + user.uid).set({
+              name: user.displayName,
+              email: user.email,
+              username: user.email.split('@')[0]
+            });
+          }
+        })
+        .then(() => {
+          alert('Logged in with Google!');
+          window.location.href = '../index.html'; // Redirect to homepage or dashboard
+        })
+        .catch((error) => {
+          console.error('Error logging in with Google:', error);
+          alert(error.message);
+        });
     });
   </script>
   <script>
@@ -234,42 +323,5 @@ border-radius: 50%;
     });
   </script>
 </body>
-
-<script>
-  const passwordinput = document.getElementById("password");
-  const hidelogo = document.getElementById("login-hide");
-  hidelogo.addEventListener("click", function () {
-    const passwordfield = this.querySelector("i");
-    if (passwordinput.getAttribute("type") == "text") {
-      passwordinput.setAttribute("type", "password");
-      passwordfield.classList.replace("bxs-show", "bxs-hide");
-    } else {
-      passwordinput.setAttribute("type", "text");
-      passwordfield.classList.replace("bxs-hide", "bxs-show");
-    }
-  });
-
-  const closeBtn = document.querySelector('.close-btn');
-  closeBtn.addEventListener('click', function () {
-    window.location.href = '../index.html';
-  });
-
-  function validateLogin() {
-    const email = document.getElementById("email").value;
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    if (email === "") {
-      alert("Please Enter Email");
-    } else if (username === "") {
-      alert("Please Enter Username");
-    } else if (password === "") {
-      alert("Please Enter Password");
-    } else {
-      // add login logic
-      alert("Form submitted successfully!");
-    }
-  }
-</script>
 
 </html>
