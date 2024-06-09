@@ -31,6 +31,11 @@
 </head>
 
 <body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
     <nav class="navbar navbar-expand-lg bg-black fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
             <a href="index.html" class="navbar-brand flex-fill opacity-75">
@@ -76,7 +81,7 @@
         </div>
     </nav>
 
-    <section id="homeSlider" class="carousel slide carousel-fade bg-black">
+    <section id="homeSlider" class="carousel slide carousel-fade bg-black" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="slider-bg d-flex justify-content-center">
@@ -148,6 +153,8 @@
 
     <section class="about_us pt-5">
         <div class="hstack discount-rolling">
+            <h1 class="poppins-light pe-5 ps-1 py-1">Get <span> 30% OFF </span> on your first order!</h1>
+            <h1 class="poppins-light pe-5 ps-1 py-1">Get <span> 30% OFF </span> on your first order!</h1>
             <h1 class="poppins-light pe-5 ps-1 py-1">Get <span> 30% OFF </span> on your first order!</h1>
             <h1 class="poppins-light pe-5 ps-1 py-1">Get <span> 30% OFF </span> on your first order!</h1>
             <h1 class="poppins-light pe-5 ps-1 py-1">Get <span> 30% OFF </span> on your first order!</h1>
@@ -331,7 +338,8 @@
                     </div>
                     <div class="carousel-caption">
                         <h3 class="overview">John Doe</h3>
-                        <p class="testimonial-text">I love the variety on Foodie! There's something for everyone, and the delivery service is incredibly reliable</p>
+                        <p class="testimonial-text">I love the variety on Foodie! There's something for everyone, and
+                            the delivery service is incredibly reliable</p>
                         <div class="star-rating">
                             <ul class="list-inline d-flex justify-content-center">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -348,7 +356,8 @@
                     </div>
                     <div class="carousel-caption">
                         <h3 class="overview">Laren Green</h3>
-                        <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my dining experience so much more convenient.</p>
+                        <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my
+                            dining experience so much more convenient.</p>
                         <div class="star-rating">
                             <ul class="list-inline d-flex justify-content-center">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -404,38 +413,145 @@
         </div>
     </section>
 
+    <div class="app_download pb-4">
+        <h4>Free Delivery!</h4>
+        <h2 class="text-center">Download the App now!</h2>
+        <br>
+        <p>For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
+        <a href="#"><img src="/Images/app_download/get_it_on_google_play_store.png" class="app-download-img"
+                alt="Get it on Google Play Store"></a>
+        <a href="#"><img src="./Images/app_download/download-on-the-app-store.png" class="app-download-img"
+                alt="Download on the Apple App Store"></a>
+    </div>
+
+    <footer>
+        <div class="foot-panel1 w-100">
+            <div class="container-fluid py-5 px-0">
+                <div class="row justify-content-evenly gy-5">
+                    <div class="col-6 col-sm-3 col-md-2 col-xl-2">
+                        <h5 class="mb-3">See Also</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers.html">Contact us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/cart.html">Cart</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-sm-5 col-md-3 col-xl-3">
+                        <h5 class="mb-3">Exclusive Offers</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Foodie Discounts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Limited-Time Promotions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Special Event Packages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Membership Benefits</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Early Access to New Recipes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">VIP Foodie Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Personalized Culinary Experiences</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                        <h5 class="mb-3">Payment Products</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Secure Checkout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Credit/Debit Cards</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Secure Checkout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Online Payment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Mobile Wallets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Contactless Payments</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-3 col-xl-4">
+                        <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
+                            <h3 class="text-center mb-3">Contact Us!</h3>
+                            <input type="email" id="email" name="email" placeholder="Your Email"
+                                class="text-center form-control mb-2" required>
+                            <textarea id="message" name="message" placeholder="Your Message"
+                                class="text-center form-control mb-2" required></textarea>
+                            <div class="d-grid gap-2 col-12">
+                                <button type="submit" class="btn btn-danger">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-panel2">
+            <div class="media-handles pt-3 pb-2">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                    <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
+                    <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
+                        target="_blank"></a>
+                    <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
+                </div>
+                <p class="text"> Stay connected with us on social media for the latest updates, recipes, and foodie
+                    adventures. </p>
+            </div>
+            <div class="copyright py-1">
+                &copy;
+                <span id="copyright-year"></span> Foodies - All Rights Reserved |
+                <span id="author">
+                    <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
+            class="arrow">
+            <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+        </svg>
+    </button>
 
 
-
-
-
-    <script>
-        document.getElementById("copyright-year").textContent =
-            new Date().getFullYear();
-    </script>
-    <script src="Html-files/top.js"></script>
-    <script>
-        window.addEventListener("beforeunload", function (event) {
-            localStorage.clear();
-        });
-    </script>
-    <!-- <script type="text/javascript">
-        (function (d, t) {
-            var v = d.createElement(t),
-                s = d.getElementsByTagName(t)[0];
-            v.onload = function () {
-                window.voiceflow.chat.load({
-                    verify: { projectID: "6651593185e25f1a181125a3" },
-                    url: "https://general-runtime.voiceflow.com",
-                    versionID: "production",
-                });
-            };
-            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
-            v.type = "text/javascript";
-            s.parentNode.insertBefore(v, s);
-        })(document, "script");
-    </script> -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="Html-files/top.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
     <script>
         AOS.init(
             {
@@ -444,11 +560,8 @@
                 once: false,
             }
         );
-    </script>
 
-    <!--  Chatbot  -->
-    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-    <script>
+        // Chatbot
         window.botpressWebChat.init({
             "composerPlaceholder": "Message...",
             "botConversationDescription": "Welcome to Foodie!",
@@ -471,13 +584,5 @@
     </script>
 
 </body>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(function () {
-            document.querySelector("body").classList.add("loaded");
-        }, 500)
-    });
-
-</script>
 
 </html>
