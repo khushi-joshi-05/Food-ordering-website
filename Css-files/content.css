@@ -543,6 +543,10 @@ textarea {
   background-color: #5865f2;
   color: white;
 }
+.fa-linkedin:hover{
+  background-color: #0077b5;
+  color: white;
+} 
 /* Cart page styling */
 .cart-section {
   padding: 55px 70px 30px 70px;
