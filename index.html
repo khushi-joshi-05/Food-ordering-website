@@ -25,14 +25,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
         defer></script>
+    <link rel="stylesheet" href="Css-files/navbar.css">
     <link rel="stylesheet" href="./style.css">
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-    </style>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
     <nav class="navbar navbar-expand-lg bg-black fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
             <a href="index.html" class="navbar-brand flex-fill opacity-75">
@@ -57,15 +60,15 @@
                         <a class="nav-link" href="Html-files/contact.html">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/ContactUpdate.html">Offers</a>
+                        <a class="nav-link" href="Html-files/offers.html">Offers</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav end-links">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="redirectLogin()">Login</a>
+                        <a class="nav-link" href="Html-files/login.html">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="redirectSignup()">Sign-Up</a>
+                        <a class="nav-link" href="Html-files/signup.html">Sign-Up</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/cart.html">
@@ -78,7 +81,7 @@
         </div>
     </nav>
 
-    <div id="homeSlider" class="carousel slide bg-black">
+    <section id="homeSlider" class="carousel slide carousel-fade bg-black" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="slider-bg d-flex justify-content-center">
@@ -93,9 +96,10 @@
                     <p class="slider-text slider-reveal">
                         come with family & feel the joy of mouthwatering food
                     </p>
-                    <button href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto">
+                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto"
+                        role="button">
                         <span class="text text-1">VIEW OUR MENU</span>
-                    </button>
+                    </a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -111,9 +115,10 @@
                     <p class="slider-text slider-reveal">
                         come with family & feel the joy of mouthwatering food
                     </p>
-                    <button href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto">
+                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto"
+                        role="button">
                         VIEW OUR MENU
-                    </button>
+                    </a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -129,9 +134,10 @@
                     <p class="slider-text slider-reveal">
                         come with family & feel the joy of mouthwatering food
                     </p>
-                    <button href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto">
+                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto"
+                        role="button">
                         VIEW OUR MENU
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -143,60 +149,409 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+    </section>
+
+    <section class="about_us pt-5">
+        <div class="hstack discount-rolling">
+            <h1 class="poppins-light pe-5 ps-1 py-1">Get <span> 30% OFF </span> on your first order!</h1>
+            <h1 class="poppins-light pe-5 ps-1 py-1">Get <span> 30% OFF </span> on your first order!</h1>
+            <h1 class="poppins-light pe-5 ps-1 py-1">Get <span> 30% OFF </span> on your first order!</h1>
+            <h1 class="poppins-light pe-5 ps-1 py-1">Get <span> 30% OFF </span> on your first order!</h1>
+            <h1 class="poppins-light pe-5 ps-1 py-1">Get <span> 30% OFF </span> on your first order!</h1>
+        </div>
+
+        <h1 class="tagline py-2 text-center mx-auto" data-aos="zoom-out-up" data-aos-offset="170"
+            data-aos-easing="ease-in-out">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
+
+        <div class="qualities row g-3 px-2" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170"
+            data-aos-easing="ease-in-out">
+            <div class="col-md-4">
+                <div class="card rounded-5">
+                    <div class="img-container">
+                        <img src="https://shahidining.com.au/wp-content/uploads/2020/05/secret-to-indian-flavour-1536x864.jpg"
+                            class="img-fluid mt-4 " alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Authentic Indian Flavors</h2>
+                        <p class="card-text">From aromatic curries to flavorful biryanis, our menu showcases the
+                            diversity and deliciousness of Indian cuisine.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card rounded-5">
+                    <div class="img-container">
+                        <img src="https://saavi.com.au/wp-content/uploads/2016/02/image0023-1.jpg"
+                            class="img-fluid mt-4" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Tech-Infused Dining Experience</h2>
+                        <p class="card-text">Customers can use apps to place orders, customize their dishes, and even
+                            provide feedback, making
+                            their visit more convenient and interactive.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card rounded-5">
+                    <div class="img-container">
+                        <img src="https://i.ndtvimg.com/i/2015-06/fusion-food_625x350_81434107799.jpg"
+                            class="img-fluid mt-4" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Innovative Fusion Dishes</h2>
+                        <p class="card-text">The combinations of Indian and international cuisines not only tantalize
+                            taste buds
+                            but also provide unique experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services_container">
+        <div class="card">
+            <div class="d-flex justify-content-center img-container">
+                <img src="https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300"
+                    alt="" class="card-img">
+            </div>
+            <div class="card-img-overlay row w-100 m-0">
+                <div class="box_main m-auto col-md-9 col-xl-3" data-aos="zoom-out-right" data-aos-duration="1000"
+                    data-aos-offset="170" data-aos-easing="ease-in-out">
+                    <h1>Bringing <br>happiness<br> to you</h1>
+                    <p>Food is more than sustenance; it's a source of pure happiness. From the first bite of a favorite
+                        childhood dish to the thrill of discovering new flavors, food has a unique way of filling
+                        our hearts with joy.</p>
+                </div>
+                <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000"
+                    data-aos-offset="170" data-aos-easing="ease-in-out">
+                    <h1>Online <br>Delivery</h1>
+                    <a href="#" class="btn btn-outline-light">Order Online</a>
+                </div>
+                <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000"
+                    data-aos-offset="170" data-aos-easing="ease-in-out">
+                    <h1>Click & <br>Collect</h1>
+                    <a href="#" class="btn btn-outline-light">Take out Order</a>
+                </div>
+                <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000"
+                    data-aos-offset="170" data-aos-easing="ease-in-out">
+                    <h1>Restaurant<br> Dining</h1>
+                    <a href="/Html-files/book-table.html" class="btn btn-outline-light">Book Table </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu_container">
+        <div class="mainhead text-center" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170"
+            data-aos-easing="ease-in-out">
+            <h1>"Get ready to explore our delicious range of dishes!"</h1>
+            <p>"Welcome to a world of culinary delights where every bite tells a flavorful story. Explore our diverse
+                menu and savor the essence of exquisite dining." </p>
+            <a class="btn btn-danger" href="Html-files/menu.html">View Menu</a>
+        </div>
+
+        <div class="menu_items row container-fluid g-3 p-5 mx-auto" data-aos="zoom-out-up" data-aos-duration="1000"
+            data-aos-offset="170" data-aos-easing="ease-in-out">
+            <div class="col-sm-6 col-lg-3">
+                <div class="items card">
+                    <div class="img-container ">
+                        <img src="https://thumbs.dreamstime.com/b/indian-thali-combo-naan-17512700.jpg">
+                    </div>
+                    <div class="card-body">
+                        <h3>Indian Thali</h3>
+                        <p>Enjoy a thali full of traditional flavours and memories</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="items card">
+                    <div class="img-container">
+                        <img
+                            src="https://imgmediagumlet.lbb.in/media/2018/04/5acf822418a23c0efc21496b_1523548708582.jpg?fm=webp&w=750&h=500&dpr=1">
+                    </div>
+                    <div class="card-body">
+                        <h3>Dessert</h3>
+                        <p>Complete your meal with mouth watering delicacies</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="items card">
+                    <div class="img-container">
+                        <img
+                            src="https://imgmediagumlet.lbb.in/media/2019/07/5d27585dc18a2b0ed5739eb5_1562859613517.jpg?fm=webp&w=750&h=500&dpr=1">
+                    </div>
+                    <div class="card-body">
+                        <h3>Snacks</h3>
+                        <p>Have a lighter version with deliciouis flavours</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="items card">
+                    <div class="img-container">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaqAsoDyO5HBOSLupaimFGCkiE_zPbLYyYog&s">
+                    </div>
+                    <div class="card-body">
+                        <h3>Juices</h3>
+                        <p>Boost yourself up with fruit extracts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170"
+        data-aos-easing="ease-in-out">
+        <h2 class="tagline pt-5"> Our Happy Clients </h2>
+        <p class="description">
+            At Foodie, we pride ourselves on delivering delicious meals & exceptional service. Don't just take our word
+            for it - hear what our satisfied customers have to say!
+        </p>
+        <div id="testimonials" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="img-box my-5">
+                        <img src="Images/testimonials/client1.jpg" alt="">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="overview">Matt Gilbert</h3>
+                        <p class="testimonial-text">Foodie never disappoints! The food is always fresh, delicious, and
+                            delivered right on time. My go-to for all my meals!</p>
+                        <div class="star-rating">
+                            <ul class="list-inline d-flex justify-content-center">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="img-box my-5">
+                        <img src="Images/testimonials/client2.jpg" alt="">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="overview">John Doe</h3>
+                        <p class="testimonial-text">I love the variety on Foodie! There's something for everyone, and
+                            the delivery service is incredibly reliable</p>
+                        <div class="star-rating">
+                            <ul class="list-inline d-flex justify-content-center">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="img-box my-5">
+                        <img src="Images/testimonials/client3.jpg" alt="">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="overview">Laren Green</h3>
+                        <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my
+                            dining experience so much more convenient.</p>
+                        <div class="star-rating">
+                            <ul class="list-inline d-flex justify-content-center">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel controls-->
+            <button class="carousel-control-prev" data-bs-target="#testimonials" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#testimonials" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="picture-gallery" data-aos="fade-in" data-aos-duration="2000">
+        <div class="row g-0">
+            <div class="col-3">
+                <img src="Images/image-gallery/1.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="Images/image-gallery/2.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="Images/image-gallery/3.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="Images/image-gallery/4.jpg" alt="">
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-3">
+                <img src="Images/image-gallery/5.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="Images/image-gallery/6.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="Images/image-gallery/7.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="Images/image-gallery/8.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <div class="app_download pb-4">
+        <h4>Free Delivery!</h4>
+        <h2 class="text-center">Download the App now!</h2>
+        <br>
+        <p>For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
+        <a href="#"><img src="/Images/app_download/get_it_on_google_play_store.png" class="app-download-img"
+                alt="Get it on Google Play Store"></a>
+        <a href="#"><img src="./Images/app_download/download-on-the-app-store.png" class="app-download-img"
+                alt="Download on the Apple App Store"></a>
     </div>
 
+    <footer>
+        <div class="foot-panel1 w-100">
+            <div class="container-fluid py-5 px-0">
+                <div class="row justify-content-evenly gy-5">
+                    <div class="col-6 col-sm-3 col-md-2 col-xl-2">
+                        <h5 class="mb-3">See Also</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers.html">Contact us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/cart.html">Cart</a>
+                            </li>
+                        </ul>
+                    </div>
 
-    <script>
-        document.getElementById("copyright-year").textContent =
-            new Date().getFullYear();
-    </script>
-    <script src="Html-files/top.js"></script>
-    <script>
-        window.addEventListener("beforeunload", function (event) {
-            localStorage.clear();
-        });
+                    <div class="col-6 col-sm-5 col-md-3 col-xl-3">
+                        <h5 class="mb-3">Exclusive Offers</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Foodie Discounts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Limited-Time Promotions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Special Event Packages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Membership Benefits</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Early Access to New Recipes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">VIP Foodie Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Personalized Culinary Experiences</a>
+                            </li>
+                        </ul>
+                    </div>
 
-        const btn = document.querySelector(".btn");
-        btn.onclick = () => {
-            location.href = "./Html-files/menu.html";
-        };
-        main;
+                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                        <h5 class="mb-3">Payment Products</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Secure Checkout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Credit/Debit Cards</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Secure Checkout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Online Payment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Mobile Wallets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Contactless Payments</a>
+                            </li>
+                        </ul>
+                    </div>
 
-        function redirectLogin() {
-            window.location.href = "Html-files/login.html";
-        }
+                    <div class="col-6 col-md-3 col-xl-4">
+                        <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
+                            <h3 class="text-center mb-3">Contact Us!</h3>
+                            <input type="email" id="email" name="email" placeholder="Your Email"
+                                class="text-center form-control mb-2" required>
+                            <textarea id="message" name="message" placeholder="Your Message"
+                                class="text-center form-control mb-2" required></textarea>
+                            <div class="d-grid gap-2 col-12">
+                                <button type="submit" class="btn btn-danger">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-panel2">
+            <div class="media-handles pt-3 pb-2">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                    <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
+                    <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
+                        target="_blank"></a>
+                    <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
+                </div>
+                <p class="text"> Stay connected with us on social media for the latest updates, recipes, and foodie
+                    adventures. </p>
+            </div>
+            <div class="copyright py-1">
+                &copy;
+                <span id="copyright-year"></span> Foodies - All Rights Reserved |
+                <span id="author">
+                    <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
+                </span>
+            </div>
+        </div>
+    </footer>
 
-        function redirectSignup() {
-            window.location.href = "Html-files/signup.html";
-        }
+    <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
+            class="arrow">
+            <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+        </svg>
+    </button>
 
-        window.addEventListener("scroll", function () {
-            var navbar = document.querySelector(".navbar");
-            if (window.scrollY > 60) {
-                // Adjust as needed based on when you want the effect to start
-                navbar.classList.add("scrolled");
-            } else {
-                navbar.classList.remove("scrolled");
-            }
-        });
-    </script>
-    <!-- <script type="text/javascript">
-        (function (d, t) {
-            var v = d.createElement(t),
-                s = d.getElementsByTagName(t)[0];
-            v.onload = function () {
-                window.voiceflow.chat.load({
-                    verify: { projectID: "6651593185e25f1a181125a3" },
-                    url: "https://general-runtime.voiceflow.com",
-                    versionID: "production",
-                });
-            };
-            v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
-            v.type = "text/javascript";
-            s.parentNode.insertBefore(v, s);
-        })(document, "script");
-    </script> -->
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="Html-files/top.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
     <script>
         AOS.init(
             {
@@ -205,11 +560,8 @@
                 once: false,
             }
         );
-    </script>
 
-    <!--  Chatbot  -->
-    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-    <script>
+        // Chatbot
         window.botpressWebChat.init({
             "composerPlaceholder": "Message...",
             "botConversationDescription": "Welcome to Foodie!",
@@ -232,19 +584,5 @@
     </script>
 
 </body>
-<script>
-    function redirectLogin() {
-        window.location.href = "Html-files/login.html";
-    }
-    function redirectSignup() {
-        window.location.href = "Html-files/signup.html";
-    }
-    document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(function () {
-            document.querySelector("body").classList.add("loaded");
-        }, 500)
-    });
-
-</script>
 
 </html>

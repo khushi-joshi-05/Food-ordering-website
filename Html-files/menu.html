@@ -20,7 +20,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
         defer></script>
     <link rel="stylesheet" href="../Css-files/content.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Css-files/navbar.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
@@ -29,7 +29,7 @@
     <!-- Updated Navigation bar -->
     <nav class="navbar navbar-expand-lg bg-black fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
-            <a href="index.html" class="navbar-brand flex-fill opacity-75">
+            <a href="../index.html" class="navbar-brand flex-fill opacity-75">
                 <img src="../Images/logo/Foodielogo.png" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -51,15 +51,15 @@
                         <a class="nav-link" href="../Html-files/contact.html">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Html-files/ContactUpdate.html">Offers</a>
+                        <a class="nav-link" href="../Html-files/offers.html">Offers</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav end-links">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="redirectLogin()">Login</a>
+                        <a class="nav-link" href="../Html-files/login.html">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="redirectSignup()">Sign-Up</a>
+                        <a class="nav-link" href="../Html-files/signup.html">Sign-Up</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../Html-files/cart.html">
@@ -415,7 +415,7 @@
                 <a href="../index.html">Home</a>
                 <a href="#">Menu</a>
                 <a href="services.html">Services</a>
-                <a href="ContactUpdate.html">Contact</a>
+                <a href="offers.html">Contact</a>
                 <a href="cart.html">Cart</a>
             </ul>
 
@@ -488,14 +488,7 @@
 
     <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
     <script src="./MenuAPI.js"></script>
-    <script src="menu.js">
-        function redirectLogin() {
-            window.location.href = "login.html";
-        }
-        function redirectSignup() {
-            window.location.href = "signup.html";
-        }
-    </script>
+    <script src="menu.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init(
