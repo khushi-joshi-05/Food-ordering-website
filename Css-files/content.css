@@ -145,6 +145,29 @@ body {
   padding-bottom: 10px;
 }
 
+.search-bar{
+width:150px;
+margin:12px;
+}
+.search-input{
+  background-color:transparent;
+  margin-top:5px;
+  color:white;
+  border-style:none;
+}
+.search-input:active{
+  border-style:none;
+  outline:none;
+}
+.search-button{
+  outline:none;
+  background-color:transparent;
+  border-style: none;
+}
+.searchImg{
+  width:23px;
+  height:23px;
+}
 /* .mainhead p {
   font-size: 1.2rem;
   color: brown;
@@ -203,12 +226,20 @@ body {
   /* overflow: hidden; */
   text-align: center;
   font-family: "Bree Serif", serif;
+  overflow: hidden;
+  position: relative;
 }
 
 .menu_items .items img {
   height: 190px;
   width: 230px;
   border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
 }
 
 .menu_items .items h3 {
@@ -522,6 +553,10 @@ textarea {
   background-color: #5865f2;
   color: white;
 }
+.fa-linkedin:hover{
+  background-color: #0077b5;
+  color: white;
+} 
 /* Cart page styling */
 .cart-section {
   padding: 55px 70px 30px 70px;
@@ -700,7 +735,20 @@ td {
 .cart {
   color: white;
 } */
+.menu_items .items img:hover
+{
+    transform: scale(1.1);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
 
+.menu_items .items img{
+    transition: 3s, 1s ease-in-out;
+}
+=======
 .contact-form-section {
   display: flex;
   align-items: center;
@@ -861,3 +909,4 @@ main {
 .contact-info p a:hover {
   color: #333; /* Darken color on hover */
 }
+

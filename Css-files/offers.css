@@ -576,22 +576,31 @@ textarea {
 
 .fa-facebook:hover {
   background-color: #3B5998;
-  color: white;
+  color: white !important;
 }
 
 .fa-instagram:hover {
   background-color: #D62976;
-  color: white;
+  color: white !important;
 }
 
-.fa-twitter:hover {
-  background-color: #00B6F1;
-  color: white;
+.fa-x-twitter:hover {
+  background-color: black;
+  color: white !important;
 }
 
 .fa-github:hover {
   background-color: #040204;
-  color: white;
+  color: white !important;
+}
+
+.fa-discord:hover {
+  background-color: #5865F2;
+  color: white !important;
+}
+.fa-linkedin:hover{
+  background-color: #0077b5;
+  color: white !important;
 }
 
 .copyright {
