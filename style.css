@@ -546,6 +546,11 @@ footer{
   background-color: #5865F2;
   color: white;
 }
+.fa-linkedin:hover
+{
+  background-color: blue;
+  color: white;
+}
 
 #author {
   padding: 3px;

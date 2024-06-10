@@ -103,10 +103,26 @@
             <label for="couponCodes" id="haveCoupon">Have a Coupon?</label>
             <div class="enterCouponCode">
                 <input type="text" name="inputCode" id="inputCode" placeholder="Enter Coupon Code">
-                <button id="applyCouponButton">Apply</button>
+                <button id="applyCouponButton" onclick="applyFirstTimeDiscount()">Apply</button>
             </div>
 
-            <button type="submit" onclick="applyFirstTimeDiscount()" class="butt">Order Now</button>
+            <p class="congomessagebox">
+                <button type="submit" class="butt"  id="orderNowButton" >Order Now</button>
+                <!-- id="orderNowButton" class="butt"-->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        
+                        <!-- <h1>Congratulations!</h1> -->
+                        <center><img src="../Images/party-popper.jpg" width="70" height="100"><img src="../Images/congratulation-text.jpg" width="290" height="120"> <img src="../Images/party-popper.jpg" width="70" height="100"></center>
+                        
+                        <center><p>Thankyou for choosing our foodie!!</p></center>
+                        <center><img src="../Images/order-placedsign.jpg" width="120" height="80"></center>
+                        <center><p>You have made your first order.</p></center>
+                        <center> <b> Follow us on:</b></center>
+                        <center><img src="../Images/social-media-symbols.png" height="30"></center>      </div>
+                </div>
+                </p>
 
         </div>
 
