@@ -98,6 +98,19 @@ These are some snapshots of the project.
 
 ![ogin Page](Images/loginPage.png)
 
+<h2 align="center">Our Contributors ❤️</h2>
+<div align="center">
+ <h3>Thank you for contributing to our repository.😃</h3>
+
+<a href="https://github.com/SaiyamTuteja/Faculty_Evaluation_System/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=khushi-joshi-05/Food-ordering-website" alt="Contributors" />
+</a>
+
+### Show some ❤️ by starring this awesome repository!
+
+</div>
+
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
