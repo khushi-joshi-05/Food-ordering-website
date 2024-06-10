@@ -477,13 +477,11 @@ footer section Design
 ==========================================
 */
 
-.foot-panel2 {
+/* .foot-panel2 {
   background-color: rgb(138, 37, 37);
   color: white;
   height: 300px;
-  /* height: fit-content; */
   display: flex;
-  /* padding: 10px; */
   justify-content: space-evenly;
 }
 
@@ -532,7 +530,6 @@ ul a {
 form {
   padding-top: 20px;
   display: grid;
-  /* gap: 10px; */
   padding-bottom: 100px;
 }
 
@@ -546,7 +543,6 @@ textarea {
   width: max-content;
   padding: 3px;
   box-sizing: border-box;
-  /* border-radius: 4px; */
   outline: none;
   border: #212123 1px;
   font-family: "Nunito", sans-serif;
@@ -615,7 +611,7 @@ textarea {
   padding: 3px;
   border-radius: 3px;
   color: #dddddd;
-}
+} */
 
 /* Form Control */
 .newsletter .form-control {

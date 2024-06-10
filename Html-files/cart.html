@@ -16,11 +16,12 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
-        defer></script>    
+        defer></script>
     <link rel="stylesheet" href="../Css-files/scroll-top-button.css">
     <link rel="stylesheet" href="../Css-files/content.css">
     <link rel="stylesheet" href="../Css-files/cart.css">
     <link rel="stylesheet" href="../Css-files/navbar.css">
+    <link rel="stylesheet" href="../Css-files/footer.css">
 </head>
 
 <body>
@@ -107,118 +108,161 @@
             </div>
 
             <p class="congomessagebox">
-                <button type="submit" class="butt"  id="orderNowButton" >Order Now</button>
+                <button type="submit" class="butt" id="orderNowButton">Order Now</button>
                 <!-- id="orderNowButton" class="butt"-->
-                <div id="myModal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        
-                        <!-- <h1>Congratulations!</h1> -->
-                        <center><img src="../Images/party-popper.jpg" width="70" height="100"><img src="../Images/congratulation-text.jpg" width="290" height="120"> <img src="../Images/party-popper.jpg" width="70" height="100"></center>
-                        
-                        <center><p>Thankyou for choosing our foodie!!</p></center>
-                        <center><img src="../Images/order-placedsign.jpg" width="120" height="80"></center>
-                        <center><p>You have made your first order.</p></center>
-                        <center> <b> Follow us on:</b></center>
-                        <center><img src="../Images/social-media-symbols.png" height="30"></center>      </div>
-                </div>
-                </p>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
 
-        </div>
+                    <!-- <h1>Congratulations!</h1> -->
+                    <center><img src="../Images/party-popper.jpg" width="70" height="100"><img
+                            src="../Images/congratulation-text.jpg" width="290" height="120"> <img
+                            src="../Images/party-popper.jpg" width="70" height="100"></center>
 
-    </section>
-    </section>
-
-    <footer>
-        <div class="foot-panel2">
-            <ul class="footer-colums">
-                <p>Our Pages</p>
-                <a href="../index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html">Contact us</a>
-                <a href="cart.html">Cart</a>
-            </ul>
-
-
-            <ul class="footer-colums">
-                <p> Exclusive Offers</p>
-                <a>Foodie Discounts</a>
-                <a>Limited-Time Promotions</a>
-                <a>Special Event Packages</a>
-                <a>Membership Benefits</a>
-                <a>Early Access to New Recipes</a>
-                <a>VIP Foodie Events</a>
-                <a>Personalized Culinary Experiences</a>
-            </ul>
-
-
-            <ul class="footer-colums">
-                <p>Payment Products</p>
-                <a>Secure Checkout</a>
-                <a>Credit/Debit Cards</a>
-                <a>Online Payment</a>
-                <a>Mobile Wallets</a>
-                <a>Contactless Payments</a>
-            </ul>
-
-
-
-
-            <form id="contactForm">
-                <h3>Contact Us!</h3>
-                <!-- <label for="name">Name:</label> -->
-                <!-- <input type="text" id="name" name="name" placeholder="Your Name" required>-->
-                <!-- <label for="email">Email:</label> -->
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-                <!-- <label for="message">Message:</label> -->
-                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                <button id="butt" type="submit">Send Message</button>
-            </form>
-        </div>
-
-        <div class="foot_panel4">
-            <div class="pages">
-                <h4>Follow Us</h4>
-
-                <div class="social-icons">
-                    <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
-                    <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
-                    <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
-                    <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
-                        target="_blank"></a>
-                    <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
-                </div>
-
-                <p>Stay connected with us on social media for the latest updates, recipes, and foodie adventures.</p>
-
-                <div class="copyright">
-                    &copy; <span id="copyright-year"></span> Foodies - All Rights Reserved | <span id="author">
-                        <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
-                    </span></p>
+                    <center>
+                        <p>Thankyou for choosing our foodie!!</p>
+                    </center>
+                    <center><img src="../Images/order-placedsign.jpg" width="120" height="80"></center>
+                    <center>
+                        <p>You have made your first order.</p>
+                    </center>
+                    <center> <b> Follow us on:</b></center>
+                    <center><img src="../Images/social-media-symbols.png" height="30"></center>
                 </div>
             </div>
+            </p>
+
         </div>
-    </footer>
-     <!--Scroll top button-->
+    </section>
+    
+        <footer>
+            <div class="foot-panel1 w-100">
+                <div class="container-fluid py-5 px-0">
+                    <div class="row justify-content-evenly gy-5">
+                        <div class="col-6 col-sm-3 col-md-2 col-xl-2">
+                            <h5 class="mb-3">See Also</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Html-files/menu.html">Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Html-files/services.html">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Html-files/offers.html">Contact us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Html-files/cart.html">Cart</a>
+                                </li>
+                            </ul>
+                        </div>
 
-     <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
-            class="arrow">
-            <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
-        </svg>
-    </button>
-    <!--Scroll top button finish-->
+                        <div class="col-6 col-sm-5 col-md-3 col-xl-3">
+                            <h5 class="mb-3">Exclusive Offers</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Foodie Discounts</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Limited-Time Promotions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Special Event Packages</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Membership Benefits</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Early Access to New Recipes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">VIP Foodie Events</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Personalized Culinary Experiences</a>
+                                </li>
+                            </ul>
+                        </div>
 
-    <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+                        <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                            <h5 class="mb-3">Payment Products</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Secure Checkout</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Credit/Debit Cards</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Secure Checkout</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Online Payment</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Mobile Wallets</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Contactless Payments</a>
+                                </li>
+                            </ul>
+                        </div>
 
-    <!-- <script src="../cart.js"></script> -->
-    <script src="cart.js">
+                        <div class="col-6 col-md-3 col-xl-4">
+                            <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
+                                <h3 class="text-center mb-3">Contact Us!</h3>
+                                <input type="email" id="email" name="email" placeholder="Your Email"
+                                    class="text-center form-control mb-2" required>
+                                <textarea id="message" name="message" placeholder="Your Message"
+                                    class="text-center form-control mb-2" required></textarea>
+                                <div class="d-grid gap-2 col-12">
+                                    <button type="submit" class="btn btn-danger">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-panel2">
+                <div class="media-handles pt-3 pb-2">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                        <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                        <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                        <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
+                        <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
+                            target="_blank"></a>
+                        <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
+                    </div>
+                    <p class="text"> Stay connected with us on social media for the latest updates, recipes, and foodie
+                        adventures. </p>
+                </div>
+                <div class="copyright py-1">
+                    &copy;
+                    <span id="copyright-year"></span> Foodies - All Rights Reserved |
+                    <span id="author">
+                        <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
+                    </span>
+                </div>
+            </div>
+        </footer>
 
-    </script>
-    <script src="top.js"></script>
+        <!--Scroll top button-->
+        <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
+                class="arrow">
+                <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+            </svg>
+        </button>
+        <!--Scroll top button finish-->
+
+        <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+        <script src="cart.js"></script>
+        <script src="top.js"></script>
 </body>
 
 </html>

@@ -423,13 +423,12 @@ margin:12px;
 }
 
 /* footer */
-.foot-panel2 {
+/* .foot-panel2 {
   background-color: rgb(138, 37, 37);
   color: white;
   height: 300px;
   display: flex;
   justify-content: space-evenly;
-  /* margin-top: 50px; */
 }
 
 .footer-colums {
@@ -459,7 +458,7 @@ margin:12px;
 .foot-panel2 ul a:hover {
   text-decoration: underline;
   color: #dddddd;
-}
+} */
 
 /* .foot-pannel3{
     background-color:rgb(66, 16, 16);
@@ -470,7 +469,7 @@ margin:12px;
     justify-content: center;
 } */
 
-.foot_panel4 {
+/* .foot_panel4 {
   background-color: rgb(66, 16, 16);
   color: white;
   height: 160px;
@@ -490,7 +489,6 @@ margin:12px;
 form {
   padding-top: 20px;
   display: grid;
-  /* gap: 10px; */
   padding-bottom: 100px;
 }
 
@@ -556,7 +554,8 @@ textarea {
 .fa-linkedin:hover{
   background-color: #0077b5;
   color: white;
-} 
+}  */
+
 /* Cart page styling */
 .cart-section {
   padding: 55px 70px 30px 70px;
