@@ -145,6 +145,29 @@ body {
   padding-bottom: 10px;
 }
 
+.search-bar{
+width:150px;
+margin:12px;
+}
+.search-input{
+  background-color:transparent;
+  margin-top:5px;
+  color:white;
+  border-style:none;
+}
+.search-input:active{
+  border-style:none;
+  outline:none;
+}
+.search-button{
+  outline:none;
+  background-color:transparent;
+  border-style: none;
+}
+.searchImg{
+  width:23px;
+  height:23px;
+}
 /* .mainhead p {
   font-size: 1.2rem;
   color: brown;
@@ -530,6 +553,10 @@ textarea {
   background-color: #5865f2;
   color: white;
 }
+.fa-linkedin:hover{
+  background-color: #0077b5;
+  color: white;
+} 
 /* Cart page styling */
 .cart-section {
   padding: 55px 70px 30px 70px;
