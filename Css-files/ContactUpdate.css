@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
 
 *,
 *:after,
@@ -85,10 +86,10 @@ body {
 
 h1 {
   font-size: 58px;
-  font-weight: 900;
+  font-weight: bolder;
   margin-bottom: 1rem;
-  color: var(--white-color);
-  text-shadow: 1px 0 6px #000;
+  color:white;
+  text-shadow: 3px 0 6px #000;
 }
 
 h1 span {
@@ -97,7 +98,7 @@ h1 span {
 
 h2 {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 3rem;
   text-transform: capitalize;
   font-family: var(--secondry-font);
   color: var(--secondry-color);
@@ -119,9 +120,10 @@ h5 {
   color: var(--black-color);
   text-transform: capitalize;
   font-family: var(--secondry-font);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: bolder;
   margin-bottom: 0.5rem;
+  text-shadow: 0 0 12px white;
 }
 
 p {
@@ -138,7 +140,7 @@ p {
   line-height: 1.5625rem;
   background-color: rgb(138, 37, 37);
   ;
-  border: 0.1875rem solid yellow;
+  border: 0.1875rem solid rgb(10, 10, 9);
   color: var(--white-color);
   font-size: 0.9375rem;
   font-weight: 600;
@@ -152,8 +154,8 @@ p {
 }
 
 .main-btn:hover {
-  background-color: transparent;
-  color: var(--primary-color);
+  background-color: white;
+  color: black;
 }
 
 .wrapper {
@@ -398,12 +400,14 @@ nav {
 */
 
 .explore-food .card{
+
   background-color:transparent;
   border-radius: 0.9375rem;
 }
 
 .explore-food .card :hover {
-  transform: scale(0.99);
+  transform: scale(1.01);
+  transition:all .4s ease-in;
 }
 
 .explore-food .card img {
@@ -440,16 +444,17 @@ nav {
 }
 
 .testimonial-section h2 {
-  color: var(--black-color);
+  color: red;
 }
 
 .testimonial-section .carousel-item {
   margin-top: 3rem;
   padding: 10rem 3.125rem;
-  background-color: white;
+  color: white;
+  background-color: rgb(251, 251, 251);
   border-radius: 0.9375rem;
   text-align: center;
-  border: 4px solid brown;
+border: 4px solid brown;
 }
 
 .testimonial-section .carousel-caption img {
@@ -459,9 +464,9 @@ nav {
 }
 
 .testimonial-section .carousel-caption p {
-  font-size: 1.125rem;
+  font-size:1.67rem;
+  font-weight : bold;
   line-height: 1.5625rem;
-  font-weight: 300;
   color: var(--black-color);
   padding: 0 11% 0.625rem;
 }
@@ -560,9 +565,10 @@ textarea {
   width: max-content;
   padding: 3px;
   box-sizing: border-box;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   outline: none;
   border: #212123 1px;
+  font-family: "Nunito", sans-serif;
 }
 
 #butt {
@@ -572,6 +578,7 @@ textarea {
   border: 1px solid white;
   border-radius: 4px;
   cursor: pointer;
+  font-family: "Nunito", sans-serif;
 }
 
 #butt:hover {
@@ -591,22 +598,31 @@ textarea {
 
 .fa-facebook:hover {
   background-color: #3B5998;
-  color: white;
+  color: white !important;
 }
 
 .fa-instagram:hover {
   background-color: #D62976;
-  color: white;
+  color: white !important;
 }
 
-.fa-twitter:hover {
-  background-color: #00B6F1;
-  color: white;
+.fa-x-twitter:hover {
+  background-color: black;
+  color: white !important;
 }
 
 .fa-github:hover {
   background-color: #040204;
-  color: white;
+  color: white !important;
+}
+
+.fa-discord:hover {
+  background-color: #5865F2;
+  color: white !important;
+}
+.fa-linkedin:hover{
+  background-color: #0077b5;
+  color: white !important;
 }
 
 .copyright {
@@ -758,4 +774,5 @@ textarea {
   .foot-panel2 ul {
     margin-top: 20px;
   }
+}
 }
