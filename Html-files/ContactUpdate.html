@@ -25,7 +25,7 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../Css-files/scroll-top-button.css">
   <!-- OWN CSS -->
-  <link id="theme-link" rel="stylesheet" href="/Css-files/ContactUpdate.css">
+  <link id="theme-link" rel="stylesheet" href="../Css-files/ContactUpdate.css">
 
 </head>
 
@@ -117,7 +117,7 @@
 
           <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
             <div class="card border">
-              <img decoding="async" src="/Html-files/assets/game.png" class="img-fluid">
+              <img decoding="async" src="../Html-files/assets/game.png" class="img-fluid">
               <div class="p-3">
                 <h5>🎮 New games alert! Level up your fun with our latest releases! 🚀</h5>
                 <p>Dive into the excitement with our new game releases! 🎉 Challenge yourself and explore thrilling
@@ -154,19 +154,19 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="carousel-caption">
-                    <img decoding="async" src="/Html-files/assets/panipuri.jpg">
+                    <img decoding="async" src="../Html-files/assets/panipuri.jpg">
                     <p>"crispy shells, spicy tangy water, ultimate flavor explosion! 🌶️🌟💥"</p>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="carousel-caption">
-                    <img decoding="async" src="/Html-files/assets/bruchetta.jpg">
+                    <img decoding="async" src="../Html-files/assets/bruchetta.jpg">
                     <p>" Fresh tomatoes, basil, garlic on toasted bread. Italian delight! 🍅🍞"</p>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="carousel-caption">
-                    <img decoding="async" src="/Html-files/assets/Ramen.jpg">
+                    <img decoding="async" src="../Html-files/assets/Ramen.jpg">
                     <p>"Savory broth, tender noodles, vibrant toppings. Japanese comfort food! 🍜"</p>
                   </div>
                 </div>
@@ -220,14 +220,18 @@
         <!-- <div class="d-flex m-2">
               <input class="form-control" placeholder="Enter Name Here" type="text">
             </div> -->
-        <div class="d-flex m-2">
+        <!-- <div class="d-flex m-2">
           <input class="form-control" placeholder="Email Address Here" type="email">
         </div>
         <div class="d-flex m-2">
           <input class="form-control" placeholder="Enter Message Here" type="text">
         </div>
         <br>
-        <button class="main-btn m-2" type="submit">Submit</button>
+        <button class="main-btn m-2" type="submit">Submit</button> -->
+
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button id="butt" type="submit">Send Message</button>
       </form>
     </div>
 
