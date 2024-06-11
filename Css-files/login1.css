@@ -55,6 +55,7 @@ body * {
   border-radius: 20px;
   box-shadow: 0px 10px 50px #000000a4;
   background-color: white;
+  height: 700px;
 }
 
 .card-login>h1 {
@@ -64,6 +65,10 @@ body * {
   margin: 0;
 }
 
+h3 , h4{
+  padding: 0px;
+  margin: 10px;
+}
 .textfield {
   width: 100%;
   display: flex;
@@ -105,8 +110,8 @@ body * {
 
 .btn-login {
   width: 100%;
-  padding: 16px 0;
-  margin: 25px;
+  padding: 10px 0;
+  margin: 10px;
   border: none;
   border-radius: 8px;
   outline: none;

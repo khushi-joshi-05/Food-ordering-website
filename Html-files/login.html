@@ -44,10 +44,21 @@
           </span>
         </div>
         <button class="btn-login" onclick="validateLogin()">Login</button>
-        <h3>
+        <h3 class="h3">
           <center>OR</center>
         </h3>
-        <button id="google-login">Login with Google</button>
+        <button class="btn-login">Login with Google</button>
+        <h4 class="h3">
+          <center>Don't have an account??</center>
+          <center>Register below!</center>
+        </h4>
+        <button class="btn-login" onclick="opensignup()">Register</button>
+
+    <script>
+        function opensignup() {
+            window.location.href = 'signup.html';
+        }
+    </script>
       </div>
     </div>
   </div>
