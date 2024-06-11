@@ -33,14 +33,14 @@
         <header>
             <nav class="navbar navbar-expand-lg bg-black fixed-top" data-bs-theme="dark">
                 <div class="container-fluid">
-                    <a href="../index.html" class="navbar-brand flex-fill opacity-75">
+                    <a href="../index.html" class="navbar-brand opacity-75 flex-fill">
                         <img src="../Images/logo/Foodielogo.png" height="40">
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target=".hamburgeritems"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
                         <ul class="navbar-nav center-links">
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="../index.html">Home</a>
@@ -58,6 +58,11 @@
                                 <a class="nav-link" href="../Html-files/offers.html">Offers</a>
                             </li>
                         </ul>
+                    </div>
+                    <div class="order-0 ml-auto p-2">
+                        <img class="nav-link" src="../Images/sun.png" id="theme-toggle-icon" alt="theme toggler button">
+                    </div>
+                    <div class="collapse navbar-collapse hamburgeritems enddiv order-3 ">
                         <ul class="navbar-nav end-links">
                             <li class="nav-item">
                                 <a class="nav-link" href="../Html-files/login.html">Login</a>
@@ -249,19 +254,19 @@
                             <h5 class="mb-3">See Also</h5>
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Home</a>
+                                    <a class="nav-link" href="../index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/Html-files/menu.html">Menu</a>
+                                    <a class="nav-link" href="../Html-files/menu.html">Menu</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/Html-files/services.html">Services</a>
+                                    <a class="nav-link" href="../Html-files/services.html">Services</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/Html-files/offers.html">Contact us</a>
+                                    <a class="nav-link" href="../Html-files/offers.html">Contact us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/Html-files/cart.html">Cart</a>
+                                    <a class="nav-link" href="../Html-files/cart.html">Cart</a>
                                 </li>
                             </ul>
                         </div>
@@ -378,6 +383,7 @@
             );
         </script>
         <script src="top.js"></script>
+        <script src="themechange.js"></script>
 
         </footer>
 

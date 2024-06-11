@@ -15,6 +15,10 @@
   box-shadow: none;
 }
 
+.navbar .navbar-collapse.enddiv{
+  flex-grow: 0;
+}
+
 .center-links .nav-item .nav-link:hover {
   color: #f13800e4;
 }
@@ -26,4 +30,9 @@
 .navbar-nav .nav-link.active {
   color: #dc3545;
   border-bottom: 2px solid #dc3545;
+}
+
+#theme-toggle-icon{
+  width: 30px;
+  cursor: pointer;
 }

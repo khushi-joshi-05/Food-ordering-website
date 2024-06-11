@@ -31,17 +31,6 @@
     <link rel="stylesheet" href="Css-files/navbar.css">
     <link rel="stylesheet" href="Css-files/footer.css">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./login1.css">
-    <style>
-        #icon{
-            width: 30px;
-            margin-top: 5px;
-            cursor: pointer;
-        }
-        body{
-            overflow-x: hidden;
-        }
-    </style>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
@@ -53,14 +42,14 @@
     </div>
     <nav class="navbar navbar-expand-lg bg-black fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
-            <a href="index.html" class="navbar-brand flex-fill opacity-75">
+            <a href="index.html" class="navbar-brand opacity-75 flex-fill">
                 <img src="Images/logo/Foodielogo.png" height="40">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target=".hamburgeritems"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
                 <ul class="navbar-nav center-links">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
@@ -78,10 +67,12 @@
                         <a class="nav-link" href="Html-files/offers.html">Offers</a>
                     </li>
                 </ul>
+            </div>
+            <div class="order-0 ml-auto p-2">
+                <img class="nav-link" src="Images/sun.png" id="theme-toggle-icon" alt="theme toggler button">
+            </div>
+            <div class="collapse navbar-collapse hamburgeritems enddiv order-3 ">
                 <ul class="navbar-nav end-links">
-                    <li class="nav-item">
-                        <img style="margin-top: 10px;" src="Images/sun.png" id="icon" alt="">
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/login.html">Login</a>
                     </li>
@@ -319,7 +310,7 @@
                     </div>
                 </div>
             </div>
-           
+
         </div>
     </section>
 
@@ -460,7 +451,7 @@
                                 <a class="nav-link" href="/Html-files/services.html">Services</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/offers.html">Contact us</a>
+                                <a class="nav-link" href="/Html-files/contact.html">Contact us</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/Html-files/cart.html">Cart</a>
@@ -570,6 +561,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="Html-files/top.js"></script>
     <script src="script.js"></script>
+    <script src="Html-files/themechange.js"></script>
     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
     <script>
         AOS.init(
@@ -603,18 +595,5 @@
     </script>
 
 </body>
-
-<script>
-    var icon = document.getElementById("icon");
-
-    icon.onclick = function(){
-        document.body.classList.toggle("dark-theme");
-        if(document.body.classList.contains("dark-theme")){
-            icon.src = "images/sun.png";
-        }else{
-            icon.src = "images/moon.png";
-        }
-    }
-</script>
 
 </html>

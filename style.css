@@ -5,6 +5,10 @@
   padding: 0px;
 }
 
+body{
+  background-color: black;
+  overflow-x: hidden;
+}
 
 :root {
   --primary-bg-color: #ffffff; 
@@ -18,8 +22,6 @@
   --footer-bg-color: #f2f2f2; 
   --footer-hover-color: #e5e5e5;
 }
-
-
 
 .dark-theme{
 
