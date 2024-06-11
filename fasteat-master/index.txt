@@ -1,0 +1,211 @@
+Fasteat - The Best Restaurants In Your Home
+This is a food html template made by codewithsadee
+
+
+
+#---------- HEADER ----------#
+
+alt = Fasteat home
+
+aria-label = close menu
+<ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+
+Home
+About Us
+Restaurants
+Contacts
+
+aria-label = cart
+<ion-icon name="bag" aria-hidden="true"></ion-icon>
+
+Order Now
+
+aria-label = open menu
+<ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+
+
+
+#---------- HERO ----------#
+
+The Best Restaurants In Your Home
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+
+Order Now
+
+alt = hero banner
+alt = shape
+
+
+
+#---------- INSTRUCTION ----------#
+
+How It Works
+
+Magna sit amet purus gravida quis blandit turpis cursus. Venenatis tellus in
+metus vulputate eu scelerisque felis.
+
+alt = Select Restaurant
+01
+Select Restaurant
+
+Non enim praesent elementum facilisis leo vel fringilla. Lectus proin nibh nisl condimentum id. Quis varius quam quisque id diam vel.
+
+alt = Select menu
+02
+Select menu
+
+Eu mi bibendum neque egestas congue quisque. Nulla facilisi morbi tempus iaculis urna id volutpat lacus. Odio ut sem nulla pharetra diam sit amet.
+
+alt = Wait for delivery
+03
+Wait for delivery
+
+Nunc lobortis mattis aliquam faucibus. Nibh ipsum consequat nisl vel pretium lectus quam id leo. A scelerisque purus semper eget. Tincidunt arcu non.
+
+
+
+#---------- TOP RESTAURANT ----------#
+
+12 Best Restaurants in Your City
+
+Magna sit amet purus gravida quis blandit turpis cursus. Venenatis tellus in metus vulputate.
+
+alt = Kennington Lane Cafe
+Kennington Lane Cafe
+
+<ion-icon name="star" aria-hidden="true"></ion-icon>
+<ion-icon name="star" aria-hidden="true"></ion-icon>
+<ion-icon name="star" aria-hidden="true"></ion-icon>
+<ion-icon name="star" aria-hidden="true"></ion-icon>
+<ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+
+american
+steakhouse
+
+Non enim praesent elementum facilisis leo vel fringilla. Lectus proin nibh nisl condimentum id. Quis varius quam quisque id diam vel.
+
+alt = The Wilmington
+The Wilmington
+
+Vulputate enim nulla aliquet porttitor lacus luctus. Suscipit adipiscing bibendum est ultricies integer. Sed adipiscing diam donec adipiscing tristique.
+
+alt = Kings Arms
+Kings Arms
+
+healthy
+
+Tortor at risus viverra adipiscing at in tellus. Cras semper auctor neque vitae tempus. Dui accumsan sit amet nulla facilisi. Sed adipiscing diam donec adipiscing tristique.
+
+See All
+<ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+
+
+
+#---------- CTA ----------#
+
+alt = cta banner
+
+Food from your favorite restaurants to your table
+
+Pretium lectus quam id leo in vitae turpis massa sed. Lorem donec massa sapien faucibus et molestie. Vitae elementum curabitur vitae nunc.
+
+Order Now
+
+
+
+#---------- STATS ----------#
+
+Service shows good taste.
+
+976
+Satisfied
+Customer
+
+12
+Best
+Restaurants
+
+1K+
+Food
+Delivered
+
+
+
+#---------- TESTIMONIALS ----------#
+
+What customers say about us
+
+"Dapibus ultrices in iaculis nunc sed augue lacus viverra vitae. Mauris a diam maecenas sed enim. Egestas diam in arcu cursus euismod quis. Quam quisque id diam vel".
+
+alt = Thomas Adamson
+<ion-icon name="star" aria-hidden="true"></ion-icon>
+<ion-icon name="star" aria-hidden="true"></ion-icon>
+<ion-icon name="star" aria-hidden="true"></ion-icon>
+<ion-icon name="star" aria-hidden="true"></ion-icon>
+<ion-icon name="star" aria-hidden="true"></ion-icon>
+
+alt = testimonial banner
+
+
+
+#---------- PARTNERSHIP ----------#
+
+Want to Join Partnership?
+
+alt = Join Courier
+Join Courier
+
+Learn More
+<ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+
+Join Merchant
+
+
+
+#---------- NEWSLETTER ----------#
+
+alt = Illustration
+
+Get the menu of your favorite restaurants every day
+
+placeholder = Enter email address
+
+<ion-icon name="notifications-outline" aria-hidden="true"></ion-icon>
+Subscribe
+
+
+
+#---------- FOOTER ----------#
+
+alt = fasteat home
+
+The Best Restaurants in Your Home
+
+Vitae congue mauris rhoncus aenean. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Tempus egestas sed sed risus pretium quam.
+
+Menu
+
+Home
+<ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+
+About Us
+Restaurants
+Contacts
+
+Contacts
+
+<ion-icon name="location" aria-hidden="true"></ion-icon>
+1717 Harrison St, San Francisco, CA 94103, United States
+
+<ion-icon name="mail" aria-hidden="true"></ion-icon>
+quickeat@mail.net
+
+<ion-icon name="call" aria-hidden="true"></ion-icon>
++1 234 456 78 90
+
+<ion-icon name="logo-facebook"></ion-icon>
+<ion-icon name="logo-instagram"></ion-icon>
+<ion-icon name="logo-twitter"></ion-icon>
+
+Copyright 2022 codewithsadee. All rights reserved.
