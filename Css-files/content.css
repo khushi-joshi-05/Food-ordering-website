@@ -145,6 +145,29 @@ body {
   padding-bottom: 10px;
 }
 
+.search-bar{
+width:150px;
+margin:12px;
+}
+.search-input{
+  background-color:transparent;
+  margin-top:5px;
+  color:white;
+  border-style:none;
+}
+.search-input:active{
+  border-style:none;
+  outline:none;
+}
+.search-button{
+  outline:none;
+  background-color:transparent;
+  border-style: none;
+}
+.searchImg{
+  width:23px;
+  height:23px;
+}
 /* .mainhead p {
   font-size: 1.2rem;
   color: brown;
