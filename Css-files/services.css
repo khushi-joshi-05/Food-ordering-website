@@ -2,6 +2,9 @@
     font-family: "Bree Serif", serif;
 }
 
+body{
+    overflow-x: hidden;
+}
 .mainhead:hover h1 {
     color: rgb(138, 37, 37);
 
