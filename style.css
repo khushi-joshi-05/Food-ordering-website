@@ -606,6 +606,9 @@ article p {
 }
 
 .app_download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: brown;
   height: 350px;
   color: white;
@@ -627,6 +630,10 @@ article p {
 
 .app_download img:hover {
   transform: scale(1.1);
+}
+
+.app_download__link {
+  display: flex;
 }
 
 .btn a {
