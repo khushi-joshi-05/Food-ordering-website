@@ -58,31 +58,20 @@
     </style>
 
     <script src="hamburger.js" defer></script>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="effect.css">
-    <script src="effect.js"></script>
-=======
-</head>
 
-<body>
-    
-    <nav>
-        <div class="navigbar">
-            <div class="logo">
-                <a href="index.html"><img src="Images/sitelogo.png" height="48" class="transparent-image"></a>
-=======
->>>>>>> a2fed942e7331a628c5a81d854771ae21da6b19e
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="preloader.css" />
 </head>
 
+
 <body>
-    <div id="loader-wrapper">
+    <!--<div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-    </div>
+    </div>-->
 
-    <div id="icons-container">
+   <!-- <div id="icons-container">
         <svg class="food-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <circle cx="50" cy="50" r="40" stroke="red" stroke-width="5" fill="none" />
             <rect x="45" y="10" width="10" height="20" fill="brown" />
@@ -100,9 +89,29 @@
     <svg id="food-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <!-- <circle cx="50" cy="50" r="40" fill="orange" /> -->
         <!-- Add more SVG elements here to create a food icon -->
-    </svg>
+    <!--</svg>-->
+    <!--Preloader Start-->
+    
+    <div id="preloader">
+        <h1>Loading...</h1>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div id="area">
+            <div id="sides">
+                <div id="pan"></div>
+                <div id="handle"></div>
+            </div>
+            <div id="pancake">
+                <div id="pastry"></div>
+            </div>
+        </div>
+    </div>
+    
 
-    <nav>
+   <nav>
         <div class="navigbar">
             <div class="logo">
                 <a href="index.html"><img src="Images/Foodielogo.png" height="40" class="transparent-image"></a>
@@ -665,6 +674,7 @@
     </script>
 
     <script src="Html-files/top.js"></script>
+    <script src="preloader.js"></script>
 
     <script>
         window.addEventListener('beforeunload', function (event) {
