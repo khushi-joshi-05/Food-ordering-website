@@ -22,6 +22,85 @@
         body{
             overflow-x: hidden;
         }
+        /* General container styling */
+.filter_container {
+    text-align: center;
+    margin: 20px 0;
+    color: aliceblue;
+    background-color: transparent;
+}
+
+.filter_container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Filters div styling */
+.filter_container .filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Label styling */
+.filter_container label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* Dropdown styling */
+.filter_container select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Hover and focus effects for dropdown */
+.filter_container select:hover,
+.filter_container select:focus {
+    border-color: #dc3545;
+}
+
+/* Button styling */
+.filter_container button {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter_container button:hover {
+    background-color: #dc3545;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .filter_container .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter_container label,
+    .filter_container select,
+    .filter_container button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .filter_container button {
+        margin-top: 10px;
+    }
+}
+
     </style>
 </head>
 
@@ -74,6 +153,31 @@
         </div>
         
     </div>
+
+    <section class="filter_container">
+        <div class="filters">
+            <label for="filter-category">Category:</label>
+            <select id="filter-category">
+                <option value="all">All</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Dessert">Dessert</option>
+                <option value="Juices">Juices</option>
+                <option value="Indian Thali">Indian Thali</option>
+            </select>
+    
+            <label for="filter-price">Price Range:</label>
+            <select id="filter-price">
+                <option value="all">All</option>
+                <option value="0-5">0 - 5</option>
+                <option value="5-10">5 - 10</option>
+                <option value="10-15">10 - 15</option>
+                <option value="15-20">15 - 20</option>
+            </select>
+    
+            <button onclick="filterMenu()">Apply Filters</button>
+        </div>
+    </section>
+    
 
     <section class="menu_container" >
 
@@ -482,6 +586,46 @@
       );
     </script>
     <script src="top.js"></script>
+    <script>
+        function filterMenu() {
+            const categoryFilter = document.getElementById('filter-category').value;
+            const priceFilter = document.getElementById('filter-price').value;
+    
+            const menuItems = document.querySelectorAll('.menu_items .items');
+    
+            menuItems.forEach(item => {
+                const itemName = item.querySelector('h3').innerText;
+                const itemPrice = parseFloat(item.querySelector('p').innerText.replace('$', ''));
+                let categoryMatch = categoryFilter === 'all' || itemName.includes(categoryFilter);
+                let priceMatch = false;
+    
+                switch (priceFilter) {
+                    case 'all':
+                        priceMatch = true;
+                        break;
+                    case '0-5':
+                        priceMatch = itemPrice >= 0 && itemPrice <= 5;
+                        break;
+                    case '5-10':
+                        priceMatch = itemPrice > 5 && itemPrice <= 10;
+                        break;
+                    case '10-15':
+                        priceMatch = itemPrice > 10 && itemPrice <= 15;
+                        break;
+                    case '15-20':
+                        priceMatch = itemPrice > 15 && itemPrice <= 20;
+                        break;
+                }
+    
+                if (categoryMatch && priceMatch) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    
 </body>
 
 </html>
