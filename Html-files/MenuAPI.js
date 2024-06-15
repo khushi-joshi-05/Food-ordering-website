@@ -159,52 +159,52 @@ RenderPage();
 
 
 
-// // Function to get cart items from local storage
-// function getCartItems() {
-// 	const cartItems = localStorage.getItem("cartItems");
-// 	return cartItems ? JSON.parse(cartItems) : [];
-// }
+// Function to get cart items from local storage
+function getCartItems() {
+	const cartItems = localStorage.getItem("cartItems");
+	return cartItems ? JSON.parse(cartItems) : [];
+}
 
-// // Function to set cart items to local storage
-// function setCartItems(cartItems) {
-// 	localStorage.setItem("cartItems", JSON.stringify(cartItems));
-// }
+// Function to set cart items to local storage
+function setCartItems(cartItems) {
+	localStorage.setItem("cartItems", JSON.stringify(cartItems));
+}
 
-// // Function to handle add to cart button click
-// function cartBtn() {
-// 	menuContainer.addEventListener("click", (event) => {
-// 		const clickedElement = event.target;
-// 		if (clickedElement.classList.contains("add-to-cart-button")) {
-// 			const productName = clickedElement.dataset.productName;
-// 			const productImgSource = clickedElement.dataset.productImgsource;
-// 			const productPrice = clickedElement.dataset.productPrice;
+// Function to handle add to cart button click
+function cartBtn() {
+	menuContainer.addEventListener("click", (event) => {
+		const clickedElement = event.target;
+		if (clickedElement.classList.contains("add-to-cart-button")) {
+			const productName = clickedElement.dataset.productName;
+			const productImgSource = clickedElement.dataset.productImgsource;
+			const productPrice = clickedElement.dataset.productPrice;
 
-// 			// Get the current cart items
-// 			const cartItems = getCartItems();
+			// Get the current cart items
+			const cartItems = getCartItems();
 
-// 			// Check if the item is already in the cart
-// 			const existingCartItem = cartItems.find(
-// 				(item) => item.name === productName
-// 			);
+			// Check if the item is already in the cart
+			const existingCartItem = cartItems.find(
+				(item) => item.name === productName
+			);
 
-// 			if (existingCartItem) {
-// 				// If the item is already in the cart, increase the quantity
-// 				existingCartItem.quantity += 1;
-// 			} else {
-// 				// If the item is not in the cart, add it with quantity 1
-// 				cartItems.push({
-// 					name: productName,
-// 					imgSrc: productImgSource,
-// 					quantity: 1,
-// 					price: productPrice,
-// 				});
-// 			}
-// 			// console.log(cartItems);
+			if (existingCartItem) {
+				// If the item is already in the cart, increase the quantity
+				existingCartItem.quantity += 1;
+			} else {
+				// If the item is not in the cart, add it with quantity 1
+				cartItems.push({
+					name: productName,
+					imgSrc: productImgSource,
+					quantity: 1,
+					price: productPrice,
+				});
+			}
+			// console.log(cartItems);
 
-// 			// Save the updated cart items to local storage
-// 			setCartItems(cartItems);
-// 		}
-// 	});
-// }
+			// Save the updated cart items to local storage
+			setCartItems(cartItems);
+		}
+	});
+}
 
-// cartBtn();
+cartBtn();
