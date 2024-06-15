@@ -8,11 +8,23 @@ body {
 body * {
   box-sizing: border-box;
 }
-
+.logo{
+  background-color: brown;
+  height: 55px;
+  width: 100vw;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.logo img{
+  height: 38px;
+  margin-left: 2rem;
+  margin-top: 1.3rem;
+}
 .main-login {
   width: 100vw;
   height: 100vh;
-  background: brown;
+  background:white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,6 +90,7 @@ body * {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .card-login {
@@ -88,7 +101,9 @@ body * {
   padding: 10px 35px;
   border-radius: 20px;
   box-shadow: 0px 10px 50px #000000a4;
-  background-color: white;
+  background-color:rgb(221, 221, 247);
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .card-login > h1 {
