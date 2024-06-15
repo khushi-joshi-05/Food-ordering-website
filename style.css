@@ -444,6 +444,9 @@ body{
 
 /* APP DOWNLOAD SECTION */
 .app_download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: brown;
   height: fit-content;
   color: white;
