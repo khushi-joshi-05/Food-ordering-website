@@ -8,7 +8,19 @@ body {
 body * {
   box-sizing: border-box;
 }
-
+.logo{
+  background-color: brown;
+  height: 55px;
+  width: 100vw;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.logo img{
+  height: 38px;
+  margin-left: 2rem;
+  margin-top: 1.3rem;
+}
 .main-login {
   width: 100vw;
   height: 100vh;
