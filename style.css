@@ -1469,6 +1469,7 @@ nav {
   /* Adjust background color */
   width: 100%;
   padding: 1rem;
+  text-align: center;
 }
 
 /* Style hamburger menu items */
