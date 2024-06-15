@@ -208,3 +208,40 @@ function cartBtn() {
 }
 
 cartBtn();
+
+function filterMenu() {
+    const priceFilter = document.getElementById('filter-price').value;
+
+    const menuItems = document.querySelectorAll('.menu-items .item');
+
+    menuItems.forEach(item => {
+        const itemName = item.querySelector('h3').innerText;
+        const itemPrice = parseFloat(item.querySelector('p').innerText.replace('$', ''));
+        let priceMatch = false;
+
+        switch (priceFilter) {
+            case 'all':
+                priceMatch = true;
+                break;
+            case '0-5':
+                priceMatch = itemPrice >= 0 && itemPrice <= 5;
+                break;
+            case '5-10':
+                priceMatch = itemPrice > 5 && itemPrice <= 10;
+                break;
+            case '10-15':
+                priceMatch = itemPrice > 10 && itemPrice <= 15;
+                break;
+            case '15-20':
+                priceMatch = itemPrice > 15 && itemPrice <= 20;
+                break;
+        }
+
+        if (priceMatch) {
+            item.style.display = '';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
