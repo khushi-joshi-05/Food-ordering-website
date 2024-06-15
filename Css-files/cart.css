@@ -2,9 +2,7 @@
     box-sizing: border-box;
     font-family: "Bree Serif", serif;
 }
-.navigbar {
-    top: 40px;
-  }
+
   .mainhead {
     text-align: center;
     padding-top: 50px;
@@ -63,8 +61,8 @@
     border: 1px solid gray;
 }
 
-.quantity-wrapper *,
-.btn {
+.quantity-wrapper *
+ {
     display: inline-block;
     width: 30px;
     height: 30px;
