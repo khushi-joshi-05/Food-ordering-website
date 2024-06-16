@@ -5,30 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign up</title>
-  <script src="scriptsignup.js" defer type="module"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
   <link rel="stylesheet" href="../Css-files/signup1.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmF/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
+  <div class="logo">
+    <a href="../index.html"><img src="../Images/sitelogo.PNG"></a>
+  </div>
   <div class="main-login">
     <div class="left-login" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
-      <h1>Sign Up Here<br>Good Food is Good Mood</h1>
-      <img src="../Images/desserts.avif" class="left-login-image" alt="food">
+      <!--<h1>Sign Up Here<br>Good Food is Good Mood</h1>-->
+      <img src="../Images/signupimage.jpg" class="left-login-image" alt="food">
     </div>
     <div class="right-login">
       <div class="card-login" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
         <button class="close-btn">&times;</button>
         <h1>SIGN UP</h1>
-        <br>
         <form id="signup-form">
           <div class="textfield">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required >
           </div>
           <div class="textfield">
             <label for="email">Email</label>
@@ -36,7 +40,7 @@
           </div>
           <div class="textfield">
             <label for="Username">Username</label>
-            <input type="Username" id="Username" name="Username" placeholder="Enter Username" required>
+            <input type="text" id="Username" name="Username" placeholder="Enter Username" required>
           </div>
           <div class="textfield">
             <label for="password">Password</label>
@@ -46,43 +50,117 @@
             </span>
           </div>
           <button type="submit" class="btn-login">Register</button>
+          <h1 style="font-size:13px; text-align:center;">Already have an account <a href="C:\Users\user\Desktop\signupfood\Food-ordering-website\Html-files\login.html">login</a></h1>
         </form>
-        <h3><center>OR</center></h3>
-        <button id="google-login">Login with Google</button>
+        <!--<h3><center>OR</center></h3>
+        <button id="google-login">Login with Google</button>-->
       </div>
     </div>
   </div>
+
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init(
-        {
-          duration: 1000, 
-          easing: 'ease', 
-          once: false, 
-        }
-      );
-    </script>
-</body>
-<script>
-  const pswinput = document.getElementById('password');
-  const toggle = document.getElementById('signup-hide');
-  toggle.addEventListener("click", function () {
-    const pswfield = this.querySelector('i');
-    if (pswinput.getAttribute("type") == "password") {
-      pswinput.setAttribute('type', 'text');
-      pswfield.classList.replace("bxs-hide", "bxs-show");
-    }
-    else {
-      pswinput.setAttribute('type', 'password');
-      pswfield.classList.replace("bxs-show", "bxs-hide");
-    }
-  });
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease',
+      once: false,
+    });
+  </script>
+  <script>
+    // Your web app's Firebase configuration
+  
+    const firebaseConfig = {
+ //Add your Config File
+};
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.database();
 
   const closeBtn = document.querySelector('.close-btn');
-    closeBtn.addEventListener('click', function () {
-      // document.querySelector('.card-login').style.display = 'none';
-      window.location.href='../index.html';
-    });
-</script>
+  closeBtn.addEventListener('click', function () {
+    // document.querySelector('.card-login').style.display = 'none';
+    window.location.href='../index.html';
+  });
+  </script>
+  <script>
+    // Sign up with email and password
+    document.getElementById('signup-form').addEventListener('submit', (e) => {
+      e.preventDefault();
 
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const username = document.getElementById('Username').value;
+      const password = document.getElementById('password').value;
+
+      auth.createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+
+          // Save user info to Realtime Database
+          return db.ref('users/' + user.uid).set({
+            name: name,
+            username: username,
+            email: email,
+            password:password
+          });
+        })
+        .then(() => {
+          alert('User registered successfully!');
+          window.location.href = '../index.html'; // Redirect to homepage or login page
+        })
+        .catch((error) => {
+          console.error('Error signing up:', error);
+          alert(error.message);
+        });
+    });
+
+    // Google Sign-In
+    document.getElementById('google-login').addEventListener('click', () => {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      auth.signInWithPopup(provider)
+        .then((result) => {
+          const user = result.user;
+
+          // Save user info to Realtime Database if new user
+          if (result.additionalUserInfo.isNewUser) {
+            return db.ref('users/' + user.uid).set({
+              name: user.displayName,
+              email: user.email,
+              username: user.email.split('@')[0]
+            });
+          }
+        })
+        .then(() => {
+          alert('Logged in with Google!');
+          window.location.href = '../index.html'; // Redirect to homepage or dashboard
+        })
+        .catch((error) => {
+          console.error('Error logging in with Google:', error);
+          alert(error.message);
+        });
+    });
+
+    // Toggle password visibility
+    const pswinput = document.getElementById('password');
+    const toggle = document.getElementById('signup-hide');
+    toggle.addEventListener("click", function () {
+      const pswfield = this.querySelector('i');
+      if (pswinput.getAttribute("type") == "password") {
+        pswinput.setAttribute('type', 'text');
+        pswfield.classList.replace("bxs-hide", "bxs-show");
+      } else {
+        pswinput.setAttribute('type', 'password');
+        pswfield.classList.replace("bxs-show", "bxs-hide");
+      }
+    });
+
+    // Close button functionality
+    const closeBtn = document.querySelector('.close-btn');
+    closeBtn.addEventListener('click', function () {
+      window.location.href = '../index.html';
+    });
+  </script>
+  </body>
 </html>
