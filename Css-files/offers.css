@@ -174,14 +174,14 @@ p {
 ==========================================
 */
 
-.navbar {
+/* .navbar {
   padding: 8px 0px;
   height: 60px;
 
   transition: background-color 0.3s, backdrop-filter 0.3s, color 0.3s;
-  /* Added transitions for smooth color change */
+
   backdrop-filter: blur(0);
-  /* Initially no blur */
+
 }
 
 .navbar a {
@@ -190,14 +190,11 @@ p {
   font-size: 1.3rem;
 }
 
-/* Navbar link hover effect */
 .navbar a:hover,
 .navbar.scrolled a:hover {
   color: #fff;
   border-bottom: 1px solid #fff;
-  /* Add bottom border on hover */
   border-top: 1px solid #fff;
-  /* Add top border on hover */
 }
 
 .navbar.fixed-top {
@@ -213,7 +210,6 @@ p {
   color: #fff;
 }
 
-/* Additional CSS to adjust the navbar on smaller screens */
 .navbar-toggler {
   border: none;
   background-color: transparent;
@@ -258,8 +254,8 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Ensure it stays on top of other content */
-  background-color: black; /* Ensure the navbar has a background color */
+  z-index: 1000; 
+  background-color: black; 
 }
 
 .logo {
@@ -293,7 +289,6 @@ nav {
 }
 
 
-/* Hamburger menu styles */
 .navbar-toggler {
   background: none;
   border: none;
@@ -310,7 +305,6 @@ nav {
   transition: transform 0.3s ease-in-out;
 }
 
-/* Transition for menu icon animation */
 .navbar-toggler.active .bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
@@ -323,30 +317,21 @@ nav {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Hide hamburger menu by default */
 .hamburger-menu {
   display: none;
 }
 
-/* Show hamburger menu when toggled */
-/* .navbar-toggler.active + .hamburger-menu {
-  display: block;
-} */
 .navbar-toggler.active+.hamburger-menu {
   display: block;
   position: absolute;
   top: 3rem;
-  /* Adjust based on your navbar height */
   right: 0;
   background-color: #000;
-  /* Adjust background color */
   width: 100%;
   padding: 1rem;
 }
 
-/* Style hamburger menu items */
 .hamburger-menu li {
-  /* margin-bottom: 5px; */
   list-style-type: none;
 }
 
@@ -356,17 +341,13 @@ nav {
   font-size: 16px;
 }
 
-/* Additional styling for active state of hamburger menu */
 .navbar-toggler.active {
   background-color: #ccc;
-  /* Change background color when active */
 }
 
-/* Media query for smaller screens */
 @media screen and (min-width: 768px) {
   .hamburger-menu {
     display: none;
-    /* Hide hamburger menu on larger screens */
   }
 
   #menu-toggle {
@@ -391,7 +372,7 @@ nav {
     height: 3rem;
   }
 
-}
+} */
 
 /*
 ==========================================
@@ -496,13 +477,11 @@ footer section Design
 ==========================================
 */
 
-.foot-panel2 {
+/* .foot-panel2 {
   background-color: rgb(138, 37, 37);
   color: white;
   height: 300px;
-  /* height: fit-content; */
   display: flex;
-  /* padding: 10px; */
   justify-content: space-evenly;
 }
 
@@ -551,7 +530,6 @@ ul a {
 form {
   padding-top: 20px;
   display: grid;
-  /* gap: 10px; */
   padding-bottom: 100px;
 }
 
@@ -565,7 +543,6 @@ textarea {
   width: max-content;
   padding: 3px;
   box-sizing: border-box;
-  /* border-radius: 4px; */
   outline: none;
   border: #212123 1px;
   font-family: "Nunito", sans-serif;
@@ -634,7 +611,7 @@ textarea {
   padding: 3px;
   border-radius: 3px;
   color: #dddddd;
-}
+} */
 
 /* Form Control */
 .newsletter .form-control {
