@@ -266,5 +266,9 @@
   document.querySelector('.contact-form').addEventListener('submit', function(event) {
       event.preventDefault(); 
       alert('Form submitted!');
+      document.getElementById('first-name').value = '';
+      document.getElementById('last-name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('message').value = '';
   });
   </script>
