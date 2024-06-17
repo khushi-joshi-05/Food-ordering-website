@@ -45,8 +45,9 @@
             <a href="index.html" class="navbar-brand opacity-75 flex-fill">
                 <img src="Images/logo/Foodielogo.png" height="40">
             </a>
-            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target=".hamburgeritems"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse"
+                data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
@@ -314,134 +315,85 @@
         </div>
     </section>
 
-    <section class="testimonial-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
+    <section class="testimonial-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170"
+        data-aos-easing="ease-in-out">
         <h2 class="tagline pt-5"> Our Happy Clients </h2>
         <p class="description">
             At Foodie, we pride ourselves on delivering delicious meals & exceptional service. Don't just take our word
             for it - hear what our satisfied customers have to say!
         </p>
-        <div class="row" style="padding: 20px;">
-            <!-- Global Review Card -->
-            <div class="col-md-4">
-                <div class="global-review-card">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Reviews And Ratings</h5>
-                            <div class="rating"  style="margin-top: 10px;">
-                                <span class="rating-value">4.2</span>
-                                <div class="" style="margin-left: 20px;">
-                                    <span class="stars">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </span>
-                                    <p class="rating-count">Based on 456 Ratings</p>
-                                </div>
-                            </div>
-
-                            <hr>
-                            <div class="text-rating">
-                                <p>Reliability</p>
-                                 <p>4.5</p></div>
-                            <div class="progress mb-2">
-                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="4.5" aria-valuemin="0" aria-valuemax="5"></div>
-                            </div>
-                            <div class="text-rating">
-                                <p>Payout Rating</p>
-                                 <p>4.8</p></div>
-                            <div class="progress mb-2">
-                                <div class="progress-bar" role="progressbar" style="width: 96%" aria-valuenow="4.8" aria-valuemin="0" aria-valuemax="5"></div>
-                            </div>
-                            <div class="text-rating">
-                                <p>Positive Solution</p>
-                                 <p>4.5</p></div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="4.5" aria-valuemin="0" aria-valuemax="5"></div>
-                            </div>
+        <div id="testimonials" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="img-box my-5">
+                        <img src="Images/testimonials/client1.jpg" alt="">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="overview">Matt Gilbert</h3>
+                        <p class="testimonial-text">Foodie never disappoints! The food is always fresh, delicious, and
+                            delivered right on time. My go-to for all my meals!</p>
+                        <div class="star-rating">
+                            <ul class="list-inline d-flex justify-content-center">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
                         </div>
-
-                        <p class="summery" style="margin-left: 20px; color: rgb(95, 95, 255);">Show summery</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="img-box my-5">
+                        <img src="Images/testimonials/client2.jpg" alt="">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="overview">John Doe</h3>
+                        <p class="testimonial-text">I love the variety on Foodie! There's something for everyone, and
+                            the delivery service is incredibly reliable</p>
+                        <div class="star-rating">
+                            <ul class="list-inline d-flex justify-content-center">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="img-box my-5">
+                        <img src="Images/testimonials/client3.jpg" alt="">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="overview">Laren Green</h3>
+                        <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my
+                            dining experience so much more convenient.</p>
+                        <div class="star-rating">
+                            <ul class="list-inline d-flex justify-content-center">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Carousel -->
-            <div class="col-md-8">
-                <div id="testimonials" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="img-box my-5">
-                                <img src="Images/testimonials/client1.jpg" alt="">
-                            </div>
-                            <div class="carousel-caption">
-                                <h3 class="overview">Matt Gilbert</h3>
-                                <p class="testimonial-text">Foodie never disappoints! The food is always fresh, delicious, and
-                                    delivered right on time. My go-to for all my meals!</p>
-                                <div class="star-rating">
-                                    <ul class="list-inline d-flex justify-content-center">
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-regular fa-star"></i></li>
-                                        <li><i class="fa-regular fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="img-box my-5">
-                                <img src="Images/testimonials/client2.jpg" alt="">
-                            </div>
-                            <div class="carousel-caption">
-                                <h3 class="overview">John Doe</h3>
-                                <p class="testimonial-text">I love the variety on Foodie! There's something for everyone, and
-                                    the delivery service is incredibly reliable</p>
-                                <div class="star-rating">
-                                    <ul class="list-inline d-flex justify-content-center">
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-regular fa-star"></i></li>
-                                        <li><i class="fa-regular fa-star"></i></li>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="img-box my-5">
-                                <img src="Images/testimonials/client3.jpg" alt="">
-                            </div>
-                            <div class="carousel-caption">
-                                <h3 class="overview">Laren Green</h3>
-                                <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my
-                                    dining experience so much more convenient.</p>
-                                <div class="star-rating">
-                                    <ul class="list-inline d-flex justify-content-center">
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-regular fa-star"></i></li>
-                                        <li><i class="fa-regular fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Carousel controls-->
-                    <button class="carousel-control-prev" data-bs-target="#testimonials" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" data-bs-target="#testimonials" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
+            <!-- Carousel controls-->
+            <button class="carousel-control-prev" data-bs-target="#testimonials" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#testimonials" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </section>
 
-    
+
 
     <section class="picture-gallery" data-aos="fade-in" data-aos-duration="2000">
         <div class="row g-0">

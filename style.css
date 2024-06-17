@@ -38,12 +38,12 @@ body{
 
 }
 
-
 .poppins-light {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
+
 /*Scrollbar Style*/
 ::-webkit-scrollbar-track
 {
@@ -66,6 +66,7 @@ body{
 											  rgba(0, 0, 0, 1) 75%,
 											  transparent)
 }
+
 /* Home carousel/slider  */
 #homeSlider .homeimg {
   max-height: 170vh;
@@ -619,103 +620,4 @@ body{
       -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
   }
-}
-
-.testimonial-section {
-  padding: 2rem;
-  background-color: #f9f9f9;
-}
-
-.testimonial-tagline {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.testimonial-description {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.global-review-card .card {
-  border: none;
-  background: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.global-review-card .card-body {
-  text-align: start;
-}
-
-.rating-value {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.stars {
-  color: #f8ce0b;
-  font-size: 1.5rem;
-}
-
-.rating{
-  display: flex;
-  justify-content: start;
-}
-
-.rating-count {
-  font-size: 0.9rem;
-  color: #888;
-}
-
-.progress {
-  height: 1rem;
-  background: #e9ecef;
-}
-
-.progress-bar {
-  background: #17a2b8;
-  line-height: 1rem;
-  font-size: 0.75rem;
-  text-align: left;
-  padding-left: 0.5rem;
-}
-
-.row {
-  display: flex;
-  align-items: center;
-}
-
-.img-box img {
-  width: 100%;
-  border-radius: 50%;
-}
-
-.overview {
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.testimonial-text {
-  font-size: 1rem;
-  margin: 0.5rem 0;
-}
-
-.star-rating .list-inline {
-  padding-left: 0;
-  margin: 0;
-}
-
-.star-rating .list-inline li {
-  color: #f8ce0b;
-  font-size: 1.5rem;
-}
-
-.text-rating{
-  display: flex;
-  justify-content: space-between;
-}
-
-.summery:hover {
-  cursor: pointer;
 }
