@@ -3,7 +3,7 @@
    ![image](https://github.com/khushi-joshi-05/Food-ordering-website/assets/76521579/57ac35c6-c9d9-458d-a0bd-0f600fbded89)
    
    ![image](https://github.com/khushi-joshi-05/Food-ordering-website/assets/76521579/94548b28-f4e8-48aa-8a59-8c523cd7c206)
-   
+
 <h1 >Food Ordering Website</h1>
 
 <br>
@@ -153,13 +153,13 @@ By following these steps, you should be able to run the Food Ordering Website lo
 
 These are some snapshots of the project.
 
-![Landing Page](Images/mainPage.png)
+![Landing Page](Images/readmeImages/mainPage.png)
 
-![Menu Page](Images/menupage.png)
+![Menu Page](Images/readmeImages/menupage.png)
 
-![Services Page](Images/servicesPage.png)
+![Services Page](Images/readmeImages/servicesPage.png)
 
-![ogin Page](Images/loginPage.png)
+![Login Page](Images/readmeImages/loginPage.png)
 
 <h2 align="center">Our Contributors ❤️</h2>
 <div align="center">

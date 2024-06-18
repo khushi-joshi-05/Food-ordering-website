@@ -27,9 +27,14 @@
   color: rgba(255, 183, 0, 0.705);
 }
 
-.navbar-nav .nav-link.active {
+.navbar-nav.center-links .active {
   color: #dc3545;
   border-bottom: 2px solid #dc3545;
+}
+
+.navbar-nav.end-links .active {
+  color: rgba(255, 183, 0, 0.705);
+  border-bottom: 2px solid rgba(255, 183, 0, 0.705);
 }
 
 #theme-toggle-icon{

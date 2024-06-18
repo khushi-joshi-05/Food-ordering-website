@@ -8,7 +8,7 @@ body {
 	overflow-x: hidden;
 }
 
-/* MENU PAGE */
+/* MENU + LOGIN PAGE */
 .head_container {
 	margin-top: 66px;
 }
@@ -36,9 +36,10 @@ body {
 	font-size: 3.8rem;
 	color: white;
 	font-weight: 700;
-	letter-spacing: 3px;
+	letter-spacing: 5px;
 }
 
+/* MENU PAGE SPECIFICS */
 .menu-container {
 	padding: 55px 10px 30px 10px;
 	background-color: rgb(224, 224, 252);
@@ -60,7 +61,7 @@ body {
 	}
 }
 
-.menu-container .nav-pills{
+.menu-container .nav-pills {
 	padding-bottom: 50px;
 }
 
@@ -201,77 +202,78 @@ body {
 	box-shadow: 0px 5px 5px rgba(177, 0, 0, 0.429);
 }
 
- .filter_container {
-    text-align: center;
-    margin: 20px 0;
-    color: aliceblue;
-    background-color: transparent;
+.filter_container {
+	text-align: center;
+	margin: 20px 0;
+	color: aliceblue;
+	background-color: transparent;
 }
 
 .filter_container h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+	font-size: 24px;
+	margin-bottom: 20px;
 }
 
 .filter_container .filters {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
 }
 
 .filter_container label {
-    font-size: 16px;
-    margin-right: 10px;
+	font-size: 16px;
+	margin-right: 10px;
 }
 
 .filter_container select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s ease;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+	outline: none;
+	transition: border-color 0.3s ease;
 }
 
 .filter_container select:hover,
 .filter_container select:focus {
-    border-color: #dc3545;
+	border-color: #dc3545;
 }
 
 .filter_container button {
-    padding: 10px 20px;
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+	padding: 10px 20px;
+	background-color: #dc3545;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 .filter_container button:hover {
-    background-color: #dc3545;
+	background-color: #dc3545;
 }
 
 @media (max-width: 768px) {
-    .filter_container .filters {
-        flex-direction: column;
-        align-items: stretch;
-    }
+	.filter_container .filters {
+		flex-direction: column;
+		align-items: stretch;
+	}
 
-    .filter_container label,
-    .filter_container select,
-    .filter_container button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
+	.filter_container label,
+	.filter_container select,
+	.filter_container button {
+		width: 100%;
+		margin-bottom: 10px;
+	}
 
-    .filter_container button {
-        margin-top: 10px;
-    }
-} 
+	.filter_container button {
+		margin-top: 10px;
+	}
+}
+
 
 
 
@@ -440,14 +442,14 @@ body {
 }
 
 .menu_container {
-  padding: 10px 70px 30px 70px;
-  background-color: rgb(224, 224, 252);
+	padding: 10px 70px 30px 70px;
+	background-color: rgb(224, 224, 252);
 }
 
 .menu_container h2 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 2rem;
-  color: rgb(138, 37, 37);
+	font-family: 'Oswald', sans-serif;
+	font-size: 2rem;
+	color: rgb(138, 37, 37);
 }
 
 .menu_items {
