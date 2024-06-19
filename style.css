@@ -8,6 +8,7 @@
 body{
   background-color: black;
   overflow-x: hidden;
+  cursor: none;
 }
 
 :root {
@@ -718,4 +719,15 @@ body{
 
 .summery:hover {
   cursor: pointer;
+}
+
+.dot {
+  width: 30px;
+  height: 30px;
+  background: rgb(194, 194, 194);
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
 }
