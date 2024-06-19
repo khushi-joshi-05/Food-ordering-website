@@ -11,7 +11,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 100px 50px;
-    padding: 100px 50px;
+    padding: 55px 50px 0 50px;
 }
 /* background cards size and rounding */
 .container .card
@@ -20,7 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 350px;
+    width: 305px;
     height: 300px;
     background: #fff;
     border-radius: 20px;
