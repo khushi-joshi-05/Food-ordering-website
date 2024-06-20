@@ -1,0 +1,121 @@
+/* FOOTER */
+footer {
+  overflow: hidden;
+}
+
+.foot-panel1 {
+  background-color: rgb(138, 37, 37);
+  color: white;
+  height: fit-content;
+}
+
+.foot-panel1 .container-fluid {
+  width: 90%;
+}
+
+.foot-panel1 .nav-link {
+  font-size: 0.85rem;
+  color: #dddddd;
+  padding: 0;
+}
+
+.foot-panel1 .nav-link:hover {
+  text-decoration: underline;
+  color: #dddddd;
+}
+
+#email,
+#message {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgba(210, 167, 167, 0.5);
+  color: white;
+  border: none;
+}
+
+#email:focus,
+#message:focus {
+  box-shadow: none;
+}
+
+#email::placeholder,
+#message::placeholder {
+  color: white;
+}
+
+.foot-panel1 .btn {
+  background-color: rgb(117, 21, 21);
+  border: none;
+}
+
+.foot-panel1 .btn:is(:hover, :focus) {
+  background-color: rgb(196, 89, 89);
+  border: none;
+}
+
+.foot-panel2 {
+  background-color: rgb(110, 28, 28);
+  color: white;
+  height: fit-content;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.foot-panel2 .social-icons a {
+  font-size: 1.2rem;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.foot-panel2 .fa-facebook:hover {
+  background-color: #3b5998;
+  color: white;
+}
+
+.foot-panel2 .fa-instagram:hover {
+  background-color: #833ab4;
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  color: white;
+}
+
+.foot-panel2 .fa-x-twitter:hover {
+  background-color: black;
+  color: white;
+}
+
+.foot-panel2 .fa-linkedin:hover {
+  background-color: #0072b1;
+  color: white;
+}
+
+.foot-panel2 .fa-github:hover {
+  background-color: #040204;
+  color: white;
+}
+
+.foot-panel2 .fa-discord:hover {
+  background-color: #5865f2;
+  color: white;
+}
+.fa-linkedin:hover {
+  background-color: blue;
+  color: white;
+}
+
+#author {
+  padding: 3px;
+  color: #dddddd;
+}
+
+.foot-panel2 .copyright {
+  background-color: rgb(98, 25, 25);
+}
+
+.foot-panel2 .text {
+  margin: 0;
+}

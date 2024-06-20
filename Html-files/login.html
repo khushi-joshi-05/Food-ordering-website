@@ -5,9 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+  <script src="scriptlogin.js" defer type="module"></script>
   <link rel="stylesheet" href="../Css-files/login1.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -20,8 +18,8 @@
 <body>
   <div class="main-login">
     <div class="left-login" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
-      <h1>Login Here<br>Delicious food is waiting for You</h1>
-      <img src="../Images/food.jpg" class="left-login-image" alt="food">
+      <h1><span class="order-now">Order Now</span><br>Delicious food is waiting for You</h1>
+      <img src="../Images/Login_burger.png" class="left-login-image" alt="food">
     </div>
     <div class="right-login">
       <div class="card-login" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
@@ -29,11 +27,11 @@
         <h1>LOGIN</h1>
         <br>
         <div class="textfield">
-          <label for="email">Email</label>
+          <label for="usuario">Email</label>
           <input type="email" name="email" id="email" placeholder="Enter Email">
         </div>
         <div class="textfield">
-          <label for="username">Username</label>
+          <label for="usuario">Username</label>
           <input type="text" name="Username" id="username" placeholder="Username">
         </div>
         <div class="textfield">
@@ -50,7 +48,7 @@
         <h3>
           <center>OR</center>
         </h3>
-        <button id="google-login">Login with Google</button>
+        <button id="google-login">Login with google</button>
       </div>
     </div>
   </div>
@@ -62,67 +60,42 @@
       easing: 'ease',
       once: false,
     });
+  </script>
+</body>
 
-    // Firebase configuration
-    const firebaseConfig = {
-        //Add your Config File
-    };
+<script>
+  const passwordinput = document.getElementById("password");
+  const hidelogo = document.getElementById("login-hide");
+  hidelogo.addEventListener("click", function () {
+    const passwordfield = this.querySelector("i");
+    if (passwordinput.getAttribute("type") == "text") {
+      passwordinput.setAttribute("type", "password");
+      passwordfield.classList.replace("bxs-show", "bxs-hide");
+    } else {
+      passwordinput.setAttribute("type", "text");
+      passwordfield.classList.replace("bxs-hide", "bxs-show");
+    }
+  });
 
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const database = firebase.database();
-    const auth = firebase.auth();
+  const closeBtn = document.querySelector('.close-btn');
+  closeBtn.addEventListener('click', function () {
+    window.location.href = '../index.html';
+  });
 
-    // Password visibility toggle
-    const passwordInput = document.getElementById("password");
-    const hideLogo = document.getElementById("login-hide");
-    hideLogo.addEventListener("click", function () {
-      const passwordField = this.querySelector("i");
-      if (passwordInput.getAttribute("type") == "text") {
-        passwordInput.setAttribute("type", "password");
-        passwordField.classList.replace("bxs-show", "bxs-hide");
-      } else {
-        passwordInput.setAttribute("type", "text");
-        passwordField.classList.replace("bxs-hide", "bxs-show");
-      }
-    });
+  function validateLogin() {
+    const email = document.getElementById("email").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
-    // Close button redirect
-    const closeBtn = document.querySelector('.close-btn');
-    closeBtn.addEventListener('click', function () {
-      window.location.href = '../index.html';
-    });
-
-    // Login validation
-    function validateLogin() {
-      const email = document.getElementById("email").value;
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-
-      if (email === "") {
-        alert("Please Enter Email");
-      } else if (username === "") {
-        alert("Please Enter Username");
-      } else if (password === "") {
-        alert("Please Enter Password");
-      } else {
-        auth.signInWithEmailAndPassword(email, password)
-          .then((userCredential) => {
-            const user = userCredential.user;
-            database.ref('users/' + user.uid).set({
-              username: username,
-              email: email
-            }).then(() => {
-              alert("Login successful");
-              window.location.href = '../index.html';
-            }).catch((error) => {
-              alert("Data could not be saved: " + error.message);
-            });
-          })
-          .catch((error) => {
-            alert("Login failed: " + error.message);
-          });
-      }
+    if (email === "") {
+      alert("Please Enter Email");
+    } else if (username === "") {
+      alert("Please Enter Username");
+    } else if (password === "") {
+      alert("Please Enter Password");
+    } else {
+      // add login logic
+      alert("Form submitted successfully!");
     }
   }
   document.querySelector('.forgot-password a').addEventListener('click', function(event) {
@@ -161,3 +134,4 @@
   </script>
 </body>
 </html>
+</script>

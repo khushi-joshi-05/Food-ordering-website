@@ -113,13 +113,16 @@ function createCartItemElement(item) {
 
 function handleEmptyCart(total) {
     const emptyCartContainer = document.querySelector('.empty-cart');
-    if (total != 0.0) {
+    if (total!=0) {
         emptyCartContainer.innerHTML = ``;
+        return(false);// Cart is not empty
     } else {
         emptyCartContainer.innerHTML = `
             <h4>Empty Menu!</h4>
             <p>Looks like you haven't made your choice yet... Check what we have got for you and get it swished.</p>
             <a href="./menu.html"><button class="butt">Explore Menu</button></a>`;
+        alert("To place Order,Kindly add items to the cart");
+        return(true); // Cart is empty
     }
 }
 
@@ -144,7 +147,7 @@ const applyFirstTimeDiscount = () => {
     document.querySelector(".coupen-inner").innerHTML = `Congratulations! Your coupon code is ${couponCode}. You've received a 30% discount on your first order.`;
 }
 
-window.onload = applyFirstTimeDiscount;
+// window.onload = applyFirstTimeDiscount;
 
 // Input for apply coupon code
 document.getElementById('applyCouponButton').addEventListener('click', function () {
@@ -154,3 +157,31 @@ document.getElementById('applyCouponButton').addEventListener('click', function 
         return;
     }
 });
+
+const modal = document.getElementById("myModal");
+const closeButton = document.querySelector(".close");
+const orderNowButton = document.getElementById("orderNowButton");
+
+orderNowButton.addEventListener("click", () => {
+    const total = updateTotal(); // Calculate the total
+    const isEmptyCart =  handleEmptyCart(total);
+
+    if (isEmptyCart) {
+       
+        return; // Exit early if the cart is empty
+    }
+
+    // Only show modal if cart is not empty
+    else {modal.style.display = "block";}
+});
+
+closeButton.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+window.onclick = (event) => {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
