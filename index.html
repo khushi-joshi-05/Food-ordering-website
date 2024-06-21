@@ -31,14 +31,91 @@
     <link rel="stylesheet" href="Css-files/navbar.css">
     <link rel="stylesheet" href="Css-files/footer.css">
     <link rel="stylesheet" href="./style.css">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        #icon{
+            width: 30px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+    <link rel="stylesheet" href="./login1.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body{
+            overflow-x: hidden;
+        }
+    </style>
+
+    <script src="hamburger.js" defer></script>
+
+
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="preloader.css" />
 </head>
 
+
 <body>
-    <div id="loader-wrapper">
+    <!--<div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
+
+    </div>-->
+
+   <!-- <div id="icons-container">
+        <svg class="food-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" stroke="red" stroke-width="5" fill="none" />
+            <rect x="45" y="10" width="10" height="20" fill="brown" />
+        </svg>
+        <svg class="food-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10,50 Q25,25 50,50 Q75,75 90,50" fill="yellow" stroke="black" stroke-width="5" />
+        </svg>
+        <svg class="food-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="70" r="15" stroke="red" stroke-width="5" fill="none" />
+            <circle cx="70" cy="70" r="15" stroke="red" stroke-width="5" fill="none" />
+            <line x1="30" y1="70" x2="50" y2="40" stroke="brown" stroke-width="5" />
+            <line x1="70" y1="70" x2="50" y2="40" stroke="brown" stroke-width="5" />
+        </svg>
+
+    <svg id="food-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- <circle cx="50" cy="50" r="40" fill="orange" /> -->
+        <!-- Add more SVG elements here to create a food icon -->
+    <!--</svg>-->
+    <!--Preloader Start-->
+    
+    <div id="preloader">
+        <h1>Loading...</h1>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div id="area">
+            <div id="sides">
+                <div id="pan"></div>
+                <div id="handle"></div>
+            </div>
+            <div id="pancake">
+                <div id="pastry"></div>
+            </div>
+        </div>
+    </div>
+    
+
+   <nav>
+        <div class="navigbar">
+            <div class="logo">
+                <a href="index.html"><img src="Images/Foodielogo.png" height="40" class="transparent-image"></a>
+            </div>
+            <button class="navbar-toggler" id="menu-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+
     </div>
     <nav class="navbar navbar-expand-lg bg-black fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
@@ -48,6 +125,7 @@
             <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target=".hamburgeritems"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
+
             </button>
             <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
                 <ul class="navbar-nav center-links">
@@ -626,9 +704,14 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="Html-files/top.js"></script>
+
+    <script src="preloader.js"></script>
+
+
     <script src="script.js"></script>
     <script src="Html-files/themechange.js"></script>
     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+
     <script>
         AOS.init(
             {
