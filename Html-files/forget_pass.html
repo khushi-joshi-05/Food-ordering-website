@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Css-files/login1.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <title>Forgot Password</title>
+</head>
+
+<body>
+  <div class="main-login">
+    <div class="left-login" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
+      <h1>Reset Your Password<br>Enter your email to reset your password</h1>
+      <img src="../Images/food.jpg" class="left-login-image" alt="food">
+    </div>
+    <div class="right-login">
+      <div class="card-login" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
+        <button class="close-btn">&times;</button>
+        <h1>Forgot Password</h1>
+        <br>
+        <div class="textfield">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter your email">
+        </div>
+        <button class="btn-login" onclick="resetPassword()">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease',
+      once: false,
+    });
+  </script>
+
+  <script>
+    function resetPassword() {
+      const email = document.getElementById("email").value;
+
+      if (email === "") {
+        alert("Please enter your email");
+      } else {
+        // Add password reset logic here
+        alert("Password reset instructions have been sent to your email!");
+      }
+    }
+
+    const closeBtn = document.querySelector('.close-btn');
+    closeBtn.addEventListener('click', function () {
+      window.location.href = 'login.html'; // Change this to the actual login page URL
+    });
+  </script>
+</body>
+
+</html>

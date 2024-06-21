@@ -41,6 +41,9 @@
             <i class='icon bx bxs-hide' style="font-size: 27px;"></i>
           </span>
         </div>
+        <div class="forgot-password">
+          <a href="/Html-files/forget_pass.html">Forgot Password?</a>
+        </div>
         <button class="btn-login" onclick="validateLogin()">Login</button>
         <h3>
           <center>OR</center>
@@ -95,6 +98,40 @@
       alert("Form submitted successfully!");
     }
   }
-</script>
+  document.querySelector('.forgot-password a').addEventListener('click', function(event) {
+  event.preventDefault();
+  // Implement the functionality here, e.g., open a modal or redirect to a password recovery page
+  alert("Redirecting to password recovery page...");
+  window.location.href = 'forget_pass.html'; // Change this to the actual URL
+});
 
+</script>
+     // Google Sign-In
+     document.getElementById('google-login').addEventListener('click', () => {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      auth.signInWithPopup(provider)
+        .then((result) => {
+          const user = result.user;
+
+          // Save user info to Realtime Database if new user
+          if (result.additionalUserInfo.isNewUser) {
+            return database.ref('users/' + user.uid).set({
+              name: user.displayName,
+              email: user.email,
+              username: user.email.split('@')[0]
+            });
+          }
+        })
+        .then(() => {
+          alert('Logged in with Google!');
+          window.location.href = '../index.html'; // Redirect to homepage or dashboard
+        })
+        .catch((error) => {
+          console.error('Error logging in with Google:', error);
+          alert(error.message);
+        });
+    });
+  </script>
+</body>
 </html>
+</script>
