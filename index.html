@@ -522,9 +522,22 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/Html-files/cart.html">Cart</a>
                             </li>
+                            <li class ="nav-item">
+                                <div class="wrapper col-12">
+                                    <div id="google_element"></div>
+                                    <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                                    <script>
+                                        function loadGoogleTranslate() {
+                                            new google.translate.TranslateElement({
+                                                pageLanguage: 'en'
+                                            }, 'google_element');
+                                        }
+                                    </script>
+                                </div>
+                            </li>
                         </ul>
                     </div>
-
+        
                     <div class="col-6 col-sm-5 col-md-3 col-xl-3">
                         <h5 class="mb-3">Exclusive Offers</h5>
                         <ul class="nav flex-column">
@@ -551,7 +564,7 @@
                             </li>
                         </ul>
                     </div>
-
+        
                     <div class="col-6 col-sm-4 col-md-4 col-xl-3">
                         <h5 class="mb-3">Payment Products</h5>
                         <ul class="nav flex-column">
@@ -575,7 +588,8 @@
                             </li>
                         </ul>
                     </div>
-
+                    
+        
                     <div class="col-6 col-md-3 col-xl-4">
                         <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
                             <h3 class="text-center mb-3">Contact Us!</h3>
@@ -588,9 +602,13 @@
                             </div>
                         </form>
                     </div>
+                    
+        
+                   
                 </div>
             </div>
         </div>
+        
         <div class="foot-panel2">
             <div class="media-handles pt-3 pb-2">
                 <h4>Follow Us</h4>
