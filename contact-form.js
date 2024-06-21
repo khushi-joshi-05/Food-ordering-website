@@ -1,17 +1,19 @@
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+const submitBtn = document.getElementById('contactForm');
 
-    // Simulate form submission success with Toastify
-    Toastify({
+submitBtn.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const toast = Toastify({
         text: "Your message has been sent successfully!",
         duration: 3000,
         style: {
-            background: "linear-gradient(to right, #00b09b, #96c93d)" // Example gradient background color
+            background: "linear-gradient(to top, #e37f0f, #df8d0a, #db9b0c, #d5a816, #cfb423)",
+            borderRadius: "25px"
         },
-        className: "toastify-success",
         gravity:"bottom" // Example custom class for styling
-    }).showToast();
-
-    // Reset the form
-    
+    })
+    toast.showToast();
+    document.getElementById('first-name').value = '';
+    document.getElementById('last-name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
 });
