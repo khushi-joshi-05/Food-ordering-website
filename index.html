@@ -35,6 +35,20 @@
 </head>
 
 <body>
+    <nav>
+        <div class="navigbar">
+             <!-- Adding logo image in the navbar -->
+            <img class="logo-navbar" src="Foodie_Favicon.png" alt="logo">
+            <div class="logo">Foodie</div>
+
+            <div class="logo">
+                <a href="index.html"><img src="Images/Foodielogo.png" height="40" class="transparent-image"></a>
+            </div>
+
+            <button class="navbar-toggler" id="menu-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
     <div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
@@ -48,6 +62,7 @@
             <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target=".hamburgeritems"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
+
             </button>
             <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
                 <ul class="navbar-nav center-links">
@@ -638,11 +653,45 @@
     <script src="Html-files/themechange.js"></script>
     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
     <script>
+        window.addEventListener('beforeunload', function (event) {
+            localStorage.clear();
+        });
+
+        const btn = document.querySelector('.btn');
+        btn.onclick = () => {
+            location.href = "./Html-files/menu.html";
+        }
+        
+
+        function redirectLogin() {
+            window.location.href = "Html-files/login.html";
+        }
+
+        function redirectSignup() {
+            window.location.href = "Html-files/signup.html";
+        }
+
+        window.addEventListener('scroll', function () {
+            var navbar = document.querySelector('.navbar');
+            if (window.scrollY > 60) { // Adjust as needed based on when you want the effect to start
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        window.addEventListener('scroll', function () {
+            var navbar = document.querySelector('.navbar');
+            if (window.scrollY > 60) { // Adjust as needed based on when you want the effect to start
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
         AOS.init(
             {
                 duration: 1000,
                 easing: 'ease',
                 once: false,
+
             }
         );
 
