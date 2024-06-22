@@ -94,6 +94,7 @@ body * {
   border-radius: 20px;
   box-shadow: 0px 10px 50px #0f0f0fa4;
   background-color: white;
+  height: 93vh;
 }
 
 .card-login>h1 {
