@@ -59,7 +59,15 @@
                         <a class="nav-link" href="Html-files/menu.html">Menu</a>
                     </li>
                     <li class="nav-item">
+                        <!--Drop-down-->
                         <a class="nav-link" href="Html-files/services.html">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Ordering options</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">FAQS</a></li>
+
+                    </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/contact.html">Contact Us</a>
@@ -318,6 +326,20 @@
     <section class="testimonial-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
         <h2 class="tagline pt-5"> Our Happy Clients </h2>
         <p class="description">
+
+            At Foodie, we pride ourselves on delivering delicious meals & exceptional service. Don’t just take our word
+            for it—hear what our satisfied customers have to say!</p>
+
+        <!-- Clients Review Section -->
+        <div class="reviewSection p-1 me-3">
+
+            <!-- Clients Review-1 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="./Images/client1.jpg" alt="">
+                        <span>Matt Gilbert</span>
+
             At Foodie, we pride ourselves on delivering delicious meals & exceptional service. Don't just take our word
             for it - hear what our satisfied customers have to say!
         </p>
@@ -364,6 +386,7 @@
                         </div>
 
                         <p class="summery" style="margin-left: 20px; color: rgb(95, 95, 255);">Show summery</p>
+
                     </div>
                 </div>
             </div>
@@ -646,6 +669,121 @@
         });
     </script>
 
+</body>
+
+
+<script>
+
+    function redirectLogin() {
+        window.location.href = "Html-files/login.html";
+    }
+    function redirectSignup() {
+        window.location.href = "Html-files/signup.html";
+    }
+
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+            icon.src = "images/sun.png";
+        }else{
+            icon.src = "images/moon.png";
+        }
+    }
+
+</script>
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+      document.querySelector("body").classList.add("loaded");
+  }, 500)
+});
+
+</script
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Dark Mode</title>
+    <style>
+        body {
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .toggle-container {
+            position: relative;
+            width: 60px;
+            height: 30px;
+        }
+
+        .toggle-container input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+            background-image: url('lightdarkmode.png');
+            background-size: cover;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .slider:after {
+            content: url('lightdarkmode.png');
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        input:checked + .slider:after {
+            content: url('lightdarkmode.png');
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle-container">
+        <input type="checkbox" id="darkModeToggle">
+        <label class="slider" for="darkModeToggle"></label>
+    </div>
+ 
 </body>
 
 </html>

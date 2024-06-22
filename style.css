@@ -721,6 +721,7 @@ body{
   cursor: pointer;
 }
 
+/*custom cursor*/
 .dot {
   width: 30px;
   height: 30px;
@@ -731,3 +732,45 @@ body{
   transform: translate(-50%, -50%);
   z-index: 9999;
 }
+
+/*Drop down*/
+ul li ul.dropdown {
+  width: auto;
+  background: #000; /* Black background */
+  position: absolute;
+  z-index: 999;
+  display: none;
+  padding: 10px 0;
+  border-radius: 4px; /* Rounded corners */
+}
+
+/* Show dropdown menu on hover */
+.nav-link:focus {
+    outline: none;
+}
+ul li:hover ul.dropdown {
+  display: block;
+}
+
+/* Dropdown menu item styling */
+ul li ul.dropdown li {
+  display: block;
+  background: #000; /* Black background */
+  margin: 2px 0;
+}
+
+ul li ul.dropdown li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff; /* White font color */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+ul li ul.dropdown li a:hover {
+  background: #ff0000; /* Red background on hover */
+  color: #fff; /* Ensure font color remains white */
+}
+
+/* Optional: styling for active links */
+
