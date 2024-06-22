@@ -32,9 +32,68 @@
     <link rel="stylesheet" href="Css-files/footer.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: brown;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .faq-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .faq-item h2 {
+            cursor: pointer;
+            margin: 0;
+            padding: 10px;
+            background-color: brown;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .faq-item h2:hover {
+            background-color: brown;
+        }
+
+        .faq-item p {
+            display: none;
+            margin: 10px 0 0;
+        }
+
+        .faq-item.active p {
+            display: block;
+        }
+
+        .faq-item h2::after {
+            content: '\25BC'; /* Unicode for downward arrow */
+            font-size: 1rem;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active h2::after {
+            transform: rotate(-180deg); /* Rotate the arrow when active */
+        }
+    </style>
 </head>
 
 <body>
+    <div class="dot"></div>
     <div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
@@ -58,7 +117,15 @@
                         <a class="nav-link" href="Html-files/menu.html">Menu</a>
                     </li>
                     <li class="nav-item">
+                        <!--Drop-down-->
                         <a class="nav-link" href="Html-files/services.html">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Ordering options</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">FAQS</a></li>
+
+                    </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/contact.html">Contact Us</a>
@@ -317,6 +384,20 @@
     <section class="testimonial-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
         <h2 class="tagline pt-5"> Our Happy Clients </h2>
         <p class="description">
+
+            At Foodie, we pride ourselves on delivering delicious meals & exceptional service. Don’t just take our word
+            for it—hear what our satisfied customers have to say!</p>
+
+        <!-- Clients Review Section -->
+        <div class="reviewSection p-1 me-3">
+
+            <!-- Clients Review-1 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="./Images/client1.jpg" alt="">
+                        <span>Matt Gilbert</span>
+
             At Foodie, we pride ourselves on delivering delicious meals & exceptional service. Don't just take our word
             for it - hear what our satisfied customers have to say!
         </p>
@@ -363,6 +444,7 @@
                         </div>
 
                         <p class="summery" style="margin-left: 20px; color: rgb(95, 95, 255);">Show summery</p>
+
                     </div>
                 </div>
             </div>
@@ -473,6 +555,53 @@
             </div>
         </div>
     </section>
+    <section class="faq-container">
+        <h1>Frequently Asked Questions (FAQ)</h1>
+
+        <div class="faq-item">
+            <h2>How do I place an order?</h2>
+            <p>To place an order, browse our menu, select the items you want, and add them to your cart. Once you’re ready, click on the cart icon and proceed to checkout. Follow the instructions to complete your order.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>What payment methods do you accept?</h2>
+            <p>We accept various payment methods including credit/debit cards, net banking, and popular digital wallets. You can select your preferred payment method at the checkout page.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>Can I schedule an order for later?</h2>
+            <p>Yes, you can schedule an order for a later time. During checkout, select the delivery time that suits you best.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>How can I track my order?</h2>
+            <p>Once your order is confirmed, you will receive a tracking link via email or SMS. You can use this link to track the status of your delivery in real-time.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>What should I do if I have a problem with my order?</h2>
+            <p>If you encounter any issues with your order, please contact our customer support immediately. You can reach us via the contact form on our website, email, or phone. We’re here to help you!</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>Is there a minimum order value?</h2>
+            <p>Yes, there is a minimum order value depending on your location. The minimum order amount will be displayed during the checkout process.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>Do you offer any discounts or promotions?</h2>
+            <p>We regularly offer discounts and promotions. Check our website or subscribe to our newsletter to stay updated on the latest deals and offers.</p>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.faq-item h2').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentNode;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
 
     <div class="app_download pb-4">
         <h4>Free Delivery!</h4>
@@ -507,9 +636,22 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/Html-files/cart.html">Cart</a>
                             </li>
+                            <li class ="nav-item">
+                                <div class="wrapper col-12">
+                                    <div id="google_element"></div>
+                                    <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+                                    <script>
+                                        function loadGoogleTranslate() {
+                                            new google.translate.TranslateElement({
+                                                pageLanguage: 'en'
+                                            }, 'google_element');
+                                        }
+                                    </script>
+                                </div>
+                            </li>
                         </ul>
                     </div>
-
+        
                     <div class="col-6 col-sm-5 col-md-3 col-xl-3">
                         <h5 class="mb-3">Exclusive Offers</h5>
                         <ul class="nav flex-column">
@@ -536,7 +678,7 @@
                             </li>
                         </ul>
                     </div>
-
+        
                     <div class="col-6 col-sm-4 col-md-4 col-xl-3">
                         <h5 class="mb-3">Payment Products</h5>
                         <ul class="nav flex-column">
@@ -560,7 +702,8 @@
                             </li>
                         </ul>
                     </div>
-
+                    
+        
                     <div class="col-6 col-md-3 col-xl-4">
                         <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
                             <h3 class="text-center mb-3">Contact Us!</h3>
@@ -573,9 +716,13 @@
                             </div>
                         </form>
                     </div>
+                    
+        
+                   
                 </div>
             </div>
         </div>
+        
         <div class="foot-panel2">
             <div class="media-handles pt-3 pb-2">
                 <h4>Follow Us</h4>
@@ -645,6 +792,121 @@
         });
     </script>
 
+</body>
+
+
+<script>
+
+    function redirectLogin() {
+        window.location.href = "Html-files/login.html";
+    }
+    function redirectSignup() {
+        window.location.href = "Html-files/signup.html";
+    }
+
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+            icon.src = "images/sun.png";
+        }else{
+            icon.src = "images/moon.png";
+        }
+    }
+
+</script>
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+      document.querySelector("body").classList.add("loaded");
+  }, 500)
+});
+
+</script
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Dark Mode</title>
+    <style>
+        body {
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .toggle-container {
+            position: relative;
+            width: 60px;
+            height: 30px;
+        }
+
+        .toggle-container input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+            background-image: url('lightdarkmode.png');
+            background-size: cover;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .slider:after {
+            content: url('lightdarkmode.png');
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        input:checked + .slider:after {
+            content: url('lightdarkmode.png');
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle-container">
+        <input type="checkbox" id="darkModeToggle">
+        <label class="slider" for="darkModeToggle"></label>
+    </div>
+ 
 </body>
 
 </html>
