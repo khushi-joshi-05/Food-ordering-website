@@ -8,6 +8,7 @@
 body{
   background-color: black;
   overflow-x: hidden;
+  cursor: none;
 }
 
 :root {
@@ -720,6 +721,18 @@ body{
   cursor: pointer;
 }
 
+/*custom cursor*/
+.dot {
+  width: 30px;
+  height: 30px;
+  background: rgb(194, 194, 194);
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
 /*Drop down*/
 ul li ul.dropdown {
   width: auto;
@@ -760,3 +773,4 @@ ul li ul.dropdown li a:hover {
 }
 
 /* Optional: styling for active links */
+
