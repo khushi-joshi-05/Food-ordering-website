@@ -10,7 +10,7 @@
   width: 100%;
 }
 
-.right-login .title {
+.right-login .title, .modal .title {
   color: rgb(208, 50, 50);
   font-weight: 700;
 }
@@ -49,10 +49,18 @@
   color: #000000;
 }
 
+.right-login .row{
+  font-size: 0.9rem;
+}
+
+.right-login .row a{
+  text-align: right;
+}
+
 .btn-login {
   width: 85%;
   padding: 16px 0;
-  margin: 25px;
+  margin: 20px;
   border: none;
   border-radius: 8px;
   outline: none;
@@ -98,3 +106,22 @@
     padding-top: 0;
   }
 }
+
+#rememberCheckbox{
+  border-color: rgb(208, 50, 50);
+  border-radius: 4px;
+}
+
+#rememberCheckbox:checked{
+  background-color: rgb(208, 50, 50);
+}
+
+#rememberCheckbox:focus{
+  box-shadow: none;
+}
+
+#login-form a{
+    color: rgb(208, 50, 50);
+    text-decoration: none;
+}
+

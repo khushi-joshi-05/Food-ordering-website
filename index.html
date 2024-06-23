@@ -13,7 +13,7 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- Adding favicon image -->
-    <link rel="shortcut icon" href="Images/Foodie_Favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Images/favicon/Foodie_Favicon.png" type="image/x-icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
@@ -58,16 +58,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/menu.html">Menu</a>
                     </li>
-                    <li class="nav-item">
-                        <!--Drop-down-->
-                        <a class="nav-link" href="Html-files/services.html">Services</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Ordering options</a></li>
-                        <li><a href="#">Order Tracking</a></li>
-                        <li><a href="#">Customer Support</a></li>
-                        <li><a href="#">FAQS</a></li>
-
-                    </ul>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link services" href="/Html-files/services.html" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Ordering options</a></li>
+                            <li><a class="dropdown-item" href="#">Order Tracking</a></li>
+                            <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                            <li><a class="dropdown-item" href="#">FAQS</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/contact.html">Contact Us</a>
@@ -572,7 +570,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="Html-files/top.js"></script>
     <script src="script.js"></script>
-    <script src="Html-files/themechange.js"></script>
+    <script src="Html-files/navbar.js"></script>
     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
     <script>
         AOS.init(
@@ -606,4 +604,5 @@
     </script>
 
 </body>
+
 </html>

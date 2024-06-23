@@ -47,8 +47,14 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="../Html-files/menu.html">Menu</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../Html-files/services.html">Services</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link services" href="../Html-files/services.html" aria-expanded="false">Services</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Ordering options</a></li>
+                                    <li><a class="dropdown-item" href="#">Order Tracking</a></li>
+                                    <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                                    <li><a class="dropdown-item" href="#">FAQS</a></li>
+                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="../Html-files/contact.html">Contact Us</a>
@@ -266,7 +272,7 @@
         <!--Scroll top button finish-->
 
         <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
-        <script src="themechange.js"></script>
+        <script src="navbar.js"></script>
         <script src="cart.js"></script>
         <script src="top.js"></script>
 </body>

@@ -44,9 +44,15 @@
 					<li class="nav-item">
 						<a class="nav-link" href="../Html-files/menu.html">Menu</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="../Html-files/services.html">Services</a>
-					</li>
+					<li class="nav-item dropdown">
+                        <a class="nav-link services" href="../Html-files/services.html" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Ordering options</a></li>
+                            <li><a class="dropdown-item" href="#">Order Tracking</a></li>
+                            <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                            <li><a class="dropdown-item" href="#">FAQS</a></li>
+                        </ul>
+                    </li>
 					<li class="nav-item">
 						<a class="nav-link" href="../Html-files/contact.html">Contact Us</a>
 					</li>
@@ -85,36 +91,39 @@
 
 	<section class="main-content-login">
 		<div class="container-fluid row m-0 justify-content-center">
-			<div class="col-lg-5 left-login d-flex justify-content-center align-items-center" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
+			<div class="col-lg-5 left-login d-flex justify-content-center align-items-center" data-aos="zoom-out-left"
+				data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
 				<img src="../Images/login+signup/signup.png" alt="Signup Image">
 			</div>
 			<div class="col-lg-6 right-login" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-offset="170"
-			data-aos-easing="ease-in-out">
+				data-aos-easing="ease-in-out">
 				<div class="card text-center mx-auto">
 					<form id="signup-form">
 						<div class="card-body">
 							<h1 class="title">SIGN UP</h1>
 							<div class="textfield">
-								<label for="name">Name</label>
-								<input type="text" id="name" name="name" placeholder="Enter your name" required>
+								<label for="signup-name">Name</label>
+								<input type="text" id="signup-name" name="name" placeholder="Enter your name" required>
 							</div>
 							<div class="textfield">
-								<label for="email">Email</label>
-								<input type="email" id="email" name="email" placeholder="Enter Email" required>
+								<label for="signup-email">Email</label>
+								<input type="email" id="signup-email" name="email" placeholder="Enter Email" required>
 							</div>
 							<div class="textfield">
-								<label for="Username">Username</label>
-								<input type="text" id="Username" name="Username" placeholder="Enter Username" required>
+								<label for="signup-username">Username</label>
+								<input type="text" id="signup-username" name="Username" placeholder="Enter Username"
+									required>
 							</div>
 							<div class="textfield">
-								<label for="password">Password</label>
-								<input type="password" id="password" name="password" placeholder="Enter Password" required>
+								<label for="signup-password">Password</label>
+								<input type="password" id="signup-password" name="password" placeholder="Enter Password"
+									required>
 								<span id="signup-hide">
 									<i class='hide-icon bx bxs-hide'></i>
 								</span>
 							</div>
 							<button type="submit" class="btn-login">Register</button>
-							<h1 class="text-center">Already have an account 
+							<h1 class="text-center">Already have an account
 								<a href="login.html">login</a>
 							</h1>
 					</form>
@@ -241,7 +250,7 @@
 
 	<script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script src="themechange.js"></script>
+	<script src="navbar.js"></script>
 	<script>
 		AOS.init({
 			duration: 1000,
@@ -252,14 +261,14 @@
 	<script>
 		// Your web app's Firebase configuration
 
-		const firebaseConfig = {
-			//Add your Config File
-		};
+		// const firebaseConfig = {
+		// 	//Add your Config File
+		// };
 
-		// Initialize Firebase
-		firebase.initializeApp(firebaseConfig);
-		const auth = firebase.auth();
-		const db = firebase.database();
+		// // Initialize Firebase
+		// firebase.initializeApp(firebaseConfig);
+		// const auth = firebase.auth();
+		// const db = firebase.database();
 
 	</script>
 	<script>
@@ -278,35 +287,35 @@
 		});
 
 		// Sign up with email and password
-		document.getElementById('signup-form').addEventListener('submit', (e) => {
-			e.preventDefault();
+		// document.getElementById('signup-form').addEventListener('submit', (e) => {
+		// 	e.preventDefault();
 
-			const name = document.getElementById('name').value;
-			const email = document.getElementById('email').value;
-			const username = document.getElementById('Username').value;
-			const password = document.getElementById('password').value;
+		// 	const name = document.getElementById('signup-name').value;
+		// 	const email = document.getElementById('signup-email').value;
+		// 	const username = document.getElementById('signup-username').value;
+		// 	const password = document.getElementById('signup-password').value;
 
-			auth.createUserWithEmailAndPassword(email, password)
-				.then((userCredential) => {
-					const user = userCredential.user;
+		// 	auth.createUserWithEmailAndPassword(email, password)
+		// 		.then((userCredential) => {
+		// 			const user = userCredential.user;
 
-					// Save user info to Realtime Database
-					return db.ref('users/' + user.uid).set({
-						name: name,
-						username: username,
-						email: email,
-						password: password
-					});
-				})
-				.then(() => {
-					alert('User registered successfully!');
-					window.location.href = '../index.html'; // Redirect to homepage or login page
-				})
-				.catch((error) => {
-					console.error('Error signing up:', error);
-					alert(error.message);
-				});
-		});
+		// 			// Save user info to Realtime Database
+		// 			return db.ref('users/' + user.uid).set({
+		// 				name: name,
+		// 				username: username,
+		// 				email: email,
+		// 				password: password
+		// 			});
+		// 		})
+		// 		.then(() => {
+		// 			alert('User registered successfully!');
+		// 			window.location.href = '../index.html'; // Redirect to homepage or login page
+		// 		})
+		// 		.catch((error) => {
+		// 			console.error('Error signing up:', error);
+		// 			alert(error.message);
+		// 		});
+		// });
 	</script>
 </body>
 

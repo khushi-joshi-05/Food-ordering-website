@@ -41,3 +41,20 @@
   width: 30px;
   cursor: pointer;
 }
+
+.center-links .nav-item .dropdown-menu{
+  background-color: black;
+  border-radius: 0;
+  border: none;
+  padding-top: 0;
+}
+
+.dropdown-item{
+  padding: 4px 8px;
+  color: white;
+  font-size: 15px;
+}
+
+.dropdown-item:active{
+  background-color: #dc3545;
+}
