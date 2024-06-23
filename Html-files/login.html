@@ -258,11 +258,10 @@
 			}
 		});
 
-		// Login validation
-		function validateLogin() {
-			const email = document.getElementById("email").value;
-			const username = document.getElementById("username").value;
-			const password = document.getElementById("password").value;
+  function validateLogin() {
+    const email = document.getElementById("email").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
 			if (email === "") {
 				alert("Please Enter Email");
@@ -307,25 +306,25 @@
 				.then((result) => {
 					const user = result.user;
 
-					// Save user info to Realtime Database if new user
-					if (result.additionalUserInfo.isNewUser) {
-						return database.ref('users/' + user.uid).set({
-							name: user.displayName,
-							email: user.email,
-							username: user.email.split('@')[0]
-						});
-					}
-				})
-				.then(() => {
-					alert('Logged in with Google!');
-					window.location.href = '../index.html'; // Redirect to homepage or dashboard
-				})
-				.catch((error) => {
-					console.error('Error logging in with Google:', error);
-					alert(error.message);
-				});
-		});
-	</script>
+          // Save user info to Realtime Database if new user
+          if (result.additionalUserInfo.isNewUser) {
+            return database.ref('users/' + user.uid).set({
+              name: user.displayName,
+              email: user.email,
+              username: user.email.split('@')[0]
+            });
+          }
+        })
+        .then(() => {
+          alert('Logged in with Google!');
+          window.location.href = '../index.html'; // Redirect to homepage or dashboard
+        })
+        .catch((error) => {
+          console.error('Error logging in with Google:', error);
+          alert(error.message);
+        });
+    });
+  </script>
 </body>
-
 </html>
+</script>
