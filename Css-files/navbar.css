@@ -27,12 +27,34 @@
   color: rgba(255, 183, 0, 0.705);
 }
 
-.navbar-nav .nav-link.active {
+.navbar-nav.center-links .active {
   color: #dc3545;
   border-bottom: 2px solid #dc3545;
+}
+
+.navbar-nav.end-links .active {
+  color: rgba(255, 183, 0, 0.705);
+  border-bottom: 2px solid rgba(255, 183, 0, 0.705);
 }
 
 #theme-toggle-icon{
   width: 30px;
   cursor: pointer;
+}
+
+.center-links .nav-item .dropdown-menu{
+  background-color: black;
+  border-radius: 0;
+  border: none;
+  padding-top: 0;
+}
+
+.dropdown-item{
+  padding: 4px 8px;
+  color: white;
+  font-size: 15px;
+}
+
+.dropdown-item:active{
+  background-color: #dc3545;
 }

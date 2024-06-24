@@ -44,8 +44,14 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="../Html-files/menu.html">Menu</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Html-files/services.html">Services</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link services" href="../Html-files/services.html" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Ordering options</a></li>
+                            <li><a class="dropdown-item" href="#">Order Tracking</a></li>
+                            <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                            <li><a class="dropdown-item" href="#">FAQS</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../Html-files/contact.html">Contact Us</a>
@@ -56,7 +62,7 @@
                 </ul>
             </div>
             <div class="order-0 ml-auto p-2">
-                <img class="nav-link" src="../Images/sun.png" id="theme-toggle-icon" alt="theme toggler button">
+                <img class="nav-link" src="../Images/navbar/sun.png" id="theme-toggle-icon" alt="theme toggler button">
             </div>
             <div class="collapse navbar-collapse hamburgeritems enddiv order-3 ">
                 <ul class="navbar-nav end-links">
@@ -197,9 +203,9 @@
                     <div class="col-6 col-md-3 col-xl-4">
                         <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
                             <h3 class="text-center mb-3">Contact Us!</h3>
-                            <input type="email" id="email" name="email" placeholder="Your Email"
+                            <input type="email" id="footer-email" name="email" placeholder="Your Email"
                                 class="text-center form-control mb-2" required>
-                            <textarea id="message" name="message" placeholder="Your Message"
+                            <textarea id="footer-message" name="message" placeholder="Your Message"
                                 class="text-center form-control mb-2" required></textarea>
                             <div class="d-grid gap-2 col-12">
                                 <button type="submit" class="btn btn-danger">Send Message</button>
@@ -245,7 +251,7 @@
 
     <script src="./MenuAPI.js"></script>
     <script src="menuStars.js"></script>
-    <script src="themechange.js"></script>
+    <script src="navbar.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init(
@@ -256,7 +262,6 @@
             }
         );
     </script>
-    <script src="top.js"></script>
     
 </body>
 
