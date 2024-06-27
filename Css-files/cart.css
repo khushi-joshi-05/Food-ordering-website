@@ -138,7 +138,7 @@ textarea {
     height: 40px;
     background-color: brown;
     color: aliceblue;
-    z-index: 2000;
+    z-index: 20;
 }
 @media all and (max-width: 768px) {
     .cart {

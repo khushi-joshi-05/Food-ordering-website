@@ -4,8 +4,9 @@ body {
    padding: 0;
    height: 100vh;
    background-image: url(https://bsmedia.business-standard.com/_media/bs/img/article/2023-09/14/full/1694673859-4182.jpeg?im=FeatureCrop);
-   background-size: cover;
-
+   background-size:cover 100% ;
+   box-sizing: border-box;
+   width: 50vh;
 }
 
 .services_page {
@@ -16,7 +17,7 @@ body {
    font-size: 40px;
    font-weight: bold;
    background-color: rgb(244, 242, 240);
-   width: 20px;
+   width: 15px;
    border-radius: 40%;
    display: inline-block;
    padding: 8px 25px;
@@ -33,12 +34,12 @@ a {
 
 .container {
    display: flex;
-   height: 90%;
-   background-color: whitesmoke;
+   flex-wrap: wrap;
+   justify-content: center;
    position: absolute;
    top: 60px;
-   left: 150px;
-   width: 85%;
+   left: 10vw;
+   width: 87vw;
 }
 
 
@@ -52,7 +53,7 @@ a {
    border: 1px solid #ddd;
    border-radius: 5px;
    margin: 10px;
-   padding: 20px;
+   padding: 15px;
    text-align: center;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
    height: 87%;
@@ -64,6 +65,7 @@ a {
 .product {
    color: black;
    margin-bottom: 10px;
+
 }
 
 .product:hover {
