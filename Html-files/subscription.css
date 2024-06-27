@@ -1,17 +1,22 @@
+*{
+   margin: 0;
+}
+
 body {
    font-family: Arial, sans-serif;
-   margin: 0;
-   padding: 0;
-   height: 100vh;
+   margin: 5px;
+   padding: 0px;
    background-image: url(https://bsmedia.business-standard.com/_media/bs/img/article/2023-09/14/full/1694673859-4182.jpeg?im=FeatureCrop);
-   background-size:cover 100% ;
+   background-size:cover;
    box-sizing: border-box;
-   width: 50vh;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: center;
 }
 
 .services_page {
    color: crimson;
-   position: relative;
    left: 20px;
    top: 2px;
    font-size: 40px;
@@ -19,7 +24,7 @@ body {
    background-color: rgb(244, 242, 240);
    width: 15px;
    border-radius: 40%;
-   display: inline-block;
+   display: block;
    padding: 8px 25px;
 }
 
@@ -35,11 +40,9 @@ a {
 .container {
    display: flex;
    flex-wrap: wrap;
+   align-items: center;
    justify-content: center;
-   position: absolute;
-   top: 60px;
-   left: 10vw;
-   width: 87vw;
+   padding: 1vw;
 }
 
 
@@ -52,6 +55,7 @@ a {
    background-color: #fff;
    border: 1px solid #ddd;
    border-radius: 5px;
+   max-width: 50vw;
    margin: 10px;
    padding: 15px;
    text-align: center;

@@ -11,6 +11,9 @@ body {
 }
 
 :root {
+  --a: white;
+  --drop-bg: #212123;
+  --nav: black;
   --primary-bg-color: #ffffff;
   --primary-text-color: #333335;
   --secondary-bg-color: #f2f2f2;
@@ -24,7 +27,9 @@ body {
 }
 
 .dark-theme {
-
+  --a: black;
+  --drop-bg: #ffffff;
+  --nav: white;
   --primary-bg-color: #212123;
   --primary-text-color: #ffffff;
   --secondary-bg-color: #333335;

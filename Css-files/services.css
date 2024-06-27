@@ -5,10 +5,7 @@
 body{
     overflow-x: hidden;
 }
-.mainhead:hover h1 {
-    color: rgb(138, 37, 37);
 
-}
 
 .section1 {
     justify-content: center;
