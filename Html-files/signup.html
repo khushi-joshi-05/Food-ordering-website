@@ -84,7 +84,6 @@
 	</nav>
 
 	<div class="head_container">
-		<button style="background:transparent;border: none; margin-left: 20px; padding-top: 10px;" class="back-button"><a href="../index.html"><i class="fa-solid fa-arrow-left" style="color: #ffffff; font-size: 18px; cursor: pointer;"></a></i></button>
 		<div class="mainhead">
 			<h1 class="m-0">SIGN UP</h1>
 		</div>
@@ -117,11 +116,11 @@
 							</div>
 							<div class="textfield">
 								<label for="signup-password">Password</label>
-								<input type="password" id="signup-password" name="password" placeholder="Enter Password"
-									required>
-								<span id="signup-hide">
-									<i class='hide-icon bx bxs-hide'></i>
-								</span>
+								<input type="password" id="signup-password" name="password" placeholder="Enter Password" required>
+        						<span id="signup-hide">
+            					<i class='hide-icon bx bxs-hide'></i>
+						        </span>
+
 							</div>
 							<button type="submit" class="btn-login">Register</button>
 							<h1 class="text-center">Already have an account
@@ -317,6 +316,27 @@
 		// 			alert(error.message);
 		// 		});
 		// });
+		document.addEventListener("DOMContentLoaded", function() {
+    const togglePasswordVisibility = (inputId, toggleId) => {
+        const passwordInput = document.getElementById(inputId);
+        const toggleIcon = document.getElementById(toggleId);
+        const icon = toggleIcon.querySelector('i');
+
+        toggleIcon.addEventListener('click', function() {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                icon.classList.remove('bxs-hide');
+                icon.classList.add('bxs-show'); // Change the icon class as needed
+            } else {
+                passwordInput.type = "password";
+                icon.classList.remove('bxs-show');
+                icon.classList.add('bxs-hide'); // Change the icon class as needed
+            }
+        });
+    };
+    togglePasswordVisibility('signup-password', 'signup-hide');
+});
+
 	</script>
 </body>
 
