@@ -91,10 +91,6 @@
   width: 80%;
 }
 
-.back-button{
-  display: none;
-}
-
 @media screen and (width <= 600px) {
   .card{
     width: 95%;
@@ -109,9 +105,6 @@
     padding-bottom: 4rem;
     padding-top: 0;
   }
-  .back-button{
-		display: block;
-	}
 }
 
 #rememberCheckbox{
