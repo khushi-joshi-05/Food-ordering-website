@@ -2,12 +2,22 @@
     font-family: "Bree Serif", serif;
 } */
 
-body{
+html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
+    overflow-y: visible;
 }
-.mainhead:hover h1 {
-    color: rgb(138, 37, 37);
 
+.head_container {
+    overflow-x: scroll;
+}
+
+.mainhead {
+    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .section1 {
@@ -101,8 +111,12 @@ body{
 }
 
 .testimonal__container {
+    width: 80vw;
+    margin: auto;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .testimonal__title {
@@ -175,10 +189,7 @@ body{
     border-color: white;
 }
 
-input,
-textarea {
-    width: 100%;
-}
+
 
 #butt:hover {
     background-color: rgb(196, 89, 89);
