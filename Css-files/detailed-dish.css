@@ -118,3 +118,24 @@
         gap: 10px;
     }
 }
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+    background-image: linear-gradient(to top, rgb(246, 10, 10) , rgb(248, 145, 49), rgb(236, 239, 56));
+  }
+  
+  ::-webkit-scrollbar {
+    width:12px;
+  
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #ff0707;
+    border-radius: 10px;
+    border:.3px solid white;
+    background-image: -webkit-linear-gradient(90deg,
+        rgb(20, 21, 12) 0%,
+        rgb(0, 0, 0) 25%,
+        transparent 100%,
+        rgb(247, 4, 4) 75%,
+        transparent)
+  }

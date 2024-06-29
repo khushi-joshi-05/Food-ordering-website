@@ -844,3 +844,13 @@ textarea {
         padding: 100px;
     }
 }
+::-webkit-scrollbar{
+    width:20px;
+}
+::-webkit-scrollbar-track{
+    background: red;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 12px;
+    background-color: yellow;
+}

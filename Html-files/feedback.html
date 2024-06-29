@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css-files/feedback.css">
+    <script src="menuStars.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-outer">
+    <header>
+        <h1 id="title" class="text-center">We appreciate your valuable feedback.</h1>
+        
+    </header>
+    <form id="survey=-form">
+        <fieldset>
+            <label id="name_and_surname-label" for="name_and_surname">Name</label>
+            <input id="name_and_surname" type="text" placeholder="Your answer" required class="form-control" />
+        </fieldset>
+        <fieldset>
+            <label id="phone_number-label" for="phone_number">Phone number</label>
+            <input id="phone_number" type="text" placeholder="Your answer" required class="form-control" />
+        </fieldset>
+        <fieldset>
+            <label id="email-label" for="email">Email</label>
+            <input id="email" type="text" placeholder="Your answer" required class="form-control" />
+        </fieldset>
+        <fieldset>
+            <p class="pform">Food Quality</p>
+            <div class="fqual">
+            <label for="own_vhicle-yes"><input type="radio" name="quality" id="exc1" value="yes" class="input-radio" />Excellent</label>
+            <label for="own_vhicle-no"><input type="radio" name="quality" id="good1" value="no" class="input-radio" />Good</label>
+            <label for="own_vhicle-no"><input type="radio" name="quality" id="avg1" value="no" class="input-radio" />Average</label>
+            <label for="own_vhicle-no"><input type="radio" name="quality" id="dis1" value="no" class="input-radio" />Dissatisfied</label>
+        </div>
+        </fieldset>
+        <fieldset>
+            <p class="pform">Speed of service</p>
+            <div class="fqual">
+            <label for="own_vhicle-yes"><input type="radio" name="speed" id="exc2" value="yes" class="input-radio" />Excellent</label>
+            <label for="own_vhicle-no"><input type="radio" name="speed" id="good2" value="no" class="input-radio" />Good</label>
+            <label for="own_vhicle-no"><input type="radio" name="speed" id="avg2" value="no" class="input-radio" />Average</label>
+            <label for="own_vhicle-no"><input type="radio" name="speed" id="dis2" value="no" class="input-radio" />Dissatisfied</label>
+        </div>
+        </fieldset>
+        <fieldset>
+            <p class="pform">Value for Money</p>
+            <div class="fqual">
+            <label for="own_vhicle-yes"><input type="radio" name="value" id="exc3" value="yes" class="input-radio" />Excellent</label>
+            <label for="own_vhicle-no"><input type="radio" name="value" id="good2" value="no" class="input-radio" />Good</label>
+            <label for="own_vhicle-no"><input type="radio" name="value" id="avg3" value="no" class="input-radio" />Average</label>
+            <label for="own_vhicle-no"><input type="radio" name="value" id="dis3" value="no" class="input-radio" />Dissatisfied</label>
+        </div>
+        </fieldset>
+        
+       
+        <fieldset>
+            <p class="pform">Any comments, questions or suggestions?</p>
+        <textarea id="comments" name="comments" placeholder="Your answer" class="input-textarea"></textarea>
+        </fieldset>
+        <fieldset class="">
+            <p class="rate-tit">How much would you like to rate us?</p>
+            <div class="star-rating">
+            <div class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></div>
+            <div class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></div>
+            <div class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></div>
+            <div class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></div>
+            <div class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></div>
+        </div>
+    </fieldset>
+        <fieldset>
+            <button type="submit" id="submit" class="submit-button">Submit</button>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>
