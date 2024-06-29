@@ -20,7 +20,7 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
+	background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1800);
 	background-size:cover;
 	opacity: 0.4;
 	z-index: -1;
@@ -486,7 +486,7 @@ body {
 
 /* service */
 .service_container {
-	/* padding: 55px 70px 30px 70px; */
+	box-sizing: border-box;
 	background-color: rgb(224, 224, 252);
 }
 
@@ -527,7 +527,7 @@ body {
 
 /* Book Table */
 .book-table-container {
-	padding: 50px;
+	padding: 2vw;
 	background-color: rgb(224, 224, 252);
 }
 
@@ -580,7 +580,6 @@ body {
 
 .testimonal__container {
 	display: flex;
-	padding: 3rem;
 }
 
 .testimonal__card {
