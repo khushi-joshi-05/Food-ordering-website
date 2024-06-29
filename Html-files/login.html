@@ -111,11 +111,10 @@
 							</div>
 							<div class="textfield">
 								<label for="login-password">Password</label>
-								<input type="password" id="login-password" name="password" placeholder="Enter Password"
-									required>
-								<span id="login-hide">
-									<i class='hide-icon bx bxs-hide'></i>
-								</span>
+								<input type="password" id="login-password" name="password" placeholder="Enter Password" required>
+        						<span id="login-hide">
+            					<i class='hide-icon bx bxs-hide'></i>
+        						</span>
 							</div>
 							<div class="row justify-content-between">
 								<div class="col">
@@ -414,6 +413,24 @@
 		// 			alert(error.message);
 		// 		});
 		// });
+		document.addEventListener("DOMContentLoaded", function() {
+    const passwordInput = document.getElementById('login-password');
+    const toggleIcon = document.getElementById('login-hide');
+    const icon = toggleIcon.querySelector('i');
+
+    toggleIcon.addEventListener('click', function() {
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            icon.classList.remove('bxs-hide');
+            icon.classList.add('bxs-show'); // Change the icon class as needed
+        } else {
+            passwordInput.type = "password";
+            icon.classList.remove('bxs-show');
+            icon.classList.add('bxs-hide'); // Change the icon class as needed
+        }
+    });
+});
+
 	</script>
 </body>
 
