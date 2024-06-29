@@ -82,11 +82,11 @@ First, you need to clone the repository to your local machine. This process down
    - On **macOS**: You can open Terminal by pressing `Cmd + Space`, typing `Terminal`, and pressing Enter.
    - On **Linux**: You can open Terminal from your applications menu or by using the `Ctrl + Alt + T` shortcut.
 
-2. **Run the Git Clone Command:**
+2. **Fork the Repo and run the Git Clone command:**
    In your terminal or command prompt, type the following command and press Enter:
 
    ```bash
-   git clone https://github.com/khushi-joshi-05/FoodOrderingWebsite.git
+   git clone https://github.com/<USERNAME>/FoodOrderingWebsite.git
    ```
 
    This command will create a new directory named `FoodOrderingWebsite` in your current location, containing all the files from the repository.
