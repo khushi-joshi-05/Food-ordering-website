@@ -276,7 +276,7 @@ body {
 
 /* CONTACT US PAGE */
 .contact-wrapper{
-	background-color: rgb(224, 224, 252);
+	background-color: rgb(208, 50, 50);
 }
 
 .contact-wrapper h1{
@@ -293,7 +293,7 @@ body {
 
 .contact-wrapper .icon i{
 	font-size: 1.4rem;
-	color: rgb(208, 50, 50);;
+	color: rgb(208, 50, 50);
 	position: absolute;
 }
 
@@ -332,7 +332,7 @@ body {
 }
 
 .contact-form-wrapper{
-	background-color: rgb(224, 224, 252);
+	background-color: rgb(208, 50, 50);
 }
 
 .contact-form-wrapper .form-control{
@@ -360,8 +360,8 @@ body {
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 3px;
-	color: white;
-	background: rgb(208, 50, 50);
+	color: black;
+	background: white;
 	box-shadow: 0px 10px 40px -12px #b10f1f85;
   }
   
