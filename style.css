@@ -89,8 +89,12 @@ body {
 .slider-title {
   font-size: calc(1.3rem + 6.7vw);
   line-height: 1.1em;
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 1.2rem;
+  font-family:Mela Pro;
+}
+.slider-title span{
+  color:rgb(235, 31, 143);
 }
 
 .slider-subtitle {
