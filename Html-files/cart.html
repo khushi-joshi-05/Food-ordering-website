@@ -97,7 +97,7 @@
             <p>Use coupon code <b>qN6FVAn4</b> for 30% off!</p>
         </div>
 
-        <div class="cart">
+        <!-- <div class="cart">
             <div class="empty-cart">
             </div>
             <div class="cart-details">
@@ -105,7 +105,59 @@
                 </div>
                 <div id="cart-total"></div>
             </div>
+        </div> -->
+
+        <div class="row" style="margin-top: 40px;">
+            <div class="col-md-7">
+                <h2 class="playfair">Shopping Cart</h2>
+                <table class="table table-bordered mt-4">
+            <div class="empty-cart">
+                    <tbody>
+                        <tr>
+                            <div id="cart-items">
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="total mt-3">
+                    <p>Subtotal: $149.96</p>
+                    <p>Shipping: $0</p>
+                    <p><strong>Total: $149.96</strong></p>
+                </div>
+                <button class="btn btn-outline-primary mt-3">Continue Shopping</button>
+            </div>
+            <div class="col-md-5">
+                <h2 class="playfair">Payment Info</h2>
+                <div class="card mt-4 p-3">
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <div>
+                            <input type="radio" name="paymentMethod" id="creditCard" checked>
+                            <label for="creditCard">Credit Card</label>
+                            <input type="radio" name="paymentMethod" id="paypal" style="margin-left: 10px;">
+                            <label for="paypal">PayPal</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nameOnCard" class="form-label">Name on Card</label>
+                        <input type="text" class="form-control" id="nameOnCard" placeholder="Name on Card">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cardNumber" class="form-label">Card Number</label>
+                        <input type="text" class="form-control" id="cardNumber" placeholder="Card Number">
+                    </div>
+                    <div class="mb-3">
+                        <label for="expirationDate" class="form-label">Expiration Date</label>
+                        <input type="text" class="form-control" id="expirationDate" placeholder="MM/YY">
+                    </div>
+                    <div class="mb-3">
+                        <label for="cvv" class="form-label">CVV</label>
+                        <input type="text" class="form-control" id="cvv" placeholder="CVV">
+                    </div>
+                    <button class="btn btn-primary">Check Out</button>
+                </div>
+            </div>
         </div>
+    </div>
 
 
         <!-- Input Section For Coupon Code -->

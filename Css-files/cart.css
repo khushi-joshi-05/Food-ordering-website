@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 * {
     box-sizing: border-box;
     font-family: "Bree Serif", serif;
@@ -126,7 +128,7 @@
 }
 input,
 textarea {
-    width: 100%;
+    /* width: 100%; */
 }
 .coupen {
     position: fixed;
@@ -219,3 +221,12 @@ background-size: 100% 100%;}
         rgb(247, 4, 4) 75%,
         transparent)
   }
+
+  
+.playfair{
+    font-family: "Playfair Display", serif;
+}
+
+.row{
+    width: 80%;
+}
