@@ -69,16 +69,15 @@ html{
 }
 
 .head_container_service {
-    height: fit-content;
+    background-image: url(/Images/food.jpg);
 }
-
 .first_cont {
     flex-wrap: wrap;
 }
 
 .items {
     overflow: hidden;
-    max-width: 230px;
+    max-width: 180px;
 }
 
 .items img {
@@ -103,9 +102,11 @@ html{
 
 .testimonalsection {
     padding-top: 20px;
+    background: linear-gradient(#0d49a3, #428cfa);
+  
 }
 
-.fa-star,
+.fa-star
 .fa-star-half-stroke {
     color: goldenrod;
 }
@@ -146,10 +147,6 @@ html{
 
 }
 
-.testimonal__swiper:hover {
-    border-radius: 50%;
-}
-
 .testimonal__swiper>div {
     background-color: rgb(138, 37, 37);
     height: 33%;
@@ -159,7 +156,7 @@ html{
 
 .testimonal__swiper:hover>div {
     height: 200%;
-    border-radius: 20%;
+
 }
 
 .testimonal__swiper * {
@@ -172,6 +169,7 @@ html{
 
 .second_cont {
     flex-wrap: wrap;
+    background-color: black;
 }
 
 .deals {
