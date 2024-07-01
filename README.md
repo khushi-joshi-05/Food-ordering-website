@@ -1,10 +1,7 @@
-<div align="center">
-   
-   ![image](https://github.com/khushi-joshi-05/Food-ordering-website/assets/76521579/57ac35c6-c9d9-458d-a0bd-0f600fbded89)
-   
-   ![image](https://github.com/khushi-joshi-05/Food-ordering-website/assets/76521579/94548b28-f4e8-48aa-8a59-8c523cd7c206)
-   
-<h1 >Food Ordering Website</h1>
+<h1 align="center">Foodie</h1>
+<h2 align="center" >Food Ordering Website</h2>
+
+![foodie](https://github.com/khushi-joshi-05/Food-ordering-website/assets/133582566/1ce766f2-5a3a-49c0-9977-f492834c5916)
 
 <br>
 
@@ -149,33 +146,59 @@ To view the website locally, you need to open the `index.html` file in your web 
 
 By following these steps, you should be able to run the Food Ordering Website locally and view it in your web browser. Enjoy exploring the project! 🍔🍕🌮
 
-## Screenshots
+<hr>
 
-These are some snapshots of the project.
+<!-- Open Source Programs -->
+  <div>
+    <h2><img src="https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/blob/master/Emojis/Hand%20gestures/Flexed%20Biceps.png?raw=true" width="35" height="35" > Open Source Programs</h2>
+  </div>
 
-![Landing Page](Images/mainPage.png)
+  <table border="1" cellpadding="10">
+        <tr>
+            <td rowspan="2">
+                <img src="https://github.com/Meetjain1/wanderlust/assets/133582566/21b2bc42-bdd5-487a-a083-1b262c2f6d9b" alt="GSSOC Logo" width="100" height="55">
+            </td>
+            <td>
+                <strong>GSSOC 2024</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                This project is part of GirlScript Summer of Code. We welcome contributions from the community.
+            </td>
+        </tr>
+    </table>
 
-![Menu Page](Images/menupage.png)
+<hr>
 
-![Services Page](Images/servicesPage.png)
-
-![ogin Page](Images/loginPage.png)
-
-<h2 align="center">Our Contributors ❤️</h2>
-<div align="center">
- <h3>Thank you for contributing to our repository.😃</h3>
-
-<a href="https://github.com/SaiyamTuteja/Faculty_Evaluation_System/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=khushi-joshi-05/Food-ordering-website" alt="Contributors" />
-</a>
-
-### Show some ❤️ by starring this awesome repository!
-
+<!-- Code of conduct -->
+<div>
+<h2><img src = "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="35" height="35"> Code of Conduct</h2>
 </div>
 
+Please note that this project is released with a [Contributor Code of Conduct](./CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
-## License
+<hr>
 
-[MIT](https://choosealicense.com/licenses/mit/)
+<!-- License -->
+<div>
+<h2><img src = "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Page%20with%20Curl.png" width="35" height="35"> License</h2>
+</div>
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the [MIT License](./LICENSE).
+
+<hr>
+ <!-- Cotributors -->
+<div>
+  <h2><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" width="35" height="35"> Contributors</h2>
+</div>
+
+Thank you for contributing to our repository.😃
+
+<a href="https://github.com/SaiyamTuteja/Faculty_Evaluation_System/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=khushi-joshi-05/Food-ordering-website" alt="Contributors" width="99%"/>
+</a>
+
+<br>
+
+Show some ❤️ by starring this awesome repository!

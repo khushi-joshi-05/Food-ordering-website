@@ -13,7 +13,7 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- Adding favicon image -->
-    <link rel="shortcut icon" href="Images/Foodie_Favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Images/favicon/Foodie_Favicon.png" type="image/x-icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
@@ -40,13 +40,14 @@
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
     </div>
-    <nav class="navbar navbar-expand-lg bg-black fixed-top" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a href="index.html" class="navbar-brand opacity-75 flex-fill">
                 <img src="Images/logo/Foodielogo.png" height="40">
             </a>
-            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target=".hamburgeritems"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse"
+                data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
@@ -57,8 +58,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/menu.html">Menu</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Html-files/services.html">Services</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link services" href="/Html-files/services.html" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Ordering options</a></li>
+                            <li><a class="dropdown-item" href="#">Order Tracking</a></li>
+                            <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                            <li><a class="dropdown-item" href="#">FAQS</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/contact.html">Contact Us</a>
@@ -69,7 +76,7 @@
                 </ul>
             </div>
             <div class="order-0 ml-auto p-2">
-                <img class="nav-link" src="Images/sun.png" id="theme-toggle-icon" alt="theme toggler button">
+                <img class="nav-link" src="Images/navbar/sun.png" id="theme-toggle-icon" alt="theme toggler button">
             </div>
             <div class="collapse navbar-collapse hamburgeritems enddiv order-3 ">
                 <ul class="navbar-nav end-links">
@@ -314,134 +321,85 @@
         </div>
     </section>
 
-    <section class="testimonial-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
+    <section class="testimonial-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170"
+        data-aos-easing="ease-in-out">
         <h2 class="tagline pt-5"> Our Happy Clients </h2>
         <p class="description">
             At Foodie, we pride ourselves on delivering delicious meals & exceptional service. Don't just take our word
             for it - hear what our satisfied customers have to say!
         </p>
-        <div class="row" style="padding: 20px;">
-            <!-- Global Review Card -->
-            <div class="col-md-4">
-                <div class="global-review-card">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Reviews And Ratings</h5>
-                            <div class="rating"  style="margin-top: 10px;">
-                                <span class="rating-value">4.2</span>
-                                <div class="" style="margin-left: 20px;">
-                                    <span class="stars">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </span>
-                                    <p class="rating-count">Based on 456 Ratings</p>
-                                </div>
-                            </div>
-
-                            <hr>
-                            <div class="text-rating">
-                                <p>Reliability</p>
-                                 <p>4.5</p></div>
-                            <div class="progress mb-2">
-                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="4.5" aria-valuemin="0" aria-valuemax="5"></div>
-                            </div>
-                            <div class="text-rating">
-                                <p>Payout Rating</p>
-                                 <p>4.8</p></div>
-                            <div class="progress mb-2">
-                                <div class="progress-bar" role="progressbar" style="width: 96%" aria-valuenow="4.8" aria-valuemin="0" aria-valuemax="5"></div>
-                            </div>
-                            <div class="text-rating">
-                                <p>Positive Solution</p>
-                                 <p>4.5</p></div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="4.5" aria-valuemin="0" aria-valuemax="5"></div>
-                            </div>
+        <div id="testimonials" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="img-box my-5">
+                        <img src="Images/testimonials/client1.jpg" alt="">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="overview">Matt Gilbert</h3>
+                        <p class="testimonial-text">Foodie never disappoints! The food is always fresh, delicious, and
+                            delivered right on time. My go-to for all my meals!</p>
+                        <div class="star-rating">
+                            <ul class="list-inline d-flex justify-content-center">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
                         </div>
-
-                        <p class="summery" style="margin-left: 20px; color: rgb(95, 95, 255);">Show summery</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="img-box my-5">
+                        <img src="Images/testimonials/client2.jpg" alt="">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="overview">John Doe</h3>
+                        <p class="testimonial-text">I love the variety on Foodie! There's something for everyone, and
+                            the delivery service is incredibly reliable</p>
+                        <div class="star-rating">
+                            <ul class="list-inline d-flex justify-content-center">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="img-box my-5">
+                        <img src="Images/testimonials/client3.jpg" alt="">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="overview">Laren Green</h3>
+                        <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my
+                            dining experience so much more convenient.</p>
+                        <div class="star-rating">
+                            <ul class="list-inline d-flex justify-content-center">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Carousel -->
-            <div class="col-md-8">
-                <div id="testimonials" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="img-box my-5">
-                                <img src="Images/testimonials/client1.jpg" alt="">
-                            </div>
-                            <div class="carousel-caption">
-                                <h3 class="overview">Matt Gilbert</h3>
-                                <p class="testimonial-text">Foodie never disappoints! The food is always fresh, delicious, and
-                                    delivered right on time. My go-to for all my meals!</p>
-                                <div class="star-rating">
-                                    <ul class="list-inline d-flex justify-content-center">
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-regular fa-star"></i></li>
-                                        <li><i class="fa-regular fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="img-box my-5">
-                                <img src="Images/testimonials/client2.jpg" alt="">
-                            </div>
-                            <div class="carousel-caption">
-                                <h3 class="overview">John Doe</h3>
-                                <p class="testimonial-text">I love the variety on Foodie! There's something for everyone, and
-                                    the delivery service is incredibly reliable</p>
-                                <div class="star-rating">
-                                    <ul class="list-inline d-flex justify-content-center">
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-regular fa-star"></i></li>
-                                        <li><i class="fa-regular fa-star"></i></li>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="img-box my-5">
-                                <img src="Images/testimonials/client3.jpg" alt="">
-                            </div>
-                            <div class="carousel-caption">
-                                <h3 class="overview">Laren Green</h3>
-                                <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my
-                                    dining experience so much more convenient.</p>
-                                <div class="star-rating">
-                                    <ul class="list-inline d-flex justify-content-center">
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-solid fa-star"></i></li>
-                                        <li><i class="fa-regular fa-star"></i></li>
-                                        <li><i class="fa-regular fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Carousel controls-->
-                    <button class="carousel-control-prev" data-bs-target="#testimonials" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" data-bs-target="#testimonials" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
+            <!-- Carousel controls-->
+            <button class="carousel-control-prev" data-bs-target="#testimonials" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#testimonials" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </section>
 
-    
+
 
     <section class="picture-gallery" data-aos="fade-in" data-aos-duration="2000">
         <div class="row g-0">
@@ -470,6 +428,55 @@
             </div>
             <div class="col-3">
                 <img src="Images/image-gallery/8.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container faq-container">
+            <h1>Frequently Asked Questions (FAQ)</h1>
+
+            <div class="faq-item">
+                <h2>How do I place an order?</h2>
+                <p>To place an order, browse our menu, select the items you want, and add them to your cart. Once you’re
+                    ready, click on the cart icon and proceed to checkout. Follow the instructions to complete your
+                    order.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>What payment methods do you accept?</h2>
+                <p>We accept various payment methods including credit/debit cards, net banking, and popular digital
+                    wallets. You can select your preferred payment method at the checkout page.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>Can I schedule an order for later?</h2>
+                <p>Yes, you can schedule an order for a later time. During checkout, select the delivery time that suits
+                    you best.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>How can I track my order?</h2>
+                <p>Once your order is confirmed, you will receive a tracking link via email or SMS. You can use this
+                    link to track the status of your delivery in real-time.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>What should I do if I have a problem with my order?</h2>
+                <p>If you encounter any issues with your order, please contact our customer support immediately. You can
+                    reach us via the contact form on our website, email, or phone. We’re here to help you!</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>Is there a minimum order value?</h2>
+                <p>Yes, there is a minimum order value depending on your location. The minimum order amount will be
+                    displayed during the checkout process.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>Do you offer any discounts or promotions?</h2>
+                <p>We regularly offer discounts and promotions. Check our website or subscribe to our newsletter to stay
+                    updated on the latest deals and offers.</p>
             </div>
         </div>
     </section>
@@ -561,21 +568,26 @@
                         </ul>
                     </div>
 
+
                     <div class="col-6 col-md-3 col-xl-4">
                         <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
                             <h3 class="text-center mb-3">Contact Us!</h3>
-                            <input type="email" id="email" name="email" placeholder="Your Email"
+                            <input type="email" id="footer-email" name="email" placeholder="Your Email"
                                 class="text-center form-control mb-2" required>
-                            <textarea id="message" name="message" placeholder="Your Message"
+                            <textarea id="footer-message" name="footer-message" placeholder="Your Message"
                                 class="text-center form-control mb-2" required></textarea>
                             <div class="d-grid gap-2 col-12">
                                 <button type="submit" class="btn btn-danger">Send Message</button>
                             </div>
                         </form>
                     </div>
+
+
+
                 </div>
             </div>
         </div>
+
         <div class="foot-panel2">
             <div class="media-handles pt-3 pb-2">
                 <h4>Follow Us</h4>
@@ -590,6 +602,12 @@
                 </div>
                 <p class="text"> Stay connected with us on social media for the latest updates, recipes, and foodie
                     adventures. </p>
+                 <div >
+                        Give your valuable 
+                                <Link to="" >
+                                    <a  href="/Html-files/feedback.html"><b>feedback!</b></a>
+                                </Link>
+                        </div>
             </div>
             <div class="copyright py-1">
                 &copy;
@@ -612,7 +630,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="Html-files/top.js"></script>
     <script src="script.js"></script>
-    <script src="Html-files/themechange.js"></script>
+    <script src="Html-files/navbar.js"></script>
     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
     <script>
         AOS.init(
