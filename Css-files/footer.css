@@ -119,3 +119,16 @@ footer {
 .foot-panel2 .text {
   margin: 0;
 }
+
+.social-icons :hover{
+  transform:scale(1.3);
+
+}
+.media-handles h4:hover{
+  /* transform:scale(1.1); */
+color:#d24b29;
+}
+.row h5:hover,
+.row h3:hover {
+  color:#d24b29;
+}
