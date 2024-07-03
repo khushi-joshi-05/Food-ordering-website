@@ -40,7 +40,6 @@ body {
   --card-hover-color: #373739;
   --footer-bg-color: #28282a;
   --footer-hover-color: #333335;
-
 }
 
 .poppins-light {
@@ -57,20 +56,21 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width:12px;
-
+  width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #ff0707;
   border-radius: 10px;
-  border:.3px solid white;
-  background-image: -webkit-linear-gradient(90deg,
-      rgb(20, 21, 12) 0%,
-      rgb(0, 0, 0) 25%,
-      transparent 100%,
-      rgb(247, 4, 4) 75%,
-      transparent)
+  border: 0.3px solid white;
+  background-image: -webkit-linear-gradient(
+    90deg,
+    rgb(20, 21, 12) 0%,
+    rgb(0, 0, 0) 25%,
+    transparent 100%,
+    rgb(247, 4, 4) 75%,
+    transparent
+  );
 }
 
 /* Home carousel/slider  */
@@ -91,10 +91,10 @@ body {
   line-height: 1.1em;
   font-weight: 300;
   margin-bottom: 1.2rem;
-  font-family:Mela Pro;
+  font-family: Mela Pro;
 }
-.slider-title span{
-  color:rgb(235, 31, 143);
+.slider-title span {
+  color: rgb(235, 31, 143);
 }
 
 .slider-subtitle {
@@ -455,7 +455,6 @@ body {
     left: 10%;
     right: 10%;
   }
-
 }
 
 /* IMAGE GALLERY */
@@ -522,7 +521,7 @@ body {
   top: 0;
   width: 51%;
   height: 100%;
-  background: #EEEEEE;
+  background: #eeeeee;
   z-index: 1000;
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -546,7 +545,7 @@ body {
   margin: -75px 0 0 -75px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #DC5F00;
+  border-top-color: #dc5f00;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
   z-index: 99999;
@@ -561,7 +560,7 @@ body {
   bottom: 5px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #373A40;
+  border-top-color: #373a40;
   -webkit-animation: spin 3s linear infinite;
   animation: spin 3s linear infinite;
 }
@@ -575,7 +574,7 @@ body {
   bottom: 15px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #686D76;
+  border-top-color: #686d76;
   -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
 }
@@ -635,61 +634,140 @@ body {
 /* FAQS CONTAINER */
 .faq-section {
   background-color: brown;
+  padding: 50px 20px;
+}
 
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ffddcc;
+  padding-bottom: 10px;
+  opacity: 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item.visible {
+  animation: slideIn 1s forwards;
+  opacity: 1;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+  border-radius: 10px;
+  background-color: #aa5858;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.faq-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #fef8f6;
+  font-family: "Arial", sans-serif;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ffddcc;
+  padding-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: #c4c0c0;
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.faq-item h2 {
+  cursor: pointer;
+  margin: 0;
+  padding: 15px;
+  background-color: brown;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Arial", sans-serif;
+}
+
+.faq-item h2:hover {
+  background-color: #460d0d;
+  box-shadow: 0 4px 8px rgba(91, 19, 19, 0.5);
+}
+
+.faq-item p {
+  display: none;
+  margin: 10px 10px 15px;
+  line-height: 1.6;
+  opacity: 0;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.faq-item.active p {
+  display: block;
+  opacity: 1;
+  max-height: 500px; /* Arbitrary large value to allow for smooth transition */
+}
+
+.faq-item h2::after {
+  content: "\25BC"; /* Unicode for downward arrow */
+  font-size: 1rem;
+  background-color: br;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active h2::after {
+  transform: rotate(-180deg); /* Rotate the arrow when active */
+}
+
+/* Additional styles for a more attractive look */
+.faq-container p {
+  font-size: 1.4rem;
+  font-family: "Verdana", sans-serif;
+  color: #212123;
+}
+
+.faq-container a {
+  color: #ffddcc;
+  text-decoration: underline;
+}
+
+.faq-container a:hover {
+  color: #ffc7b2; /* Slightly lighter peach color on hover */
+}
+
+@media (max-width: 600px) {
   .faq-container {
-    max-width: 800px;
-    padding: 50px 20px;
-    color: white;
-    border-radius: 10px;
+    padding: 20px;
   }
 
   .faq-container h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .faq-item {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
+    font-size: 2rem;
   }
 
   .faq-item h2 {
-    cursor: pointer;
-    margin: 0;
     padding: 10px;
-    background-color: brown;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
   }
 
-  .faq-item h2:hover {
-    background-color: brown;
-  }
-
-  .faq-item p {
-    display: none;
-    margin: 10px 0 0;
-  }
-
-  .faq-item.active p {
-    display: block;
-  }
-
-  .faq-item h2::after {
-    content: '\25BC';
-    /* Unicode for downward arrow */
+  .faq-container p {
     font-size: 1rem;
-    color: white;
-    transition: transform 0.3s ease;
-  }
-
-  .faq-item.active h2::after {
-    transform: rotate(-180deg);
-    /* Rotate the arrow when active */
   }
 }
