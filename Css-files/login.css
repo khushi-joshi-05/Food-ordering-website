@@ -120,8 +120,12 @@
   box-shadow: none;
 }
 
-#login-form a{
+/* #login-form a{
     color: rgb(208, 50, 50);
     text-decoration: none;
-}
+} */
 
+.right-login h1.text-center{
+	font-size:13px;
+	font-weight: bold;
+}
