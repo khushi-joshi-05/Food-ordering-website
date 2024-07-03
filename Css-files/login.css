@@ -5,6 +5,69 @@
   padding: 4rem 0;
   font-family: 'Noto Sans', sans-serif;
 }
+.login-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners for the image */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  transition: transform 0.3s ease-in-out; /* Smooth transform animation */
+}
+
+.login-image:hover {
+  transform: scale(1.1); /* Scale up the image on hover */
+}
+
+/* Example animation for subtle background pattern */
+.login-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, rgba(255,255,255,0), rgba(255,255,255,0.6)); /* Gradient overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.login-image:hover::after {
+  opacity: 1; /* Fade in the gradient overlay on hover */
+}
+
+/* Example animation for a glowing effect */
+.login-image::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.login-image:hover::before {
+  opacity: 1; /* Fade in the glowing effect on hover */
+  animation: pulse 2s infinite; /* Pulse animation */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 .left-login img{
   width: 100%;
