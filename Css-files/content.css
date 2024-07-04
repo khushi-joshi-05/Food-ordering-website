@@ -275,216 +275,251 @@ body {
 }
 
 /* CONTACT US PAGE */
-.contact-wrapper{
-	background-color: rgb(208, 50, 50);
-}
 
-.contact-wrapper h1{
-	font-size: 2.8rem;
-	font-weight: bold;
-}
 
-.contact-wrapper .text{
-	font-size: 1rem;
-	line-height: 1.5;
-	color: #080808;
-	margin-bottom: 2rem;
-}
 
-.contact-wrapper .icon i{
-	font-size: 1.4rem;
-	color: rgb(208, 50, 50);
-	position: absolute;
-}
+	@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+	
+	.contact-wrapper {
+		background-color: #d83232; /* A deep red for the background */
+		font-family: 'Lato', sans-serif;
+		color: #333; /* Dark gray for general text */
+		padding: 0px;
+		border-radius: 10px;
+	}
+	
+	.contact-wrapper h1 {
+		font-size: 2.8rem;
+		font-weight: bold;
+		font-family: 'Playfair Display', serif;
+		color: #fff; /* White for the main heading */
+		margin-bottom: 20px;
+	}
+	
+	.contact-wrapper .text {
+		font-size: 1rem;
+		line-height: 1.5;
+		color: #f7f7f7; /* Light gray for body text */
+		margin-bottom: 2rem;
+	}
+	
+	.contact-wrapper .icon i {
+		font-size: 1.4rem;
+		color: #d83232;
+		position: absolute;
+	}
+	
+	.contact-wrapper .icon {
+		height: 3rem;
+		width: 3rem;
+		border: 1px solid #333; /* Dark gray for the border */
+		border-radius: 50%;
+		position: relative;
+		margin-right: 15px;
+		margin-left: 5px;
+	}
+	
+	.contact-wrapper .single-contact {
+		min-width: 60%;
+		max-width: 100%;
+		height: 100%;
+		background-color: #fff; /* White for contact cards */
+		padding: 15px;
+		border-radius: 20px;
+		align-items: center;
+		box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
+		font-family: 'Lato', sans-serif;
+	}
+	
+	.single-contact {
+		display: flex;
+		align-items: center; /* Center items vertically */
+		margin-bottom: 20px;
+		padding: 15px;
+		background-color: #fff;
+		border-radius: 20px;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+		transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
+	}
+	
+	.single-contact:hover {
+		transform: scale(1.03);
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+		cursor: pointer;
+		background-color: #f0f0f0; /* Light gray on hover */
+	}
+	
+	.single-contact .icon {
+		width: 55px;
+		height: 55px;
+		margin-right: 1px;
+		border-radius: 50%;
+		background-color: #d83232;
+		display: flex;
+		justify-content: center; 
+		align-items: center; 
+		margin-right: 15px;
+	}
+	
+	.single-contact .icon i {
+		font-size: 1.8rem;
+		color: #fff;
+	}
+	
+	.single-contact .contact-info {
+		flex: 1;
+		text-align: left;
+	}
+	
+	.single-contact h5 {
+		font-size: 1.2rem;
+		font-weight: bold;
+		margin-bottom: 0.5rem;
+		font-family: 'Playfair Display', serif;
+		color: #333; /* Dark gray for subheadings */
+	}
+	
+	.single-contact p {
+		margin-bottom: 0;
+		color: #555; /* Medium gray for paragraph text */
+	}
+	
+	.contact-wrapper .title {
+		font-weight: 700;
+		color: #3b3838; /* White for section titles */
+	}
+	
+	.contact-wrapper .single-contact p {
+		margin-bottom: 0;
+		overflow-wrap: break-word;
+	}
+	
+	.contact-wrapper .contact-info {
+		width: 70%;
+	}
+	
+	
+	.contact-form-wrapper {
+		background-color: #f0f0f0;
+		padding: 40px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 80vh;
+	}
+	.contact-form-wrapper .form {
+		background-color: #fff;
+		padding: 40px 50px;
+		border-radius: 20px;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+		width: 100%;
+		max-width: 600px;
+	}
+	
+	.contact-form-wrapper .form-group {
+		margin-bottom: 25px;
+	}
+	
+	.contact-form-wrapper .form-control {
+		box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+		border: none;
+		padding-left: 25px;
+		transition: all 0.3s ease;
+		font-size: 16px;
+	}
+	
+	.contact-form-wrapper input,
+	.contact-form-wrapper textarea {
+		padding: 15px;
+		border-radius: 10px;
+		border: 1px solid #ced4da;
+		transition: all 0.3s ease;
+		width: 100%;
+		font-size: 16px;
+	}
+	
+	.contact-form-wrapper input:focus,
+	.contact-form-wrapper textarea:focus {
+		border-color: #28a745;
+		box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+	}
+	
+	.contact-form-wrapper textarea {
+		padding: 20px;
+		border-radius: 10px;
+		resize: vertical;
+	}
+	
+	.contact-form-wrapper .btn {
+		padding: 12px 25px;
+		margin-top: 15px;
+		border: none;
+		border-radius: 10px;
+		outline: none;
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 1px;
+		color: white;
+		background: #28a745;
+		box-shadow: 0px 10px 40px -12px rgba(40, 167, 69, 0.5);
+		transition: background 0.3s ease, transform 0.3s ease;
+	}
+	
+	.contact-form-wrapper .btn:hover {
+		background: #218838;
+		transform: translateY(-2px);
+	}
+	
+	.contact-form-wrapper .btn:active {
+		transform: translateY(0);
+	}
+	
+	.contact-form-wrapper .form .btn-primary {
+		width: 100%;
+	}
+	
+	.thumbnail {
+		display: flex;
+		justify-content: center;
+		align-items: center; /* Center items both horizontally and vertically */
+		padding: 20px; /* Add some padding around the thumbnail */
+		background-color: #ddc5c5; /* Light background color */
+		border-radius: 15px; /* Round the corners of the container */
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+		margin-bottom: 20px; /* Add some space below the thumbnail */
+	}
+	
+	.thumbnail img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 15px; /* Increase border radius for more rounded corners */
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhance the shadow effect */
+		transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+	}
+	
+	.thumbnail img:hover {
+		transform: scale(1.05); /* Slightly enlarge the image on hover */
+		box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Deepen the shadow on hover */
+		cursor: pointer; /* Change cursor to pointer on hover */
+	}
+	
 
-.contact-wrapper .icon{
-	height: 3rem;
-	width: 3rem;
-	border: 1px solid black;
-	border-radius: 50%;
-	position: relative;
-	margin-right: 15px;
-	margin-left: 5px;
-}
 
-.contact-wrapper .single-contact{
-	min-width: 60%;
-	max-width: 100%;
-	height: 100%;
-	background-color: white;
-	padding: 15px;
-	border-radius: 20px;
-	align-items: center;
-	box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
-}
-.single-contact {
-	display: flex;
-	align-items: center; /* Center items vertically */
-	margin-bottom: 20px;
-	padding: 15px;
-	background-color: #fff;
-	border-radius: 20px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-	transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
-  }
-  
-  .single-contact:hover {
-	transform: scale(1.03);
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-	cursor: pointer;
-  }
+	.head_container_service {
+		height: 500px;
+	}
+	
+	.head_container_service:before {
+		background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
+		content: "";
+		position: absolute;
+		height: 500px;
+		width: 100%;
+		opacity: 0.4;
+		z-index: -1;
+	
+	}
 
-  .single-contact .icon {
-	width: 55px;
-	height: 55px;
-	margin-right: 1px;
-	border-radius: 50%;
-	background-color: #dc3545;
-	display: flex;
-	justify-content: center; 
-	align-items: center; 
-	margin-right: 15px;
-  }
-  
-  .single-contact .icon i {
-	font-size: 1.8rem;
-	color: #fff;
-  }
-  
-  .single-contact .contact-info {
-	flex: 1;
-	text-align: left;
-  }
-  
-  .single-contact h5 {
-	font-size: 1.2rem;
-	font-weight: bold;
-	margin-bottom: 0.5rem;
-  }
-  
-  .single-contact p {
-	margin-bottom: 0;
-  }
-  
-  
-.contact-wrapper .title{
-	font-weight: 700;
-}
-
-.contact-wrapper .single-contact p{
-	margin-bottom: 0;
-	overflow-wrap: break-word;
-}
-
-.contact-wrapper .contact-info{
-	width: 70%;
-}
-
-.contact-form-wrapper{
-	background-color: rgb(208, 50, 50);
-}
-
-.contact-form-wrapper .form-control{
-	box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
-	border: none;
-	padding-left: 25px;
-}
-
-.contact-form-wrapper input{
-	padding: 15px;
-	border-radius: 30px;
-}
-
-.contact-form-wrapper textarea{
-	padding: 20px;
-	border-radius: 15px;
-}
-
-.contact-form-wrapper .btn {
-	padding: 10px 20px;
-	margin-top: 5px;
-	border: none;
-	border-radius: 30px;
-	outline: none;
-	text-transform: uppercase;
-	font-weight: 700;
-	letter-spacing: 3px;
-	color: black;
-	background: white;
-	box-shadow: 0px 10px 40px -12px #b10f1f85;
-  }
-  
-.contact-form-wrapper .btn:hover {
-	background: rgba(208, 50, 50, 0.9);
-  }
-
-.contact-form-wrapper {
-	background-color: #f0f0f0;
-	padding: 30px 0;
-  }
-  
-  .contact-form-wrapper .form {
-	background-color: #fff;
-	padding: 30px;
-	border-radius: 20px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-form-wrapper .form .form-group {
-	margin-bottom: 20px;
-  }
-  
-  .contact-form-wrapper .form .form-group input[type="text"],
-  .contact-form-wrapper .form .form-group input[type="email"],
-  .contact-form-wrapper .form .form-group textarea {
-	width: 100%;
-	padding: 15px;
-	border-radius: 30px;
-	border: 1px solid #ced4da;
-	transition: border-color 0.3s;
-  }
-  
-  .contact-form-wrapper .form .form-group input[type="text"]:focus,
-  .contact-form-wrapper .form .form-group input[type="email"]:focus,
-  .contact-form-wrapper .form .form-group textarea:focus {
-	border-color: #dc3545;
-  }
-  
-  .contact-form-wrapper .form .form-group textarea {
-	resize: vertical;
-  }
-  
-  .contact-form-wrapper .form .btn-primary {
-	width: 100%;
-  }
-  
-  .thumbnail {
-	display: flex;
-	justify-content: center;
-  }
-  
-  .thumbnail img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 10px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-
-.head_container_service {
-	height: 500px;
-}
-
-.head_container_service:before {
-	background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
-	content: "";
-	position: absolute;
-	height: 500px;
-	width: 100%;
-	opacity: 0.4;
-	z-index: -1;
-
-}
 
 .service-img {
 	background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
