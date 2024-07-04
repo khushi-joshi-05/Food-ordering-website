@@ -559,6 +559,25 @@
                     updated on the latest deals and offers.</p>
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              const faqItems = document.querySelectorAll('.faq-item');
+          
+              const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                  }
+                });
+              }, { threshold: 0.3 });
+          
+              faqItems.forEach(item => {
+                observer.observe(item);
+              });
+            });
+          </script>
+          
     </section>
 
     <div class="app_download pb-4">
