@@ -173,7 +173,7 @@
             var phone = document.getElementById('phone').value;
             var date = document.getElementById('date').value;
     
-            // Validate phone number (must be 10 digits)
+            // Phone number validation
             if (!/^\d{10}$/.test(phone)) {
                 document.getElementById('phoneError').textContent = 'Enter a valid Phone Number';
                 return false;
@@ -181,7 +181,7 @@
                 document.getElementById('phoneError').textContent = '';
             }
     
-            // Validate date (must be future date)
+            // date validation
             var today = new Date().toISOString().split('T')[0];
             if (date < today) {
                 document.getElementById('dateError').textContent = 'Please select a future date';
@@ -190,7 +190,7 @@
                 document.getElementById('dateError').textContent = '';
             }
     
-            // If all validations pass, show confirmation message and submit form
+            // Confirmation message
             var fullName = document.getElementById('name').value;
             var formattedDate = new Date(date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
             var time = document.getElementById('time').value;
