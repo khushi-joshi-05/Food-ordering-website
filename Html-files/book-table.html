@@ -55,31 +55,33 @@
     <div class="book-table-container">
         <div class="form-container">
             <div class="image-holder"></div>
-            <form method="POST" onsubmit="HandleSubmit()">
+            <form method="POST" id="bookingForm" onsubmit="return validateForm()">
                 <h2 class="text-center"><strong>Book</strong> Your Table Now!</h2>
                 <div class="form-group">
                     <label for="name">Full Name: </label>
-                    <input class="form-control" type="text" name="name" placeholder="John Doe" required>
+                    <input class="form-control" type="text" name="name" id="name" placeholder="John Doe" required>
                 </div>
                 <div class="form-group">
-                    <label for="name">Phone Number: </label>
-                    <input class="form-control" type="number" name="phone" placeholder="Phone Number" required>
+                    <label for="phone">Phone Number: </label>
+                    <input class="form-control" type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                    <small id="phoneError" style="color: red;"></small>
                 </div>
                 <div class="form-group">
-                    <label for="name">Email: </label>
-                    <input class="form-control" type="email" name="email" placeholder="johndoe@email.com" required>
+                    <label for="email">Email: </label>
+                    <input class="form-control" type="email" name="email" id="email" placeholder="johndoe@email.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="name">Date: </label>
-                    <input class="form-control" type="date" name="date" required>
+                    <label for="date">Date: </label>
+                    <input class="form-control" type="date" name="date" id="date" required>
+                    <small id="dateError" style="color: red;"></small>
                 </div>
                 <div class="form-group">
-                    <label for="name">Time: </label>
-                    <input class="form-control" type="time" name="time" required>
+                    <label for="time">Time: </label>
+                    <input class="form-control" type="time" name="time" id="time" required>
                 </div>
                 <div class="form-group">
-                    <label for="name">Number of People: </label>
-                    <input class="form-control" type="number" name="no-of-people" min="0" max="100" required>
+                    <label for="no-of-people">Number of People: </label>
+                    <input class="form-control" type="number" name="no-of-people" id="no-of-people" min="0" max="100" required>
                 </div>
                 <div class="form-group">
                     <button class="butt" type="submit">Book Now!</button>
@@ -165,12 +167,42 @@
         </div>
     </footer>
     <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+   
     <script>
-        const HandleSubmit = () => {
-            let confirmation_code = Math.floor(Math.random() * 9000);
-            alert(`Your Table has been booked successfully! Your Confirmation code is ${confirmation_code}`);
+        function validateForm() {
+            var phone = document.getElementById('phone').value;
+            var date = document.getElementById('date').value;
+    
+            // Validate phone number (must be 10 digits)
+            if (!/^\d{10}$/.test(phone)) {
+                document.getElementById('phoneError').textContent = 'Enter a valid Phone Number';
+                return false;
+            } else {
+                document.getElementById('phoneError').textContent = '';
+            }
+    
+            // Validate date (must be future date)
+            var today = new Date().toISOString().split('T')[0];
+            if (date < today) {
+                document.getElementById('dateError').textContent = 'Please select a future date';
+                return false;
+            } else {
+                document.getElementById('dateError').textContent = '';
+            }
+    
+            // If all validations pass, show confirmation message and submit form
+            var fullName = document.getElementById('name').value;
+            var formattedDate = new Date(date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            var time = document.getElementById('time').value;
+            var numOfPeople = document.getElementById('no-of-people').value;
+    
+            var confirmationMessage = `Thank you, ${fullName}! Your table has been booked for ${formattedDate} at ${time} for ${numOfPeople} people.`;
+            alert(confirmationMessage);
+    
+            return true;
         }
     </script>
+    
 </body>
 
 </html>
