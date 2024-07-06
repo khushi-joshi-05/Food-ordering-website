@@ -480,6 +480,31 @@ border: 4px solid brown;
   opacity: 1;
 }
 
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  margin: 20px;
+  transform: translateY(-50%);
+  background-color: brown;
+  color: white;
+  border: 1px white solid;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+button.prev {
+  left: 0;
+}
+
+button.next {
+  right: 0;
+}
+
+button.prev:hover, button.next:hover {
+  background-color: white;
+  color: brown;
+  border:1px solid brown;
+}
 
 /*
 ==========================================
