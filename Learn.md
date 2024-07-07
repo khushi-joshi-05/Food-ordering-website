@@ -17,7 +17,7 @@ Welcome to Foodie's open-source project! We're thrilled that you're interested i
 3. **Navigate to the Project Directory**: Enter the directory of the cloned project:
    ```bash
    cd FoodOrderingWebsite
-   ```
+   
 
 4. **Set Up Remote Upstream**: Connect your fork to the original repository to stay updated with its changes:
    ```bash
@@ -61,5 +61,5 @@ Welcome to Foodie's open-source project! We're thrilled that you're interested i
 If you have any questions or need assistance, feel free to reach out to us via  [GitHub Issues](https://github.com/yourusername/FoodOrderingWebsite/issues).
 
 We appreciate your contributions!
-```
+
 
