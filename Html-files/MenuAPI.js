@@ -13,7 +13,12 @@ let categories = [
     "seafood",
     "breakfast",
     "vegetarian",
-    "miscellaneous"
+    "miscellaneous",
+    "Indian",
+    "Italian",
+    "Mexican",
+    "Chinese",
+    "Mediterranean"
 ];
 
 //Function to render the navigation and tabs pane
