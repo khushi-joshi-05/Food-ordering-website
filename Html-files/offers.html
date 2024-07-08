@@ -46,6 +46,15 @@
     <!-- OWN CSS -->
     <link id="theme-link" rel="stylesheet" href="/Css-files/offers.css" />
     <style>
+          #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #e21f1f;
+            z-index: 9999;
+        }
 .card:hover {
   transform: translateY(-5px); /* Move the card up slightly on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
@@ -97,6 +106,18 @@
     data-bs-offset="100"
     onload="blinker();"
   >
+
+      <!-- Progress bar -->
+      <div id="progressBar"></div>
+      <script>
+          window.onscroll = function () {
+              var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var scrolled = (winScroll / height) * 100;
+              document.getElementById("progressBar").style.width = scrolled + "%";
+          };
+      </script>
+      <!-- end -->
     <!-- header design section -->
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">

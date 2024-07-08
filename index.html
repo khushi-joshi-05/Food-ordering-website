@@ -32,6 +32,18 @@
     <link rel="stylesheet" href="Css-files/footer.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #e21f1f;
+            z-index: 9999;
+        }
+    </style>
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
@@ -40,6 +52,17 @@
 </head>
 
 <body>
+    <!-- Progress bar -->
+    <div id="progressBar"></div>
+    <script>
+        window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
+    <!-- end -->
     <div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
@@ -457,9 +480,10 @@
                         </div>
                     </div>
                 </div>
-                 <div class="carousel-item">
+                <div class="carousel-item">
                     <div class="img-box my-5">
-                        <img src="https://static.vecteezy.com/system/resources/thumbnails/029/284/491/small_2x/cheerful-brunette-business-woman-isolated-png.png" alt="">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/029/284/491/small_2x/cheerful-brunette-business-woman-isolated-png.png"
+                            alt="">
                     </div>
                     <div class="carousel-caption">
                         <h3 class="overview">sara Bahnour</h3>
@@ -478,7 +502,8 @@
                 </div>
                 <div class="carousel-item">
                     <div class="img-box my-5">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/344/088/non_2x/businessman-isolated-illustration-ai-generative-free-png.png" alt="">
+                        <img src="https://static.vecteezy.com/system/resources/previews/024/344/088/non_2x/businessman-isolated-illustration-ai-generative-free-png.png"
+                            alt="">
                     </div>
                     <div class="carousel-caption">
                         <h3 class="overview">Mr Jomes Robin</h3>
@@ -590,23 +615,23 @@
         </div>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-              const faqItems = document.querySelectorAll('.faq-item');
-          
-              const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                  if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                  }
+                const faqItems = document.querySelectorAll('.faq-item');
+
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.3 });
+
+                faqItems.forEach(item => {
+                    observer.observe(item);
                 });
-              }, { threshold: 0.3 });
-          
-              faqItems.forEach(item => {
-                observer.observe(item);
-              });
             });
-          </script>
-          
+        </script>
+
     </section>
 
     <div class="app_download pb-4">
@@ -655,22 +680,27 @@
                                 <a href="/Html-files/offers/food-discount.html" class="nav-link">Foodie Discounts</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/offers/limited-time-products.html">Limited-Time Promotions</a>
+                                <a class="nav-link" href="/Html-files/offers/limited-time-products.html">Limited-Time
+                                    Promotions</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/offers/special-event.html">Special Event Packages</a>
+                                <a class="nav-link" href="/Html-files/offers/special-event.html">Special Event
+                                    Packages</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/offers/membership-benifits.html">Membership Benefits</a>
+                                <a class="nav-link" href="/Html-files/offers/membership-benifits.html">Membership
+                                    Benefits</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/offers/early-access.html">Early Access to New Recipes</a>
+                                <a class="nav-link" href="/Html-files/offers/early-access.html">Early Access to New
+                                    Recipes</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/Html-files/offers/vip-food-event.html">VIP Foodie Events</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/offers/culinary-experience.html">Personalized Culinary Experiences</a>
+                                <a class="nav-link" href="/Html-files/offers/culinary-experience.html">Personalized
+                                    Culinary Experiences</a>
                             </li>
                         </ul>
                     </div>
@@ -679,24 +709,26 @@
                         <h5 class="mb-3">Payment Products</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                              <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
+                                <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
                             </li>
                             <li class="nav-item">
-                              <a href="/Html-files/payment/credit-debit-card.html" class="nav-link">Credit/Debit Cards</a>
+                                <a href="/Html-files/payment/credit-debit-card.html" class="nav-link">Credit/Debit
+                                    Cards</a>
                             </li>
                             <li class="nav-item">
-                              <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
+                                <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
                             </li>
                             <li class="nav-item">
-                              <a href="/Html-files/payment/online-payment.html" class="nav-link">Online Payment</a>
+                                <a href="/Html-files/payment/online-payment.html" class="nav-link">Online Payment</a>
                             </li>
                             <li class="nav-item">
-                              <a href="/Html-files/payment/mobile-wallet.html" class="nav-link">Mobile Wallets</a>
+                                <a href="/Html-files/payment/mobile-wallet.html" class="nav-link">Mobile Wallets</a>
                             </li>
                             <li class="nav-item">
-                              <a href="/Html-files/payment/contact-less-payment.html" class="nav-link">Contactless Payments</a>
+                                <a href="/Html-files/payment/contact-less-payment.html" class="nav-link">Contactless
+                                    Payments</a>
                             </li>
-                          </ul>
+                        </ul>
                     </div>
 
 
@@ -733,12 +765,12 @@
                 </div>
                 <p class="text"> Stay connected with us on social media for the latest updates, recipes, and foodie
                     adventures. </p>
-                 <div >
-                        Give your valuable 
-                                <Link to="" >
-                                    <a  href="/Html-files/feedback.html"><b>feedback!</b></a>
-                                </Link>
-                        </div>
+                <div>
+                    Give your valuable
+                    <Link to="">
+                    <a href="/Html-files/feedback.html"><b>feedback!</b></a>
+                    </Link>
+                </div>
             </div>
             <div class="copyright py-1">
                 &copy;
