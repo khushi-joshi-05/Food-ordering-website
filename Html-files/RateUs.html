@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="../Css-files/navbar.css" />
     <link rel="stylesheet" href="../Css-files/footer.css" />
     <link rel="stylesheet" href="../Css-files/RateUs.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -39,32 +39,44 @@
             >
                 <ul class="navbar-nav center-links">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="../index.html">
+                            <i class="fas fa-home"></i> Home
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="../Html-files/menu.html">Menu</a>
+                        <a class="nav-link active" href="../Html-files/menu.html">
+                            <i class="fas fa-book-open"></i> Menu
+                        </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a
                             class="nav-link services"
                             href="../Html-files/services.html"
                             aria-expanded="false"
-                        >Services</a>
+                        >
+                            <i class="fas fa-cogs"></i> Services
+                        </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Ordering options</a></li>
-                            <li><a class="dropdown-item" href="#">Order Tracking</a></li>
-                            <li><a class="dropdown-item" href="#">Customer Support</a></li>
-                            <li><a class="dropdown-item" href="#">FAQS</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-clipboard-list"></i> Ordering options</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-shipping-fast"></i> Order Tracking</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-headset"></i> Customer Support</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-question-circle"></i> FAQS</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Html-files/contact.html">Contact Us</a>
+                        <a class="nav-link" href="../Html-files/contact.html">
+                            <i class="fas fa-envelope"></i> Contact Us
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Html-files/offers.html">Offers</a>
+                        <a class="nav-link" href="../Html-files/offers.html">
+                            <i class="fas fa-tags"></i> Offers
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Html-files/offers.html">Rate Us</a>
+                        <a class="nav-link" href="../Html-files/rateus.html">
+                            <i class="fas fa-star"></i> Rate Us
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -79,15 +91,18 @@
             <div class="collapse navbar-collapse hamburgeritems enddiv order-3">
                 <ul class="navbar-nav end-links">
                     <li class="nav-item">
-                        <a class="nav-link" href="../Html-files/login.html">Login</a>
+                        <a class="nav-link" href="../Html-files/login.html">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../Html-files/signup.html">Sign-Up</a>
+                        <a class="nav-link" href="../Html-files/signup.html">
+                            <i class="fas fa-user-plus"></i> Sign-Up
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../Html-files/cart.html">
-                            Cart
-                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fas fa-shopping-cart"></i> Cart
                         </a>
                     </li>
                 </ul>
@@ -118,6 +133,7 @@
         </svg>
     </button>
 
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script>
         document.getElementById("copyright-year").textContent = new Date().getFullYear();
 
@@ -132,32 +148,24 @@
         }
 
         function submitFeedback() {
-            const feedback = document.getElementById('feedback').value;
+            const feedback = document.getElementById('feedback').value.trim();
             const stars = document.querySelectorAll('.star.selected').length;
 
-            if (stars > 0 && feedback.trim() !== '') {
-                // Show success Toastify notification
+            if (stars > 0 && feedback !== '') {
+                // Simulating success for demonstration
                 Toastify({
-                    text: "Thankyou For Your Feedback :)",
-                    duration: 3000,
-                    gravity: "top",
-                    position: "center",
-                    backgroundColor: "#4caf50",
-                    stopOnFocus: true,
+                    text: 'Feedback submitted successfully!',
+                    backgroundColor: 'green',
+                    position :'center',
+                    duration: 3000
                 }).showToast();
-
-                // Clear feedback textarea and star ratings
-                document.getElementById('feedback').value = '';
-                document.querySelectorAll('.star').forEach(star => star.classList.remove('selected'));
             } else {
-                // Show failure Toastify notification
+                // Simulating failure for demonstration
                 Toastify({
-                    text: "Please Fill All Details :(",
-                    duration: 3000,
-                    gravity: "top",
-                    position: "center",
-                    backgroundColor: "#f44336",
-                    stopOnFocus: true,
+                    text: 'Please rate and provide feedback.',
+                    backgroundColor: 'red',
+                    positon:'center',
+                    duration: 3000
                 }).showToast();
             }
         }
@@ -170,6 +178,6 @@
             once: false,
         });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
