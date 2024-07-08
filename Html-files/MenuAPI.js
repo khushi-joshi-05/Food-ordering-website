@@ -1,19 +1,19 @@
 const menuContainer = document.querySelector(".menu-container");
 let categories = [
-    "beef",
-    "breakfast",
-    "chicken",
-    "dessert",
     "lamb",
-    "miscellaneous",
-    "pasta",
-    "pork",
-    "seafood",
-    "side",
-    "starter",
-    "vegan",
-    "vegetarian",
     "goat",
+    "beef",
+    "pork",
+    "side",
+    "pasta",
+    "vegan",
+    "starter",
+    "dessert",
+    "chicken",
+    "seafood",
+    "breakfast",
+    "vegetarian",
+    "miscellaneous"
 ];
 
 //Function to render the navigation and tabs pane
