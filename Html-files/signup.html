@@ -23,9 +23,31 @@
 	<link rel="stylesheet" href="../Css-files/navbar.css">
 	<link rel="stylesheet" href="../Css-files/footer.css">
 	<link rel="stylesheet" href="../Css-files/signup.css">
+	<style>
+		 #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #e21f1f;
+            z-index: 9999;
+        }
+	</style>
 </head>
 
 <body>
+	    <!-- Progress bar -->
+		<div id="progressBar"></div>
+		<script>
+			window.onscroll = function () {
+				var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+				var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+				var scrolled = (winScroll / height) * 100;
+				document.getElementById("progressBar").style.width = scrolled + "%";
+			};
+		</script>
+		<!-- end -->
 	<nav class="navbar navbar-expand-lg fixed-top">
 		<div class="container-fluid">
 			<a href="../index.html" class="navbar-brand opacity-75 flex-fill">
@@ -39,13 +61,13 @@
 			<div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
 				<ul class="navbar-nav center-links">
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="../index.html">Home</a>
+						<a class="nav-link" aria-current="page" href="../index.html"><i class="fa-solid fa-house"></i> Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="../Html-files/menu.html">Menu</a>
+						<a class="nav-link" href="../Html-files/menu.html"><i class="fa-solid fa-bars"></i> Menu</a>
 					</li>
 					<li class="nav-item dropdown">
-                        <a class="nav-link services" href="../Html-files/services.html" aria-expanded="false">Services</a>
+                        <a class="nav-link services" href="../Html-files/services.html" aria-expanded="false"><i class="fa-solid fa-gear"></i> Services</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Ordering options</a></li>
                             <li><a class="dropdown-item" href="#">Order Tracking</a></li>
@@ -54,10 +76,10 @@
                         </ul>
                     </li>
 					<li class="nav-item">
-						<a class="nav-link" href="../Html-files/contact.html">Contact Us</a>
+						<a class="nav-link" href="../Html-files/contact.html"><i class="fa-solid fa-phone"></i> Contact Us</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="../Html-files/offers.html">Offers</a>
+						<a class="nav-link" href="../Html-files/offers.html"><i class="fa-solid fa-tag"></i> Offers</a>
 					</li>
 				</ul>
 			</div>
@@ -67,10 +89,10 @@
 			<div class="collapse navbar-collapse hamburgeritems enddiv order-3 ">
 				<ul class="navbar-nav end-links">
 					<li class="nav-item">
-						<a class="nav-link" href="../Html-files/login.html">Login</a>
+						<a class="nav-link" href="../Html-files/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" href="../Html-files/signup.html">Sign-Up</a>
+						<a class="nav-link active" href="../Html-files/signup.html"><i class="fa-solid fa-user"></i> Sign-Up</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="../Html-files/cart.html">
@@ -126,6 +148,7 @@
 							<h1 class="text-center">Already have an account
 								<a href="login.html">login</a>
 							</h1>
+						</div>
 					</form>
 				</div>
 			</div>

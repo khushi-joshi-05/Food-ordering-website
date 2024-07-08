@@ -68,76 +68,121 @@ This repository is aimed to help people to contribute in open source and learn G
 - **Responsive Design**: Ensuring compatibility across various devices and screen sizes.
 
 
-### 🍽️ How to Run the Food Ordering Website Locally
+# 🍽️ Food Ordering Website: Run Locally & Contribute
 
-### Step 1: 🖥️ Clone the Project Repository
+## 📥 Clone the Repository
 
-First, you need to clone the repository to your local machine. This process downloads a copy of the project files.
+1. **Open Terminal or Command Prompt**:
+   - **Windows**: Open Command Prompt (search `cmd`).
+   - **macOS**: Open Terminal (Cmd + Space, type `Terminal`).
+   - **Linux**: Open Terminal (Ctrl + Alt + T).
 
-1. **Open Terminal or Command Prompt:**
-   - On **Windows**: You can open Command Prompt by typing `cmd` in the Start menu search bar and pressing Enter.
-   - On **macOS**: You can open Terminal by pressing `Cmd + Space`, typing `Terminal`, and pressing Enter.
-   - On **Linux**: You can open Terminal from your applications menu or by using the `Ctrl + Alt + T` shortcut.
-
-2. **Run the Git Clone Command:**
-   In your terminal or command prompt, type the following command and press Enter:
-
+2. **Clone the Repository**:
    ```bash
    git clone https://github.com/khushi-joshi-05/FoodOrderingWebsite.git
    ```
+   This will create a `FoodOrderingWebsite` directory with all project files.
 
-   This command will create a new directory named `FoodOrderingWebsite` in your current location, containing all the files from the repository.
+## 📂 Navigate to the Project Directory
 
-### Step 2: 📂 Navigate to the Project Directory
-
-Now, change your current directory to the newly created project directory.
-
-1. **Navigate Using Terminal or Command Prompt:**
-   After cloning the repository, run the following command:
-
+1. **Change Directory**:
    ```bash
    cd FoodOrderingWebsite
    ```
 
-   This command will change your working directory to the `FoodOrderingWebsite` directory, where all the project files are located.
+## 🌐 View the Website Locally
 
-### Step 3: 🌐 Open the `index.html` File
+### Option A: Using Command Line
 
-To view the website locally, you need to open the `index.html` file in your web browser.
-
-#### Option A: Using the Command Line
-
-- **On macOS**: You can open the `index.html` file directly from the terminal using the following command:
-
+- **macOS**:
   ```bash
   open index.html
   ```
-
-- **On Windows**: You can open the `index.html` file directly from the command prompt using the following command:
-
+- **Windows**:
   ```bash
   start index.html
   ```
-
-- **On Linux**: You can open the `index.html` file directly from the terminal using the following command:
-
+- **Linux**:
   ```bash
   xdg-open index.html
   ```
 
-#### Option B: Opening Manually
+### Option B: Open Manually
 
-1. **Open File Explorer (Windows) or Finder (macOS)**:
-   - On **Windows**: Press `Win + E` to open File Explorer.
-   - On **macOS**: Click on the Finder icon in the Dock.
+1. **File Explorer (Windows) or Finder (macOS)**:
+   - **Windows**: Press Win + E.
+   - **macOS**: Click Finder in the Dock.
 
-2. **Navigate to the Project Directory**:
-   - Browse to the location where you cloned the repository.
+2. **Navigate to `FoodOrderingWebsite` Directory**:
+   - Browse to the cloned repository location.
    - Open the `FoodOrderingWebsite` directory.
 
-3. **Open the `index.html` File**:
-   - Find the `index.html` file within the `FoodOrderingWebsite` directory.
-   - Double-click on `index.html` to open it in your default web browser.
+3. **Open `index.html`**:
+   - Locate `index.html`.
+   - Double-click to open it in your default browser.
+
+## 🛠️ Contributing
+
+### Create an Issue
+
+1. **Navigate to the GitHub Repository**:
+   - Go to [FoodOrderingWebsite Repository](https://github.com/khushi-joshi-05/FoodOrderingWebsite).
+
+2. **Open the Issues Tab**:
+   - Click on `Issues`.
+   - Click on `New issue`.
+   - Describe the issue clearly and submit.
+
+### Fork, Commit, and Push Changes
+
+1. **Fork the Repository**:
+   - Click on `Fork` at the top right of the repository page.
+
+2. **Clone Your Fork**:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/FoodOrderingWebsite.git
+   ```
+
+3. **Create a New Branch**:
+   ```bash
+   cd FoodOrderingWebsite
+   git checkout -b your-branch-name
+   ```
+
+4. **Make Changes**:
+   - Edit files as needed.
+
+5. **Add and Commit Changes**:
+   ```bash
+   git add .
+   git commit -m "Your commit message"
+   ```
+
+6. **Push to Your Fork**:
+   ```bash
+   git push origin your-branch-name
+   ```
+
+### Create a Pull Request
+
+1. **Navigate to Your Fork on GitHub**:
+   - Go to your forked repository.
+
+2. **Open the Pull Requests Tab**:
+   - Click on `Pull requests`.
+   - Click on `New pull request`.
+
+3. **Compare Changes**:
+   - Select the base repository and branch.
+   - Select your fork and branch.
+
+4. **Submit the Pull Request**:
+   - Click on `Create pull request`.
+   - Describe your changes and submit.
+
+---
+
+Happy coding! Feel free to contribute and help us improve the Food Ordering Website. 🍕
 
 ### Additional Notes 📝
 

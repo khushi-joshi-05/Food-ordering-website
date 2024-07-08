@@ -41,9 +41,32 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="../Css-files/services1.css" />
     <link rel="stylesheet" href="../Css-files/scroll-top-button.css" />
+    <style>
+         #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #e21f1f;
+            z-index: 9999;
+        }
+    </style>
   </head>
 
   <body>
+        <!-- Progress bar -->
+        <div id="progressBar"></div>
+        <script>
+            window.onscroll = function () {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("progressBar").style.width = scrolled + "%";
+            };
+        </script>
+        <!-- end -->
+    
     <div class="head_container">
       <div id="loader-wrapper">
         <div id="loader"></div>
@@ -72,18 +95,18 @@
             <ul class="navbar-nav center-links">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="../index.html"
-                  >Home</a
+                  ><i class="fa-solid fa-house"></i> Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../Html-files/menu.html">Menu</a>
+                <a class="nav-link" href="../Html-files/menu.html"><i class="fa-solid fa-bars"></i> Menu</a>
               </li>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link active services"
                   href="../Html-files/services.html"
                   aria-expanded="false"
-                  >Services</a
+                  ><i class="fa-solid fa-gear"></i>  Services</a
                 >
                 <ul class="dropdown-menu">
                   <li>
@@ -98,11 +121,11 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../Html-files/contact.html"
-                  >Contact Us</a
+                  ><i class="fa-solid fa-phone"></i> Contact Us</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../Html-files/offers.html">Offers</a>
+                <a class="nav-link" href="../Html-files/offers.html"><i class="fa-solid fa-tag"></i> Offers</a>
               </li>
             </ul>
           </div>
@@ -117,10 +140,10 @@
           <div class="collapse navbar-collapse hamburgeritems enddiv order-3">
             <ul class="navbar-nav end-links">
               <li class="nav-item">
-                <a class="nav-link" href="../Html-files/login.html">Login</a>
+                <a class="nav-link" href="../Html-files/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../Html-files/signup.html">Sign-Up</a>
+                <a class="nav-link" href="../Html-files/signup.html"><i class="fa-solid fa-user"></i> Sign-Up</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="../Html-files/cart.html">
@@ -361,51 +384,49 @@
               <h5 class="mb-3">Exclusive Offers</h5>
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Foodie Discounts</a>
+                    <a href="#" class="nav-link">Foodie Discounts</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Limited-Time Promotions</a>
+                    <a class="nav-link" href="/Html-files/offers/limited-time-products.html">Limited-Time Promotions</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Special Event Packages</a>
+                    <a class="nav-link" href="/Html-files/offers/special-event.html">Special Event Packages</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Membership Benefits</a>
+                    <a class="nav-link" href="/Html-files/offers/membership-benifits.html">Membership Benefits</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Early Access to New Recipes</a>
+                    <a class="nav-link" href="/Html-files/offers/early-access.html">Early Access to New Recipes</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">VIP Foodie Events</a>
+                    <a class="nav-link" href="/Html-files/offers/vip-food-event.html">VIP Foodie Events</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
-                    >Personalized Culinary Experiences</a
-                  >
+                    <a class="nav-link" href="/Html-files/offers/culinary-experience.html">Personalized Culinary Experiences</a>
                 </li>
-              </ul>
+            </ul>
             </div>
 
             <div class="col-6 col-sm-4 col-md-4 col-xl-3">
               <h5 class="mb-3">Payment Products</h5>
               <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a href="" class="nav-link">Secure Checkout</a>
+                  <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
                 </li>
                 <li class="nav-item">
-                  <a href="" class="nav-link">Credit/Debit Cards</a>
+                  <a href="/Html-files/payment/credit-debit-card.html" class="nav-link">Credit/Debit Cards</a>
                 </li>
                 <li class="nav-item">
-                  <a href="" class="nav-link">Secure Checkout</a>
+                  <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
                 </li>
                 <li class="nav-item">
-                  <a href="" class="nav-link">Online Payment</a>
+                  <a href="/Html-files/payment/online-payment.html" class="nav-link">Online Payment</a>
                 </li>
                 <li class="nav-item">
-                  <a href="" class="nav-link">Mobile Wallets</a>
+                  <a href="/Html-files/payment/mobile-wallet.html" class="nav-link">Mobile Wallets</a>
                 </li>
                 <li class="nav-item">
-                  <a href="" class="nav-link">Contactless Payments</a>
+                  <a href="/Html-files/payment/contact-less-payment.html" class="nav-link">Contactless Payments</a>
                 </li>
               </ul>
             </div>
