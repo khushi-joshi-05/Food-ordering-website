@@ -6,27 +6,17 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodie</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- Adding favicon image -->
     <link rel="shortcut icon" href="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png" type="image/x-icon">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
-        defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="Css-files/scroll-top-button.css">
     <link rel="stylesheet" href="Css-files/navbar.css">
     <link rel="stylesheet" href="Css-files/footer.css">
@@ -55,7 +45,7 @@
     <!-- Progress bar -->
     <div id="progressBar"></div>
     <script>
-        window.onscroll = function () {
+        window.onscroll = function() {
             var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             var scrolled = (winScroll / height) * 100;
@@ -73,9 +63,7 @@
             <a href="index.html" class="navbar-brand opacity-75 flex-fill">
                 <img src="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png" height="40">
             </a>
-            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse"
-                data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
@@ -92,7 +80,7 @@
                             <li><a class="dropdown-item" href="#">Ordering options</a></li>
                             <li><a class="dropdown-item" href="#">Order Tracking</a></li>
                             <li><a class="dropdown-item" href="#">Customer Support</a></li>
-                            <li><a class="dropdown-item" href="#">FAQS</a></li>
+                            <li><a class="dropdown-item" href="#FAQ">FAQS</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -144,7 +132,7 @@
             <li data-bs-target="#homeSlider" data-bs-slide-to="3"></li>
             <li data-bs-target="#homeSlider" data-bs-slide-to="4"></li>
         </ol>
-    
+
         <div class="carousel-inner">
             <!-- Slide 1 -->
             <div class="carousel-item active">
@@ -207,7 +195,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#homeSlider" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -218,7 +206,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </section>
-    
+
     <!-- Add some custom CSS for transitions and responsiveness -->
     <style>
         .slider-bg {
@@ -227,22 +215,22 @@
             height: 100vh;
             overflow: hidden;
         }
-    
+        
         .homeimg {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-    
+        
         .carousel-caption {
             text-align: center;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
         }
-    
+        
         .slider-reveal {
             animation: fadeInUp 1.5s ease-in-out;
         }
-    
+        
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -253,12 +241,13 @@
                 transform: none;
             }
         }
-    
+        
         @media (max-width: 768px) {
             .slider-title {
                 font-size: 1.5rem;
             }
-            .slider-subtitle, .slider-text {
+            .slider-subtitle,
+            .slider-text {
                 font-size: 1rem;
             }
             .carousel-caption {
@@ -266,7 +255,7 @@
             }
         }
     </style>
-    
+
 
     <section class="about_us pt-5">
         <div class="hstack discount-rolling">
@@ -277,35 +266,28 @@
             <h1 class="poppins-light pe-5 ps-1 py-1">Get <span> 30% OFF </span> on your first order!</h1>
         </div>
 
-        <h1 class="tagline py-2 text-center mx-auto" data-aos="zoom-out-up" data-aos-offset="170"
-            data-aos-easing="ease-in-out">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
+        <h1 class="tagline py-2 text-center mx-auto" data-aos="zoom-out-up" data-aos-offset="170" data-aos-easing="ease-in-out">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
 
-        <div class="qualities row g-3 px-2" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170"
-            data-aos-easing="ease-in-out">
+        <div class="qualities row g-3 px-2" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
             <div class="col-md-4">
                 <div class="card rounded-5">
                     <div class="img-container">
-                        <img src="https://shahidining.com.au/wp-content/uploads/2020/05/secret-to-indian-flavour-1536x864.jpg"
-                            class="img-fluid mt-4 " alt="...">
+                        <img src="https://shahidining.com.au/wp-content/uploads/2020/05/secret-to-indian-flavour-1536x864.jpg" class="img-fluid mt-4 " alt="...">
                     </div>
                     <div class="card-body">
                         <h2 class="card-title">Authentic Indian Flavors</h2>
-                        <p class="card-text">From aromatic curries to flavorful biryanis, our menu showcases the
-                            diversity and deliciousness of Indian cuisine.</p>
+                        <p class="card-text">From aromatic curries to flavorful biryanis, our menu showcases the diversity and deliciousness of Indian cuisine.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card rounded-5">
                     <div class="img-container">
-                        <img src="https://saavi.com.au/wp-content/uploads/2016/02/image0023-1.jpg"
-                            class="img-fluid mt-4" alt="...">
+                        <img src="https://saavi.com.au/wp-content/uploads/2016/02/image0023-1.jpg" class="img-fluid mt-4" alt="...">
                     </div>
                     <div class="card-body">
                         <h2 class="card-title">Tech-Infused Dining Experience</h2>
-                        <p class="card-text">Customers can use apps to place orders, customize their dishes, and even
-                            provide feedback, making
-                            their visit more convenient and interactive.
+                        <p class="card-text">Customers can use apps to place orders, customize their dishes, and even provide feedback, making their visit more convenient and interactive.
                         </p>
                     </div>
                 </div>
@@ -313,14 +295,11 @@
             <div class="col-md-4">
                 <div class="card rounded-5">
                     <div class="img-container">
-                        <img src="https://i.ndtvimg.com/i/2015-06/fusion-food_625x350_81434107799.jpg"
-                            class="img-fluid mt-4" alt="...">
+                        <img src="https://i.ndtvimg.com/i/2015-06/fusion-food_625x350_81434107799.jpg" class="img-fluid mt-4" alt="...">
                     </div>
                     <div class="card-body">
                         <h2 class="card-title">Innovative Fusion Dishes</h2>
-                        <p class="card-text">The combinations of Indian and international cuisines not only tantalize
-                            taste buds
-                            but also provide unique experience.</p>
+                        <p class="card-text">The combinations of Indian and international cuisines not only tantalize taste buds but also provide unique experience.</p>
                     </div>
                 </div>
             </div>
@@ -330,29 +309,22 @@
     <section class="services_container">
         <div class="card">
             <div class="d-flex justify-content-center img-container">
-                <img src="https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300"
-                    alt="" class="card-img">
+                <img src="https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300" alt="" class="card-img">
             </div>
             <div class="card-img-overlay row w-100 m-0">
-                <div class="box_main m-auto col-md-9 col-xl-3" data-aos="zoom-out-right" data-aos-duration="1000"
-                    data-aos-offset="170" data-aos-easing="ease-in-out">
+                <div class="box_main m-auto col-md-9 col-xl-3" data-aos="zoom-out-right" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
                     <h1>Bringing <br>happiness<br> to you</h1>
-                    <p>Food is more than sustenance; it's a source of pure happiness. From the first bite of a favorite
-                        childhood dish to the thrill of discovering new flavors, food has a unique way of filling
-                        our hearts with joy.</p>
+                    <p>Food is more than sustenance; it's a source of pure happiness. From the first bite of a favorite childhood dish to the thrill of discovering new flavors, food has a unique way of filling our hearts with joy.</p>
                 </div>
-                <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000"
-                    data-aos-offset="170" data-aos-easing="ease-in-out">
+                <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
                     <h1>Online <br>Delivery</h1>
                     <a href="#" class="btn btn-outline-light">Order Online</a>
                 </div>
-                <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000"
-                    data-aos-offset="170" data-aos-easing="ease-in-out">
+                <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
                     <h1>Click & <br>Collect</h1>
                     <a href="#" class="btn btn-outline-light">Take out Order</a>
                 </div>
-                <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000"
-                    data-aos-offset="170" data-aos-easing="ease-in-out">
+                <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
                     <h1>Restaurant<br> Dining</h1>
                     <a href="/Html-files/book-table.html" class="btn btn-outline-light">Book Table </a>
                 </div>
@@ -361,16 +333,13 @@
     </section>
 
     <section class="menu_container">
-        <div class="mainhead text-center" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170"
-            data-aos-easing="ease-in-out">
+        <div class="mainhead text-center" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
             <h1>"Get ready to explore our delicious range of dishes!"</h1>
-            <p>"Welcome to a world of culinary delights where every bite tells a flavorful story. Explore our diverse
-                menu and savor the essence of exquisite dining." </p>
+            <p>"Welcome to a world of culinary delights where every bite tells a flavorful story. Explore our diverse menu and savor the essence of exquisite dining." </p>
             <a class="btn btn-danger" href="Html-files/menu.html">View Menu</a>
         </div>
 
-        <div class="menu_items row container-fluid g-3 p-5 mx-auto" data-aos="zoom-out-up" data-aos-duration="1000"
-            data-aos-offset="170" data-aos-easing="ease-in-out">
+        <div class="menu_items row container-fluid g-3 p-5 mx-auto" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
             <div class="col-sm-6 col-lg-3">
                 <div class="items card">
                     <div class="img-container ">
@@ -385,8 +354,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="items card">
                     <div class="img-container">
-                        <img
-                            src="https://imgmediagumlet.lbb.in/media/2018/04/5acf822418a23c0efc21496b_1523548708582.jpg?fm=webp&w=750&h=500&dpr=1">
+                        <img src="https://imgmediagumlet.lbb.in/media/2018/04/5acf822418a23c0efc21496b_1523548708582.jpg?fm=webp&w=750&h=500&dpr=1">
                     </div>
                     <div class="card-body">
                         <h3>Dessert</h3>
@@ -397,8 +365,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="items card">
                     <div class="img-container">
-                        <img
-                            src="https://imgmediagumlet.lbb.in/media/2019/07/5d27585dc18a2b0ed5739eb5_1562859613517.jpg?fm=webp&w=750&h=500&dpr=1">
+                        <img src="https://imgmediagumlet.lbb.in/media/2019/07/5d27585dc18a2b0ed5739eb5_1562859613517.jpg?fm=webp&w=750&h=500&dpr=1">
                     </div>
                     <div class="card-body">
                         <h3>Snacks</h3>
@@ -409,8 +376,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="items card">
                     <div class="img-container">
-                        <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaqAsoDyO5HBOSLupaimFGCkiE_zPbLYyYog&s">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaqAsoDyO5HBOSLupaimFGCkiE_zPbLYyYog&s">
                     </div>
                     <div class="card-body">
                         <h3>Juices</h3>
@@ -422,12 +388,10 @@
         </div>
     </section>
 
-    <section class="testimonial-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170"
-        data-aos-easing="ease-in-out">
+    <section class="testimonial-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
         <h2 class="tagline pt-5"> Our Happy Clients </h2>
         <p class="description">
-            At Foodie, we pride ourselves on delivering delicious meals & exceptional service. Don't just take our word
-            for it - hear what our satisfied customers have to say!
+            At Foodie, we pride ourselves on delivering delicious meals & exceptional service. Don't just take our word for it - hear what our satisfied customers have to say!
         </p>
         <div id="testimonials" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -437,8 +401,7 @@
                     </div>
                     <div class="carousel-caption">
                         <h3 class="overview">Matt Gilbert</h3>
-                        <p class="testimonial-text">Foodie never disappoints! The food is always fresh, delicious, and
-                            delivered right on time. My go-to for all my meals!</p>
+                        <p class="testimonial-text">Foodie never disappoints! The food is always fresh, delicious, and delivered right on time. My go-to for all my meals!</p>
                         <div class="star-rating">
                             <ul class="list-inline d-flex justify-content-center">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -456,8 +419,7 @@
                     </div>
                     <div class="carousel-caption">
                         <h3 class="overview">John Doe</h3>
-                        <p class="testimonial-text">I love the variety on Foodie! There's something for everyone, and
-                            the delivery service is incredibly reliable</p>
+                        <p class="testimonial-text">I love the variety on Foodie! There's something for everyone, and the delivery service is incredibly reliable</p>
                         <div class="star-rating">
                             <ul class="list-inline d-flex justify-content-center">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -474,8 +436,7 @@
                     </div>
                     <div class="carousel-caption">
                         <h3 class="overview">Laren Green</h3>
-                        <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my
-                            dining experience so much more convenient.</p>
+                        <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my dining experience so much more convenient.</p>
                         <div class="star-rating">
                             <ul class="list-inline d-flex justify-content-center">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -489,13 +450,11 @@
                 </div>
                 <div class="carousel-item">
                     <div class="img-box my-5">
-                        <img src="https://static.vecteezy.com/system/resources/thumbnails/029/284/491/small_2x/cheerful-brunette-business-woman-isolated-png.png"
-                            alt="">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/029/284/491/small_2x/cheerful-brunette-business-woman-isolated-png.png" alt="">
                     </div>
                     <div class="carousel-caption">
                         <h3 class="overview">sara Bahnour</h3>
-                        <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my
-                            dining experience so much more convenient.</p>
+                        <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my dining experience so much more convenient.</p>
                         <div class="star-rating">
                             <ul class="list-inline d-flex justify-content-center">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -509,13 +468,11 @@
                 </div>
                 <div class="carousel-item">
                     <div class="img-box my-5">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/344/088/non_2x/businessman-isolated-illustration-ai-generative-free-png.png"
-                            alt="">
+                        <img src="https://static.vecteezy.com/system/resources/previews/024/344/088/non_2x/businessman-isolated-illustration-ai-generative-free-png.png" alt="">
                     </div>
                     <div class="carousel-caption">
                         <h3 class="overview">Mr Jomes Robin</h3>
-                        <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my
-                            dining experience so much more convenient.</p>
+                        <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my dining experience so much more convenient.</p>
                         <div class="star-rating">
                             <ul class="list-inline d-flex justify-content-center">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -579,49 +536,42 @@
 
             <div class="faq-item">
                 <h2>How do I place an order?</h2>
-                <p>To place an order, browse our menu, select the items you want, and add them to your cart. Once you’re
-                    ready, click on the cart icon and proceed to checkout. Follow the instructions to complete your
-                    order.</p>
+                <p>To place an order, browse our menu, select the items you want, and add them to your cart. Once you’re ready, click on the cart icon and proceed to checkout. Follow the instructions to complete your order.
+                </p>
             </div>
 
             <div class="faq-item">
                 <h2>What payment methods do you accept?</h2>
-                <p>We accept various payment methods including credit/debit cards, net banking, and popular digital
-                    wallets. You can select your preferred payment method at the checkout page.</p>
+                <p>We accept various payment methods including credit/debit cards, net banking, and popular digital wallets. You can select your preferred payment method at the checkout page.</p>
             </div>
 
             <div class="faq-item">
                 <h2>Can I schedule an order for later?</h2>
-                <p>Yes, you can schedule an order for a later time. During checkout, select the delivery time that suits
-                    you best.</p>
+                <p>Yes, you can schedule an order for a later time. During checkout, select the delivery time that suits you best.</p>
             </div>
 
             <div class="faq-item">
                 <h2>How can I track my order?</h2>
-                <p>Once your order is confirmed, you will receive a tracking link via email or SMS. You can use this
-                    link to track the status of your delivery in real-time.</p>
+                <p>Once your order is confirmed, you will receive a tracking link via email or SMS. You can use this link to track the status of your delivery in real-time.</p>
             </div>
 
             <div class="faq-item">
                 <h2>What should I do if I have a problem with my order?</h2>
-                <p>If you encounter any issues with your order, please contact our customer support immediately. You can
-                    reach us via the contact form on our website, email, or phone. We’re here to help you!</p>
+                <p>If you encounter any issues with your order, please contact our customer support immediately. You can reach us via the contact form on our website, email, or phone. We’re here to help you!</p>
             </div>
 
             <div class="faq-item">
                 <h2>Is there a minimum order value?</h2>
-                <p>Yes, there is a minimum order value depending on your location. The minimum order amount will be
-                    displayed during the checkout process.</p>
+                <p>Yes, there is a minimum order value depending on your location. The minimum order amount will be displayed during the checkout process.</p>
             </div>
 
             <div class="faq-item">
                 <h2>Do you offer any discounts or promotions?</h2>
-                <p>We regularly offer discounts and promotions. Check our website or subscribe to our newsletter to stay
-                    updated on the latest deals and offers.</p>
+                <p>We regularly offer discounts and promotions. Check our website or subscribe to our newsletter to stay updated on the latest deals and offers.</p>
             </div>
         </div>
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
+            document.addEventListener('DOMContentLoaded', function() {
                 const faqItems = document.querySelectorAll('.faq-item');
 
                 const observer = new IntersectionObserver(entries => {
@@ -631,7 +581,9 @@
                             observer.unobserve(entry.target);
                         }
                     });
-                }, { threshold: 0.3 });
+                }, {
+                    threshold: 0.3
+                });
 
                 faqItems.forEach(item => {
                     observer.observe(item);
@@ -646,10 +598,8 @@
         <h2 class="text-center">Download the App now!</h2>
         <br>
         <p>For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
-        <a href="#"><img src="/Images/app_download/get_it_on_google_play_store.png" class="app-download-img"
-                alt="Get it on Google Play Store"></a>
-        <a href="#"><img src="./Images/app_download/download-on-the-app-store.png" class="app-download-img"
-                alt="Download on the Apple App Store"></a>
+        <a href="#"><img src="/Images/app_download/get_it_on_google_play_store.png" class="app-download-img" alt="Get it on Google Play Store"></a>
+        <a href="#"><img src="./Images/app_download/download-on-the-app-store.png" class="app-download-img" alt="Download on the Apple App Store"></a>
     </div>
 
     <footer>
@@ -742,10 +692,8 @@
                     <div class="col-6 col-md-3 col-xl-4">
                         <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
                             <h3 class="text-center mb-3">Contact Us!</h3>
-                            <input type="email" id="footer-email" name="email" placeholder="Your Email"
-                                class="text-center form-control mb-2" required>
-                            <textarea id="footer-message" name="footer-message" placeholder="Your Message"
-                                class="text-center form-control mb-2" required></textarea>
+                            <input type="email" id="footer-email" name="email" placeholder="Your Email" class="text-center form-control mb-2" required>
+                            <textarea id="footer-message" name="footer-message" placeholder="Your Message" class="text-center form-control mb-2" required></textarea>
                             <div class="d-grid gap-2 col-12">
                                 <button type="submit" class="btn btn-danger">Send Message</button>
                             </div>
@@ -766,12 +714,10 @@
                     <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
                     <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
                     <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
-                    <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
-                        target="_blank"></a>
+                    <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
                     <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
                 </div>
-                <p class="text"> Stay connected with us on social media for the latest updates, recipes, and foodie
-                    adventures. </p>
+                <p class="text"> Stay connected with us on social media for the latest updates, recipes, and foodie adventures. </p>
                 <div>
                     Give your valuable
                     <Link to="">
@@ -803,13 +749,11 @@
     <script src="Html-files/navbar.js"></script>
     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
     <script>
-        AOS.init(
-            {
-                duration: 1000,
-                easing: 'ease',
-                once: false,
-            }
-        );
+        AOS.init({
+            duration: 1000,
+            easing: 'ease',
+            once: false,
+        });
 
         // Chatbot
         window.botpressWebChat.init({
