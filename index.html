@@ -13,7 +13,7 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- Adding favicon image -->
-    <link rel="shortcut icon" href="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Images/favicon/Foodie_Favicon.png" type="image/x-icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
@@ -33,37 +33,9 @@
     <link rel="stylesheet" href="Css-files/footer.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <style>
-        #progressBar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 8px;
-            background-color: #e21f1f;
-            z-index: 9999;
-        }
-    </style>
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <script src="https://kit.fontawesome.com/b08b6de27e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
-
 </head>
 
 <body>
-    <!-- Progress bar -->
-    <div id="progressBar"></div>
-    <script>
-        window.onscroll = function () {
-            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var scrolled = (winScroll / height) * 100;
-            document.getElementById("progressBar").style.width = scrolled + "%";
-        };
-    </script>
-    <!-- end -->
     <div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
@@ -72,7 +44,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a href="index.html" class="navbar-brand opacity-75 flex-fill">
-                <img src="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png" height="40">
+                <img src="Images/logo/Foodielogo.png" height="40">
             </a>
             <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse"
                 data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false"
@@ -82,133 +54,129 @@
             <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
                 <ul class="navbar-nav center-links">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">
+                            <i class="fa-solid fa-home"></i> Home
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/menu.html"><i class="fa-solid fa-bars"></i> Menu</a>
+                        <a class="nav-link" href="Html-files/menu.html">
+                            <i class="fa-solid fa-book-open"></i> Menu
+                        </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link services" href="/Html-files/services.html" aria-expanded="false"><i class="fa-solid fa-gear"></i> Services</a>
 
+                        <a class="nav-link services" href="/Html-files/services.html" aria-expanded="false"><i class="fa-solid fa-gear"></i> Services</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Ordering options</a></li>
-                            <li><a class="dropdown-item" href="#">Order Tracking</a></li>
-                            <li><a class="dropdown-item" href="#">Customer Support</a></li>
-                            <li><a class="dropdown-item" href="#">FAQS</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-check"></i> Ordering options</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-truck"></i> Order Tracking</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-headset"></i> Customer Support</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-question"></i> FAQS</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#FAQ">FAQS</a>
                     </li>
                     <li class="nav-item">
-
                         <a class="nav-link" href="Html-files/contact.html"><i class="fa-solid fa-phone"></i> Contact Us</a>
-
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/offers.html"><i class="fa-solid fa-tag"></i> Offers</a>
+                        <a class="nav-link" href="Html-files/offers.html">
+                            <i class="fa-solid fa-gift"></i> Offers
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/RateUs.html"><i class="fa-solid fa-star"></i> Rate Us</a>
+                        <a class="nav-link" href="Html-files/RateUs.html">
+                            <i class="fa-solid fa-star"></i> Rate Us
+                        </a>
                     </li>
                 </ul>
             </div>
             <div class="order-0 ml-auto p-2">
                 <img class="nav-link" src="Images/navbar/sun.png" id="theme-toggle-icon" alt="theme toggler button">
             </div>
-            <div class="collapse navbar-collapse hamburgeritems enddiv order-3 ">
+            <div class="collapse navbar-collapse hamburgeritems enddiv order-3">
                 <ul class="navbar-nav end-links">
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                        <a class="nav-link" href="Html-files/login.html">
+                            <i class="fa-solid fa-sign-in"></i> Login
+                        </a>
                     </li>
+                    
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/signup.html"><i class="fa-solid fa-user"></i> Sign-Up</a>
+                        <a class="nav-link" href="Html-files/signup.html">
+                            <i class="fa-solid fa-user-plus"></i> Sign-Up
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/cart.html">
-                            Cart
-                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fa-solid fa-cart-shopping"></i> Cart
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <section id="homeSlider" class="carousel slide carousel-fade bg-black" data-bs-ride="carousel" data-bs-interval="5000">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-bs-target="#homeSlider" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#homeSlider" data-bs-slide-to="1"></li>
-            <li data-bs-target="#homeSlider" data-bs-slide-to="2"></li>
-            <li data-bs-target="#homeSlider" data-bs-slide-to="3"></li>
-            <li data-bs-target="#homeSlider" data-bs-slide-to="4"></li>
-        </ol>
     
+    <section id="homeSlider" class="carousel slide carousel-fade bg-black" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <!-- Slide 1 -->
             <div class="carousel-item active">
                 <div class="slider-bg d-flex justify-content-center">
-                    <img src="Images/homeSliderImages/home-slider-1.jpg" class="homeimg" alt="Slide 1 Image">
+                    <img src="Images/homeSliderImages/home-slider-1.jpg" class="homeimg">
                 </div>
                 <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                     <p class="slider-subtitle slider-reveal">TRADITIONAL & HYGIENIC</p>
-                    <h1 class="slider-title slider-reveal">For the <span>love</span> of <br><span style="color:rgb(151, 33, 202);">delicious</span> food</h1>
-                    <p class="slider-text slider-reveal">Come with family & feel the joy of mouthwatering food</p>
-                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto" role="button"><span class="text text-1">VIEW OUR MENU</span></a>
+                    <h1 class="slider-title slider-reveal">
+                        For the love of <br>
+                        delicious food
+                    </h1>
+                    <p class="slider-text slider-reveal">
+                        come with family & feel the joy of mouthwatering food
+                    </p>
+                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto"
+                        role="button">
+                        <span class="text text-1">VIEW OUR MENU</span>
+                    </a>
                 </div>
             </div>
-            <!-- Slide 2 -->
             <div class="carousel-item">
                 <div class="slider-bg d-flex justify-content-center">
-                    <img src="Images/homeSliderImages/home-slider-2.jpg" class="homeimg" alt="Slide 2 Image">
+                    <img src="Images/homeSliderImages/home-slider-2.jpg" class="homeimg">
                 </div>
                 <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                     <p class="slider-subtitle slider-reveal">DELIGHTFUL EXPERIENCE</p>
-                    <h1 class="slider-title slider-reveal">Flavors Inspired by <br>the <span style="color:rgb(107, 107, 185);">Seasons</span></h1>
-                    <p class="slider-text slider-reveal">Come with family & feel the joy of mouthwatering food</p>
-                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto" role="button">VIEW OUR MENU</a>
+                    <h1 class="slider-title slider-reveal">
+                        Flavors Inspired by <br>
+                        the Seasons
+                    </h1>
+                    <p class="slider-text slider-reveal">
+                        come with family & feel the joy of mouthwatering food
+                    </p>
+                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto"
+                        role="button">
+                        VIEW OUR MENU
+                    </a>
                 </div>
             </div>
-            <!-- Slide 3 -->
             <div class="carousel-item">
                 <div class="slider-bg d-flex justify-content-center">
-                    <img src="Images/homeSliderImages/home-slider-3.jpg" class="homeimg" alt="Slide 3 Image">
+                    <img src="Images/homeSliderImages/home-slider-3.jpg" class="homeimg">
                 </div>
                 <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                     <p class="slider-subtitle slider-reveal">AMAZING & DELICIOUS</p>
-                    <h1 class="slider-title slider-reveal">Where every <span style="color:rgb(243, 239, 236)">flavour</span> <br>tells a <span style="color:rgb(48, 226, 104);">story</span></h1>
-                    <p class="slider-text slider-reveal">Come with family & feel the joy of mouthwatering food</p>
-                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto" role="button">VIEW OUR MENU</a>
-                </div>
-            </div>
-            <!-- Slide 4 -->
-            <div class="carousel-item">
-                <div class="slider-bg d-flex justify-content-center">
-                    <img src="Images/homeSliderImages/home-slider-4.jpg" class="homeimg" alt="Slide 4 Image">
-                </div>
-                <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-                    <p class="slider-subtitle slider-reveal">EXPERIENCE A FEAST FOR THE SENSES</p>
-                    <h2 class="slider-title slider-reveal">Bring your loved ones <br>and indulge</h2>
-                    <p class="slider-text slider-reveal">Come with family & feel the joy of mouthwatering food</p>
-                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto" role="button">VIEW OUR MENU</a>
-                </div>
-            </div>
-            <!-- Slide 5 -->
-            <div class="carousel-item">
-                <div class="slider-bg d-flex justify-content-center">
-                    <img src="Images/homeSliderImages/home-slider-5.jpg" class="homeimg" alt="Slide 5 Image">
-                </div>
-                <div class="carousel-caption d-flex flex-column justify-content-center h-100">
-                    <p class="slider-subtitle slider-reveal">SAVOR THE TASTE OF TRADITION</p>
-                    <h1 class="slider-title slider-reveal">Where every bite <br>tells a story</h1>
-                    <p class="slider-text slider-reveal">Come with family & feel the joy of mouthwatering food</p>
-                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto" role="button">VIEW OUR MENU</a>
+                    <h1 class="slider-title slider-reveal">
+                        Where every flavour <br>
+                        tells a story
+                    </h1>
+                    <p class="slider-text slider-reveal">
+                        come with family & feel the joy of mouthwatering food
+                    </p>
+                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto"
+                        role="button">
+                        VIEW OUR MENU
+                    </a>
                 </div>
             </div>
         </div>
-    
-        <!-- Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#homeSlider" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -218,6 +186,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </section>
+
     
     <!-- Add some custom CSS for transitions and responsiveness -->
     <style>
@@ -266,7 +235,11 @@
             }
         }
     </style>
-    
+
+    <br>
+    <br>
+    <br>
+
 
     <section class="about_us pt-5">
         <div class="hstack discount-rolling">
@@ -276,6 +249,10 @@
             <h1 class="poppins-light pe-5 ps-1 py-1">Get <span> 30% OFF </span> on your first order!</h1>
             <h1 class="poppins-light pe-5 ps-1 py-1">Get <span> 30% OFF </span> on your first order!</h1>
         </div>
+
+        <br>
+        <br>
+        <br>
 
         <h1 class="tagline py-2 text-center mx-auto" data-aos="zoom-out-up" data-aos-offset="170"
             data-aos-easing="ease-in-out">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
@@ -487,46 +464,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="img-box my-5">
-                        <img src="https://static.vecteezy.com/system/resources/thumbnails/029/284/491/small_2x/cheerful-brunette-business-woman-isolated-png.png"
-                            alt="">
-                    </div>
-                    <div class="carousel-caption">
-                        <h3 class="overview">sara Bahnour</h3>
-                        <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my
-                            dining experience so much more convenient.</p>
-                        <div class="star-rating">
-                            <ul class="list-inline d-flex justify-content-center">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-regular fa-star"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="img-box my-5">
-                        <img src="https://static.vecteezy.com/system/resources/previews/024/344/088/non_2x/businessman-isolated-illustration-ai-generative-free-png.png"
-                            alt="">
-                    </div>
-                    <div class="carousel-caption">
-                        <h3 class="overview">Mr Jomes Robin</h3>
-                        <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my
-                            dining experience so much more convenient.</p>
-                        <div class="star-rating">
-                            <ul class="list-inline d-flex justify-content-center">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-regular fa-star"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
             <!-- Carousel controls-->
             <button class="carousel-control-prev" data-bs-target="#testimonials" data-bs-slide="prev">
@@ -573,7 +510,7 @@
         </div>
     </section>
 
-    <section class="faq-section" id="FAQ">
+    <section class="faq-section">
         <div class="container faq-container">
             <h1>Frequently Asked Questions (FAQ)</h1>
 
@@ -620,25 +557,6 @@
                     updated on the latest deals and offers.</p>
             </div>
         </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const faqItems = document.querySelectorAll('.faq-item');
-
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.3 });
-
-                faqItems.forEach(item => {
-                    observer.observe(item);
-                });
-            });
-        </script>
-
     </section>
 
     <div class="app_download pb-4">
@@ -672,9 +590,6 @@
                                 <a class="nav-link" href="/Html-files/contact.html">Contact us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/FeedbackPage.html">Feedback Form</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="/Html-files/cart.html">Cart</a>
                             </li>
                         </ul>
@@ -684,30 +599,25 @@
                         <h5 class="mb-3">Exclusive Offers</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a href="/Html-files/offers/food-discount.html" class="nav-link">Foodie Discounts</a>
+                                <a href="#" class="nav-link">Foodie Discounts</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/offers/limited-time-products.html">Limited-Time
-                                    Promotions</a>
+                                <a class="nav-link" href="#">Limited-Time Promotions</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/offers/special-event.html">Special Event
-                                    Packages</a>
+                                <a class="nav-link" href="#">Special Event Packages</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/offers/membership-benifits.html">Membership
-                                    Benefits</a>
+                                <a class="nav-link" href="#">Membership Benefits</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/offers/early-access.html">Early Access to New
-                                    Recipes</a>
+                                <a class="nav-link" href="#">Early Access to New Recipes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/offers/vip-food-event.html">VIP Foodie Events</a>
+                                <a class="nav-link" href="#">VIP Foodie Events</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/offers/culinary-experience.html">Personalized
-                                    Culinary Experiences</a>
+                                <a class="nav-link" href="#">Personalized Culinary Experiences</a>
                             </li>
                         </ul>
                     </div>
@@ -716,24 +626,22 @@
                         <h5 class="mb-3">Payment Products</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
+                                <a href="" class="nav-link">Secure Checkout</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/Html-files/payment/credit-debit-card.html" class="nav-link">Credit/Debit
-                                    Cards</a>
+                                <a href="" class="nav-link">Credit/Debit Cards</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
+                                <a href="" class="nav-link">Secure Checkout</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/Html-files/payment/online-payment.html" class="nav-link">Online Payment</a>
+                                <a href="" class="nav-link">Online Payment</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/Html-files/payment/mobile-wallet.html" class="nav-link">Mobile Wallets</a>
+                                <a href="" class="nav-link">Mobile Wallets</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/Html-files/payment/contact-less-payment.html" class="nav-link">Contactless
-                                    Payments</a>
+                                <a href="" class="nav-link">Contactless Payments</a>
                             </li>
                         </ul>
                     </div>
@@ -772,12 +680,12 @@
                 </div>
                 <p class="text"> Stay connected with us on social media for the latest updates, recipes, and foodie
                     adventures. </p>
-                <div>
-                    Give your valuable
-                    <Link to="">
-                    <a href="/Html-files/feedback.html"><b>feedback!</b></a>
-                    </Link>
-                </div>
+                 <div >
+                        Give your valuable 
+                                <Link to="" >
+                                    <a  href="/Html-files/feedback.html"><b>feedback!</b></a>
+                                </Link>
+                        </div>
             </div>
             <div class="copyright py-1">
                 &copy;
