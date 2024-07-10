@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.promotion-container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    text-align: center;
+}
+
+.promotion-header {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 0;
+}
+
+.promotion-content {
+    padding: 20px;
+}
+
+.promotion-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #ff5722;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.cta-button:hover {
+    background-color: #e64a19;
+}
+
+.promotion-timer {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+#countdown {
+    font-size: 2em;
+    color: #ff5722;
+}
+
+@media (max-width: 600px) {
+    .promotion-container {
+        padding: 10px;
+    }
+
+    .promotion-content p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 1em;
+    }
+
+    #countdown {
+        font-size: 1.5em;
+    }
+}
