@@ -1,0 +1,244 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+header {
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header .logo {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav .nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav .nav-links li {
+  margin-left: 20px;
+}
+
+nav .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.hero {
+  background-image: url("https://i.pinimg.com/564x/ee/cf/e2/eecfe24f6f4505c44fd82c5e7902918e.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero h2 {
+  margin: 0 0 10px;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.hero p {
+  margin: 0 0 20px;
+  font-weight: 300;
+}
+
+.cta-button {
+  background-color: #ff6347;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.cta-button:hover {
+  background-color: #e55337;
+}
+
+.discounts {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.discounts h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 0;
+  font-size: 20px;
+  color: #ff6347;
+  font-weight: 400;
+}
+
+.about {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.about p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.testimonials {
+  background-color: #f1f1f1;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.testimonial p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.testimonial h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+footer {
+  color: white;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-container div {
+  flex: 1;
+  margin: 10px 20px;
+}
+
+.footer-container h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.footer-container p,
+.footer-container ul {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footer-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-container ul li {
+  margin-bottom: 10px;
+}
+
+.footer-container ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 20px;
+}

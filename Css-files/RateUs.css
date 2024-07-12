@@ -102,3 +102,25 @@ body {
     background-color: #cc9900;
     transform: translateY(0);
 }
+
+@media (max-width: 768px){
+    .rateus-container {
+        width: 80%;
+        height: 90%;
+    }
+
+    .rateus-heading {
+        font-size: 20px;
+    }
+
+    .star-rating {
+        margin-bottom: 10px;
+    }
+
+    body{
+        padding-top: 50px;
+        
+        
+    }
+    
+}

@@ -46,3 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+function handleSubmit(event) 
+{
+    event.preventDefault();
+    
+    const feedbackMessage = document.getElementById('feedback-message');
+    feedbackMessage.style.display = 'block';
+
+    setTimeout(() => 
+    {
+        feedbackMessage.style.display = 'none';
+        document.getElementById('survey-form').reset();
+    }, 3000);
+}

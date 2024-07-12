@@ -237,3 +237,30 @@ background-size: 100% 100%;}
     }
     
 }
+
+
+
+/* css for address information */
+#info-checkout {
+    margin: 0;
+    display: flex;
+    padding: 8px;
+}
+
+#label-checkout {
+    padding-bottom: 4px;
+}
+
+.address-text {
+    min-width: 100px;
+    width: 50rem;
+}
+
+.address-btn a {
+    text-decoration: none;
+    color: black;
+    background-color: #f11a1a;
+    padding: 4px 6px;
+    border: 1px solid black;
+    border-radius: 5px;
+}

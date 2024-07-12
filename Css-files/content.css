@@ -570,7 +570,7 @@ body {
 /* service */
 .service_container {
 	box-sizing: border-box;
-	background-color: rgb(224, 224, 252);
+	background-color: var(--container-bg);
 }
 
 .second_cont {
@@ -587,7 +587,7 @@ body {
 
 .deals {
 	display: flex;
-	background-color: white;
+	background-color: var(--container-bg);
 	border: 2px solid rgb(138, 37, 37);
 	/* box-shadow: 0 0 10px rgba(138, 37, 37, 0.5); */
 	border-radius: 10px;
@@ -600,12 +600,14 @@ body {
 	/* font-weight: bold; */
 	padding-top: 15px;
 	font-family: "Bree Serif", serif;
+	color: var(--a);
 }
 
 .deals i {
 	margin: 0px 10px;
 	padding: 0px 10px;
 	font-size: 2rem;
+	filter: var(--invert);
 }
 
 /* Book Table */
@@ -668,14 +670,14 @@ body {
 .testimonal__card {
 	text-align: center;
 	padding: 2rem 3rem 2.5rem;
-	border: 2px solid rgba(224, 224, 252, 0.678);
+	border: 2px solid var(--container-bg);
 	transition: border 0.4s, background-color 0.4s;
 	background-color: white;
 	box-shadow: 0 0 10px rgba(224, 224, 252, 0.678);
-	border: 1px solid rgb(186, 186, 201);
+	border: 1px solid var(--container-bg);
 	padding: 40px 30px;
 	margin: 5px;
-	color: rgb(107, 107, 122);
+	color: var(--a);
 }
 
 .testimonal__image {

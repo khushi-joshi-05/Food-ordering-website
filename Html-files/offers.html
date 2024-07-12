@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="Description" content="Enter your description here" />
-    <title>Contact us - Food Ordering Website</title>
+    <link rel="shortcut icon" href="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png" type="image/x-icon">
+    <title>Offers-Food Ordering Website</title>
 
     <!-- bootstrap CDN -->
     <link
@@ -45,6 +46,59 @@
     <link rel="stylesheet" href="../Css-files/footer.css" />
     <!-- OWN CSS -->
     <link id="theme-link" rel="stylesheet" href="/Css-files/offers.css" />
+    <style>
+          #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #e21f1f;
+            z-index: 9999;
+        }
+.card:hover {
+  transform: translateY(-5px); /* Move the card up slightly on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Example of adding a border on hover */
+.card:hover {
+  border: 2px solid #4CAF50;
+}
+
+/* Example of adding a background color change on hover */
+.card:hover {
+  background-color: #f0f0f0;
+}
+@media only screen and (max-width:538px){
+  .carousel-caption p{
+    position: relative;
+    top: 60px;
+  }
+  .carousel-caption img{
+    position: relative;
+    top: 46px;
+  }
+}
+@media only screen and (max-width:435px){
+  .carousel-caption p{
+    width: 332px;
+  }
+  .carousel-caption img{
+    max-width: 18.4rem;
+    max-height: 150px;
+  }
+}
+@media only screen and (max-width:390px){
+  .carousel-caption p{
+    position: relative;
+    right: 35px;
+  }
+  .carousel-caption img{
+    right: 24px;
+  }
+}
+    </style>
   </head>
 
   <body
@@ -53,6 +107,18 @@
     data-bs-offset="100"
     onload="blinker();"
   >
+
+      <!-- Progress bar -->
+      <div id="progressBar"></div>
+      <script>
+          window.onscroll = function () {
+              var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var scrolled = (winScroll / height) * 100;
+              document.getElementById("progressBar").style.width = scrolled + "%";
+          };
+      </script>
+      <!-- end -->
     <!-- header design section -->
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
@@ -76,18 +142,18 @@
           <ul class="navbar-nav center-links">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="../index.html"
-                >Home</a
+                ><i class="fa-solid fa-house"></i> Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Html-files/menu.html">Menu</a>
+              <a class="nav-link" href="../Html-files/menu.html"><i class="fa-solid fa-bars"></i> Menu</a>
             </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link services"
                 href="../Html-files/services.html"
                 aria-expanded="false"
-                >Services</a
+                ><i class="fa-solid fa-gear"></i> Services</a
               >
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Ordering options</a></li>
@@ -98,12 +164,12 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../Html-files/contact.html"
-                >Contact Us</a
+                ><i class="fa-solid fa-phone"></i> Contact Us</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="../Html-files/offers.html"
-                >Offers</a
+                ><i class="fa-solid fa-tag"></i> Offers</a
               >
             </li>
           </ul>
@@ -119,10 +185,10 @@
         <div class="collapse navbar-collapse hamburgeritems enddiv order-3">
           <ul class="navbar-nav end-links">
             <li class="nav-item">
-              <a class="nav-link" href="../Html-files/login.html">Login</a>
+              <a class="nav-link" href="../Html-files/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Html-files/signup.html">Sign-Up</a>
+              <a class="nav-link" href="../Html-files/signup.html"><i class="fa-solid fa-user"></i> Sign-Up</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../Html-files/cart.html">
@@ -251,7 +317,7 @@
                   <button class="mt-2 main-btn">Read More</button>
                 </div>
               </div>
-            </div>
+            </div>            
 
             <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
               <div class="card border">

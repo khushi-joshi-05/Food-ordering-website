@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Cart</title>
+    <link rel="shortcut icon" href="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png" type="image/x-icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
@@ -22,9 +23,31 @@
     <link rel="stylesheet" href="../Css-files/cart.css">
     <link rel="stylesheet" href="../Css-files/navbar.css">
     <link rel="stylesheet" href="../Css-files/footer.css">
+    <style>
+       #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #e21f1f;
+            z-index: 9999;
+        } 
+    </style>
 </head>
 
 <body>
+        <!-- Progress bar -->
+        <div id="progressBar"></div>
+        <script>
+            window.onscroll = function () {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("progressBar").style.width = scrolled + "%";
+            };
+        </script>
+        <!-- end -->
     <div class="coupen">
         <marquee behavior="" direction="left" class="coupen-inner"></marquee>
     </div>
@@ -42,13 +65,13 @@
                     <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
                         <ul class="navbar-nav center-links">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                                <a class="nav-link" aria-current="page" href="../index.html"><i class="fa-solid fa-house"></i> Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../Html-files/menu.html">Menu</a>
+                                <a class="nav-link" href="../Html-files/menu.html"><i class="fa-solid fa-bars"></i> Menu</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link services" href="../Html-files/services.html" aria-expanded="false">Services</a>
+                                <a class="nav-link services" href="../Html-files/services.html" aria-expanded="false"><i class="fa-solid fa-gear"></i> Services</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Ordering options</a></li>
                                     <li><a class="dropdown-item" href="#">Order Tracking</a></li>
@@ -57,10 +80,10 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../Html-files/contact.html">Contact Us</a>
+                                <a class="nav-link" href="../Html-files/contact.html"><i class="fa-solid fa-phone"></i> Contact Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../Html-files/offers.html">Offers</a>
+                                <a class="nav-link" href="../Html-files/offers.html"><i class="fa-solid fa-tag"></i> Offers</a>
                             </li>
                         </ul>
                     </div>
@@ -70,10 +93,10 @@
                     <div class="collapse navbar-collapse hamburgeritems enddiv order-3 ">
                         <ul class="navbar-nav end-links">
                             <li class="nav-item">
-                                <a class="nav-link" href="../Html-files/login.html">Login</a>
+                                <a class="nav-link" href="../Html-files/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../Html-files/signup.html">Sign-Up</a>
+                                <a class="nav-link" href="../Html-files/signup.html"><i class="fa-solid fa-user"></i> Sign-Up</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="../Html-files/cart.html">
@@ -126,6 +149,20 @@
                 <a href="menu.html">    <button class="btn btn-outline-primary mt-3" >Continue Shopping</button></a>
             </div> -->
             <div class="col-md-5">
+
+                <!--checkout information-->
+                <div class="card mb-4 p-3">
+                    <label for="checkoutType" id="label-checkout">Type of Checkout</label>
+                    <select id="checkoutType" onchange="optionSelect()">
+                        <option value="select" selected>-- select --</option>
+                        <option value="orderOnline">Order Online</option>
+                        <option value="takeoutOrder">Takeout Order</option>
+                    </select>
+                    <div id="info-checkout">
+                    </div>
+                </div>
+
+                
                 <h2 class="playfair">Payment Info</h2>
                 <div class="card mt-4 p-3">
                     <div class="mb-3">
@@ -328,48 +365,6 @@
         <script src="../carts.js"></script>
         <script src="cart.js"></script>
         <script src="top.js"></script>
-        <script>
-            const modal = document.getElementById("myModal");
-    const closeButton = document.querySelector(".close");
-    const orderNowButton = document.getElementById("orderNowButton");
-    
-    orderNowButton.addEventListener("click", () => {
-        const total = updateTotal(); // Calculate the total
-        const isEmptyCart =  handleEmptyCart(total);
-    
-        if (isEmptyCart) {
-           
-            return; // Exit early if the cart is empty
-        }
-    
-        // Only show modal if cart is not empty
-        else {modal.style.display = "block";}
-    });
-    
-    closeButton.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
-    
-    window.onclick = (event) => {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    };
-    
-    
-        </script>
-        <script>
-            const applyFirstTimeDiscount = () => {
-    let couponCode = localStorage.getItem('couponCode');
-    if (!couponCode) {
-        couponCode = generateCouponCode();
-        localStorage.setItem('couponCode', couponCode);
-    }
-    document.getElementById('couponCode').innerHTML = `Use coupon code <span style="font-weight: bold;"> ${couponCode} </span> for 30% off!`;
-    document.querySelector(".coupen-inner").innerHTML = `Congratulations! Your coupon code is ${couponCode}. You've received a 30% discount on your first order.`;
-}
-        </script>
-        
 </body>
 
 </html>

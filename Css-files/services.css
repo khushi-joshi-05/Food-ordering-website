@@ -136,7 +136,7 @@ html{
 }
 
 .testimonal__swiper {
-    background-color: white;
+    background-color: var(--container-bg);
     margin: 5px;
     overflow: hidden;
     border: 2px solid rgb(138, 37, 37);
