@@ -97,7 +97,7 @@
             <p>Use coupon code <b>qN6FVAn4</b> for 30% off!</p>
         </div>
 
-        <!-- <div class="cart">
+        <div class="cart">
             <div class="empty-cart">
             </div>
             <div class="cart-details">
@@ -105,9 +105,9 @@
                 </div>
                 <div id="cart-total"></div>
             </div>
-        </div> -->
+        </div>
 
-        <div class="row" style="margin-top: 40px;">
+        <!-- <div class="row" style="margin-top: 40px;">
             <div class="col-md-7">
                 <h2 class="playfair">Shopping Cart</h2>
                 <table class="table table-bordered mt-4">
@@ -118,13 +118,13 @@
                         </tr>
                     </tbody>
                 </table>
-                <div class="total mt-3">
+                <div class="total mt-3" >
                     <p>Subtotal: $149.96</p>
                     <p>Shipping: $0</p>
                     <p><strong>Total: $149.96</strong></p>
                 </div>
-                <button class="btn btn-outline-primary mt-3">Continue Shopping</button>
-            </div>
+                <a href="menu.html">    <button class="btn btn-outline-primary mt-3" >Continue Shopping</button></a>
+            </div> -->
             <div class="col-md-5">
                 <h2 class="playfair">Payment Info</h2>
                 <div class="card mt-4 p-3">
@@ -197,7 +197,7 @@
 
         </div>
     </section>
-    
+   
         <footer>
             <div class="foot-panel1 w-100">
                 <div class="container-fluid py-5 px-0">
@@ -325,8 +325,51 @@
 
         <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
         <script src="navbar.js"></script>
+        <script src="../carts.js"></script>
         <script src="cart.js"></script>
         <script src="top.js"></script>
+        <script>
+            const modal = document.getElementById("myModal");
+    const closeButton = document.querySelector(".close");
+    const orderNowButton = document.getElementById("orderNowButton");
+    
+    orderNowButton.addEventListener("click", () => {
+        const total = updateTotal(); // Calculate the total
+        const isEmptyCart =  handleEmptyCart(total);
+    
+        if (isEmptyCart) {
+           
+            return; // Exit early if the cart is empty
+        }
+    
+        // Only show modal if cart is not empty
+        else {modal.style.display = "block";}
+    });
+    
+    closeButton.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+    
+    window.onclick = (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+    
+    
+        </script>
+        <script>
+            const applyFirstTimeDiscount = () => {
+    let couponCode = localStorage.getItem('couponCode');
+    if (!couponCode) {
+        couponCode = generateCouponCode();
+        localStorage.setItem('couponCode', couponCode);
+    }
+    document.getElementById('couponCode').innerHTML = `Use coupon code <span style="font-weight: bold;"> ${couponCode} </span> for 30% off!`;
+    document.querySelector(".coupen-inner").innerHTML = `Congratulations! Your coupon code is ${couponCode}. You've received a 30% discount on your first order.`;
+}
+        </script>
+        
 </body>
 
 </html>
