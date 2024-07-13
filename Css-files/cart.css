@@ -142,6 +142,8 @@ textarea {
     color: aliceblue;
     z-index: 20;
 }
+
+
 @media all and (max-width: 768px) {
     .cart {
         width: 100%;
@@ -162,6 +164,26 @@ textarea {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #f0f8ff;
     color: rgb(22, 22, 18);
+}
+
+.donate-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#donateBtn {
+    background-color: #007bff;
+    color: #fff;
+    border: 3px solid black;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#donateBtn:hover {
+    transform: scale(1.2);
+    background-color: #0056b3
 }
 
 .modal {

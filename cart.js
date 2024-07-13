@@ -69,7 +69,6 @@ orderBtn.addEventListener("click", ()=>{
        alert("Please add something in the cart to place the order");
    }
    else{
-        
        alert("Order placed!");
    }
 })
