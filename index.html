@@ -216,6 +216,7 @@
         .slider-reveal {
             animation: fadeInUp 1.5s ease-in-out;
         }
+
     
         @keyframes fadeInUp {
             from {
@@ -241,9 +242,11 @@
         }
     </style>
 
+
     <br>
     <br>
     <br>
+
 
 
     <section class="about_us pt-5">
@@ -262,9 +265,120 @@
         <h1 class="tagline py-2 text-center mx-auto" data-aos="zoom-out-up" data-aos-offset="170"
             data-aos-easing="ease-in-out">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
 
-        <div class="qualities row g-3 px-2" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170"
+<!-- cards  -->
+ <style>
+
+.card-1 {
+	position: relative;
+	width: 400px;
+	height: 500px;
+	border-radius: 15px;
+	overflow: hidden;
+	filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.25));
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.card-1::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.408) 62.83%, rgba(0, 0, 0, 0.8) 99.99%);
+	background-blend-mode: darken, normal;
+}
+
+.card-1 > .content {
+	color: white;
+	position: absolute;
+	top: 550px;
+    padding: 10px;
+    border-radius: 10px;
+	left: 4.77%;
+	right: 4.77%;
+	z-index: 2;
+	transition: top 450ms ease-out;
+}
+
+.card-1 > h2 {
+    margin-top: 180px;
+	font-size: 2rem !important;
+    mix-blend-mode:luminosity;
+    color:white;
+    border-radius: 5px;
+    backdrop-filter: blur(2px);
+    z-index: 100;
+    text-shadow:2px 2px #6d1002;
+}
+
+.card-1 > .content > p {
+	margin-bottom: .7rem;
+}
+
+.card-1:hover > .content {
+	top: 260px;
+    backdrop-filter: blur(4px);
+}
+
+.btn {
+	border: none;
+	padding: .7em 1.8em;
+	border-radius: 5px;
+	font-weight: 600;
+	cursor: pointer;
+	font-size: .8rem;
+}
+
+.btn-card {
+	background: #D0EEB0;
+	transition: background 200ms ease;
+}
+
+.btn-card:hover {
+	background: #59a10c;
+}
+ </style>
+
+        <div class="qualities row justify-content-evenly g-3 px-2" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170"
             data-aos-easing="ease-in-out">
-            <div class="col-md-4">
+
+            <div class="card-1" style="background-image: url(https://shahidining.com.au/wp-content/uploads/2020/05/secret-to-indian-flavour-1536x864.jpg);">
+                <h2 class="card-title">Authentic Indian Flavors</h2>
+                <div class="content">
+                    
+                        <p class="card-text">From aromatic curries to flavorful biryanis, our menu showcases the
+                            diversity and deliciousness of Indian cuisine.</p>
+                    <button class="btn btn-card">Lean More</button>
+                </div>
+            </div>
+
+
+            <div class="card-1" style="background-image: url(https://saavi.com.au/wp-content/uploads/2016/02/image0023-1.jpg);">
+                <h2 class="card-title">Tech-Infused Dining Experience</h2>
+                <div class="content">
+                   
+                        <p class="card-text">Customers can use apps to place orders, customize their dishes, and even
+                            provide feedback, making
+                            their visit more convenient and interactive.
+                        </p>
+                    <button class="btn btn-card">Lean More</button>
+                </div>
+            </div>
+
+            <div class="card-1" style="background-image: url(https://i.ndtvimg.com/i/2015-06/fusion-food_625x350_81434107799.jpg);">
+                <h2 class="card-title">Innovative Fusion Dishes</h2>
+                <div class="content">
+                    
+                        <p class="card-text">The combinations of Indian and international cuisines not only tantalize
+                            taste buds
+                            but also provide unique experience.</p>
+                    <button class="btn btn-card">Lean More</button>
+                </div>
+            </div>
+
+            <!-- <div class="col-md-4">
                 <div class="card rounded-5">
                     <div class="img-container">
                         <img src="https://shahidining.com.au/wp-content/uploads/2020/05/secret-to-indian-flavour-1536x864.jpg"
@@ -276,8 +390,8 @@
                             diversity and deliciousness of Indian cuisine.</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
+            </div> -->
+            <!-- <div class="col-md-4">
                 <div class="card rounded-5">
                     <div class="img-container">
                         <img src="https://saavi.com.au/wp-content/uploads/2016/02/image0023-1.jpg"
@@ -291,8 +405,8 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
+            </div> -->
+            <!-- <div class="col-md-4">
                 <div class="card rounded-5">
                     <div class="img-container">
                         <img src="https://i.ndtvimg.com/i/2015-06/fusion-food_625x350_81434107799.jpg"
@@ -305,9 +419,13 @@
                             but also provide unique experience.</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
+
+
+    <!-- cards  -->
+
 
     <section class="services_container">
         <div class="card">
