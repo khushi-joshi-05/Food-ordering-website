@@ -1,0 +1,30 @@
+.main-container {
+	padding: 2vw;
+	background-color: rgb(224, 224, 252);
+}
+
+.form-container {
+  max-width: 800px;
+  margin: auto;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-container form {
+  margin: 0 auto;
+  width: 30vw;     
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+
+
+            

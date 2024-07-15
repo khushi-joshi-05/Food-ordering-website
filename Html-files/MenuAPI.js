@@ -13,7 +13,12 @@ let categories = [
     "seafood",
     "breakfast",
     "vegetarian",
-    "miscellaneous"
+    "miscellaneous",
+    "Indian",
+    "Italian",
+    "Mexican",
+    "Chinese",
+    "Mediterranean"
 ];
 
 //Function to render the navigation and tabs pane
@@ -78,7 +83,7 @@ function renderMeals(mealData) {
             	</div>
             	<div class="card-body">
                     <h3>${mealDetails.name}</h3>
-                	<p>$10.20</p>
+                	<p>₹10.20</p>
                     <div class="star-rating">
                         <button class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></button>
                         <button class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></button>
@@ -242,7 +247,7 @@ function filterMenu() {
     menuItems.forEach((item) => {
         const itemName = item.querySelector("h3").innerText;
         const itemPrice = parseFloat(
-            item.querySelector("p").innerText.replace("$", "")
+            item.querySelector("p").innerText.replace("₹", "")
         );
         const itemRating = parseInt(item.getAttribute('data-rating'));
 

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Cart</title>
+    <link rel="shortcut icon" href="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png" type="image/x-icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
@@ -148,6 +149,20 @@
                 <button class="btn btn-outline-primary mt-3">Continue Shopping</button>
             </div>
             <div class="col-md-5">
+
+                <!--checkout information-->
+                <div class="card mb-4 p-3">
+                    <label for="checkoutType" id="label-checkout">Type of Checkout</label>
+                    <select id="checkoutType" onchange="optionSelect()">
+                        <option value="select" selected>-- select --</option>
+                        <option value="orderOnline">Order Online</option>
+                        <option value="takeoutOrder">Takeout Order</option>
+                    </select>
+                    <div id="info-checkout">
+                    </div>
+                </div>
+
+                
                 <h2 class="playfair">Payment Info</h2>
                 <div class="card mt-4 p-3">
                     <div class="mb-3">
@@ -349,6 +364,7 @@
         <script src="navbar.js"></script>
         <script src="cart.js"></script>
         <script src="top.js"></script>
+        <script src="address-info.js"></script>
 </body>
 
 </html>
