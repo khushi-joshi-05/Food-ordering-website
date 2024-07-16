@@ -122,6 +122,7 @@ function handleEmptyCart(total) {
             <p>Looks like you haven't made your choice yet... Check what we have got for you and get it swished.</p>
             <a href="./menu.html"><button class="butt">Explore Menu</button></a>`;
         alert("To place Order,Kindly add items to the cart");
+        stopPropagation();
         return(true); // Cart is empty
     }
 }
@@ -153,9 +154,12 @@ const applyFirstTimeDiscount = () => {
 document.getElementById('applyCouponButton').addEventListener('click', function () {
     const couponCode = document.getElementById('inputCode').value;
     if (!couponCode) {
+
         alert('Please enter a Coupon Code.');
-        return;
+        stopPropagation();
+        // return;
     }
+   
 });
 
 const modal = document.getElementById("myModal");
