@@ -555,18 +555,18 @@ textarea {
   font-family: "Bree Serif", sans-serif;
   border-radius: 5px;
   margin-top: 10px;
-  padding: 50px 10px 40px; /* Adjusted padding */
+  padding: 50px 10px 40px; 
   padding-top: 10px;
   background-color: #dddddd;
   border: solid #212123 1px;
-  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+  box-sizing: border-box; 
 }
 
 textarea:focus {
   transition: 0.2s ease-out;
   background-color: white;
   border: 1px solid #212123;
-  outline: none; /* Remove default focus outline */
+  outline: none; 
 }
 
 #butt {
