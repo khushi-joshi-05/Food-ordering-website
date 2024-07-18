@@ -76,6 +76,20 @@
   flex-grow: 0;
 }
 
+
+/* Navbar Links */
+.nav-link {
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-link:hover {
+  color: #fff;
+  transform: scale(1.1);
+  border-radius: 5px;
+}
+
+/* Center Links */
+
 ul {
   gap: 5px;
 }
@@ -85,6 +99,7 @@ ul {
   justify-content: center;
   align-items: center;
 }
+
 
 .center-links .nav-item .nav-link:hover {
   color: #f13800e4;
@@ -115,6 +130,9 @@ ul {
   gap:10px;
 }
 
+
+/* Dropdown Items */
+
 #theme-toggle-icon {
   width: 30px;
   cursor: pointer;
@@ -127,6 +145,7 @@ ul {
   border: none;
   padding-top: 0;
 }
+
 .dropdown-item {
   padding: 4px 8px;
   color: var(--a);
