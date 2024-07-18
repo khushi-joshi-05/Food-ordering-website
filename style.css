@@ -26,10 +26,14 @@ body {
   text-decoration: none;
   color: white;
   font-size: 1.3rem;
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  /* font-family: "Oswald", sans-serif; */
 }
 
-.navbar li:hover {
-  opacity: 0.7;
+.navbar li:hover a {
+    opacity: 0.7; 
 }
 
 .intro_container {
@@ -192,6 +196,8 @@ body {
   /* border:2px solid rgb(224, 224, 252); */
   text-align: center;
   font-size: 1.3rem;
+  font-family: "Oswald", sans-serif;
+  /* font-family: "Bree Serif", serif; */
 }
 
 .service .box a {
@@ -324,6 +330,7 @@ body {
   color: white;
   padding-left: 50px;
   padding-top: 80px;
+  font-family: "Oswald", sans-serif;
 }
 
 .app_download h4 {
@@ -442,16 +449,26 @@ body {
 
 ul p {
   font-weight: 700;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  /* font-family: "Bree Serif", serif; */
 }
 
-ul a {
+.foot-panel2 ul a {
   display: block;
   font-size: 0.85rem;
   margin-top: 10px;
   color: #dddddd;
   text-decoration: none;
+  font-family: "Bree Serif", serif;
+  font-weight: 100;
 }
 
+.foot-panel2 ul a:hover{
+  color: white;
+}
 /* .foot-pannel3{
     background-color:rgb(66, 16, 16);
     color: white;
@@ -464,7 +481,7 @@ ul a {
 .foot_panel4 {
   background-color: rgb(66, 16, 16);
   color: white;
-  height: 160px;
+  height: 200px;
   font-size: 0.9rem;
   text-align: center;
 }
@@ -473,39 +490,94 @@ ul a {
   padding-top: 25px;
 }
 
+.pages p{
+  font-family: "Bree Serif", serif;
+}
+
+.pages h4{
+  font-family: "Bree Serif", serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
 .copyright {
   padding-top: 10px;
+  font-family: "Bree Serif", serif;
 }
+
+.copyright a{
+  color: #dddddd;
+}
+
 
 form {
   padding-top: 20px;
   display: grid;
   /* gap: 10px; */
   padding-bottom: 100px;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.contact__container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
 }
 
 label {
   font-weight: bold;
 }
 
-input,
-textarea {
+input
+{
   height: 30px;
-  width: max-content;
-  padding: 3px;
+  /* width: max-content; */
+  padding: 15px;
   box-sizing: border-box;
   border-radius: 4px;
   outline: none;
-  border: #212123 1px;
+  border: solid #212123 1.8px;
+  border-radius: 5px;
+  font-family: "Bree Serif", sans-serif;
+  background-color: #dddddd;
+}
+
+input:focus{
+  background-color: white;
+  transition: 0.2s ease-out;
+  border: 1px solid #212123;
+}
+
+textarea {
+  font-family: "Bree Serif", sans-serif;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 50px 10px 40px; /* Adjusted padding */
+  padding-top: 10px;
+  background-color: #dddddd;
+  border: solid #212123 1px;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+textarea:focus {
+  transition: 0.2s ease-out;
+  background-color: white;
+  border: 1px solid #212123;
+  outline: none; /* Remove default focus outline */
 }
 
 #butt {
   background-color: rgb(66, 16, 16);
   color: white;
-  padding: 3px;
+  margin-top: 10px;
+  padding: 10px;
   border: 1px solid white;
   border-radius: 4px;
   cursor: pointer;
+  font-family: "Bree Serif", sans-serif;
 }
 
 #butt:hover {
@@ -518,7 +590,11 @@ textarea {
   text-decoration: none;
   color: white;
 }
-.fb {
+
+.social-icons a:hover{
+  color:#b1b1b1;
+}
+/* .fb {
   color: #1877f2;
   cursor: pointer;
 }
@@ -530,7 +606,7 @@ textarea {
 .twitter {
   color: #1da1f2;
   cursor: pointer;
-}
+} */
 
 #author {
   padding: 3px;
@@ -779,12 +855,6 @@ textarea {
     height: fit-content;
     padding: 100px;
   }
-}
-
-
-
-.navbar li:hover a {
-    color: brown; 
 }
 
 .btn:hover {
