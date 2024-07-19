@@ -404,40 +404,34 @@ body {
   color: var(--btn-hover-text-color);
   background-color: var(--btn-hover-background-color);
 }
-
 .menu_items .items {
   text-align: center;
   max-height: 370px;
-  background-color: var(--menu-item-background);
-  border: 3px solid var(--border-color);
   font-family: "Bree Serif", serif;
   transition: 0.2s all ease-in;
-  border-radius: 10px;
+  border-radius: 15px;
   color: var(--text-color);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  
 }
 
-.menu_items .items:hover {
-  box-shadow: var(--box-shadow-color) 1px 1px 8px;
-  cursor: pointer;
-  scale: 1.02;
-  background-color: var(--menu-item-hover-background);
-}
 
-.menu_items .card-body {
-  min-height: 130px;
-  padding: 5px;
+
+.menu_items .img-container {
+  width: 100%;
+  height: 100%;
 }
 
 .menu_items .img-container {
-  width: 90%;
-  margin-top: 1em;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.menu_items img {
-  object-fit: cover;
-  object-position: center;
+  
   height: 220px;
   width: 100%;
   border-radius: 15px;
@@ -445,9 +439,96 @@ body {
 
 .menu_items .items h3 {
   font-size: 1.4rem;
-  margin-top: 10px;
-  color: var(--border-color);
+  margin-top: 20px;
+  color: white;
+  z-index: 1;
 }
+.back{
+background-color: #800020;
+
+
+position:absolute;
+  z-index: -1;
+  top:0;
+  left:0;
+  right:0;
+  width:100%;
+  height:20%;
+
+}
+
+.menu_items .items p {
+  color:white; /* Ensure text is white for better contrast */
+}
+h3,p{
+  z-index: 1;
+  width:100%;
+  height:15px;
+}
+
+.menu_items .card-1 {
+  
+  display: flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  align-items: center;
+  text-align: center;
+  
+}
+.menu_items .items .overlay {
+  opacity: 0;
+}
+
+.menu_items .items:hover .overlay {
+  opacity: 1;
+}
+.menu_items .card-1 .content {
+  
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu_items .card-1 .card-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.menu_items .card-1 .card-text {
+  font-size: 2em;
+}
+
+
+.menu_items .items .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  transition: 0.2s all ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.menu_items .items:hover .overlay {
+  opacity: 1;
+}
+
+.card-1:hover{
+  box-shadow: var(--box-shadow-color) 1px 1px 8px;
+  cursor: pointer;
+  scale: 1.02;
+  background-color: var(--menu-item-hover-background);
+
+
+}
+
+
 
 
 /* TESTIMONIALS */
@@ -552,7 +633,7 @@ body {
   font-style: italic;
 }
 
-.app_download img:hover {
+.app_download .g:hover {
   transform: scale(1.1);
 }
 
