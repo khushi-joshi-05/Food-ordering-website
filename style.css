@@ -11,27 +11,27 @@ body {
 }
 
 :root {
-  --a: white;
+  --a: black;
   --drop-bg: #212123;
-  --nav: black;
-  --primary-bg-color: #ffffff;
+  --nav: white;
+  --primary-bg-color: black;
   --primary-text-color: #333335;
-  --secondary-bg-color: #f2f2f2;
+  --secondary-bg-color: black;
   --accent-color: #9e5c48;
-  --navbar-bg-color: #f2f2f2;
-  --navbar-hover-color: #e5e5e5;
-  --card-bg-color: #ffffff;
-  --card-hover-color: #f5f5f5;
-  --footer-bg-color: #f2f2f2;
-  --footer-hover-color: #e5e5e5;
+  --navbar-bg-color: black;
+  --navbar-hover-color: black;
+  --card-bg-color: black;
+  --card-hover-color: black;
+  --footer-bg-color: black;
+  --footer-hover-color: black;
 }
 
 .dark-theme {
-  --a: black;
-  --drop-bg: #ffffff;
-  --nav: white;
+  --a: white;
+  --drop-bg: black;
+  --nav: black;
   --primary-bg-color: #212123;
-  --primary-text-color: #ffffff;
+  --primary-text-color: black;
   --secondary-bg-color: #333335;
   --accent-color: #9e5c48;
   --navbar-bg-color: #333335;
@@ -182,8 +182,28 @@ body {
 }
 
 /* ABOUT US SECTION */
+/* Define default light theme variables */
+:root {
+  --background-color: rgb(224, 224, 252);
+  --text-color: #000;
+  --border-color: var(--bs-body-color);
+  --card-border-color: brown;
+  --tagline-color: brown;
+  --box-shadow-color: rgba(214, 22, 22, 0.145);
+}
+
+/* Define dark theme variables */
+.dark-theme {
+  --background-color: #2c2c2c;
+  --text-color: #fff;
+  --border-color: #fff;
+  --card-border-color: #fff;
+  --tagline-color: #de6262;
+  --box-shadow-color: rgba(0, 0, 0, 0.7);
+}
+
 .about_us {
-  background-color: rgb(224, 224, 252);
+  background-color: var(--background-color);
   overflow: hidden;
   padding-bottom: 120px;
 }
@@ -191,16 +211,17 @@ body {
 .about_us .discount-rolling h1 {
   text-transform: uppercase;
   background: linear-gradient(to right, #de6262, #ffb88c);
-  border-bottom: 5px solid var(--bs-body-color);
-  border-right: 4px solid var(--bs-body-color);
+  border-bottom: 5px solid var(--border-color);
+  border-right: 4px solid var(--border-color);
   animation: marquee 10s linear infinite;
   margin-bottom: 0px;
+  color: var(--text-color);
 }
 
 .about_us .discount-rolling {
   white-space: nowrap;
   overflow: hidden;
-  box-shadow: 0 0 5px 5px rgba(214, 22, 22, 0.145);
+  box-shadow: 0 0 5px 5px var(--box-shadow-color);
 }
 
 @keyframes marquee {
@@ -214,7 +235,7 @@ body {
 }
 
 .about_us .tagline {
-  color: brown;
+  color: var(--tagline-color);
   font-family: "Bree Serif", serif;
   font-size: 2.3rem;
   width: 80%;
@@ -226,6 +247,7 @@ body {
   font-family: "Bree Serif", serif;
   text-align: center;
   margin: auto 0;
+  color: var(--text-color);
 }
 
 .about_us .qualities img {
@@ -236,13 +258,14 @@ body {
 }
 
 .about_us .qualities .card {
-  border: 2px solid brown;
+  border: 2px solid var(--card-border-color);
   margin: 0 1vw;
   height: 100%;
 }
 
 .about_us .card-title {
   font-size: 1.5rem;
+  color: var(--text-color);
 }
 
 .about_us .card:hover {
@@ -250,6 +273,7 @@ body {
   scale: 1.015;
   cursor: pointer;
 }
+
 
 /* SERVICES SECTION */
 .services_container .card {
@@ -318,60 +342,90 @@ body {
 }
 
 /* MENU CONTAINER */
+/* Define default light theme variables */
+:root {
+  --background-color: rgb(224, 224, 252);
+  --text-color: #000;
+  --border-color: brown;
+  --btn-background-color: brown;
+  --btn-text-color: white;
+  --btn-hover-background-color: #f2f2f2;
+  --btn-hover-text-color: brown;
+  --menu-item-background: #f2f2f2;
+  --menu-item-hover-background: #ca8787;
+  --box-shadow-color: #212123;
+}
+
+/* Define dark theme variables */
+.dark-theme {
+  --background-color: #000000;
+  --text-color: #fff;
+  --border-color: #fff;
+  --btn-background-color: #444;
+  --btn-text-color: #fff;
+  --btn-hover-background-color: #333;
+  --btn-hover-text-color: #fff;
+  --menu-item-background: #000000;
+  --menu-item-hover-background: #555;
+  --box-shadow-color: rgba(0, 0, 0, 0.7);
+}
+
 .menu_container {
-  background-color: rgb(224, 224, 252);
-  padding: 100px 0px 100px 0px;
+  background-color: var(--background-color);
+  padding: 100px 0;
   overflow: hidden;
 }
 
 .mainhead h1 {
   font-family: "Bree Serif", serif;
   font-size: 2.8rem;
+  color: var(--text-color);
 }
 
 .mainhead p {
   font-size: 1.2rem;
-  color: brown;
+  color: var(--border-color);
   font-family: "Bree Serif", serif;
 }
 
 .mainhead .btn {
-  border: 2px solid brown;
+  border: 2px solid var(--border-color);
   font-size: 1.4rem;
   padding: 7px;
   border-radius: 10px;
   font-family: "Bree Serif", serif;
   margin-bottom: 50px;
-  background-color: brown;
-  color: white;
+  background-color: var(--btn-background-color);
+  color: var(--btn-text-color);
 }
 
 .mainhead .btn:hover {
-  border: 2px solid brown;
-  color: brown;
-  background-color: #f2f2f2;
+  border: 2px solid var(--border-color);
+  color: var(--btn-hover-text-color);
+  background-color: var(--btn-hover-background-color);
 }
 
 .menu_items .items {
   text-align: center;
   max-height: 370px;
-  background-color: #f2f2f2;
-  border: 3px solid brown;
+  background-color: var(--menu-item-background);
+  border: 3px solid var(--border-color);
   font-family: "Bree Serif", serif;
   transition: 0.2s all ease-in;
   border-radius: 10px;
+  color: var(--text-color);
 }
 
 .menu_items .items:hover {
-  box-shadow: #212123 1px 1px 8px;
+  box-shadow: var(--box-shadow-color) 1px 1px 8px;
   cursor: pointer;
   scale: 1.02;
-  background-color: #ca8787;
+  background-color: var(--menu-item-hover-background);
 }
 
 .menu_items .card-body {
   min-height: 130px;
-  padding: 5px 5px 5px 5px;
+  padding: 5px;
 }
 
 .menu_items .img-container {
@@ -392,8 +446,9 @@ body {
 .menu_items .items h3 {
   font-size: 1.4rem;
   margin-top: 10px;
-  color: brown;
+  color: var(--border-color);
 }
+
 
 /* TESTIMONIALS */
 .testimonial-container {
