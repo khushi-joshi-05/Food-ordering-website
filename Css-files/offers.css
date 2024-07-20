@@ -127,13 +127,12 @@ h4 {
 }
 
 h5 {
-  color: var(--black-color);
+  color: var(--bs-heading-color);
   text-transform: capitalize;
   font-family: var(--secondry-font);
   font-size: 1.4rem;
   font-weight: bolder;
   margin-bottom: 0.5rem;
-  text-shadow: 0 0 12px white;
 }
 
 p {
