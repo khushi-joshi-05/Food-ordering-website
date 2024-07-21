@@ -55,8 +55,10 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <!-- Brand Logo -->
+
             <a href="index.html">
                 <img id="theme-toggle-logo"  src="Images/logo/Logo-Light.png" height="70" width="70"  alt="Brand Logo">
+
             </a>
             <!-- Navbar Toggler -->
             <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -199,7 +201,7 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="slider-bg d-flex justify-content-center">
-                    <img src="Images/homeSliderImages/home-slider-1.jpg" class="homeimg">
+                    <img src="./Images/homeSliderImages/home-slider-1.jpg" class="homeimg">
                 </div>
                 <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                     <p class="slider-subtitle slider-reveal">TRADITIONAL & HYGIENIC</p>
@@ -412,6 +414,21 @@
 .btn-card:hover {
 	background: #59a10c;
 }
+
+.typing-effect {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+.highlight-text{
+    color:#D0EEB0;
+}
+
+.service-icon{
+    height:15% !important;
+    width: 15% !important;
+    opacity: 1 !important;
+}
  </style>
 
         <div class="qualities row justify-content-evenly g-3 px-2" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170"
@@ -508,26 +525,49 @@
             </div>
             <div class="card-img-overlay row w-100 m-0">
                 <div class="box_main m-auto col-md-9 col-xl-3" data-aos="zoom-out-right" data-aos-duration="1000"
-                    data-aos-offset="170" data-aos-easing="ease-in-out">
-                    <h1>Bringing <br>happiness<br> to you</h1>
-                    <p>Food is more than sustenance; it's a source of pure happiness. From the first bite of a favorite
-                        childhood dish to the thrill of discovering new flavors, food has a unique way of filling
-                        our hearts with joy.</p>
-                </div>
+                data-aos-offset="170" data-aos-easing="ease-in-out">
+                <h1>
+                    <span id="typing-text" class="typing-effect"></span>
+                </h1>
+                <p class="highlight-text">Food is more than sustenance; it's a source of pure happiness. From the first bite of a favorite
+                    childhood dish to the thrill of discovering new flavors, food has a unique way of filling
+                    our hearts with joy.</p>
+            </div>
+        <!-- typing effect  -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const text = "Bringing \nhappiness\n to you";
+                    const typingText = document.getElementById('typing-text');
+                    let index = 0;
+        
+                    function type() {
+                        if (index < text.length) {
+                            typingText.innerHTML += text[index] === '\n' ? '<br>' : text[index];
+                            index++;
+                            setTimeout(type, 100); // Adjust typing speed here
+                        }
+                    }
+        
+                    type();
+                });
+            </script>
                 <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000"
                     data-aos-offset="170" data-aos-easing="ease-in-out">
+                    <img src="./icons/motorbike.png" alt="" class="service-icon">
                     <h1>Online <br>Delivery</h1>
-                    <a href="/Html-files/add-address.html" class="btn btn-outline-light">Order Online</a>
+                    <a href="/Html-files/add-address.html" class="btn btn-outline-light border border-light">Order Online</a>
                 </div>
                 <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000"
                     data-aos-offset="170" data-aos-easing="ease-in-out">
+                    <img src="./icons/take-away.png" alt="" class="service-icon">
                     <h1>Click & <br>Collect</h1>
-                    <a href="/Html-files/cart.html" class="btn btn-outline-light">Take out Order</a>
+                    <a href="/Html-files/cart.html" class="btn btn-outline-light border border-light">Take out Order</a>
                 </div>
                 <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000"
                     data-aos-offset="170" data-aos-easing="ease-in-out">
+                    <img src="/icons/dining-table.png" alt="" class="service-icon">
                     <h1>Restaurant<br> Dining</h1>
-                    <a href="/Html-files/book-table.html" class="btn btn-outline-light">Book Table </a>
+                    <a href="/Html-files/book-table.html" class="btn btn-outline-light border border-light">Book Table </a>
                 </div>
             </div>
         </div>
@@ -678,30 +718,30 @@
     <section class="picture-gallery" data-aos="fade-in" data-aos-duration="2000">
         <div class="row g-0">
             <div class="col-3">
-                <img src="Images/image-gallery/1.jpg" alt="">
+                <img src="./Images/image-gallery/1.jpg" alt="">
             </div>
             <div class="col-3">
-                <img src="Images/image-gallery/2.jpg" alt="">
+                <img src="./Images/image-gallery/2.jpg" alt="">
             </div>
             <div class="col-3">
-                <img src="Images/image-gallery/3.jpg" alt="">
+                <img src="./Images/image-gallery/3.jpg" alt="">
             </div>
             <div class="col-3">
-                <img src="Images/image-gallery/4.jpg" alt="">
+                <img src="./Images/image-gallery/4.jpg" alt="">
             </div>
         </div>
         <div class="row g-0">
             <div class="col-3">
-                <img src="Images/image-gallery/5.jpg" alt="">
+                <img src="./Images/image-gallery/5.jpg" alt="">
             </div>
             <div class="col-3">
-                <img src="Images/image-gallery/6.jpg" alt="">
+                <img src="./Images/image-gallery/6.jpg" alt="">
             </div>
             <div class="col-3">
-                <img src="Images/image-gallery/7.jpg" alt="">
+                <img src="./Images/image-gallery/7.jpg" alt="">
             </div>
             <div class="col-3">
-                <img src="Images/image-gallery/8.jpg" alt="">
+                <img src="./Images/image-gallery/8.jpg" alt="">
             </div>
         </div>
     </section>
@@ -771,28 +811,31 @@
             <div class="container-fluid py-5 px-0">
                 <div class="row justify-content-evenly gy-5">
                     <div class="col-6 col-sm-3 col-md-2 col-xl-2">
-                        <h5 class="mb-3">See Also</h5>
+                        <h5 class="mb-3" style="margin-left: 70px;">See Also</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/menu.html">Menu</a>
+                                <a class="nav-link" href="./Html-files/menu.html">Menu</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/services.html">Services</a>
+                                <a class="nav-link" href="./Html-files/services.html">Services</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/contact.html">Contact us</a>
+                                <a class="nav-link" href="./Html-files/contact.html">Contact us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/cart.html">Cart</a>
+                                <a class="nav-link" href="./Html-files/cart.html">Cart</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/contributor.html">Our Contributors</a>
                             </li>
                         </ul>
                     </div>
 
                     <div class="col-6 col-sm-5 col-md-3 col-xl-3">
-                        <h5 class="mb-3">Exclusive Offers</h5>
+                        <h5 class="mb-3" style="margin-left: 90px;">Exclusive Offers</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a href="#" class="nav-link">Foodie Discounts</a>
@@ -819,7 +862,7 @@
                     </div>
 
                     <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        <h5 class="mb-3">Payment Products</h5>
+                        <h5 class="mb-3" style="margin-left: 70px;">Payment Products</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a href="" class="nav-link">Secure Checkout</a>
