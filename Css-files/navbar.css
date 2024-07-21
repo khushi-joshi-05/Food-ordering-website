@@ -155,7 +155,7 @@ ul {
   color: var(--a);
   font-size: 15px;
 
-  background-color: var(--background-color);
+  background-color: black;
 
   transition: background-color 0.3s, transform 0.3s;
 
@@ -233,7 +233,7 @@ body {
 
 .dropdown-item:hover {
   background-color: #007bff;
-  color: #fff;
+  color: #ffffff;
   transform: scale(1.1);
 }
 
