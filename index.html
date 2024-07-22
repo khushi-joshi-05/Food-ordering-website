@@ -27,14 +27,46 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
         defer></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>    
     <link rel="stylesheet" href="Css-files/scroll-top-button.css">
     <link rel="stylesheet" href="Css-files/navbar.css">
     <link rel="stylesheet" href="Css-files/footer.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        .legal-pages {
+            text-decoration: none;
+            color: white;
+        }
+        .legal-pages:hover {
+            color:rgb(255, 255, 255);
+            text-shadow: #FC0 1px 0 6px;
+            text-decoration: none;
+        }
+        #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #e21f1f;
+            z-index: 9999;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Progress bar -->
+    <div id="progressBar"></div>
+    <script>
+        window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
+    <!-- end -->
     <div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
@@ -42,85 +74,160 @@
     </div>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
+            <!-- Brand Logo -->
             <a href="index.html" class="navbar-brand opacity-75 flex-fill">
-                <img src="Images/logo/Foodielogo.png" height="40">
+
+
+                <img src="./Images/logo/Foodielogo.png" height="30" alt="Brand Logo" style="background-color: black;">
+
+                
+
+
+                
+
             </a>
-            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse"
-                data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <!-- Navbar Toggler -->
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Centered Navbar Links -->
             <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
                 <ul class="navbar-nav center-links">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html">
-                            <i class="fa-solid fa-home"></i> Home
+
+
+                            <i class="fa-solid fa-house"></i> Home
+
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/menu.html">
-                            <i class="fa-solid fa-book-open"></i> Menu
+
+                            <i class="fa-solid fa-bars"></i> Menu
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link services" href="/Html-files/services.html" aria-expanded="false">
-                            <i class="fa-solid fa-handshake"></i> Services
+
+                        <a class="nav-link dropdown-toggle" href="Html-files/services.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i> Services
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-check"></i> Ordering options</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-truck"></i> Order Tracking</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-headset"></i> Customer Support</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-question"></i> FAQS</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Ordering options</a></li>
+                            <li><a class="dropdown-item" href="#">Order Tracking</a></li>
+                            <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                            <li><a class="dropdown-item" href="#">FAQS</a></li>
                         </ul>
                     </li>
+
+
+                        
+                    </li>
+
                     <li class="nav-item">
+                        <a class="nav-link" href="#FAQ">FAQS</a>
+                    </li>
+                    <li class="nav-item">
+
                         <a class="nav-link" href="Html-files/contact.html">
-                            <i class="fa-solid fa-envelope"></i> Contact Us
+                            <i class="fa-solid fa-phone"></i> Contact Us
+
+                            
                         </a>
                     </li>
+                    
+                  
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/offers.html">
-                            <i class="fa-solid fa-gift"></i> Offers
+
+                            <i class="fa-solid fa-tag"></i> Offers
+
+
+                        
+
+
+                            
+
                         </a>
                     </li>
+
+                 
+
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/RateUs.html">
                             <i class="fa-solid fa-star"></i> Rate Us
                         </a>
                     </li>
+                    
                 </ul>
             </div>
+            <!-- Theme Toggle Icon -->
             <div class="order-0 ml-auto p-2">
-                <img class="nav-link" src="Images/navbar/sun.png" id="theme-toggle-icon" alt="theme toggler button">
+
+                <img class="nav-link" src="Images/navbar/moon.png" id="theme-toggle-icon" alt="theme toggler button">
+
+                <img class="nav-link" src="Images/navbar/sun.png" id="theme-toggle-icon" alt="Theme Toggler Button">
+
             </div>
+
+            <!-- End Navbar Links -->
+
+
             <div class="collapse navbar-collapse hamburgeritems enddiv order-3">
                 <ul class="navbar-nav end-links">
+
+                    
+
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/login.html">
+
+                            
+
                             <i class="fa-solid fa-sign-in"></i> Login
+
                         </a>
                     </li>
+
                     
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/signup.html">
-                            <i class="fa-solid fa-user-plus"></i> Sign-Up
+
+                            <i class="fa-solid fa-user"></i> Sign-Up
+
+                            
+
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/cart.html">
-                            <i class="fa-solid fa-cart-shopping"></i> Cart
+
+                            Cart <i class="fa-solid fa-cart-shopping"></i>
+
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    
+
+    <section id="homeSlider" class="carousel slide carousel-fade bg-black" data-bs-ride="carousel" data-bs-interval="5000">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-bs-target="#homeSlider" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#homeSlider" data-bs-slide-to="1"></li>
+            <li data-bs-target="#homeSlider" data-bs-slide-to="2"></li>
+            <li data-bs-target="#homeSlider" data-bs-slide-to="3"></li>
+            <li data-bs-target="#homeSlider" data-bs-slide-to="4"></li>
+        </ol>
+
     
     <section id="homeSlider" class="carousel slide carousel-fade bg-black" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="slider-bg d-flex justify-content-center">
-                    <img src="Images/homeSliderImages/home-slider-1.jpg" class="homeimg">
+                    <img src="./Images/homeSliderImages/home-slider-1.jpg" class="homeimg">
                 </div>
                 <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                     <p class="slider-subtitle slider-reveal">TRADITIONAL & HYGIENIC</p>
@@ -210,6 +317,7 @@
         .slider-reveal {
             animation: fadeInUp 1.5s ease-in-out;
         }
+
     
         @keyframes fadeInUp {
             from {
@@ -235,9 +343,11 @@
         }
     </style>
 
+
     <br>
     <br>
     <br>
+
 
 
     <section class="about_us pt-5">
@@ -256,9 +366,135 @@
         <h1 class="tagline py-2 text-center mx-auto" data-aos="zoom-out-up" data-aos-offset="170"
             data-aos-easing="ease-in-out">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
 
-        <div class="qualities row g-3 px-2" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170"
+<!-- cards  -->
+ <style>
+
+.card-1 {
+	position: relative;
+	width: 400px;
+	height: 500px;
+	border-radius: 15px;
+	overflow: hidden;
+	filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.25));
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.card-1::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.408) 62.83%, rgba(0, 0, 0, 0.8) 99.99%);
+	background-blend-mode: darken, normal;
+}
+
+.card-1 > .content {
+	color: white;
+	position: absolute;
+	top: 550px;
+    padding: 10px;
+    border-radius: 10px;
+	left: 4.77%;
+	right: 4.77%;
+	z-index: 2;
+	transition: top 450ms ease-out;
+}
+
+.card-1 > h2 {
+    margin-top: 180px;
+	font-size: 2rem !important;
+    mix-blend-mode:luminosity;
+    color:white;
+    border-radius: 5px;
+    backdrop-filter: blur(2px);
+    z-index: 100;
+    text-shadow:2px 2px #6d1002;
+}
+
+.card-1 > .content > p {
+	margin-bottom: .7rem;
+}
+
+.card-1:hover > .content {
+	top: 260px;
+    backdrop-filter: blur(4px);
+}
+
+.btn {
+	border: none;
+	padding: .7em 1.8em;
+	border-radius: 5px;
+	font-weight: 600;
+	cursor: pointer;
+	font-size: .8rem;
+}
+
+.btn-card {
+	background: #D0EEB0;
+	transition: background 200ms ease;
+}
+
+.btn-card:hover {
+	background: #59a10c;
+}
+
+.typing-effect {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+.highlight-text{
+    color:#D0EEB0;
+}
+
+.service-icon{
+    height:15% !important;
+    width: 15% !important;
+    opacity: 1 !important;
+}
+ </style>
+
+        <div class="qualities row justify-content-evenly g-3 px-2" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170"
             data-aos-easing="ease-in-out">
-            <div class="col-md-4">
+
+            <div class="card-1" style="background-image: url(https://shahidining.com.au/wp-content/uploads/2020/05/secret-to-indian-flavour-1536x864.jpg);">
+                <h2 class="card-title">Authentic Indian Flavors</h2>
+                <div class="content">
+                    
+                        <p class="card-text">From aromatic curries to flavorful biryanis, our menu showcases the
+                            diversity and deliciousness of Indian cuisine.</p>
+                    <button class="btn btn-card">Lean More</button>
+                </div>
+            </div>
+
+
+            <div class="card-1" style="background-image: url(https://saavi.com.au/wp-content/uploads/2016/02/image0023-1.jpg);">
+                <h2 class="card-title">Tech-Infused Dining Experience</h2>
+                <div class="content">
+                   
+                        <p class="card-text">Customers can use apps to place orders, customize their dishes, and even
+                            provide feedback, making
+                            their visit more convenient and interactive.
+                        </p>
+                    <button class="btn btn-card">Lean More</button>
+                </div>
+            </div>
+
+            <div class="card-1" style="background-image: url(https://i.ndtvimg.com/i/2015-06/fusion-food_625x350_81434107799.jpg);">
+                <h2 class="card-title">Innovative Fusion Dishes</h2>
+                <div class="content">
+                    
+                        <p class="card-text">The combinations of Indian and international cuisines not only tantalize
+                            taste buds
+                            but also provide unique experience.</p>
+                    <button class="btn btn-card">Lean More</button>
+                </div>
+            </div>
+
+            <!-- <div class="col-md-4">
                 <div class="card rounded-5">
                     <div class="img-container">
                         <img src="https://shahidining.com.au/wp-content/uploads/2020/05/secret-to-indian-flavour-1536x864.jpg"
@@ -270,8 +506,8 @@
                             diversity and deliciousness of Indian cuisine.</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
+            </div> -->
+            <!-- <div class="col-md-4">
                 <div class="card rounded-5">
                     <div class="img-container">
                         <img src="https://saavi.com.au/wp-content/uploads/2016/02/image0023-1.jpg"
@@ -285,8 +521,8 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
+            </div> -->
+            <!-- <div class="col-md-4">
                 <div class="card rounded-5">
                     <div class="img-container">
                         <img src="https://i.ndtvimg.com/i/2015-06/fusion-food_625x350_81434107799.jpg"
@@ -299,9 +535,13 @@
                             but also provide unique experience.</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
+
+
+    <!-- cards  -->
+
 
     <section class="services_container">
         <div class="card">
@@ -311,26 +551,49 @@
             </div>
             <div class="card-img-overlay row w-100 m-0">
                 <div class="box_main m-auto col-md-9 col-xl-3" data-aos="zoom-out-right" data-aos-duration="1000"
-                    data-aos-offset="170" data-aos-easing="ease-in-out">
-                    <h1>Bringing <br>happiness<br> to you</h1>
-                    <p>Food is more than sustenance; it's a source of pure happiness. From the first bite of a favorite
-                        childhood dish to the thrill of discovering new flavors, food has a unique way of filling
-                        our hearts with joy.</p>
-                </div>
+                data-aos-offset="170" data-aos-easing="ease-in-out">
+                <h1>
+                    <span id="typing-text" class="typing-effect"></span>
+                </h1>
+                <p class="highlight-text">Food is more than sustenance; it's a source of pure happiness. From the first bite of a favorite
+                    childhood dish to the thrill of discovering new flavors, food has a unique way of filling
+                    our hearts with joy.</p>
+            </div>
+        <!-- typing effect  -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const text = "Bringing \nhappiness\n to you";
+                    const typingText = document.getElementById('typing-text');
+                    let index = 0;
+        
+                    function type() {
+                        if (index < text.length) {
+                            typingText.innerHTML += text[index] === '\n' ? '<br>' : text[index];
+                            index++;
+                            setTimeout(type, 100); // Adjust typing speed here
+                        }
+                    }
+        
+                    type();
+                });
+            </script>
                 <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000"
                     data-aos-offset="170" data-aos-easing="ease-in-out">
+                    <img src="./icons/motorbike.png" alt="" class="service-icon">
                     <h1>Online <br>Delivery</h1>
-                    <a href="/Html-files/add-address.html" class="btn btn-outline-light">Order Online</a>
+                    <a href="/Html-files/add-address.html" class="btn btn-outline-light border border-light">Order Online</a>
                 </div>
                 <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000"
                     data-aos-offset="170" data-aos-easing="ease-in-out">
+                    <img src="./icons/take-away.png" alt="" class="service-icon">
                     <h1>Click & <br>Collect</h1>
-                    <a href="/Html-files/cart.html" class="btn btn-outline-light">Take out Order</a>
+                    <a href="/Html-files/cart.html" class="btn btn-outline-light border border-light">Take out Order</a>
                 </div>
                 <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000"
                     data-aos-offset="170" data-aos-easing="ease-in-out">
+                    <img src="/icons/dining-table.png" alt="" class="service-icon">
                     <h1>Restaurant<br> Dining</h1>
-                    <a href="/Html-files/book-table.html" class="btn btn-outline-light">Book Table </a>
+                    <a href="/Html-files/book-table.html" class="btn btn-outline-light border border-light">Book Table </a>
                 </div>
             </div>
         </div>
@@ -481,30 +744,30 @@
     <section class="picture-gallery" data-aos="fade-in" data-aos-duration="2000">
         <div class="row g-0">
             <div class="col-3">
-                <img src="Images/image-gallery/1.jpg" alt="">
+                <img src="./Images/image-gallery/1.jpg" alt="">
             </div>
             <div class="col-3">
-                <img src="Images/image-gallery/2.jpg" alt="">
+                <img src="./Images/image-gallery/2.jpg" alt="">
             </div>
             <div class="col-3">
-                <img src="Images/image-gallery/3.jpg" alt="">
+                <img src="./Images/image-gallery/3.jpg" alt="">
             </div>
             <div class="col-3">
-                <img src="Images/image-gallery/4.jpg" alt="">
+                <img src="./Images/image-gallery/4.jpg" alt="">
             </div>
         </div>
         <div class="row g-0">
             <div class="col-3">
-                <img src="Images/image-gallery/5.jpg" alt="">
+                <img src="./Images/image-gallery/5.jpg" alt="">
             </div>
             <div class="col-3">
-                <img src="Images/image-gallery/6.jpg" alt="">
+                <img src="./Images/image-gallery/6.jpg" alt="">
             </div>
             <div class="col-3">
-                <img src="Images/image-gallery/7.jpg" alt="">
+                <img src="./Images/image-gallery/7.jpg" alt="">
             </div>
             <div class="col-3">
-                <img src="Images/image-gallery/8.jpg" alt="">
+                <img src="./Images/image-gallery/8.jpg" alt="">
             </div>
         </div>
     </section>
@@ -574,28 +837,31 @@
             <div class="container-fluid py-5 px-0">
                 <div class="row justify-content-evenly gy-5">
                     <div class="col-6 col-sm-3 col-md-2 col-xl-2">
-                        <h5 class="mb-3">See Also</h5>
+                        <h5 class="mb-3" style="margin-left: 70px;">See Also</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/menu.html">Menu</a>
+                                <a class="nav-link" href="./Html-files/menu.html">Menu</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/services.html">Services</a>
+                                <a class="nav-link" href="./Html-files/services.html">Services</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/contact.html">Contact us</a>
+                                <a class="nav-link" href="./Html-files/contact.html">Contact us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/Html-files/cart.html">Cart</a>
+                                <a class="nav-link" href="./Html-files/cart.html">Cart</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/contributor.html">Our Contributors</a>
                             </li>
                         </ul>
                     </div>
 
                     <div class="col-6 col-sm-5 col-md-3 col-xl-3">
-                        <h5 class="mb-3">Exclusive Offers</h5>
+                        <h5 class="mb-3" style="margin-left: 90px;">Exclusive Offers</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a href="#" class="nav-link">Foodie Discounts</a>
@@ -623,7 +889,7 @@
 
 
                     <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                        <h5 class="mb-3">Payment Products</h5>
+                        <h5 class="mb-3" style="margin-left: 70px;">Payment Products</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a href="" class="nav-link">Secure Checkout</a>
@@ -692,14 +958,14 @@
                 <span id="copyright-year"></span> Foodies - All Rights Reserved |
                 <span id="terms"></span>
                 <Link to="" >
-                    <a href="/Html-files/terms.html" target="_blank">Terms and Conditions</a> |
+                    <a href="/Html-files/terms.html" class="legal-pages">Terms and Conditions</a> |
                 </Link>
                 <span id="privacy"></span>
                 <Link to="" >
-                    <a href="/Html-files/privacy.html" target="_blank">Privacy Policy</a> |
+                    <a href="/Html-files/privacy.html" class="legal-pages">Privacy Policy</a> |
                 </Link>
                 <span id="author">
-                    <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
+                    <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank" class="legal-pages">Khushi Joshi</a>
                 </span>
             </div>
         </div>
