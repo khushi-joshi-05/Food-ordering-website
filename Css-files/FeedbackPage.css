@@ -1,0 +1,169 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/Images/desserts.avif');
+    background-size: cover;
+    background-position: center;
+}
+
+.feedback-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.feedback-container {
+    background: linear-gradient(to top, rgb(230, 121, 121), white);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* text-align: center; */
+    animation: fadeIn 1s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.feedback-page h2 { 
+    color: #b03a2e;
+    font-weight: 1000 !important;
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h2 {
+    color: #b03a2e;
+}
+
+p {
+    color: #6e2c00;
+    margin-bottom: 1.5rem;
+}
+
+.rating-section {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    
+}
+
+.rating-btn {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.rating-btn:hover {
+    transform: scale(1.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback-page label {
+    margin: 0.5rem 0;
+    color: #6e2c00;
+    align-self: self-start;
+    margin-left: 2px;
+    font-size: 17px;
+    font-weight: 00;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #b03a2e;
+    border-radius: 5px;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.submit-btn, .reset-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 9px;
+    transition: background 0.3s ease-in-out;
+}
+
+.submit-btn {
+    background-color: #b03a2e;
+    color: #fff;
+}
+
+.submit-btn:hover {
+    background-color: #922b21;
+}
+
+.reset-btn {
+    background-color: #f39c12;
+    color: #fff;
+}
+
+.reset-btn:hover {
+    background-color: #d68910;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    animation: fadeIn 0.5s;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px; 
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,10 +1,7 @@
-<div align="center">
-   
-   ![image](https://github.com/khushi-joshi-05/Food-ordering-website/assets/76521579/57ac35c6-c9d9-458d-a0bd-0f600fbded89)
-   
-   ![image](https://github.com/khushi-joshi-05/Food-ordering-website/assets/76521579/94548b28-f4e8-48aa-8a59-8c523cd7c206)
-   
-<h1 >Food Ordering Website</h1>
+<h1 align="center">Foodie</h1>
+<h2 align="center" >Food Ordering Website</h2>
+
+![foodie](https://github.com/khushi-joshi-05/Food-ordering-website/assets/133582566/1ce766f2-5a3a-49c0-9977-f492834c5916)
 
 <br>
 
@@ -71,76 +68,121 @@ This repository is aimed to help people to contribute in open source and learn G
 - **Responsive Design**: Ensuring compatibility across various devices and screen sizes.
 
 
-### 🍽️ How to Run the Food Ordering Website Locally
+# 🍽️ Food Ordering Website: Run Locally & Contribute
 
-### Step 1: 🖥️ Clone the Project Repository
+## 📥 Clone the Repository
 
-First, you need to clone the repository to your local machine. This process downloads a copy of the project files.
+1. **Open Terminal or Command Prompt**:
+   - **Windows**: Open Command Prompt (search `cmd`).
+   - **macOS**: Open Terminal (Cmd + Space, type `Terminal`).
+   - **Linux**: Open Terminal (Ctrl + Alt + T).
 
-1. **Open Terminal or Command Prompt:**
-   - On **Windows**: You can open Command Prompt by typing `cmd` in the Start menu search bar and pressing Enter.
-   - On **macOS**: You can open Terminal by pressing `Cmd + Space`, typing `Terminal`, and pressing Enter.
-   - On **Linux**: You can open Terminal from your applications menu or by using the `Ctrl + Alt + T` shortcut.
-
-2. **Run the Git Clone Command:**
-   In your terminal or command prompt, type the following command and press Enter:
-
+2. **Clone the Repository**:
    ```bash
    git clone https://github.com/khushi-joshi-05/FoodOrderingWebsite.git
    ```
+   This will create a `FoodOrderingWebsite` directory with all project files.
 
-   This command will create a new directory named `FoodOrderingWebsite` in your current location, containing all the files from the repository.
+## 📂 Navigate to the Project Directory
 
-### Step 2: 📂 Navigate to the Project Directory
-
-Now, change your current directory to the newly created project directory.
-
-1. **Navigate Using Terminal or Command Prompt:**
-   After cloning the repository, run the following command:
-
+1. **Change Directory**:
    ```bash
    cd FoodOrderingWebsite
    ```
 
-   This command will change your working directory to the `FoodOrderingWebsite` directory, where all the project files are located.
+## 🌐 View the Website Locally
 
-### Step 3: 🌐 Open the `index.html` File
+### Option A: Using Command Line
 
-To view the website locally, you need to open the `index.html` file in your web browser.
-
-#### Option A: Using the Command Line
-
-- **On macOS**: You can open the `index.html` file directly from the terminal using the following command:
-
+- **macOS**:
   ```bash
   open index.html
   ```
-
-- **On Windows**: You can open the `index.html` file directly from the command prompt using the following command:
-
+- **Windows**:
   ```bash
   start index.html
   ```
-
-- **On Linux**: You can open the `index.html` file directly from the terminal using the following command:
-
+- **Linux**:
   ```bash
   xdg-open index.html
   ```
 
-#### Option B: Opening Manually
+### Option B: Open Manually
 
-1. **Open File Explorer (Windows) or Finder (macOS)**:
-   - On **Windows**: Press `Win + E` to open File Explorer.
-   - On **macOS**: Click on the Finder icon in the Dock.
+1. **File Explorer (Windows) or Finder (macOS)**:
+   - **Windows**: Press Win + E.
+   - **macOS**: Click Finder in the Dock.
 
-2. **Navigate to the Project Directory**:
-   - Browse to the location where you cloned the repository.
+2. **Navigate to `FoodOrderingWebsite` Directory**:
+   - Browse to the cloned repository location.
    - Open the `FoodOrderingWebsite` directory.
 
-3. **Open the `index.html` File**:
-   - Find the `index.html` file within the `FoodOrderingWebsite` directory.
-   - Double-click on `index.html` to open it in your default web browser.
+3. **Open `index.html`**:
+   - Locate `index.html`.
+   - Double-click to open it in your default browser.
+
+## 🛠️ Contributing
+
+### Create an Issue
+
+1. **Navigate to the GitHub Repository**:
+   - Go to [FoodOrderingWebsite Repository](https://github.com/khushi-joshi-05/FoodOrderingWebsite).
+
+2. **Open the Issues Tab**:
+   - Click on `Issues`.
+   - Click on `New issue`.
+   - Describe the issue clearly and submit.
+
+### Fork, Commit, and Push Changes
+
+1. **Fork the Repository**:
+   - Click on `Fork` at the top right of the repository page.
+
+2. **Clone Your Fork**:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/FoodOrderingWebsite.git
+   ```
+
+3. **Create a New Branch**:
+   ```bash
+   cd FoodOrderingWebsite
+   git checkout -b your-branch-name
+   ```
+
+4. **Make Changes**:
+   - Edit files as needed.
+
+5. **Add and Commit Changes**:
+   ```bash
+   git add .
+   git commit -m "Your commit message"
+   ```
+
+6. **Push to Your Fork**:
+   ```bash
+   git push origin your-branch-name
+   ```
+
+### Create a Pull Request
+
+1. **Navigate to Your Fork on GitHub**:
+   - Go to your forked repository.
+
+2. **Open the Pull Requests Tab**:
+   - Click on `Pull requests`.
+   - Click on `New pull request`.
+
+3. **Compare Changes**:
+   - Select the base repository and branch.
+   - Select your fork and branch.
+
+4. **Submit the Pull Request**:
+   - Click on `Create pull request`.
+   - Describe your changes and submit.
+
+---
+
+Happy coding! Feel free to contribute and help us improve the Food Ordering Website. 🍕
 
 ### Additional Notes 📝
 
@@ -149,33 +191,59 @@ To view the website locally, you need to open the `index.html` file in your web 
 
 By following these steps, you should be able to run the Food Ordering Website locally and view it in your web browser. Enjoy exploring the project! 🍔🍕🌮
 
-## Screenshots
+<hr>
 
-These are some snapshots of the project.
+<!-- Open Source Programs -->
+  <div>
+    <h2><img src="https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/blob/master/Emojis/Hand%20gestures/Flexed%20Biceps.png?raw=true" width="35" height="35" > Open Source Programs</h2>
+  </div>
 
-![Landing Page](Images/mainPage.png)
+  <table border="1" cellpadding="10">
+        <tr>
+            <td rowspan="2">
+                <img src="https://github.com/Meetjain1/wanderlust/assets/133582566/21b2bc42-bdd5-487a-a083-1b262c2f6d9b" alt="GSSOC Logo" width="100" height="55">
+            </td>
+            <td>
+                <strong>GSSOC 2024</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                This project is part of GirlScript Summer of Code. We welcome contributions from the community.
+            </td>
+        </tr>
+    </table>
 
-![Menu Page](Images/menupage.png)
+<hr>
 
-![Services Page](Images/servicesPage.png)
-
-![ogin Page](Images/loginPage.png)
-
-<h2 align="center">Our Contributors ❤️</h2>
-<div align="center">
- <h3>Thank you for contributing to our repository.😃</h3>
-
-<a href="https://github.com/SaiyamTuteja/Faculty_Evaluation_System/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=khushi-joshi-05/Food-ordering-website" alt="Contributors" />
-</a>
-
-### Show some ❤️ by starring this awesome repository!
-
+<!-- Code of conduct -->
+<div>
+<h2><img src = "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="35" height="35"> Code of Conduct</h2>
 </div>
 
+Please note that this project is released with a [Contributor Code of Conduct](./CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
-## License
+<hr>
 
-[MIT](https://choosealicense.com/licenses/mit/)
+<!-- License -->
+<div>
+<h2><img src = "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Page%20with%20Curl.png" width="35" height="35"> License</h2>
+</div>
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the [MIT License](./LICENSE).
+
+<hr>
+ <!-- Cotributors -->
+<div>
+  <h2><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" width="35" height="35"> Contributors</h2>
+</div>
+
+Thank you for contributing to our repository.😃
+
+<a href="https://github.com/SaiyamTuteja/Faculty_Evaluation_System/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=khushi-joshi-05/Food-ordering-website" alt="Contributors" width="99%"/>
+</a>
+
+<br>
+
+Show some ❤️ by starring this awesome repository!

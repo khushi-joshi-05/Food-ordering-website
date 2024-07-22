@@ -1,0 +1,255 @@
+body {
+	min-width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	overflow-x: hidden;
+  }
+
+  /* Scrollbar track */
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+	background-image: linear-gradient(to top, rgb(246, 10, 10), rgb(248, 145, 49), rgb(236, 239, 56));
+  }
+  
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+	width: 12px;
+  }
+  
+  /* Scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+	background-color: #ff0707;
+	border-radius: 10px;
+	border: 0.3px solid white;
+	background-image: -webkit-linear-gradient(
+	  90deg,
+	  rgb(20, 21, 12) 0%,
+	  rgb(0, 0, 0) 25%,
+	  transparent 100%,
+	  rgb(247, 4, 4) 75%,
+	  transparent
+	);
+	transition: background-color 0.3s;
+  }
+  
+  /* Scrollbar thumb hover effect */
+  ::-webkit-scrollbar-thumb:hover {
+	background-color: #dc3545; 
+	cursor: pointer;
+  }
+
+  .main-outer {
+	font-family: "Bree Serif", serif;
+	line-height: 1.4;
+	color: rgb(255, 255, 255);
+	margin: 0;
+	padding: 3.125rem 1rem; 
+	box-sizing: border-box; 
+	width: 100%;
+	max-width: 600px; 
+  }
+  
+  .main-outer::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	background-image: linear-gradient(115deg, rgba(191, 7, 7, 0.456), rgba(7, 5, 7, 0.67)), url(../Images/homeSliderImages/home-slider-3.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+  }
+  
+  h1 {
+	font-weight: 400;
+	line-height: 1.2;
+  }
+  
+  p {
+	font-size: 1.125rem;
+  }
+  
+  h1, p {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+  }
+  
+  label, .pform {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.5rem;
+  }
+  
+  input, button, select, textarea {
+	margin: 0;
+	font-family: inherit;
+	line-height: inherit;
+  }
+  
+  button {
+	border: none;
+  }
+  
+  form {
+	background: rgba(255, 255, 255, 0.186);
+	padding: 2.5rem 0.625rem;
+	border-radius: 0.25rem;
+	backdrop-filter: blur(10px);
+	box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.555);
+  }
+
+  .feedback-message {
+	display: none;
+	color: green;
+	font-size: 1.5em;
+	text-align: center;
+	margin-top: 10px;
+}
+  
+  @media (min-width: 300px) {
+	form {
+	  padding: 2.5rem;
+	}
+  }
+  
+  .text-center {
+	text-align: center;
+  }
+  
+  .description {
+	font-style: italic;
+	font-weight: 200;
+	text-shadow: 1px 1px 1px rgba(0 , 0, 0, 0.4);
+  }
+  
+  fieldset {
+	margin: 0 auto 1.25rem auto;
+	padding: 0.25rem;
+	border: none;
+  }
+  
+  .form-control {
+	display: block;
+	width: 100%;
+	height: 2.375rem;
+	padding: 0.375rem 0.375rem;
+	color: #495057;
+	background-color: #ffffff94;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	box-sizing: border-box;
+  }
+  
+  .input-radio, .input-checkbox {
+	display: inline-box;
+	margin-right: 0.625rem;
+	min-height: 1.25rem;
+	min-width: 1.25rem;
+  }
+  
+  .fqual {
+	display: flex;
+	justify-content: space-around;
+	font-size: 17px;
+  }
+  
+  .input-textarea {
+	min-height: 120px;
+	width: 95%;
+	padding: 0.625rem;
+	
+	
+  }
+  
+  .submit-button {
+	display: block;
+	width: 100%;
+	padding: 0.75rem;
+	background: #37af65;
+	color: inherit;
+	border-radius: 2px;
+	cursor: pointer;
+  }
+  
+  .star-rating {
+	display: flex;
+	justify-content: space-around;
+	padding: 0 1.25rem; 
+  }
+  
+  .star-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #ccc;
+	font-size: 25px;
+	padding: 0;
+  }
+  
+  .star-button:hover, .star-button:focus {
+	color: #f1c40f;
+	outline: none;
+  }
+  
+  .star-button.rated, .star-button.hover {
+	color: #f1c40f;
+  }
+  
+  .star-button.greyed {
+	color: #ccc;
+  }
+  
+  .rate-tit {
+	font-size: 1.125rem;
+	margin-bottom: 0.5rem;
+	text-align: center;
+  }
+  
+  @media (max-width: 800px) {
+	.main-outer {
+	  max-width: 500px;
+	}
+  
+	.fqual {
+	  font-size: 13px;
+	}
+	h1{
+		font-size: 26px;
+	  }
+  }
+  
+  @media (max-width: 600px) {
+	.main-outer {
+	  max-width: 450px;
+	}
+	h1{
+		font-size: 23px;
+	  }
+  }
+ 
+  @media (max-width: 400px) {
+	form{
+		padding: 1.5rem;
+	}
+	.fqual {
+		font-size: 12px;
+	  }
+	  .input-radio, .input-checkbox {
+		margin-right: 0.325rem;
+		min-height: 0.45rem;
+		min-width: 0.45rem;
+	  }
+	  .rate-tit,p {
+		font-size: 0.9rem;
+	  }
+	  h1{
+		font-size: 19px;
+	  }
+  }

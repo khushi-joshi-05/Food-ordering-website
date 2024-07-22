@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Festival</title>
+    <link rel="stylesheet" href="../../Css-files/special-event.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <!-- Adding favicon image -->
+  <link
+    rel="shortcut icon"
+    href="Images/favicon/Foodie_Favicon.png"
+    type="image/x-icon"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+    defer
+  ></script>
+  <link rel="stylesheet" href="../../Css-files/scroll-top-button.css" />
+  <link rel="stylesheet" href="../../Css-files/navbar.css" />
+  <link rel="stylesheet" href="../../Css-files/footer.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Discounts</title>
+  <link rel="stylesheet" href="../../Css-files/food-discount.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top">
+              <div class="container-fluid">
+                <a href="index.html" class="navbar-brand opacity-75 flex-fill">
+                  <img src="../../Images/logo/Foodielogo.png" height="40" />
+                </a>
+                <button
+                  class="navbar-toggler order-1"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".hamburgeritems"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                  class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0"
+                >
+                  <ul class="navbar-nav center-links">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="index.html"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Html-files/menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link services"
+                        href="/Html-files/services.html"
+                        aria-expanded="false"
+                        >Services</a
+                      >
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="#">Ordering options</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Order Tracking</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">Customer Support</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">FAQS</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Html-files/contact.html"
+                        >Contact Us</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Html-files/offers.html">Offers</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="order-0 ml-auto p-2">
+                  <img
+                    class="nav-link"
+                    src="../../Images/navbar/sun.png"
+                    id="theme-toggle-icon"
+                    alt="theme toggler button"
+                  />
+                </div>
+                <div class="collapse navbar-collapse hamburgeritems enddiv order-3">
+                  <ul class="navbar-nav end-links">
+                    <li class="nav-item">
+                      <a class="nav-link" href="Html-files/login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Html-files/signup.html">Sign-Up</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Html-files/cart.html">
+                        Cart
+                        <i class="fa-solid fa-cart-shopping"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
+       
+        <header class="header">
+            <img width="100%" height="500px" style="object-fit: cover;" src="https://i.pinimg.com/564x/c3/96/29/c396299a3a5e968a11fe818d7cf2716f.jpg" alt="">
+        </header>
+        
+
+        <div class="flex-div">
+            <div class="event-info">
+                <div class="event-details">
+                    <h2>About the Event</h2>
+                    <p>Join us for the annual International Food Festival, where you'll discover a delightful array of global cuisines.</p>
+                    <p class="date">Date: August 20-22, 2024</p>
+                    <a href="#" class="button">Get Tickets</a>
+                </div>
+            </div>
+    
+            <div class="venue-info">
+                <h2>Venue Details</h2>
+                <p><strong>Location:</strong> Central Park, New York City</p>
+                <p><strong>Time:</strong> 11:00 AM - 8:00 PM (Each day)</p>
+                <p><strong>Contact:</strong> info@foodfest.com | +1-123-456-7890</p>
+            </div>
+        </div>
+        
+        <div class="highlights">
+            <h2>Event Highlights</h2>
+            <ul>
+                <li>Over 50 food stalls featuring cuisines from around the world</li>
+                <li>Cooking workshops and live demonstrations by renowned chefs</li>
+                <li>Live music and entertainment</li>
+                <li>Family-friendly activities and games</li>
+            </ul>
+        </div>
+    
+      
+    </div>
+
+    <div class="event-images container">
+        <h1 style="color: #ee3232;">Some of Event Pictures</h1>
+        <div class="flex-div" style="margin-top: 20px;">
+            <img src="https://i.pinimg.com/564x/79/3c/95/793c95c4c27ea0e7e5883d8dc553a3e2.jpg" style="object-fit: cover;" height="300" width="320" alt="">
+            <img src="https://i.pinimg.com/564x/69/de/36/69de3674edec35e7dfab1f0a7367ebee.jpg" style="object-fit: cover;" height="300" width="320" alt="">
+            <img src="https://i.pinimg.com/564x/ba/8a/ae/ba8aae50eaf7c4b198f58523b3436f68.jpg" style="object-fit: cover;" height="300" width="320" alt="">
+            <img src="https://i.pinimg.com/564x/ea/f7/74/eaf7748d6ae0bc21581c912e855ef266.jpg" style="object-fit: cover;" height="300" width="320" alt="">
+        </div>
+    </div>
+
+    <section class="testimonials">
+        <h2 style="color: #ee3232;">Reviews of this event</h2>
+        <div class="testimonials-container">
+          <div class="testimonial">
+            <p>
+              "Foodies has the best discounts on my favorite meals! I save so much
+              money every month, and the food is always delicious."
+            </p>
+            <h4>- Sarah L.</h4>
+          </div>
+          <div class="testimonial">
+            <p>
+              "I love the variety of deals available on Foodies. There's always
+              something new to try, and the prices are unbeatable."
+            </p>
+            <h4>- Mark A.</h4>
+          </div>
+          <div class="testimonial">
+            <p>
+              "Foodies makes it easy to enjoy great food without spending a
+              fortune. Their customer service is top-notch, and the discounts are
+              amazing."
+            </p>
+            <h4>- Emily R.</h4>
+          </div>
+        </div>
+      </section>
+
+    <footer>
+        <div class="foot-panel1 w-100">
+            <div class="container-fluid py-5 px-0">
+                <div class="row justify-content-evenly gy-5">
+                    <div class="col-6 col-sm-3 col-md-2 col-xl-2">
+                        <h5 class="mb-3">See Also</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/contact.html">Contact us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/cart.html">Cart</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-sm-5 col-md-3 col-xl-3">
+                        <h5 class="mb-3">Exclusive Offers</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Foodie Discounts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/limited-time-products.html">Limited-Time Promotions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/special-event.html">Special Event Packages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/membership-benifits.html">Membership Benefits</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/early-access.html">Early Access to New Recipes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/vip-food-event.html">VIP Foodie Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/culinary-experience.html">Personalized Culinary Experiences</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                        <h5 class="mb-3">Payment Products</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                              <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="/Html-files/payment/credit-debit-card.html" class="nav-link">Credit/Debit Cards</a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="/Html-files/payment/online-payment.html" class="nav-link">Online Payment</a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="/Html-files/payment/mobile-wallet.html" class="nav-link">Mobile Wallets</a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="/Html-files/payment/contact-less-payment.html" class="nav-link">Contactless Payments</a>
+                            </li>
+                          </ul>
+                    </div>
+
+
+                    <div class="col-6 col-md-3 col-xl-4">
+                        <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
+                            <h3 class="text-center mb-3">Contact Us!</h3>
+                            <input type="email" id="footer-email" name="email" placeholder="Your Email"
+                                class="text-center form-control mb-2" required>
+                            <textarea id="footer-message" name="footer-message" placeholder="Your Message"
+                                class="text-center form-control mb-2" required></textarea>
+                            <div class="d-grid gap-2 col-12">
+                                <button type="submit" class="btn btn-danger">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="foot-panel2">
+            <div class="media-handles pt-3 pb-2">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                    <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
+                    <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
+                        target="_blank"></a>
+                    <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
+                </div>
+                <p class="text"> Stay connected with us on social media for the latest updates, recipes, and foodie
+                    adventures. </p>
+                 <div >
+                        Give your valuable 
+                                <LkwNink to="" >
+                                    <a  href="/Html-files/feedback.html"><b>feedback!</b></a>
+                                </Link>
+                        </div>
+            </div>
+            <div class="copyright py-1">
+                &copy;
+                <span id="copyright-year"></span> Foodies - All Rights Reserved |
+                <span id="author">
+                    <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
+            class="arrow">
+            <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+        </svg>
+    </button>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../../Html-files/top.js"></script>
+    <script src="../../script.js"></script>
+    <script src="../../Html-files/navbar.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+</body>
+</html>

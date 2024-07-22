@@ -1,0 +1,126 @@
+/* General Styles for Body */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('../Images/RateUs.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 60px; /* Adjust padding to account for fixed navbar */
+}
+
+.rateus-container {
+    width: 40%; /* Decreased width */
+    max-width: 600px; /* Maximum width */
+    height: 80%; /* Increased height */
+    padding: 30px; /* Increased padding */
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; /* Adjust margin-top as needed */
+}
+
+.rateus-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 80px rgba(255, 255, 255, 0.3);
+    filter: brightness(1.0);
+}
+
+/* Heading Styles */
+.rateus-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Star Rating Styles */
+.star-rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.star {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.star:hover,
+.star.selected {
+    color: #ffcc00;
+}
+
+/* Textarea Styles */
+.feedback-textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: black;
+    transition: border-color 0.3s;
+}
+
+.feedback-textarea:focus {
+    outline: none;
+    border-color: #ffcc00;
+}
+
+/* Submit Button Styles */
+.submit-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #e6b800;
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    background-color: #cc9900;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px){
+    .rateus-container {
+        width: 80%;
+        height: 90%;
+    }
+
+    .rateus-heading {
+        font-size: 20px;
+    }
+
+    .star-rating {
+        margin-bottom: 10px;
+    }
+
+    body{
+        padding-top: 50px;
+        
+        
+    }
+    
+}

@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+.main-content-login {
+  background-color: brown;
+  padding: 4rem 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+.login-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners for the image */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  transition: transform 0.3s ease-in-out; /* Smooth transform animation */
+}
+
+.login-image:hover {
+  transform: scale(1.1); /* Scale up the image on hover */
+}
+
+/* Example animation for subtle background pattern */
+.login-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, rgba(255,255,255,0), rgba(255,255,255,0.6)); /* Gradient overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.login-image:hover::after {
+  opacity: 1; /* Fade in the gradient overlay on hover */
+}
+
+/* Example animation for a glowing effect */
+.login-image::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.login-image:hover::before {
+  opacity: 1; /* Fade in the glowing effect on hover */
+  animation: pulse 2s infinite; /* Pulse animation */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.left-login img{
+  width: 100%;
+}
+
+.right-login .title, .modal .title {
+  color: rgb(208, 50, 50);
+  font-weight: 700;
+}
+
+.card-body {
+  padding: 7%;
+}
+
+.textfield {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 20px 0px;
+  position: relative;
+}
+
+.textfield>label {
+  font-weight: bold;
+}
+
+.textfield>input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background: #E6E6FA;
+  color: #030707de;
+  font-size: 12pt;
+  box-shadow: 0px 2px 5px #00000056;
+  outline: none;
+}
+
+.textfield>input::placeholder {
+  color: #000000;
+}
+
+.right-login .row{
+  font-size: 0.9rem;
+}
+
+.right-login .row a{
+  text-align: right;
+}
+
+.btn-login {
+  width: 85%;
+  padding: 16px 0;
+  margin: 20px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: white;
+  background: rgb(208, 50, 50);
+  box-shadow: 0px 10px 40px -12px #b10f1f85;
+}
+
+.btn-login:hover {
+  background: rgba(208, 50, 50, 0.9);
+}
+
+#login-hide {
+  right: 20px;
+  position: absolute;
+  bottom: 10%;
+}
+
+.hide-icon {
+  font-size: 27px;
+}
+
+.card {
+  box-shadow: 0px 10px 50px #000000a4;
+  width: 80%;
+}
+
+@media screen and (width <= 600px) {
+  .card{
+    width: 95%;
+  }
+}
+
+@media screen and (width < 992px){
+  .left-login img{
+    width: 60%;
+  }
+  .main-content-login{
+    padding-bottom: 4rem;
+    padding-top: 0;
+  }
+}
+
+#rememberCheckbox{
+  border-color: rgb(208, 50, 50);
+  border-radius: 4px;
+}
+
+#rememberCheckbox:checked{
+  background-color: rgb(208, 50, 50);
+}
+
+#rememberCheckbox:focus{
+  box-shadow: none;
+}
+
+/* #login-form a{
+    color: rgb(208, 50, 50);
+    text-decoration: none;
+} */
+
+.right-login h1.text-center{
+	font-size:13px;
+	font-weight: bold;
+}

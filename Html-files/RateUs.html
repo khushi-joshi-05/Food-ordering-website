@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rate Us - Food Ordering Website</title>
+    <link rel="shortcut icon" href="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="../Css-files/scroll-top-button.css" />
+    <link rel="stylesheet" href="../Css-files/content.css" />
+    <link rel="stylesheet" href="../Css-files/navbar.css" />
+    <link rel="stylesheet" href="../Css-files/footer.css" />
+    <link rel="stylesheet" href="../Css-files/RateUs.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a href="../index.html" class="navbar-brand opacity-75 flex-fill">
+                <img src="../Images/logo/Foodielogo.png" height="40" />
+            </a>
+            <button
+                class="navbar-toggler order-1"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target=".hamburgeritems"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+                class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0"
+            >
+                <ul class="navbar-nav center-links">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../Html-files/menu.html">
+                            <i class="fas fa-book-open"></i> Menu
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link services"
+                            href="../Html-files/services.html"
+                            aria-expanded="false"
+                        >
+                            <i class="fas fa-cogs"></i> Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-clipboard-list"></i> Ordering options</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-shipping-fast"></i> Order Tracking</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-headset"></i> Customer Support</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-question-circle"></i> FAQS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Html-files/contact.html">
+                            <i class="fas fa-envelope"></i> Contact Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Html-files/offers.html">
+                            <i class="fas fa-tags"></i> Offers
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Html-files/rateus.html">
+                            <i class="fas fa-star"></i> Rate Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="order-0 ml-auto p-2">
+                <img
+                    class="nav-link"
+                    src="../Images/navbar/sun.png"
+                    id="theme-toggle-icon"
+                    alt="theme toggler button"
+                />
+            </div>
+            <div class="collapse navbar-collapse hamburgeritems enddiv order-3">
+                <ul class="navbar-nav end-links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Html-files/login.html">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Html-files/signup.html">
+                            <i class="fas fa-user-plus"></i> Sign-Up
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Html-files/cart.html">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="rateus-container">
+        <h2 class="rateus-heading">Rate Us</h2>
+        <div class="star-rating">
+            <i class="fa fa-star star" id="star1" onclick="rateStar(1)"></i>
+            <i class="fa fa-star star" id="star2" onclick="rateStar(2)"></i>
+            <i class="fa fa-star star" id="star3" onclick="rateStar(3)"></i>
+            <i class="fa fa-star star" id="star4" onclick="rateStar(4)"></i>
+            <i class="fa fa-star star" id="star5" onclick="rateStar(5)"></i>
+        </div>
+        <textarea class="feedback-textarea" id="feedback" placeholder="Leave your feedback here..." rows="4"></textarea>
+        <button class="submit-button" onclick="submitFeedback()">Submit</button>
+    </div>
+
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+
+    <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white" class="arrow">
+            <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/>
+        </svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script>
+        document.getElementById("copyright-year").textContent = new Date().getFullYear();
+
+        function rateStar(star) {
+            for (let i = 1; i <= 5; i++) {
+                const starElement = document.getElementById(`star${i}`);
+                starElement.classList.remove('selected');
+                if (i <= star) {
+                    starElement.classList.add('selected');
+                }
+            }
+        }
+
+        function submitFeedback() {
+            const feedback = document.getElementById('feedback').value.trim();
+            const stars = document.querySelectorAll('.star.selected').length;
+
+            if (stars > 0 && feedback !== '') {
+                // Simulating success for demonstration
+                Toastify({
+                    text: 'Feedback submitted successfully!',
+                    backgroundColor: 'green',
+                    position :'center',
+                    duration: 3000
+                }).showToast();
+            } else {
+                // Simulating failure for demonstration
+                Toastify({
+                    text: 'Please rate and provide feedback.',
+                    backgroundColor: 'red',
+                    positon:'center',
+                    duration: 3000
+                }).showToast();
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: "ease",
+            once: false,
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    
+</body>
+</html>

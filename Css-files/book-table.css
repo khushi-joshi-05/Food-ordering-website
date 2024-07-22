@@ -1,0 +1,24 @@
+.mainhead::before {
+    content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url(https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300);
+        background-size: cover;
+        opacity: 0.4;
+        z-index: -1;
+}
+
+.mainhead {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.mainhead h1 {
+	font-family: "Bree Serif", serif;
+	font-size: 3.8rem;
+	color: white;
+	font-weight: 700;
+	letter-spacing: 5px;
+}
