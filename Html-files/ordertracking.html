@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking - Food Ordering Website</title>
+    <link rel="shortcut icon" href="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="../Css-files/navbar.css">
+    <link rel="stylesheet" href="../Css-files/footer.css">
+    <link rel="shortcut icon" href="/Images/favicon/Foodie_Favicon.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .head_container {
+            background-color: #e21f1f;
+            color: white;
+            padding: 20px 0;
+            margin-top: 56px;
+            text-align: center;
+        }
+        .order-tracking-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #e21f1f;
+            margin-bottom: 30px;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .tracking-info {
+            background-color: #f1f3f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #e21f1f;
+            border-color: #e21f1f;
+        }
+        .btn-primary:hover {
+            background-color: #c51818;
+            border-color: #c51818;
+        }
+        #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #e21f1f;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress bar -->
+    <div id="progressBar"></div>
+    <script>
+        window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a href="../index.html" class="navbar-brand opacity-75 flex-fill">
+        <img src="../Images/logo/Foodielogo.png" height="40" />
+      </a>
+      <button
+        class="navbar-toggler order-1"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target=".hamburgeritems"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0"
+      >
+        <ul class="navbar-nav center-links">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../index.html"
+              ><i class="fa-solid fa-house"></i> Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Html-files/menu.html"><i class="fa-solid fa-bars"></i> Menu</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link services"
+              href="../Html-files/services.html"
+              aria-expanded="false"
+              ><i class="fa-solid fa-gear"></i> Services</a
+            >
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Ordering options</a></li>
+              <li><a class="dropdown-item" href="#">Order Tracking</a></li>
+              <li><a class="dropdown-item" href="#">Customer Support</a></li>
+              <li><a class="dropdown-item" href="#">FAQS</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="../Html-files/contact.html"
+              ><i class="fa-solid fa-phone"></i> Contact Us</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Html-files/offers.html"><i class="fa-solid fa-tag"></i> Offers</a>
+          </li>
+        </ul>
+      </div>
+      <div class="order-0 ml-auto p-2">
+        <img
+          class="nav-link"
+          src="../Images/navbar/sun.png"
+          id="theme-toggle-icon"
+          alt="theme toggler button"
+        />
+      </div>
+      <div class="collapse navbar-collapse hamburgeritems enddiv order-3">
+        <ul class="navbar-nav end-links">
+          <li class="nav-item">
+            <a class="nav-link" href="../Html-files/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Html-files/signup.html"><i class="fa-solid fa-user"></i> Sign-Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Html-files/cart.html">
+              Cart
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <div class="head_container">
+        <div class="mainhead">
+            <h1 class="m-0">ORDER TRACKING</h1>
+        </div>
+    </div>
+
+    <div class="container order-tracking-container">
+        <h2 class="text-center">Track Your Order</h2>
+        <div id="map"></div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="tracking-info">
+                    <h4>Order Details</h4>
+                    <p><strong>Order ID:</strong> #12345</p>
+                    <p><strong>Status:</strong> In Transit</p>
+                    <p><strong>Estimated Delivery:</strong> 30 minutes</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tracking-info">
+                    <h4>Delivery Address</h4>
+                    <p>123 Food Street, Culinary City, 56789</p>
+                    <button class="btn btn-primary mt-3">Contact Driver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot-panel1 w-100">
+          <div class="container-fluid py-5 px-0">
+            <div class="row justify-content-evenly gy-5">
+              <div class="col-6 col-sm-3 col-md-2 col-xl-2">
+                <h5 class="mb-3">See Also</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../Html-files/menu.html">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../Html-files/services.html"
+                      >Services</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../Html-files/contact.html"
+                      >Contact us</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../Html-files/cart.html">Cart</a>
+                  </li>
+                </ul>
+              </div>
+  
+              <div class="col-6 col-sm-5 col-md-3 col-xl-3">
+                <h5 class="mb-3">Exclusive Offers</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                      <a href="#" class="nav-link">Foodie Discounts</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/Html-files/offers/limited-time-products.html">Limited-Time Promotions</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/Html-files/offers/special-event.html">Special Event Packages</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/Html-files/offers/membership-benifits.html">Membership Benefits</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/Html-files/offers/early-access.html">Early Access to New Recipes</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/Html-files/offers/vip-food-event.html">VIP Foodie Events</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/Html-files/offers/culinary-experience.html">Personalized Culinary Experiences</a>
+                  </li>
+              </ul>
+              </div>
+  
+              <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                <h5 class="mb-3">Payment Products</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/Html-files/payment/credit-debit-card.html" class="nav-link">Credit/Debit Cards</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/Html-files/payment/online-payment.html" class="nav-link">Online Payment</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/Html-files/payment/mobile-wallet.html" class="nav-link">Mobile Wallets</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/Html-files/payment/contact-less-payment.html" class="nav-link">Contactless Payments</a>
+                  </li>
+                </ul>
+              </div>
+  
+              <div class="col-6 col-md-3 col-xl-4">
+                <form
+                  id="contactForm"
+                  action="https://formsubmit.co/xyz@gmail.com"
+                  method="POST"
+                >
+                  <h3 class="text-center mb-3">Contact Us!</h3>
+                  <input
+                    type="email"
+                    id="footer-email"
+                    name="email"
+                    placeholder="Your Email"
+                    class="text-center form-control mb-2"
+                    required
+                  />
+                  <textarea
+                    id="footer-message"
+                    name="message"
+                    placeholder="Your Message"
+                    class="text-center form-control mb-2"
+                    required
+                  ></textarea>
+                  <div class="d-grid gap-2 col-12">
+                    <button type="submit" class="btn btn-danger">
+                      Send Message
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="foot-panel2">
+          <div class="media-handles pt-3 pb-2">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a
+                class="fa-brands fa-facebook"
+                href="https://facebook.com"
+                target="_blank"
+              ></a>
+              <a
+                class="fa-brands fa-instagram"
+                href="https://instagram.com"
+                target="_blank"
+              ></a>
+              <a
+                class="fa-brands fa-x-twitter"
+                href="https://twitter.com"
+                target="_blank"
+              ></a>
+              <a
+                class="fa-brands fa-linkedin"
+                href="https://linkedin.com"
+                target="_blank"
+              ></a>
+              <a
+                class="fa-brands fa-github"
+                href="https://github.com/khushi-joshi-05/Food-ordering-website"
+                target="_blank"
+              ></a>
+              <a
+                class="fa-brands fa-discord"
+                href="https://discord.com/invite/sybYafYA"
+                target="_blank"
+              ></a>
+            </div>
+            <p class="text">
+              Stay connected with us on social media for the latest updates,
+              recipes, and foodie adventures.
+            </p>
+          </div>
+          <div class="copyright py-1">
+            &copy;
+            <span id="copyright-year"></span> Foodies - All Rights Reserved |
+            <span id="author">
+              <a
+                href="https://www.linkedin.com/in/khushi-joshi-95a587256/"
+                target="_blank"
+                >Khushi Joshi</a
+              >
+            </span>
+          </div>
+        </div>
+      </footer>
+
+    <!--Scroll top button-->
+    <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white" class="arrow">
+            <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+        </svg>
+    </button>
+
+    <script>
+        function initMap() {
+    const defaultLocation = { lat: 40.7128, lng: -74.0060 }; // Default to New York City
+    
+    const mapOptions = {
+        zoom: 15,
+        center: defaultLocation,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    
+    const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    
+    const markerOptions = {
+        position: defaultLocation,
+        map: map,
+        title: "Order Location"
+    };
+    
+    const marker = new google.maps.Marker(markerOptions);
+    
+    // Optional: Add info window
+    const infoWindow = new google.maps.InfoWindow({
+        content: "<h3>Your order is here</h3>"
+    });
+    
+    marker.addListener("click", () => {
+        infoWindow.open(map, marker);
+    });
+    
+    // Optional: Try to get user's location
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const userLocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                map.setCenter(userLocation);
+                marker.setPosition(userLocation);
+            },
+            () => {
+                console.log("Error: The Geolocation service failed.");
+            }
+        );
+    } else {
+        console.log("Error: Your browser doesn't support geolocation.");
+    }
+}
+
+        document.getElementById("copyright-year").textContent = new Date().getFullYear();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="top.js"></script>
+    <script src="navbar.js"></script>
+</body>
+</html>
