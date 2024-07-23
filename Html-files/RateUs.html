@@ -17,8 +17,28 @@
     <link rel="stylesheet" href="../Css-files/RateUs.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style> #progressBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 8px;
+        background-color: #b80d0d;
+        z-index: 9999;
+    }
+</style>
 </head>
 <body>
+     <!-- Progress bar -->
+     <div id="progressBar"></div>
+     <script>
+         window.onscroll = function () {
+             var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+             var scrolled = (winScroll / height) * 100;
+             document.getElementById("progressBar").style.width = scrolled + "%";
+         };
+     </script>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a href="../index.html" class="navbar-brand opacity-75 flex-fill">
