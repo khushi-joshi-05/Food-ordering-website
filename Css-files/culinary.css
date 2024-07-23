@@ -1,0 +1,55 @@
+.hero-div {
+  background: url("https://i.pinimg.com/564x/b0/5d/df/b05ddfb2ae7b11f80ab91a79a7b96f23.jpg") no-repeat center center/cover;
+  color: #fff;
+  padding: 10rem 1rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.experiences {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.experience-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 1rem;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.experience-card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.experience-card h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.experiences img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 600px) {
+  .experience-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  header nav ul li {
+    margin: 0 2rem;
+  }
+
+  .hero-div {
+    padding: 7rem 1rem;
+    color: #fff;
+  }
+}
