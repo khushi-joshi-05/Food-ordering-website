@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Cart</title>
-    <link rel="shortcut icon" href="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://img.lovepik.com/free-png/20210926/lovepik-shopping-cart-icon-png-image_401486831_wh1200.png" type="image/x-icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
@@ -24,6 +24,17 @@
     <link rel="stylesheet" href="../Css-files/navbar.css">
     <link rel="stylesheet" href="../Css-files/footer.css">
     <style>
+        .legal-pages {
+            text-decoration: none;
+            color: white;
+        }
+        .legal-pages:hover {
+            color:rgb(255, 255, 255);
+            text-shadow: #FC0 1px 0 6px;
+            text-decoration: none;
+        }
+    </style>
+    <style>
        #progressBar {
             position: fixed;
             top: 0;
@@ -33,7 +44,86 @@
             background-color: #e21f1f;
             z-index: 9999;
         } 
+        .card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    background-color: white;
+    color: black;
+    z-index: 0;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4ba2ff 50%, #ffd146 50%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translate(-100%, -100%);
+    opacity: 0;
+    z-index: -1;
+}
+
+.card:hover::before {
+    transform: translate(0, 0);
+    opacity: 1;
+    color:black;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.card .form-label, .card .form-select, .card #info-checkout, .card p {
+    position: relative;
+    z-index: 1;
+}
+
+.form-select {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-select:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+#info-checkout {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease-in-out;
+    color: black;  
+}
+
+.card p {
+    color: black; 
+}
+
+.card:hover p, .card:hover #info-checkout {
+    color: rgb(0, 0, 0);
+}
+
     </style>
+  
+
+
+
 </head>
 
 <body>
@@ -109,7 +199,6 @@
                 </div>
             </nav>
         </header>
-
         <div class="mainhead">
             <h1>C A R T</h1>
         </div>
@@ -120,7 +209,7 @@
             <p>Use coupon code <b>qN6FVAn4</b> for 30% off!</p>
         </div>
 
-        <!-- <div class="cart">
+        <div class="cart">
             <div class="empty-cart">
             </div>
             <div class="cart-details">
@@ -128,10 +217,10 @@
                 </div>
                 <div id="cart-total"></div>
             </div>
-        </div> -->
+        </div>
 
         <div class="row" style="margin-top: 40px;">
-            <div class="col-md-7">
+            <!-- <div class="col-md-7">
                 <h2 class="playfair">Shopping Cart</h2>
                 <table class="table table-bordered mt-4">
             <div class="empty-cart">
@@ -140,26 +229,24 @@
                             <div id="cart-items">
                         </tr>
                     </tbody>
-                </table>
-                <div class="total mt-3">
-                    <p>Subtotal: $149.96</p>
+                </table>  -->
+                <!-- <div class="total mt-3" >
+                    <p>Subtotal: <div id="cart-total"></div></p>
                     <p>Shipping: $0</p>
                     <p><strong>Total: $149.96</strong></p>
-                </div>
-                <button class="btn btn-outline-primary mt-3">Continue Shopping</button>
-            </div>
+                </div> -->
+                <center><a href="menu.html">    <button class="btn btn-outline-primary mt-3" >Continue Shopping</button></a></center>
+            </div><br><br>
             <div class="col-md-5">
 
-                <!--checkout information-->
-                <div class="card mb-4 p-3">
-                    <label for="checkoutType" id="label-checkout">Type of Checkout</label>
-                    <select id="checkoutType" onchange="optionSelect()">
+                <div class="card mb-4 p-3 shadow-sm">
+                    <label for="checkoutType" id="label-checkout" class="form-label">Type of Checkout</label>
+                    <select id="checkoutType" class="form-select" onchange="optionSelect()">
                         <option value="select" selected>-- select --</option>
                         <option value="orderOnline">Order Online</option>
                         <option value="takeoutOrder">Takeout Order</option>
                     </select>
-                    <div id="info-checkout">
-                    </div>
+                    <div id="info-checkout" class="mt-3"></div>
                 </div>
 
                 
@@ -167,34 +254,39 @@
                 <div class="card mt-4 p-3">
                     <div class="mb-3">
                         <label class="form-label">Payment Method</label>
-                        <div>
-                            <input type="radio" name="paymentMethod" id="creditCard" checked>
-                            <label for="creditCard">Credit Card</label>
-                            <input type="radio" name="paymentMethod" id="paypal" style="margin-left: 10px;">
-                            <label for="paypal">PayPal</label>
+                        <div class="d-flex align-items-center">
+                            <div class="form-check me-3">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+                                <label class="form-check-label" for="creditCard">Credit Card</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+                                <label class="form-check-label" for="paypal">PayPal</label>
+                            </div>
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="nameOnCard" class="form-label">Name on Card</label>
-                        <input type="text" class="form-control" id="nameOnCard" placeholder="Name on Card">
-                    </div>
-                    <div class="mb-3">
-                        <label for="cardNumber" class="form-label">Card Number</label>
-                        <input type="text" class="form-control" id="cardNumber" placeholder="Card Number">
-                    </div>
-                    <div class="mb-3">
-                        <label for="expirationDate" class="form-label">Expiration Date</label>
-                        <input type="text" class="form-control" id="expirationDate" placeholder="MM/YY">
-                    </div>
-                    <div class="mb-3">
-                        <label for="cvv" class="form-label">CVV</label>
-                        <input type="text" class="form-control" id="cvv" placeholder="CVV">
-                    </div>
-                    <button class="btn btn-primary">Check Out</button>
+                <div class="mb-3">
+                    <label for="nameOnCard" class="form-label">Name on Card</label>
+                    <input type="text" class="form-control shadow-sm" id="nameOnCard" placeholder="Name on Card">
                 </div>
-            </div>
-        </div>
+                <div class="mb-3">
+                    <label for="cardNumber" class="form-label">Card Number</label>
+                    <input type="text" class="form-control shadow-sm" id="cardNumber" placeholder="Card Number" maxlength="16">
+                </div>
+                <div class="d-flex">
+                    <div class="me-3 w-50">
+                        <label for="expirationDate" class="form-label">Expiration Date</label>
+                        <input type="text" class="form-control shadow-sm" id="expirationDate" placeholder="MM/YY">
+                    </div>
+                    <div class="w-50">
+                        <label for="cvv" class="form-label">CVV</label>
+                        <input type="text" class="form-control shadow-sm" id="cvv" placeholder="CVV" maxlength="4">
+                    </div>
+                </div>
+                <button class="btn btn-primary w-100 mt-3 shadow-sm checkout-btn" class="">Check Out</button>
+                    </div>
     </div>
+</div>
 
 
         <!-- Input Section For Coupon Code -->
@@ -243,137 +335,213 @@
 
         </div>
     </section>
-    
-        <footer>
-            <div class="foot-panel1 w-100">
-                <div class="container-fluid py-5 px-0">
-                    <div class="row justify-content-evenly gy-5">
-                        <div class="col-6 col-sm-3 col-md-2 col-xl-2">
-                            <h5 class="mb-3">See Also</h5>
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../index.html">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../Html-files/menu.html">Menu</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../Html-files/services.html">Services</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../Html-files/contact.html">Contact us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../Html-files/cart.html">Cart</a>
-                                </li>
-                            </ul>
-                        </div>
+   
 
-                        <div class="col-6 col-sm-5 col-md-3 col-xl-3">
-                            <h5 class="mb-3">Exclusive Offers</h5>
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Foodie Discounts</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Html-files/offers/limited-time-products.html">Limited-Time Promotions</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Html-files/offers/special-event.html">Special Event Packages</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Html-files/offers/membership-benifits.html">Membership Benefits</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Html-files/offers/early-access.html">Early Access to New Recipes</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Html-files/offers/vip-food-event.html">VIP Foodie Events</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Html-files/offers/culinary-experience.html">Personalized Culinary Experiences</a>
-                                </li>
-                            </ul>
-                        </div>
+<script>
+    function optionSelect() {
+        const infoCheckout = document.getElementById('info-checkout');
+        const selectedOption = document.getElementById('checkoutType').value;
+        
+        if (selectedOption === 'orderOnline') {
+            infoCheckout.innerHTML = `
+                <p>Order online and get it delivered to your doorstep.</p>
+                <p><strong>Estimated delivery time:</strong> 30-45 minutes</p>
+            `;
+        } else if (selectedOption === 'takeoutOrder') {
+            infoCheckout.innerHTML = `
+                <p>Order now and pick it up at your convenience.</p>
+                <p><strong>Estimated pickup time:</strong> 15-20 minutes</p>
+            `;
+        } else {
+            infoCheckout.innerHTML = '';
+        }
+    }
+</script>
 
-                        <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                            <h5 class="mb-3">Payment Products</h5>
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">Secure Checkout</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">Credit/Debit Cards</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">Secure Checkout</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">Online Payment</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">Mobile Wallets</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" class="nav-link">Contactless Payments</a>
-                                </li>
-                            </ul>
-                        </div>
 
-                        <div class="col-6 col-md-3 col-xl-4">
-                            <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
-                                <h3 class="text-center mb-3">Contact Us!</h3>
-                                <input type="email" id="footer-email" name="email" placeholder="Your Email"
-                                    class="text-center form-control mb-2" required>
-                                <textarea id="footer-message" name="message" placeholder="Your Message"
-                                    class="text-center form-control mb-2" required></textarea>
-                                <div class="d-grid gap-2 col-12">
-                                    <button type="submit" class="btn btn-danger">Send Message</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+<footer>
+    <div class="foot-panel1 w-100">
+        <div class="container-fluid py-5 px-0">
+            <div class="row justify-content-evenly gy-5">
+                <div class="col-6 col-sm-3 col-md-2 col-xl-2">
+                    <h5 class="mb-3">See Also</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Html-files/menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Html-files/services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Html-files/contact.html">Contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Html-files/cart.html">Cart</a>
+                        </li>
+                    </ul>
                 </div>
+
+                <div class="col-6 col-sm-5 col-md-3 col-xl-3">
+                    <h5 class="mb-3">Exclusive Offers</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Foodie Discounts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Limited-Time Promotions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Special Event Packages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Membership Benefits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Early Access to New Recipes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">VIP Foodie Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Personalized Culinary Experiences</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                    <h5 class="mb-3">Payment Products</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Secure Checkout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Credit/Debit Cards</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Secure Checkout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Online Payment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Mobile Wallets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Contactless Payments</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-6 col-md-3 col-xl-4">
+                    <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
+                        <h3 class="text-center mb-3">Contact Us!</h3>
+                        <input type="email" id="footer-email" name="email" placeholder="Your Email"
+                            class="text-center form-control mb-2" required>
+                        <textarea id="footer-message" name="footer-message" placeholder="Your Message"
+                            class="text-center form-control mb-2" required></textarea>
+                        <div class="d-grid gap-2 col-12">
+                            <button type="submit" class="btn btn-danger">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+
+
+
             </div>
-            <div class="foot-panel2">
-                <div class="media-handles pt-3 pb-2">
-                    <h4>Follow Us</h4>
-                    <div class="social-icons">
-                        <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
-                        <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                        <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
-                        <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
-                        <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
-                            target="_blank"></a>
-                        <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
-                    </div>
-                    <p class="text"> Stay connected with us on social media for the latest updates, recipes, and foodie
-                        adventures. </p>
-                </div>
-                <div class="copyright py-1">
-                    &copy;
-                    <span id="copyright-year"></span> Foodies - All Rights Reserved |
-                    <span id="author">
-                        <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
-                    </span>
-                </div>
+        </div>
+    </div>
+
+    <div class="foot-panel2">
+        <div class="media-handles pt-3 pb-2">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
+                <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
+                    target="_blank"></a>
+                <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
             </div>
-        </footer>
+            <p class="text"> Stay connected with us on social media for the latest updates, recipes, and foodie
+                adventures. </p>
+             <div >
+                    Give your valuable 
+                            <Link to="" >
+                                <a  href="/Html-files/feedback.html"><b>feedback!</b></a>
+                            </Link>
+                    </div>
+        </div>
+        <div class="copyright py-1">
+            &copy;
+            <span id="copyright-year"></span> Foodies - All Rights Reserved |
+            <span id="terms"></span>
+            <Link to="" >
+                <a href="/Html-files/terms.html" class="legal-pages">Terms and Conditions</a> |
+            </Link>
+            <span id="privacy"></span>
+            <Link to="" >
+                <a href="/Html-files/privacy.html" class="legal-pages">Privacy Policy</a> |
+            </Link>
+            <span id="author">
+                <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank" class="legal-pages">Khushi Joshi</a>
+            </span>
+        </div>
+    </div>
+</footer>
 
-        <!--Scroll top button-->
-        <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
-                class="arrow">
-                <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
-            </svg>
-        </button>
-        <!--Scroll top button finish-->
+<button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
+        class="arrow">
+        <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+    </svg>
+</button>
 
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="Html-files/top.js"></script>
+<script src="script.js"></script>
+<script src="Html-files/navbar.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+    AOS.init(
+        {
+            duration: 1000,
+            easing: 'ease',
+            once: false,
+        }
+    );
+
+    // Chatbot
+    window.botpressWebChat.init({
+        "composerPlaceholder": "Message...",
+        "botConversationDescription": "Welcome to Foodie!",
+        "botId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+        "messagingUrl": "https://messaging.botpress.cloud",
+        "clientId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+        "webhookId": "7bd6ccb8-58f4-4ee3-9bca-f33ea4b7c37c",
+        "lazySocket": true,
+        "themeName": "prism",
+        "botName": "Foodie",
+        "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/da4ab5f7-146c-4585-961b-2d9def26af50/v96339/style.css",
+        "frontendVersion": "v1",
+        "useSessionStorage": true,
+        "enableConversationDeletion": true,
+        "theme": "prism",
+        "themeColor": "#2563eb",
+        "allowedOrigins": []
+    });
+</script>
         <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
         <script src="navbar.js"></script>
+        <script src="../carts.js"></script>
         <script src="cart.js"></script>
         <script src="top.js"></script>
-        <script src="address-info.js"></script>
 </body>
 
 </html>
