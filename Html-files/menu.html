@@ -47,26 +47,8 @@
             height: 8px;
             background-color: #e21f1f;
             z-index: 9999;
-       }
-       /* .nav-item span{
-  /* display :flex;
-  width: 15px;
-  height: 25px;
-  background-color: rgb(76, 0, 255);
-  justify-content: center;
-  align-items: center;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  right: 45px; */
-  /* position: fixed; */
-/* } */
-/* .cart-subscript:hover
-{
-    right: 0px;
-    background-color: black;
-} */ 
+
+
 .cart-subscript{
   display :flex;
   width: 15px;
@@ -81,6 +63,41 @@
   right: 45px;
 }
       
+
+        }
+        
+.center-links .nav-item .dropdown-menu {
+  background-color:#212123;
+  color: white;
+  border-radius: 0;
+  border: none;
+  padding-top: 0;
+}
+
+.center-links .nav-item .dropdown-menu {
+  background-color: #ffffff;
+  color: white;
+  border-radius: 0;
+  border: none;
+  padding-top: 0;
+}
+
+.dropdown-item:hover {
+  background-color: #58a9ff;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.dropdown-item {
+  padding: 4px 8px;
+  color: white;
+  font-size: 15px;
+  background-color: #137cbd;
+  transition: background-color 0.3s, transform 0.3s;
+
+}
+
+
     </style>
   </head>
 
@@ -109,26 +126,28 @@
         <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
             <ul class="navbar-nav center-links">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">
+                    <a class="nav-link" aria-current="page" href="index.html">
                         <i class="fa-solid fa-home"></i> Home
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Html-files/menu.html">
+                    <a class="nav-link active" href="../Html-files/menu.html">
                         <i class="fa-solid fa-book-open"></i> Menu
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link services" href="../Html-files/services.html" aria-expanded="false">
-                        <i class="fa-solid fa-handshake"></i> Services
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-check"></i> Ordering options</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-truck"></i> Order Tracking</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-headset"></i> Customer Support</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-question"></i> FAQS</a></li>
-                    </ul>
-                </li>
+
+                  <a class="nav-link dropdown-toggle" href="Html-files/services.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-gear"></i> Services
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Ordering options</a></li>
+                      <li><a class="dropdown-item" href="#">Order Tracking</a></li>
+                      <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                      <li><a class="dropdown-item" href="#">FAQS</a></li>
+                  </ul>
+              </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="../Html-files/contact.html">
                         <i class="fa-solid fa-envelope"></i> Contact Us
@@ -220,7 +239,7 @@
         <div class="container-fluid py-5 px-0">
           <div class="row justify-content-evenly gy-5">
             <div class="col-6 col-sm-3 col-md-2 col-xl-2">
-              <h5 class="mb-3">See Also</h5>
+              <h5 class="mb-3 text-center">See Also</h5>
               <ul class="nav flex-column">
                 <li class="nav-item">
                   <a class="nav-link" href="../index.html">Home</a>
@@ -245,7 +264,7 @@
             </div>
 
             <div class="col-6 col-sm-5 col-md-3 col-xxl-3">
-              <h5 class="mb-3">Exclusive Offers</h5>
+              <h5 class="mb-3 text-center">Exclusive Offers</h5>
               <ul class="nav flex-column">
                 <li class="nav-item">
                   <a href="#" class="nav-link">Foodie Discounts</a>
@@ -274,7 +293,7 @@
             </div>
 
             <div class="col-6 col-sm-4 col-md-4 col-xxl-3">
-              <h5 class="mb-3">Payment Products</h5>
+              <h5 class="mb-3 text-center">Payment Products</h5>
               <ul class="nav flex-column">
                 <li class="nav-item">
                   <a href="" class="nav-link">Secure Checkout</a>

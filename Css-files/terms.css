@@ -98,3 +98,16 @@ body {
 .main-container ul  li {
     font-size: 18px;
 }
+
+@media (max-width: 780px) {
+
+  .main-container {
+    width: 95%;
+    margin: 60px auto;
+    padding: 14px;
+    background: linear-gradient(to top, rgb(255, 211, 145), #ffffff);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px
+  }
+
+}
