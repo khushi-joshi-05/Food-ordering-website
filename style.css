@@ -690,7 +690,8 @@ body {
 
 /* FAQS CONTAINER */
 .faq-section {
-  background-color: brown;
+  background-color: rgb(173, 204, 255);
+  /* background: linear-gradient(345deg, #f7adad, #f01d1d); */
   padding: 50px 20px;
 }
 
@@ -718,35 +719,50 @@ body {
   opacity: 1;
 }
 
+.main-faq-head {
+  font-weight: 800;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+  text-shadow: 1px 1px 2px rgb(255, 142, 142), 0 0 1em rgb(255, 46, 178), 0 0 0.2em blue;
+}
+
+.main-faq-head:hover {
+  text-shadow: 1px 1px 0px rgb(141, 255, 240), 0 0 0.6em rgb(0, 123, 142), 0 0 0.2em rgb(255, 0, 242);
+  cursor: pointer;
+}
+
 .faq-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   color: white;
-  border-radius: 10px;
-  background-color: #aa5858;
+  /* border-radius: 10px; */
+  /* background-color: #aa5858; */
+  /* background: linear-gradient(135deg, #c4c0c0, #ff7300); */
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); */
 }
 
 .faq-container h1 {
   text-align: center;
   margin-bottom: 30px;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #fef8f6;
-  font-family: 'Times New Roman', Times, serif;
+  /* font-family: 'Times New Roman', Times, serif; */
 }
 
+
 .faq-item {
-  background-color: #c4c0c0;
-  margin-bottom: 20px;
+  background: linear-gradient(135deg, #c4c0c0, #d1a7a7);
+  margin-bottom: 15px;
   border-bottom: 1px solid #ffddcc;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
   transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
 }
 
 .faq-item:hover {
   
-  transform: scale(1.02);
+  transform: translateY(3px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   background-color: brown;
   color: white;
@@ -756,65 +772,62 @@ body {
   cursor: pointer;
   margin: 0;
   padding: 15px;
-  background-color: brown;
+  background: linear-gradient(135deg, #ff6347, #b22222);
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 50;
-  font-size: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: white;
 }
 
 .faq-item h2:hover {
-  background-color: #460d0d;
-  box-shadow: 0 4px 8px rgba(91, 19, 19, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 98, 125, 0.821), 2px 2px 4px rgba(155, 92, 255, 0.821);
+  background: linear-gradient(135deg, #da3232, #ff6347);
 }
 
 .faq-item p {
   font-family: 'Poppins', sans-serif;
-  font-size: 10px;
-  display: none;
-  margin: 10px 10px 15px;
+  font-size: 18px !important;
+  display: block;
   line-height: 1.6;
   opacity: 0;
-  transition: opacity 0.3s ease, max-height 0.3s ease,box-shadow 0.3s ease;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
   max-height: 0;
+  padding: 0px 3px;
   overflow: hidden;
+  background: linear-gradient(135deg, #ff907c, #ff4e4e);
+  margin-bottom: 0px !important;
 }
+
 .faq-item p:hover{
-  background-color: brown;
-  color: white;
+  /* background-color: brown; */
+  /* color: white; */
+  background: linear-gradient(135deg, #ff5f43, #fd7c7c);
 }
 
 .faq-item.active p {
   display: block;
   opacity: 1;
   max-height: 500px;
-  
 }
 
 
 .faq-item h2::after {
   content: "\25BC"; /* Unicode for downward arrow */
   font-size: 1rem;
-  background-color: br;
   color: white;
   transition: transform 0.3s ease;
 }
 
 .faq-item.active h2::after {
-  transform: rotate(-180deg); /* Rotate the arrow when active */
+  transform: rotate(-180deg); 
 }
 
-/* Additional styles for a more attractive look */
-.faq-container p {
-  font-size: 1.4rem;
-  font-family: "Verdana", sans-serif;
-  color: #212123;
 
-}
 
 .faq-container a {
   color: #ffddcc;
@@ -822,7 +835,7 @@ body {
 }
 
 .faq-container a:hover {
-  color: #ffc7b2; /* Slightly lighter peach color on hover */
+  color: #ffc7b2; 
 }
 
 @media (max-width: 600px) {
