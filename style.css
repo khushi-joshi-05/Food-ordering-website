@@ -424,7 +424,11 @@ body {
 }
 
 
+.items{
+  gap:1rem;
+  
 
+}
 .menu_items .img-container {
   width: 100%;
   height: 100%;
