@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="Css-files/footer.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="Css-files/googletranslate.css">
     <style>
         .legal-pages {
             text-decoration: none;
@@ -976,6 +977,26 @@
             <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
         </svg>
     </button>
+    <button id="translateButton">Translate</button>
+
+    <!-- Popup for Google Translate -->
+    <div id="translatePopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <div id="google_translate_element"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'en',
+          }, 'google_translate_element');
+      }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  
+  <script src=../Html-files/googletranslate.js></script>
 
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
