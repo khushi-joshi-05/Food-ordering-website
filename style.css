@@ -621,6 +621,7 @@ h3,p{
   padding-left: 4%;
   padding-top: 4%;
   padding-right: 2%;
+  
 }
 
 .app_download h4 {
@@ -768,6 +769,7 @@ h3,p{
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+
   }
 }
 
@@ -788,13 +790,13 @@ h3,p{
   }
 }
 
-.faq-item {
+/* .faq-item {
   margin-bottom: 20px;
   border-bottom: 1px solid #ffddcc;
   padding-bottom: 10px;
   opacity: 0;
   transition: background-color 0.3s ease, transform 0.3s ease;
-}
+} */
 
 .faq-item.visible {
   animation: slideIn 1s forwards;
@@ -816,10 +818,11 @@ h3,p{
   margin-bottom: 30px;
   font-size: 2.5rem;
   color: #fef8f6;
-  font-family: "Arial", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .faq-item {
+  background-color: #c4c0c0;
   margin-bottom: 20px;
   border-bottom: 1px solid #ffddcc;
   padding-bottom: 10px;
@@ -827,9 +830,11 @@ h3,p{
 }
 
 .faq-item:hover {
-  background-color: #c4c0c0;
+  
   transform: scale(1.02);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  background-color: brown;
+  color: white;
 }
 
 .faq-item h2 {
@@ -842,7 +847,9 @@ h3,p{
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  font-family: "Arial", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 50;
+  font-size: 20px;
 }
 
 .faq-item h2:hover {
@@ -851,20 +858,28 @@ h3,p{
 }
 
 .faq-item p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
   display: none;
   margin: 10px 10px 15px;
   line-height: 1.6;
   opacity: 0;
-  transition: opacity 0.3s ease, max-height 0.3s ease;
+  transition: opacity 0.3s ease, max-height 0.3s ease,box-shadow 0.3s ease;
   max-height: 0;
   overflow: hidden;
+}
+.faq-item p:hover{
+  background-color: brown;
+  color: white;
 }
 
 .faq-item.active p {
   display: block;
   opacity: 1;
-  max-height: 500px; /* Arbitrary large value to allow for smooth transition */
+  max-height: 500px;
+  
 }
+
 
 .faq-item h2::after {
   content: "\25BC"; /* Unicode for downward arrow */
@@ -883,6 +898,7 @@ h3,p{
   font-size: 1.4rem;
   font-family: "Verdana", sans-serif;
   color: #212123;
+
 }
 
 .faq-container a {
