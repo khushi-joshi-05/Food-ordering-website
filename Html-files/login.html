@@ -460,6 +460,38 @@
 });
 
 	</script>
+	 <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+	 <script>
+		 AOS.init(
+			 {
+				 duration: 1000,
+				 easing: 'ease',
+				 once: false,
+			 }
+		 );
+ 
+		 // Chatbot
+		 window.botpressWebChat.init({
+			 "composerPlaceholder": "Message...",
+			 "botConversationDescription": "Welcome to Foodie!",
+			 "botId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+			 "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+			 "messagingUrl": "https://messaging.botpress.cloud",
+			 "clientId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+			 "webhookId": "7bd6ccb8-58f4-4ee3-9bca-f33ea4b7c37c",
+			 "lazySocket": true,
+			 "themeName": "prism",
+			 "botName": "Foodie",
+			 "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/da4ab5f7-146c-4585-961b-2d9def26af50/v96339/style.css",
+			 "frontendVersion": "v1",
+			 "useSessionStorage": true,
+			 "enableConversationDeletion": true,
+			 "theme": "prism",
+			 "themeColor": "#2563eb",
+			 "allowedOrigins": []
+		 });
+	 </script>
+ 
 </body>
 
 </html>
