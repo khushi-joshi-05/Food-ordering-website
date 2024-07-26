@@ -19,6 +19,7 @@ document.querySelectorAll('.faq-item h2').forEach(item => {
 });
 
 
+
  function getVisitorCount() {
   return localStorage.getItem('visitorCount') || 0;
 }
