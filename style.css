@@ -544,12 +544,14 @@ body {
 /* APP DOWNLOAD SECTION */
 
 .app_download {
-    background-color: brown;
-    height: fit-content;
-    color: white;
-    padding-left: 4%;
-    padding-top: 4%;
-    padding-right: 2%;
+
+  background-color: brown;
+  height: fit-content;
+  color: white;
+  padding-left: 4%;
+  padding-top: 4%;
+  padding-right: 2%;
+
 }
 
 .app_download h4 {
@@ -690,14 +692,18 @@ body {
 }
 
 @keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+
+  }
+
 }
 
 
@@ -719,6 +725,7 @@ body {
     }
 }
 
+
 .faq-item {
     margin-bottom: 20px;
     border-bottom: 1px solid #ffddcc;
@@ -726,6 +733,7 @@ body {
     opacity: 88;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 
 .faq-item.visible {
     animation: slideIn 1s forwards;
@@ -743,37 +751,44 @@ body {
 }
 
 .faq-container h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-    color: #fef8f6;
-    font-family: "Arial", sans-serif;
+
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #fef8f6;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .faq-item {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ffddcc;
-    padding-bottom: 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #c4c0c0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ffddcc;
+  padding-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .faq-item:hover {
-    background-color: #c4c0c0;
-    transform: scale(1.02);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  background-color: brown;
+  color: white;
 }
 
 .faq-item h2 {
-    cursor: pointer;
-    margin: 0;
-    padding: 15px;
-    background-color: brown;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    font-family: "Arial", sans-serif;
+  cursor: pointer;
+  margin: 0;
+  padding: 15px;
+  background-color: brown;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 50;
+  font-size: 20px;
+
 }
 
 .faq-item h2:hover {
@@ -782,21 +797,32 @@ body {
 }
 
 .faq-item p {
-    display: none;
-    margin: 10px 10px 15px;
-    line-height: 1.6;
-    opacity: 0;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
-    max-height: 0;
-    overflow: hidden;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  display: none;
+  margin: 10px 10px 15px;
+  line-height: 1.6;
+  opacity: 0;
+  transition: opacity 0.3s ease, max-height 0.3s ease,box-shadow 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+
+}
+.faq-item p:hover{
+  background-color: brown;
+  color: white;
 }
 
 .faq-item.active p {
-    display: block;
-    opacity: 1;
-    max-height: 500px;
-    /* Arbitrary large value to allow for smooth transition */
+
+
+  display: block;
+  opacity: 1;
+  max-height: 500px;
+
 }
+
 
 .faq-item h2::after {
     content: "\25BC";
@@ -816,9 +842,12 @@ body {
 /* Additional styles for a more attractive look */
 
 .faq-container p {
-    font-size: 1.4rem;
-    font-family: "Verdana", sans-serif;
-    color: #212123;
+
+  font-size: 1.4rem;
+  font-family: "Verdana", sans-serif;
+  color: #212123;
+
+
 }
 
 .faq-container a {

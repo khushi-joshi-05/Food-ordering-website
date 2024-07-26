@@ -12,23 +12,21 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 100px 50px;
-    padding: 100px 50px;
+    padding: 55px 50px 0 50px;
 }
 
 /* background cards size and rounding */
 .container .card {
-    position: relative;
+   position: relative;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    width: 355px;
+    align-items: flex-start;
+    width: 305px;
     height: 300px;
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
     transition: 0.5s;
-    align-items: center;
 }
 
 .container .card:hover {

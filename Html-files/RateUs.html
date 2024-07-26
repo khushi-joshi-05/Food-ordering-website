@@ -17,6 +17,39 @@
     <link rel="stylesheet" href="../Css-files/RateUs.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+               
+.center-links .nav-item .dropdown-menu {
+  background-color:#212123;
+  color: white;
+  border-radius: 0;
+  border: none;
+  padding-top: 0;
+}
+
+.center-links .nav-item .dropdown-menu {
+  background-color: #ffffff;
+  color: white;
+  border-radius: 0;
+  border: none;
+  padding-top: 0;
+}
+
+.dropdown-item:hover {
+  background-color: #58a9ff;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.dropdown-item {
+  padding: 4px 8px;
+  color: white;
+  font-size: 15px;
+  background-color: #137cbd;
+  transition: background-color 0.3s, transform 0.3s;
+
+}
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -50,18 +83,15 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a
-                            class="nav-link services"
-                            href="../Html-files/services.html"
-                            aria-expanded="false"
-                        >
-                            <i class="fas fa-cogs"></i> Services
+
+                        <a class="nav-link dropdown-toggle" href="Html-files/services.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i> Services
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><i class="fas fa-clipboard-list"></i> Ordering options</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fas fa-shipping-fast"></i> Order Tracking</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fas fa-headset"></i> Customer Support</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fas fa-question-circle"></i> FAQS</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Ordering options</a></li>
+                            <li><a class="dropdown-item" href="#">Order Tracking</a></li>
+                            <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                            <li><a class="dropdown-item" href="#">FAQS</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -180,5 +210,7 @@
         });
     </script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    
 </body>
 </html>
