@@ -17,3 +17,11 @@ document.querySelectorAll('.faq-item h2').forEach(item => {
       parent.classList.toggle('active');
   });
 });
+/*Refresher*/
+document.addEventListener('DOMContentLoaded', function() {
+  const caduceus = document.getElementById('caduceus');
+  
+  caduceus.addEventListener('mouseover', function() {
+    location.reload();
+  });
+});
