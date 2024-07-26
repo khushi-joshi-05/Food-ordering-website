@@ -1,0 +1,43 @@
+name: Auto Label PRs
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  label_prs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const pr = context.payload.pull_request;
+            const title = pr.title.toLowerCase();
+            const body = pr.body ? pr.body.toLowerCase() : '';
+            
+            const labels = [];
+            
+            if (title.includes('gssoc') || body.includes('gssoc')) {
+              labels.push('GSSoC');
+            }
+            
+            if (title.includes('enhancement') || body.includes('enhancement')) {
+              labels.push('Enhancement');
+            }
+            
+            if (title.includes('bug') || body.includes('bug')) {
+              labels.push('Bug');
+            }
+            
+            if (title.includes('documentation') || body.includes('documentation')) {
+              labels.push('Documentation');
+            }
+            
+            if (labels.length > 0) {
+              github.rest.issues.addLabels({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.name,
+                labels: labels
+              });
+            }
