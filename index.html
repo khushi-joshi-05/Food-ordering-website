@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
 
@@ -33,6 +32,7 @@
     <link rel="stylesheet" href="Css-files/footer.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="Css-files/googletranslate.css">
     <style>
         .legal-pages {
             text-decoration: none;
@@ -75,15 +75,9 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <!-- Brand Logo -->
-            <a href="index.html" class="navbar-brand opacity-75 flex-fill">
 
-
-                <img src="./Images/logo/Foodielogo.png" height="30" alt="Brand Logo" style="background-color: black;">
-
-                
-
-
-                
+            <a href="index.html">
+                <img id="theme-toggle-logo"  src="Images/logo/Logo-Light.png" height="70" width="70"  alt="Brand Logo">
 
             </a>
             <!-- Navbar Toggler -->
@@ -822,8 +816,8 @@
     </section>
 
     <div class="app_download pb-4">
-        <h4>Free Delivery!</h4>
-        <h2 class="text-center">Download the App now!</h2>
+        <h4>For Free Delivery!</h4>
+        <h2 class="text-center">Download This Amazing App Now!</h2>
         <br>
         <p>For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
         <a href="#"><img src="/Images/app_download/get_it_on_google_play_store.png" class="app-download-img"
@@ -964,6 +958,12 @@
                 <Link to="" >
                     <a href="/Html-files/privacy.html" class="legal-pages">Privacy Policy</a> |
                 </Link>
+
+                <span id="Licensing"></span>
+                <Link to="" >
+                    <a href="/Html-files/Licensing.html" class="legal-pages">Licensing</a> |
+                </Link>
+
                 <span id="author">
                     <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank" class="legal-pages">Khushi Joshi</a>
                 </span>
@@ -977,6 +977,26 @@
             <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
         </svg>
     </button>
+    <button id="translateButton">Translate</button>
+
+    <!-- Popup for Google Translate -->
+    <div id="translatePopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <div id="google_translate_element"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'en',
+          }, 'google_translate_element');
+      }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  
+  <script src=../Html-files/googletranslate.js></script>
 
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
