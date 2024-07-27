@@ -341,6 +341,7 @@ body {
   border-width: 2px;
 }
 
+
 /* MENU CONTAINER */
 /* Define default light theme variables */
 :root {
@@ -420,7 +421,8 @@ body {
   box-shadow: var(--box-shadow-color) 1px 1px 8px;
   cursor: pointer;
   scale: 1.02;
-  background-color: var(--menu-item-hover-background);
+  /* background-color: var(--menu-item-hover-background); */
+  background: linear-gradient(brown,rgb(242, 254, 133),white);
 }
 
 .menu_items .card-body {
@@ -429,8 +431,8 @@ body {
 }
 
 .menu_items .img-container {
-  width: 90%;
-  margin-top: 1em;
+  width: 100%;
+  margin-top: 0em;
   margin-right: auto;
   margin-left: auto;
 }
@@ -440,7 +442,8 @@ body {
   object-position: center;
   height: 220px;
   width: 100%;
-  border-radius: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .menu_items .items h3 {
@@ -448,6 +451,19 @@ body {
   margin-top: 10px;
   color: var(--border-color);
 }
+.ordernow{
+  border-radius: 10px;
+  background-color: brown;
+  padding: 9px;
+  width: 60%;
+  color:white;
+}
+
+.ordernow:hover{
+  background-color: var(--btn-hover-background-color);
+  color:var(--btn-hover-text-color);
+}
+
 
 
 /* TESTIMONIALS */
