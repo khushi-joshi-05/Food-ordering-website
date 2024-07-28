@@ -84,6 +84,10 @@ body {
     right: 10%;
 }
 
+.carousel-caption__img{
+    
+}
+
 .slider-title {
     font-size: calc(1.3rem + 6.7vw);
     line-height: 1.1em;
