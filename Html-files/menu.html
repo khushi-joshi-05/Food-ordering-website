@@ -38,13 +38,67 @@
     <link rel="stylesheet" href="../Css-files/navbar.css" />
     <link rel="stylesheet" href="../Css-files/footer.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+       #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #e21f1f;
+            z-index: 9999;
+        }
+        
+.center-links .nav-item .dropdown-menu {
+  background-color:#212123;
+  color: white;
+  border-radius: 0;
+  border: none;
+  padding-top: 0;
+}
+
+.center-links .nav-item .dropdown-menu {
+  background-color: #ffffff;
+  color: white;
+  border-radius: 0;
+  border: none;
+  padding-top: 0;
+}
+
+.dropdown-item:hover {
+  background-color: #58a9ff;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.dropdown-item {
+  padding: 4px 8px;
+  color: white;
+  font-size: 15px;
+  background-color: #137cbd;
+  transition: background-color 0.3s, transform 0.3s;
+
+}
+
+    </style>
   </head>
 
   <body>
+        <!-- Progress bar -->
+        <div id="progressBar"></div>
+        <script>
+            window.onscroll = function () {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("progressBar").style.width = scrolled + "%";
+            };
+        </script>
+        <!-- end -->
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
         <a href="index.html" class="navbar-brand opacity-75 flex-fill">
-            <img src="Images/logo/Foodielogo.png" height="40">
+            <img src="../Images/logo/Foodielogo.png" height="40">
         </a>
         <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse"
             data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false"
@@ -54,60 +108,62 @@
         <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
             <ul class="navbar-nav center-links">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">
+                    <a class="nav-link" aria-current="page" href="index.html">
                         <i class="fa-solid fa-home"></i> Home
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Html-files/menu.html">
+                    <a class="nav-link active" href="../Html-files/menu.html">
                         <i class="fa-solid fa-book-open"></i> Menu
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link services" href="/Html-files/services.html" aria-expanded="false">
-                        <i class="fa-solid fa-handshake"></i> Services
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-check"></i> Ordering options</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-truck"></i> Order Tracking</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-headset"></i> Customer Support</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-question"></i> FAQS</a></li>
-                    </ul>
-                </li>
+
+                  <a class="nav-link dropdown-toggle" href="Html-files/services.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-gear"></i> Services
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Ordering options</a></li>
+                      <li><a class="dropdown-item" href="#">Order Tracking</a></li>
+                      <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                      <li><a class="dropdown-item" href="#">FAQS</a></li>
+                  </ul>
+              </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="Html-files/contact.html">
+                    <a class="nav-link" href="../Html-files/contact.html">
                         <i class="fa-solid fa-envelope"></i> Contact Us
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Html-files/offers.html">
+                    <a class="nav-link" href="../Html-files/offers.html">
                         <i class="fa-solid fa-gift"></i> Offers
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Html-files/RateUs.html">
+                    <a class="nav-link" href="../Html-files/RateUs.html">
                         <i class="fa-solid fa-star"></i> Rate Us
                     </a>
                 </li>
             </ul>
         </div>
         <div class="order-0 ml-auto p-2">
-            <img class="nav-link" src="Images/navbar/sun.png" id="theme-toggle-icon" alt="theme toggler button">
+            <img class="nav-link" src="../Images/navbar/sun.png" id="theme-toggle-icon" alt="theme toggler button">
         </div>
         <div class="collapse navbar-collapse hamburgeritems enddiv order-3">
             <ul class="navbar-nav end-links">
                 <li class="nav-item">
-                    <a class="nav-link" href="Html-files/login.html">
+                    <a class="nav-link" href="../Html-files/login.html">
                         <i class="fa-solid fa-sign-in"></i> Login
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Html-files/signup.html">
+                    <a class="nav-link" href="../Html-files/signup.html">
                         <i class="fa-solid fa-user-plus"></i> Sign-Up
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Html-files/cart.html">
+                    <a class="nav-link" href="../Html-files/cart.html">
                         <i class="fa-solid fa-cart-shopping"></i> Cart
                     </a>
                 </li>
@@ -164,7 +220,7 @@
         <div class="container-fluid py-5 px-0">
           <div class="row justify-content-evenly gy-5">
             <div class="col-6 col-sm-3 col-md-2 col-xl-2">
-              <h5 class="mb-3">See Also</h5>
+              <h5 class="mb-3 text-center">See Also</h5>
               <ul class="nav flex-column">
                 <li class="nav-item">
                   <a class="nav-link" href="../index.html">Home</a>
@@ -189,7 +245,7 @@
             </div>
 
             <div class="col-6 col-sm-5 col-md-3 col-xxl-3">
-              <h5 class="mb-3">Exclusive Offers</h5>
+              <h5 class="mb-3 text-center">Exclusive Offers</h5>
               <ul class="nav flex-column">
                 <li class="nav-item">
                   <a href="#" class="nav-link">Foodie Discounts</a>
@@ -218,7 +274,7 @@
             </div>
 
             <div class="col-6 col-sm-4 col-md-4 col-xxl-3">
-              <h5 class="mb-3">Payment Products</h5>
+              <h5 class="mb-3 text-center">Payment Products</h5>
               <ul class="nav flex-column">
                 <li class="nav-item">
                   <a href="" class="nav-link">Secure Checkout</a>
@@ -364,5 +420,38 @@
     </script>
     <script src="../carts.js"></script>
     <script src="cart.js"> </script>
+
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+        AOS.init(
+            {
+                duration: 1000,
+                easing: 'ease',
+                once: false,
+            }
+        );
+
+        // Chatbot
+        window.botpressWebChat.init({
+            "composerPlaceholder": "Message...",
+            "botConversationDescription": "Welcome to Foodie!",
+            "botId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+            "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+            "messagingUrl": "https://messaging.botpress.cloud",
+            "clientId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+            "webhookId": "7bd6ccb8-58f4-4ee3-9bca-f33ea4b7c37c",
+            "lazySocket": true,
+            "themeName": "prism",
+            "botName": "Foodie",
+            "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/da4ab5f7-146c-4585-961b-2d9def26af50/v96339/style.css",
+            "frontendVersion": "v1",
+            "useSessionStorage": true,
+            "enableConversationDeletion": true,
+            "theme": "prism",
+            "themeColor": "#2563eb",
+            "allowedOrigins": []
+        });
+    </script>
+
   </body>
 </html>

@@ -1,13 +1,15 @@
 //Themechange icon toggling behaviour
 let themeToggleIcon = document.getElementById("theme-toggle-icon");
-
+let themeToggleLogo = document.getElementById("theme-toggle-logo");
 themeToggleIcon.addEventListener("click", function () {
   document.body.classList.toggle("dark-theme");
   document.body.classList.toggle(":root")
   if (document.body.classList.contains("dark-theme")) {
-    themeToggleIcon.src = "../Images/navbar/moon.png";
-  } else {
     themeToggleIcon.src = "../Images/navbar/sun.png";
+    themeToggleLogo.src = "Images/logo/Logo-Dark.png";
+  } else {
+    themeToggleIcon.src = "../Images/navbar/moon.png";
+    themeToggleLogo.src="Images/logo/Logo-Light.png";
   }
 });
 
