@@ -24,6 +24,10 @@
   --a: white;
   --nav: black;
   --invert: invert(1);
+
+  /* Additional colors */
+  --light-red: #ffcccc;
+  --dark-red: #ff6666;
 }
 
 .dark-theme {
@@ -58,6 +62,8 @@
   --bs-navbar-color: var(--a);
   background-color: var(--nav);
   gap: 10px;
+  padding: 10px 20px; /* Add some padding */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 .navbar-toggler-icon {
@@ -86,8 +92,16 @@ ul {
   align-items: center;
 }
 
+.center-links .nav-item .nav-link {
+  color: var(--primary-text-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
 .center-links .nav-item .nav-link:hover {
-  color: #f13800e4;
+  background-color: var(--light-red);
+  color: var(--primary-text-color);
 }
 
 .center-links .nav-item .dropdown-menu {
@@ -100,33 +114,41 @@ ul {
 
 /* End Links */
 .end-links .nav-item .nav-link:hover {
-  color: rgba(255, 183, 0, 0.705);
+  background-color: var(--light-red);
+  color: var(--primary-text-color);
 }
 
 .navbar-nav.center-links .active {
   color: #dc3545;
   border-bottom: 2px solid #dc3545;
-  gap:10px;
+  gap: 10px;
 }
 
 .navbar-nav.end-links .active {
   color: rgba(255, 183, 0, 0.705);
   border-bottom: 2px solid rgba(255, 183, 0, 0.705);
-  gap:10px;
+  gap: 10px;
 }
 
 #theme-toggle-icon {
   width: 30px;
   cursor: pointer;
+  transition: transform 0.3s; /* Add transition for smooth rotation */
 }
 
+#theme-toggle-icon:hover {
+  transform: rotate(20deg); /* Rotate icon on hover */
+}
+
+/* Dropdown */
 .center-links .nav-item .dropdown-menu {
   background-color: var(--drop-bg);
-  color: var(--a);
+  color: var (--a);
   border-radius: 0;
   border: none;
   padding-top: 0;
 }
+
 .dropdown-item {
   padding: 4px 8px;
   color: var(--a);
@@ -144,8 +166,34 @@ ul {
   transform: scale(1.1);
 }
 
-/* Theme Toggle Icon */
-#theme-toggle-icon {
-  width: 30px;
-  cursor: pointer;
+/* Rate Us Button */
+.rate-us-btn {
+  background-color: var(--primary-bg-color);
+  border: 1px solid var(--dark-red);
+  color: var(--dark-red);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.rate-us-btn:hover {
+  background-color: var(--light-red);
+  color: var(--primary-text-color);
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: absolute;
+  top: 50px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  background-color: var(--primary-bg-color);
+  border: 1px solid var(--primary-text-color);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.popup.show {
+  display: block;
 }
