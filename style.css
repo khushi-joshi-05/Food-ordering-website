@@ -560,10 +560,33 @@ body {
 }
 
 .picture-gallery img {
-    width: 100%;
-    transform: scale(1.15);
+    width: 50%;
+
+    /* transform: scale(1.15); */
     opacity: 0.7;
 }
+
+.picture-gallery {
+  position: relative;
+  overflow: hidden;
+  /* padding-bottom: 20px; Add padding to the bottom */
+}
+
+.swiper-slide {
+  display: flex; /* Use flexbox to place images side by side */
+}
+
+.swiper-slide img {
+  width: 50%;
+  height: auto;
+  display: block;
+}
+
+/* Add margin to the next section to separate it visually */
+.next-section {
+  margin-top: 20px; /* Adjust the value as needed */
+}
+
 
 .picture-gallery img:hover {
     transform: scale(1.03);
