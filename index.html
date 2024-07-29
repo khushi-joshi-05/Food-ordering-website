@@ -292,6 +292,21 @@
         .slider-reveal {
             animation: fadeInUp 1.5s ease-in-out;
         }
+
+.typing-effect {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+.highlight-text{
+    color:#D0EEB0;
+}
+
+.service-icon{
+    height:15% !important;
+    width: 15% !important;
+    opacity: 1 !important;
+}
         
         @keyframes fadeInUp {
             from {
@@ -499,10 +514,10 @@
     <section class="services_container">
         <div class="card">
             <div class="d-flex justify-content-center img-container">
-                <img src="https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300" alt="" class="card-img">
+                <img src="https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300"
+                    alt="" class="card-img">
             </div>
             <div class="card-img-overlay row w-100 m-0">
-
                 <div class="box_main m-auto col-md-9 col-xl-3" data-aos="zoom-out-right" data-aos-duration="1000"
                 data-aos-offset="170" data-aos-easing="ease-in-out">
                 <h1>
@@ -518,7 +533,7 @@
                     const text = "Bringing \nhappiness\n to you";
                     const typingText = document.getElementById('typing-text');
                     let index = 0;
-        
+
                     function type() {
                         if (index < text.length) {
                             typingText.innerHTML += text[index] === '\n' ? '<br>' : text[index];
@@ -526,7 +541,7 @@
                             setTimeout(type, 100); // Adjust typing speed here
                         }
                     }
-        
+
                     type();
                 });
             </script>
@@ -535,25 +550,22 @@
                     <img src="./icons/motorbike.png" alt="" class="service-icon">
                     <h1>Online <br>Delivery</h1>
                     <a href="/Html-files/add-address.html" class="btn btn-outline-light border border-light">Order Online</a>
-
+                </div>
                 <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000"
                     data-aos-offset="170" data-aos-easing="ease-in-out">
                     <img src="./icons/take-away.png" alt="" class="service-icon">
-
                     <h1>Click & <br>Collect</h1>
                     <a href="/Html-files/cart.html" class="btn btn-outline-light border border-light">Take out Order</a>
                 </div>
-
                 <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000"
                     data-aos-offset="170" data-aos-easing="ease-in-out">
                     <img src="/icons/dining-table.png" alt="" class="service-icon">
-
                     <h1>Restaurant<br> Dining</h1>
                     <a href="/Html-files/book-table.html" class="btn btn-outline-light border border-light">Book Table </a>
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
     <section class="menu_container">
         <div class="mainhead text-center" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
