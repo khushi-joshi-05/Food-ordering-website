@@ -1,3 +1,4 @@
+let iconcartspan = document.querySelector('.cart-subscript');
 const menuContainer = document.querySelector(".menu-container");
 let categories = [
     "lamb",
@@ -200,6 +201,41 @@ function setCartItems(cartItems) {
 }
 
 // Function to handle add to cart button click
+// function cartBtn() {
+//     menuContainer.addEventListener("click", (event) => {
+//         const clickedElement = event.target;
+//         if (clickedElement.classList.contains("add-to-cart-button")) {
+//             const productName = clickedElement.dataset.productName;
+//             const productImgSource = clickedElement.dataset.productImgsource;
+//             const productPrice = clickedElement.dataset.productPrice;
+
+//             // Get the current cart items
+//             const cartItems = getCartItems();
+
+//             // Check if the item is already in the cart
+//             const existingCartItem = cartItems.find(
+//                 (item) => item.name === productName
+//             );
+
+//             if (existingCartItem) {
+//                 // If the item is already in the cart, increase the quantity
+//                 existingCartItem.quantity += 1;
+//             } else {
+//                 // If the item is not in the cart, add it with quantity 1
+//                 cartItems.push({
+//                     name: productName,
+//                     imgSrc: productImgSource,
+//                     quantity: 1,
+//                     price: productPrice,
+//                 });
+//             }
+//             // console.log(cartItems);
+
+//             // Save the updated cart items to local storage
+//             setCartItems(cartItems);
+//         }
+//     });
+// }
 function cartBtn() {
     menuContainer.addEventListener("click", (event) => {
         const clickedElement = event.target;
@@ -228,10 +264,15 @@ function cartBtn() {
                     price: productPrice,
                 });
             }
-            // console.log(cartItems);
 
             // Save the updated cart items to local storage
             setCartItems(cartItems);
+
+            // Calculate the total quantity of items in the cart
+            const totalquantity = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+
+            // Update the cart icon subscript
+            iconcartspan.innerText = totalquantity;
         }
     });
 }
