@@ -88,7 +88,7 @@ function createCartItemElement(item) {
     cartItemRow.innerHTML = `
         <img src='${item.imgSrc}' alt='${item.name}-image' height='100px' width='100px'>
         <div class='detail'>
-            <div>${item.name}</div>
+            <div class="name">${item.name}</div>
             <div class="quantity-wrapper">
                 <span class="btn decrease-quantity ${item.quantity == 1 ? 'disable' : ''}">-</span>
                 <span class="quantity">${item.quantity}</span>

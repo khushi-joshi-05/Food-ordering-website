@@ -1,20 +1,33 @@
+body {
+  background-color: #f0f0f0; /* Change background color of the page */
+  font-family: "Baloo Bhai", cursive;
+}
+
 .main-container {
-	padding: 2vw;
-	background-color: rgb(224, 224, 252);
+  padding: 2vw;
+  background-color: rgb(221, 160, 138);
 }
 
 .form-container {
   max-width: 800px;
   margin: auto;
-  background: #f9f9f9;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8U0rDtyI121wfvf1T10w87IJzGU8zbCxA5Q&s")
+    no-repeat center center; /* Add form background image */
+  background-size: cover;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border: 2px solid black;
+  transition: transform 0.3s ease-in-out; /* Add transition */
+}
+
+.form-container:hover {
+  transform: scale(1.02); /* Add a scaling effect on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
 .form-container form {
   margin: 0 auto;
-  width: 30vw;     
+  width: 30vw;
 }
 
 input::-webkit-outer-spin-button,
@@ -23,8 +36,11 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.form-floating input {
+  transition: background-color 0.3s ease-in-out;
+  border: 2px solid black;
+}
 
-
-
-
-            
+.form-floating input:focus {
+  background-color: rgba(255, 255, 255, 0.8);
+}
