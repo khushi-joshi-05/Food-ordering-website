@@ -80,7 +80,7 @@ function renderMeals(mealData) {
                     <div class="black-overlay">
                     	<img src="${mealDetails.imgSrc}" alt="" class="card-img-top">
                     </div>
-                    <button class="btn btn-warning add-to-cart-button" data-product-id="${mealDetails.id}" data-product-name="${mealDetails.name}" data-product-price="10.20">+ Add to Cart</button>
+                    <button class="btn btn-warning add-to-cart-button" data-product-id="${mealDetails.id}" data-product-name="${mealDetails.name}" data-product-price="10.20" data-product-img-source="${mealDetails.imgSrc}">+ Add to Cart</button>
             	</div>
             	<div class="card-body">
                     <h3>${mealDetails.name}</h3>
@@ -241,8 +241,10 @@ function cartBtn() {
         const clickedElement = event.target;
         if (clickedElement.classList.contains("add-to-cart-button")) {
             const productName = clickedElement.dataset.productName;
-            const productImgSource = clickedElement.dataset.productImgsource;
+            const productImgSource = clickedElement.dataset.productImgSource ;
             const productPrice = clickedElement.dataset.productPrice;
+
+            console.log("dataset", clickedElement.dataset)
 
             // Get the current cart items
             const cartItems = getCartItems();
