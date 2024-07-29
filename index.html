@@ -5,33 +5,28 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodie</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- Adding favicon image -->
     <link rel="shortcut icon" href="Images/favicon/Foodie_Favicon.png" type="image/x-icon">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
         defer></script>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>    
+
     <link rel="stylesheet" href="Css-files/scroll-top-button.css">
     <link rel="stylesheet" href="Css-files/navbar.css">
     <link rel="stylesheet" href="Css-files/footer.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="Css-files/googletranslate.css">
     <style>
         .legal-pages {
             text-decoration: none;
@@ -55,6 +50,10 @@
 </head>
 
 <body>
+    <div class="visitor-counter">
+        <div>Visitors</div>
+        <div class="website-counter"></div>
+      </div>
     <!-- Progress bar -->
     <div id="progressBar"></div>
     <script>
@@ -79,7 +78,9 @@
                 <img id="theme-toggle-logo"  src="Images/logo/Logo-Light.png" height="70" width="70"  alt="Brand Logo">
 
             </a>
+
             <!-- Navbar Toggler -->
+
             <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -105,16 +106,20 @@
                         <a class="nav-link dropdown-toggle" href="Html-files/services.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-gear"></i> Services
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Ordering options</a></li>
-                            <li><a class="dropdown-item" href="#">Order Tracking</a></li>
-                            <li><a class="dropdown-item" href="#">Customer Support</a></li>
-                            <li><a class="dropdown-item" href="#">FAQS</a></li>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-check"></i> Ordering options</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-truck"></i> Order Tracking</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-headset"></i> Customer Support</a></li>
+                            <li><a class="dropdown-item" href="#FAQ"><i class="fa-solid fa-question"></i> FAQS</a></li>
                         </ul>
                     </li>
 
+                    <li class="nav-item, nav-items">
+                        <a class="nav-link" href="Html-files/contact.html"><i class="fa-solid fa-phone"></i>Contact Us</a>
 
                         
+
                     </li>
 
                     <li class="nav-item">
@@ -134,13 +139,6 @@
                         <a class="nav-link" href="Html-files/offers.html">
 
                             <i class="fa-solid fa-tag"></i> Offers
-
-
-                        
-
-
-                            
-
                         </a>
                     </li>
 
@@ -151,7 +149,7 @@
                             <i class="fa-solid fa-star"></i> Rate Us
                         </a>
                     </li>
-                    
+
                 </ul>
             </div>
             <!-- Theme Toggle Icon -->
@@ -181,7 +179,7 @@
                         </a>
                     </li>
 
-                    
+
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/signup.html">
 
@@ -203,19 +201,11 @@
         </div>
     </nav>
 
+
     
 
     <section id="homeSlider" class="carousel slide carousel-fade bg-black" data-bs-ride="carousel" data-bs-interval="5000">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-bs-target="#homeSlider" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#homeSlider" data-bs-slide-to="1"></li>
-            <li data-bs-target="#homeSlider" data-bs-slide-to="2"></li>
-            <li data-bs-target="#homeSlider" data-bs-slide-to="3"></li>
-            <li data-bs-target="#homeSlider" data-bs-slide-to="4"></li>
-        </ol>
 
-    
     <section id="homeSlider" class="carousel slide carousel-fade bg-black" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -225,14 +215,12 @@
                 <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                     <p class="slider-subtitle slider-reveal">TRADITIONAL & HYGIENIC</p>
                     <h1 class="slider-title slider-reveal">
-                        For the love of <br>
-                        delicious food
+                        For the love of <br> delicious food
                     </h1>
                     <p class="slider-text slider-reveal">
                         come with family & feel the joy of mouthwatering food
                     </p>
-                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto"
-                        role="button">
+                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto" role="button">
                         <span class="text text-1">VIEW OUR MENU</span>
                     </a>
                 </div>
@@ -244,14 +232,12 @@
                 <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                     <p class="slider-subtitle slider-reveal">DELIGHTFUL EXPERIENCE</p>
                     <h1 class="slider-title slider-reveal">
-                        Flavors Inspired by <br>
-                        the Seasons
+                        Flavors Inspired by <br> the Seasons
                     </h1>
                     <p class="slider-text slider-reveal">
                         come with family & feel the joy of mouthwatering food
                     </p>
-                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto"
-                        role="button">
+                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto" role="button">
                         VIEW OUR MENU
                     </a>
                 </div>
@@ -263,14 +249,12 @@
                 <div class="carousel-caption d-flex flex-column justify-content-center h-100">
                     <p class="slider-subtitle slider-reveal">AMAZING & DELICIOUS</p>
                     <h1 class="slider-title slider-reveal">
-                        Where every flavour <br>
-                        tells a story
+                        Where every flavour <br> tells a story
                     </h1>
                     <p class="slider-text slider-reveal">
                         come with family & feel the joy of mouthwatering food
                     </p>
-                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto"
-                        role="button">
+                    <a href="Html-files/menu.html" class="btn btn-danger slider-button slider-reveal mx-auto" role="button">
                         VIEW OUR MENU
                     </a>
                 </div>
@@ -286,7 +270,7 @@
         </button>
     </section>
 
-    
+
     <!-- Add some custom CSS for transitions and responsiveness -->
     <style>
         .slider-bg {
@@ -295,23 +279,22 @@
             height: 100vh;
             overflow: hidden;
         }
-    
+        
         .homeimg {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-    
+        
         .carousel-caption {
             text-align: center;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
         }
-    
+        
         .slider-reveal {
             animation: fadeInUp 1.5s ease-in-out;
         }
-
-    
+        
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -322,12 +305,13 @@
                 transform: none;
             }
         }
-    
+        
         @media (max-width: 768px) {
             .slider-title {
                 font-size: 1.5rem;
             }
-            .slider-subtitle, .slider-text {
+            .slider-subtitle,
+            .slider-text {
                 font-size: 1rem;
             }
             .carousel-caption {
@@ -356,109 +340,91 @@
         <br>
         <br>
 
-        <h1 class="tagline py-2 text-center mx-auto" data-aos="zoom-out-up" data-aos-offset="170"
-            data-aos-easing="ease-in-out">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
+        <h1 class="tagline py-2 text-center mx-auto" data-aos="zoom-out-up" data-aos-offset="170" data-aos-easing="ease-in-out">"Savor the Flavors: Discover What Sets Our Restaurant's Cuisine Apart!"</h1>
 
-<!-- cards  -->
- <style>
+        <!-- cards  -->
+        <style>
+            .card-1 {
+                position: relative;
+                width: 400px;
+                height: 500px;
+                border-radius: 15px;
+                overflow: hidden;
+                filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.25));
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            .card-1::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.408) 62.83%, rgba(0, 0, 0, 0.8) 99.99%);
+                background-blend-mode: darken, normal;
+            }
+            
+            .card-1>.content {
+                color: white;
+                position: absolute;
+                top: 550px;
+                padding: 10px;
+                border-radius: 10px;
+                left: 4.77%;
+                right: 4.77%;
+                z-index: 2;
+                transition: top 450ms ease-out;
+            }
+            
+            .card-1>h2 {
+                margin-top: 180px;
+                font-size: 2rem !important;
+                mix-blend-mode: luminosity;
+                color: white;
+                border-radius: 5px;
+                backdrop-filter: blur(2px);
+                z-index: 100;
+                text-shadow: 2px 2px #6d1002;
+            }
+            
+            .card-1>.content>p {
+                margin-bottom: .7rem;
+            }
+            
+            .card-1:hover>.content {
+                top: 260px;
+                backdrop-filter: blur(4px);
+            }
+            
+            .btn {
+                border: none;
+                padding: .7em 1.8em;
+                border-radius: 5px;
+                font-weight: 600;
+                cursor: pointer;
+                font-size: .8rem;
+            }
+            
+            .btn-card {
+                background: #D0EEB0;
+                transition: background 200ms ease;
+            }
+            
+            .btn-card:hover {
+                background: #59a10c;
+            }
+        </style>
 
-.card-1 {
-	position: relative;
-	width: 400px;
-	height: 500px;
-	border-radius: 15px;
-	overflow: hidden;
-	filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.25));
-	background-repeat: no-repeat;
-	background-size: cover;
-}
+        <div class="qualities row justify-content-evenly g-3 px-2" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
 
-.card-1::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.408) 62.83%, rgba(0, 0, 0, 0.8) 99.99%);
-	background-blend-mode: darken, normal;
-}
-
-.card-1 > .content {
-	color: white;
-	position: absolute;
-	top: 550px;
-    padding: 10px;
-    border-radius: 10px;
-	left: 4.77%;
-	right: 4.77%;
-	z-index: 2;
-	transition: top 450ms ease-out;
-}
-
-.card-1 > h2 {
-    margin-top: 180px;
-	font-size: 2rem !important;
-    mix-blend-mode:luminosity;
-    color:white;
-    border-radius: 5px;
-    backdrop-filter: blur(2px);
-    z-index: 100;
-    text-shadow:2px 2px #6d1002;
-}
-
-.card-1 > .content > p {
-	margin-bottom: .7rem;
-}
-
-.card-1:hover > .content {
-	top: 260px;
-    backdrop-filter: blur(4px);
-}
-
-.btn {
-	border: none;
-	padding: .7em 1.8em;
-	border-radius: 5px;
-	font-weight: 600;
-	cursor: pointer;
-	font-size: .8rem;
-}
-
-.btn-card {
-	background: #D0EEB0;
-	transition: background 200ms ease;
-}
-
-.btn-card:hover {
-	background: #59a10c;
-}
-
-.typing-effect {
-            display: inline-block;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-.highlight-text{
-    color:#D0EEB0;
-}
-
-.service-icon{
-    height:15% !important;
-    width: 15% !important;
-    opacity: 1 !important;
-}
- </style>
-
-        <div class="qualities row justify-content-evenly g-3 px-2" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170"
-            data-aos-easing="ease-in-out">
 
             <div class="card-1" style="background-image: url(https://shahidining.com.au/wp-content/uploads/2020/05/secret-to-indian-flavour-1536x864.jpg);">
                 <h2 class="card-title">Authentic Indian Flavors</h2>
                 <div class="content">
-                    
-                        <p class="card-text">From aromatic curries to flavorful biryanis, our menu showcases the
-                            diversity and deliciousness of Indian cuisine.</p>
+
+                    <p class="card-text">From aromatic curries to flavorful biryanis, our menu showcases the diversity and deliciousness of Indian cuisine.</p>
                     <button class="btn btn-card">Lean More</button>
                 </div>
             </div>
@@ -467,11 +433,9 @@
             <div class="card-1" style="background-image: url(https://saavi.com.au/wp-content/uploads/2016/02/image0023-1.jpg);">
                 <h2 class="card-title">Tech-Infused Dining Experience</h2>
                 <div class="content">
-                   
-                        <p class="card-text">Customers can use apps to place orders, customize their dishes, and even
-                            provide feedback, making
-                            their visit more convenient and interactive.
-                        </p>
+
+                    <p class="card-text">Customers can use apps to place orders, customize their dishes, and even provide feedback, making their visit more convenient and interactive.
+                    </p>
                     <button class="btn btn-card">Lean More</button>
                 </div>
             </div>
@@ -479,10 +443,8 @@
             <div class="card-1" style="background-image: url(https://i.ndtvimg.com/i/2015-06/fusion-food_625x350_81434107799.jpg);">
                 <h2 class="card-title">Innovative Fusion Dishes</h2>
                 <div class="content">
-                    
-                        <p class="card-text">The combinations of Indian and international cuisines not only tantalize
-                            taste buds
-                            but also provide unique experience.</p>
+
+                    <p class="card-text">The combinations of Indian and international cuisines not only tantalize taste buds but also provide unique experience.</p>
                     <button class="btn btn-card">Lean More</button>
                 </div>
             </div>
@@ -539,10 +501,10 @@
     <section class="services_container">
         <div class="card">
             <div class="d-flex justify-content-center img-container">
-                <img src="https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300"
-                    alt="" class="card-img">
+                <img src="https://cdn.tasteatlas.com//images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?mw=1300" alt="" class="card-img">
             </div>
             <div class="card-img-overlay row w-100 m-0">
+
                 <div class="box_main m-auto col-md-9 col-xl-3" data-aos="zoom-out-right" data-aos-duration="1000"
                 data-aos-offset="170" data-aos-easing="ease-in-out">
                 <h1>
@@ -575,16 +537,19 @@
                     <img src="./icons/motorbike.png" alt="" class="service-icon">
                     <h1>Online <br>Delivery</h1>
                     <a href="/Html-files/add-address.html" class="btn btn-outline-light border border-light">Order Online</a>
-                </div>
+
                 <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000"
                     data-aos-offset="170" data-aos-easing="ease-in-out">
                     <img src="./icons/take-away.png" alt="" class="service-icon">
+
                     <h1>Click & <br>Collect</h1>
                     <a href="/Html-files/cart.html" class="btn btn-outline-light border border-light">Take out Order</a>
                 </div>
+
                 <div class="box my-auto col-md-4 col-xl-3" data-aos="zoom-out-left" data-aos-duration="1000"
                     data-aos-offset="170" data-aos-easing="ease-in-out">
                     <img src="/icons/dining-table.png" alt="" class="service-icon">
+
                     <h1>Restaurant<br> Dining</h1>
                     <a href="/Html-files/book-table.html" class="btn btn-outline-light border border-light">Book Table </a>
                 </div>
@@ -593,16 +558,13 @@
     </section>
 
     <section class="menu_container">
-        <div class="mainhead text-center" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170"
-            data-aos-easing="ease-in-out">
+        <div class="mainhead text-center" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
             <h1>"Get ready to explore our delicious range of dishes!"</h1>
-            <p>"Welcome to a world of culinary delights where every bite tells a flavorful story. Explore our diverse
-                menu and savor the essence of exquisite dining." </p>
+            <p>"Welcome to a world of culinary delights where every bite tells a flavorful story. Explore our diverse menu and savor the essence of exquisite dining." </p>
             <a class="btn btn-danger" href="Html-files/menu.html">View Menu</a>
         </div>
 
-        <div class="menu_items row container-fluid g-3 p-5 mx-auto" data-aos="zoom-out-up" data-aos-duration="1000"
-            data-aos-offset="170" data-aos-easing="ease-in-out">
+        <div class="menu_items row container-fluid g-3 p-5 mx-auto" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
             <div class="col-sm-6 col-lg-3">
                 <div class="items card">
                     <div class="img-container ">
@@ -617,8 +579,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="items card">
                     <div class="img-container">
-                        <img
-                            src="https://imgmediagumlet.lbb.in/media/2018/04/5acf822418a23c0efc21496b_1523548708582.jpg?fm=webp&w=750&h=500&dpr=1">
+                        <img src="https://imgmediagumlet.lbb.in/media/2018/04/5acf822418a23c0efc21496b_1523548708582.jpg?fm=webp&w=750&h=500&dpr=1">
                     </div>
                     <div class="card-body">
                         <h3>Dessert</h3>
@@ -629,8 +590,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="items card">
                     <div class="img-container">
-                        <img
-                            src="https://imgmediagumlet.lbb.in/media/2019/07/5d27585dc18a2b0ed5739eb5_1562859613517.jpg?fm=webp&w=750&h=500&dpr=1">
+                        <img src="https://imgmediagumlet.lbb.in/media/2019/07/5d27585dc18a2b0ed5739eb5_1562859613517.jpg?fm=webp&w=750&h=500&dpr=1">
                     </div>
                     <div class="card-body">
                         <h3>Snacks</h3>
@@ -641,8 +601,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="items card">
                     <div class="img-container">
-                        <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaqAsoDyO5HBOSLupaimFGCkiE_zPbLYyYog&s">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaqAsoDyO5HBOSLupaimFGCkiE_zPbLYyYog&s">
                     </div>
                     <div class="card-body">
                         <h3>Juices</h3>
@@ -654,12 +613,10 @@
         </div>
     </section>
 
-    <section class="testimonial-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170"
-        data-aos-easing="ease-in-out">
+    <section class="testimonial-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
         <h2 class="tagline pt-5"> Our Happy Clients </h2>
         <p class="description">
-            At Foodie, we pride ourselves on delivering delicious meals & exceptional service. Don't just take our word
-            for it - hear what our satisfied customers have to say!
+            At Foodie, we pride ourselves on delivering delicious meals & exceptional service. Don't just take our word for it - hear what our satisfied customers have to say!
         </p>
         <div id="testimonials" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -669,8 +626,7 @@
                     </div>
                     <div class="carousel-caption">
                         <h3 class="overview">Matt Gilbert</h3>
-                        <p class="testimonial-text">Foodie never disappoints! The food is always fresh, delicious, and
-                            delivered right on time. My go-to for all my meals!</p>
+                        <p class="testimonial-text">Foodie never disappoints! The food is always fresh, delicious, and delivered right on time. My go-to for all my meals!</p>
                         <div class="star-rating">
                             <ul class="list-inline d-flex justify-content-center">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -688,8 +644,7 @@
                     </div>
                     <div class="carousel-caption">
                         <h3 class="overview">John Doe</h3>
-                        <p class="testimonial-text">I love the variety on Foodie! There's something for everyone, and
-                            the delivery service is incredibly reliable</p>
+                        <p class="testimonial-text">I love the variety on Foodie! There's something for everyone, and the delivery service is incredibly reliable</p>
                         <div class="star-rating">
                             <ul class="list-inline d-flex justify-content-center">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -706,8 +661,7 @@
                     </div>
                     <div class="carousel-caption">
                         <h3 class="overview">Laren Green</h3>
-                        <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my
-                            dining experience so much more convenient.</p>
+                        <p class="testimonial-text">Fantastic service and mouth-watering dishes! Foodie has made my dining experience so much more convenient.</p>
                         <div class="star-rating">
                             <ul class="list-inline d-flex justify-content-center">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -765,64 +719,55 @@
         </div>
     </section>
 
-    <section class="faq-section">
+    <section class="faq-section" id="FAQ">
         <div class="container faq-container">
             <h1>Frequently Asked Questions (FAQ)</h1>
 
             <div class="faq-item">
                 <h2>How do I place an order?</h2>
-                <p>To place an order, browse our menu, select the items you want, and add them to your cart. Once you’re
-                    ready, click on the cart icon and proceed to checkout. Follow the instructions to complete your
-                    order.</p>
+                <p>To place an order, browse our menu, select the items you want, and add them to your cart. Once you’re ready, click on the cart icon and proceed to checkout. Follow the instructions to complete your order.
+                </p>
             </div>
 
             <div class="faq-item">
                 <h2>What payment methods do you accept?</h2>
-                <p>We accept various payment methods including credit/debit cards, net banking, and popular digital
-                    wallets. You can select your preferred payment method at the checkout page.</p>
+                <p>We accept various payment methods including credit/debit cards, net banking, and popular digital wallets. You can select your preferred payment method at the checkout page.</p>
             </div>
 
             <div class="faq-item">
                 <h2>Can I schedule an order for later?</h2>
-                <p>Yes, you can schedule an order for a later time. During checkout, select the delivery time that suits
-                    you best.</p>
+                <p>Yes, you can schedule an order for a later time. During checkout, select the delivery time that suits you best.</p>
             </div>
 
             <div class="faq-item">
                 <h2>How can I track my order?</h2>
-                <p>Once your order is confirmed, you will receive a tracking link via email or SMS. You can use this
-                    link to track the status of your delivery in real-time.</p>
+                <p>Once your order is confirmed, you will receive a tracking link via email or SMS. You can use this link to track the status of your delivery in real-time.</p>
             </div>
 
             <div class="faq-item">
                 <h2>What should I do if I have a problem with my order?</h2>
-                <p>If you encounter any issues with your order, please contact our customer support immediately. You can
-                    reach us via the contact form on our website, email, or phone. We’re here to help you!</p>
+                <p>If you encounter any issues with your order, please contact our customer support immediately. You can reach us via the contact form on our website, email, or phone. We’re here to help you!</p>
             </div>
 
             <div class="faq-item">
                 <h2>Is there a minimum order value?</h2>
-                <p>Yes, there is a minimum order value depending on your location. The minimum order amount will be
-                    displayed during the checkout process.</p>
+                <p>Yes, there is a minimum order value depending on your location. The minimum order amount will be displayed during the checkout process.</p>
             </div>
 
             <div class="faq-item">
                 <h2>Do you offer any discounts or promotions?</h2>
-                <p>We regularly offer discounts and promotions. Check our website or subscribe to our newsletter to stay
-                    updated on the latest deals and offers.</p>
+                <p>We regularly offer discounts and promotions. Check our website or subscribe to our newsletter to stay updated on the latest deals and offers.</p>
             </div>
         </div>
     </section>
 
     <div class="app_download pb-4">
-        <h4>Free Delivery!</h4>
-        <h2 class="text-center">Download the App now!</h2>
+        <h4>For Free Delivery!</h4>
+        <h2 class="text-center">Download This Amazing App Now!</h2>
         <br>
         <p>For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
-        <a href="#"><img src="/Images/app_download/get_it_on_google_play_store.png" class="app-download-img"
-                alt="Get it on Google Play Store"></a>
-        <a href="#"><img src="./Images/app_download/download-on-the-app-store.png" class="app-download-img"
-                alt="Download on the Apple App Store"></a>
+        <a href="#"><img src="/Images/app_download/get_it_on_google_play_store.png" class="app-download-img" alt="Get it on Google Play Store"></a>
+        <a href="#"><img src="./Images/app_download/download-on-the-app-store.png" class="app-download-img" alt="Download on the Apple App Store"></a>
     </div>
 
     <footer>
@@ -909,10 +854,8 @@
                     <div class="col-6 col-md-3 col-xl-4">
                         <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
                             <h3 class="text-center mb-3">Contact Us!</h3>
-                            <input type="email" id="footer-email" name="email" placeholder="Your Email"
-                                class="text-center form-control mb-2" required>
-                            <textarea id="footer-message" name="footer-message" placeholder="Your Message"
-                                class="text-center form-control mb-2" required></textarea>
+                            <input type="email" id="footer-email" name="email" placeholder="Your Email" class="text-center form-control mb-2" required>
+                            <textarea id="footer-message" name="footer-message" placeholder="Your Message" class="text-center form-control mb-2" required></textarea>
                             <div class="d-grid gap-2 col-12">
                                 <button type="submit" class="btn btn-danger">Send Message</button>
                             </div>
@@ -933,29 +876,29 @@
                     <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
                     <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
                     <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
-                    <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website"
-                        target="_blank"></a>
+                    <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
                     <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
                 </div>
-                <p class="text"> Stay connected with us on social media for the latest updates, recipes, and foodie
-                    adventures. </p>
-                 <div >
-                        Give your valuable 
-                                <Link to="" >
-                                    <a  href="/Html-files/feedback.html"><b>feedback!</b></a>
-                                </Link>
-                        </div>
+                <p class="text"> Stay connected with us on social media for the latest updates, recipes, and foodie adventures. </p>
+                <div>
+                    Give your valuable
+                    <Link to="">
+                    <a href="/Html-files/feedback.html"><b>feedback!</b></a>
+                    </Link>
+                </div>
             </div>
             <div class="copyright py-1">
                 &copy;
                 <span id="copyright-year"></span> Foodies - All Rights Reserved |
                 <span id="terms"></span>
+
                 <Link to="" >
                     <a href="/Html-files/terms.html" class="legal-pages">Terms and Conditions</a> |
                 </Link>
                 <span id="privacy"></span>
                 <Link to="" >
                     <a href="/Html-files/privacy.html" class="legal-pages">Privacy Policy</a> |
+
                 </Link>
 
                 <span id="Licensing"></span>
@@ -976,6 +919,26 @@
             <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
         </svg>
     </button>
+    <button id="translateButton">Translate</button>
+
+    <!-- Popup for Google Translate -->
+    <div id="translatePopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <div id="google_translate_element"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'en',
+          }, 'google_translate_element');
+      }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  
+  <script src=../Html-files/googletranslate.js></script>
 
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -984,13 +947,11 @@
     <script src="Html-files/navbar.js"></script>
     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
     <script>
-        AOS.init(
-            {
-                duration: 1000,
-                easing: 'ease',
-                once: false,
-            }
-        );
+        AOS.init({
+            duration: 1000,
+            easing: 'ease',
+            once: false,
+        });
 
         // Chatbot
         window.botpressWebChat.init({
