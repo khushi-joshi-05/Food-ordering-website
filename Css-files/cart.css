@@ -3,28 +3,91 @@
 * {
     box-sizing: border-box;
     font-family: "Bree Serif", serif;
+    margin: 0;
+    padding: 0;
 }
 
-  .mainhead {
+.mainhead {
     text-align: center;
-    padding-top: 50px;
+    padding-top: 20px;
+    background: rgba(101, 5, 5, 0.597);
     padding-bottom: 20px;
-    /*padding-bottom: 50px;*/
-  }
+    color: black;
+}
+
 .cart-section {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     padding: 25px 15px;
-    flex-direction: column;
+    width: 100%;
+}
+
+#couponCode {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ced4da;
+    border-radius: 1.2rem;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out, background-color 0.3s ease-in-out;
+    background-color: #f2f2f2;
+    color: black;
+    padding: 10px;
+    margin-bottom: 20px;
+    z-index: 0;
+
+}
+
+#couponCode::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffea00 50%, #ff9233 50%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translate(-100%, -100%);
+    opacity: 0;
+    z-index: -1;
+}
+
+#couponCode:hover::before {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+#couponCode:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #000000;
+    cursor:pointer;
+}
+
+#couponCode p {
+    position: relative;
+    z-index: 1;
+    color: black;
+}
+
+#couponCode:hover p {
+    color: black;
 }
 
 .cart {
-    padding: 1% 2%;
-    width: 80%;
-    margin-top: 20px;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
     flex-direction: column;
+    
 }
 
-#cart-items {
+.empty-cart,
+.cart-details {
+    width: 100%;
+}
+
+#cart-items,
+#cart-total {
     width: 100%;
 }
 
@@ -63,8 +126,7 @@
     border: 1px solid gray;
 }
 
-.quantity-wrapper *
- {
+.quantity-wrapper * {
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -77,7 +139,6 @@
 
 .btn {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 
 .remove {
@@ -87,6 +148,10 @@
 .btn:hover {
     background-color: rgb(196, 74, 74);
     color: white;
+    cursor: pointer;
+    margin: 0 5px;
+    position: relative;
+    top:-1px;
 }
 
 .decrease-quantity.disable {
@@ -123,36 +188,41 @@
     max-width: 500px;
     width: 100%;
 }
-.empty-cart h4, .empty-cart button {
+
+.empty-cart h4,
+.empty-cart button {
     margin: 20px;
 }
+
 input,
 textarea {
     width: 100%;
 }
+
 .coupen {
     position: fixed;
     top: 60px;
     left: 0;
     width: 100%;
-    /* padding: 10px; */
     padding: 10px;
     height: 40px;
-    background-color: brown;
-    color: aliceblue;
+    color: black;
     z-index: 20;
 }
+
 @media all and (max-width: 768px) {
     .cart {
         width: 100%;
     }
+
     .detail {
         flex-direction: column;
         justify-content: left;
-        align-items:flex-start;
+        align-items: flex-start;
         gap: 5px;
     }
 }
+
 .congomessagebox {
     display: flex;
     justify-content: center;
@@ -160,10 +230,12 @@ textarea {
     height: 10vh;
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #f0f8ff;
     color: rgb(22, 22, 18);
 }
-
+.checkout-btn:hover {
+    background-color: rgb(0, 68, 169);
+    transform: translateY(2px);
+}
 .modal {
     display: none;
     position: fixed;
@@ -173,15 +245,13 @@ textarea {
     width: 100%;
     height: 100%;
     overflow: auto;
-    /* background-color: rgba(0, 0, 0, 0.4); */
     background-image: url('../Images/congo-box-background.jpg');
-    /* https://i.ytimg.com/vi/6N_nf1dx5aY/maxresdefault.jpg */
-background-repeat: no-repeat;
-background-size: 100% 100%;}
-/* }Confetti Background GIF by Justin - Find & Share on GIPHY.gif */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 .modal-content {
     background-color: #fefefe;
-    /* background-color: rgba(255, 255, 255, 0.8); */
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -190,9 +260,7 @@ background-size: 100% 100%;}
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     opacity: 0.7;
 }
-/* h1 {
-    color: #4CAF50;
-} */
+
 .close {
     color: #aaa;
     float: right;
@@ -202,49 +270,40 @@ background-size: 100% 100%;}
 
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
-    background-image: linear-gradient(to top, rgb(246, 10, 10) , rgb(248, 145, 49), rgb(236, 239, 56));
-  }
-  
-  ::-webkit-scrollbar {
-    width:12px;
-  
-  }
-  
-  ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to top, rgb(246, 10, 10), rgb(248, 145, 49), rgb(236, 239, 56));
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
     background-color: #ff0707;
     border-radius: 10px;
-    border:.3px solid white;
-    background-image: -webkit-linear-gradient(90deg,
-        rgb(20, 21, 12) 0%,
-        rgb(0, 0, 0) 25%,
-        transparent 100%,
-        rgb(247, 4, 4) 75%,
-        transparent)
-  }
+    border: 0.3px solid white;
+    background-image: -webkit-linear-gradient(90deg, rgb(20, 21, 12) 0%, rgb(0, 0, 0) 25%, transparent 100%, rgb(247, 4, 4) 75%, transparent)
+}
 
-  
-.playfair{
+.playfair {
     font-family: "Playfair Display", serif;
 }
 
-.row{
+.row {
     width: 80%;
+    margin: auto;
 }
 
 @media screen and (max-width: 600px) {
     .row {
         width: 100%;
     }
-    
 }
 
-
-
-/* css for address information */
 #info-checkout {
     margin: 0;
     display: flex;
     padding: 8px;
+    flex-direction: column;
 }
 
 #label-checkout {
@@ -263,4 +322,57 @@ background-size: 100% 100%;}
     padding: 4px 6px;
     border: 1px solid black;
     border-radius: 5px;
+}
+
+.inputForCoupon {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.inputForCoupon label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.enterCouponCode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#inputCode {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#applyCouponButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#applyCouponButton:hover {
+    background-color: #0056b3;
+    transform: translateY(2px);
+
+}
+
+#orderNowButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#orderNowButton:hover {
+    background-color: #218838;
+    transform: translateY(2px);
 }

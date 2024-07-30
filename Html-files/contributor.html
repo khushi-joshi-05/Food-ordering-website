@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contributors</title>
+  <link rel="stylesheet" href="../Css-files/contributor.css">
+  <link rel="shortcut icon" href="../Images/favicon/Foodie_Favicon.png" type="image/x-icon">
+</head>
+<body>
+  <div class="content min-h-screen text-black dark:text-gray-200">
+    <div class="container mx-auto py-8">
+      <h1 class="text-center text-3xl font-semibold mb-8">🤝 Contributors</h1>
+      <div id="contributors" class="contributors flex flex-wrap justify-center gap-8"></div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const contributorsContainer = document.getElementById('contributors');
+      
+      async function fetchContributors() {
+        try {
+          const response = await fetch('https://api.github.com/repos/khushi-joshi-05/Food-ordering-website/contributors');
+          const contributors = await response.json();
+    
+          contributors.forEach(contributor => {
+            const contributorCard = document.createElement('a');
+            contributorCard.href = contributor.html_url;
+            contributorCard.target = '_blank';
+            contributorCard.className = 'contributor-card';
+            contributorCard.innerHTML = `
+              <img src="${contributor.avatar_url}" alt="${contributor.login}">
+              <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2">${contributor.login}</h2>
+              <p class="text-gray-700 dark:text-gray-400">Contributions: ${contributor.contributions}</p>
+              <p class="text-gray-700 dark:text-gray-400 flex-center"><i class="fab fa-github mr-1"></i> GitHub Profile</p>
+            `;
+            contributorsContainer.appendChild(contributorCard);
+          });
+        } catch (error) {
+          console.error('Error fetching contributors:', error);
+        }
+      }
+    
+      fetchContributors();
+    });
+  </script>
+</body>
+</html>
