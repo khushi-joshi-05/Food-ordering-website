@@ -1014,7 +1014,7 @@ font-size: 24px;
 .website-counter {
   font-size: 18px;
 }
-    .faq-container {
+    .faq-container 
         padding: 20px;
     }
     .faq-container h1 {
@@ -1026,3 +1026,4 @@ font-size: 24px;
     .faq-container p {
         font-size: 1rem;
     }
+

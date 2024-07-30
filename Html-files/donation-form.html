@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Form</title>
+    
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            background-image: url(../Html-files/assets/donation.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 20px;  
+        }
+        h1 {
+            color: rgb(127, 3, 44);
+            text-align: center;
+            justify-content: center;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 90%;
+            padding: 7px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button[type="submit"] {
+            background-color: rgba(195, 63, 6, 0.812);
+            color: #fff;
+            border: none;
+            padding: 10px 20px ;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Donate Now</h1>
+    <form  id="donationForm" method="POST" >
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email" required>
+
+        <label for="email">Enter Amount:</label>
+        <input type="number" id="amount" placeholder="Enter Amount" required>
+
+        <button type="submit" >Submit Donation</button>
+    </form>
+    
+</body>
+</html>
