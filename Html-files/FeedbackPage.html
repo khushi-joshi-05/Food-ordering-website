@@ -43,8 +43,28 @@
     <link rel="stylesheet" href="../Css-files/navbar.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../Css-files/scroll-top-button.css" />
+    <style> #progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 8px;
+      background-color: #b80d0d;
+      z-index: 9999;
+  }
+</style>
 </head>
 <body>
+   <!-- Progress bar -->
+   <div id="progressBar"></div>
+   <script>
+       window.onscroll = function () {
+           var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+           var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+           var scrolled = (winScroll / height) * 100;
+           document.getElementById("progressBar").style.width = scrolled + "%";
+       };
+   </script>
     <div class="head_container">
         <div id="loader-wrapper">
           <div id="loader"></div>
