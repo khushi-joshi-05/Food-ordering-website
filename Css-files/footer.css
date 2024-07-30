@@ -20,7 +20,7 @@ footer {
 }
 
 .foot-panel1 .nav-link:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: #dddddd;
 }
 
