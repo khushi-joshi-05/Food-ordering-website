@@ -47,6 +47,23 @@
             height: 8px;
             background-color: #e21f1f;
             z-index: 9999;
+
+
+.cart-subscript{
+  display :flex;
+  width: 15px;
+  height: 22px;
+  background-color: rgb(76, 0, 255);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 45px;
+}
+      
+
         }
         
 .center-links .nav-item .dropdown-menu {
@@ -79,6 +96,7 @@
   transition: background-color 0.3s, transform 0.3s;
 
 }
+
 
     </style>
   </head>
@@ -168,13 +186,14 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../Html-files/cart.html">
-                        <i class="fa-solid fa-cart-shopping"></i> Cart
+                        <i class="fa-solid fa-cart-shopping"></i> <span class="cart-subscript">0</span>Cart
                     </a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
 
     <!-- </header> -->
     <div class="head_container">

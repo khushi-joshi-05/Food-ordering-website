@@ -50,6 +50,10 @@
 </head>
 
 <body>
+    <div class="visitor-counter">
+        <div>Visitors</div>
+        <div class="website-counter"></div>
+      </div>
     <!-- Progress bar -->
     <div id="progressBar"></div>
     <script>
@@ -68,6 +72,55 @@
     </div>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
+
+            <!-- Brand Logo -->
+
+
+            <a href="index.html">
+                <img id="theme-toggle-logo"  src="Images/logo/Logo-Light.png" height="70" width="70"  alt="Brand Logo">
+
+
+            </a>
+
+            <!-- Navbar Toggler -->
+
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Centered Navbar Links -->
+            <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
+                <ul class="navbar-nav center-links">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">
+
+
+                            <i class="fa-solid fa-house"></i> Home
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/menu.html">
+
+                            <i class="fa-solid fa-bars"></i> Menu
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="Html-files/services.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i> Services
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-check"></i> Ordering options</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-truck"></i> Order Tracking</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-headset"></i> Customer Support</a></li>
+                            <li><a class="dropdown-item" href="#FAQ"><i class="fa-solid fa-question"></i> FAQS</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item, nav-items">
+                        <a class="nav-link" href="Html-files/contact.html"><i class="fa-solid fa-phone"></i>Contact Us</a>
+
 
           <!-- Brand Logo -->
           <a href="index.html" class="navbar-brand opacity-75 flex-fill">
@@ -101,18 +154,36 @@
                   <li><a class="dropdown-item" href="#">FAQS</a></li>
                         
 
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#FAQ">FAQS</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="Html-files/contact.html">
+                            <i class="fa-solid fa-phone"></i> Contact Us
+
                             
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/offers.html">
+
+                            <i class="fa-solid fa-tag"></i> Offers
+
 
                         </a>
                     </li>
-
-                 
 
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/RateUs.html">
                             <i class="fa-solid fa-star"></i> Rate Us
                         </a>
                     </li>
+                    
+                    
 
                 </ul>
             </div>
@@ -120,8 +191,6 @@
             <div class="order-0 ml-auto p-2">
 
                 <img class="nav-link" src="Images/navbar/moon.png" id="theme-toggle-icon" alt="theme toggler button">
-
-                <img class="nav-link" src="Images/navbar/sun.png" id="theme-toggle-icon" alt="Theme Toggler Button">
 
             </div>
 
@@ -215,16 +284,6 @@
     
 
     <section id="homeSlider" class="carousel slide carousel-fade bg-black" data-bs-ride="carousel" data-bs-interval="5000">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-bs-target="#homeSlider" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#homeSlider" data-bs-slide-to="1"></li>
-            <li data-bs-target="#homeSlider" data-bs-slide-to="2"></li>
-            <li data-bs-target="#homeSlider" data-bs-slide-to="3"></li>
-            <li data-bs-target="#homeSlider" data-bs-slide-to="4"></li>
-        </ol>
-
-    
 
     <section id="homeSlider" class="carousel slide carousel-fade bg-black" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -345,7 +404,60 @@
     <br>
     <br>
 
+    <button class="fixed-button" onclick="openNutrition()">Nutrition Tips</button>
+    <script>
+        function openNutrition() {
+            window.open('Html-files/nutrition.html', '_blank');
+        }
+    </script>
+     <style>
+        
+        .fixed-button {
+            position: fixed;
+            margin-bottom: 25px;
+            margin-right: 100px;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            font-size: 16px;
+            background-color: #CF2123;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1000; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            font-size: 12px; 
+            line-height: 1;
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
 
+        .fixed-button:hover {
+            background: linear-gradient(45deg, rgb(234, 16, 16), #f2a736);
+        }
+
+        
+        .content {
+            height: 2000px;
+            background: linear-gradient(white, lightgray);
+            
+        }
+    </style>
 
     <section class="about_us pt-5">
         <div class="hstack discount-rolling">
@@ -593,6 +705,7 @@
                     <div class="card-body">
                         <h3>Indian Thali</h3>
                         <p>Enjoy a thali full of traditional flavours and memories</p>
+                        <a href="Html-files/menu.html"><button class="ordernow">Order Now</button></a>
                     </div>
                 </div>
             </div>
@@ -604,6 +717,7 @@
                     <div class="card-body">
                         <h3>Dessert</h3>
                         <p>Complete your meal with mouth watering delicacies</p>
+                        <a href="Html-files/menu.html"><button class="ordernow">Order Now</button></a>
                     </div>
                 </div>
             </div>
@@ -615,6 +729,7 @@
                     <div class="card-body">
                         <h3>Snacks</h3>
                         <p>Have a lighter version with deliciouis flavours</p>
+                        <a href="Html-files/menu.html"><button class="ordernow">Order Now</button></a>
                     </div>
                 </div>
             </div>
@@ -625,7 +740,8 @@
                     </div>
                     <div class="card-body">
                         <h3>Juices</h3>
-                        <p>Boost yourself up with fruit extracts</p>
+                        <p>Boost yourself up with fruit extracts and freshen up</p>
+                        <a href="Html-files/menu.html"><button class="ordernow">Order Now</button></a>
                     </div>
                 </div>
             </div>
@@ -741,8 +857,7 @@
 
     <section class="faq-section" id="FAQ">
         <div class="container faq-container">
-            <h1>Frequently Asked Questions (FAQ)</h1>
-
+            <h1 class="main-faq-head">Frequently Asked Questions !</h1>
             <div class="faq-item">
                 <h2>How do I place an order?</h2>
                 <p>To place an order, browse our menu, select the items you want, and add them to your cart. Once you’re ready, click on the cart icon and proceed to checkout. Follow the instructions to complete your order.
@@ -778,9 +893,22 @@
                 <h2>Do you offer any discounts or promotions?</h2>
                 <p>We regularly offer discounts and promotions. Check our website or subscribe to our newsletter to stay updated on the latest deals and offers.</p>
             </div>
+
+            <div class="faq-item">
+                <h2>Can I place an order for pickup?</h2>
+                <p>Yes, you can place an order for pickup. During checkout, select the pickup option and choose the time
+                    that is most convenient for you. You will receive a notification when your order is ready for pickup.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h2>How do I book a table for dining in?</h2>
+                <p>To book a table, navigate to the 'Book Table' section on our website. Select your preferred date and
+                    time, provide the necessary details, and confirm your booking. You will receive a confirmation email
+                    with your booking details.</p>
+            </div>
         </div>
     </section>
-
+    
     <div class="app_download pb-4">
         <h4>For Free Delivery!</h4>
         <h2 class="text-center">Download This Amazing App Now!</h2>
@@ -812,6 +940,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="./Html-files/cart.html">Cart</a>
                             </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link" href="/Html-files/contributor.html">Our Contributors</a>
                             </li>
@@ -895,6 +1024,8 @@
                     <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
                     <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
                     <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-snapchat" href="https://snapchat.com" target="_blank"></a>
+                    <a class="fa-brands fa-youtube" href="https://youtube.com" target="_blank"></a>
                     <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
                     <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
                     <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>

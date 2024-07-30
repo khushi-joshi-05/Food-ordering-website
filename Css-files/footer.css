@@ -83,6 +83,19 @@ footer {
   color: white;
 }
 
+.foot-panel2 .fa-youtube:hover {
+  background-color: #ff0000;
+  background: linear-gradient(to right, #ff0000, #cc0000, #990000);
+  color: white;
+}
+
+.foot-panel2 .fa-snapchat:hover {
+  background-color: #fffc00; /* Yellow background */
+  background: linear-gradient(to right, #fffc00, #ffeb3b, #ffc107); /* Gradient background */
+  color: #fff; /* White color for the logo */
+}
+
+
 .foot-panel2 .fa-x-twitter:hover {
   background-color: black;
   color: white;
