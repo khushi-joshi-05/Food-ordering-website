@@ -420,7 +420,8 @@ body {
   box-shadow: var(--box-shadow-color) 1px 1px 8px;
   cursor: pointer;
   scale: 1.02;
-  background-color: var(--menu-item-hover-background);
+  /* background-color: var(--menu-item-hover-background); */
+  background: linear-gradient(brown,rgb(242, 254, 133),white);
 }
 
 .menu_items .card-body {
@@ -448,6 +449,19 @@ body {
   margin-top: 10px;
   color: brown;
 }
+.ordernow{
+  border-radius: 10px;
+  background-color: brown;
+  padding: 9px;
+  width: 60%;
+  color:white;
+}
+
+.ordernow:hover{
+  background-color: var(--btn-hover-background-color);
+  color:var(--btn-hover-text-color);
+}
+
 
 /* TESTIMONIALS */
 
@@ -718,6 +732,7 @@ body {
   opacity: 1;
 }
 
+
 .faq-container {
   max-width: 800px;
   margin: 0 auto;
@@ -726,6 +741,7 @@ body {
   background-color: #ffddcc;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+
 }
 
 .faq-container h1 {
@@ -736,13 +752,15 @@ body {
   font-family: "Times New Roman", Times, serif;
 }
 
+
 .faq-item {
   background-color: #fffefe;
   margin-bottom: 20px;
-  border-bottom: 1px solid #ffddcc;
+   border-bottom: 1px solid #ffddcc;
   padding-bottom: 10px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+ 
 
 .faq-item:hover {
   transform: scale(1.02);
@@ -781,8 +799,10 @@ body {
   transition: opacity 0.3s ease, max-height 0.3s ease, box-shadow 0.3s ease;
   max-height: 0;
   overflow: hidden;
+
 }
-.faq-item p:hover {
+
+.faq-item p:hover{
   background-color: white;
   color: black;
 }
@@ -794,7 +814,7 @@ body {
 }
 
 .faq-item h2::after {
-  content: "\25BC";
+ content: "\25BC";
   /* Unicode for downward arrow */
   font-size: 1rem;
   background-color: br;
@@ -824,6 +844,7 @@ body {
   color: #ffc7b2;
   /* Slightly lighter peach color on hover */
 }
+
 
 @media (max-width: 600px) {
   .faq-container {

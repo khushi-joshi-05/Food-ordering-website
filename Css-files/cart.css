@@ -148,6 +148,10 @@
 .btn:hover {
     background-color: rgb(196, 74, 74);
     color: white;
+    cursor: pointer;
+    margin: 0 5px;
+    position: relative;
+    top:-1px;
 }
 
 .decrease-quantity.disable {
