@@ -16,7 +16,6 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const issue = context.payload.issue;
-            const issueBody = issue.body ? issue.body.toLowerCase() : '';
             const issueTitle = issue.title.toLowerCase();
             
             // Add gssoc label to all issues
@@ -34,14 +33,14 @@ jobs:
                 labels: [label]
               });
             };
-            if (issueBody.includes('documentation') || issueTitle.includes('doc') || issueBody.includes('readme')) {
+            if (issueTitle.includes('documentation')) {
               await addLabel('documentation');
             }
             
-            if (issueBody.includes('feature') || issueBody.includes('enhancement') || issueTitle.includes('add') || issueTitle.includes('implement')) {
+            if (issueTitle.includes('feature')) {
               await addLabel('enhancement');
 
             }
-            if (issueBody.includes('bug') || issueBody.includes('fix') || issueTitle.includes('fix') || issueTitle.includes('resolve')) {
+            if (issueTitle.includes('bug')) {
               await addLabel('bug');
             }
