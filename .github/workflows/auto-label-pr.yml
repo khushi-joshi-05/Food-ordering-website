@@ -1,45 +1,53 @@
-name: Auto Label PR
+name: Auto Label PRs
 
 on:
   pull_request:
-    types: [opened, reopened, synchronize]
+    types: [opened, edited]
 
 jobs:
   label_pr:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
     steps:
-      - name: Label PR
+      - uses: actions/labeler@v4
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          configuration-path: .github/labeler.yml
+
+      - name: Add GSSOC label
         uses: actions/github-script@v6
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const pr = context.payload.pull_request;
-            const prBody = pr.body ? pr.body.toLowerCase() : '';
-            const prTitle = pr.title.toLowerCase();
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['gssoc']
+            })
+
+      - name: Add additional labels based on title
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const title = context.payload.pull_request.title.toLowerCase();
+            const labelsToAdd = [];
             
-            const addLabel = async (label) => {
-              await github.rest.issues.addLabels({
+            if (title.includes('documentation')) {
+              labelsToAdd.push('documentation');
+            }
+            if (title.includes('feature')) {
+              labelsToAdd.push('feature');
+            }
+            if (title.includes('bug')) {
+              labelsToAdd.push('bug');
+            }
+            
+            if (labelsToAdd.length > 0) {
+              github.rest.issues.addLabels({
+                issue_number: context.issue.number,
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                issue_number: pr.number,
-                labels: [label]
+                labels: labelsToAdd
               });
-            };
-
-            if (prBody.includes('documentation') || prTitle.includes('doc') || prBody.includes('readme')) {
-              await addLabel('documentation');
-            }
-
-            if (prBody.includes('feature') || prBody.includes('enhancement') || prTitle.includes('add') || prTitle.includes('implement')) {
-              await addLabel('enhancement');
-            }
-            
-            if (prBody.includes('bug') || prBody.includes('fix') || prTitle.includes('fix') || prTitle.includes('resolve')) {
-              await addLabel('bug');
-            }
-
-            if (prBody.includes('gssoc')) {
-              await addLabel('gssoc');
             }
