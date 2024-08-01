@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Catering - Food Ordering Website</title>
+    <link rel="shortcut icon" href="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="../Css-files/navbar.css">
+    <link rel="stylesheet" href="../Css-files/footer.css">
+    <link rel="stylesheet" href="../Css-files/scroll-top-button.css" />
+    <style>
+      ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+    background-image: linear-gradient(to top, rgb(246, 10, 10) , rgb(248, 145, 49), rgb(236, 239, 56));
+  }
+
+  ::-webkit-scrollbar {
+    width:12px;
+
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #ff0707;
+    border-radius: 10px;
+    border:.3px solid white;
+    background-image: -webkit-linear-gradient(90deg,
+        rgb(20, 21, 12) 0%,
+        rgb(0, 0, 0) 25%,
+        transparent 100%,
+        rgb(247, 4, 4) 75%,
+        transparent)
+  }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .booking-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #e21f1f;
+            margin-bottom: 2rem;
+        }
+        form {
+            display: grid;
+            gap: 1rem;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #e21f1f;
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #c51a1a;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (copied from the provided code) -->
+    <div class="head_container">
+        <div id="loader-wrapper">
+          <div id="loader"></div>
+          <div class="loader-section section-left"></div>
+          <div class="loader-section section-right"></div>
+        </div>
+        <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container-fluid">
+            <a class="navbar-brand opacity-75 flex-fill" href="/">
+              <img src="../Images/logo/Foodielogo.png" height="40">
+            </a>
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
+              <ul class="navbar-nav center-links">
+                <li class="nav-item">
+                  <a aria-current="page" class="nav-link" href="/"><i class="fa-solid fa-house"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/html-files/menu"><i class="fa-solid fa-bars"></i> Menu</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a aria-expanded="false" class="nav-link active services" href="services.html"><i class="fa-solid fa-gear"></i>  Services</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Ordering options</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Order Tracking</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Customer Support</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">FAQS</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/html-files/contact"><i class="fa-solid fa-phone"></i> Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/html-files/offers"><i class="fa-solid fa-tag"></i> Offers</a>
+                </li>
+              </ul>
+            </div>
+            <div class="order-0 ml-auto p-2">
+              <img class="nav-link" src="../Images/navbar/sun.png" id="theme-toggle-icon" alt="theme toggler button">
+            </div>
+            <div class="collapse navbar-collapse hamburgeritems enddiv order-3">
+              <ul class="navbar-nav end-links">
+                <li class="nav-item">
+                  <a class="nav-link" href="/html-files/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/html-files/signup"><i class="fa-solid fa-user"></i> Sign-Up</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/html-files/cart">
+                    Cart
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="mainhead">
+          <h1>SERVICES</h1>
+        </div>
+
+    <div class="booking-container">
+        <h1>Book Catering</h1>
+        <form id="cateringForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="date">Event Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+
+            <label for="eventType">Event Type:</label>
+            <select id="eventType" name="eventType" required>
+                <option value="">Select an event type</option>
+                <option value="wedding">Wedding</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="birthday">Birthday Party</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="requirements">Special Requirements:</label>
+            <textarea id="requirements" name="requirements" rows="4"></textarea>
+
+            <button type="submit">Submit Booking Request</button>
+        </form>
+    </div>
+
+    <!-- Footer (copied from the provided code) -->
+    <footer>
+        <div class="foot-panel1 w-100">
+          <div class="container-fluid py-5 px-0">
+            <div class="row justify-content-evenly gy-5">
+              <div class="col-6 col-sm-3 col-md-2 col-xl-2">
+                <h5 class="mb-3">See Also</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/html-files/menu">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/html-files/services">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/html-files/contact">Contact us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/html-files/cart">Cart</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-sm-5 col-md-3 col-xl-3">
+                <h5 class="mb-3">Exclusive Offers</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                      <a href="#" class="nav-link">Foodie Discounts</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/html-files/offers/limited-time-products">Limited-Time Promotions</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/html-files/offers/special-event">Special Event Packages</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/html-files/offers/membership-benifits">Membership Benefits</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/html-files/offers/early-access">Early Access to New Recipes</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/html-files/offers/vip-food-event">VIP Foodie Events</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/html-files/offers/culinary-experience">Personalized Culinary Experiences</a>
+                  </li>
+              </ul>
+              </div>
+
+              <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                <h5 class="mb-3">Payment Products</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/html-files/payment/secure-checkout">Secure Checkout</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/html-files/payment/credit-debit-card">Credit/Debit Cards</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/html-files/payment/secure-checkout">Secure Checkout</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/html-files/payment/online-payment">Online Payment</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/html-files/payment/mobile-wallet">Mobile Wallets</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/html-files/payment/contact-less-payment">Contactless Payments</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-3 col-xl-4">
+                <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
+                  <h3 class="text-center mb-3">Contact Us!</h3>
+                  <input type="email" id="footer-email" name="email" placeholder="Your Email" class="text-center form-control mb-2" required="">
+                  <textarea id="footer-message" name="message" placeholder="Your Message" class="text-center form-control mb-2" required=""></textarea>
+                  <div class="d-grid gap-2 col-12">
+                    <button type="submit" class="btn btn-danger">
+                      Send Message
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="foot-panel2">
+          <div class="media-handles pt-3 pb-2">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+              <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+              <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+              <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
+              <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
+              <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
+            </div>
+            <p class="text">
+              Stay connected with us on social media for the latest updates,
+              recipes, and foodie adventures.
+            </p>
+          </div>
+          <div class="copyright py-1">
+            ©
+            <span id="copyright-year">2024</span> Foodies - All Rights Reserved |
+            <span id="author">
+              <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+
+    <script>
+        document.getElementById('cateringForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the form data to a server
+            // For this example, we'll just log it to the console
+            console.log('Booking request submitted');
+            alert('Thank you for your booking request. We will contact you shortly to confirm the details.');
+            this.reset();
+        });
+
+        // Set minimum date for the event date input to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('date').setAttribute('min', today);
+    </script>
+    <button
+    id="scroll-top-button"
+    class="scroll-top-button"
+    onclick="goToTop()"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="24px"
+      viewBox="0 -960 960 960"
+      width="24px"
+      fill="white"
+      class="arrow"
+    >
+      <path
+        d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
+      />
+    </svg>
+  </button>
+  <!--Scroll top button finish-->
+  <script>
+    document.getElementById("copyright-year").textContent =
+      new Date().getFullYear();
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: "ease",
+      once: false,
+    });
+  </script>
+  <script src="top.js"></script>
+  <script src="navbar.js"></script>
+
+  <script>
+    document.getElementById("copyright-year").textContent =
+      new Date().getFullYear();
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: "ease",
+      once: false,
+    });
+  </script>
+
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  AOS.init(
+      {
+          duration: 1000,
+          easing: 'ease',
+          once: false,
+      }
+  );
+
+  // Chatbot
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Message...",
+      "botConversationDescription": "Welcome to Foodie!",
+      "botId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+      "webhookId": "7bd6ccb8-58f4-4ee3-9bca-f33ea4b7c37c",
+      "lazySocket": true,
+      "themeName": "prism",
+      "botName": "Foodie",
+      "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/da4ab5f7-146c-4585-961b-2d9def26af50/v96339/style.css",
+      "frontendVersion": "v1",
+      "useSessionStorage": true,
+      "enableConversationDeletion": true,
+      "theme": "prism",
+      "themeColor": "#2563eb",
+      "allowedOrigins": []
+  });
+</script>
+
+</body>
+</html>
