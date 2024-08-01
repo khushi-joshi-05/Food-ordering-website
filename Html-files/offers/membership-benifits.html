@@ -1,11 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodie Membership</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+<!-- Adding favicon image -->
+<link rel="shortcut icon" href="Images/favicon/Foodie_Favicon.png" type="image/x-icon">
+<link
+    href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+    defer></script>
+<script src="https://cdn.lordicon.com/lordicon.js"></script>    
+<link rel="stylesheet" href="Css-files/scroll-top-button.css">
+<link rel="stylesheet" href="Css-files/navbar.css">
+<link rel="stylesheet" href="Css-files/footer.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="Css-files/googletranslate.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../../Css-files/scroll-top-button.css" />
+    <link rel="stylesheet" href="../../Css-files/navbar.css" />
+    <link rel="stylesheet" href="../../Css-files/footer.css" />
+    <link rel="stylesheet" href="../../Css-files/membership.css" />
+
+    <style>
+      #progressBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 8px;
+        background-color: #e21f1f;
+        z-index: 9999;
+      }
+
+      .center-links .nav-item .dropdown-menu {
+        background-color: #212123;
+        color: white;
+        border-radius: 0;
+        border: none;
+        padding-top: 0;
+      }
+
+      .center-links .nav-item .dropdown-menu {
+        background-color: #ffffff;
+        color: white;
+        border-radius: 0;
+        border: none;
+        padding-top: 0;
+      }
+
+      .dropdown-item:hover {
+        background-color: #58a9ff;
+        color: #fff;
+        transform: scale(1.1);
+      }
+
+      .dropdown-item {
+        padding: 4px 8px;
+        color: white;
+        font-size: 15px;
+        background-color: #137cbd;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <!-- Brand Logo -->
+
+            <a href="index.html">
+                <img id="theme-toggle-logo"  src="../../Images/logo/Logo-Light.png" height="70" width="70"  alt="Brand Logo">
+
+            </a>
+            <!-- Navbar Toggler -->
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Centered Navbar Links -->
+            <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
+                <ul class="navbar-nav center-links">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">
+
+
+                            <i class="fa-solid fa-house"></i> Home
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../Html-files/menu.html">
+
+                            <i class="fa-solid fa-bars"></i> Menu
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="Html-files/services.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i> Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Ordering options</a></li>
+                            <li><a class="dropdown-item" href="#">Order Tracking</a></li>
+                            <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                            <li><a class="dropdown-item" href="#">FAQS</a></li>
+                        </ul>
+                    </li>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#FAQ">FAQS</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="Html-files/contact.html">
+                            <i class="fa-solid fa-phone"></i> Contact Us
+                        </a>
+                    </li>
+                    
+                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/offers.html">
+
+                            <i class="fa-solid fa-tag"></i> Offers
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/RateUs.html">
+                            <i class="fa-solid fa-star"></i> Rate Us
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- Theme Toggle Icon -->
+            <div class="order-0 ml-auto p-2">
+
+                <!-- <img class="nav-link" src="../../Images/navbar/moon.png" id="theme-toggle-icon" alt="theme toggler button"> -->
+
+                <img class="nav-link" src="../../Images/navbar/sun.png" id="theme-toggle-icon" alt="Theme Toggler Button">
+
+            </div>
+
+            <!-- End Navbar Links -->
+
+
+            <div class="collapse navbar-collapse hamburgeritems enddiv order-3">
+                <ul class="navbar-nav end-links">
+
+                    
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/login.html">
+
+                            
+
+                            <i class="fa-solid fa-sign-in"></i> Login
+
+                        </a>
+                    </li>
+
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/signup.html">
+
+                            <i class="fa-solid fa-user"></i> Sign-Up
+
+                            
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/cart.html">
+
+                            Cart <i class="fa-solid fa-cart-shopping"></i>
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- </header> -->
+    <div class="head_container">
+      <div class="mainhead">
+        <h1 class="m-0">OUR MENU</h1>
+      </div>
+    </div>
+
+    <section class="membership-hero">
+      <div class="membership-hero-content">
+        <h2>Become a Foodie Member</h2>
+        <p>
+          Join our membership program to enjoy exclusive discounts, early access
+          to new menus, and special offers!
+        </p>
+        <a href="#" class="cta-button">Join Now</a>
+      </div>
+    </section>
+
+    <section class="membership-benefits">
+      <h2>Membership Benefits</h2>
+      <div class="benefits-cards">
+        <div class="benefits-card">
+          <i class="fa fa-percent benefits-icon"></i>
+          <h3>Exclusive Discounts</h3>
+          <p>
+            Get up to 50% off on selected items exclusively for our members.
+          </p>
+        </div>
+        <div class="benefits-card">
+          <i class="fa fa-star benefits-icon"></i>
+          <h3>Early Access</h3>
+          <p>Be the first to try our new menu items before anyone else.</p>
+        </div>
+        <div class="benefits-card">
+          <i class="fa fa-gift benefits-icon"></i>
+          <h3>Special Offers</h3>
+          <p>Receive special offers and promotions directly to your inbox.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="membership-testimonials">
+      <div class="container">
+        <h2>What Our Members Say</h2>
+        <div class="testimonial">
+          <img src="https://via.placeholder.com/100" alt="Member 1" />
+          <p>
+            "Being a Foodie member has been fantastic! The discounts are great,
+            and I love getting early access to new dishes."
+          </p>
+          <h3>Alex Johnson</h3>
+        </div>
+        <div class="testimonial">
+          <img src="https://via.placeholder.com/100" alt="Member 2" />
+          <p>
+            "I highly recommend joining the membership program. The special
+            offers and exclusive discounts are worth it!"
+          </p>
+          <h3>Emily Davis</h3>
+        </div>
+      </div>
+    </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="foot-panel1 w-100">
+      <div class="container-fluid py-5 px-0">
+        <div class="row justify-content-evenly gy-5">
+          <div class="col-6 col-sm-3 col-md-2 col-xl-2">
+            <h5 class="mb-3 text-center">See Also</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Html-files/menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Html-files/services.html"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Html-files/contact.html"
+                  >Contact us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Html-files/cart.html">Cart</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-sm-5 col-md-3 col-xxl-3">
+            <h5 class="mb-3 text-center">Exclusive Offers</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a href="#" class="nav-link">Foodie Discounts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Limited-Time Promotions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Special Event Packages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Html-files/offers/membership-benifits.html">Membership Benefits</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Early Access to New Recipes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">VIP Foodie Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  >Personalized Culinary Experiences</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-4 col-xxl-3">
+            <h5 class="mb-3 text-center">Payment Products</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a href="" class="nav-link">Secure Checkout</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Credit/Debit Cards</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Secure Checkout</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Online Payment</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Mobile Wallets</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Contactless Payments</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 col-xl-4">
+            <form
+              id="contactForm"
+              action="https://formsubmit.co/xyz@gmail.com"
+              method="POST"
+            >
+              <h3 class="text-center mb-3">Contact Us!</h3>
+              <input
+                type="email"
+                id="footer-email"
+                name="email"
+                placeholder="Your Email"
+                class="text-center form-control mb-2"
+                required
+              />
+              <textarea
+                id="footer-message"
+                name="message"
+                placeholder="Your Message"
+                class="text-center form-control mb-2"
+                required
+              ></textarea>
+              <div class="d-grid gap-2 col-12">
+                <button type="submit" class="btn btn-danger">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot-panel2">
+      <div class="media-handles pt-3 pb-2">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a
+            class="fa-brands fa-facebook"
+            href="https://facebook.com"
+            target="_blank"
+          ></a>
+          <a
+            class="fa-brands fa-instagram"
+            href="https://instagram.com"
+            target="_blank"
+          ></a>
+          <a
+            class="fa-brands fa-x-twitter"
+            href="https://twitter.com"
+            target="_blank"
+          ></a>
+          <a
+            class="fa-brands fa-linkedin"
+            href="https://linkedin.com"
+            target="_blank"
+          ></a>
+          <a
+            class="fa-brands fa-github"
+            href="https://github.com/khushi-joshi-05/Food-ordering-website"
+            target="_blank"
+          ></a>
+          <a
+            class="fa-brands fa-discord"
+            href="https://discord.com/invite/sybYafYA"
+            target="_blank"
+          ></a>
+        </div>
+        <p class="text">
+          Stay connected with us on social media for the latest updates,
+          recipes, and foodie adventures.
+        </p>
+      </div>
+      <div class="copyright py-1">
+        &copy;
+        <span id="copyright-year"></span> Foodies - All Rights Reserved |
+        <span id="author">
+          <a
+            href="https://www.linkedin.com/in/khushi-joshi-95a587256/"
+            target="_blank"
+            >Khushi Joshi</a
+          >
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <button
+    id="scroll-top-button"
+    class="scroll-top-button"
+    onclick="goToTop()"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="24px"
+      viewBox="0 -960 960 960"
+      width="24px"
+      fill="white"
+      class="arrow"
+    >
+      <path
+        d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
+      />
+    </svg>
+  </button>
+
+  <script>
+    document.getElementById("copyright-year").textContent =
+      new Date().getFullYear();
+  </script>
+
+  <script src="./MenuAPI.js"></script>
+  <script src="menuStars.js"></script>
+  <script src="navbar.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: "ease",
+      once: false,
+    });
+  </script>
+  <script src="../carts.js"></script>
+  <script src="cart.js"> </script>
+
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script>
+      AOS.init(
+          {
+              duration: 1000,
+              easing: 'ease',
+              once: false,
+          }
+      );
+
+      // Chatbot
+      window.botpressWebChat.init({
+          "composerPlaceholder": "Message...",
+          "botConversationDescription": "Welcome to Foodie!",
+          "botId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+          "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+          "messagingUrl": "https://messaging.botpress.cloud",
+          "clientId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+          "webhookId": "7bd6ccb8-58f4-4ee3-9bca-f33ea4b7c37c",
+          "lazySocket": true,
+          "themeName": "prism",
+          "botName": "Foodie",
+          "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/da4ab5f7-146c-4585-961b-2d9def26af50/v96339/style.css",
+          "frontendVersion": "v1",
+          "useSessionStorage": true,
+          "enableConversationDeletion": true,
+          "theme": "prism",
+          "themeColor": "#2563eb",
+          "allowedOrigins": []
+      });
+  </script>
+
 </body>
 </html>

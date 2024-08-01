@@ -40,6 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+/*Refresher*/
+document.addEventListener('DOMContentLoaded', function() {
+  const caduceus = document.getElementById('caduceus');
+  
+  caduceus.addEventListener('mouseover', function() {
+    location.reload();
+  });
+});
+
 function getVisitorCount() {
   return localStorage.getItem('visitorCount') || 0;
 }
@@ -56,3 +66,4 @@ function displayVisitorCount() {
   counterElement.textContent = count;
 }
 document.addEventListener('DOMContentLoaded', displayVisitorCount);
+
