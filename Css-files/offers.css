@@ -43,7 +43,49 @@ ol {
   --primary-font: 'Roboto', sans-serif;
   --secondry-font: 'Quicksand', sans-serif;
 }
+:root {
+  --background-color: white;
+  --text-color: black;
+  --primary-color: rgb(204, 12, 12);
+  --secondary-color: rgb(177, 0, 0);
+  --tertiary-color: orangered;
+  --container-bg: rgb(224, 224, 252);
+  --filter-bg: transparent;
+  --contact-bg: rgb(208, 50, 50);
+  --button-bg: #ec0f25e3;
+  --button-hover-bg: rgba(208, 50, 50, 0.9);
+  --card-border: rgb(186, 186, 201);
+  --card-shadow: rgba(224, 224, 252, 0.678);
+  --link-color: rgb(177, 0, 0);
+  --pagination-bg: white;
+  --pagination-active-bg: rgb(177, 0, 0);
+  --pagination-btn-color: rgb(177, 0, 0);
+  --pagination-prev-next-bg: rgb(204, 12, 12);
+  --filter-text-color: black;
+  --filter-border-color: #dc3545;
+}
 
+.dark-theme  {
+  --background-color: black;
+  --text-color: white;
+  --primary-color: rgb(204, 12, 12);
+  --secondary-color: rgb(177, 0, 0);
+  --tertiary-color: orangered;
+  --container-bg: rgb(35, 35, 35);
+  --filter-bg: rgba(0, 0, 0, 0.6);
+  --contact-bg: rgb(208, 50, 50);
+  --button-bg: #ec0f25e3;
+  --button-hover-bg: rgba(208, 50, 50, 0.9);
+  --card-border: rgb(100, 100, 100);
+  --card-shadow: rgba(0, 0, 0, 0.5);
+  --link-color: rgb(177, 0, 0);
+  --pagination-bg: #2e2e2e;
+  --pagination-active-bg: rgb(177, 0, 0);
+  --pagination-btn-color: rgb(177, 0, 0);
+  --pagination-prev-next-bg: rgb(204, 12, 12);
+  --filter-text-color: white;
+  --filter-border-color: #dc3545;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -137,7 +179,7 @@ h5 {
 
 p {
   font-size: 1rem;
-  color: var(--text-color);
+  color: var(--bs-heading-color);
   font-weight: 400;
   line-height: 1.75rem;
   letter-spacing: 1px;
@@ -430,11 +472,11 @@ nav {
 ==========================================
 */
 .testimonial-section {
-  background: lavender;
+  background: var(--background-color);
 }
 
 .testimonial-section h2 {
-  color: red;
+  color:var(--bs-heading-color);
 }
 
 .testimonial-section .carousel-item {
@@ -484,7 +526,7 @@ button.prev, button.next {
   top: 50%;
   margin: 20px;
   transform: translateY(-50%);
-  background-color: brown;
+  background-color: var(--pagination-btn-color);
   color: white;
   border: 1px white solid;
   padding: 10px;

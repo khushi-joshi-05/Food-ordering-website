@@ -21,7 +21,7 @@
   /* Additional Colors */
   --container-bg: black;
   --drop-bg: #212123;
-  --a: white;
+  --a: black;
   --nav: black;
   --invert: invert(1);
 }
@@ -52,15 +52,14 @@
   /* Additional Colors */
   --container-bg: rgb(224, 224, 252);
   --drop-bg: #ffffff;
-  --a: black;
   --nav: white;
   --invert: invert(0);
 }
 
 /* Navbar */
 .navbar {
-  --bs-navbar-color: var(--a);
-  background-color: var(--nav);
+  /* --bs-navbar-color: var(--a); */
+  background-color: var(--background-color);
   gap: 10px;
 }
 
@@ -83,7 +82,7 @@
 
 /* Navbar Links */
 .nav-link {
-  transition: color 0.3s, background-color 0.3s;
+  color:var(--a)
 }
 
 .nav-link:hover {
@@ -102,6 +101,8 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  color:var(--a)
+
 }
 
 
@@ -140,6 +141,7 @@ ul {
 #theme-toggle-icon {
   width: 30px;
   cursor: pointer;
+  color:var(--drop-bg)
 }
 
 .center-links .nav-item .dropdown-menu {
@@ -165,7 +167,7 @@ ul {
   background-color: #dc3545;
 }
 
-:root {
+/* :root {
   --background-color: #fff;
   --text-color: #000;
   --button-bg: #D0EEB0;
@@ -177,7 +179,7 @@ ul {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-}
+} */
 
 .section {
   background-color: var(--background-color);
