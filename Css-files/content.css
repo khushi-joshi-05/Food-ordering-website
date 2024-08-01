@@ -165,13 +165,13 @@
 
 .menu-items .card .btn {
 	position: absolute;
-	left: 20%;
-	top: 18%;
+	left: 21%;
+	top: 26%;
 	width: 60%;
 	font-size: 1.1rem;
 	padding: 3px 0;
 	border: 1.3px solid orangered;
-	border-radius: 20px;
+	border-radius: 10px;
 	font-family: "Bree Serif", serif;
 	background-color: orangered;
 	color: white;

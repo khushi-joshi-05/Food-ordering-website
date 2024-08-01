@@ -79,7 +79,7 @@ This repository is aimed to help people to contribute in open source and learn G
 
 2. **Clone the Repository**:
    ```bash
-   git clone https://github.com/khushi-joshi-05/FoodOrderingWebsite.git
+   git clone https://github.com/khushi-joshi-05/Food-ordering-website.git
    ```
    This will create a `FoodOrderingWebsite` directory with all project files.
 
@@ -126,7 +126,7 @@ This repository is aimed to help people to contribute in open source and learn G
 ### Create an Issue
 
 1. **Navigate to the GitHub Repository**:
-   - Go to [FoodOrderingWebsite Repository](https://github.com/khushi-joshi-05/FoodOrderingWebsite).
+   - Go to [FoodOrderingWebsite Repository](https://github.com/khushi-joshi-05/Food-ordering-website.git ) .
 
 2. **Open the Issues Tab**:
    - Click on `Issues`.
@@ -140,7 +140,7 @@ This repository is aimed to help people to contribute in open source and learn G
 
 2. **Clone Your Fork**:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/FoodOrderingWebsite.git
+   git clone https://github.com/YOUR_USERNAME/Food-ordering-website.git
    ```
 
 3. **Create a New Branch**:

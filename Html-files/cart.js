@@ -189,3 +189,12 @@ window.onclick = (event) => {
     }
 };
 
+ // adding donate button
+
+document.addEventListener('DOMContentLoaded', function() {
+    const donateButton = document.getElementById('donateBtn');
+    donateButton.addEventListener('click', function() {
+        window.location.href = '../Html-files/donation-form.html';
+    });
+});
+
