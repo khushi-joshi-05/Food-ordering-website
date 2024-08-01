@@ -88,7 +88,7 @@ function createCartItemElement(item) {
     cartItemRow.innerHTML = `
         <img src='${item.imgSrc}' alt='${item.name}-image' height='100px' width='100px'>
         <div class='detail'>
-            <div>${item.name}</div>
+            <div class="name">${item.name}</div>
             <div class="quantity-wrapper">
                 <span class="btn decrease-quantity ${item.quantity == 1 ? 'disable' : ''}">-</span>
                 <span class="quantity">${item.quantity}</span>
@@ -188,4 +188,13 @@ window.onclick = (event) => {
         modal.style.display = "none";
     }
 };
+
+ // adding donate button
+
+document.addEventListener('DOMContentLoaded', function() {
+    const donateButton = document.getElementById('donateBtn');
+    donateButton.addEventListener('click', function() {
+        window.location.href = '../Html-files/donation-form.html';
+    });
+});
 

@@ -33,6 +33,54 @@
             text-shadow: #FC0 1px 0 6px;
             text-decoration: none;
         }
+        .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    position: relative; /* for the remove button positioning */
+}
+
+.cart-item img {
+    margin-right: 15px; /* space between image and details */
+}
+
+.detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: inherit;
+}
+
+.quantity-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    cursor: pointer;
+    margin: 0 5px;
+    position: relative;
+    top:-6px;
+
+}
+
+.price {
+    margin-top: 5px;
+}
+
+.remove {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: red;
+    color:white;
+}
+.name{
+    width: 81px;
+  overflow: hidden;
+}
+
     </style>
     <style>
        #progressBar {
@@ -175,6 +223,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="../Html-files/offers.html"><i class="fa-solid fa-tag"></i> Offers</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="RateUs.html">
+                                    <i class="fa-solid fa-star"></i> Rate Us
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div class="order-0 ml-auto p-2">
@@ -302,6 +355,15 @@
             <p class="congomessagebox">
                 <button type="submit" class="butt" id="orderNowButton">Order Now</button>
                 <!-- id="orderNowButton" class="butt"-->
+
+
+                <!--Adding donate button-->
+                <div class="donate-button">
+                    <button id="donateBtn">Donate Now</button>
+                </div>
+                
+                
+
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>

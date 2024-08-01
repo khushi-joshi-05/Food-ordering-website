@@ -13,7 +13,6 @@ const addToCart = function(name, price){
     if (!existingItem) {
         cartItems.push({ name, price });
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        console.log(cartItems);
     }
 
     updateCartDisplay();
