@@ -43,13 +43,23 @@
             left: 0;
             width: 0%;
             height: 8px;
-            background-color: #e21f1f;
+            background-color: #b80d0d;
             z-index: 9999;
         }
+        .home-ali {
+    text-align: center;
+    background-color: #f0f0f0; /* Change this to your desired background color */
+    padding: 20px; /* Optional: Add some padding for better spacing */
+    align-items: center;
+}
     </style>
 </head>
 
 <body>
+    <div class="visitor-counter">
+        <div>Visitors</div>
+        <div class="website-counter"></div>
+      </div>
     <!-- Progress bar -->
     <div id="progressBar"></div>
     <script>
@@ -66,12 +76,18 @@
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
     </div>
+    <div id="caduceus-container">
+        <div class="rope"></div>
+        <img id="caduceus" src="Images/image.png" alt="Caduceus">
+      </div>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <!-- Brand Logo -->
 
+
             <a href="index.html">
                 <img id="theme-toggle-logo"  src="Images/logo/Logo-Light.png" height="70" width="70"  alt="Brand Logo">
+
 
             </a>
 
@@ -111,12 +127,12 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item, nav-items">
+                    <!-- <li class="nav-item, nav-items">
                         <a class="nav-link" href="Html-files/contact.html"><i class="fa-solid fa-phone"></i>Contact Us</a>
 
                         
 
-                    </li>
+                    </li> -->
 
                     <li class="nav-item">
                         <a class="nav-link" href="#FAQ">FAQS</a>
@@ -129,29 +145,21 @@
                             
                         </a>
                     </li>
-                    
-                  
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/offers.html">
 
                             <i class="fa-solid fa-tag"></i> Offers
 
-
-                        
-
-
-                            
-
                         </a>
                     </li>
-
-                 
 
                     <li class="nav-item">
                         <a class="nav-link" href="Html-files/RateUs.html">
                             <i class="fa-solid fa-star"></i> Rate Us
                         </a>
                     </li>
+                    
+                    
 
                 </ul>
             </div>
@@ -159,8 +167,6 @@
             <div class="order-0 ml-auto p-2">
 
                 <img class="nav-link" src="Images/navbar/moon.png" id="theme-toggle-icon" alt="theme toggler button">
-
-                <img class="nav-link" src="Images/navbar/sun.png" id="theme-toggle-icon" alt="Theme Toggler Button">
 
             </div>
 
@@ -213,13 +219,10 @@
             <li data-bs-target="#homeSlider" data-bs-slide-to="0" class="active"></li>
             <li data-bs-target="#homeSlider" data-bs-slide-to="1"></li>
             <li data-bs-target="#homeSlider" data-bs-slide-to="2"></li>
-            <li data-bs-target="#homeSlider" data-bs-slide-to="3"></li>
-            <li data-bs-target="#homeSlider" data-bs-slide-to="4"></li>
         </ol>
+        <!-- Indicators-->
 
-    
-
-    <section id="homeSlider" class="carousel slide carousel-fade bg-black" data-bs-ride="carousel">
+        <!-- Carousel Slides-->
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="slider-bg d-flex justify-content-center">
@@ -273,6 +276,9 @@
                 </div>
             </div>
         </div>
+        <!-- Carousel Slides-->
+
+        <!-- Carousel Controls-->
         <button class="carousel-control-prev" type="button" data-bs-target="#homeSlider" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -281,6 +287,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+        <!-- Carousel Controls-->
     </section>
 
 
@@ -331,6 +338,7 @@
                 padding-bottom: 3rem;
             }
         }
+        
     </style>
 
 
@@ -338,7 +346,60 @@
     <br>
     <br>
 
+    <button class="fixed-button" onclick="openNutrition()">Nutrition Tips</button>
+    <script>
+        function openNutrition() {
+            window.open('Html-files/nutrition.html', '_blank');
+        }
+    </script>
+     <style>
+        
+        .fixed-button {
+            position: fixed;
+            margin-bottom: 25px;
+            margin-right: 100px;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            font-size: 16px;
+            background-color: #CF2123;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1000; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            font-size: 12px; 
+            line-height: 1;
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
 
+        .fixed-button:hover {
+            background: linear-gradient(45deg, rgb(234, 16, 16), #f2a736);
+        }
+
+        
+        .content {
+            height: 2000px;
+            background: linear-gradient(white, lightgray);
+            
+        }
+    </style>
 
     <section class="about_us pt-5">
         <div class="hstack discount-rolling">
@@ -604,6 +665,7 @@
                     <div class="card-body">
                         <h3>Indian Thali</h3>
                         <p>Enjoy a thali full of traditional flavours and memories</p>
+                        <a href="Html-files/menu.html"><button class="ordernow">Order Now</button></a>
                     </div>
                 </div>
             </div>
@@ -615,6 +677,7 @@
                     <div class="card-body">
                         <h3>Dessert</h3>
                         <p>Complete your meal with mouth watering delicacies</p>
+                        <a href="Html-files/menu.html"><button class="ordernow">Order Now</button></a>
                     </div>
                 </div>
             </div>
@@ -626,6 +689,7 @@
                     <div class="card-body">
                         <h3>Snacks</h3>
                         <p>Have a lighter version with deliciouis flavours</p>
+                        <a href="Html-files/menu.html"><button class="ordernow">Order Now</button></a>
                     </div>
                 </div>
             </div>
@@ -636,13 +700,45 @@
                     </div>
                     <div class="card-body">
                         <h3>Juices</h3>
-                        <p>Boost yourself up with fruit extracts</p>
+                        <p>Boost yourself up with fruit extracts and freshen up</p>
+                        <a href="Html-files/menu.html"><button class="ordernow">Order Now</button></a>
                     </div>
                 </div>
             </div>
 
         </div>
     </section>
+    <br>
+    <div class = "home-ali">
+        
+    <h1 style="color: #6d1002;">Homemade Food Services</h1>
+
+    <div class = "card-home">
+        <br>
+        <img src="./Images/a3.png">
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary" onclick="location.href='./Html-files/shray.html'">Order Now</button>
+
+    </div>
+    <br>
+    <div class = "card-home">
+        <br>
+        <img src="./Images/a1.png">
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary" onclick="location.href='./Html-files/frosa.html'">Order Now</button>
+    </div>
+    <br>
+    <div class = "card-home">
+        <br>
+        <img src="./Images/a2.png">
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary" onclick="location.href='./Html-files/aman.html'">Order Now</button>
+    </div>
+
+</div>
 
     <section class="testimonial-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
         <h2 class="tagline pt-5"> Our Happy Clients </h2>
@@ -752,8 +848,7 @@
 
     <section class="faq-section" id="FAQ">
         <div class="container faq-container">
-            <h1>Frequently Asked Questions (FAQ)</h1>
-
+            <h1 class="main-faq-head">Frequently Asked Questions !</h1>
             <div class="faq-item">
                 <h2>How do I place an order?</h2>
                 <p>To place an order, browse our menu, select the items you want, and add them to your cart. Once you’re ready, click on the cart icon and proceed to checkout. Follow the instructions to complete your order.
@@ -789,9 +884,22 @@
                 <h2>Do you offer any discounts or promotions?</h2>
                 <p>We regularly offer discounts and promotions. Check our website or subscribe to our newsletter to stay updated on the latest deals and offers.</p>
             </div>
+
+            <div class="faq-item">
+                <h2>Can I place an order for pickup?</h2>
+                <p>Yes, you can place an order for pickup. During checkout, select the pickup option and choose the time
+                    that is most convenient for you. You will receive a notification when your order is ready for pickup.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h2>How do I book a table for dining in?</h2>
+                <p>To book a table, navigate to the 'Book Table' section on our website. Select your preferred date and
+                    time, provide the necessary details, and confirm your booking. You will receive a confirmation email
+                    with your booking details.</p>
+            </div>
         </div>
     </section>
-
+    
     <div class="app_download pb-4">
         <h4 class="free_delivery">For Free Delivery!</h4>
         <h2 class="text-center">Download This Amazing App Now!</h2>
@@ -823,6 +931,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="./Html-files/cart.html">Cart</a>
                             </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link" href="/Html-files/contributor.html">Our Contributors</a>
                             </li>
@@ -842,7 +951,7 @@
                                 <a class="nav-link" href="#">Special Event Packages</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Membership Benefits</a>
+                                <a class="nav-link" href="/Html-files/offers/membership-benifits.html">Membership Benefits</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Early Access to New Recipes</a>
@@ -906,6 +1015,8 @@
                     <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
                     <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
                     <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-snapchat" href="https://snapchat.com" target="_blank"></a>
+                    <a class="fa-brands fa-youtube" href="https://youtube.com" target="_blank"></a>
                     <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
                     <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
                     <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
