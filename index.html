@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="Css-files/googletranslate.css">
     <style>
-        .legal-pages {
+         .legal-pages {
             text-decoration: none;
             color: white;
         }
@@ -53,164 +53,112 @@
     align-items: center;
 }
     </style>
-</head>
+  </head>
 
-<body>
-    <div class="visitor-counter">
-        <div>Visitors</div>
-        <div class="website-counter"></div>
-      </div>
-    <!-- Progress bar -->
-    <div id="progressBar"></div>
-    <script>
-        window.onscroll = function () {
-            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var scrolled = (winScroll / height) * 100;
-            document.getElementById("progressBar").style.width = scrolled + "%";
-        };
-    </script>
-    <!-- end -->
-    <div id="loader-wrapper">
-        <div id="loader"></div>
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-    </div>
-    <div id="caduceus-container">
-        <div class="rope"></div>
-        <img id="caduceus" src="Images/image.png" alt="Caduceus">
-      </div>
+  <body>
+        <!-- Progress bar -->
+        <div id="progressBar"></div>
+        <script>
+            window.onscroll = function () {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("progressBar").style.width = scrolled + "%";
+            };
+        </script>
+        <!-- end -->
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+        <div id="caduceus-container">
+            <div class="rope"></div>
+            <img id="caduceus" src="Images/image.png" alt="Caduceus">
+          </div>
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <!-- Brand Logo -->
-
-
-            <a href="index.html">
-                <img id="theme-toggle-logo"  src="Images/logo/Logo-Light.png" height="70" width="70"  alt="Brand Logo">
-
-
-            </a>
-
-            <!-- Navbar Toggler -->
-
-            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Centered Navbar Links -->
+      <div class="container-fluid">
+        <a href="./index.html" class="navbar-brand opacity-75 flex-fill">
+          <img src="./Images/logo/Foodielogo.png" height="40" />
+        </a>
+        <button
+          class="navbar-toggler order-1"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target=".hamburgeritems"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+       
             <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
                 <ul class="navbar-nav center-links">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">
-
-
-                            <i class="fa-solid fa-house"></i> Home
-
+                        <a class="nav-link" aria-current="page" href="./index.html">
+                            <i class="fa-solid fa-home"></i> Home
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/menu.html">
-
-                            <i class="fa-solid fa-bars"></i> Menu
+                        <a class="nav-link active" href="./Html-files/menu.html">
+                            <i class="fa-solid fa-book-open"></i> Menu
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-
-                        <a class="nav-link dropdown-toggle" href="Html-files/services.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-gear"></i> Services
-                        </a>
-
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-check"></i> Ordering options</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-truck"></i> Order Tracking</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-headset"></i> Customer Support</a></li>
-                            <li><a class="dropdown-item" href="#FAQ"><i class="fa-solid fa-question"></i> FAQS</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- <li class="nav-item, nav-items">
-                        <a class="nav-link" href="Html-files/contact.html"><i class="fa-solid fa-phone"></i>Contact Us</a>
-
-                        
-
-                    </li> -->
-
+    
+                      <a class="nav-link dropdown-toggle" href="./Html-files/services.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa-solid fa-gear"></i> Services
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Ordering options</a></li>
+                          <li><a class="dropdown-item" href="#">Order Tracking</a></li>
+                          <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                          <li><a class="dropdown-item" href="#">FAQS</a></li>
+                      </ul>
+                  </li>
+    
                     <li class="nav-item">
-                        <a class="nav-link" href="#FAQ">FAQS</a>
-                    </li>
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="Html-files/contact.html">
-                            <i class="fa-solid fa-phone"></i> Contact Us
-
-                            
+                        <a class="nav-link" href="./Html-files/contact.html">
+                            <i class="fa-solid fa-envelope"></i> Contact Us
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/offers.html">
-
-                            <i class="fa-solid fa-tag"></i> Offers
-
+                        <a class="nav-link" href="./Html-files/offers.html">
+                            <i class="fa-solid fa-gift"></i> Offers
                         </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/RateUs.html">
+                        <a class="nav-link" href="./Html-files/RateUs.html">
                             <i class="fa-solid fa-star"></i> Rate Us
                         </a>
                     </li>
-                    
-                    
-
                 </ul>
             </div>
-            <!-- Theme Toggle Icon -->
             <div class="order-0 ml-auto p-2">
-
-                <img class="nav-link" src="Images/navbar/moon.png" id="theme-toggle-icon" alt="theme toggler button">
-
+                <img class="nav-link" src="./Images/navbar/sun.png" id="theme-toggle-icon" alt="theme toggler button">
             </div>
-
-            <!-- End Navbar Links -->
-
-
             <div class="collapse navbar-collapse hamburgeritems enddiv order-3">
                 <ul class="navbar-nav end-links">
-
-                    
-
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/login.html">
-
-                            
-
+                        <a class="nav-link" href="./Html-files/login.html">
                             <i class="fa-solid fa-sign-in"></i> Login
-
-                        </a>
-                    </li>
-
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="Html-files/signup.html">
-
-                            <i class="fa-solid fa-user"></i> Sign-Up
-
-                            
-
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Html-files/cart.html">
-
-                            Cart <i class="fa-solid fa-cart-shopping"></i>
-
+                        <a class="nav-link" href="./Html-files/signup.html">
+                            <i class="fa-solid fa-user-plus"></i> Sign-Up
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Html-files/cart.html">
+                            <i class="fa-solid fa-cart-shopping"></i> <span class="cart-subscript">0</span>Cart
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-
     
 
     <section id="homeSlider" class="carousel slide carousel-fade bg-black" data-bs-ride="carousel" data-bs-interval="5000">
