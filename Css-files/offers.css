@@ -395,6 +395,7 @@ nav {
   border-radius: 0.9375rem;
 }
 
+
 .explore-food .card :hover {
   transform: scale(1.01);
   transition:all .4s ease-in;
@@ -419,11 +420,25 @@ nav {
 
 .explore-food p{
   /* color:var(--text-color); */
-  color: white;
+  color: rgb(167, 166, 166);
   font-size: 14px;
   line-height: 22px;
 }
+.card:hover {
+  transform: translateY(-5px); /* Move the card up slightly on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
 
+/* Example of adding a border on hover */
+.card:hover {
+  border: 2px solid #4CAF50;
+}
+
+/* Example of adding a background color change on hover */
+.card:hover {
+  background-color: #f0f0f0;
+  
+}
 /*
 ==========================================
  testimonial section Design
