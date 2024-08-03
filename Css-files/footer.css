@@ -3,6 +3,7 @@ footer {
   overflow: hidden;
 }
 
+/* Panel 1 */
 .foot-panel1 {
   background-color: rgb(138, 37, 37);
   color: white;
@@ -31,6 +32,8 @@ footer {
   background-color: rgba(210, 167, 167, 0.5);
   color: white;
   border: none;
+  width: 100%; /* Adjust the width as needed */
+  width: 500px; /* Add a max-width for larger screens */
 }
 
 #footer-email:focus,
@@ -53,6 +56,15 @@ footer {
   border: none;
 }
 
+/* Center h5 tags in desktop view */
+.foot-panel1 .row > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Panel 2 */
 .foot-panel2 {
   background-color: rgb(110, 28, 28);
   color: white;
@@ -72,52 +84,56 @@ footer {
   transition: 0.2s;
 }
 
+/* Social Icon Hover Effects */
 .foot-panel2 .fa-facebook:hover {
   background-color: #3b5998;
   color: white;
+  transform: scale(1.2);
 }
 
 .foot-panel2 .fa-instagram:hover {
   background-color: #833ab4;
   background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
   color: white;
+  transform: scale(1.2);
 }
 
 .foot-panel2 .fa-youtube:hover {
   background-color: #ff0000;
   background: linear-gradient(to right, #ff0000, #cc0000, #990000);
   color: white;
+  transform: scale(1.2);
 }
 
 .foot-panel2 .fa-snapchat:hover {
-  background-color: #fffc00; /* Yellow background */
-  background: linear-gradient(to right, #fffc00, #ffeb3b, #ffc107); /* Gradient background */
-  color: #fff; /* White color for the logo */
+  background-color: #fffc00;
+  background: linear-gradient(to right, #fffc00, #ffeb3b, #ffc107);
+  color: #fff;
+  transform: scale(1.2);
 }
-
 
 .foot-panel2 .fa-x-twitter:hover {
   background-color: black;
   color: white;
+  transform: scale(1.2);
 }
 
 .foot-panel2 .fa-linkedin:hover {
   background-color: #0072b1;
   color: white;
+  transform: scale(1.2);
 }
 
 .foot-panel2 .fa-github:hover {
   background-color: #040204;
   color: white;
+  transform: scale(1.2);
 }
 
 .foot-panel2 .fa-discord:hover {
   background-color: #5865f2;
   color: white;
-}
-.fa-linkedin:hover {
-  background-color: blue;
-  color: white;
+  transform: scale(1.2);
 }
 
 #author {
@@ -125,6 +141,7 @@ footer {
   color: #dddddd;
 }
 
+/* Copyright Section */
 .foot-panel2 .copyright {
   background-color: rgb(98, 25, 25);
 }
@@ -133,15 +150,45 @@ footer {
   margin: 0;
 }
 
-.social-icons :hover{
-  transform:scale(1.3);
+/* General Hover Effects */
+.media-handles h4:hover {
+  color: #d24b29;
+}
 
-}
-.media-handles h4:hover{
-  /* transform:scale(1.1); */
-color:#d24b29;
-}
 .row h5:hover,
 .row h3:hover {
-  color:#d24b29;
+  color: #d24b29;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .foot-panel1 .col-12 {
+    margin-bottom: 1rem;
+  }
+
+  .foot-panel2 .social-icons a {
+    font-size: 1rem;
+    padding: 8px;
+    margin: 8px;
+  }
+
+  #footer-email,
+  #footer-message {
+    width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .foot-panel1 .col-12 {
+    text-align: center;
+  }
+
+  .foot-panel1 .container-fluid {
+    width: 100%;
+  }
+
+  #footer-email,
+  #footer-message {
+    width: 300px; 
+  }
 }
