@@ -1,147 +1,258 @@
-/* FOOTER */
+/* Footer Styles */
 footer {
-  overflow: hidden;
+  background-color: rgb(95, 25, 25);
+  color: white;
+  font-family: 'Arial', sans-serif;
 }
 
 .foot-panel1 {
-  background-color: rgb(138, 37, 37);
-  color: white;
-  height: fit-content;
+  padding: 50px 0;
 }
 
-.foot-panel1 .container-fluid {
-  width: 90%;
+.footer-heading {
+  color: #ff6b6b;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+  transition: color 0.3s ease;
 }
 
-.foot-panel1 .nav-link {
-  font-size: 0.85rem;
-  color: #dddddd;
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #ff6b6b;
+  transition: width 0.3s ease;
+}
+
+.footer-heading:hover {
+  color: #ff4757;
+}
+
+.footer-heading:hover::after {
+  width: 100%;
+}
+
+.footer-links {
+  list-style: none;
   padding: 0;
 }
 
-.foot-panel1 .nav-link:hover {
+.footer-links li {
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer-links li:hover {
+  transform: translateX(5px);
+}
+
+.footer-links a {
+  color: #cccccc;
   text-decoration: none;
-  color: #dddddd;
+  transition: color 0.3s ease;
 }
 
-#footer-email,
-#footer-message {
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: rgba(210, 167, 167, 0.5);
-  color: white;
+.footer-links a:hover {
+  color: #ff6b6b;
+}
+
+#contactForm .form-control {
+  background-color: rgba(255, 255, 255, 0.1);
   border: none;
+  color: #ffffff;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
 }
 
-#footer-email:focus,
-#footer-message:focus {
-  box-shadow: none;
+#contactForm .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-#footer-email::placeholder,
-#footer-message::placeholder {
-  color: white;
+#contactForm .form-control::placeholder {
+  color: #cccccc;
 }
 
-.foot-panel1 .btn {
-  background-color: rgb(117, 21, 21);
+.btn-custom {
+  background-color: #ff6b6b;
+  color: #ffffff;
   border: none;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
 }
 
-.foot-panel1 .btn:is(:hover, :focus) {
-  background-color: rgb(196, 89, 89);
-  border: none;
+.btn-custom:hover {
+  background-color: #ff4757;
+  transform: scale(1.05);
 }
 
 .foot-panel2 {
   background-color: rgb(110, 28, 28);
   color: white;
-  height: fit-content;
-  font-size: 0.9rem;
-  text-align: center;
+  padding: 30px 0;
 }
 
-.foot-panel2 .social-icons a {
-  font-size: 1.2rem;
-  padding: 10px;
-  margin: 10px;
-  text-decoration: none;
-  color: black;
-  background-color: white;
+.follow-us {
+  font-size: 1.5rem;
+  margin: 0 45.5%;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.follow-us:hover {
+  color: #ff6b6b;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  color: #1a1a1a;
   border-radius: 50%;
-  transition: 0.2s;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.foot-panel2 .fa-facebook:hover {
-  background-color: #3b5998;
-  color: white;
+.social-icons a i {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
 }
 
-.foot-panel2 .fa-instagram:hover {
-  background-color: #833ab4;
-  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
-  color: white;
+.social-icons a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.3s ease;
 }
 
-.foot-panel2 .fa-youtube:hover {
-  background-color: #ff0000;
-  background: linear-gradient(to right, #ff0000, #cc0000, #990000);
-  color: white;
+.social-icons a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.foot-panel2 .fa-snapchat:hover {
-  background-color: #fffc00; /* Yellow background */
-  background: linear-gradient(to right, #fffc00, #ffeb3b, #ffc107); /* Gradient background */
-  color: #fff; /* White color for the logo */
+.social-icons a:hover::before {
+  transform: scale(1);
 }
 
-
-.foot-panel2 .fa-x-twitter:hover {
-  background-color: black;
-  color: white;
+.social-icons a:hover i {
+  color: #ffffff;
 }
 
-.foot-panel2 .fa-linkedin:hover {
-  background-color: #0072b1;
-  color: white;
+/* Specific social media icon hover effects */
+.social-icons a.facebook:hover::before {
+  background-color: #4b9aea;
 }
 
-.foot-panel2 .fa-github:hover {
-  background-color: #040204;
-  color: white;
+.social-icons a.instagram:hover::before {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
 }
 
-.foot-panel2 .fa-discord:hover {
-  background-color: #5865f2;
-  color: white;
-}
-.fa-linkedin:hover {
-  background-color: blue;
-  color: white;
+.social-icons a.twitter:hover::before {
+  background-color: #1da1f2;
 }
 
-#author {
-  padding: 3px;
-  color: #dddddd;
+.social-icons a.linkedin:hover::before {
+  background-color: #0077b5;
 }
 
-.foot-panel2 .copyright {
-  background-color: rgb(98, 25, 25);
+.social-icons a.github:hover::before {
+  background-color: #333;
 }
 
-.foot-panel2 .text {
+.social-icons a.discord:hover::before {
+  background-color: #7289da;
+}
+
+/* Ensure smooth transition for all properties */
+.social-icons a,
+.social-icons a::before,
+.social-icons a i {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.social-text {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  color: #cccccc;
+}
+
+.copyright {
+  background-color: #0f0f0f;
+  padding: 15px 0;
+  text-align: center;
+  margin-bottom: -5rem;
+}
+
+.copyright p {
+  font-style: italic;
   margin: 0;
+  font-size: 0.9rem;
+  color: #cccccc;
 }
 
-.social-icons :hover{
-  transform:scale(1.3);
+.copyright a {
+  color: #ff6b6b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
+.copyright a:hover {
+  color: #ff4757;
 }
-.media-handles h4:hover{
-  /* transform:scale(1.1); */
-color:#d24b29;
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .foot-panel1 .col-sm-6 {
+    margin-bottom: 30px;
+  }
 }
-.row h5:hover,
-.row h3:hover {
-  color:#d24b29;
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.footer-heading, .footer-links, #contactForm, .social-icons, .social-text {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.social-icons a {
+  animation: bounceIn 0.5s ease-out;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.1); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* Ensure animations play on load */
+body:not(.preload) * {
+  transition: all 0.3s ease-in-out;
 }
