@@ -76,17 +76,19 @@
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
     </div>
-    <div id="caduceus-container">
+    <!-- <div id="caduceus-container">
         <div class="rope"></div>
         <img id="caduceus" src="Images/image.png" alt="Caduceus">
-      </div>
+      </div> --> 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <!-- Brand Logo -->
 
 
             <a href="index.html">
-                <img id="theme-toggle-logo"  src="Images/logo/Logo-Light.png" height="70" width="70"  alt="Brand Logo">
+                <img id="theme-toggle-logo" 
+                style="height: 50px; width: 50px;"
+                src="Images/logo/Logo-Light.png"  alt="Brand Logo">
 
 
             </a>
@@ -97,7 +99,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Centered Navbar Links -->
-            <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
+            <div 
+            style=" margin-left: 25vw;"
+            class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
                 <ul class="navbar-nav center-links">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html">
@@ -475,10 +479,11 @@
             .btn {
                 border: none;
                 padding: .7em 1.8em;
-                border-radius: 5px;
                 font-weight: 600;
+                border-radius: 2px;
                 cursor: pointer;
                 font-size: .8rem;
+                background-color: rgb(68, 67, 67);
             }
             
             .btn-card {
@@ -487,7 +492,7 @@
             }
             
             .btn-card:hover {
-                background: #59a10c;
+                background: #59a10cc9;
             }
         </style>
 
