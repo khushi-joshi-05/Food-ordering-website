@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="Css-files/scroll-top-button.css">
     <link rel="stylesheet" href="Css-files/navbar.css">
     <link rel="stylesheet" href="Css-files/footer.css">
+    <link rel="stylesheet" href="Css-files/mode-toggler.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="Css-files/googletranslate.css">
@@ -164,12 +165,18 @@
                 </ul>
             </div>
             <!-- Theme Toggle Icon -->
-            <div class="order-0 ml-auto p-2">
+            <span class="slider" style="width: 40px; height: 20px; display: none;"></span> 
 
-                <img class="nav-link" src="Images/navbar/moon.png" id="theme-toggle-icon" alt="theme toggler button">
-
-            </div>
-
+            <div id="sun-moon-mode-toggler" class="toggle-container" >
+              <input type="checkbox" id="themeToggle" class="switch-checkbox" onclick="toggleTheme()">
+              <label  id="themeChangeToggle" class="theme-switch" for="themeToggle">
+              <div class="toggle-button">
+                  <span class="light-mode-icon"><img src="images/sun.svg" style = "display: block;"></span>
+                  <span class="dark-mode-icon"><img src="images/moon.svg"style = "display: block;"></span>
+              </div>
+              </label>
+          </div>
+        
             <!-- End Navbar Links -->
 
 
