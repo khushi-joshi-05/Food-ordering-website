@@ -444,13 +444,21 @@ nav {
   margin-top: 20px;
 } 
 
+.img2{
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px !important;
+  height: 500px !important;
+
+}
+
 .testimonial-section h2 {
   color: red;
 }
 
 .testimonial-section .carousel-item {
   margin-top: 3rem;
-  padding: 10rem 3.125rem;
+  padding: 5rem 1.125rem;
   color: white;
   background-color: rgb(251, 251, 251);
   border-radius: 0.9375rem;
@@ -870,7 +878,7 @@ textarea {
   width: 300px !important;
 }
 .testimonial-section .container{
-  scale:0.6;
+  scale:0.8;
 }
 .carousel-caption2 p {
   margin: 0;
