@@ -25,7 +25,8 @@ footer {
 }
 
 #footer-email,
-#footer-message {
+#footer-message,
+#footer-name {
   padding-left: 10px;
   padding-right: 10px;
   background-color: rgba(210, 167, 167, 0.5);
@@ -34,12 +35,14 @@ footer {
 }
 
 #footer-email:focus,
-#footer-message:focus {
+#footer-message:focus,
+#footer-name:focus {
   box-shadow: none;
 }
 
 #footer-email::placeholder,
-#footer-message::placeholder {
+#footer-message::placeholder, 
+#footer-name:placeholder {
   color: white;
 }
 
