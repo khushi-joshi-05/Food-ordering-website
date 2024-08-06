@@ -450,6 +450,7 @@ border: 4px solid brown;
 .testimonial-section .carousel-caption img {
   width: 20rem;
   height: 160px;
+  object-fit: cover;
   padding: 0.3125rem;
 }
 

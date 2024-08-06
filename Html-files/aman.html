@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amantran- Homemade Food Ordering Website</title>
+    <link rel="shortcut icon" href="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../Css-files/content.css" />
+    <link rel="stylesheet" href="../Css-files/book-table.css" />
+    <link rel="stylesheet" href="../Css-files/footer.css" />
+    <link rel="stylesheet" href="../Css-files/navbar.css" />
+
+    <script src="../hamburger.js"></script>
+    <style>
+         #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #e21f1f;
+            z-index: 9999;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 50px;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .confirmation-message {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+  </head>
+
+  <body>
+        <!-- Progress bar -->
+        <div id="progressBar"></div>
+        <script>
+            window.onscroll = function () {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("progressBar").style.width = scrolled + "%";
+            };
+        </script>
+        <!-- end -->
+    <div class="head_container">
+      <!-- <header> -->
+      <!-- updated nav bar -->
+      <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+      </div>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a href="../index.html" class="navbar-brand opacity-75 flex-fill">
+            <img src="../Images/logo/Foodielogo.png" height="40" />
+          </a>
+          <button
+            class="navbar-toggler order-1"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target=".hamburgeritems"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0"
+          >
+            <ul class="navbar-nav center-links">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="menu.html">Menu</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link services"
+                  href="services.html"
+                  aria-expanded="false"
+                  >Services</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Ordering options</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Order Tracking</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Customer Support</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">FAQS</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="offers.html">Offers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Reservation</a>
+              </li>
+            </ul>
+          </div>
+          <div class="order-0 ml-auto p-2">
+            <img
+              class="nav-link"
+              src="../Images/navbar/sun.png"
+              id="theme-toggle-icon"
+              alt="theme toggler button"
+            />
+          </div>
+          <div class="collapse navbar-collapse hamburgeritems enddiv order-3">
+            <ul class="navbar-nav end-links">
+              <li class="nav-item">
+                <a class="nav-link" href="../Html-files/login.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Html-files/signup.html">Sign-Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Html-files/cart.html">
+                  Cart
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- </header> -->
+    </div>
+
+    <div class="mainhead">
+      <h1>O R D E R - N O W</h1>
+    </div>
+    <div class="container">
+      <h2>Amantran Food Ordering </h2>
+      <form id="orderForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+          
+          <label for="address">Delivery Address:</label>
+          <textarea id="address" name="address" rows="4" required></textarea>
+          
+          <label for="food">Select Food Item:</label>
+          <select id="food" name="food" required>
+              <option value="pizza">Gujrati Thali</option>
+              <option value="burger">Maharashtrian Thali</option>
+              <option value="pasta">Punjabi Thali</option>
+              <option value="salad">South Indian Thali</option>
+          </select>
+          
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" required>
+          
+          <label for="notes">Additional Notes:</label>
+          <textarea id="notes" name="notes" rows="4"></textarea>
+          
+          <button type="submit">Place Order</button>
+      </form>
+      <div class="confirmation-message" id="confirmationMessage">
+          Order placed successfully! We will contact you for order confirmation.
+      </div>
+  </div>
+
+  <script>
+      document.getElementById('orderForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          // Perform form submission via AJAX or any other logic here
+          document.getElementById('confirmationMessage').style.display = 'block';
+          document.getElementById('orderForm').reset();
+      });
+  </script>
+    <!-- footer -->
+    <footer>
+      <div class="foot-panel1 w-100">
+        <div class="container-fluid py-5 px-0">
+          <div class="row justify-content-evenly gy-5">
+            <div class="col-6 col-sm-3 col-md-2 col-xl-2">
+              <h5 class="mb-3">See Also</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Html-files/menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Html-files/services.html"
+                    >Services</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Html-files/contact.html"
+                    >Contact us</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Html-files/cart.html">Cart</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-sm-5 col-md-3 col-xl-3">
+              <h5 class="mb-3">Exclusive Offers</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Foodie Discounts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Limited-Time Promotions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Special Event Packages</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Membership Benefits</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Early Access to New Recipes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">VIP Foodie Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    >Personalized Culinary Experiences</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+              <h5 class="mb-3">Payment Products</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a href="" class="nav-link">Secure Checkout</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">Credit/Debit Cards</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">Secure Checkout</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">Online Payment</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">Mobile Wallets</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">Contactless Payments</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-md-3 col-xl-4">
+              <form
+                id="contactForm"
+                action="https://formsubmit.co/xyz@gmail.com"
+                method="POST"
+              >
+                <h3 class="text-center mb-3">Contact Us!</h3>
+                <input
+                  type="email"
+                  id="footer-email"
+                  name="email"
+                  placeholder="Your Email"
+                  class="text-center form-control mb-2"
+                  required
+                />
+                <textarea
+                  id="footer-message"
+                  name="message"
+                  placeholder="Your Message"
+                  class="text-center form-control mb-2"
+                  required
+                ></textarea>
+                <div class="d-grid gap-2 col-12">
+                  <button type="submit" class="btn btn-danger">
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot-panel2">
+        <div class="media-handles pt-3 pb-2">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a
+              class="fa-brands fa-facebook"
+              href="https://facebook.com"
+              target="_blank"
+            ></a>
+            <a
+              class="fa-brands fa-instagram"
+              href="https://instagram.com"
+              target="_blank"
+            ></a>
+            <a
+              class="fa-brands fa-x-twitter"
+              href="https://twitter.com"
+              target="_blank"
+            ></a>
+            <a
+              class="fa-brands fa-linkedin"
+              href="https://linkedin.com"
+              target="_blank"
+            ></a>
+            <a
+              class="fa-brands fa-github"
+              href="https://github.com/khushi-joshi-05/Food-ordering-website"
+              target="_blank"
+            ></a>
+            <a
+              class="fa-brands fa-discord"
+              href="https://discord.com/invite/sybYafYA"
+              target="_blank"
+            ></a>
+          </div>
+          <p class="text">
+            Stay connected with us on social media for the latest updates,
+            recipes, and foodie adventures.
+          </p>
+        </div>
+        <div class="copyright py-1">
+          &copy;
+          <span id="copyright-year"></span> Foodies - All Rights Reserved |
+          <span id="author">
+            <a
+              href="https://www.linkedin.com/in/khushi-joshi-95a587256/"
+              target="_blank"
+              >Khushi Joshi</a
+            >
+          </span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("copyright-year").textContent =
+        new Date().getFullYear();
+    </script>
+    <script>
+      const HandleSubmit = () => {
+        let confirmation_code = Math.floor(Math.random() * 9000);
+        alert(
+          `Your Table has been booked successfully! Your Confirmation code is ${confirmation_code}`
+        );
+      };
+    </script>
+    <script src="navbar.js"></script>
+  </body>
+</html>
