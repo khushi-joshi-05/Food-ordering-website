@@ -177,7 +177,7 @@ footer {
 
 }
 .media-handles h4:hover{
-  /* transform:scale(1.1); */
+  
 /* added */
 color: #d24b29;
 transition: color 0.3s ease, transform 0.3s ease;
