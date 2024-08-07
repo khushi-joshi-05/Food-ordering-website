@@ -32,74 +32,6 @@
             background-color: #e21f1f;
             z-index: 9999;
         }
-
-.card:hover {
-  transform: translateY(-5px); /* Move the card up slightly on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-}
-
-/* Example of adding a border on hover */
-.card:hover {
-  border: 2px solid #4CAF50;
-}
-
-/* Example of adding a background color change on hover */
-.card:hover {
-  background-color: #f0f0f0;
-
-}
-@media only screen and (max-width:538px){
-  .carousel-caption p{
-    position: relative;
-    top: 60px;
-  }
-  .carousel-caption img{
-    position: relative;
-    top: 46px;
-  }
-}
-@media only screen and (max-width:435px){
-  .carousel-caption p{
-    width: 332px;
-  }
-  .carousel-caption img{
-    max-width: 18.4rem;
-    max-height: 150px;
-  }
-}
-@media only screen and (max-width:390px){
-  .carousel-caption p{
-    position: relative;
-    right: 35px;
-  }
-  .carousel-caption img{
-    right: 24px;
-  }
-}
-
-       
-.center-links .nav-item .dropdown-menu {
-  background-color:#212123;
-  color: white;
-  border-radius: 0;
-  border: none;
-  padding-top: 0;
-}
-
-.center-links .nav-item .dropdown-menu {
-  background-color: #ffffff;
-  color: white;
-  border-radius: 0;
-  border: none;
-  padding-top: 0;
-}
-
-.dropdown-item:hover {
-  background-color: #58a9ff;
-  color: #fff;
-  transform: scale(1.1);
-}
-=======
         
         .card:hover {
             transform: translateY(-5px);
@@ -179,64 +111,21 @@
             transition: background-color 0.3s, transform 0.3s;
         }
     </style>
+</head>
 
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100" onload="blinker();">
 
-
-}
-
-.circle {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      pointer-events: none;
-      background: radial-gradient(circle, rgba(255, 0, 0, 0.466), rgba(255, 52, 52, 0.5));
-      transition: transform 0.1s, left 0.1s, top 0.1s;
-      box-shadow: 0 0 20px #faff64,
-        0 0 60px #f52323,
-        0 0 100px #ff0000;
-        animation: colors 1s infinite;
-  transform: translate(-50%, -50%);
-    }
-
-    .circle-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 9999;
-    }
-
-    @media (max-width: 724px) {
-      .circle-container{
-        display: none;
-      }
-    }
-    </style>
-    
-  </head>
-
-  <body
-    data-bs-spy="scroll"
-    data-bs-target=".navbar"
-    data-bs-offset="100"
-    onload="blinker();"
-  >
-
-      <!-- Progress bar -->
-      <div id="progressBar"></div>
-      <script>
-          window.onscroll = function () {
-              var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-              var scrolled = (winScroll / height) * 100;
-              document.getElementById("progressBar").style.width = scrolled + "%";
-          };
-      </script>
-      <!-- end -->
-
+    <!-- Progress bar -->
+    <div id="progressBar"></div>
+    <script>
+        window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
+    <!-- end -->
     <!-- header design section -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
@@ -273,11 +162,6 @@
               <a class="nav-link active" href="../Html-files/offers.html"
                 ><i class="fa-solid fa-tag"></i> Offers</a
               >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="RateUs.html">
-                  <i class="fa-solid fa-star"></i> Rate Us
-              </a>
             </li>
           </ul>
         </div>
@@ -401,7 +285,7 @@
                                 <p>
                                     Experience the thrill of our new collaborations! 🤩 Discover innovative partnerships and enjoy exclusive benefits now! 🌍✨
                                 </p>
-                                <button class="mt-2 main-btn"><a href="offers2.html">Read More</a></button>
+                                <button class="mt-2 main-btn"><a href="offers2.html" class="main-btn">Read More</a></button>
                             </div>
                         </div>
                     </div>
@@ -416,7 +300,7 @@
                                 <p>
                                     Dive into the excitement with our new game releases! 🎉 Challenge yourself and explore thrilling adventures today! 🕹️🌟
                                 </p>
-                                <button class="mt-2 main-btn"><a href="offers3.html" >Read More</a></button>
+                                <button class="mt-2 main-btn"><a href="offers3.html" class="main-btn">Read More</a></button>
                             </div>
                         </div>
                     </div>
@@ -432,7 +316,6 @@
                 <div class="text-center pb-4">
                     <h2 class="text-dark">Have A Great Taste !!</h2>
                 </div>
-
                 <div class="row">
                     <div class="col-sm-12 col-lg-10 offset-lg-1">
                         <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
@@ -471,7 +354,6 @@
                             <button class="next" onclick="changeSlide(1)">&#10095;</button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -505,151 +387,128 @@
 
     <!-- footer section -->
     <footer>
-      <div class="foot-panel1 w-100">
-          <div class="container-fluid py-5 px-0">
-              <div class="row justify-content-evenly gy-5">
-                  <div class="col-6 col-sm-3 col-md-2 col-xl-2">
-                      <h5 class="mb-3" style="margin-left: 70px;">See Also</h5>
-                      <ul class="nav flex-column">
-                          <li class="nav-item">
-                              <a class="nav-link" href="#">Home</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="./Html-files/menu.html">Menu</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="./Html-files/services.html">Services</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="./Html-files/contact.html">Contact us</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="./Html-files/cart.html">Cart</a>
-                          </li>
-                          
-                          <li class="nav-item">
-                              <a class="nav-link" href="/Html-files/contributor.html">Our Contributors</a>
-                          </li>
-                      </ul>
-                  </div>
+        <div class="foot-panel1 w-100">
+            <div class="container-fluid py-5 px-0">
+                <div class="row justify-content-evenly gy-5">
+                    <div class="col-6 col-sm-3 col-md-2 col-xl-2">
+                        <h5 class="mb-3">See Also</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Html-files/menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Html-files/services.html">Services</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Html-files/contact.html"
+                    >Contact us</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Html-files/cart.html">Cart</a>
+                            </li>
+                        </ul>
+                    </div>
 
-                  <div class="col-6 col-sm-5 col-md-3 col-xl-3">
-                      <h5 class="mb-3" style="margin-left: 90px;">Exclusive Offers</h5>
-                      <ul class="nav flex-column">
-                          <li class="nav-item">
-                              <a href="#" class="nav-link">Foodie Discounts</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="#">Limited-Time Promotions</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="#">Special Event Packages</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="/Html-files/offers/membership-benifits.html">Membership Benefits</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="#">Early Access to New Recipes</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="#">VIP Foodie Events</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" href="/Html-files/offers/culinary-experience.html">Personalized Culinary Experiences</a>
-                          </li>
-                      </ul>
-                  </div>
+                    <div class="col-6 col-sm-5 col-md-3 col-xl-3">
+                        <h5 class="mb-3">Exclusive Offers</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Foodie Discounts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/limited-time-products.html">Limited-Time Promotions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/special-event.html">Special Event Packages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/membership-benifits.html">Membership Benefits</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/early-access.html">Early Access to New Recipes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/vip-food-event.html">VIP Foodie Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/culinary-experience.html">Personalized Culinary Experiences</a>
+                            </li>
+                        </ul>
+                    </div>
 
+                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                        <h5 class="mb-3">Payment Products</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/Html-files/payment/credit-debit-card.html" class="nav-link">Credit/Debit Cards</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/Html-files/payment/online-payment.html" class="nav-link">Online Payment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/Html-files/payment/mobile-wallet.html" class="nav-link">Mobile Wallets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/Html-files/payment/contact-less-payment.html" class="nav-link">Contactless Payments</a>
+                            </li>
+                        </ul>
+                    </div>
 
-                  <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-                      <h5 class="mb-3" style="margin-left: 70px;">Payment Products</h5>
-                      <ul class="nav flex-column">
-                          <li class="nav-item">
-                              <a href="" class="nav-link">Secure Checkout</a>
-                          </li>
-                          <li class="nav-item">
-                              <a href="" class="nav-link">Credit/Debit Cards</a>
-                          </li>
-                          <li class="nav-item">
-                              <a href="" class="nav-link">Secure Checkout</a>
-                          </li>
-                          <li class="nav-item">
-                              <a href="" class="nav-link">Online Payment</a>
-                          </li>
-                          <li class="nav-item">
-                              <a href="" class="nav-link">Mobile Wallets</a>
-                          </li>
-                          <li class="nav-item">
-                              <a href="" class="nav-link">Contactless Payments</a>
-                          </li>
-                      </ul>
-                  </div>
+                    <div class="col-6 col-md-3 col-xl-4">
+                        <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
+                            <h3 class="text-center mb-3">Contact Us!</h3>
+                            <input type="email" id="footer-email" name="email" placeholder="Your Email" class="text-center form-control mb-2" required />
+                            <textarea id="footer-message" name="message" placeholder="Your Message" class="text-center form-control mb-2" required></textarea>
+                            <div class="d-grid gap-2 col-12">
+                                <button type="submit" class="btn btn-danger">
+                    Send Message
+                  </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-panel2">
+            <div class="media-handles pt-3 pb-2">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                    <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
+                    <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
+                    <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
+                </div>
+                <p class="text">
+                    Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
+                </p>
+            </div>
+            <div class="copyright py-1">
+                &copy;
+                <span id="copyright-year"></span> Foodies - All Rights Reserved |
+                <span id="author">
+            <a
+              href="https://www.linkedin.com/in/khushi-joshi-95a587256/"
+              target="_blank"
+              >Khushi Joshi</a
+            >
+          </span>
+            </div>
+        </div>
+    </footer>
 
-
-                  <div class="col-6 col-md-3 col-xl-4">
-                      <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
-                          <h3 class="text-center mb-3">Contact Us!</h3>
-                          <input type="email" id="footer-email" name="email" placeholder="Your Email" class="text-center form-control mb-2" required>
-                          <textarea id="footer-message" name="footer-message" placeholder="Your Message" class="text-center form-control mb-2" required></textarea>
-                          <div class="d-grid gap-2 col-12">
-                              <button type="submit" class="btn btn-danger">Send Message</button>
-                          </div>
-                      </form>
-                  </div>
-
-
-
-              </div>
-          </div>
-      </div>
-
-      <div class="foot-panel2">
-          <div class="media-handles pt-3 pb-2">
-              <h4>Follow Us</h4>
-              <div class="social-icons">
-                  <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
-                  <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                  <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
-                  <a class="fa-brands fa-snapchat" href="https://snapchat.com" target="_blank"></a>
-                  <a class="fa-brands fa-youtube" href="https://youtube.com" target="_blank"></a>
-                  <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
-                  <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
-                  <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
-              </div>
-              <p class="text"> Stay connected with us on social media for the latest updates, recipes, and foodie adventures. </p>
-              <div>
-                  Give your valuable
-                  <Link to="">
-                  <a href="/Html-files/feedback.html"><b>feedback!</b></a>
-                  </Link>
-              </div>
-          </div>
-          <div class="copyright py-1">
-              &copy;
-              <span id="copyright-year"></span> Foodies - All Rights Reserved |
-              <span id="terms"></span>
-
-              <Link to="" >
-                  <a href="/Html-files/terms.html" class="legal-pages">Terms and Conditions</a> |
-              </Link>
-              <span id="privacy"></span>
-              <Link to="" >
-                  <a href="/Html-files/privacy.html" class="legal-pages">Privacy Policy</a> |
-
-              </Link>
-
-
-              <span id="Licensing"></span>
-              <Link to="" >
-                  <a href="/Html-files/Licensing.html" class="legal-pages">Licensing</a> |
-              </Link>
-
-              <span id="author">
-                  <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank" class="legal-pages">Khushi Joshi</a>
-              </span>
-          </div>
-      </div>
-  </footer>
     <!-- go to top button -->
     <!--Scroll top button-->
 
@@ -686,78 +545,6 @@
     </script>
     <script src="top.js"></script>
     <script src="navbar.js"></script>
+</body>
 
-    <div class="circle-container">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-    </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const coords = { x: 0, y: 0 };
-        const circles = document.querySelectorAll(".circle");
-  
-        circles.forEach(function (circle) {
-          circle.x = 0;
-          circle.y = 0;
-        });
-  
-        window.addEventListener("mousemove", function (e) {
-          coords.x = e.pageX;
-          coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
-        });
-  
-        function animateCircles() {
-          let x = coords.x;
-          let y = coords.y;
-  
-          circles.forEach(function (circle, index) {
-            circle.style.left = `${x - 12}px`;
-            circle.style.top = `${y - 12}px`;
-            circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
-  
-            const nextCircle = circles[index + 1] || circles[0];
-            circle.x = x;
-            circle.y = y;
-  
-            x += (nextCircle.x - x) * 0.25;
-            y += (nextCircle.y - y) * 0.25;
-          });
-  
-          requestAnimationFrame(animateCircles);
-        }
-  
-        animateCircles();
-      });
-    </script>
-
-  </body>
 </html>
-
