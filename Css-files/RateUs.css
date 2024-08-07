@@ -41,6 +41,13 @@ body {
     font-weight: bold;
     margin-bottom: 20px;
     text-align: center;
+    /* added */
+    transition: text-shadow 0.3s, transform 0.3s;
+}
+/* added */
+.rateus-heading:hover {
+    text-shadow: 0 0 10px #ffcc00;
+    transform: scale(1.05);
 }
 
 /* Star Rating Styles */
@@ -55,11 +62,15 @@ body {
     color: #ccc;
     cursor: pointer;
     transition: color 0.3s;
+    /* added */
+    transform: 0.3s;
 }
 
 .star:hover,
 .star.selected {
     color: #ffcc00;
+    /* added */
+    transform: scale(1.2);
 }
 
 /* Textarea Styles */
@@ -73,11 +84,15 @@ body {
     font-size: 16px;
     color: black;
     transition: border-color 0.3s;
+    /* added */
+    box-shadow :0.3s;
 }
 
 .feedback-textarea:focus {
     outline: none;
     border-color: #ffcc00;
+    /* added */
+    box-shadow: 0 0 10px #ffcc00;
 }
 
 /* Submit Button Styles */
