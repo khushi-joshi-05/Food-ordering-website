@@ -338,3 +338,21 @@ function filterMenu() {
         }
     });
 }
+
+async function getMealsByCategory(category) {
+    if (category.toLowerCase() === 'chinese') {
+        return [
+            { strMeal: "Kung Pao Chicken", strMealThumb: "../Images/chinesefood/image.png", idMeal: "c1" },
+            { strMeal: "Mapo Tofu", strMealThumb: "../Images/chinesefood/download (3).jpeg", idMeal: "c2" },
+            { strMeal: "Dim Sum", strMealThumb: "../Images/chinesefood/download (4).jpeg", idMeal: "c3" },
+            { strMeal: "Peking Duck", strMealThumb: "../Images/chinesefood/download (5).jpeg", idMeal: "c4" },
+            { strMeal: "Hot and Sour Soup", strMealThumb: "../Images/chinesefood/download (6).jpeg", idMeal: "c5" },
+            { strMeal: "Spring Rolls", strMealThumb: "../Images/chinesefood/download (7).jpeg", idMeal: "c6" },
+        ];
+    } else {
+        const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        return data.meals || [];
+    }
+}
