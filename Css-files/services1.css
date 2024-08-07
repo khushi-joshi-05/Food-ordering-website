@@ -27,10 +27,13 @@
     border-radius: 20px;
     box-shadow: 0 35px 80px rgba(0,0,0,0.15);
     transition: 0.5s;
+    align-items: center;
 }
 
 .container .card:hover {
     height: 350px;
+    /* added */
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.3); 
 }
 
 .container .card .imgbx {
@@ -42,6 +45,8 @@
     border-radius: 12px;
     transition: 0.5s;
     overflow: hidden;
+    /* added */
+    z-index: 1;
 }
 
 @media screen and (max-width:430px) {
@@ -58,7 +63,8 @@
 
 .container .card:hover .imgbx {
     top: -100px;
-    scale: 0.75;
+    /* added */
+    transform: scale(0.75);
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
 }
 
@@ -80,6 +86,8 @@
     overflow: hidden;
     text-align: center;
     transition: 0.5s;
+    /* added */
+    z-index: 2;
 }
 
 .container .card:hover .content {
@@ -107,6 +115,13 @@
     font-weight: 500;
     text-decoration: 8px;
     border-radius: 8px;
+    /* added */
+    transition: background-color 0.3s, transform 0.3s;
+}
+/* added */
+.container .card:hover .content a {
+    background-color: #dc3545; 
+    transform: translateY(-5px);
 }
 
 ::-webkit-scrollbar-track {
