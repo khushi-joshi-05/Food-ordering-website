@@ -1,0 +1,114 @@
+
+.membership-hero {
+    background: url("https://i.pinimg.com/564x/ee/c0/81/eec08163bea146100c94827abc90f226.jpg") no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.membership-hero-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.membership-hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.membership-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff4f41;
+}
+
+.membership-benefits {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.membership-benefits h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.benefits-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.benefits-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.benefits-card:hover {
+    transform: translateY(-10px);
+}
+
+.benefits-icon {
+    font-size: 3rem;
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+.membership-testimonials {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.membership-testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    max-width: 600px;
+    margin: auto;
+    margin-block: 10px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.testimonial p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.testimonial h3 {
+    font-size: 1.2rem;
+    color: #ff6f61;
+}
