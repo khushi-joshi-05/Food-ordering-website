@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="Css-files/scroll-top-button.css">
     <link rel="stylesheet" href="Css-files/navbar.css">
     <link rel="stylesheet" href="Css-files/footer.css">
-    <link rel="stylesheet" href="./style.css">
+       <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="Css-files/googletranslate.css">
     <style>
@@ -52,6 +52,13 @@
     background-color: #f0f0f0; /* Change this to your desired background color */
     padding: 20px; /* Optional: Add some padding for better spacing */
     align-items: center;
+
+    @media (max-width: 768px) {
+        .card-home img {
+            width: -webkit-fill-available;
+        }
+        
+    }
 }
     </style>
 </head>
@@ -170,6 +177,7 @@
             <div class="order-0 ml-auto p-2">
 
                 <img class="nav-link" src="Images/navbar/moon.png" id="theme-toggle-icon" alt="theme toggler button">
+
 
             </div>
 
@@ -469,12 +477,18 @@
             .card-1>.content>p {
                 margin-bottom: .7rem;
             }
-            
+            .card-text{
+                color:black;
+            }
+           
             .card-1:hover>.content {
                 top: 260px;
                 backdrop-filter: blur(4px);
             }
             
+            .card-title{
+                color:#f0f0f0;
+            }
             .btn {
                 border: none;
                 padding: .7em 1.8em;
@@ -492,37 +506,55 @@
             .btn-card:hover {
                 background: #59a10c;
             }
+            .free_delivery{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+            .best_discount{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            .dark-theme .faq-section{
+                background-color: black;
+            }
+
+
         </style>
 
         <div class="qualities row justify-content-evenly g-3 px-2" data-aos="zoom-out" data-aos-duration="1000" data-aos-offset="170" data-aos-easing="ease-in-out">
 
 
             <div class="card-1" style="background-image: url(https://shahidining.com.au/wp-content/uploads/2020/05/secret-to-indian-flavour-1536x864.jpg);">
-                <h2 class="card-title">Authentic Indian Flavors</h2>
+                <h2 class="card-title" style="color: rgba(255, 255, 255, 1.0);">Authentic Indian Flavors</h2>
                 <div class="content">
 
                     <p class="card-text">From aromatic curries to flavorful biryanis, our menu showcases the diversity and deliciousness of Indian cuisine.</p>
-                    <button class="btn btn-card">Lean More</button>
+                    <button class="btn btn-card">Learn More</button>
                 </div>
             </div>
 
 
             <div class="card-1" style="background-image: url(https://saavi.com.au/wp-content/uploads/2016/02/image0023-1.jpg);">
-                <h2 class="card-title">Tech-Infused Dining Experience</h2>
+                <h2 class="card-title" style="color: rgba(255, 255, 255, 1.0);">Tech-Infused Dining Experience</h2>
                 <div class="content">
 
                     <p class="card-text">Customers can use apps to place orders, customize their dishes, and even provide feedback, making their visit more convenient and interactive.
                     </p>
-                    <button class="btn btn-card">Lean More</button>
+                    <button class="btn btn-card">Learn More</button>
                 </div>
             </div>
 
             <div class="card-1" style="background-image: url(https://i.ndtvimg.com/i/2015-06/fusion-food_625x350_81434107799.jpg);">
-                <h2 class="card-title">Innovative Fusion Dishes</h2>
+                <h2 class="card-title" style="color: rgba(255, 255, 255, 1.0);">Innovative Fusion Dishes</h2>
                 <div class="content">
 
                     <p class="card-text">The combinations of Indian and international cuisines not only tantalize taste buds but also provide unique experience.</p>
-                    <button class="btn btn-card">Lean More</button>
+                    <button class="btn btn-card">Learn More</button>
                 </div>
             </div>
 
@@ -886,20 +918,20 @@
     </section>
     
     <div class="app_download pb-4">
-        <h4>For Free Delivery!</h4>
+        <h4 class="free_delivery">For Free Delivery!</h4>
         <h2 class="text-center">Download This Amazing App Now!</h2>
         <br>
-        <p>For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
-        <a href="#"><img src="/Images/app_download/get_it_on_google_play_store.png" class="app-download-img" alt="Get it on Google Play Store"></a>
-        <a href="#"><img src="./Images/app_download/download-on-the-app-store.png" class="app-download-img" alt="Download on the Apple App Store"></a>
+        <p class="best_discount">For best discounts and free delivery download the app now from your Google Play Store or App Store.</p>
+        <a href="#" class="google_play"><img src="/Images/app_download/get_it_on_google_play_store.png" class="app-download-img" alt="Get it on Google Play Store"></a>
+        <a href="#" class="app_store"><img src="./Images/app_download/download-on-the-app-store.png" class="app-download-img" alt="Download on the Apple App Store"></a>
     </div>
 
     <footer>
-        <div class="foot-panel1 w-100">
-            <div class="container-fluid py-5 px-0">
+        <div class="foot-panel1">
+            <div class="container-fluid py-5 ">
                 <div class="row justify-content-evenly gy-5">
-                    <div class="col-6 col-sm-3 col-md-2 col-xl-2">
-                        <h5 class="mb-3" style="margin-left: 70px;">See Also</h5>
+                    <div class="col-6 col-sm-3 col-md-2 col-xl-2 footer-content">
+                        <h5 class="mb-3" style="width: 100%; text-align: start;">See Also</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa fa-home"></i> Home</a>
@@ -921,9 +953,15 @@
                             </li>
                         </ul>
                     </div>
+
     
                     <div class="col-6 col-sm-5 col-md-3 col-xl-3">
                         <h5 class="mb-3" style="margin-left: 90px;">Exclusive Offers</h5>
+
+
+                    <div class="col-6 col-sm-5 col-md-3 col-xl-3 footer-content">
+                        <h5 class="mb-3" style="width: 100%; text-align: start;">Exclusive Offers</h5>
+
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a href="#" class="nav-link"><i class="fa fa-tags"></i> Foodie Discounts</a>
@@ -948,9 +986,15 @@
                             </li>
                         </ul>
                     </div>
+
     
                     <div class="col-6 col-sm-4 col-md-4 col-xl-3">
                         <h5 class="mb-3" style="margin-left: 70px;">Payment Products</h5>
+
+
+
+                    <div class="col-6 col-sm-4 col-md-4 col-xl-3 footer-content">
+                        <h5 class="mb-3" style="width: 100%; text-align: start;">Payment Products</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a href="" class="nav-link"><i class="fa fa-lock"></i> Secure Checkout</a>
@@ -966,8 +1010,14 @@
                             </li>
                         </ul>
                     </div>
+
     
                     <div class="col-6 col-md-3 col-xl-4">
+
+
+
+                    <div class="col-6 col-md-3 col-xl-4 footer-content">
+
                         <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
                             <h3 class="text-center mb-3">Contact Us!</h3>
                             <input type="email" id="footer-email" name="email" placeholder="Your Email" class="text-center form-control mb-2" required>
