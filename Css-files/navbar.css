@@ -260,5 +260,6 @@ body {
 #theme-toggle-icon {
   width: 30px;
   cursor: pointer;
+  background-color: #000;
 }
 
