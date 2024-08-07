@@ -1,27 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
 .main-content-login {
-	background-color: brown;
+	background: linear-gradient(135deg, #6a1b29, #d84315);
 	padding: 4rem 0;
 	font-family: 'Noto Sans', sans-serif;
 }
 
 .left-login img {
 	width: 100%;
-	transition: transform 0.3s ease;
+	transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+	opacity: 0.9;
+	filter: brightness(90%);
 }
 
-.left-login img:hover{
+.left-login img:hover {
 	transform: rotate(-5deg) scale(1.1);
+	opacity: 1;
+	filter: brightness(100%);
 }
 
 .right-login .title {
 	color: rgb(208, 50, 50);
 	font-weight: 700;
+	transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.right-login .title:hover {
+	color: rgb(180, 30, 30);
+	text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .card-body {
 	padding: 7%;
+	transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+	background: #fff;
+}
+
+.card-body:hover {
+	transform: translateY(-5px);
+	box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+	background: #f9f9f9;
 }
 
 .textfield {
@@ -36,6 +54,7 @@
 
 .textfield>label {
 	font-weight: bold;
+	transition: color 0.3s ease;
 }
 
 .textfield>input {
@@ -48,6 +67,13 @@
 	font-size: 12pt;
 	box-shadow: 0px 2px 5px #00000056;
 	outline: none;
+	transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.textfield>input:focus {
+	background: #f0f8ff;
+	box-shadow: 0px 4px 10px #00000056;
+	transform: scale(1.02);
 }
 
 .textfield>input::placeholder {
@@ -67,34 +93,55 @@
 	color: white;
 	background: rgb(208, 50, 50);
 	box-shadow: 0px 10px 40px -12px #b10f1f85;
+	transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-login:hover {
 	background: rgba(208, 50, 50, 0.9);
+	transform: scale(1.05);
+	box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.2);
 }
 
 #signup-hide {
 	right: 20px;
 	position: absolute;
 	bottom: 10%;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#signup-hide:hover {
+	opacity: 0.8;
+	transform: scale(1.1);
 }
 
 .hide-icon {
 	font-size: 27px;
+	transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hide-icon:hover {
+	color: rgb(208, 50, 50);
+	transform: rotate(15deg);
 }
 
 .card {
 	box-shadow: 0px 10px 50px #000000a4;
 	width: 80%;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media screen and (width <=600px) {
+.card:hover {
+	transform: scale(1.02);
+	box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 600px) {
 	.card {
 		width: 95%;
 	}
 }
 
-@media screen and (width < 992px) {
+@media screen and (max-width: 992px) {
 	.left-login img {
 		width: 60%;
 	}
@@ -105,14 +152,20 @@
 	}
 }
 
-@media screen and (width >= 2000px)
-{
-	.left-login img{
+@media screen and (min-width: 2000px) {
+	.left-login img {
 		width: 70%;
 	}
 }
 
-.right-login h1.text-center{
-	font-size:13px;
+.right-login h1.text-center {
+	font-size: 13px;
 	font-weight: bold;
+	transition: font-size 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+	.right-login h1.text-center {
+		font-size: 12px;
+	}
 }
