@@ -7,10 +7,20 @@ footer {
   background-color: rgb(138, 37, 37);
   color: white;
   height: fit-content;
+  width: 100vw;
 }
 
-.foot-panel1 .container-fluid {
-  width: 90%;
+.container-fluid {
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.footer-content {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 1rem;
 }
 
 .foot-panel1 .nav-link {

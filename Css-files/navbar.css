@@ -31,6 +31,11 @@
 }
 
 .dark-theme {
+
+  --a: rgb(183, 175, 175);
+  --drop-bg: #ffffff;
+  --nav: white;
+
   /* General Colors */
   --primary-bg-color: #212123;
   --primary-text-color: #ffffff;
@@ -53,7 +58,7 @@
   --container-bg: rgb(224, 224, 252);
   --drop-bg: #ffffff;
   --a: black;
-  --nav: white;
+  --nav: #F5DEB3;
   --invert: invert(0);
 }
 
@@ -85,8 +90,14 @@
   flex-grow: 0;
 }
 
+
 ul {
   gap: 5px;
+
+/* Navbar Links */
+.nav-link {
+  transition: color 0.3s, background-color 0.3s;
+
 }
 
 .nav-item {
@@ -104,10 +115,11 @@ ul {
 
 .center-links {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 15px;
 }
+
 
 .center-links .nav-item .nav-link {
   color: var(--primary-text-color);
@@ -115,6 +127,7 @@ ul {
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 }
+
 
 .center-links .nav-item .nav-link:hover {
   background-color: var(--light-red);
@@ -164,7 +177,6 @@ ul {
   border-bottom: 2px solid rgba(255, 183, 0, 0.705);
   gap: 10px;
 }
-
 
 
 
@@ -241,6 +253,7 @@ ul {
   background-color: #dc3545;
 }
 
+
 .dropdown-item:hover {
   background-color: #007bff;
   color: #fff;
@@ -273,6 +286,77 @@ ul {
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --button-bg: #d0eeb0;
+  --button-hover-bg: #59a10c;
+  --card-bg: rgba(0, 0, 0, 0.8);
+  --carousel-caption-bg: rgba(0, 0, 0, 0.7);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.section {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.btn-card {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+}
+
+.card-1::after {
+  background-color: var(--button-hover-bg);
+}
+
+.card-1 {
+  background-color: var(--carousel-caption-bg);
+}
+
+/* Dark mode styles */
+.about_us.dark-theme {
+  --background-color: #000;
+  --text-color: #fff;
+  --button-bg: #555;
+  --button-hover-bg: #333;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --carousel-caption-bg: rgba(255, 255, 255, 0.7);
+}
+
+.about_us.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.about_us.dark-theme .section {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.about_us.dark-theme .btn-card {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+}
+
+.about_us.dark-theme .btn-card:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.about_us.dark-theme .carousel-caption {
+  background-color: var(--carousel-caption-bg);
+}
+
+.dropdown-item:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: scale(1.1);
+
 }
 
 .popup.show {
