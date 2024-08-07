@@ -39,7 +39,37 @@ footer {
 
 .footer-links {
   list-style: none;
+  background-color: rgb(138, 37, 37);
+  color: white;
+  height: fit-content;
+  width: 100vw;
+}
+
+.container-fluid {
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.footer-content {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 1rem;
+}
+
+.foot-panel1 .nav-link {
+  /* font-size: 0.85rem;
+  color: #dddddd;
+  padding: 0; */
+
+  /* added */
+  font-size: 0.85rem;
+  color: #dddddd;
   padding: 0;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .footer-links li {
@@ -56,6 +86,25 @@ footer {
   text-decoration: none;
   transition: color 0.3s ease;
 }
+/* added */
+.foot-panel1 .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 2px;
+  right: 0;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.foot-panel1 .nav-link:hover::after {
+  width: 100%;
+  left: 0;
+  background: #ffffff;
+}
+
 
 .footer-links a:hover {
   color: #ff6b6b;
@@ -66,7 +115,9 @@ footer {
   border: none;
   color: #ffffff;
   margin-bottom: 15px;
-  transition: background-color 0.3s ease;
+
+  /* added */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #contactForm .form-control:focus {
@@ -88,6 +139,17 @@ footer {
 .btn-custom:hover {
   background-color: #ff4757;
   transform: scale(1.05);
+  /* added */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foot-panel1 .btn:is(:hover, :focus) {
+  background-color: rgb(196, 89, 89);
+  border: none;
+
+  /* added */
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(196, 89, 89, 0.7);
 }
 
 .foot-panel2 {
@@ -146,6 +208,14 @@ footer {
   border-radius: 50%;
   transform: scale(0);
   transition: transform 0.3s ease;
+
+  /* added */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, rotate 0.3s ease;
+}
+/* added */
+.foot-panel2 .social-icons a:hover {
+  transform: scale(1.2) rotate(10deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .social-icons a:hover {
@@ -198,6 +268,16 @@ footer {
   margin: 0 auto;
   text-align: center;
   color: #cccccc;
+#author {
+  padding: 3px;
+  color: #dddddd;
+  /* added */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+/* added */
+#author:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #ffffff;
 }
 
 .copyright {
@@ -230,12 +310,18 @@ footer {
     margin-bottom: 30px;
   }
 }
+.social-icons :hover{
+  transform:scale(1.3);
+  /* added */
+  transform: scale(1.3) rotate(5deg);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 
 .footer-heading, .footer-links, #contactForm, .social-icons, .social-text {
   opacity: 0;
@@ -244,6 +330,22 @@ footer {
 
 .social-icons a {
   animation: bounceIn 0.5s ease-out;
+
+.media-handles h4:hover{
+  
+/* added */
+color: #d24b29;
+transition: color 0.3s ease, transform 0.3s ease;
+transform: scale(1.1);
+}
+
+.row h5:hover,
+.row h3:hover {
+  color:#d24b29;
+  /* added */
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  transform: scale(1.1);
+  text-shadow: 0 0 5px #d24b29;
 }
 
 @keyframes bounceIn {
