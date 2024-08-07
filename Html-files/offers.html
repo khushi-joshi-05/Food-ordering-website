@@ -32,6 +32,74 @@
             background-color: #e21f1f;
             z-index: 9999;
         }
+
+.card:hover {
+  transform: translateY(-5px); /* Move the card up slightly on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Example of adding a border on hover */
+.card:hover {
+  border: 2px solid #4CAF50;
+}
+
+/* Example of adding a background color change on hover */
+.card:hover {
+  background-color: #f0f0f0;
+
+}
+@media only screen and (max-width:538px){
+  .carousel-caption p{
+    position: relative;
+    top: 60px;
+  }
+  .carousel-caption img{
+    position: relative;
+    top: 46px;
+  }
+}
+@media only screen and (max-width:435px){
+  .carousel-caption p{
+    width: 332px;
+  }
+  .carousel-caption img{
+    max-width: 18.4rem;
+    max-height: 150px;
+  }
+}
+@media only screen and (max-width:390px){
+  .carousel-caption p{
+    position: relative;
+    right: 35px;
+  }
+  .carousel-caption img{
+    right: 24px;
+  }
+}
+
+       
+.center-links .nav-item .dropdown-menu {
+  background-color:#212123;
+  color: white;
+  border-radius: 0;
+  border: none;
+  padding-top: 0;
+}
+
+.center-links .nav-item .dropdown-menu {
+  background-color: #ffffff;
+  color: white;
+  border-radius: 0;
+  border: none;
+  padding-top: 0;
+}
+
+.dropdown-item:hover {
+  background-color: #58a9ff;
+  color: #fff;
+  transform: scale(1.1);
+}
+=======
         
         .card:hover {
             transform: translateY(-5px);
@@ -111,6 +179,7 @@
             transition: background-color 0.3s, transform 0.3s;
         }
     </style>
+
 
 </head>
 
