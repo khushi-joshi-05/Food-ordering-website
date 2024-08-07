@@ -861,3 +861,9 @@ textarea {
     border-radius: 12px;
     background-color: yellow;
 }
+
+@media (max-width:768px) {
+    .card-home img{
+        width: -webkit-fill-available !important;  
+    }
+}
