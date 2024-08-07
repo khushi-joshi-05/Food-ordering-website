@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - Food Ordering Website</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
     <link rel="shortcut icon" href="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png" type="image/x-icon">
+    <title>Offers-Food Ordering Website</title>
+
+    <!-- bootstrap CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -13,9 +17,9 @@
       referrerpolicy="no-referrer"
     />
     <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../Favicon image/favicon.ico"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
@@ -38,12 +42,12 @@
       defer
     ></script>
     <link rel="stylesheet" href="../Css-files/scroll-top-button.css" />
-    <link rel="stylesheet" href="../Css-files/content.css" />
     <link rel="stylesheet" href="../Css-files/navbar.css" />
     <link rel="stylesheet" href="../Css-files/footer.css" />
-
+    <!-- OWN CSS -->
+    <link id="theme-link" rel="stylesheet" href="/Css-files/offers.css" />
     <style>
-         #progressBar {
+          #progressBar {
             position: fixed;
             top: 0;
             left: 0;
@@ -52,7 +56,50 @@
             background-color: #e21f1f;
             z-index: 9999;
         }
-               
+.card:hover {
+  transform: translateY(-5px); /* Move the card up slightly on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Example of adding a border on hover */
+.card:hover {
+  border: 2px solid #4CAF50;
+}
+
+/* Example of adding a background color change on hover */
+.card:hover {
+  background-color: #f0f0f0;
+}
+@media only screen and (max-width:538px){
+  .carousel-caption p{
+    position: relative;
+    top: 60px;
+  }
+  .carousel-caption img{
+    position: relative;
+    top: 46px;
+  }
+}
+@media only screen and (max-width:435px){
+  .carousel-caption p{
+    width: 332px;
+  }
+  .carousel-caption img{
+    max-width: 18.4rem;
+    max-height: 150px;
+  }
+}
+@media only screen and (max-width:390px){
+  .carousel-caption p{
+    position: relative;
+    right: 35px;
+  }
+  .carousel-caption img{
+    right: 24px;
+  }
+}
+
+       
 .center-links .nav-item .dropdown-menu {
   background-color:#212123;
   color: white;
@@ -81,38 +128,30 @@
   font-size: 15px;
   background-color: #137cbd;
   transition: background-color 0.3s, transform 0.3s;
-}
-.float{
-  transform: translateX(0px);
-  animation: float 6s ease-out infinite;
-}
 
-@keyframes float {
-  0%{
-    transform: translateY(0px);
-  }
-  50%{
-  transform: translateY(30px);
-  }
-  100%{
-    transform: translateY(0px);
-  }
 }
     </style>
   </head>
 
-  <body>
-        <!-- Progress bar -->
-        <div id="progressBar"></div>
-        <script>
-            window.onscroll = function () {
-                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                var scrolled = (winScroll / height) * 100;
-                document.getElementById("progressBar").style.width = scrolled + "%";
-            };
-        </script>
-        <!-- end -->
+  <body
+    data-bs-spy="scroll"
+    data-bs-target=".navbar"
+    data-bs-offset="100"
+    onload="blinker();"
+  >
+
+      <!-- Progress bar -->
+      <div id="progressBar"></div>
+      <script>
+          window.onscroll = function () {
+              var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var scrolled = (winScroll / height) * 100;
+              document.getElementById("progressBar").style.width = scrolled + "%";
+          };
+      </script>
+      <!-- end -->
+    <!-- header design section -->
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
         <a href="../index.html" class="navbar-brand opacity-75 flex-fill">
@@ -156,17 +195,14 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="../Html-files/contact.html"
+              <a class="nav-link" href="../Html-files/contact.html"
                 ><i class="fa-solid fa-phone"></i> Contact Us</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Html-files/offers.html"><i class="fa-solid fa-tag"></i> Offers</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="RateUs.html">
-                  <i class="fa-solid fa-star"></i> Rate Us
-              </a>
+              <a class="nav-link active" href="../Html-files/offers.html"
+                ><i class="fa-solid fa-tag"></i> Offers</a
+              >
             </li>
           </ul>
         </div>
@@ -196,100 +232,268 @@
         </div>
       </div>
     </nav>
+<!-- Main Content -->
+<section id="explore-food" style="margin-top: 100px">
+	<div class="container">
+		<div class="row justify-content-center">
 
-    <div class="head_container">
-      <div class="mainhead">
-        <h1 class="m-0">CONTACT US</h1>
-      </div>
-    </div>
+			<!-- Card 1 -->
+			<div class="col-lg-4 col-md-6 mb-4">
+				<div class="card">
+					<img src="https://i.pinimg.com/564x/2f/f0/8c/2ff08cc9cbb5981bdfffa44f16f342f9.jpg"
+						class="card-img-top" alt="Offer 1" style="height: 200px; object-fit: cover; border-bottom: 5px solid; border-bottom-style: double;">
+					<div class="card-body">
+						<h5 class="card-title">50% Off on Burgers</h5>
+						<p class="card-text">Enjoy a 50% discount on all burgers today!</p>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="btn btn-apply">Apply Now</a>
+					</div>
+				</div>
+			</div>
 
-    <section class="contact-wrapper">
-      <div class="container py-5">
-          <h1>GET IN TOUCH</h1>
-          <p class="text">
-              If you have any questions, feel free to reach out to us through the
-              following channels:
-          </p>
-          <div class="row g-4 align-items-stretch">
-              <div class="col-lg-4">
-                <a href="ordertracking.html" style="text-decoration: none;color: black;">
-                  <div class="single-contact d-flex">
-                      <div class="icon">
-                          <i class="fa-solid fa-location-dot" style="top: 13px; left: 15px"></i>
-                      </div>
-                      <div class="contact-info my-auto">
-                          <h5 class="title">Location</h5>
-                          <p>123 Food Street, Culinary City, 56789</p>
-                      </div>
-                  </div>
-                </a>
+			<!-- Card 2 -->
+			<div class="col-lg-4 col-md-6 mb-4">
+				<div class="card">
+					<img src="https://i.pinimg.com/564x/2f/f0/8c/2ff08cc9cbb5981bdfffa44f16f342f9.jpg"
+						class="card-img-top" alt="Offer 1" style="height: 200px; object-fit: cover; border-bottom: 5px solid; border-bottom-style: double;">
+					<div class="card-body">
+						<h5 class="card-title">Free Delivery</h5>
+						<p class="card-text">Get free delivery on orders above $30!</p>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="btn btn-apply">Apply Now</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Card 3 -->
+			<div class="col-lg-4 col-md-6 mb-4">
+				<div class="card">
+					<img src="https://i.pinimg.com/564x/2f/f0/8c/2ff08cc9cbb5981bdfffa44f16f342f9.jpg"
+						class="card-img-top" alt="Offer 1" style="height: 200px; object-fit: cover; border-bottom: 5px solid; border-bottom-style: double;">
+					<div class="card-body">
+						<h5 class="card-title">Combo Deal</h5>
+						<p class="card-text">Buy 1 get 1 free on selected combos!</p>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="btn btn-apply">Apply Now</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+    <!--explore food section-->
+    <section id="explore-food">
+      <div class="explore-food wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="text-content text-center">
+                <h2 id="blink">Exclusive Offers</h2>
+                <p>
+                  Discover a world of flavors with our diverse culinary
+                  offerings. From savory dishes crafted with fresh, local
+                  ingredients to indulgent desserts that delight the senses,
+                  each bite tells a story. Savor the fusion of traditional
+                  recipes and innovative twists, bringing global tastes to your
+                  table. Taste the difference today!
+                </p>
               </div>
-              <div class="col-lg-4">
-                  <div class="single-contact d-flex">
-                      <div class="icon">
-                          <i class="fa-solid fa-phone-volume" style="top: 13px; left: 13px"></i>
-                      </div>
-                      <div class="contact-info my-auto">
-                          <h5 class="title">Call Now</h5>
-                          <p>+88-7010-7010 <br />+61 934-759-8561</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="single-contact d-flex">
-                      <div class="icon">
-                          <i class="fa-solid fa-envelope" style="top: 13px; left: 13px"></i>
-                      </div>
-                      <div class="contact-info my-auto">
-                          <h5 class="title">Email</h5>
-                          <p>info@foodorderingwebsite.com<br />service@foodorderingwebsite.com</p>
-                      </div>
-                  </div>
-              </div>
+            </div>
           </div>
-      </div>
-  </section>
 
-  <section class="contact-form-wrapper pt-3 pb-5">
-      <div class="container">
-          <div class="row align-items-center justify-content-between g-4">
-              <div class="col-md-6">
-                  <div class="thumbnail d-flex justify-content-center">
-                      <img class="float" src="../Images/contact_page/contactpage.avif" class="img-fluid" alt="" />
-                  </div>
+          <div class="row pt-5">
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card border">
+                <img
+                  decoding="async"
+                  src="https://img.freepik.com/premium-vector/special-offer-delicious-food-menu-sale-discount-with-landscape-social-media-post-tempate-banner-with-copy-space-3d-podium-food-sale-with-abstract-gradient-orange-white-background-design_727967-1725.jpg"
+                  class="img-fluid"
+                />
+                <div class="p-3">
+                  <h5>
+                    🎉 Grab your savings now with our unbeatable new discounts
+                    every week! 💸
+                  </h5>
+                  <p>
+                    Don't miss out on our exclusive offers! 🎉 Enjoy massive
+                    discounts 💸 on your favorite items and save big on every
+                    purchase! 🛍️
+                  </p>
+                  <button class="mt-2 main-btn">Read More</button>
+                </div>
               </div>
-              <div class="col-md-6 col-lg-6">
-                  <form class="form text-center" id="contactForm">
-                      <div class="form-group row">
-                          <div class="col-6 mb-3">
-                              <input type="text" class="form-control" id="first-name" placeholder="First Name" />
-                          </div>
-                          <div class="col-6 mb-3">
-                              <input type="text" class="form-control" id="last-name" placeholder="Last Name" required />
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <div class="mb-3">
-                              <input type="email" class="form-control" id="email" placeholder="Email" required />
-                          </div>
-                          <div class="mb-3">
-                              <textarea class="form-control" id="message" rows="3" placeholder="Message" required></textarea>
-                          </div>
-                      </div>
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card border">
+                <img
+                  decoding="async"
+                  src="https://img.freepik.com/premium-photo/young-people-social-media-like-concept-flat-vector-illustration-daily-activities-working-ai-generated_705708-26385.jpg"
+                  class="img-fluid"
+                />
+                <div class="p-3">
+                  <h5>
+                    🤝 Exciting new collaborations just launched! Discover the
+                    latest partnerships today! 🌟
+                  </h5>
+                  <p>
+                    Experience the thrill of our new collaborations! 🤩 Discover
+                    innovative partnerships and enjoy exclusive benefits now!
+                    🌍✨
+                  </p>
+                  <button class="mt-2 main-btn">Read More</button>
+                </div>
               </div>
+            </div>            
+
+            <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+              <div class="card border">
+                <img
+                  decoding="async"
+                  src="../Html-files/assets/game.png"
+                  class="img-fluid"
+                />
+                <div class="p-3">
+                  <h5>
+                    🎮 New games alert! Level up your fun with our latest
+                    releases! 🚀
+                  </h5>
+                  <p>
+                    Dive into the excitement with our new game releases! 🎉
+                    Challenge yourself and explore thrilling adventures today!
+                    🕹️🌟
+                  </p>
+                  <button class="mt-2 main-btn">Read More</button>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
-  </section>
+    </section>
 
-    <!-- footer -->
+    <!--  testimonial section -->
+    <section id="testimonial">
+      <div class="wrapper testimonial-section">
+        <div class="container text-center">
+          <div class="text-center pb-4">
+            <h2 class="text-dark">Have A Great Taste !!</h2>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-lg-10 offset-lg-1">
+              <div
+                id="carouselExampleDark"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleDark"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="carousel-caption">
+                      <img
+                        decoding="async"
+                        src="../Html-files/assets/panipuri.jpg"
+                      />
+                      <p>
+                        "crispy shells, spicy tangy water, ultimate flavor
+                        explosion! 🌶️🌟💥"
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <img
+                        decoding="async"
+                        src="../Html-files/assets/bruchetta.jpg"
+                      />
+                      <p>
+                        " Fresh tomatoes, basil, garlic on toasted bread.
+                        Italian delight! 🍅🍞"
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <img
+                        decoding="async"
+                        src="../Html-files/assets/Ramen.jpg"
+                      />
+                      <p>
+                        "Savory broth, tender noodles, vibrant toppings.
+                        Japanese comfort food! 🍜"
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+          let currentSlide = 0;
+          const slides = document.querySelectorAll('.carousel-item');
+
+          function showSlide(index) {
+              slides.forEach((slide, i) => {
+                  slide.classList.remove('active');
+                  if (i === index) {
+                      slide.classList.add('active');
+                  }
+              });
+          }
+
+          function changeSlide(direction) {
+              currentSlide += direction;
+              if (currentSlide < 0) {
+                  currentSlide = slides.length - 1;
+              } else if (currentSlide >= slides.length) {
+                  currentSlide = 0;
+              }
+              showSlide(currentSlide);
+          }
+
+          // Initialize the first slide
+          showSlide(currentSlide);
+
+      </script>
+    </section>
+
+    <!-- footer section -->
     <footer>
       <div class="foot-panel1 w-100">
         <div class="container-fluid py-5 px-0">
           <div class="row justify-content-evenly gy-5">
             <div class="col-6 col-sm-3 col-md-2 col-xl-2">
-              <h5 class="mb-3 text-center">See Also</h5>
+              <h5 class="mb-3">See Also</h5>
               <ul class="nav flex-column">
                 <li class="nav-item">
                   <a class="nav-link" href="../index.html">Home</a>
@@ -314,7 +518,7 @@
             </div>
 
             <div class="col-6 col-sm-5 col-md-3 col-xl-3">
-              <h5 class="mb-3 text-center">Exclusive Offers</h5>
+              <h5 class="mb-3">Exclusive Offers</h5>
               <ul class="nav flex-column">
                 <li class="nav-item">
                     <a href="#" class="nav-link">Foodie Discounts</a>
@@ -341,7 +545,7 @@
             </div>
 
             <div class="col-6 col-sm-4 col-md-4 col-xl-3">
-              <h5 class="mb-3 text-center">Payment Products</h5>
+              <h5 class="mb-3">Payment Products</h5>
               <ul class="nav flex-column">
                 <li class="nav-item">
                   <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
@@ -450,7 +654,9 @@
       </div>
     </footer>
 
+    <!-- go to top button -->
     <!--Scroll top button-->
+
     <button
       id="scroll-top-button"
       class="scroll-top-button"
@@ -469,17 +675,23 @@
         />
       </svg>
     </button>
+    <!--Scroll top button finish-->
 
     <script>
       document.getElementById("copyright-year").textContent =
         new Date().getFullYear();
     </script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/toastify-js"
-      defer
-    ></script>
-    <script src="../contact-form.js"></script>
+
+    <!-- own js -->
+    <script>
+      function blinker() {
+        if (document.getElementById("blink")) {
+          var d = document.getElementById("blink");
+          d.style.color = d.style.color == "yellow" ? "white" : "yellow";
+          setTimeout("blinker()", 900);
+        }
+      }
+    </script>
     <script src="top.js"></script>
     <script src="navbar.js"></script>
   </body>
