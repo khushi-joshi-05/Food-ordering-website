@@ -133,18 +133,18 @@
 
 /* Theme Icon Styles */
 .theme-icon {
-  width: 36px !important; /* Increased size for medium */
-  height: 36px !important; /* Increased size for medium */
+  width: 40px !important; /* Increased size for medium */
+  height: 40px !important; /* Increased size for medium */
 }
 
 #theme-toggle-icon {
-  width: 36px; /* Increased size for medium */
+  width: 40px; /* Increased size for medium */
   height: 36px; /* Increased size for medium */
 }
 
 /* Apply size to theme icons within navbar */
 .navbar .nav-link .theme-icon {
-  width: 36px !important; /* Ensure size consistency with other icons */
+  width: 40px !important; /* Ensure size consistency with other icons */
   height: 36px !important; /* Ensure size consistency with other icons */
 }
 
