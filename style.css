@@ -1187,7 +1187,9 @@ font-size: 24px;
 
 }
     .faq-container {
-        padding:20px;
+
+        padding: 20px;
+
     }
     .faq-container h1 {
         font-size: 2rem;
