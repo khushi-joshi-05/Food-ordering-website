@@ -4,13 +4,17 @@ let themeToggleLogo = document.getElementById("theme-toggle-logo");
 themeToggleIcon.addEventListener("click", function () {
   document.body.classList.toggle("dark-theme");
   document.body.classList.toggle(":root")
-  if (document.body.classList.contains("dark-theme")) {
-    themeToggleIcon.src = "../Images/navbar/sun.png";
-    themeToggleLogo.src = "Images/logo/Logo-Dark.png";
-  } else {
-    themeToggleIcon.src = "../Images/navbar/moon.png";
-    themeToggleLogo.src="Images/logo/Logo-Light.png";
-  }
+  if (themeToggleIcon.src.includes('moon.png')) {
+    // If it's moon (dark theme), switch to sun (light theme)
+    themeToggleIcon.src = 'Images/navbar/sun2.png';
+    document.body.classList.add('light-theme'); // Add light theme class to body
+    document.body.classList.remove('dark-theme'); // Remove dark theme class from body
+} else {
+    // If it's sun (light theme), switch to moon (dark theme)
+    themeToggleIcon.src = 'Images/navbar/moon.png';
+    document.body.classList.add('dark-theme'); // Add dark theme class to body
+    document.body.classList.remove('light-theme'); // Remove light theme class from body
+}
 });
 
 //Services dropdown
