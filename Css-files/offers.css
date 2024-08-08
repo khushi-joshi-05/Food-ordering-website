@@ -395,6 +395,7 @@ nav {
   border-radius: 0.9375rem;
 }
 
+
 .explore-food .card :hover {
   transform: scale(1.01);
   transition:all .4s ease-in;
@@ -419,11 +420,25 @@ nav {
 
 .explore-food p{
   /* color:var(--text-color); */
-  color: white;
+  color: rgb(167, 166, 166);
   font-size: 14px;
   line-height: 22px;
 }
+.card:hover {
+  transform: translateY(-5px); /* Move the card up slightly on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
 
+/* Example of adding a border on hover */
+.card:hover {
+  border: 2px solid #4CAF50;
+}
+
+/* Example of adding a background color change on hover */
+.card:hover {
+  background-color: #f0f0f0;
+  
+}
 /*
 ==========================================
  testimonial section Design
@@ -788,3 +803,227 @@ textarea {
   }
 }
 }
+
+/* added */
+
+.main-btn:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+.star:hover,
+.star.selected {
+  color: #ffcc00;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+.submit-button:hover {
+  background-color: #e6b800;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.feedback-textarea:focus {
+  outline: none;
+  border-color: #ffcc00;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+.rateus-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 80px rgba(255, 255, 255, 0.3);
+  border-color: #ffcc00;
+  filter: brightness(1.0);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ff0707;
+  border-radius: 10px;
+  border: 0.3px solid white;
+  background-image: -webkit-linear-gradient(90deg, rgb(20, 21, 12) 0%, rgb(0, 0, 0) 25%, transparent 100%, rgb(247, 4, 4) 75%, transparent);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #e60000;
+  border-color: #ffffff;
+}
+.explore-food .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in;
+}
+.navigbar a:hover {
+  color: rgba(255, 183, 0, 0.705);
+  text-decoration: underline;
+}
+.explore-food .card {
+  background-color: transparent;
+  border-radius: 0.9375rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.explore-food .card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.explore-food .card img {
+  border-radius: 0.9375rem 0.9375rem 0 0;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s; 
+}
+
+.explore-food .card:hover img {
+  transform: scale(1.1); 
+}
+
+.explore-food .card span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.7); 
+  transition: background-color 0.3s;
+}
+
+.explore-food .card:hover span {
+  background-color: rgba(0, 0, 0, 0.9); 
+}
+
+.explore-food p {
+  color: white;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5); 
+  transition: background-color 0.3s;
+}
+
+.explore-food .card:hover p {
+  background-color: rgba(0, 0, 0, 0.7); 
+}
+
+
+/* Updated carousel section with hover effects */
+.testimonial-section {
+  background: lavender;
+}
+
+.testimonial-section h2 {
+  color: red;
+}
+
+.testimonial-section .carousel-item {
+  margin-top: 3rem;
+  padding: 10rem 3.125rem;
+  color: white;
+  background-color: rgb(251, 251, 251);
+  border-radius: 0.9375rem;
+  text-align: center;
+  border: 4px solid brown;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.testimonial-section .carousel-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-section .carousel-caption img {
+  width: 20rem;
+  height: 160px;
+  padding: 0.3125rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-section .carousel-item:hover .carousel-caption img {
+  transform: scale(1.1);
+}
+
+.testimonial-section .carousel-caption p {
+  font-size: 1.67rem;
+  font-weight: bold;
+  line-height: 1.5625rem;
+  color: var(--black-color);
+  padding: 0 11% 0.625rem;
+}
+
+.testimonial-section .carousel-indicators {
+  bottom: -2.8125rem;
+}
+
+.testimonial-section .carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  outline: auto;
+  border-radius: 50%;
+  border: none;
+  margin-right: 1rem;
+  opacity: 0.2;
+}
+
+.testimonial-section .carousel-indicators button.active {
+  opacity: 1;
+}
+
+.testimonial-section .carousel-item:hover .carousel-caption p {
+  color: var(--secondry-color);
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 800px) {
+  .testimonial-section .carousel-caption img {
+    width: 50%;
+    height: 100px;
+  }
+
+  .testimonial-section .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1390px) {
+  .testimonial-section .carousel-caption img {
+    width: 40%;
+    height: 100px;
+  }
+}
+
+@media (max-width: 991px) {
+  .text-content {
+    width: 100%;
+  }
+
+  .testimonial-section .carousel-caption p {
+    padding: 0;
+  }
+
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    line-height: 28px;
+  }
+
+
+  .testimonial-section .carousel-item {
+    padding: 11rem 3.125rem;
+  }
+}
+
+@media (max-width: 330px) {
+  .testimonial-section .carousel-item {
+    padding: 13rem 3.125rem;
+  }
+}
+
+
