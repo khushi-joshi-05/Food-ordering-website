@@ -7,9 +7,10 @@ themeToggleIcon.addEventListener("click", function () {
   if (themeToggleIcon.src.includes('moon.png')) {
     // If it's moon (dark theme), switch to sun (light theme)
     themeToggleIcon.src = 'Images/navbar/sun2.png';
-    document.body.classList.add('light-theme'); // Add light theme class to body
+    document.body.classList.add('light-theme'); // Add light theme 
     document.body.classList.remove('dark-theme'); // Remove dark theme class from body
-} else {
+} 
+  else {
     // If it's sun (light theme), switch to moon (dark theme)
     themeToggleIcon.src = 'Images/navbar/moon.png';
     document.body.classList.add('dark-theme'); // Add dark theme class to body
