@@ -510,8 +510,6 @@
   .thumbnail img {
 	max-width: 100%;
 	height: auto;
-	border-radius: 10px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   
 
@@ -928,4 +926,42 @@ td {
 	background-color: #dc3545; 
 	cursor: pointer;
   }
+
+  /* added */
+  .menu-items .card {
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.menu-items .card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 0 10px rgba(224, 224, 252, 0.678); 
+}
+.menu-items .card .btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-items .card .btn:hover {
+    background-color: white; 
+    color: orangered; 
+    border-color: orangered; 
+}
+.menu-items .card-thumbnail img {
+    
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.menu-items .card-thumbnail img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+}
+
+.menu-items .items .caption {
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.menu-items .items .caption:hover {
+    color: orangered;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
   

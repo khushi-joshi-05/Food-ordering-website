@@ -52,22 +52,28 @@ body {
 
 /*Scrollbar Style*/
 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
-    /* background-image: linear-gradient(to top, rgb(246, 10, 10) , rgb(248, 145, 49), rgb(236, 239, 56)); */
-    background-color: white;
+::-webkit-scrollbar-track
+{
+	
+	background-color: white;
 }
 
-::-webkit-scrollbar {
-    width: 12px;
+
+
+
+::-webkit-scrollbar
+{
+	width: 10px;
+
+	background-color: light red;
 }
 
-::-webkit-scrollbar-thumb {
-    background-color: #ff0707;
-    border-radius: 10px;
-    border: 0.3px solid white;
-    background-image: -webkit-linear-gradient( 90deg, rgb(20, 21, 12) 0%, rgb(0, 0, 0) 25%, transparent 100%, rgb(247, 4, 4) 75%, transparent);
+::-webkit-scrollbar-thumb
+{
+	height: 175px;
+	background: radial-gradient(circle at 10% 20%, rgb(205, 33, 42) 0%, rgb(236, 95, 5) 90%);
 }
+
 
 
 /* Home carousel/slider  */
@@ -412,6 +418,8 @@ body {
   background-color: var(--btn-hover-background-color);
 }
 
+
+
 .menu_items .items {
   text-align: center;
   max-height: 370px;
@@ -741,6 +749,7 @@ body {
 
 .faq-section {
 
+
   background-color: rgb(173, 204, 255);
   /* background: linear-gradient(345deg, #f7adad, #f01d1d); */
   padding: 50px 20px;
@@ -924,6 +933,59 @@ body {
     font-size: 1rem;
   }
 }
+
+/*Refresher*/
+#caduceus-container {
+  position: fixed;
+  top: 85px; 
+  right: 30px;
+  z-index: 1000;
+  transform-origin: top center;
+  animation: swing 3s ease-in-out infinite;
+}
+
+.rope {
+  width: 2px;
+  height: 100px; 
+  margin: 0 auto;
+  background-size: 400% 400%;
+  animation: 
+    gradientBackground 15s ease infinite,
+    waveMotion 3s ease-in-out infinite;
+  position: relative;
+}
+
+.rope::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(1px);
+}
+
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes waveMotion {
+  0%, 100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  25% { clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%); }
+  50% { clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%); }
+  75% { clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%); }
+}
+#caduceus {
+  width: 100px; 
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 100px;
+  animation: bounce 1s ease infinite;
+
 .visitor-counter {
   position: fixed;
   top: 600px;
@@ -944,12 +1006,121 @@ body {
               0 1px 3px rgba(0, 0, 0, 0.08);
   z-index: 1000;
   animation: bounce 2s ease-in-out infinite;
+
 }
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
+
+    transform: translateY(-20px);
+  }
+}
+@keyframes swing {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  #caduceus-container {
+    top: 120px;
+    right: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #caduceus-container {
+    top: 120px;
+    right: 60px;
+  }
+}
+
+/* Tablet-specific styles *//*COrrect*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #caduceus-container {
+      top: 120px;
+      right: 30px;
+    }
+
+#caduceus {
+  width: 100px;
+}
+}
+
+/*Correect*/ /* iPhone SE, 5, 5S, 5C, iPod Touch 5g and up */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+#caduceus-container {
+top: 120px;
+right: 60px;
+}
+
+#caduceus {
+width: 100px;
+}
+}
+
+/* iPhone 6, 6S, 7, 8 */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2) {
+#caduceus-container {
+right: 8px;
+}
+
+#caduceus {
+width: 100px;
+}
+}
+
+/* iPhone 6+, 7+, 8+ */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3) {
+#caduceus-container {
+top: 35px;
+right: 10px;
+}
+
+#caduceus {
+width: 35px;
+}
+}
+
+/* iPhone X, XS, 11 Pro */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3) {
+#caduceus-container {
+top: 40px;
+right: 12px;
+}
+#caduceus {
+width: 38px;
+}
+}
+
+/* iPhone XR, XS Max, 11, 11 Pro Max */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 896px) 
+and (-webkit-min-device-pixel-ratio: 2) {
+
+#caduceus {
+width: 100px;
+}
+
     transform: translateY(-10px);
   }
 }
@@ -1013,9 +1184,10 @@ font-size: 24px;
 }
 .website-counter {
   font-size: 18px;
+
 }
-    .faq-container 
-        padding: 20px;
+    .faq-container {
+        padding:20px;
     }
     .faq-container h1 {
         font-size: 2rem;

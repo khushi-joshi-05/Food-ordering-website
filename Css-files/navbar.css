@@ -27,7 +27,6 @@
 }
 
 .dark-theme {
-
   --a: rgb(183, 175, 175);
   --drop-bg: #ffffff;
   --nav: white;
@@ -53,6 +52,8 @@
   --container-bg: rgb(224, 224, 252);
   --drop-bg: #ffffff;
   --nav: white;
+  --a: black;
+  --nav: #F5DEB3;
   --invert: invert(0);
 }
 
@@ -79,7 +80,6 @@
   flex-grow: 0;
 }
 
-
 /* Navbar Links */
 .nav-link {
   color:var(--a)
@@ -99,12 +99,11 @@ ul {
 
 .nav-item {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   color:var(--a)
 
 }
-
 
 .center-links .nav-item .nav-link:hover {
   color: #f13800e4;
@@ -144,15 +143,14 @@ ul {
 .navbar-nav.center-links .active {
   color: #dc3545;
   border-bottom: 2px solid #dc3545;
-  gap:10px;
+  gap: 10px;
 }
 
 .navbar-nav.end-links .active  {
   color: rgba(255, 183, 0, 0.705);
   border-bottom: 2px solid rgba(255, 183, 0, 0.705);
-  gap:10px;
+  gap: 10px;
 }
-
 
 
 /* Dropdown Items */
@@ -179,7 +177,6 @@ ul {
   background-color: var(--background-color);
 
   transition: background-color 0.3s, transform 0.3s;
-
 }
 
 .dropdown-item:active {
@@ -189,7 +186,7 @@ ul {
 /* :root {
   --background-color: #fff;
   --text-color: #000;
-  --button-bg: #D0EEB0;
+  --button-bg: #d0eeb0;
   --button-hover-bg: #59a10c;
   --card-bg: rgba(0, 0, 0, 0.8);
   --carousel-caption-bg: rgba(0, 0, 0, 0.7);
@@ -214,12 +211,12 @@ body {
   background-color: var(--button-hover-bg);
 }
 
-.card-1  {
+.card-1 {
   background-color: var(--carousel-caption-bg);
 }
 
 /* Dark mode styles */
-.about_us.dark-theme  {
+.about_us.dark-theme {
   --background-color: #000;
   --text-color: #fff;
   --button-bg: #555;
@@ -233,24 +230,23 @@ body {
   color: var(--text-color);
 }
 
-.about_us.dark-theme  .section {
+.about_us.dark-theme .section {
   background-color: var(--background-color);
   color: var(--text-color);
 }
 
-.about_us.dark-theme  .btn-card {
+.about_us.dark-theme .btn-card {
   background-color: var(--button-bg);
   color: var(--text-color);
 }
 
-.about_us.dark-theme  .btn-card:hover {
+.about_us.dark-theme .btn-card:hover {
   background-color: var(--button-hover-bg);
 }
 
-.about_us.dark-theme  .carousel-caption {
+.about_us.dark-theme .carousel-caption {
   background-color: var(--carousel-caption-bg);
 }
-
 
 .dropdown-item:hover {
   background-color: #007bff;
@@ -263,4 +259,3 @@ body {
   width: 30px;
   cursor: pointer;
 }
-
