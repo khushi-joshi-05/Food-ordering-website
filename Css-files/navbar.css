@@ -1,5 +1,69 @@
 /* Define colors */
 :root {
+
+  /* General Colors */
+  --primary-bg-color: #ffffff;
+  --primary-text-color: #333335;
+  --secondary-bg-color: #f2f2f2;
+  --accent-color: #9e5c48;
+
+  /* Navbar Colors */
+  --navbar-bg-color: #f2f2f2;
+  --navbar-hover-color: #e5e5e5;
+
+  /* Card Colors */
+  --card-bg-color: #ffffff;
+  --card-hover-color: #f5f5f5;
+
+  /* Footer Colors */
+  --footer-bg-color: #f2f2f2;
+  --footer-hover-color: #e5e5e5;
+
+  /* Additional Colors */
+  --container-bg: black;
+  --drop-bg: #212123;
+  --a: black;
+  --nav: black;
+  --invert: invert(1);
+}
+
+.dark-theme {
+  --a: rgb(183, 175, 175);
+  --drop-bg: #ffffff;
+  --nav: white;
+  /* General Colors */
+  --primary-bg-color: #212123;
+  --primary-text-color: #ffffff;
+  --secondary-bg-color: #333335;
+  --accent-color: #9e5c48;
+
+  /* Navbar Colors */
+  --navbar-bg-color: #333335;
+  --navbar-hover-color: #474749;
+
+  /* Card Colors */
+  --card-bg-color: #2c2c2e;
+  --card-hover-color: #373739;
+
+  /* Footer Colors */
+  --footer-bg-color: #28282a;
+  --footer-hover-color: #333335;
+
+  /* Additional Colors */
+  --container-bg: rgb(224, 224, 252);
+  --drop-bg: #ffffff;
+  --nav: white;
+  --a: black;
+  --nav: #F5DEB3;
+  --invert: invert(0);
+}
+
+/* Navbar */
+.navbar {
+  /* --bs-navbar-color: var(--a); */
+  background-color: var(--background-color);
+  gap: 10px;
+
   --primary-bg-color: #fff;
   --primary-text-color: #000;
   --secondary-bg-color: #f0f0f0;
@@ -17,6 +81,7 @@
   align-items: center;
   height: 70px;
   font-size: 14px;
+
 }
 
 .navbar-logo {
@@ -40,15 +105,102 @@
 }
 
 .nav-link {
+
+  color:var(--a)
+
   color: var(--primary-text-color);
   padding: 4px 8px;
   border-radius: 4px;
   transition: background-color 0.3s, color 0.3s;
+
 }
 
 .nav-link:hover {
   background-color: var(--light-red);
   color: #fff;
+
+  transform: scale(1.1);
+  border-radius: 5px;
+}
+
+/* Center Links */
+
+ul {
+  gap: 5px;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color:var(--a)
+
+}
+
+.center-links .nav-item .nav-link:hover {
+  color: #f13800e4;
+}
+
+.center-links .nav-item .dropdown-menu {
+  background-color: var(--drop-bg);
+  color: var(--a);
+  border-radius: 0;
+  border: none;
+  padding-top: 0;
+}
+/* cart-icon supersript */
+/* .cart-subscript
+{
+  display :flex;
+  width: 15px;
+  height: 25px;
+  background-color: rgb(76, 0, 255);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 45px;
+} */
+
+
+
+/* End Links */
+.end-links .nav-item .nav-link:hover {
+  color: rgba(255, 183, 0, 0.705);
+  
+}
+
+.navbar-nav.center-links .active {
+  color: #dc3545;
+  border-bottom: 2px solid #dc3545;
+  gap: 10px;
+}
+
+.navbar-nav.end-links .active  {
+  color: rgba(255, 183, 0, 0.705);
+  border-bottom: 2px solid rgba(255, 183, 0, 0.705);
+  gap: 10px;
+}
+
+
+/* Dropdown Items */
+
+#theme-toggle-icon {
+  width: 30px;
+  cursor: pointer;
+  color:var(--drop-bg)
+}
+
+.center-links .nav-item .dropdown-menu {
+  background-color: var(--drop-bg);
+  color: var(--a);
+  border-radius: 0;
+  border: none;
+  padding-top: 0;
+
+
 }
 
 .dropdown-item {
@@ -64,6 +216,21 @@
   transform: scale(1.05);
 }
 
+
+/* :root {
+  --background-color: #fff;
+  --text-color: #000;
+  --button-bg: #d0eeb0;
+  --button-hover-bg: #59a10c;
+  --card-bg: rgba(0, 0, 0, 0.8);
+  --carousel-caption-bg: rgba(0, 0, 0, 0.7);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+} */
+
 .rate-us-btn {
   background-color: var(--primary-bg-color);
   border: 1px solid var(--dark-red);
@@ -77,6 +244,7 @@
   background-color: var(--light-red);
   color: #fff;
 }
+
 
 .card {
   background-color: var(--primary-bg-color);
