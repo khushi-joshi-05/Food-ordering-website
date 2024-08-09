@@ -1,0 +1,136 @@
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-1 {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.header-title {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.section-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: start;
+}
+
+.event-info,
+.menu,
+.chefs,
+.location,
+.rsvp {
+  padding: 40px 0;
+}
+
+.event-description,
+.location-description {
+  text-align: start;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  text-align: start;
+}
+
+.menu-item {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.chefs .container{
+  display: flex;
+  flex-direction: row;
+}
+
+.chef-card {
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 500px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.chef-image {
+  width: 100%;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chef-name {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.chef-bio {
+  font-size: 1em;
+  color: #666;
+}
+
+.map-container {
+  text-align: start;
+  margin: 20px 0;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.rsvp-form input,
+.rsvp-form button {
+  padding: 10px;
+  margin: 10px;
+  font-size: 1em;
+  width: 80%;
+  max-width: 500px;
+}
+
+.rsvp-form button {
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .chefs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chef-card {
+    flex: 1 1 100%;
+  }
+
+  .chefs .container{
+    flex-direction: column;
+    align-items: center;
+  }
+}
