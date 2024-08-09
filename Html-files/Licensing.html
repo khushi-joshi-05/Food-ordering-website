@@ -86,6 +86,22 @@
             text-shadow: #FC0 1px 0 6px;
             text-decoration: none;
         }
+        
+        .Lastupdate {
+          margin-top: 18px;
+          font-size: 20px !important;
+          font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, serif !important;
+          font-weight: 500;
+          margin-bottom: 15px;
+          color: rgb(35, 35, 35) !important;
+        }
+
+        #last-updated-date {
+          font-size: 18px;
+          color: rgb(27, 27, 27) !important;
+        }
+
+
     </style>
         <style> #progressBar {
           position: fixed;
@@ -297,6 +313,11 @@
                 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
                 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
                 SOFTWARE.</p>
+
+                <div class="Lastupdate">
+                  Last updated: <span id="last-updated-date"></span>
+                </div>
+
         </div>
         <hr>
         <footer class="copyright-footer">
@@ -439,6 +460,46 @@
             </div>
         </div>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          const loader = document.getElementById("loader");
+          if (loader) {
+            loader.style.display = "none";
+          } else {
+            console.error("Element with ID 'loader' not found.");
+          }
+        }, 500);
+
+        // Update the date dynamically
+        function updateLastUpdatedDate() {
+          const dateElement = document.getElementById("last-updated-date");
+          const now = new Date();
+          const day = now.getDate();
+          const monthNames = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+          ];
+          const month = monthNames[now.getMonth()]; // Get the full month name
+          const year = now.getFullYear();
+          dateElement.textContent = `${month} ${day}, ${year}`;
+        }
+
+        // Update the date weekly
+        function updateWeekly() {
+          const now = new Date();
+          const dayOfWeek = now.getDay(); // 0 (Sunday) to 6 (Saturday)
+          const timeUntilNextUpdate = (7 - dayOfWeek) * 24 * 60 * 60 * 1000; // Time until next Sunday
+          updateLastUpdatedDate();
+          setTimeout(updateWeekly, timeUntilNextUpdate);
+        }
+
+        // Initialize weekly updates
+        updateWeekly();
+      });
+    </script>
+    
 
     <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
