@@ -17,10 +17,132 @@
     <link rel="stylesheet" href="../Css-files/content.css">
     <link rel="stylesheet" href="../Css-files/services.css">
     <link rel="stylesheet" href="../Css-files/cateringservices.css">
+    <style> #progressBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 8px;
+        background-color: #b80d0d;
+        z-index: 9999;
+    }
+
+    .circle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(255, 0, 0, 0.466), rgba(255, 52, 52, 0.5));
+      transition: transform 0.1s, left 0.1s, top 0.1s;
+      box-shadow: 0 0 20px #faff64,
+        0 0 60px #f52323,
+        0 0 100px #ff0000;
+        animation: colors 1s infinite;
+  transform: translate(-50%, -50%);
+    }
+
+    .circle-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    @media (max-width: 724px) {
+      .circle-container{
+        display: none;
+      }
+    }
+</style>
 </head>
 
 <body>
 
+    <div class="circle-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const coords = { x: 0, y: 0 };
+          const circles = document.querySelectorAll(".circle");
+    
+          circles.forEach(function (circle) {
+            circle.x = 0;
+            circle.y = 0;
+          });
+    
+          window.addEventListener("mousemove", function (e) {
+            coords.x = e.pageX;
+            coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+          });
+    
+          function animateCircles() {
+            let x = coords.x;
+            let y = coords.y;
+    
+            circles.forEach(function (circle, index) {
+              circle.style.left = `${x - 12}px`;
+              circle.style.top = `${y - 12}px`;
+              circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+    
+              const nextCircle = circles[index + 1] || circles[0];
+              circle.x = x;
+              circle.y = y;
+    
+              x += (nextCircle.x - x) * 0.25;
+              y += (nextCircle.y - y) * 0.25;
+            });
+    
+            requestAnimationFrame(animateCircles);
+          }
+    
+          animateCircles();
+        });
+      </script>
+
+ <!-- Progress bar -->
+ <div id="progressBar"></div>
+ <script>
+     window.onscroll = function () {
+         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+         var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+         var scrolled = (winScroll / height) * 100;
+         document.getElementById("progressBar").style.width = scrolled + "%";
+     };
+ </script>
     <div class="head_container_service">
         <header>
             <nav>

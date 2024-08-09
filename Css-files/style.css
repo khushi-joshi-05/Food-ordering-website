@@ -214,7 +214,10 @@ body {
 
 
 }
-
+.ordernow{
+    border-radius: 10px;
+    background-color: brown;
+}
 .service .box_main {
     padding-left: 20px;
     padding-right: 40px;
@@ -857,4 +860,10 @@ textarea {
 ::-webkit-scrollbar-thumb {
     border-radius: 12px;
     background-color: yellow;
+}
+
+@media (max-width:768px) {
+    .card-home img{
+        width: -webkit-fill-available !important;  
+    }
 }

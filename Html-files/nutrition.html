@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Adding favicon image -->
+    <link rel="shortcut icon" href="../Images/favicon/Foodie_Favicon.png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+        defer></script>
+    <link rel="stylesheet" href="../Css-files/scroll-top-button.css">
+    <link rel="stylesheet" href="../Css-files/navbar.css">
+    <link rel="stylesheet" href="../Css-files/footer.css">
+    <link rel="stylesheet" href="../Css-files/nutrition.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+         .circle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(255, 0, 0, 0.466), rgba(255, 52, 52, 0.5));
+      transition: transform 0.1s, left 0.1s, top 0.1s;
+      box-shadow: 0 0 20px #faff64,
+        0 0 60px #f52323,
+        0 0 100px #ff0000;
+        animation: colors 1s infinite;
+  transform: translate(-50%, -50%);
+    }
+
+    .circle-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    @media (max-width: 724px) {
+      .circle-container{
+        display: none;
+      }
+    }
+    </style>
+</head>
+
+<body>
+
+    <div class="circle-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const coords = { x: 0, y: 0 };
+          const circles = document.querySelectorAll(".circle");
+    
+          circles.forEach(function (circle) {
+            circle.x = 0;
+            circle.y = 0;
+          });
+    
+          window.addEventListener("mousemove", function (e) {
+            coords.x = e.pageX;
+            coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+          });
+    
+          function animateCircles() {
+            let x = coords.x;
+            let y = coords.y;
+    
+            circles.forEach(function (circle, index) {
+              circle.style.left = `${x - 12}px`;
+              circle.style.top = `${y - 12}px`;
+              circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+    
+              const nextCircle = circles[index + 1] || circles[0];
+              circle.x = x;
+              circle.y = y;
+    
+              x += (nextCircle.x - x) * 0.25;
+              y += (nextCircle.y - y) * 0.25;
+            });
+    
+            requestAnimationFrame(animateCircles);
+          }
+    
+          animateCircles();
+        });
+      </script>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand opacity-75 flex-fill">
+                <img src="../Images/logo/Foodielogo.png" height="40">
+            </a>
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse"
+                data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
+                <ul class="navbar-nav center-links">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">
+                            <i class="fa-solid fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/menu.html">
+                            <i class="fa-solid fa-book-open"></i> Menu
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link services" href="/Html-files/services.html" aria-expanded="false">
+                            <i class="fa-solid fa-handshake"></i> Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-check"></i> Ordering options</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-truck"></i> Order Tracking</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-headset"></i> Customer Support</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-question"></i> FAQS</a></li>
+                        </ul>
+                    </li>
+                    
+                   <li class="nav-item, nav-items">
+                        <a class="nav-link" href="Html-files/contact.html"><i class="fa-solid fa-phone"></i>Contact Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/offers.html">
+                            <i class="fa-solid fa-gift"></i> Offers
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#FAQ">FAQS</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/RateUs.html">
+                            <i class="fa-solid fa-star"></i> Rate Us
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="order-0 ml-auto p-2">
+                <img class="nav-link" src="../Images/navbar/moon.png" id="theme-toggle-icon" alt="theme toggler button">
+                
+            </div>
+            <div class="collapse navbar-collapse hamburgeritems enddiv order-3">
+                <ul class="navbar-nav end-links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/login.html">
+                            <i class="fa-solid fa-sign-in"></i> Login
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/signup.html">
+                            <i class="fa-solid fa-user-plus"></i> Sign-Up
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Html-files/cart.html">
+                            <i class="fa-solid fa-cart-shopping"></i> Cart
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section id="homeSlider" class="carousel slide carousel-fade bg-black" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="slider-bg d-flex justify-content-center">
+                    <img src="../Images/homeSliderImages/home-slider-1.jpg" class="homeimg">
+                </div>
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+                    <p class="slider-subtitle slider-reveal">Discover Your Path to Wellness with Us!</p>
+                    <h1 class="slider-title slider-reveal">
+                        Join the Health <br>
+                        Revolution with Us!
+                    </h1>
+                    <p class="slider-text slider-reveal">
+                        come with family & feel the joy of mouthwatering food
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="slider-bg d-flex justify-content-center">
+                    <img src="../Images/homeSliderImages/home-slider-2.jpg" class="homeimg">
+                </div>
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+                    <p class="slider-subtitle slider-reveal">Superfoods You Need to Add to Your Diet Today</p>
+                    <h1 class="slider-title slider-reveal">
+                        Flavors Inspired by <br>
+                        the Seasons
+                    </h1>
+                    <p class="slider-text slider-reveal">
+                        Feel Better, Live Better: Health Tips Inside
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="slider-bg d-flex justify-content-center">
+                    <img src="../Images/homeSliderImages/home-slider-3.jpg" class="homeimg">
+                </div>
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+                    <p class="slider-subtitle slider-reveal">Nourish Your Body, Mind, and Soul</p>
+                    <h1 class="slider-title slider-reveal">
+                        Experience Wellness Like Never Before
+                    </h1>
+                    <p class="slider-text slider-reveal">
+                        Your Health, Our Priority: Explore Now
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#homeSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#homeSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </section>
+
+    
+    <!-- Add some custom CSS for transitions and responsiveness -->
+    <style>
+        .slider-bg {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+    
+        .homeimg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    
+        .carousel-caption {
+            text-align: center;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+    
+        .slider-reveal {
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+    
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 40px, 0);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    
+        @media (max-width: 768px) {
+            .slider-title {
+                font-size: 1.5rem;
+            }
+            .slider-subtitle, .slider-text {
+                font-size: 1rem;
+            }
+            .carousel-caption {
+                padding-bottom: 3rem;
+            }
+        }
+    </style>
+
+
+    <br>
+    <br>
+    <br>
+
+
+
+   
+
+
+    <section class="picture-gallery" data-aos="fade-in" data-aos-duration="2000">
+        <div class="row g-0">
+            <div class="col-3">
+                <img src="Images/image-gallery/1.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="Images/image-gallery/2.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="Images/image-gallery/3.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="Images/image-gallery/4.jpg" alt="">
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-3">
+                <img src="Images/image-gallery/5.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="Images/image-gallery/6.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="Images/image-gallery/7.jpg" alt="">
+            </div>
+            <div class="col-3">
+                <img src="Images/image-gallery/8.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+   
+    <div class="conta" style="display: flex; flex-wrap: wrap;">
+        <div class="container" style="display: flex;">
+            <div class="food-section">
+                <h2 style="color: white; margin-top: 50px;"><strong>Food Groups</strong></h2>
+                <div class="food-container">
+                    <div class="food-item">
+                        <h3 >Fruits</h3>
+                        <img src="../Images/nutrition/fruits.jpg" alt="">
+                        <div class="content-preview" >
+                            <p>Rich in vitamins, minerals, and antioxidants.</p>
+                        </div>
+                        <div class="more-content" style="display: none;">
+                            <p>High in dietary fiber which aids digestion and prevents constipation. Low in calories and fat, making them ideal for weight management. Provides essential nutrients like vitamin C, potassium, and folate.</p>
+                        </div>
+                        <div class="button-icon" style="padding-left: 90px;">
+                            <div class="cube">
+                                <span class="side front">hover me</span>
+                                <span class="side top">Read More</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="food-item">
+                        <h3>Vegetables</h3>
+                        <img src="../Images/nutrition/vegies.jpg" alt="">
+                        <div class="content-preview" >
+                            <p>Packed with vitamins, minerals, and phytonutrients.</p>
+                        </div>
+                        <div class="more-content" style="display: none;">
+                            <p>High in fiber which supports digestive health and helps control blood sugar levels. Low in calories and fats, contributing to overall weight management. Contains antioxidants that help reduce the risk of chronic diseases such as heart disease and cancer.</p>
+                        </div>
+                        <div class="button-icon" style="padding-left: 90px;">
+                            <div class="cube">
+                                <span class="side front">hover me</span>
+                                <span class="side top">Read More</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="food-item">
+                        <h3>Grains</h3>
+                        <img src="../Images/nutrition/grains.jpg" alt="News Image">
+                        <div class="content-preview">
+                            <p>Good source of carbohydrates, which provide energy.</p>
+                        </div>
+                        <div class="more-content" style="display: none;">
+                            <p>Whole grains are high in fiber, aiding in digestion and keeping you full longer. Contains essential nutrients like B vitamins, iron, magnesium, and selenium. Helps maintain healthy cholesterol levels and reduce the risk of heart disease.</p>
+                        </div>
+                        <div class="button-icon" style="padding-left: 90px;">
+                            <div class="cube">
+                                <span class="side front">hover me</span>
+                                <span class="side top">Read More</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="food-item">
+                        <h3>Proteins</h3>
+                        <img src="../Images/nutrition/protein.webp" alt="">
+                        <div class="content-preview" >
+                            <p>Essential for building and repairing tissues, including muscles.</p>
+                        </div>
+                        <div class="more-content" style="display: none;">
+                            <p>Provides important nutrients such as iron, zinc, and B vitamins. Supports immune function and hormone production. Helps in maintaining a healthy weight by promoting satiety and reducing overall calorie intake.</p>
+                        </div>
+                        <div class="button-icon" style="padding-left: 90px;">
+                            <div class="cube">
+                                <span class="side front">hover me</span>
+                                <span class="side top">Read More</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="food-item">
+                        <h3>Dairy</h3>
+                        <img src="../Images/nutrition/diary.webp" alt="">
+                        <div class="content-preview" >
+                            <p>Excellent source of calcium, which is crucial for bone health.</p>
+                        </div>
+                        <div class="more-content" style="display: none;">
+                            <p>Provides protein, vitamin D, potassium, and phosphorus. Supports healthy teeth and prevents osteoporosis. Contributes to muscle function and nerve signaling.</p>
+                        </div>
+                        <div class="button-icon" style="padding-left: 90px;">
+                            <div class="cube">
+                                <span class="side front">hover me</span>
+                                <span class="side top">Read More</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="food-item">
+                        <h3>Fats and Oils</h3>
+                        <img src="../Images/nutrition/fatandoils.webp" alt="">
+                        <div class="content-preview" >
+                            <p>Provides essential fatty acids that the body cannot produce on its own.</p>
+                        </div>
+                        <div class="more-content" style="display: none;">
+                            <p>Aids in the absorption of fat-soluble vitamins (A, D, E, and K). Supports cell growth, brain function, and the production of hormones. Healthy fats (such as those from avocados, nuts, seeds, and olive oil) can reduce the risk of heart disease.</p>
+                        </div>
+                        <div class="button-icon" style="padding-left: 90px;">
+                            <div class="cube">
+                                <span class="side front">hover me</span>
+                                <span class="side top">Read More</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    
+    
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const readMoreButtons = document.querySelectorAll('.button-icon');
+      
+          readMoreButtons.forEach(function(button) {
+              button.addEventListener('click', function() {
+                  const newsItem = button.closest('.food-item');
+                  const moreContent = newsItem.querySelector('.more-content');
+                  
+                  if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+                      moreContent.style.display = 'block'; 
+                      button.querySelector('.cube .side.top').textContent = 'Read Less'; 
+                  } else {
+                      moreContent.style.display = 'none'; 
+                      button.querySelector('.cube .side.top').textContent = 'Read More'; 
+                  }
+              });
+          });
+      });
+      </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+      const newsItems = document.querySelectorAll('.news-item');
+    
+      newsItems.forEach(item => {
+        item.addEventListener('click', function() {
+          const link = this.querySelector('.read-more').getAttribute('href');
+          window.location.href = link;
+        });
+      });
+    });
+      </script>
+        <style>
+            .button-icon {
+              display: flex;
+              width: 400px;
+              height: 100px;
+              cursor: pointer;
+              margin-left: 50px;
+            }
+        
+            .icon {
+              background-color: #fff;
+              padding: 10px 10px 5px 10px;
+            }
+        
+            .icon svg {
+              width: 25px;
+              height: 25px;
+            }
+        
+            .cube {
+              transition: all 0.4s;
+              transform-style: preserve-3d;
+              width: 200px;
+              height: 20px;
+            }
+        
+            .button-icon:hover {
+              border-color: #264923;
+            }
+        
+            .button-icon:hover .cube {
+              transform: rotateX(90deg);
+            }
+        
+            .side {
+              position: absolute;
+              height: 47px;
+              width: 200px;
+              display: flex;
+              font-size: 0.8em;
+              justify-content: center;
+              align-items: center;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+              font-weight: bold;
+            }
+        
+            .top {
+              background:linear-gradient(to right,hwb(56 44% 2%),brown) ;
+              color: #fff;
+              transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+              width: 170px;
+            }
+        
+            .front {
+              background: linear-gradient(to right, #de6262, #ffb88c);
+              color: #fff;
+              transform: translate3d(0, 0, 1em);
+              width: 170px;
+            }
+        
+        
+          </style>
+          <div class="tip-grid">
+            <div class="tip-item">
+                <h1>Ketogenic Diet</h1>
+                <p> A high-fat, low-carbohydrate diet that forces the body to burn fats rather than carbohydrates for energy. It is used to help manage epilepsy and promote weight loss.</p>
+            </div>
+            <div class="tip-item">
+                <h1>Mediterranean Diet</h1>
+                <p>Emphasizes fruits, vegetables, whole grains, legumes, nuts, and healthy fats like olive oil. It is inspired by the dietary patterns of countries bordering the Mediterranean Sea and is associated with improved cardiovascular health.</p>
+            </div>
+            <div class="tip-item">
+                <h1>Paleo Diet</h1>
+                <p>Focuses on consuming foods that would have been available to our Paleolithic ancestors, such as lean meats, fish, fruits, vegetables, nuts, and seeds. It excludes processed foods, grains, and dairy.</p>
+            </div>
+            <div class="tip-item">
+                <h1>Gluten-Free Diet</h1>
+                <p>Eliminates all foods containing gluten, a protein found in wheat, barley, and rye. It is essential for individuals with celiac disease or gluten sensitivity.</p>
+            </div>
+            <div class="tip-item">
+                <h1>Low-FODMAP Diet</h1>
+                <p>Restricts foods high in certain fermentable carbohydrates (FODMAPs) to alleviate symptoms of irritable bowel syndrome (IBS). Foods like certain fruits, vegetables, dairy products, and grains are limited.</p>
+            </div>
+            <div class ="tip-item">
+                <h1>Intermittent Fasting</h1>
+              <p>Involves alternating periods of eating and fasting. Common methods include the 16/8 method (16 hours of fasting and an 8-hour eating window) and the 5:2 method (eating normally for 5 days and reducing calorie intake on 2 non-consecutive days).</p>
+            </div>
+        
+                    
+                    
+                
+            </div>
+        </div>
+        <section class="faqsection">
+            <h1>Frequently Asked Questions (FAQ)</h1>
+            <div class="container faqcontainer">
+                
+                <div class="faqitem">
+                    <h2>How do I place an order?
+                        <span class="arrow">▼</span>
+                    </h2>
+                    <p class="answer">To place an order, browse our menu, select the items you want, and add them to your cart. Once you’re
+                        ready, click on the cart icon and proceed to checkout. Follow the instructions to complete your
+                        order.</p>
+                </div>
+                <div class="faqitem">
+                    <h2>What payment methods do you accept?
+                        <span class="arrow">▼</span>
+                    </h2>
+                    <p class="answer">We accept various payment methods including credit/debit cards, net banking, and popular digital
+                        wallets. You can select your preferred payment method at the checkout page.</p>
+                </div>
+                <div class="faqitem">
+                    <h2>Can I schedule an order for later?
+                        <span class="arrow">▼</span>
+                    </h2>
+                    <p class="answer">Yes, you can schedule an order for a later time. During checkout, select the delivery time that suits
+                        you best.</p>
+                </div>
+                <div class="faqitem">
+                    <h2>How can I track my order?
+                        <span class="arrow">▼</span>
+                    </h2>
+                    <p class="answer">Once your order is confirmed, you will receive a tracking link via email or SMS. You can use this
+                        link to track the status of your delivery in real-time.</p>
+                </div>
+                <div class="faqitem">
+                    <h2>What should I do if I have a problem with my order?
+                        <span class="arrow">▼</span>
+                    </h2>
+                    <p class="answer">If you encounter any issues with your order, please contact our customer support immediately. You can
+                        reach us via the contact form on our website, email, or phone. We’re here to help you!</p>
+                </div>
+                <div class="faqitem">
+                    <h2>Is there a minimum order value?
+                        <span class="arrow">▼</span>
+                    </h2>
+                    <p class="answer">Yes, there is a minimum order value depending on your location. The minimum order amount will be
+                        displayed during the checkout process.</p>
+                </div>
+                <div class="faqitem">
+                    <h2>Do you offer any discounts or promotions?
+                        <span class="arrow">▼</span>
+                    </h2>
+                    <p class="answer">We regularly offer discounts and promotions. Check our website or subscribe to our newsletter to stay
+                        updated on the latest deals and offers.</p>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faqitem');
+
+    faqItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Close other FAQ items
+            faqItems.forEach(el => {
+                if (el !== item) {
+                    el.classList.remove('active');
+                }
+            });
+
+            // Toggle current FAQ item
+            item.classList.toggle('active');
+        });
+    });
+});
+
+        </script>
+        
+        
+
+    
+
+        <footer>
+            <div class="foot-panel1 w-100">
+                <div class="container-fluid py-5 px-0">
+                    <div class="row justify-content-evenly gy-5">
+                        <div class="col-6 col-sm-3 col-md-2 col-xl-2">
+                            <h5 class="mb-3" style="margin-left: 70px;">See Also</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./Html-files/menu.html">Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./Html-files/services.html">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./Html-files/contact.html">Contact us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./Html-files/cart.html">Cart</a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Html-files/contributor.html">Our Contributors</a>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="col-6 col-sm-5 col-md-3 col-xl-3">
+                            <h5 class="mb-3" style="margin-left: 90px;">Exclusive Offers</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Foodie Discounts</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Limited-Time Promotions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Special Event Packages</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Html-files/offers/membership-benifits.html">Membership Benefits</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Early Access to New Recipes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">VIP Foodie Events</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Html-files/offers/culinary-experience.html">Personalized Culinary Experiences</a>
+                                </li>
+                            </ul>
+                        </div>
+    
+    
+                        <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                            <h5 class="mb-3" style="margin-left: 70px;">Payment Products</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Secure Checkout</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Credit/Debit Cards</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Secure Checkout</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Online Payment</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Mobile Wallets</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">Contactless Payments</a>
+                                </li>
+                            </ul>
+                        </div>
+    
+    
+                        <div class="col-6 col-md-3 col-xl-4">
+                            <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
+                                <h3 class="text-center mb-3">Contact Us!</h3>
+                                <input type="email" id="footer-email" name="email" placeholder="Your Email" class="text-center form-control mb-2" required>
+                                <textarea id="footer-message" name="footer-message" placeholder="Your Message" class="text-center form-control mb-2" required></textarea>
+                                <div class="d-grid gap-2 col-12">
+                                    <button type="submit" class="btn btn-danger">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+    
+    
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="foot-panel2">
+                <div class="media-handles pt-3 pb-2">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                        <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                        <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                        <a class="fa-brands fa-snapchat" href="https://snapchat.com" target="_blank"></a>
+                        <a class="fa-brands fa-youtube" href="https://youtube.com" target="_blank"></a>
+                        <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
+                        <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
+                        <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
+                    </div>
+                    <p class="text"> Stay connected with us on social media for the latest updates, recipes, and foodie adventures. </p>
+                    <div>
+                        Give your valuable
+                        <Link to="">
+                        <a href="/Html-files/feedback.html"><b>feedback!</b></a>
+                        </Link>
+                    </div>
+                </div>
+                <div class="copyright py-1">
+                    &copy;
+                    <span id="copyright-year"></span> Foodies - All Rights Reserved |
+                    <span id="terms"></span>
+    
+                    <Link to="" >
+                        <a href="/Html-files/terms.html" class="legal-pages">Terms and Conditions</a> |
+                    </Link>
+                    <span id="privacy"></span>
+                    <Link to="" >
+                        <a href="/Html-files/privacy.html" class="legal-pages">Privacy Policy</a> |
+    
+                    </Link>
+    
+                    <span id="Licensing"></span>
+                    <Link to="" >
+                        <a href="/Html-files/Licensing.html" class="legal-pages">Licensing</a> |
+                    </Link>
+    
+                    <span id="author">
+                        <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank" class="legal-pages">Khushi Joshi</a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+
+    <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
+            class="arrow">
+            <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+        </svg>
+    </button>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="Html-files/top.js"></script>
+    <script src="script.js"></script>
+    <script src="./Html-files/navbar.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script src="../Html-files/nutrition.js"></script>
+    <script>
+        AOS.init(
+            {
+                duration: 1000,
+                easing: 'ease',
+                once: false,
+            }
+        );
+
+        // Chatbot
+        window.botpressWebChat.init({
+            "composerPlaceholder": "Message...",
+            "botConversationDescription": "Welcome to Foodie!",
+            "botId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+            "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+            "messagingUrl": "https://messaging.botpress.cloud",
+            "clientId": "2093cb3a-9343-4dec-a60f-2f69a5948cac",
+            "webhookId": "7bd6ccb8-58f4-4ee3-9bca-f33ea4b7c37c",
+            "lazySocket": true,
+            "themeName": "prism",
+            "botName": "Foodie",
+            "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/da4ab5f7-146c-4585-961b-2d9def26af50/v96339/style.css",
+            "frontendVersion": "v1",
+            "useSessionStorage": true,
+            "enableConversationDeletion": true,
+            "theme": "prism",
+            "themeColor": "#2563eb",
+            "allowedOrigins": []
+        });
+    </script>
+
+</body>
+
+</html>
