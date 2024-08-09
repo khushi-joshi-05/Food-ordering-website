@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link rel="shortcut icon" href="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png" type="image/x-icon">
+    <title>Offers-Food Ordering Website</title>
+
+    <!-- bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="../Favicon image/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="../Css-files/scroll-top-button.css" />
+    <link rel="stylesheet" href="../Css-files/navbar.css" />
+    <link rel="stylesheet" href="../Css-files/footer.css" />
+    <!-- OWN CSS -->
+    <link id="theme-link" rel="stylesheet" href="/Css-files/offers.css" />
+    <style>
+        #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 8px;
+            background-color: #e21f1f;
+            z-index: 9999;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            /* Move the card up slightly on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            /* Increase shadow on hover */
+        }
+        /* Example of adding a border on hover */
+        
+        .card:hover {
+            border: 2px solid #4CAF50;
+        }
+        /* Example of adding a background color change on hover */
+        
+        .card:hover {
+            background-color: #f0f0f0;
+        }
+        
+        @media only screen and (max-width:538px) {
+            .carousel-caption p {
+                position: relative;
+                top: 60px;
+            }
+            .carousel-caption img {
+                position: relative;
+                top: 46px;
+            }
+        }
+        
+        @media only screen and (max-width:435px) {
+            .carousel-caption p {
+                width: 332px;
+            }
+            .carousel-caption img {
+                max-width: 18.4rem;
+                max-height: 150px;
+            }
+        }
+        
+        @media only screen and (max-width:390px) {
+            .carousel-caption p {
+                position: relative;
+                right: 35px;
+            }
+            .carousel-caption img {
+                right: 24px;
+            }
+        }
+        
+        .center-links .nav-item .dropdown-menu {
+            background-color: #212123;
+            color: white;
+            border-radius: 0;
+            border: none;
+            padding-top: 0;
+        }
+        
+        .center-links .nav-item .dropdown-menu {
+            background-color: #ffffff;
+            color: white;
+            border-radius: 0;
+            border: none;
+            padding-top: 0;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #58a9ff;
+            color: #fff;
+            transform: scale(1.1);
+        }
+        
+        .dropdown-item {
+            padding: 4px 8px;
+            color: white;
+            font-size: 15px;
+            background-color: #137cbd;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100" onload="blinker();">
+
+    <!-- Progress bar -->
+    <div id="progressBar"></div>
+    <script>
+        window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
+    <!-- end -->
+    <!-- header design section -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a href="../index.html" class="navbar-brand opacity-75 flex-fill">
+                <img src="../Images/logo/Foodielogo.png" height="40" />
+            </a>
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
+                <ul class="navbar-nav center-links">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html"><i class="fa-solid fa-house"></i> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Html-files/menu.html"><i class="fa-solid fa-bars"></i> Menu</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link services" href="../Html-files/services.html" aria-expanded="false"><i class="fa-solid fa-gear"></i> Services</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Ordering options</a></li>
+                    <li><a class="dropdown-item" href="#">Order Tracking</a></li>
+                    <li><a class="dropdown-item" href="#">Customer Support</a></li>
+                    <li><a class="dropdown-item" href="#">FAQS</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Html-files/contact.html"><i class="fa-solid fa-phone"></i> Contact Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../Html-files/offers.html"
+                ><i class="fa-solid fa-tag"></i> Offers</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="order-0 ml-auto p-2">
+          <img
+            class="nav-link"
+            src="../Images/navbar/sun.png"
+            id="theme-toggle-icon"
+            alt="theme toggler button"
+          />
+        </div>
+        <div class="collapse navbar-collapse hamburgeritems enddiv order-3">
+          <ul class="navbar-nav end-links">
+            <li class="nav-item">
+              <a class="nav-link" href="../Html-files/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Html-files/signup.html"><i class="fa-solid fa-user"></i> Sign-Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Html-files/cart.html">
+                Cart
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <section id="explore-food" style="margin-top: 100px">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/564x/2f/f0/8c/2ff08cc9cbb5981bdfffa44f16f342f9.jpg" class="card-img-top" alt="Offer 1" style="height: 200px; object-fit: cover; border-bottom: 5px solid; border-bottom-style: double;">
+                        <div class="card-body">
+                            <h5 class="card-title">50% Off on Burgers</h5>
+                            <p class="card-text">Enjoy a 50% discount on all burgers today!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-apply">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/564x/2f/f0/8c/2ff08cc9cbb5981bdfffa44f16f342f9.jpg" class="card-img-top" alt="Offer 1" style="height: 200px; object-fit: cover; border-bottom: 5px solid; border-bottom-style: double;">
+                        <div class="card-body">
+                            <h5 class="card-title">Free Delivery</h5>
+                            <p class="card-text">Get free delivery on orders above $30!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-apply">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/564x/2f/f0/8c/2ff08cc9cbb5981bdfffa44f16f342f9.jpg" class="card-img-top" alt="Offer 1" style="height: 200px; object-fit: cover; border-bottom: 5px solid; border-bottom-style: double;">
+                        <div class="card-body">
+                            <h5 class="card-title">Combo Deal</h5>
+                            <p class="card-text">Buy 1 get 1 free on selected combos!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-apply">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--explore food section-->
+    <section id="explore-food">
+        <div class="explore-food wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-content text-center">
+                            <h2 id="blink">Exclusive Offers</h2>
+                            <p>
+                                Discover a world of flavors with our diverse culinary offerings. From savory dishes crafted with fresh, local ingredients to indulgent desserts that delight the senses, each bite tells a story. Savor the fusion of traditional recipes and innovative twists,
+                                bringing global tastes to your table. Taste the difference today!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row pt-5">
+                    <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+                        <div class="card border">
+                            <img decoding="async" src="https://img.freepik.com/premium-vector/special-offer-delicious-food-menu-sale-discount-with-landscape-social-media-post-tempate-banner-with-copy-space-3d-podium-food-sale-with-abstract-gradient-orange-white-background-design_727967-1725.jpg"
+                                class="img-fluid" />
+                            <div class="p-3">
+                                <h5>
+                                    🎉 Grab your savings now with our unbeatable new discounts every week! 💸
+                                </h5>
+                                <p>
+                                    Don't miss out on our exclusive offers! 🎉 Enjoy massive discounts 💸 on your favorite items and save big on every purchase! 🛍️
+                                </p>
+                                <button class="mt-2 main-btn"><a href="offers1.html">Read More</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+                        <div class="card border">
+                            <img decoding="async" src="https://img.freepik.com/premium-photo/young-people-social-media-like-concept-flat-vector-illustration-daily-activities-working-ai-generated_705708-26385.jpg" class="img-fluid" />
+                            <div class="p-3">
+                                <h5>
+                                    🤝 Exciting new collaborations just launched! Discover the latest partnerships today! 🌟
+                                </h5>
+                                <p>
+                                    Experience the thrill of our new collaborations! 🤩 Discover innovative partnerships and enjoy exclusive benefits now! 🌍✨
+                                </p>
+                                <button class="mt-2 main-btn"><a href="offers2.html" class="main-btn">Read More</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+                        <div class="card border">
+                            <img decoding="async" src="../Html-files/assets/game.png" class="img-fluid" />
+                            <div class="p-3">
+                                <h5>
+                                    🎮 New games alert! Level up your fun with our latest releases! 🚀
+                                </h5>
+                                <p>
+                                    Dive into the excitement with our new game releases! 🎉 Challenge yourself and explore thrilling adventures today! 🕹️🌟
+                                </p>
+                                <button class="mt-2 main-btn"><a href="offers3.html" class="main-btn">Read More</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  testimonial section -->
+    <section id="testimonial">
+        <div class="wrapper testimonial-section">
+            <div class="container text-center">
+                <div class="text-center pb-4">
+                    <h2 class="text-dark">Have A Great Taste !!</h2>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-lg-10 offset-lg-1">
+                        <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="carousel-caption">
+                                        <img decoding="async" src="../Html-files/assets/panipuri.jpg" />
+                                        <p>
+                                            "crispy shells, spicy tangy water, ultimate flavor explosion! 🌶️🌟💥"
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="carousel-caption">
+                                        <img decoding="async" src="../Html-files/assets/bruchetta.jpg" />
+                                        <p>
+                                            " Fresh tomatoes, basil, garlic on toasted bread. Italian delight! 🍅🍞"
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="carousel-caption">
+                                        <img decoding="async" src="../Html-files/assets/Ramen.jpg" />
+                                        <p>
+                                            "Savory broth, tender noodles, vibrant toppings. Japanese comfort food! 🍜"
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.carousel-item');
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                        slide.classList.add('active');
+                    }
+                });
+            }
+
+            function changeSlide(direction) {
+                currentSlide += direction;
+                if (currentSlide < 0) {
+                    currentSlide = slides.length - 1;
+                } else if (currentSlide >= slides.length) {
+                    currentSlide = 0;
+                }
+                showSlide(currentSlide);
+            }
+
+            // Initialize the first slide
+            showSlide(currentSlide);
+        </script>
+    </section>
+
+    <!-- footer section -->
+    <footer>
+        <div class="foot-panel1 w-100">
+            <div class="container-fluid py-5 px-0">
+                <div class="row justify-content-evenly gy-5">
+                    <div class="col-6 col-sm-3 col-md-2 col-xl-2">
+                        <h5 class="mb-3">See Also</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Html-files/menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Html-files/services.html">Services</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Html-files/contact.html"
+                    >Contact us</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Html-files/cart.html">Cart</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-sm-5 col-md-3 col-xl-3">
+                        <h5 class="mb-3">Exclusive Offers</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Foodie Discounts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/limited-time-products.html">Limited-Time Promotions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/special-event.html">Special Event Packages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/membership-benifits.html">Membership Benefits</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/early-access.html">Early Access to New Recipes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/vip-food-event.html">VIP Foodie Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Html-files/offers/culinary-experience.html">Personalized Culinary Experiences</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                        <h5 class="mb-3">Payment Products</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/Html-files/payment/credit-debit-card.html" class="nav-link">Credit/Debit Cards</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/Html-files/payment/secure-checkout.html" class="nav-link">Secure Checkout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/Html-files/payment/online-payment.html" class="nav-link">Online Payment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/Html-files/payment/mobile-wallet.html" class="nav-link">Mobile Wallets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/Html-files/payment/contact-less-payment.html" class="nav-link">Contactless Payments</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-3 col-xl-4">
+                        <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
+                            <h3 class="text-center mb-3">Contact Us!</h3>
+                            <input type="email" id="footer-email" name="email" placeholder="Your Email" class="text-center form-control mb-2" required />
+                            <textarea id="footer-message" name="message" placeholder="Your Message" class="text-center form-control mb-2" required></textarea>
+                            <div class="d-grid gap-2 col-12">
+                                <button type="submit" class="btn btn-danger">
+                    Send Message
+                  </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-panel2">
+            <div class="media-handles pt-3 pb-2">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
+                    <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
+                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
+                    <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
+                    <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
+                    <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
+                </div>
+                <p class="text">
+                    Stay connected with us on social media for the latest updates, recipes, and foodie adventures.
+                </p>
+            </div>
+            <div class="copyright py-1">
+                &copy;
+                <span id="copyright-year"></span> Foodies - All Rights Reserved |
+                <span id="author">
+            <a
+              href="https://www.linkedin.com/in/khushi-joshi-95a587256/"
+              target="_blank"
+              >Khushi Joshi</a
+            >
+          </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- go to top button -->
+    <!--Scroll top button-->
+
+    <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="white"
+        class="arrow"
+      >
+        <path
+          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
+        />
+      </svg>
+    </button>
+    <!--Scroll top button finish-->
+
+    <script>
+        document.getElementById("copyright-year").textContent =
+            new Date().getFullYear();
+    </script>
+
+    <!-- own js -->
+    <script>
+        function blinker() {
+            if (document.getElementById("blink")) {
+                var d = document.getElementById("blink");
+                d.style.color = d.style.color == "yellow" ? "white" : "yellow";
+                setTimeout("blinker()", 900);
+            }
+        }
+    </script>
+    <script src="top.js"></script>
+    <script src="navbar.js"></script>
+</body>
+
+</html>

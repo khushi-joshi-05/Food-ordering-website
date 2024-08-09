@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feedback - Food Ordering Website</title>
-    <link rel="shortcut icon" href="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png" type="image/x-icon">
-    <link rel="stylesheet" href="../Css-files/feedback.css">
+    <link
+      rel="shortcut icon"
+      href="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../Css-files/feedback.css" />
     <script src="menuStars.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
-    <style> #progressBar {
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #progressBar {
         position: fixed;
         top: 0;
         left: 0;
@@ -20,10 +35,114 @@
         height: 8px;
         background-color: #b80d0d;
         z-index: 9999;
+
+    }
+
+    .circle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(255, 0, 0, 0.466), rgba(255, 52, 52, 0.5));
+      transition: transform 0.1s, left 0.1s, top 0.1s;
+      box-shadow: 0 0 20px #faff64,
+        0 0 60px #f52323,
+        0 0 100px #ff0000;
+        animation: colors 1s infinite;
+  transform: translate(-50%, -50%);
+    }
+
+    .circle-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    @media (max-width: 724px) {
+      .circle-container{
+        display: none;
+      }
     }
 </style>
 </head>
 <body>
+
+    <div class="circle-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const coords = { x: 0, y: 0 };
+          const circles = document.querySelectorAll(".circle");
+    
+          circles.forEach(function (circle) {
+            circle.x = 0;
+            circle.y = 0;
+          });
+    
+          window.addEventListener("mousemove", function (e) {
+            coords.x = e.pageX;
+            coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+          });
+    
+          function animateCircles() {
+            let x = coords.x;
+            let y = coords.y;
+    
+            circles.forEach(function (circle, index) {
+              circle.style.left = `${x - 12}px`;
+              circle.style.top = `${y - 12}px`;
+              circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+    
+              const nextCircle = circles[index + 1] || circles[0];
+              circle.x = x;
+              circle.y = y;
+    
+              x += (nextCircle.x - x) * 0.25;
+              y += (nextCircle.y - y) * 0.25;
+            });
+    
+            requestAnimationFrame(animateCircles);
+          }
+    
+          animateCircles();
+        });
+      </script>
+
      <!-- Progress bar -->
    <div id="progressBar"></div>
    <script>
@@ -34,69 +153,230 @@
            document.getElementById("progressBar").style.width = scrolled + "%";
        };
    </script>
+
+
     <div class="main-outer">
-        <header>
-            <h1 id="title" class="text-center">We appreciate your valuable feedback.</h1>
-        </header>
-        <form id="survey-form" onsubmit="handleSubmit(event)">
-            <fieldset>
-                <label id="name_and_surname-label" for="name_and_surname">Name</label>
-                <input id="name_and_surname" type="text" placeholder="Your answer" required class="form-control" />
-            </fieldset>
-            <fieldset>
-                <label id="phone_number-label" for="phone_number">Phone number</label>
-                <input id="phone_number" type="text" placeholder="Your answer" required class="form-control" />
-            </fieldset>
-            <fieldset>
-                <label id="email-label" for="email">Email</label>
-                <input id="email" type="text" placeholder="Your answer" required class="form-control" />
-            </fieldset>
-            <fieldset>
-                <p class="pform">Food Quality</p>
-                <div class="fqual">
-                    <label><input type="radio" name="quality" id="exc1" value="excellent" class="input-radio" />Excellent</label>
-                    <label><input type="radio" name="quality" id="good1" value="good" class="input-radio" />Good</label>
-                    <label><input type="radio" name="quality" id="avg1" value="average" class="input-radio" />Average</label>
-                    <label><input type="radio" name="quality" id="dis1" value="dissatisfied" class="input-radio" />Dissatisfied</label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <p class="pform">Speed of service</p>
-                <div class="fqual">
-                    <label><input type="radio" name="speed" id="exc2" value="excellent" class="input-radio" />Excellent</label>
-                    <label><input type="radio" name="speed" id="good2" value="good" class="input-radio" />Good</label>
-                    <label><input type="radio" name="speed" id="avg2" value="average" class="input-radio" />Average</label>
-                    <label><input type="radio" name="speed" id="dis2" value="dissatisfied" class="input-radio" />Dissatisfied</label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <p class="pform">Value for Money</p>
-                <div class="fqual">
-                    <label><input type="radio" name="value" id="exc3" value="excellent" class="input-radio" />Excellent</label>
-                    <label><input type="radio" name="value" id="good3" value="good" class="input-radio" />Good</label>
-                    <label><input type="radio" name="value" id="avg3" value="average" class="input-radio" />Average</label>
-                    <label><input type="radio" name="value" id="dis3" value="dissatisfied" class="input-radio" />Dissatisfied</label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <p class="pform">Any comments, questions or suggestions?</p>
-                <textarea id="comments" name="comments" placeholder="Your answer" class="input-textarea"></textarea>
-            </fieldset>
-            <fieldset class="">
-                <p class="rate-tit">How much would you like to rate us?</p>
-                <div class="star-rating">
-                    <div class="star-button" onclick="rateItem(this, 1)"><i class="fas fa-star"></i></div>
-                    <div class="star-button" onclick="rateItem(this, 2)"><i class="fas fa-star"></i></div>
-                    <div class="star-button" onclick="rateItem(this, 3)"><i class="fas fa-star"></i></div>
-                    <div class="star-button" onclick="rateItem(this, 4)"><i class="fas fa-star"></i></div>
-                    <div class="star-button" onclick="rateItem(this, 5)"><i class="fas fa-star"></i></div>
-                </div>
-            </fieldset>
-            <fieldset>
-                <button type="submit" id="submit" class="submit-button">Submit</button>
-            </fieldset>
-        </form>
-        <div id="feedback-message" class="feedback-message">Thank you for your feedback!</div>
+      <header>
+        <h1 id="title" class="text-center">
+          We appreciate your valuable feedback.
+        </h1>
+      </header>
+      <form id="survey-form" onsubmit="handleSubmit(event)">
+        <fieldset>
+          <label id="name_and_surname-label" for="name_and_surname">Name</label>
+          <input
+            id="name_and_surname"
+            type="text"
+            placeholder="Your answer"
+            required
+            class="form-control"
+          />
+        </fieldset>
+        <fieldset>
+          <label id="phone_number-label" for="phone_number">Phone number</label>
+          <input
+            id="phone_number"
+            type="text"
+            placeholder="Your answer"
+            required
+            class="form-control"
+          />
+        </fieldset>
+        <fieldset>
+          <label id="email-label" for="email">Email</label>
+          <input
+            id="email"
+            type="text"
+            placeholder="Your answer"
+            required
+            class="form-control"
+          />
+        </fieldset>
+        <fieldset>
+          <p class="pform">Food Quality</p>
+          <div class="fqual">
+            <label
+              ><input
+                type="radio"
+                name="quality"
+                id="exc1"
+                value="excellent"
+                class="input-radio"
+              />Excellent</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="quality"
+                id="good1"
+                value="good"
+                class="input-radio"
+              />Good</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="quality"
+                id="avg1"
+                value="average"
+                class="input-radio"
+              />Average</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="quality"
+                id="dis1"
+                value="dissatisfied"
+                class="input-radio"
+              />Dissatisfied</label
+            >
+          </div>
+        </fieldset>
+        <fieldset>
+          <p class="pform">Speed of service</p>
+          <div class="fqual">
+            <label
+              ><input
+                type="radio"
+                name="speed"
+                id="exc2"
+                value="excellent"
+                class="input-radio"
+              />Excellent</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="speed"
+                id="good2"
+                value="good"
+                class="input-radio"
+              />Good</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="speed"
+                id="avg2"
+                value="average"
+                class="input-radio"
+              />Average</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="speed"
+                id="dis2"
+                value="dissatisfied"
+                class="input-radio"
+              />Dissatisfied</label
+            >
+          </div>
+        </fieldset>
+        <fieldset>
+          <p class="pform">Value for Money</p>
+          <div class="fqual">
+            <label
+              ><input
+                type="radio"
+                name="value"
+                id="exc3"
+                value="excellent"
+                class="input-radio"
+              />Excellent</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="value"
+                id="good3"
+                value="good"
+                class="input-radio"
+              />Good</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="value"
+                id="avg3"
+                value="average"
+                class="input-radio"
+              />Average</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="value"
+                id="dis3"
+                value="dissatisfied"
+                class="input-radio"
+              />Dissatisfied</label
+            >
+          </div>
+        </fieldset>
+        <fieldset>
+          <p class="pform">Any comments, questions or suggestions?</p>
+          <textarea
+            id="comments"
+            name="comments"
+            placeholder="Your answer"
+            class="input-textarea"
+          ></textarea>
+        </fieldset>
+        <fieldset class="">
+          <p class="rate-tit">How much would you like to rate us?</p>
+          <div class="star-rating">
+            <div class="star-button" onclick="rateItem(this, 1)">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="star-button" onclick="rateItem(this, 2)">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="star-button" onclick="rateItem(this, 3)">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="star-button" onclick="rateItem(this, 4)">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="star-button" onclick="rateItem(this, 5)">
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </fieldset>
+      </form>
     </div>
-</body>
+
+    <!-- The Modal -->
+    <div id="thankYouModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>Thank you for your feedback!</p>
+        <button onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+        document.getElementById("thankYouModal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("thankYouModal").style.display = "none";
+        document.getElementById("survey-form").reset();
+      }
+
+      window.onclick = function (event) {
+        if (event.target == document.getElementById("thankYouModal")) {
+          closeModal();
+        }
+      };
+    </script>
+  </body>
 </html>
