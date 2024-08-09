@@ -86,11 +86,14 @@
             margin: auto;
             background-color: white;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.8);
             margin-top: 50px;
+            margin-bottom: 50px;
         }
         h2 {
             text-align: center;
+            color: rgb(208, 50, 50); 
+            font-weight: bold;
         }
         form {
             display: flex;
@@ -98,23 +101,28 @@
         }
         label {
             margin: 10px 0 5px;
+              box-shadow: 0px 10px 40px -12px #b10f1f85;
+              font-weight: bold;
         }
         input, select, textarea {
             padding: 10px;
             margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            background-color: rgb(208, 50, 50, 0.8);
         }
         button {
             padding: 10px;
             border: none;
             border-radius: 5px;
-            background-color: #28a745;
+            background-color: rgb(208, 50, 50); 
             color: white;
             cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
+            font-weight: bold;
+          }
+          button:hover {
+              background-color: rgba(208, 50, 50, 1.1); 
+              box-shadow: 0 8px 30px -15px black;
         }
         .confirmation-message {
             display: none;
