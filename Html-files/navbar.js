@@ -1,14 +1,9 @@
-// Theme change icon toggling behavior
-let themeToggleIcon = document.getElementById("theme-toggle-icon");
-
-themeToggleIcon.addEventListener("click", function () {
+//Themechange icon toggling behaviour
+function toggleTheme() {
   document.body.classList.toggle("dark-theme");
-  if (document.body.classList.contains("dark-theme")) {
-    themeToggleIcon.style.backgroundImage = "url('../Images/navbar/sun.png')";
-  } else {
-    themeToggleIcon.style.backgroundImage = "url('../Images/navbar/moon.png')";
-  }
-});
+  document.body.classList.toggle(":root")
+}
+
 
 // Services dropdown
 const dropdownli = document.querySelector(".nav-item.dropdown");
