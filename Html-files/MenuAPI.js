@@ -1,6 +1,7 @@
 let iconcartspan = document.querySelector('.cart-subscript');
 const menuContainer = document.querySelector(".menu-container");
 let categories = [
+    "Indian",
     "lamb",
     "goat",
     "beef",
@@ -15,7 +16,6 @@ let categories = [
     "breakfast",
     "vegetarian",
     "miscellaneous",
-    "Indian",
     "Italian",
     "Mexican",
     "Chinese",
@@ -356,3 +356,24 @@ async function getMealsByCategory(category) {
         return data.meals || [];
     }
 }
+
+
+
+
+async function getMealsByCategory(category) {
+    if (category.toLowerCase() === 'indian') {
+        return [
+            { strMeal: "kadhai paneer", strMealThumb: "../Images/paneer.jpg", idMeal: "c1" },
+            { strMeal: "Makhni daal", strMealThumb: "../Images/daal.jpg", idMeal: "c2" },
+             { strMeal: "curry", strMealThumb: "../Images/curry.jpg", idMeal: "c3" },
+             { strMeal: "mix veg", strMealThumb: "../Images/mix veg.jpg", idMeal: "c3" },
+            { strMeal: "chole bhature", strMealThumb: "../Images/chole.jpg", idMeal: "c4" },
+            { strMeal: "soya chaap", strMealThumb: "../Images/chaap.jpg", idMeal: "c5" },
+        ];
+      }  else{
+            const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`;
+            const response = await fetch(url);
+            const data = await response.json();
+            return data.meals || [];
+        }
+    }
