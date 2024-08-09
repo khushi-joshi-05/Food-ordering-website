@@ -41,6 +41,31 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Get themeToggleIcon element
+let themeToggleIcon = document.getElementById("theme-toggle-icon");
+
+// Load theme from localStorage
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme === "dark") {
+  document.body.classList.add("dark-theme");
+  themeToggleIcon.src = "../Images/navbar/sun.png";
+} else {
+  document.body.classList.remove("dark-theme");
+  themeToggleIcon.src = "../Images/navbar/moon.png";
+}
+
+// Toggle theme and save to localStorage
+themeToggleIcon.addEventListener("click", function () {
+  document.body.classList.toggle("dark-theme");
+  
+  if (document.body.classList.contains("dark-theme")) {
+    themeToggleIcon.src = "../Images/navbar/sun.png";
+    localStorage.setItem("theme", "dark");
+  } else {
+    themeToggleIcon.src = "../Images/navbar/moon.png";
+    localStorage.setItem("theme", "light");
+  }
+});
 /*Refresher*/
 document.addEventListener('DOMContentLoaded', function() {
   const caduceus = document.getElementById('caduceus');
@@ -67,3 +92,17 @@ function displayVisitorCount() {
 }
 document.addEventListener('DOMContentLoaded', displayVisitorCount);
 
+//Themechange icon toggling behaviour
+let themeToggleIcon = document.getElementById("theme-toggle-icon");
+let themeToggleLogo = document.getElementById("theme-toggle-logo");
+themeToggleIcon.addEventListener("click", function () {
+  document.body.classList.toggle("dark-theme");
+  document.body.classList.toggle(":root")
+  if (document.body.classList.contains("dark-theme")) {
+    themeToggleIcon.src = "Images/navbar/sun.png";
+    themeToggleLogo.src = "Images/logo/Logo-Dark.png";
+  } else {
+    themeToggleIcon.src = "Images/navbar/moon.png";
+    themeToggleLogo.src="Images/logo/Logo-Light.png";
+  }
+});

@@ -47,6 +47,8 @@
     <link rel="stylesheet" href="../Css-files/scroll-top-button.css" />
     <link rel="stylesheet" href="../Css-files/navbar.css" />
     <link rel="stylesheet" href="../Css-files/footer.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <script href="../script.js" ></script>
     <!-- OWN CSS -->
     <link id="theme-link" rel="stylesheet" href="/Css-files/offers.css" />
     <style>
@@ -211,7 +213,74 @@
 
 
 
+
 }
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f6f5f5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+}
+
+#preloader-video {
+    width: 200%; 
+    height: auto; 
+    max-width: 600px; 
+}
+
+
+@media (max-width: 780px) {
+   
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 48%;
+    height: 48%;
+    background: #f6f5f5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+}
+#preloader-video {
+    width: 100%; 
+    height: auto; 
+    max-width: 600px; 
+}
+}
+
+
+    </style>
+    
+  </head>
+
+  <body
+    data-bs-spy="scroll"
+    data-bs-target=".navbar"
+    data-bs-offset="100"
+    onload="blinker();"
+  >
+
+      <!-- Progress bar -->
+      <div id="progressBar"></div>
+      <script>
+          window.onscroll = function () {
+              var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+              var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+              var scrolled = (winScroll / height) * 100;
+              document.getElementById("progressBar").style.width = scrolled + "%";
+          };
+      </script>
+      <!-- end -->
 
 .circle {
       position: absolute;
@@ -313,7 +382,7 @@
         <div class="order-0 ml-auto p-2">
           <img
             class="nav-link"
-            src="../Images/navbar/sun.png"
+            src="../Images/navbar/moon.png"
             id="theme-toggle-icon"
             alt="theme toggler button"
           />
@@ -696,6 +765,28 @@
     </script>
     <script src="top.js"></script>
     <script src="navbar.js"></script>
+
+    <div id="preloader">
+      <video autoplay muted loop id="preloader-video">
+          <source src="/preloader.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+  </div>
+  <script>
+     window.addEventListener('load', function() {
+  const video = document.getElementById('preloader-video');
+  video.playbackRate = 1; 
+
+  setTimeout(function() {
+      const preloader = document.getElementById('preloader');
+      preloader.style.opacity = '0'; 
+      setTimeout(function() {
+          preloader.style.display = 'none'; 
+      }, 500); 
+  }, 3000); 
+});
+
+  </script>
 
     <div class="circle-container">
       <div class="circle"></div>
