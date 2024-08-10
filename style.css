@@ -422,8 +422,8 @@ body {
 
 .menu_items .items {
   text-align: center;
-  max-height: 370px;
-  background-color: var(--menu-item-background);
+  max-height: 420px;
+  background-color: whitesmoke;
   border: 3px solid var(--border-color);
   font-family: "Bree Serif", serif;
   transition: 0.2s all ease-in;
