@@ -194,7 +194,7 @@ ul {
 }
 
 .center-links .nav-item .dropdown-menu {
-  background-color: var(--drop-bg);
+  background-color: white;
   color: var(--a);
   border-radius: 0;
   border: none;
