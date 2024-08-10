@@ -61,7 +61,7 @@
 /* Navbar */
 .navbar {
   /* --bs-navbar-color: var(--a); */
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   gap: 10px;
 
   --primary-bg-color: #fff;
@@ -73,7 +73,7 @@
 
 /* Navbar Styles */
 .navbar {
-  background-color: var(--primary-bg-color);
+  /* background-color: var(--primary-bg-color); */
   color: var(--primary-text-color);
   padding: 0 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -106,7 +106,7 @@
 
 .nav-link {
 
-  color:var(--a)
+  color:var(--a);
 
   color: var(--primary-text-color);
   padding: 4px 8px;
