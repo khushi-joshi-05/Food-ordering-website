@@ -25,7 +25,10 @@
     <link rel="stylesheet" href="Css-files/scroll-top-button.css">
     <link rel="stylesheet" href="Css-files/navbar.css">
     <link rel="stylesheet" href="Css-files/footer.css">
-       <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="Css-files/mode-toggler.css">
+    <link rel="stylesheet" href="./style.css">
+
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="Css-files/googletranslate.css">
     <!-- Sun Icon -->
@@ -52,8 +55,8 @@
         }
         .home-ali {
     text-align: center;
-    background-color: #f0f0f0; /* Change this to your desired background color */
-    padding: 20px; /* Optional: Add some padding for better spacing */
+    background-color: #f0f0f0;
+    padding: 20px; 
     align-items: center;
 
     @media (max-width: 768px) {
@@ -63,10 +66,153 @@
         
     }
 }
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f6f5f5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+}
+
+#preloader-video {
+    width: 200%; 
+    height: auto; 
+    max-width: 600px; 
+}
+
+
+@media (max-width: 780px) {
+   
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 48%;
+    height: 48%;
+    background: #f6f5f5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+}
+#preloader-video {
+    width: 100%; 
+    height: auto; 
+    max-width: 600px; 
+}
+}
+.circle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(255, 0, 0, 0.466), rgba(255, 52, 52, 0.5));
+      transition: transform 0.1s, left 0.1s, top 0.1s;
+      box-shadow: 0 0 20px #faff64,
+        0 0 60px #f52323,
+        0 0 100px #ff0000;
+        animation: colors 1s infinite;
+  transform: translate(-50%, -50%);
+    }
+
+    .circle-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    @media (max-width: 724px) {
+      .circle-container{
+        display: none;
+      }
+    }
     </style>
 </head>
 
 <body>
+
+    <div class="circle-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const coords = { x: 0, y: 0 };
+          const circles = document.querySelectorAll(".circle");
+    
+          circles.forEach(function (circle) {
+            circle.x = 0;
+            circle.y = 0;
+          });
+    
+          window.addEventListener("mousemove", function (e) {
+            coords.x = e.pageX;
+            coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+          });
+    
+          function animateCircles() {
+            let x = coords.x;
+            let y = coords.y;
+    
+            circles.forEach(function (circle, index) {
+              circle.style.left = `${x - 12}px`;
+              circle.style.top = `${y - 12}px`;
+              circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+    
+              const nextCircle = circles[index + 1] || circles[0];
+              circle.x = x;
+              circle.y = y;
+    
+              x += (nextCircle.x - x) * 0.25;
+              y += (nextCircle.y - y) * 0.25;
+            });
+    
+            requestAnimationFrame(animateCircles);
+          }
+    
+          animateCircles();
+        });
+      </script>
+
     <div class="visitor-counter">
         <div>Visitors</div>
         <div class="website-counter"></div>
@@ -82,33 +228,58 @@
         };
     </script>
     <!-- end -->
-    <div id="loader-wrapper">
+    <!-- <div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
+    </div> -->
+
+    <div id="preloader">
+        <video autoplay muted loop id="preloader-video">
+            <source src="/preloader.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
+    <script>
+       window.addEventListener('load', function() {
+    const video = document.getElementById('preloader-video');
+    video.playbackRate = 1; 
+
+    setTimeout(function() {
+        const preloader = document.getElementById('preloader');
+        preloader.style.opacity = '0'; 
+        setTimeout(function() {
+            preloader.style.display = 'none'; 
+        }, 500); 
+    }, 3000); 
+});
+
+    </script>
+
+
     <div id="caduceus-container">
+
         <div class="rope"></div>
         <img id="caduceus" src="Images/image.png" alt="Caduceus">
-      </div>
+      </div> --> 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <!-- Brand Logo -->
 
 
+                <img src="./Images/logo/Foodielogo.png" height="30" alt="Brand Logo" >
             <a href="index.html">
-                <img id="theme-toggle-logo"  src="Images/logo/Logo-Light.png" height="70" width="70"  alt="Brand Logo">
+                <img id="theme-toggle-logo" 
+                style="height: 50px; width: 50px;"
+                src="Images/logo/Logo-Light.png"  alt="Brand Logo">
 
 
             </a>
 
-            <!-- Navbar Toggler -->
-
-            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target=".hamburgeritems" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <!-- Centered Navbar Links -->
-            <div class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
+            <div 
+            style=" margin-left: 25vw;"
+            class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0">
                 <ul class="navbar-nav center-links">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html">
@@ -177,11 +348,59 @@
                 </ul>
             </div>
             <!-- Theme Toggle Icon -->
-            <div class="order-0 ml-auto p-2">
-
-                <img class="nav-link" src="Images/navbar/moon.png" id="theme-toggle-icon" alt="theme toggler button">
 
 
+                <img class="nav-link" src="./Images/navbar/moon.png" id="theme-toggle-icon" alt="theme toggler button">
+
+            <span class="slider" style="width: 40px; height: 20px; display: none;"></span> 
+
+
+            <div id="sun-moon-mode-toggler" class="toggle-container" >
+              <input type="checkbox" id="themeToggle" class="switch-checkbox" onclick="toggleTheme()">
+              <label  id="themeChangeToggle" class="theme-switch" for="themeToggle">
+              <div class="toggle-button">
+                  <span class="light-mode-icon"><img src="Images/navbar/sun.png" style = "display: block;"></span>
+                  <span class="dark-mode-icon"><img src="Images/navbar/moon.png"style = "display: block;"></span>
+              </div>
+              </label>
+          </div>
+
+                        
+            <!-- Navbar Toggler -->
+    
+            <div class="mobile-menu ">
+                <div class="mobile-menu__trigger"><span></span></div>
+                <a class="page-scroll" href="index.html">
+                    <i class="fa-solid fa-house"></i> 
+                    Home
+                </a>
+                <a class="page-scroll" href="Html-files/menu.html">
+                    <i class="fa-solid fa-bars"></i> Menu
+                </a>
+                <a class="page-scroll" href="Html-files/services.html">
+                    <i class="fa-solid fa-gear"></i> Services
+                </a>
+                <a class="page-scroll active-link" href="Html-files/login.html">
+                    <i class="fa-solid fa-phone"></i> Contact Us
+                </a>
+                <a class="page-scroll active-link" href="Html-files/login.html">
+                    <i class="fa-solid fa-question"></i> FAQ
+                </a>
+                <a class="page-scroll active-link" href="Html-files/login.html">
+                    <i class="fa-solid fa-tag"></i> Offers
+                </a>
+                <a class="page-scroll active-link" href="Html-files/login.html">
+                    <i class="fa-solid fa-star"></i> Rate Us
+                </a>
+                <a class="page-scroll active-link" href="Html-files/login.html">
+                    <i class="fa-solid fa-sign-in"></i> Login
+                </a>
+                <a class="page-scroll" href="Html-files/signup.html">
+                    <i class="fa-solid fa-user"></i> Sign-Up
+                </a>
+                <a class="page-scroll" href="Html-files/cart.html">
+                    Cart <i class="fa-solid fa-cart-shopping"></i>
+                </a>
             </div>
 
             <!-- End Navbar Links -->
@@ -426,6 +645,7 @@
         .content {
             height: 2000px;
             background: linear-gradient(white, lightgray);
+            background: var(--background-color);
             
         }
     </style>
@@ -470,7 +690,7 @@
             }
             
             .card-1>.content {
-                color: white;
+                color: var(--text-color);
                 position: absolute;
                 top: 550px;
                 padding: 10px;
@@ -510,10 +730,11 @@
             .btn {
                 border: none;
                 padding: .7em 1.8em;
-                border-radius: 5px;
                 font-weight: 600;
+                border-radius: 2px;
                 cursor: pointer;
                 font-size: .8rem;
+                background-color: rgb(68, 67, 67);
             }
             
             .btn-card {
@@ -522,7 +743,7 @@
             }
             
             .btn-card:hover {
-                background: #59a10c;
+                background: #59a10cc9;
             }
             .free_delivery{
                 display: flex;
@@ -945,11 +1166,11 @@
     </div>
 
     <footer>
-        <div class="foot-panel1">
-            <div class="container-fluid py-5 ">
+        <div class="foot-panel1 w-100">
+            <div class="container-fluid py-5 px-0">
                 <div class="row justify-content-evenly gy-5">
-                    <div class="col-6 col-sm-3 col-md-2 col-xl-2 footer-content">
-                        <h5 class="mb-3" style="width: 100%; text-align: start;">See Also</h5>
+                    <div class="col-6 col-sm-3 col-md-2 col-xl-2">
+                        <h5 class="mb-3" style="margin-left: 70px;">See Also</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Home</a>
@@ -966,15 +1187,14 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="./Html-files/cart.html">Cart</a>
                             </li>
-                            
                             <li class="nav-item">
                                 <a class="nav-link" href="/Html-files/contributor.html">Our Contributors</a>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="col-6 col-sm-5 col-md-3 col-xl-3 footer-content">
-                        <h5 class="mb-3" style="width: 100%; text-align: start;">Exclusive Offers</h5>
+                    <div class="col-6 col-sm-5 col-md-3 col-xl-3">
+                        <h5 class="mb-3" style="margin-left: 90px;">Exclusive Offers</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a href="#" class="nav-link">Foodie Discounts</a>
@@ -992,7 +1212,7 @@
                                 <a class="nav-link" href="#">Early Access to New Recipes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">VIP Foodie Events</a>
+                                <a class="nav-link" href="/Html-files/offers/vip-food-event.html">VIP Foodie Events</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/Html-files/offers/culinary-experience.html">Personalized Culinary Experiences</a>
@@ -1001,8 +1221,8 @@
                     </div>
 
 
-                    <div class="col-6 col-sm-4 col-md-4 col-xl-3 footer-content">
-                        <h5 class="mb-3" style="width: 100%; text-align: start;">Payment Products</h5>
+                    <div class="col-6 col-sm-4 col-md-4 col-xl-3">
+                        <h5 class="mb-3" style="margin-left: 70px;">Payment Products</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a href="" class="nav-link">Secure Checkout</a>
@@ -1026,67 +1246,41 @@
                     </div>
 
 
-                    <div class="col-6 col-md-3 col-xl-4 footer-content">
+                    <div class="col-6 col-md-3 col-xl-4">
                         <form id="contactForm" action="https://formsubmit.co/xyz@gmail.com" method="POST">
                             <h3 class="text-center mb-3">Contact Us!</h3>
-                            <input type="email" id="footer-email" name="email" placeholder="Your Email" class="text-center form-control mb-2" required>
-                            <textarea id="footer-message" name="footer-message" placeholder="Your Message" class="text-center form-control mb-2" required></textarea>
+                            <input type="email" id="footer-email" name="email" placeholder="Your Email"
+                                class="text-center form-control mb-2" required>
+                            <textarea id="footer-message" name="footer-message" placeholder="Your Message"
+                                class="text-center form-control mb-2" required></textarea>
                             <div class="d-grid gap-2 col-12">
                                 <button type="submit" class="btn btn-danger">Send Message</button>
                             </div>
                         </form>
                     </div>
 
-
-
-                </div>
-            </div>
+               </div>
         </div>
+    </div>
 
-        <div class="foot-panel2">
-            <div class="media-handles pt-3 pb-2">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a class="fa-brands fa-facebook" href="https://facebook.com" target="_blank"></a>
-                    <a class="fa-brands fa-instagram" href="https://instagram.com" target="_blank"></a>
-                    <a class="fa-brands fa-x-twitter" href="https://twitter.com" target="_blank"></a>
-                    <a class="fa-brands fa-snapchat" href="https://snapchat.com" target="_blank"></a>
-                    <a class="fa-brands fa-youtube" href="https://youtube.com" target="_blank"></a>
-                    <a class="fa-brands fa-linkedin" href="https://linkedin.com" target="_blank"></a>
-                    <a class="fa-brands fa-github" href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank"></a>
-                    <a class="fa-brands fa-discord" href="https://discord.com/invite/sybYafYA" target="_blank"></a>
-                </div>
-                <p class="text"> Stay connected with us on social media for the latest updates, recipes, and foodie adventures. </p>
-                <div>
-                    Give your valuable
-                    <Link to="">
-                    <a href="/Html-files/feedback.html"><b>feedback!</b></a>
-                    </Link>
-                </div>
+    <div class="foot-panel2">
+        <div class="container">
+            <h4 class="follow-us">Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/khushi-joshi-05/Food-ordering-website" target="_blank" class="github"><i class="fab fa-github"></i></a>
+                <a href="https://discord.com/invite/sybYafYA" target="_blank" class="discord"><i class="fab fa-discord"></i></a>
             </div>
-            <div class="copyright py-1">
-                &copy;
-                <span id="copyright-year"></span> Foodies - All Rights Reserved |
-                <span id="terms"></span>
+            <p class="social-text">Stay connected with us on social media for the latest updates, recipes, and foodie adventures.</p>
+        </div>
+    </div>
 
-                <Link to="" >
-                    <a href="/Html-files/terms.html" class="legal-pages">Terms and Conditions</a> |
-                </Link>
-                <span id="privacy"></span>
-                <Link to="" >
-                    <a href="/Html-files/privacy.html" class="legal-pages">Privacy Policy</a> |
-
-                </Link>
-
-                <span id="Licensing"></span>
-                <Link to="" >
-                    <a href="/Html-files/Licensing.html" class="legal-pages">Licensing</a> |
-                </Link>
-
-                <span id="author">
-                    <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank" class="legal-pages">Khushi Joshi</a>
-                </span>
-            </div>
+    <div class="copyright">
+        <div class="container">
+            <p>&copy; <span id="copyright-year"></span> Foodies - All Rights Reserved | <a href="https://www.linkedin.com/in/khushi-joshi-95a587256/" target="_blank">Khushi Joshi</a></p>
         </div>
     </footer>
 

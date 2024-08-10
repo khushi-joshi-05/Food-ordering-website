@@ -54,6 +54,21 @@
             text-shadow: #FC0 1px 0 6px;
             text-decoration: none;
         }
+
+        .Lastupdate {
+          margin-top: 18px;
+          font-size: 20px !important;
+          font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, serif !important;
+          font-weight: 500;
+          margin-bottom: 15px;
+          color: rgb(35, 35, 35) !important;
+        }
+
+        #last-updated-date {
+          font-size: 18px;
+          color: rgb(27, 27, 27) !important;
+        }
+
     </style>
      <style> #progressBar {
       position: fixed;
@@ -64,6 +79,80 @@
       background-color: #b80d0d;
       z-index: 9999;
   }
+  
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f6f5f5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+}
+
+#preloader-video {
+    width: 200%; 
+    height: auto; 
+    max-width: 600px; 
+}
+
+
+@media (max-width: 780px) {
+   
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 48%;
+    height: 48%;
+    background: #f6f5f5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+}
+#preloader-video {
+    width: 100%; 
+    height: auto; 
+    max-width: 600px; 
+}
+}
+
+
+
+  .circle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(255, 0, 0, 0.466), rgba(255, 52, 52, 0.5));
+      transition: transform 0.1s, left 0.1s, top 0.1s;
+      box-shadow: 0 0 20px #faff64,
+        0 0 60px #f52323,
+        0 0 100px #ff0000;
+        animation: colors 1s infinite;
+  transform: translate(-50%, -50%);
+    }
+
+    .circle-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    @media (max-width: 724px) {
+      .circle-container{
+        display: none;
+      }
+    }
 </style>
 </head>
 
@@ -170,6 +259,10 @@
         <main class="main-container">
             <h1>PRIVACY POLICY</h1>
             <hr>
+            <div class="Lastupdate">
+              Last updated: <span id="last-updated-date"></span>
+            </div>
+
             <section class="pri-section">
                 <p>Foodie is a food ordering website that aims to provide users with a seamless experience for ordering food online, taking orders for pickup, and booking tables for dining in. The website showcases the quality and specialties of the food offered, along with a variety of services to cater to different user preferences.</p>
             </section>
@@ -343,6 +436,45 @@
         </div>
     </footer>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          const loader = document.getElementById("loader");
+          if (loader) {
+            loader.style.display = "none";
+          } else {
+            console.error("Element with ID 'loader' not found.");
+          }
+        }, 500);
+
+        // Update the date dynamically
+        function updateLastUpdatedDate() {
+          const dateElement = document.getElementById("last-updated-date");
+          const now = new Date();
+          const day = now.getDate();
+          const monthNames = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+          ];
+          const month = monthNames[now.getMonth()]; // Get the full month name
+          const year = now.getFullYear();
+          dateElement.textContent = `${month} ${day}, ${year}`;
+        }
+
+        // Update the date weekly
+        function updateWeekly() {
+          const now = new Date();
+          const dayOfWeek = now.getDay(); // 0 (Sunday) to 6 (Saturday)
+          const timeUntilNextUpdate = (7 - dayOfWeek) * 24 * 60 * 60 * 1000; // Time until next Sunday
+          updateLastUpdatedDate();
+          setTimeout(updateWeekly, timeUntilNextUpdate);
+        }
+
+        // Initialize weekly updates
+        updateWeekly();
+      });
+    </script>
+
     <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"
             class="arrow">
@@ -386,6 +518,99 @@
             "allowedOrigins": []
         });
     </script>
+
+<div id="preloader">
+  <video autoplay muted loop id="preloader-video">
+      <source src="/preloader.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+</div>
+<script>
+ window.addEventListener('load', function() {
+const video = document.getElementById('preloader-video');
+video.playbackRate = 1; 
+
+setTimeout(function() {
+  const preloader = document.getElementById('preloader');
+  preloader.style.opacity = '0'; 
+  setTimeout(function() {
+      preloader.style.display = 'none'; 
+  }, 500); 
+}, 3000); 
+});
+
+</script>   
+<div class="circle-container">
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const coords = { x: 0, y: 0 };
+    const circles = document.querySelectorAll(".circle");
+
+    circles.forEach(function (circle) {
+      circle.x = 0;
+      circle.y = 0;
+    });
+
+    window.addEventListener("mousemove", function (e) {
+      coords.x = e.pageX;
+      coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+    });
+
+    function animateCircles() {
+      let x = coords.x;
+      let y = coords.y;
+
+      circles.forEach(function (circle, index) {
+        circle.style.left = `${x - 12}px`;
+        circle.style.top = `${y - 12}px`;
+        circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+
+        const nextCircle = circles[index + 1] || circles[0];
+        circle.x = x;
+        circle.y = y;
+
+        x += (nextCircle.x - x) * 0.25;
+        y += (nextCircle.y - y) * 0.25;
+      });
+
+      requestAnimationFrame(animateCircles);
+    }
+
+    animateCircles();
+  });
+</script>
+
 
     
 
