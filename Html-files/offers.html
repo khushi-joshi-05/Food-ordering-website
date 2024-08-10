@@ -10,7 +10,34 @@
     <title>Offers-Food Ordering Website</title>
 
     <!-- bootstrap CDN -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../Favicon image/favicon.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap"
+      rel="stylesheet"
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+
     />
     <link rel="shortcut icon" type="image/x-icon" href="../Favicon image/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap" rel="stylesheet" />
@@ -36,7 +63,9 @@
         }
 
 .card:hover {
-  transform: translateY(-5px); /* Move the card up slightly on hover */
+
+  /* transform: translateY(-5px); Move the card up slightly on hover */
+
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
@@ -376,61 +405,63 @@
             </div>
         </div>
     </nav>
-    <!-- Main Content -->
-    <section id="explore-food" style="margin-top: 100px">
-        <div class="container">
-            <div class="row justify-content-center">
 
 
-			<!-- Card 1 -->
-			<div class="col-lg-4 col-md-6 mb-4">
-				<div class="card">
-					<img src="https://i.pinimg.com/736x/c1/8d/a8/c18da8cc82e3ba4cfe9cd998ca783847.jpg"
-						class="card-img-top" alt="Offer 1" style="height: 200px; object-fit: cover; border-bottom: 5px solid; border-bottom-style: double;">
-					<div class="card-body">
-						<h5 class="card-title">50% Off on Burgers</h5>
-						<p class="card-text">Enjoy a 50% discount on all burgers today!</p>
-					</div>
-					<div class="card-footer">
-						<a href="#" class="btn btn-apply">Apply Now</a>
-					</div>
-				</div>
-			</div>
+<!-- Main Content -->
+<section id="explore-food" style="margin-top: 100px">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+              <img src="https://www.bkcoupons.sg/wp-content/uploads/2022/05/tasty-deals.jpg.webp"
+                   class="d-block w-100" alt="50% Off on Burgers">
+              <div class="carousel-caption d-none d-md-block">
+                  <div class="caption-box">
+                    
+                      <h5>50% Off on Burgers</h5>
+                      <p>Enjoy a 50% discount on all burgers today!</p>
+                      
+                      <a href="#" class="btn btn-apply">Apply Now</a>
+                  </div>
+              </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+              <img src="https://previews.123rf.com/images/rumkavodki/rumkavodki2005/rumkavodki200500063/152743887-online-food-order-website-banner-with-delivery-courier-in-mask.jpg"
+                   class="d-block w-100" alt="Free Delivery">
+              <div class="carousel-caption d-none d-md-block">
+                  <div class="caption-box">
+                      <h5>Free Delivery</h5>
+                      <p>Get free delivery on orders above $30!</p>
+                      <a href="#" class="btn btn-apply">Apply Now</a>
+                  </div>
+              </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+              <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fast-food-banner-template-design-925774928d842fc1ac0186b839a10444_screen.jpg?ts=1689218877"
+                   class="d-block w-100" alt="Combo Deal">
+              <div class="carousel-caption d-none d-md-block">
+                  <div class="caption-box">
+                      <h5>Combo Deal</h5>
+                      <p>Buy 1 get 1 free on selected combos!</p>
+                      <a href="#" class="btn btn-apply">Apply Now</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+  </div>
+</section>
 
-			<!-- Card 2 -->
-			<div class="col-lg-4 col-md-6 mb-4">
-				<div class="card">
-					<img src="https://png.pngtree.com/png-clipart/20230120/ourmid/pngtree-free-delivery-truck-icon-png-image_6565580.png"
-						class="card-img-top" alt="Offer 1" style="height: 200px; object-fit: cover; border-bottom: 5px solid; border-bottom-style: double;">
-					<div class="card-body">
-						<h5 class="card-title">Free Delivery</h5>
-						<p class="card-text">Get free delivery on orders above $30!</p>
-					</div>
-					<div class="card-footer">
-						<a href="#" class="btn btn-apply">Apply Now</a>
-					</div>
-				</div>
-			</div>
 
-			<!-- Card 3 -->
-			<div class="col-lg-4 col-md-6 mb-4">
-				<div class="card">
-					<img src="https://st5.depositphotos.com/79030344/67388/v/450/depositphotos_673883044-stock-illustration-combo-offer-banner-design-label.jpg"
-						class="card-img-top" alt="Offer 1" style="height: 200px; object-fit: cover; border-bottom: 5px solid; border-bottom-style: double;">
-					<div class="card-body">
-						<h5 class="card-title">Combo Deal</h5>
-						<p class="card-text">Buy 1 get 1 free on selected combos!</p>
-					</div>
-					<div class="card-footer">
-						<a href="#" class="btn btn-apply">Apply Now</a>
-					</div>
-				</div>
-			</div>
-
-
-            </div>
-        </div>
-    </section>
 
     <!--explore food section-->
     <section id="explore-food">
@@ -499,83 +530,57 @@
         </div>
     </section>
 
-    <!--  testimonial section -->
-    <section id="testimonial">
-        <div class="wrapper testimonial-section">
-            <div class="container text-center">
-                <div class="text-center pb-4">
-                    <h2 class="text-dark">Have A Great Taste !!</h2>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-12 col-lg-10 offset-lg-1">
-                        <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="carousel-caption">
-                                        <img decoding="async" src="../Html-files/assets/panipuri.jpg" />
-                                        <p>
-                                            "crispy shells, spicy tangy water, ultimate flavor explosion! 🌶️🌟💥"
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="carousel-caption">
-                                        <img decoding="async" src="../Html-files/assets/bruchetta.jpg" />
-                                        <p>
-                                            " Fresh tomatoes, basil, garlic on toasted bread. Italian delight! 🍅🍞"
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="carousel-caption">
-                                        <img decoding="async" src="../Html-files/assets/Ramen.jpg" />
-                                        <p>
-                                            "Savory broth, tender noodles, vibrant toppings. Japanese comfort food! 🍜"
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                            <button class="next" onclick="changeSlide(1)">&#10095;</button>
-                        </div>
-                    </div>
-
-                </div>
+    <!-- Testimonial section -->
+<section id="testimonial">
+  <div class="wrapper testimonial-section">
+    <div class="container text-center">
+      <div class="text-center pb-4">
+        <h2 class="text-dark">Have A Great Taste !!</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-10 offset-lg-1">
+          <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img decoding="async" src="assets/panipuri.jpg" class="d-block w-100 img2" alt="Panipuri">
+                <div class="carousel-caption2">
+                  <p>"crispy shells, spicy tangy water, ultimate flavor explosion! 🌶️🌟💥"</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img decoding="async" src="../Html-files/assets/bruchetta.jpg" class="d-block w-100 img2" alt="Bruchetta">
+                <div class="carousel-caption2">
+                  <p>"Fresh tomatoes, basil, garlic on toasted bread. Italian delight! 🍅🍞"</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img decoding="async" src="../Html-files/assets/ramen.jpg" class="d-block w-100 img2" alt="Ramen">
+                <div class="carousel-caption2">
+                  <p>"Savory broth, tender noodles, vibrant toppings. Japanese comfort food! 🍜"</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </button>
+          </div>
         </div>
-        <script>
-            let currentSlide = 0;
-            const slides = document.querySelectorAll('.carousel-item');
+      </div>
+    </div>
+  </div>
+</section>
 
-            function showSlide(index) {
-                slides.forEach((slide, i) => {
-                    slide.classList.remove('active');
-                    if (i === index) {
-                        slide.classList.add('active');
-                    }
-                });
-            }
 
-            function changeSlide(direction) {
-                currentSlide += direction;
-                if (currentSlide < 0) {
-                    currentSlide = slides.length - 1;
-                } else if (currentSlide >= slides.length) {
-                    currentSlide = 0;
-                }
-                showSlide(currentSlide);
-            }
-
-            // Initialize the first slide
-            showSlide(currentSlide);
-        </script>
-    </section>
 
     <!-- footer section -->
     <footer>

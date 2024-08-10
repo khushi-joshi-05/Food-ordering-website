@@ -209,10 +209,10 @@ p {
   color: black;
 }
 
-.wrapper {
+/* .wrapper {
   padding-top: 4.25rem;
   padding-bottom: 4.25rem;
-}
+} */
 
 .text-content {
   width: 70%;
@@ -430,7 +430,12 @@ nav {
  explore food section Design
 ==========================================
 */
-
+.offers .card-body{
+  background-color: #fff4f485;
+}
+.explore-food{
+  margin-top: 20px;
+}
 .explore-food .card{
 
   background-color:transparent;
@@ -441,6 +446,10 @@ nav {
 .explore-food .card :hover {
   transform: scale(1.01);
   transition:all .4s ease-in;
+}
+
+.explore-food .card:hover p{
+  color:#1E1D23;
 }
 
 .explore-food .card img {
@@ -487,7 +496,19 @@ nav {
 ==========================================
 */
 .testimonial-section {
-  background: var(--background-color);
+
+  background: lavender;
+  height: 60% !important;
+  margin-top: 20px;
+} 
+
+.img2{
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px !important;
+  height: 500px !important;
+
+
 }
 
 .testimonial-section h2 {
@@ -496,7 +517,7 @@ nav {
 
 .testimonial-section .carousel-item {
   margin-top: 3rem;
-  padding: 10rem 3.125rem;
+  padding: 5rem 1.125rem;
   color: white;
   background-color: rgb(251, 251, 251);
   border-radius: 0.9375rem;
@@ -846,6 +867,84 @@ textarea {
 }
 }
 
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  text-align: center;
+  padding: 10px;
+}
+
+.caption-box {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px 20px;
+  text-align: left;
+}
+
+.caption-box a{
+  height:50px;
+}
+
+.carousel-caption h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+  color: #1E1D23;
+}
+
+.btn-apply {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-apply:hover {
+  background-color: darkred;
+}
+.carousel-item img{
+  width:1920px;
+  height:600px;
+}
+
+.carousel-caption2 {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  text-align: center;
+  padding: 10px;
+  width: 80%;
+  border-radius: 10px;
+}
+.box2{
+  height:300px !important;
+  width: 300px !important;
+}
+.testimonial-section .container{
+  scale:0.8;
+}
+.carousel-caption2 p {
+  margin: 0;
+  font-size: 1rem;
+}
+=======
 /* added */
 
 .main-btn:hover {
@@ -1067,5 +1166,6 @@ textarea {
     padding: 13rem 3.125rem;
   }
 }
+
 
 
