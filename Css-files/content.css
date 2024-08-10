@@ -2,11 +2,53 @@
 	margin: 0px;
 	padding: 0px;
 }
-
-body {
-	background-color: black;
-	overflow-x: hidden;
+:root {
+    --background-color: white;
+    --text-color: black;
+    --primary-color: rgb(204, 12, 12);
+    --secondary-color: rgb(177, 0, 0);
+    --tertiary-color: orangered;
+    --container-bg: rgb(224, 224, 252);
+    --filter-bg: transparent;
+    --contact-bg: rgb(208, 50, 50);
+    --button-bg: #ec0f25e3;
+    --button-hover-bg: rgba(208, 50, 50, 0.9);
+    --card-border: rgb(186, 186, 201);
+    --card-shadow: rgba(224, 224, 252, 0.678);
+    --link-color: rgb(177, 0, 0);
+    --pagination-bg: white;
+    --pagination-active-bg: rgb(177, 0, 0);
+    --pagination-btn-color: rgb(177, 0, 0);
+    --pagination-prev-next-bg: rgb(204, 12, 12);
+    --filter-text-color: black;
+    --filter-border-color: #dc3545;
 }
+
+.dark-theme  {
+    --background-color: black;
+    --text-color: white;
+    --primary-color: rgb(204, 12, 12);
+    --secondary-color: rgb(177, 0, 0);
+    --tertiary-color: orangered;
+    --container-bg: rgb(35, 35, 35);
+    --filter-bg: rgba(0, 0, 0, 0.6);
+    --contact-bg: rgb(208, 50, 50);
+    --button-bg: #ec0f25e3;
+    --button-hover-bg: rgba(208, 50, 50, 0.9);
+    --card-border: rgb(100, 100, 100);
+    --card-shadow: rgba(0, 0, 0, 0.5);
+    --link-color: rgb(177, 0, 0);
+    --pagination-bg: #2e2e2e;
+    --pagination-active-bg: rgb(177, 0, 0);
+    --pagination-btn-color: rgb(177, 0, 0);
+    --pagination-prev-next-bg: rgb(204, 12, 12);
+    --filter-text-color: white;
+    --filter-border-color: #dc3545;
+}
+/* body {
+	background-color: var(--background-color);
+	overflow-x: hidden;
+} */
 
 /* MENU + LOGIN + SIGNUP + CONTACT PAGE */
 .head_container {
@@ -42,7 +84,7 @@ body {
 /* MENU PAGE SPECIFICS */
 .menu-container {
 	padding: 55px 10px 30px 10px;
-	background-color: rgb(224, 224, 252);
+	background-color: var(--background-color)
 }
 
 .menu-container .container-fluid {
@@ -77,7 +119,7 @@ body {
 
 .menu-container .nav-pills .nav-link.active {
 	background-color: rgb(204, 12, 12);
-	color: white;
+	/* color: white; */
 }
 
 .menu-items .row {
@@ -275,6 +317,73 @@ body {
 }
 
 /* CONTACT US PAGE */
+
+.card{
+	color: #fff;
+	padding: 7%;
+	box-shadow: 0px 2px 10px #00000056;
+	background-color: rgb(208, 50, 50);
+	box-shadow: 0px 10px 50px #000000a4;
+	width: 90%;
+}
+
+.btn-submit {
+	width: 90%;
+	padding: 16px 0;
+	margin: 20px;
+	border: none;
+	border-radius: 8px;
+	outline: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 3px;
+	color: black;
+	background: #fff;
+	transition: 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+	background: #fff;
+	box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.663);
+}
+
+.textfield {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	margin: 20px 0px;
+	position: relative;
+}
+
+.textfield>label {
+	font-weight: bold;	
+	margin-bottom: 5px;
+}
+
+.textfield>input , .textfield>textarea{
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+	padding: 15px;
+	background: #E6E6FA;
+	color: #030707de;
+	font-size: 12pt;
+	box-shadow: 0px 2px 5px #00000056;
+	outline: none;
+	border: 1px solid #ddd;
+}
+
+.textfield>input::placeholder, .textfield>textarea::placeholder {
+	color: #000000;
+}
+
+.textfield>input:hover, .textfield>textarea:hover {
+	background: #fff;
+	box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.663);
+}
+
 .contact-wrapper{
 	background-color: rgb(208, 50, 50);
 }
@@ -287,7 +396,7 @@ body {
 .contact-wrapper .text{
 	font-size: 1rem;
 	line-height: 1.5;
-	color: #080808;
+	color: var(--text-color);
 	margin-bottom: 2rem;
 }
 
@@ -322,7 +431,7 @@ body {
 	align-items: center; /* Center items vertically */
 	margin-bottom: 20px;
 	padding: 15px;
-	background-color: #fff;
+	background-color: var(--background-color);
 	border-radius: 20px;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 	transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
@@ -421,7 +530,7 @@ body {
   }
 */
 .contact-form-wrapper {
-	background-color: white;
+	background-color:var(--container-bg);
 	padding: 30px 0;
   }
   
@@ -468,8 +577,6 @@ body {
   .thumbnail img {
 	max-width: 100%;
 	height: auto;
-	border-radius: 10px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   
 
@@ -668,7 +775,9 @@ body {
 .testimonal__container {
 	display: flex;
 }
-
+.nav-link {
+	color:var(--a)
+}
 .testimonal__card {
 	text-align: center;
 	padding: 2rem 3rem 2.5rem;
@@ -884,4 +993,42 @@ td {
 	background-color: #dc3545; 
 	cursor: pointer;
   }
+
+  /* added */
+  .menu-items .card {
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.menu-items .card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 0 10px rgba(224, 224, 252, 0.678); 
+}
+.menu-items .card .btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-items .card .btn:hover {
+    background-color: white; 
+    color: orangered; 
+    border-color: orangered; 
+}
+.menu-items .card-thumbnail img {
+    
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.menu-items .card-thumbnail img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+}
+
+.menu-items .items .caption {
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.menu-items .items .caption:hover {
+    color: orangered;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
   

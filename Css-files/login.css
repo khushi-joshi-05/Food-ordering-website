@@ -2,19 +2,27 @@
 
 .main-content-login {
   background-color: brown;
-  padding: 4rem 0;
+  /* padding: 4rem 0; */
+  /* added */
+  padding: 4rem 1.5rem;
+  text-align: center;
+
   font-family: 'Noto Sans', sans-serif;
 }
 .login-image {
   max-width: 100%;
   height: auto;
-  border-radius: 8px; /* Rounded corners for the image */
+  border-radius: 12px; /* Rounded corners for the image */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
-  transition: transform 0.3s ease-in-out; /* Smooth transform animation */
+  /* transition: transform 0.3s ease-in-out;  */
+  /* added */
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .login-image:hover {
   transform: scale(1.1); /* Scale up the image on hover */
+  /* added */
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Example animation for subtle background pattern */
@@ -46,7 +54,7 @@
   background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
   border-radius: 50%;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .login-image:hover::before {
@@ -80,6 +88,9 @@
 
 .card-body {
   padding: 7%;
+  /* added */
+  padding: 5%;
+  border-radius: 12px; 
 }
 
 .textfield {
@@ -94,6 +105,8 @@
 
 .textfield>label {
   font-weight: bold;
+  /* added */
+  margin-bottom: 5px;
 }
 
 .textfield>input {
@@ -105,7 +118,9 @@
   color: #030707de;
   font-size: 12pt;
   box-shadow: 0px 2px 5px #00000056;
-  outline: none;
+  outline: none;  
+  /* added */
+  border: 1px solid #ddd;
 }
 
 .textfield>input::placeholder {
@@ -118,6 +133,14 @@
 
 .right-login .row a{
   text-align: right;
+  /* added */
+  color: rgb(208, 50, 50); 
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+/* added */
+.right-login .row a:hover {
+  color: #a03030; 
 }
 
 .btn-login {
@@ -133,10 +156,15 @@
   color: white;
   background: rgb(208, 50, 50);
   box-shadow: 0px 10px 40px -12px #b10f1f85;
+
+  /* added */
+  transition: 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
 }
 
 .btn-login:hover {
   background: rgba(208, 50, 50, 0.9);
+  /* added */
+  box-shadow: 0 12px 50px -12px rgba(208, 50, 50, 0.6);
 }
 
 #login-hide {
@@ -192,3 +220,5 @@
 	font-size:13px;
 	font-weight: bold;
 }
+
+

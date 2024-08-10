@@ -183,6 +183,79 @@
     color: rgb(0, 0, 0);
 }
 
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f6f5f5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+}
+
+#preloader-video {
+    width: 200%; 
+    height: auto; 
+    max-width: 600px; 
+}
+
+
+@media (max-width: 780px) {
+   
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 48%;
+    height: 48%;
+    background: #f6f5f5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+}
+#preloader-video {
+    width: 100%; 
+    height: auto; 
+    max-width: 600px; 
+}
+}
+
+.circle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(255, 0, 0, 0.466), rgba(255, 52, 52, 0.5));
+      transition: transform 0.1s, left 0.1s, top 0.1s;
+      box-shadow: 0 0 20px #faff64,
+        0 0 60px #f52323,
+        0 0 100px #ff0000;
+        animation: colors 1s infinite;
+  transform: translate(-50%, -50%);
+    }
+
+    .circle-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    @media (max-width: 724px) {
+      .circle-container{
+        display: none;
+      }
+    }
+
     </style>
   
 
@@ -191,6 +264,78 @@
 </head>
 
 <body>
+
+    <div class="circle-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const coords = { x: 0, y: 0 };
+          const circles = document.querySelectorAll(".circle");
+    
+          circles.forEach(function (circle) {
+            circle.x = 0;
+            circle.y = 0;
+          });
+    
+          window.addEventListener("mousemove", function (e) {
+            coords.x = e.pageX;
+            coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+          });
+    
+          function animateCircles() {
+            let x = coords.x;
+            let y = coords.y;
+    
+            circles.forEach(function (circle, index) {
+              circle.style.left = `${x - 12}px`;
+              circle.style.top = `${y - 12}px`;
+              circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+    
+              const nextCircle = circles[index + 1] || circles[0];
+              circle.x = x;
+              circle.y = y;
+    
+              x += (nextCircle.x - x) * 0.25;
+              y += (nextCircle.y - y) * 0.25;
+            });
+    
+            requestAnimationFrame(animateCircles);
+          }
+    
+          animateCircles();
+        });
+      </script>
+
         <!-- Progress bar -->
         <div id="progressBar"></div>
         <script>
@@ -247,7 +392,7 @@
                         </ul>
                     </div>
                     <div class="order-0 ml-auto p-2">
-                        <img class="nav-link" src="../Images/navbar/sun.png" id="theme-toggle-icon" alt="theme toggler button">
+                        <img class="nav-link" src="../Images/navbar/moon.png" id="theme-toggle-icon" alt="theme toggler button">
                     </div>
                     <div class="collapse navbar-collapse hamburgeritems enddiv order-3 ">
                         <ul class="navbar-nav end-links">
@@ -612,6 +757,29 @@
         <script src="../carts.js"></script>
         <script src="cart.js"></script>
         <script src="top.js"></script>
+
+
+        <div id="preloader">
+            <video autoplay muted loop id="preloader-video">
+                <source src="/preloader.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <script>
+           window.addEventListener('load', function() {
+        const video = document.getElementById('preloader-video');
+        video.playbackRate = 1; 
+    
+        setTimeout(function() {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; 
+            setTimeout(function() {
+                preloader.style.display = 'none'; 
+            }, 500); 
+        }, 3000); 
+    });
+    
+        </script>
 </body>
 
 </html>

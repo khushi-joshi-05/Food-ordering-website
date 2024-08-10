@@ -607,8 +607,8 @@ body {
     padding: 10px;
 }
 
-
-/* FOR CONTENT LOADER AT THE BEGINNING  */
+/* 
+FOR CONTENT LOADER AT THE BEGINNING 
 
 #loader-wrapper {
     position: fixed;
@@ -735,11 +735,13 @@ body {
   }
 
 }
+ */
 
 
 /* FAQS CONTAINER */
 
 .faq-section {
+
 
   background-color: rgb(173, 204, 255);
   /* background: linear-gradient(345deg, #f7adad, #f01d1d); */
@@ -1179,7 +1181,11 @@ font-size: 24px;
 }
     .faq-container {
         padding: 20px;
+<<<<<<< HEAD
     }
+=======
+}
+>>>>>>> upstream/new
     .faq-container h1 {
         font-size: 2rem;
     }

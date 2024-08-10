@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+
     <style> #progressBar {
         position: fixed;
         top: 0;
@@ -27,7 +28,39 @@
         background-color: #b80d0d;
         z-index: 9999;
     }
+
+    .circle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(255, 0, 0, 0.466), rgba(255, 52, 52, 0.5));
+      transition: transform 0.1s, left 0.1s, top 0.1s;
+      box-shadow: 0 0 20px #faff64,
+        0 0 60px #f52323,
+        0 0 100px #ff0000;
+        animation: colors 1s infinite;
+  transform: translate(-50%, -50%);
+    }
+
+    .circle-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    @media (max-width: 724px) {
+      .circle-container{
+        display: none;
+      }
+    }
 </style>
+
 
 </head>
 <body>
@@ -77,10 +110,10 @@
                             <i class="fa-solid fa-gear"></i> Services
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Ordering options</a></li>
-                            <li><a class="dropdown-item" href="#">Order Tracking</a></li>
-                            <li><a class="dropdown-item" href="#">Customer Support</a></li>
-                            <li><a class="dropdown-item" href="#">FAQS</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-check"></i> Ordering options</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-truck"></i> Order Tracking</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-headset"></i> Customer Support</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-question"></i> FAQS</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -93,8 +126,8 @@
                             <i class="fas fa-tags"></i> Offers
                         </a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="../Html-files/rateus.html">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../Html-files/rateus.html">
                             <i class="fas fa-star"></i> Rate Us
                         </a>
                     </li>
@@ -103,7 +136,7 @@
             <div class="order-0 ml-auto p-2">
                 <img
                     class="nav-link"
-                    src="../Images/navbar/sun.png"
+                    src="../Images/navbar/moon.png"
                     id="theme-toggle-icon"
                     alt="theme toggler button"
                 />
@@ -132,12 +165,12 @@
 
     <div class="rateus-container">
         <h2 class="rateus-heading">Rate Us</h2>
-        <div class="star-rating">
-            <i class="fa fa-star star" id="star1" onclick="rateStar(1)"></i>
-            <i class="fa fa-star star" id="star2" onclick="rateStar(2)"></i>
-            <i class="fa fa-star star" id="star3" onclick="rateStar(3)"></i>
-            <i class="fa fa-star star" id="star4" onclick="rateStar(4)"></i>
-            <i class="fa fa-star star" id="star5" onclick="rateStar(5)"></i>
+        <div class="emoji-rating">
+            <span class="emoji" id="emoji1" onclick="rateEmoji(1)">😡</span>
+            <span class="emoji" id="emoji2" onclick="rateEmoji(2)">😟</span>
+            <span class="emoji" id="emoji3" onclick="rateEmoji(3)">😐</span>
+            <span class="emoji" id="emoji4" onclick="rateEmoji(4)">😊</span>
+            <span class="emoji" id="emoji5" onclick="rateEmoji(5)">😍</span>
         </div>
         <textarea class="feedback-textarea" id="feedback" placeholder="Leave your feedback here..." rows="4"></textarea>
         <button class="submit-button" onclick="submitFeedback()">Submit</button>
@@ -157,34 +190,33 @@
     <script>
         document.getElementById("copyright-year").textContent = new Date().getFullYear();
 
-        function rateStar(star) {
-            for (let i = 1; i <= 5; i++) {
-                const starElement = document.getElementById(`star${i}`);
-                starElement.classList.remove('selected');
-                if (i <= star) {
-                    starElement.classList.add('selected');
-                }
-            }
+        function rateEmoji(clickedEmoji) {
+            // Remove 'selected' class from all emojis
+            document.querySelectorAll('.emoji').forEach(emoji => {
+                emoji.classList.remove('selected');
+            });
+
+            // Add 'selected' class to only the clicked emoji
+            const emojiElement = document.getElementById(`emoji${clickedEmoji}`);
+            emojiElement.classList.add('selected');
         }
 
         function submitFeedback() {
             const feedback = document.getElementById('feedback').value.trim();
-            const stars = document.querySelectorAll('.star.selected').length;
+            const emojis = document.querySelectorAll('.emoji.selected').length;
 
-            if (stars > 0 && feedback !== '') {
-                // Simulating success for demonstration
+            if (emojis > 0 && feedback !== '') {
                 Toastify({
                     text: 'Feedback submitted successfully!',
                     backgroundColor: 'green',
-                    position :'center',
+                    position: 'center',
                     duration: 3000
                 }).showToast();
             } else {
-                // Simulating failure for demonstration
                 Toastify({
                     text: 'Please rate and provide feedback.',
                     backgroundColor: 'red',
-                    positon:'center',
+                    position: 'center',
                     duration: 3000
                 }).showToast();
             }
@@ -200,6 +232,80 @@
     </script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
+
+    <div class="circle-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const coords = { x: 0, y: 0 };
+          const circles = document.querySelectorAll(".circle");
     
+          circles.forEach(function (circle) {
+            circle.x = 0;
+            circle.y = 0;
+          });
+    
+          window.addEventListener("mousemove", function (e) {
+            coords.x = e.pageX;
+            coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
+          });
+    
+          function animateCircles() {
+            let x = coords.x;
+            let y = coords.y;
+    
+            circles.forEach(function (circle, index) {
+              circle.style.left = `${x - 12}px`;
+              circle.style.top = `${y - 12}px`;
+              circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+    
+              const nextCircle = circles[index + 1] || circles[0];
+              circle.x = x;
+              circle.y = y;
+    
+              x += (nextCircle.x - x) * 0.25;
+              y += (nextCircle.y - y) * 0.25;
+            });
+    
+            requestAnimationFrame(animateCircles);
+          }
+    
+          animateCircles();
+        });
+      </script>
+
+
+    
+
 </body>
 </html>
