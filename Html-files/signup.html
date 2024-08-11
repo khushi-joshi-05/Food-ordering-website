@@ -14,6 +14,7 @@
 	<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+	<script src="auth.js" defer type="module"></script>
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
 		integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -286,9 +287,10 @@
 
 							</div>
 							<button type="submit" class="btn-login">Register</button>
-							<h1 class="text-center">Already have an account?
-								<a href="login.html">Login</a>
-							</h1>
+							<span>or</span>
+							<button id="google-login"class="btn-login"> 
+								Login using Google
+							</button>
 						</div>
 					</form>
 				</div>
