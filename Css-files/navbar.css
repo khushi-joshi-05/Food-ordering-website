@@ -116,7 +116,7 @@
 
 .nav-link:hover {
   background-color: var(--light-red);
-  color: #fff;
+  color: #fff !important;
 
   transform: scale(1.1);
   border-radius: 5px;
