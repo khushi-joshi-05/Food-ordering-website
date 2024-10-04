@@ -106,8 +106,7 @@
 
 .nav-link {
 
-  color:var(--a)
-
+  color:var(--a);
   color: var(--primary-text-color);
   padding: 4px 8px;
   border-radius: 4px;
