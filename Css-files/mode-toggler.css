@@ -1,11 +1,11 @@
-.toggle-container {
+/* .toggle-container {
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
   right: -4px;
   top: 15px;
-  /* position: fixed; */
+  position: fixed;
   top: 40px;
   right: 20%;
   z-index: 100;
@@ -16,7 +16,7 @@
   width: 40px;
   height: 20px;
   margin-top: 10px;
-}
+} */
 
 
 /* Hidden Checkbox */
