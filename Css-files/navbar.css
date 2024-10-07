@@ -1,488 +1,364 @@
 /* Define colors */
 :root {
-
   /* General Colors */
-  --primary-bg-color: #ffffff;
-  --primary-text-color: #333335;
-  --secondary-bg-color: #f2f2f2;
-  --accent-color: #9e5c48;
+  --primary-bg-color: #ffffff; /* Background color for light theme */
+  --primary-text-color: #333335; /* Text color for light theme */
+  --secondary-bg-color: #f2f2f2; /* Secondary background color for light theme */
+  --accent-color: #9e5c48; /* Accent color */
 
   /* Navbar Colors */
-  --navbar-bg-color: #f2f2f2;
-  --navbar-hover-color: #e5e5e5;
+  --navbar-bg-color: #f2f2f2; /* Background color for navbar in light theme */
+  --navbar-hover-color: #e5e5e5; /* Hover color for navbar links in light theme */
 
   /* Card Colors */
-  --card-bg-color: #ffffff;
-  --card-hover-color: #f5f5f5;
+  --card-bg-color: #ffffff; /* Background color for cards in light theme */
+  --card-hover-color: #f5f5f5; /* Hover color for cards in light theme */
 
   /* Footer Colors */
-  --footer-bg-color: #f2f2f2;
-  --footer-hover-color: #e5e5e5;
+  --footer-bg-color: #f2f2f2; /* Background color for footer in light theme */
+  --footer-hover-color: #e5e5e5; /* Hover color for footer links in light theme */
 
   /* Additional Colors */
-  --container-bg: black;
-  --drop-bg: #212123;
-  --a: black;
-  --nav: black;
-  --invert: invert(1);
+  --container-bg: black; /* Background for container elements */
+  --drop-bg: #212123; /* Background for dropdowns */
+  --a: black; /* Color for anchor tags */
+  --nav: black; /* Color for navbar items */
+  --invert: invert(1); /* Inversion effect for dark theme icons */
 }
 
+/* Styles for Dark Theme */
 .dark-theme {
-  --a: rgb(183, 175, 175);
-  --drop-bg: #ffffff;
-  --nav: white;
+  --a: rgb(183, 175, 175); /* Text color for links in dark theme */
+  --drop-bg: #ffffff; /* Background for dropdowns in dark theme */
+  --nav: white; /* Text color for navbar items in dark theme */
   /* General Colors */
-  --primary-bg-color: #212123;
-  --primary-text-color: #ffffff;
-  --secondary-bg-color: #333335;
-  --accent-color: #9e5c48;
+  --primary-bg-color: #212123; /* Background color for dark theme */
+  --primary-text-color: #ffffff; /* Text color for dark theme */
+  --secondary-bg-color: #333335; /* Secondary background color for dark theme */
+  --accent-color: #9e5c48; /* Accent color */
 
   /* Navbar Colors */
-  --navbar-bg-color: #333335;
-  --navbar-hover-color: #474749;
+  --navbar-bg-color: #333335; /* Background color for navbar in dark theme */
+  --navbar-hover-color: #474749; /* Hover color for navbar links in dark theme */
 
   /* Card Colors */
-  --card-bg-color: #2c2c2e;
-  --card-hover-color: #373739;
+  --card-bg-color: #2c2c2e; /* Background color for cards in dark theme */
+  --card-hover-color: #373739; /* Hover color for cards in dark theme */
 
   /* Footer Colors */
-  --footer-bg-color: #28282a;
-  --footer-hover-color: #333335;
+  --footer-bg-color: #28282a; /* Background color for footer in dark theme */
+  --footer-hover-color: #333335; /* Hover color for footer links in dark theme */
 
   /* Additional Colors */
-  --container-bg: rgb(224, 224, 252);
-  --drop-bg: #ffffff;
-  --nav: white;
-  --a: black;
-  --nav: #F5DEB3;
-  --invert: invert(0);
-}
-
-/* Navbar */
-.navbar {
-  /* --bs-navbar-color: var(--a); */
-  background-color: var(--background-color);
-  gap: 10px;
-
-  --primary-bg-color: #fff;
-  --primary-text-color: #000;
-  --secondary-bg-color: #f0f0f0;
-  --dark-red: #cc0000;
-  --light-red: #ff4c4c;
+  --container-bg: rgb(224, 224, 252); /* Background for container elements */
+  --drop-bg: #ffffff; /* Background for dropdowns in dark theme */
+  --nav: white; /* Text color for navbar items in dark theme */
+  --a: black; /* Color for anchor tags in dark theme */
+  --nav: #F5DEB3; /* Text color for navbar items */
+  --invert: invert(0); /* Inversion effect for light theme icons */
 }
 
 /* Navbar Styles */
 .navbar {
-  background-color: var(--primary-bg-color);
-  color: var(--primary-text-color);
-  padding: 0 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  height: 70px;
-  font-size: 14px;
-
+  background-color: var(--primary-bg-color); /* Set navbar background */
+  color: var(--primary-text-color); /* Set navbar text color */
+  padding: 0 20px; /* Padding for navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect for navbar */
+  display: flex; /* Flex layout for navbar */
+  align-items: center; /* Center items vertically */
+  height: 70px; /* Navbar height */
+  font-size: 14px; /* Font size for navbar text */
 }
 
-.navbar-logo {
-  height: 50px;
-  margin-right: 20px;
+/* Theme toggle icons */
+#theme-toggle-icon,
+.light-mode-icon img,
+.dark-mode-icon img {
+  width: 24px; /* Set a consistent size for the theme icons */
+  height: 24px; /* Set a consistent height for the theme icons */
 }
 
-.navbar-toggler {
-  border: none;
-  padding: 0;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
-.navbar-nav {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.nav-link {
-
-  color:var(--a)
-
-  color: var(--primary-text-color);
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s;
-
-}
-
-.nav-link:hover {
-  background-color: var(--light-red);
-  color: #fff;
-
-  transform: scale(1.1);
-  border-radius: 5px;
-}
-
-/* Center Links */
-
-ul {
-  gap: 5px;
-}
-
-.nav-item {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  color:var(--a)
-
-}
-
-.center-links .nav-item .nav-link:hover {
-  color: #f13800e4;
-}
-
-.center-links .nav-item .dropdown-menu {
-  background-color: var(--drop-bg);
-  color: var(--a);
-  border-radius: 0;
-  border: none;
-  padding-top: 0;
-}
-/* cart-icon supersript */
-/* .cart-subscript
-{
-  display :flex;
-  width: 15px;
-  height: 25px;
-  background-color: rgb(76, 0, 255);
-  justify-content: center;
-  align-items: center;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  right: 45px;
-} */
-
-
-
-/* End Links */
-.end-links .nav-item .nav-link:hover {
-  color: rgba(255, 183, 0, 0.705);
-  
-}
-
-.navbar-nav.center-links .active {
-  color: #dc3545;
-  border-bottom: 2px solid #dc3545;
-  gap: 10px;
-}
-
-.navbar-nav.end-links .active  {
-  color: rgba(255, 183, 0, 0.705);
-  border-bottom: 2px solid rgba(255, 183, 0, 0.705);
-  gap: 10px;
-}
-
-
-/* Dropdown Items */
-
-#theme-toggle-icon {
-  width: 30px;
-  cursor: pointer;
-  color:var(--drop-bg)
-}
-
-.center-links .nav-item .dropdown-menu {
-  background-color: white;
-  color: var(--a);
-  border-radius: 0;
-  border: none;
-  padding-top: 0;
-
-
-}
-
-.dropdown-item {
-  padding: 4px 8px;
-  color: var(--primary-text-color);
-  font-size: 14px;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.dropdown-item:hover {
-  background-color: var(--light-red);
-  color: #fff;
-  transform: scale(1.05);
-}
-
-
-/* :root {
-  --background-color: #fff;
-  --text-color: #000;
-  --button-bg: #d0eeb0;
-  --button-hover-bg: #59a10c;
-  --card-bg: rgba(0, 0, 0, 0.8);
-  --carousel-caption-bg: rgba(0, 0, 0, 0.7);
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-} */
-
-.rate-us-btn {
-  background-color: var(--primary-bg-color);
-  border: 1px solid var(--dark-red);
-  color: var(--dark-red);
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.rate-us-btn:hover {
-  background-color: var(--light-red);
-  color: #fff;
-}
-
-
-.card {
-  background-color: var(--primary-bg-color);
-  border: 1px solid var(--secondary-bg-color);
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.card:hover {
-  background-color: var(--light-red);
-  transform: scale(1.02);
-}
-
-.login, .signup {
-  background-color: var(--primary-bg-color);
-  border: 1px solid var(--secondary-bg-color);
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.login:hover, .signup:hover {
-  background-color: var(--light-red);
-  transform: scale(1.02);
-}
-
-.popup {
-  display: none;
-  position: absolute;
-  top: 50px;
-  right: 10px;
-  background-color: var(--primary-bg-color);
-  border: 1px solid var(--primary-text-color);
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.popup.show {
-  display: block;
-}
-
-/* Icon Hover Effect */
 .navbar .nav-link img {
-  transition: opacity 0.3s;
+  transition: opacity 0.3s; /* Smooth transition for icon opacity */
 }
 
 .navbar .nav-link:hover img {
-  opacity: 0.8;
+  opacity: 0.8; /* Change opacity on hover */
 }
 
-/* Theme Icon Styles */
 .theme-icon {
-  width: 40px !important; /* Increased size for medium */
-  height: 40px !important; /* Increased size for medium */
+  width: 24px; /* Ensure all theme-related icons have the same size */
+  height: 24px; /* Ensure all theme-related icons have the same height */
 }
 
-#theme-toggle-icon {
-  width: 40px; /* Increased size for medium */
-  height: 36px; /* Increased size for medium */
+/* Navbar Links */
+.navbar {
+  color: var(--primary-text-color); /* Set navbar link color */
+  gap: 10px; /* Space between navbar links */
 }
 
-/* Apply size to theme icons within navbar */
-.navbar .nav-link .theme-icon {
-  width: 40px !important; /* Ensure size consistency with other icons */
-  height: 36px !important; /* Ensure size consistency with other icons */
+/* Logo in Navbar */
+.navbar-logo {
+  height: 50px; /* Logo height */
+  margin-right: 20px; /* Space to the right of the logo */
 }
 
-/* Dark Theme Styles */
-.dark-theme .navbar, .dark-theme .login, .dark-theme .signup, .dark-theme .card {
-  background-color: var(--primary-bg-color);
-  color: var(--primary-text-color);
+/* Navbar Toggler for mobile */
+.navbar-toggler {
+  border: none; /* No border for toggler */
+  padding: 0; /* No padding for toggler */
 }
 
+.navbar-toggler:focus {
+  box-shadow: none; /* No shadow on focus */
+}
+
+/* Navbar Navigation */
+.navbar-nav {
+  display: flex; /* Flex layout for navbar navigation */
+  gap: 10px; /* Space between navigation items */
+  align-items: center; /* Center items vertically */
+}
+
+/* Individual Navbar Link */
+.nav-link {
+  color: var(--primary-text-color); /* Set text color for links */
+  padding: 4px 8px; /* Padding for links */
+  border-radius: 4px; /* Rounded corners for links */
+  transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+}
+
+.nav-link:hover {
+  background-color: var(--light-red); /* Background color on hover */
+  color: #fff; /* Text color on hover */
+  transform: scale(1.1); /* Scale effect on hover */
+  border-radius: 5px; /* Adjust border radius on hover */
+}
+
+/* Center Links */
+ul {
+  gap: 5px; /* Space between list items */
+}
+
+/* Navbar Items */
+.nav-item {
+  display: flex; /* Flex layout for nav items */
+  justify-content: start; /* Align items to the start */
+  align-items: center; /* Center items vertically */
+  color: var(--a); /* Set color for nav items */
+}
+
+/* Hover Effects for Center Links */
+.center-links .nav-item .nav-link:hover {
+  color: #f13800e4; /* Change color on hover */
+}
+
+/* Dropdown Menu for Center Links */
+.center-links .nav-item .dropdown-menu {
+  background-color: var(--drop-bg); /* Background for dropdown menu */
+  color: var(--a); /* Text color for dropdown items */
+  border-radius: 0; /* No border radius */
+  border: none; /* No border */
+  padding-top: 0; /* No padding at the top */
+}
+
+/* End Links */
+.end-links .nav-item .nav-link:hover {
+  color: rgba(255, 183, 0, 0.705); /* Change color on hover */
+}
+
+/* Active State for Center Links */
+.navbar-nav.center-links .active {
+  color: #dc3545; /* Active color */
+  border-bottom: 2px solid #dc3545; /* Underline for active links */
+  gap: 10px; /* Space between items */
+}
+
+/* Active State for End Links */
+.navbar-nav.end-links .active {
+  color: rgba(255, 183, 0, 0.705); /* Active color */
+  border-bottom: 2px solid rgba(255, 183, 0, 0.705); /* Underline for active links */
+  gap: 10px; /* Space between items */
+}
+
+/* Dropdown Items */
+.center-links .nav-item .dropdown-menu {
+  background-color: white; /* Background color for dropdown menu */
+  color: var(--a); /* Text color for dropdown items */
+  border-radius: 0; /* No border radius */
+  border: none; /* No border */
+  padding-top: 0; /* No padding at the top */
+}
+
+/* Dropdown Item Styles */
+.dropdown-item {
+  padding: 4px 8px; /* Padding for dropdown items */
+  color: var(--primary-text-color); /* Text color for dropdown items */
+  font-size: 14px; /* Font size for dropdown items */
+  transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+}
+
+.dropdown-item:hover {
+  background-color: var(--light-red); /* Background color on hover */
+  color: #fff; /* Text color on hover */
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Navbar Hover Effects */
+.nav-link:hover {
+  background-color: var(--light-red); /* Background color on hover */
+  color: #fff; /* Text color on hover */
+  transform: scale(1.1); /* Scale effect on hover */
+  border-radius: 5px; /* Adjust border radius on hover */
+}
+
+/* Mobile Menu Styles */
 .mobile-menu {
-    top: 0;
-    right: 0;
-    width: 70vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 2;
-    background: rgba(0,0,0,0.9);
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(100%);
-    transition: transform 0.3s;
+  top: 0; /* Position from the top */
+  right: 0; /* Position from the right */
+  width: 70vw; /* Width of the mobile menu */
+  height: 100vh; /* Height of the mobile menu */
+  position: fixed; /* Fixed position */
+  z-index: 2; /* Layering */
+  background: rgba(0, 0, 0, 0.9); /* Background color with transparency */
+  display: flex; /* Flex layout for mobile menu */
+  flex-flow: column nowrap; /* Column layout */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  transform: translateX(100%); /* Initially hidden */
+  transition: transform 0.3s; /* Smooth transition */
 }
 
-/* Screen more than 991px wide */
-@media ((min-width: 991px)) {
-    .mobile-menu {
-        display: none !important;
-    }   
-
+/* Media Queries */
+@media (min-width: 991px) {
+  .mobile-menu {
+    display: none !important; /* Hide mobile menu on larger screens */
+  }
 }
 
+/* Mobile Menu Link Styles */
 .mobile-menu a {
-    /* box-shadow: inset 0 0 1rem rgba(255,255,255,0.7); */
-    /* border-top: 3px solid #fff; */
-    /* border-bottom: 1px solid #fff; */
-    width: 100%;
-    text-align: center;
-    margin: 1rem 0;
-    padding: 1rem;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    position: relative;
+  width: 100%; /* Full width for links */
+  text-align: center; /* Center text */
+  margin: 1rem 0; /* Space around links */
+  padding: 1rem; /* Padding for links */
+  color: #fff; /* Text color for links */
+  text-decoration: none; /* No underline */
+  text-transform: uppercase; /* Uppercase text */
+  position: relative; /* Position relative for effects */
 }
 
 .mobile-menu a:hover {
-    color: #f39d2c;
+  color: #f39d2c; /* Change color on hover */
 }
 
+/* Mobile Menu Trigger Styles */
 .mobile-menu__trigger {
-    cursor: pointer;
-    content: "";
-    position: absolute;
-    z-index: 3;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    top: 2rem;
-    left: -5rem;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* -webkit-transform: rotateX(90deg);
-    transform: rotateX(180deg); */
+  cursor: pointer; /* Pointer cursor */
+  content: ""; /* Empty content */
+  position: absolute; /* Position absolute for trigger */
+  z-index: 3; /* Layering */
+  width: 3rem; /* Width of the trigger */
+  height: 3rem; /* Height of the trigger */
+  border-radius: 50%; /* Circular shape */
+  top: 2rem; /* Position from the top */
+  left: -5rem; /* Position from the left */
+  background: rgba(0, 0, 0, 0.5); /* Background color with transparency */
 }
+
+/* Trigger Span Styles */
 .mobile-menu__trigger span {
-    display: block;
-    width: 50%;
-    height: 2px;
-    background: #fff;
-    position: relative;
+  display: block; /* Block display */
+  width: 50%; /* Width for lines */
+  height: 2px; /* Height for lines */
+  background: #fff; /* Background color for lines */
+  position: relative; /* Position relative for effects */
 }
+
+/* Trigger Line Effects */
 .mobile-menu__trigger span::before,
 .mobile-menu__trigger span::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    /* left: 0; */
-    background: #fff;
-    transition: all 0.3s;
+  content: ""; /* Empty content for before and after */
+  position: absolute; /* Position absolute for lines */
+  width: 100%; /* Full width */
+  height: 2px; /* Height for lines */
+  background: #fff; /* Background color for lines */
+  transition: all 0.3s; /* Transition for effects */
 }
+
 .mobile-menu__trigger span::before {
-    top: -7px;
+  top: -7px; /* Position for the top line */
 }
+
 .mobile-menu__trigger span::after {
-    top: 7px;
+  top: 7px; /* Position for the bottom line */
 }
-.mobile-menu__trigger:hover span::before {
-    width: 50%;
-    top: -3px;
-    left: 0;
-    transform: rotate(-30deg);
-}
-.mobile-menu__trigger:hover span::after {
-    width: 50%;
-    top: 3px;
-    left: 0;
-    transform: rotate(30deg);
-}
+
+/* Open Mobile Menu Styles */
 .mobile-menu_open {
-    transform: translateX(0%);
-    box-shadow: 0 0 2rem #000;
+  transform: translateX(0%); /* Show the menu */
+  box-shadow: 0 0 2rem #000; /* Shadow effect */
 }
-.mobile-menu_open+.overlay {
-    visibility: visible;
-    opacity: 1;
+
+/* Overlay Styles for Mobile Menu */
+.mobile-menu_open + .overlay {
+  visibility: visible; /* Show overlay */
+  opacity: 1; /* Full opacity */
 }
+
+/* Trigger Effects when Menu is Open */
 .mobile-menu_open .mobile-menu__trigger span::before,
 .mobile-menu_open .mobile-menu__trigger span::after {
-    right: 0;
+  right: 0; /* Move the lines to the right */
 }
-/* .mobile-menu_open .mobile-menu__trigger:hover span::before {
-    transform: rotate(30deg);
-    right: 0;
-}
-.mobile-menu_open .mobile-menu__trigger:hover span::after {
-    transform: rotate(-30deg);
-} */
 
+/* Trigger Hover Effects when Menu is Open */
 .mobile-menu_open .mobile-menu__trigger:hover span::before {
-    width: 50%;
-    top: -3px;
-    right:  0;
-    transform: rotate(30deg);
-    left: auto;
-}
-.mobile-menu_open .mobile-menu__trigger:hover span::after {
-    width: 50%;
-    top: 3px;
-    right: 0;
-    transform: rotate(-30deg);
-    left: auto;
+  width: 50%; /* Width for the top line */
+  top: -3px; /* Position for the top line */
+  left: 0; /* Position from the left */
+  transform: rotate(-30deg); /* Rotate effect */
 }
 
+.mobile-menu_open .mobile-menu__trigger:hover span::after {
+  width: 50%; /* Width for the bottom line */
+  top: 3px; /* Position for the bottom line */
+  left: 0; /* Position from the left */
+  transform: rotate(30deg); /* Rotate effect */
+}
+
+/* Responsive Media Queries */
 @media screen and (min-width: 990px) {
-	.navbarr .nav-links {
-		display: flex	!important;
+  .navbarr .nav-links {
+    display: flex !important; /* Show nav links on larger screens */
   }
 }
 
 @media screen and (max-width: 990px) {
   .hamburger {
-    display: inline;
-    z-index: 400;
+    display: inline; /* Show hamburger icon on smaller screens */
+    z-index: 400; /* Layering */
   }
 
   .logo a {
-    font-size: 30px;
+    font-size: 30px; /* Logo font size */
   }
 
   .nav-links {
-    position: absolute;
-    right: 1rem;
-    top: 3rem;
-    background-color: #333;
-    flex-direction: column;
-    padding: 10px;
-    align-items: center;
+    position: absolute; /* Position absolute for nav links */
+    right: 1rem; /* Position from the right */
+    top: 3rem; /* Position from the top */
+    background-color: #333; /* Background color for dropdown */
+    flex-direction: column; /* Column layout */
+    padding: 10px; /* Padding for dropdown */
+    align-items: center; /* Center items horizontally */
   }
 
   .navbarr .nav-links {
-	display: none;
+    display: none; /* Hide nav links on smaller screens */
   }
 
   .navbar-toggler {
-	display: inline	!important;
+    display: inline !important; /* Show toggler on smaller screens */
   }
-
 }

@@ -362,22 +362,59 @@
                 </ul>
             </div>
             <!-- Theme Toggle Icon -->
+<div id="sun-moon-mode-toggler" class="toggle-container">
+    <input type="checkbox" id="themeToggle" class="switch-checkbox" onclick="toggleTheme()">
+    <label id="themeChangeToggle" class="theme-switch" for="themeToggle">
+        <div class="toggle-button">
+            <span class="light-mode-icon"><img src="Images/navbar/sun.png" style="display: block;"></span>
+            <span class="dark-mode-icon"><img src="Images/navbar/moon.png" style="display: block;"></span>
+        </div>
+    </label>
+</div>
+<script>
+    // Function to toggle the theme
+function toggleTheme() {
+    const body = document.body;
+    const themeToggle = document.getElementById("themeToggle");
+    
+    // Toggle dark theme class
+    body.classList.toggle("dark-theme", themeToggle.checked);
+    
+    // Update the icon based on the theme
+    const lightModeIcon = document.querySelector(".light-mode-icon img");
+    const darkModeIcon = document.querySelector(".dark-mode-icon img");
 
+    if (themeToggle.checked) {
+        // If dark theme is active
+        lightModeIcon.style.display = "none"; // Hide sun icon
+        darkModeIcon.style.display = "block"; // Show moon icon
+    } else {
+        // If light theme is active
+        lightModeIcon.style.display = "block"; // Show sun icon
+        darkModeIcon.style.display = "none"; // Hide moon icon
+    }
+}
 
-                <img class="nav-link" src="./Images/navbar/moon.png" id="theme-toggle-icon" alt="theme toggler button" >
+// Check for saved theme in localStorage
+document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById("themeToggle");
+    const savedTheme = localStorage.getItem("theme");
 
-            <span class="slider" style="width: 40px; height: 20px; display: none;"></span> 
+    // If saved theme is dark, set the checkbox and toggle the theme
+    if (savedTheme === "dark") {
+        themeToggle.checked = true;
+        document.body.classList.add("dark-theme");
+        toggleTheme(); // Update icons
+    }
+});
 
+// Save theme preference in localStorage
+const themeToggle = document.getElementById("themeToggle");
+themeToggle.addEventListener("change", () => {
+    localStorage.setItem("theme", themeToggle.checked ? "dark" : "light");
+});
 
-            <div id="sun-moon-mode-toggler" class="toggle-container" >
-              <input type="checkbox" id="themeToggle" class="switch-checkbox" onclick="toggleTheme()">
-              <label  id="themeChangeToggle" class="theme-switch" for="themeToggle">
-              <div class="toggle-button">
-                  <span class="light-mode-icon"><img src="Images/navbar/sun.png" style = "display: block;"></span>
-                  <span class="dark-mode-icon"><img src="Images/navbar/moon.png"style = "display: block;"></span>
-              </div>
-              </label>
-          </div>
+</script>
 
                         
             <!-- Navbar Toggler -->
