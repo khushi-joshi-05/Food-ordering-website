@@ -356,3 +356,22 @@ async function getMealsByCategory(category) {
         return data.meals || [];
     }
 }
+async function getMealsByCategory(category) {
+    if (category.toLowerCase() === 'indian') {
+        return [
+            { strMeal: "Chole Bature", strMealThumb: "../Images/indianfood/cholebhature.jpeg", idMeal: "c1" },
+            { strMeal: "Briyani", strMealThumb: "../Images/indianfood/Briyani.jpeg", idMeal: "c2" },
+            { strMeal: "Dosa", strMealThumb: "../Images/indianfood/dosa.jpeg", idMeal: "c3" },
+            { strMeal: "Idli Sambar", strMealThumb: "../Images/indianfood/idli_sambar.jpeg", idMeal: "c4" },
+            { strMeal: "Kadai Paneer ", strMealThumb: "../Images/indianfood/kadai-paneer.jpeg", idMeal: "c5" },
+            { strMeal: "Samosa", strMealThumb: "../Images/indianfood/samosa.jpeg", idMeal: "c6" },
+            { strMeal: "Paneer Pakora", strMealThumb: "../Images/indianfood/paneerpakora.jpeg", idMeal: "c7" },
+            { strMeal: "Litti Chokha", strMealThumb: "../Images/indianfood/litti-chokha.jpeg", idMeal: "c8" },
+        ];
+    } else {
+        const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        return data.meals || [];
+    }
+}
