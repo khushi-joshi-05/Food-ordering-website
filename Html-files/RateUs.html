@@ -6,306 +6,88 @@
     <title>Rate Us - Food Ordering Website</title>
     <link rel="shortcut icon" href="https://pnghq.com/wp-content/uploads/foodie-logo-png-clear-background-768x275.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Mooli&family=Oswald:wght@600&family=Roboto:wght@100;300&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-    <link rel="stylesheet" href="../Css-files/scroll-top-button.css" />
-    <link rel="stylesheet" href="../Css-files/content.css" />
-    <link rel="stylesheet" href="../Css-files/navbar.css" />
-    <link rel="stylesheet" href="../Css-files/footer.css" />
-    <link rel="stylesheet" href="../Css-files/RateUs.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-
-    <style> #progressBar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 8px;
-        background-color: #b80d0d;
-        z-index: 9999;
-    }
-
-    .circle {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      pointer-events: none;
-      background: radial-gradient(circle, rgba(255, 0, 0, 0.466), rgba(255, 52, 52, 0.5));
-      transition: transform 0.1s, left 0.1s, top 0.1s;
-      box-shadow: 0 0 20px #faff64,
-        0 0 60px #f52323,
-        0 0 100px #ff0000;
-        animation: colors 1s infinite;
-  transform: translate(-50%, -50%);
-    }
-
-    .circle-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 9999;
-    }
-
-    @media (max-width: 724px) {
-      .circle-container{
-        display: none;
-      }
-    }
-</style>
-
-
+    <style>
+        .star {
+            font-size: 40px;
+            color: lightgray;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .star.filled {
+            color: gold;
+        }
+        .rateus-container {
+            text-align: center;
+            margin-top: 100px;
+        }
+        .rateus-heading {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .feedback-textarea {
+            width: 80%;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .submit-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-     <!-- Progress bar -->
-     <div id="progressBar"></div>
-     <script>
-         window.onscroll = function () {
-             var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-             var scrolled = (winScroll / height) * 100;
-             document.getElementById("progressBar").style.width = scrolled + "%";
-         };
-     </script>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <a href="../index.html" class="navbar-brand opacity-75 flex-fill">
-                <img src="../Images/logo/Foodielogo.png" height="40" />
-            </a>
-            <button
-                class="navbar-toggler order-1"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target=".hamburgeritems"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-                class="collapse navbar-collapse hamburgeritems centerdiv order-2 order-lg-0"
-            >
-                <ul class="navbar-nav center-links">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../index.html">
-                            <i class="fas fa-home"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Html-files/menu.html">
-                            <i class="fas fa-book-open"></i> Menu
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-
-                        <a class="nav-link dropdown-toggle" href="Html-files/services.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-gear"></i> Services
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-check"></i> Ordering options</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-truck"></i> Order Tracking</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-headset"></i> Customer Support</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-question"></i> FAQS</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Html-files/contact.html">
-                            <i class="fas fa-envelope"></i> Contact Us
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Html-files/offers.html">
-                            <i class="fas fa-tags"></i> Offers
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../Html-files/rateus.html">
-                            <i class="fas fa-star"></i> Rate Us
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="order-0 ml-auto p-2">
-                <img
-                    class="nav-link"
-                    src="../Images/navbar/moon.png"
-                    id="theme-toggle-icon"
-                    alt="theme toggler button"
-                />
-            </div>
-            <div class="collapse navbar-collapse hamburgeritems enddiv order-3">
-                <ul class="navbar-nav end-links">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Html-files/login.html">
-                            <i class="fas fa-sign-in-alt"></i> Login
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Html-files/signup.html">
-                            <i class="fas fa-user-plus"></i> Sign-Up
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Html-files/cart.html">
-                            <i class="fas fa-shopping-cart"></i> Cart
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <div class="rateus-container">
         <h2 class="rateus-heading">Rate Us</h2>
-        <div class="emoji-rating">
-            <span class="emoji" id="emoji1" onclick="rateEmoji(1)">😡</span>
-            <span class="emoji" id="emoji2" onclick="rateEmoji(2)">😟</span>
-            <span class="emoji" id="emoji3" onclick="rateEmoji(3)">😐</span>
-            <span class="emoji" id="emoji4" onclick="rateEmoji(4)">😊</span>
-            <span class="emoji" id="emoji5" onclick="rateEmoji(5)">😍</span>
+        <div class="star-rating">
+            <span class="star" data-value="1" onclick="rate(1)">★</span>
+            <span class="star" data-value="2" onclick="rate(2)">★</span>
+            <span class="star" data-value="3" onclick="rate(3)">★</span>
+            <span class="star" data-value="4" onclick="rate(4)">★</span>
+            <span class="star" data-value="5" onclick="rate(5)">★</span>
         </div>
         <textarea class="feedback-textarea" id="feedback" placeholder="Leave your feedback here..." rows="4"></textarea>
         <button class="submit-button" onclick="submitFeedback()">Submit</button>
     </div>
 
-    <footer>
-        <!-- Footer content here -->
-    </footer>
-
-    <button id="scroll-top-button" class="scroll-top-button" onclick="goToTop()">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white" class="arrow">
-            <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/>
-        </svg>
-    </button>
-
-    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script>
-        document.getElementById("copyright-year").textContent = new Date().getFullYear();
-
-        function rateEmoji(clickedEmoji) {
-            // Remove 'selected' class from all emojis
-            document.querySelectorAll('.emoji').forEach(emoji => {
-                emoji.classList.remove('selected');
+        // Function to handle star rating
+        function rate(starValue) {
+            const stars = document.querySelectorAll('.star');
+            stars.forEach((star, index) => {
+                if (index < starValue) {
+                    star.classList.add('filled');
+                } else {
+                    star.classList.remove('filled');
+                }
             });
-
-            // Add 'selected' class to only the clicked emoji
-            const emojiElement = document.getElementById(`emoji${clickedEmoji}`);
-            emojiElement.classList.add('selected');
         }
 
+        // Function to submit feedback
         function submitFeedback() {
-            const feedback = document.getElementById('feedback').value.trim();
-            const emojis = document.querySelectorAll('.emoji.selected').length;
+            const feedback = document.getElementById("feedback").value;
+            const rating = document.querySelectorAll('.star.filled').length;
 
-            if (emojis > 0 && feedback !== '') {
-                Toastify({
-                    text: 'Feedback submitted successfully!',
-                    backgroundColor: 'green',
-                    position: 'center',
-                    duration: 3000
-                }).showToast();
-            } else {
-                Toastify({
-                    text: 'Please rate and provide feedback.',
-                    backgroundColor: 'red',
-                    position: 'center',
-                    duration: 3000
-                }).showToast();
+            if (rating === 0) {
+                alert("Please select a star rating before submitting.");
+                return;
             }
+
+            if (feedback.trim() === "") {
+                alert("Please leave your feedback.");
+                return;
+            }
+
+            alert("Thank you for your feedback!\n\nRating: " + rating + " stars\nFeedback: " + feedback);
+            // Optionally, here you can send the data to a server
+
+            // Clear feedback and reset stars after submission
+            document.getElementById("feedback").value = "";
+            rate(0); // Reset the stars
         }
     </script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            easing: "ease",
-            once: false,
-        });
-    </script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-
-    <div class="circle-container">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-      </div>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const coords = { x: 0, y: 0 };
-          const circles = document.querySelectorAll(".circle");
-    
-          circles.forEach(function (circle) {
-            circle.x = 0;
-            circle.y = 0;
-          });
-    
-          window.addEventListener("mousemove", function (e) {
-            coords.x = e.pageX;
-            coords.y = e.pageY - window.scrollY; // Adjust for vertical scroll position
-          });
-    
-          function animateCircles() {
-            let x = coords.x;
-            let y = coords.y;
-    
-            circles.forEach(function (circle, index) {
-              circle.style.left = `${x - 12}px`;
-              circle.style.top = `${y - 12}px`;
-              circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
-    
-              const nextCircle = circles[index + 1] || circles[0];
-              circle.x = x;
-              circle.y = y;
-    
-              x += (nextCircle.x - x) * 0.25;
-              y += (nextCircle.y - y) * 0.25;
-            });
-    
-            requestAnimationFrame(animateCircles);
-          }
-    
-          animateCircles();
-        });
-      </script>
-
-
-    
-
 </body>
 </html>

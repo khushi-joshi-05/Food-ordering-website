@@ -361,4 +361,8 @@ ul {
   .navbar-toggler {
     display: inline !important; /* Show toggler on smaller screens */
   }
+  .nav-link-custom {
+    color: #3498db; /* Change this to your desired color */
+}
+
 }

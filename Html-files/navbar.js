@@ -14,7 +14,7 @@ function toggleTheme() {
     document.body.classList.add('dark-theme'); // Add dark theme class to body
     document.body.classList.remove('light-theme'); // Remove light theme class from body
 }
-});
+}
 
 // Services dropdown
 const dropdownli = document.querySelector(".nav-item.dropdown");
