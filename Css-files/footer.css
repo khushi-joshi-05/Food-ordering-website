@@ -163,6 +163,7 @@ footer {
   margin: 0 45.5%;
   margin-bottom: 20px;
   transition: color 0.3s ease;
+  
 }
 
 .follow-us:hover {
@@ -191,10 +192,12 @@ footer {
   overflow: hidden;
 }
 
+
 .social-icons a i {
   position: relative;
   z-index: 2;
   transition: color 0.3s ease;
+ 
 }
 
 .social-icons a::before {
