@@ -12,7 +12,7 @@ body {
   max-width: 800px;
   margin: auto;
   background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8U0rDtyI121wfvf1T10w87IJzGU8zbCxA5Q&s")
-    no-repeat center center; /* Add form background image */
+    no-repeat center center; /* Add  background image for form */
   background-size: cover;
   padding: 20px;
   border-radius: 8px;
